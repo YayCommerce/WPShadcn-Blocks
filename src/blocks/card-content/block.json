@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wpshadcn/card-content",
+	"version": "1.0.0",
+	"title": "Card Content",
+	"category": "wpshadcn",
+	"parent": [ "wpshadcn/card" ],
+	"icon": "text",
+	"description": "Card content section for main body content.",
+	"textdomain": "wpshadcn-blocks",
+	"attributes": {},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"lock": false
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
