@@ -1,62 +1,60 @@
 <?php
+/**
+ * Render callback for the accordion-item block.
+ *
+ * @param array  $attributes Block attributes.
+ * @param string $content    Block content.
+ * @return string Rendered block HTML.
+ */
+if ( ! function_exists( 'block_wpshadcn_accordion_item_render' ) ) {
+	function block_wpshadcn_accordion_item_render( $attributes, $content ) {
+		if ( ! $content ) {
+			return $content;
+		}
 
-add_action( 'init', 'register_block_wpshadcn_accordion_item' );
+		$tags         = new WP_HTML_Tag_Processor( $content );
+		$unique_id = wp_unique_id( 'wpshadcn-accordion-item-' );
 
-function register_block_wpshadcn_accordion_item() {
-	register_block_type_from_metadata(
-		__DIR__ . '/accordion-item',
-		array(
-			'render_callback' => 'block_wpshadcn_accordion_item_render',
-		)
-	);
-}
+		// Initialize the state of the item on the server using a closure,
+		// since we need to get derived state based on the current context.
+		wp_interactivity_state(
+			'wpshadcn/accordion',
+			array(
+				'isOpen' => function () {
+					$context = wp_interactivity_get_context();
+					return $context['openByDefault'];
+				},
+			)
+		);
 
+		if ( $tags->next_tag( array( 'class_name' => 'wp-block-wpshadcn-accordion-item' ) ) ) {
+			$open_by_default = ( ! empty( $attributes['openByDefault'] ) ) ? 'true' : 'false';
+			$tags->set_attribute( 'data-wp-context', '{ "id": "' . $unique_id . '", "openByDefault": ' . $open_by_default . ' }' );
+			$tags->set_attribute( 'data-wp-class--is-open', 'state.isOpen' );
+			$tags->set_attribute( 'data-wp-init', 'callbacks.initAccordionItems' );
+			$tags->set_attribute( 'data-wp-on-window--hashchange', 'callbacks.hashChange' );
 
-function block_wpshadcn_accordion_item_render( $attributes, $content ) {
-	if ( ! $content ) {
-		return $content;
-	}
+			if ( $tags->next_tag( array( 'class_name' => 'wp-block-wpshadcn-accordion-trigger' ) ) ) {
+				$tags->set_attribute( 'data-wp-on--click', 'actions.toggle' );
+				$tags->set_attribute( 'data-wp-on--keydown', 'actions.handleKeyDown' );
+				$tags->set_attribute( 'id', $unique_id );
+				$tags->set_attribute( 'aria-controls', $unique_id . '-panel' );
+				$tags->set_attribute( 'data-wp-bind--aria-expanded', 'state.isOpen' );
 
-	$tags         = new WP_HTML_Tag_Processor( $content );
-	$unique_id = wp_unique_id( 'wpshadcn-accordion-item-' );
+				if ( $tags->next_tag( array( 'class_name' => 'wp-block-wpshadcn-accordion-content' ) ) ) {
+					$tags->set_attribute( 'id', $unique_id . '-panel' );
+					$tags->set_attribute( 'aria-labelledby', $unique_id );
+					$tags->set_attribute( 'data-wp-bind--inert', '!state.isOpen' );
 
-	// Initialize the state of the item on the server using a closure,
-	// since we need to get derived state based on the current context.
-	wp_interactivity_state(
-		'wpshadcn/accordion',
-		array(
-			'isOpen' => function () {
-				$context = wp_interactivity_get_context();
-				return $context['openByDefault'];
-			},
-		)
-	);
-
-	if ( $tags->next_tag( array( 'class_name' => 'wp-block-wpshadcn-accordion-item' ) ) ) {
-		$open_by_default = $attributes['openByDefault'] ? 'true' : 'false';
-		$tags->set_attribute( 'data-wp-context', '{ "id": "' . $unique_id . '", "openByDefault": ' . $open_by_default . ' }' );
-		$tags->set_attribute( 'data-wp-class--is-open', 'state.isOpen' );
-		$tags->set_attribute( 'data-wp-init', 'callbacks.initAccordionItems' );
-		$tags->set_attribute( 'data-wp-on-window--hashchange', 'callbacks.hashChange' );
-
-		if ( $tags->next_tag( array( 'class_name' => 'wp-block-wpshadcn-accordion-trigger' ) ) ) {
-			$tags->set_attribute( 'data-wp-on--click', 'actions.toggle' );
-			$tags->set_attribute( 'data-wp-on--keydown', 'actions.handleKeyDown' );
-			$tags->set_attribute( 'id', $unique_id );
-			$tags->set_attribute( 'aria-controls', $unique_id . '-panel' );
-			$tags->set_attribute( 'data-wp-bind--aria-expanded', 'state.isOpen' );
-
-			if ( $tags->next_tag( array( 'class_name' => 'wp-block-wpshadcn-accordion-content' ) ) ) {
-				$tags->set_attribute( 'id', $unique_id . '-panel' );
-				$tags->set_attribute( 'aria-labelledby', $unique_id );
-				$tags->set_attribute( 'data-wp-bind--inert', '!state.isOpen' );
-
-				// Only modify content if all directives have been set.
-				$content = $tags->get_updated_html();
+					// Only modify content if all directives have been set.
+					$content = $tags->get_updated_html();
+				}
 			}
 		}
-	}
 
-	return $content;
+		return $content;
+	}
 }
 
+// Call the render function and output the result
+echo block_wpshadcn_accordion_item_render( $attributes ?? array(), $content ?? '' );
