@@ -1,0 +1,95 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wpshadcn/accordion-trigger",
+  "version": "1.0.0",
+  "title": "Accordion Trigger",
+  "category": "wpshadcn",
+  "icon": "heading",
+  "description": "Accordion trigger for accordion item to open the accordion content.",
+  "textdomain": "wpshadcn-blocks",
+  "parent": ["wpshadcn/accordion-item"],
+  "usesContext": [
+    "wpshadcn/accordion-icon-position",
+    "wpshadcn/accordion-show-icon",
+    "wpshadcn/accordion-heading-level"
+  ],
+  "supports": {
+    "anchor": true,
+    "color": {
+      "background": true,
+      "gradients": true
+    },
+    "align": false,
+    "interactivity": true,
+    "spacing": {
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "padding": true
+      },
+      "__experimentalSkipSerialization": true,
+      "__experimentalSelector": ".wp-block-wpshadcn-accordion-trigger"
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true,
+      "__experimentalDefaultControls": {
+        "color": true,
+        "radius": true,
+        "style": true,
+        "width": true
+      }
+    },
+    "typography": {
+      "__experimentalSkipSerialization": ["textDecoration", "letterSpacing"],
+      "fontSize": true,
+      "__experimentalFontFamily": true,
+      "__experimentalFontWeight": true,
+      "__experimentalFontStyle": true,
+      "__experimentalTextTransform": true,
+      "__experimentalTextDecoration": true,
+      "__experimentalLetterSpacing": true,
+      "__experimentalDefaultControls": {
+        "fontSize": true,
+        "fontFamily": true
+      }
+    },
+    "shadow": true,
+    "visibility": false,
+    "lock": false
+  },
+  "selectors": {
+    "typography": {
+      "letterSpacing": ".wp-block-wpshadcn-accordion-trigger .wp-block-wpshadcn-accordion-trigger-title",
+      "textDecoration": ".wp-block-wpshadcn-accordion-trigger .wp-block-wpshadcn-accordion-trigger-title"
+    }
+  },
+  "attributes": {
+    "openByDefault": {
+      "type": "boolean",
+      "default": false
+    },
+    "title": {
+      "type": "rich-text",
+      "source": "rich-text",
+      "selector": ".wp-block-wpshadcn-accordion-trigger-title",
+      "role": "content"
+    },
+    "level": {
+      "type": "number"
+    },
+    "iconPosition": {
+      "type": "string",
+      "enum": ["left", "right"],
+      "default": "right"
+    },
+    "showIcon": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css"
+}
