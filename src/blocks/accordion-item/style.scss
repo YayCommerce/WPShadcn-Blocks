@@ -1,0 +1,17 @@
+.wp-block-wpshadcn-accordion-item {
+  &.is-open
+    > .wp-block-wpshadcn-accordion-trigger
+    .wp-block-wpshadcn-accordion-trigger-icon {
+    transform: rotate(45deg);
+  }
+
+  /* Add transitions only for users who do not prefer reduced motion */
+  @media (prefers-reduced-motion: no-preference) {
+    transition: grid-template-rows 0.3s ease-out;
+
+    > .wp-block-wpshadcn-accordion-trigger
+      .wp-block-wpshadcn-accordion-trigger-icon {
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+}
