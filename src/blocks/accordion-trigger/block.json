@@ -5,7 +5,6 @@
   "version": "1.0.0",
   "title": "Accordion Trigger",
   "category": "wpshadcn",
-  "icon": "heading",
   "description": "Accordion trigger for accordion item to open the accordion content.",
   "textdomain": "wpshadcn-blocks",
   "parent": ["wpshadcn/accordion-item"],

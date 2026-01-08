@@ -30,7 +30,7 @@ export default function Edit({ attributes, context, clientId, isSelected }) {
   );
   const blockProps = useBlockProps({
     "aria-hidden": !hasSelection,
-    className: "wp-block-wpshadcn-accordion-content",
+    role: "region",
   });
 
   const innerBlocksProps = useInnerBlocksProps(blockProps, {

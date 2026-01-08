@@ -2,7 +2,6 @@
  * WordPress dependencies
  */
 import { registerBlockType } from "@wordpress/blocks";
-import { InnerBlocks } from "@wordpress/block-editor";
 
 /**
  * Internal dependencies
@@ -20,6 +19,26 @@ import "./style.scss";
  */
 registerBlockType(metadata.name, {
   ...metadata,
+  icon: {
+    src: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M17 5H3" />
+        <path d="M21 12H8" />
+        <path d="M21 19H8" />
+        <path d="M3 12v7" />
+      </svg>
+    ),
+  },
   edit: Edit,
   save: Save,
 });

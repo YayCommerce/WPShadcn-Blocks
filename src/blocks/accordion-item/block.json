@@ -7,7 +7,6 @@
   "category": "wpshadcn",
   "parent": ["wpshadcn/accordion"],
   "allowedBlocks": ["wpshadcn/accordion-trigger", "wpshadcn/accordion-content"],
-  "icon": "heading",
   "description": "Wraps the trigger and content of an accordion item.",
   "textdomain": "wpshadcn-blocks",
   "supports": {

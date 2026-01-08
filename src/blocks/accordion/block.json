@@ -5,7 +5,6 @@
   "version": "1.0.0",
   "title": "Accordion",
   "category": "wpshadcn",
-  "icon": "heading",
   "description": "Accordion block to display a list groups content in collapsible sections.",
   "textdomain": "wpshadcn-blocks",
   "supports": {
@@ -87,6 +86,7 @@
   },
   "allowedBlocks": ["wpshadcn/accordion-item"],
   "editorScript": "file:./index.js",
+  "viewScript": "file:./view.js",
   "style": "file:./style-index.css",
   "render": "file:./render.php"
 }

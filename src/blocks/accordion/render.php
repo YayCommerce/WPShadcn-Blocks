@@ -15,15 +15,15 @@ if ( ! function_exists( 'render_block_wpshadcn_accordion' ) ) {
 		$tags         = new WP_HTML_Tag_Processor( $content );
 		$autoclose = ( ! empty( $attributes['autoclose'] ) ) ? 'true' : 'false';
 
-		if ( $tags->next_tag( array( 'class_name' => 'wp-block-wpshadcn-accordion' ) ) ) {
-			$tags->set_attribute( 'data-wp-interactive', 'wpshadcn/accordion' );
-			$tags->set_attribute( 'data-wp-context', '{ "autoclose": ' . $autoclose . ', "accordionItems": [] }' );
+	if ( $tags->next_tag( array( 'class_name' => 'wp-block-wpshadcn-accordion' ) ) ) {
+		$tags->set_attribute( 'data-wp-interactive', 'wpshadcn/accordion' );
+		$tags->set_attribute( 'data-wp-context', '{ "autoclose": ' . $autoclose . ', "accordionItems": [] }' );
 
-			// Only modify content if directives have been set.
-			$content = $tags->get_updated_html();
-		}
+		// Only modify content if directives have been set.
+		$content = $tags->get_updated_html();
+	}
 
-		return $content;
+	return $content;
 	}
 }
 

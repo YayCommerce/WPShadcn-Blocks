@@ -6,7 +6,6 @@
   "title": "Accordion Content",
   "category": "wpshadcn",
   "textdomain": "wpshadcn-blocks",
-  "icon": "text",
   "description": "Contains the hidden or revealed content beneath the heading.",
   "parent": ["wpshadcn/accordion-item"],
   "usesContext": ["wpshadcn/accordion-open-by-default"],
