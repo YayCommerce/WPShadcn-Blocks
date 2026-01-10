@@ -31,7 +31,7 @@ define( 'WPSHADCN_BLOCKS_URL', plugin_dir_url( __FILE__ ) );
  */
 function wpshadcn_blocks_is_theme_active() {
 	$theme = wp_get_theme();
-	return 'shadcn' === $theme->get_template();
+	return 'shadcn' === $theme->get_template() || 'WPShadcn' === $theme->get_template();
 }
 
 /**

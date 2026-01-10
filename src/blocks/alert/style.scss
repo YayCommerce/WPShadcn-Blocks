@@ -1,0 +1,122 @@
+/**
+ * Alert Block Styles
+ * Based on shadcn/ui Alert component
+ */
+
+.wp-block-wpshadcn-alert {
+	position: relative;
+	border-radius: calc(var(--radius, 0.625rem));
+	border: 1px solid var(--wp--preset--color--border, #e5e5e5);
+	background-color: var(--wp--preset--color--background, #ffffff);
+	color: var(--wp--preset--color--foreground, #0a0a0a);
+	padding: 1rem;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+
+	// Default variant styling
+	&.alert-default {
+		border-color: var(--wp--preset--color--border, #e5e5e5);
+		background-color: var(--wp--preset--color--background, #ffffff);
+	}
+
+	// Destructive variant styling
+	&.alert-destructive {
+		border-color: var(--wp--preset--color--destructive, #ef4444);
+		background-color: var(--wp--preset--color--destructive, #ef4444);
+		color: var(--wp--preset--color--destructive-foreground, #ffffff);
+
+		.alert-title {
+			color: var(--wp--preset--color--destructive-foreground, #ffffff);
+		}
+
+		.alert-description {
+			color: var(--wp--preset--color--destructive-foreground, #ffffff);
+			opacity: 0.9;
+		}
+	}
+
+	// Dismissible alert styling
+	&.alert-dismissible {
+		padding-right: 2.5rem;
+	}
+
+	// Dismiss button
+	.alert-dismiss {
+		position: absolute;
+		top: 0.5rem;
+		right: 0.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 1.5rem;
+		height: 1.5rem;
+		padding: 0;
+		background: transparent;
+		border: none;
+		border-radius: calc(var(--radius, 0.625rem) / 2);
+		color: currentColor;
+		cursor: pointer;
+		opacity: 0.7;
+		transition: opacity 0.2s ease, background-color 0.2s ease;
+
+		&:hover {
+			opacity: 1;
+			background-color: rgba(0, 0, 0, 0.05);
+		}
+
+		&:focus {
+			outline: 2px solid var(--wp--preset--color--ring, #a1a1a1);
+			outline-offset: 2px;
+		}
+
+		&:focus-visible {
+			outline: 2px solid var(--wp--preset--color--ring, #a1a1a1);
+			outline-offset: 2px;
+		}
+
+		svg {
+			width: 0.9375rem;
+			height: 0.9375rem;
+			flex-shrink: 0;
+		}
+
+		// Legacy support for text-based dismiss
+		span {
+			font-size: 1.25rem;
+			line-height: 1;
+			font-weight: 700;
+		}
+	}
+
+	// Dark mode adjustments
+	.dark & {
+		border-color: rgba(255, 255, 255, 0.1);
+		background-color: var(--wp--preset--color--card, #171717);
+
+		&.alert-destructive {
+			border-color: var(--wp--preset--color--destructive, #ff6467);
+			background-color: var(--wp--preset--color--destructive, #ff6467);
+		}
+
+		.alert-dismiss {
+			&:hover {
+				background-color: rgba(255, 255, 255, 0.1);
+			}
+		}
+	}
+
+	// Dismissing animation
+	&.alert-dismissing {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+
+	// Ensure child blocks don't have extra margins
+	> * {
+		margin-top: 0;
+		margin-bottom: 0;
+
+		&:not(:last-child) {
+			margin-bottom: 0.25rem;
+		}
+	}
+}
