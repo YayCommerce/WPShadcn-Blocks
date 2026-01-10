@@ -20,7 +20,7 @@ export default function save({ attributes }) {
     <TagName {...blockProps}>
       <button
         type="button"
-        className="wp-block-wpshadcn-accordion-trigger"
+        className="wp-block-wpshadcn-accordion-trigger-button"
         style={spacingProps.style}
       >
         {showIcon && iconPosition === "left" && (

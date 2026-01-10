@@ -59,7 +59,7 @@ export default function Edit({ attributes, setAttributes, context }) {
   return (
     <TagName {...blockProps}>
       <button
-        className="wp-block-wpshadcn-accordion-trigger"
+        className="wp-block-wpshadcn-accordion-trigger-button"
         style={spacingProps.style}
         tabIndex="-1"
       >

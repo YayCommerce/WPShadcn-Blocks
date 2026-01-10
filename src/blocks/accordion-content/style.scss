@@ -1,8 +1,32 @@
 .wp-block-wpshadcn-accordion-content {
-  // Prevent blockGap from Accordion Content block from adding extra margin between accordions.
+  margin-block-start: 0 !important;
+  padding: 0;
+  padding-bottom: calc(var(--spacing) * 4);
+  font-size: var(--wp--preset--font-size--text-sm, 14px);
+  line-height: var(--text-sm--line-height);
+  /* Prevent blockGap from Accordion Content block from adding extra margin between accordions */
   &[inert],
   &[aria-hidden="true"] {
     display: none;
     margin-block-start: 0;
+  }
+
+  /* Smooth fade-in animation when content becomes visible */
+  &:not([inert]):not([aria-hidden="true"]) {
+    animation: accordion-fade-in 0.2s ease-out;
+
+    @media (prefers-reduced-motion: reduce) {
+      animation: none;
+    }
+  }
+
+  /* Keyframes for accordion fade animation */
+  @keyframes accordion-fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
   }
 }
