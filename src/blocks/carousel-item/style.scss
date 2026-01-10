@@ -1,0 +1,16 @@
+/**
+ * Carousel Item block styles.
+ */
+.wp-block-wpshadcn-carousel-item {
+	flex: 0 0 100%;
+	min-width: 0;
+	position: relative;
+
+	/* Ensure images are responsive */
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+	}
+}

@@ -1,0 +1,20 @@
+/**
+ * Carousel block editor styles.
+ */
+.wp-block-wpshadcn-carousel {
+	/* Editor preview - show slides in a row */
+	.wp-block-wpshadcn-carousel__content {
+		display: flex;
+		gap: var(--carousel-gap, 1rem);
+		overflow-x: auto;
+		scroll-snap-type: x mandatory;
+		scrollbar-width: thin;
+	}
+
+	/* Ensure items don't shrink */
+	.wp-block-wpshadcn-carousel-item {
+		flex: 0 0 calc(33.333% - var(--carousel-gap, 1rem) * 2 / 3);
+		scroll-snap-align: start;
+		min-width: 200px;
+	}
+}

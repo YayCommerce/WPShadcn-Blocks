@@ -1,0 +1,72 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wpshadcn/carousel",
+	"version": "1.0.0",
+	"title": "Carousel",
+	"category": "wpshadcn",
+	"icon": "slides",
+	"description": "A flexible carousel that wraps any content including posts and products.",
+	"keywords": [ "carousel", "slider", "gallery", "slideshow" ],
+	"textdomain": "wpshadcn-blocks",
+	"attributes": {
+		"autoplay": {
+			"type": "boolean",
+			"default": false
+		},
+		"autoplayDelay": {
+			"type": "number",
+			"default": 3000
+		},
+		"loop": {
+			"type": "boolean",
+			"default": true
+		},
+		"showArrows": {
+			"type": "boolean",
+			"default": true
+		},
+		"showDots": {
+			"type": "boolean",
+			"default": true
+		},
+		"slidesPerView": {
+			"type": "number",
+			"default": 1
+		},
+		"slidesPerViewTablet": {
+			"type": "number",
+			"default": 2
+		},
+		"slidesPerViewDesktop": {
+			"type": "number",
+			"default": 3
+		},
+		"gap": {
+			"type": "string",
+			"default": "1rem"
+		},
+		"orientation": {
+			"type": "string",
+			"default": "horizontal"
+		}
+	},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./editor-index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
+}

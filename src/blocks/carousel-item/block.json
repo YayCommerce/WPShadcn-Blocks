@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wpshadcn/carousel-item",
+	"version": "1.0.0",
+	"title": "Carousel Item",
+	"category": "wpshadcn",
+	"parent": [ "wpshadcn/carousel" ],
+	"icon": "format-image",
+	"description": "A single slide within a carousel.",
+	"textdomain": "wpshadcn-blocks",
+	"attributes": {},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"lock": false,
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"spacing": {
+			"padding": true
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"width": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
