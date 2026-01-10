@@ -27,9 +27,7 @@ export default function save({ attributes }) {
           <span
             className="wp-block-wpshadcn-accordion-trigger-icon"
             aria-hidden="true"
-          >
-            +
-          </span>
+          />
         )}
         <RichText.Content
           className="wp-block-wpshadcn-accordion-trigger-title"
@@ -44,9 +42,7 @@ export default function save({ attributes }) {
           <span
             className="wp-block-wpshadcn-accordion-trigger-icon"
             aria-hidden="true"
-          >
-            +
-          </span>
+          />
         )}
       </button>
     </TagName>

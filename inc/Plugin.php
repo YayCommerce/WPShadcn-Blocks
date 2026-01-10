@@ -49,6 +49,7 @@ class Plugin {
 		add_filter( 'render_block', array( $this, 'mark_accordion_present' ), 10, 2 );
 		add_action( 'wp_footer', array( $this, 'enqueue_accordion_script' ), 99 );
 		add_filter( 'script_loader_tag', array( $this, 'add_module_type_to_view_script' ), 10, 3 );
+		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_editor_styles' ) );
 	}
 
 	/**
@@ -174,6 +175,23 @@ class Plugin {
 			}
 		}
 		return $tag;
+	}
+
+	/**
+	 * Enqueue editor styles with CSS variables.
+	 */
+	public function enqueue_editor_styles() {
+		$editor_css_path = WPSHADCN_BLOCKS_DIR . 'src/editor-styles.css';
+		$editor_css_url  = WPSHADCN_BLOCKS_URL . 'src/editor-styles.css';
+
+		if ( file_exists( $editor_css_path ) ) {
+			wp_enqueue_style(
+				'wpshadcn-blocks-editor-styles',
+				$editor_css_url,
+				array(),
+				WPSHADCN_BLOCKS_VERSION
+			);
+		}
 	}
 
 }

@@ -67,9 +67,7 @@ export default function Edit({ attributes, setAttributes, context }) {
           <span
             className="wp-block-wpshadcn-accordion-trigger-icon"
             aria-hidden="true"
-          >
-            +
-          </span>
+          />
         )}
         <RichText
           withoutInteractiveFormatting
@@ -88,9 +86,7 @@ export default function Edit({ attributes, setAttributes, context }) {
           <span
             className="wp-block-wpshadcn-accordion-trigger-icon"
             aria-hidden="true"
-          >
-            +
-          </span>
+          />
         )}
       </button>
     </TagName>
