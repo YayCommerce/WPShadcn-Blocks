@@ -10,8 +10,7 @@
   "parent": ["wpshadcn/accordion-item"],
   "usesContext": [
     "wpshadcn/accordion-icon-position",
-    "wpshadcn/accordion-show-icon",
-    "wpshadcn/accordion-heading-level"
+    "wpshadcn/accordion-show-icon"
   ],
   "supports": {
     "anchor": true,
@@ -66,7 +65,7 @@
     }
   },
   "attributes": {
-    "openByDefault": {
+    "isOpen": {
       "type": "boolean",
       "default": false
     },
@@ -76,17 +75,14 @@
       "selector": ".wp-block-wpshadcn-accordion-trigger-title",
       "role": "content"
     },
-    "level": {
-      "type": "number"
+    "showIcon": {
+      "type": "boolean",
+      "default": true
     },
     "iconPosition": {
       "type": "string",
       "enum": ["left", "right"],
       "default": "right"
-    },
-    "showIcon": {
-      "type": "boolean",
-      "default": true
     }
   },
   "editorScript": "file:./index.js",

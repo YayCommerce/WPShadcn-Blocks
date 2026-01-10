@@ -52,13 +52,13 @@
     "contentRole": true
   },
   "attributes": {
-    "openByDefault": {
+    "isOpen": {
       "type": "boolean",
       "default": false
     }
   },
   "providesContext": {
-    "wpshadcn/accordion-open-by-default": "openByDefault"
+    "wpshadcn/accordion-is-open": "isOpen"
   },
   "editorScript": "file:./index.js",
   "style": "file:./style-index.css",

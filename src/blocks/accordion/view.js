@@ -61,7 +61,7 @@ const { actions } = store(
           nextButton.focus();
         }
       }),
-      openPanelByHash: () => {
+      openItemByHash: () => {
         if (hashHandled || !window.location?.hash?.length) {
           return;
         }
@@ -97,16 +97,16 @@ const { actions } = store(
     callbacks: {
       initAccordionItems: () => {
         const context = getContext();
-        const { id, openByDefault, accordionItems } = context;
+        const { id, isOpen, accordionItems } = context;
         accordionItems.push({
           id,
-          isOpen: openByDefault,
+          isOpen,
         });
-        actions.openPanelByHash();
+        actions.openItemByHash();
       },
       hashChange: () => {
         hashHandled = false;
-        actions.openPanelByHash();
+        actions.openItemByHash();
       },
     },
   },

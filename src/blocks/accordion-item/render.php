@@ -22,14 +22,14 @@ if ( ! function_exists( 'block_wpshadcn_accordion_item_render' ) ) {
 			array(
 				'isOpen' => function () {
 					$context = wp_interactivity_get_context();
-					return $context['openByDefault'];
+					return $context['isOpen'];
 				},
 			)
 		);
 
 		if ( $tags->next_tag( array( 'class_name' => 'wp-block-wpshadcn-accordion-item' ) ) ) {
-			$open_by_default = ( ! empty( $attributes['openByDefault'] ) ) ? 'true' : 'false';
-			$tags->set_attribute( 'data-wp-context', '{ "id": "' . $unique_id . '", "openByDefault": ' . $open_by_default . ' }' );
+			$is_open = ( ! empty( $attributes['isOpen'] ) ) ? 'true' : 'false';
+			$tags->set_attribute( 'data-wp-context', '{ "id": "' . $unique_id . '", "isOpen": ' . $is_open . ' }' );
 			$tags->set_attribute( 'data-wp-class--is-open', 'state.isOpen' );
 			$tags->set_attribute( 'data-wp-init', 'callbacks.initAccordionItems' );
 			$tags->set_attribute( 'data-wp-on-window--hashchange', 'callbacks.hashChange' );
@@ -38,11 +38,11 @@ if ( ! function_exists( 'block_wpshadcn_accordion_item_render' ) ) {
 				$tags->set_attribute( 'data-wp-on--click', 'actions.toggle' );
 				$tags->set_attribute( 'data-wp-on--keydown', 'actions.handleKeyDown' );
 				$tags->set_attribute( 'id', $unique_id );
-				$tags->set_attribute( 'aria-controls', $unique_id . '-panel' );
+				$tags->set_attribute( 'aria-controls', $unique_id . '-item' );
 				$tags->set_attribute( 'data-wp-bind--aria-expanded', 'state.isOpen' );
 
 				if ( $tags->next_tag( array( 'class_name' => 'wp-block-wpshadcn-accordion-content' ) ) ) {
-					$tags->set_attribute( 'id', $unique_id . '-panel' );
+					$tags->set_attribute( 'id', $unique_id . '-item' );
 					$tags->set_attribute( 'aria-labelledby', $unique_id );
 					$tags->set_attribute( 'data-wp-bind--inert', '!state.isOpen' );
 

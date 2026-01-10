@@ -30,10 +30,10 @@ export default function Edit({
   setAttributes,
   isSelected: isSingleSelected,
 }) {
-  const { openByDefault } = attributes;
+  const { isOpen } = attributes;
   const { isSelected } = useSelect(
     (select) => {
-      if (isSingleSelected || openByDefault) {
+      if (isSingleSelected || isOpen) {
         return { isSelected: true };
       }
 
@@ -44,12 +44,12 @@ export default function Edit({
         ),
       };
     },
-    [clientId, isSingleSelected, openByDefault]
+    [clientId, isSingleSelected, isOpen]
   );
 
   const blockProps = useBlockProps({
     className: clsx({
-      "is-open": openByDefault || isSelected,
+      "is-open": isOpen || isSelected,
     }),
   });
 
@@ -66,25 +66,25 @@ export default function Edit({
         <ToolsPanel
           label={__("Settings")}
           resetAll={() => {
-            setAttributes({ openByDefault: false });
+            setAttributes({ isOpen: false });
           }}
         >
           <ToolsPanelItem
             label={__("Open by default")}
             isShownByDefault
-            hasValue={() => !!openByDefault}
+            hasValue={() => !!isOpen}
             onDeselect={() => {
-              setAttributes({ openByDefault: false });
+              setAttributes({ isOpen: false });
             }}
           >
             <ToggleControl
               label={__("Open by default")}
               onChange={(value) => {
                 setAttributes({
-                  openByDefault: value,
+                  isOpen: value,
                 });
               }}
-              checked={openByDefault}
+              checked={isOpen}
               help={__("Accordion content will be displayed by default.")}
             />
           </ToolsPanelItem>

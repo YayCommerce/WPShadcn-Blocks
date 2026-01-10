@@ -52,59 +52,21 @@ export default function Edit({
   });
 
   const addAccordionItemBlock = () => {
-    // When adding, set the header's level to current headingLevel
     const newAccordionItem = createBlock(ACCORDION_BLOCK_NAME, {}, [
-      createBlock(ACCORDION_TRIGGER_BLOCK_NAME, {
-        level: headingLevel,
-      }),
+      createBlock(ACCORDION_TRIGGER_BLOCK_NAME, {}),
       createBlock("wpshadcn/accordion-content", {}),
     ]);
     insertBlock(newAccordionItem, undefined, clientId);
   };
 
-  /**
-   * Update all child Accordion Header blocks with a new heading level
-   * based on the accordion group setting.
-   * @param {number} newHeadingLevel The new heading level to set
-   */
-  const updateHeadingLevel = (newHeadingLevel) => {
-    const innerBlockClientIds = getBlockOrder(clientId);
-
-    // Get all accordion-header blocks from all accordion-content blocks.
-    const accordionHeaderClientIds = [];
-    innerBlockClientIds.forEach((contentClientId) => {
-      const headerClientIds = getBlockOrder(contentClientId);
-      accordionHeaderClientIds.push(...headerClientIds);
-    });
-
-    // Update own and child block heading levels.
-    registry.batch(() => {
-      setAttributes({ headingLevel: newHeadingLevel });
-      updateBlockAttributes(accordionHeaderClientIds, {
-        level: newHeadingLevel,
-      });
-    });
-  };
-
   return (
     <>
       {isSingleSelected && !isContentOnlyMode && (
-        <>
-          <BlockControls>
-            <ToolbarGroup>
-              <HeadingLevelDropdown
-                value={headingLevel}
-                options={levelOptions}
-                onChange={updateHeadingLevel}
-              />
-            </ToolbarGroup>
-          </BlockControls>
-          <BlockControls group="other">
-            <ToolbarButton onClick={addAccordionItemBlock}>
-              {__("Add item")}
-            </ToolbarButton>
-          </BlockControls>
-        </>
+        <BlockControls group="other">
+          <ToolbarButton onClick={addAccordionItemBlock}>
+            {__("Add item")}
+          </ToolbarButton>
+        </BlockControls>
       )}
       <InspectorControls key="setting">
         <ToolsPanel

@@ -20,7 +20,6 @@ export default function Edit({ attributes, setAttributes, context }) {
     "wpshadcn/accordion-show-icon": showIcon,
     "wpshadcn/accordion-heading-level": headingLevel,
   } = context;
-  const TagName = "h" + headingLevel;
   const { __unstableMarkNextChangeAsNotPersistent } =
     useDispatch(blockEditorStore);
 
@@ -57,7 +56,7 @@ export default function Edit({ attributes, setAttributes, context }) {
   const spacingProps = useSpacingProps(attributes);
 
   return (
-    <TagName {...blockProps}>
+    <h3 {...blockProps}>
       <button
         className="wp-block-wpshadcn-accordion-trigger-button"
         style={spacingProps.style}
@@ -89,6 +88,6 @@ export default function Edit({ attributes, setAttributes, context }) {
           />
         )}
       </button>
-    </TagName>
+    </h3>
   );
 }

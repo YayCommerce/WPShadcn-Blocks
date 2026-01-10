@@ -70,19 +70,11 @@
     "autoclose": {
       "type": "boolean",
       "default": false
-    },
-    "headingLevel": {
-      "type": "number",
-      "default": 3
-    },
-    "levelOptions": {
-      "type": "array"
     }
   },
   "providesContext": {
     "wpshadcn/accordion-icon-position": "iconPosition",
-    "wpshadcn/accordion-show-icon": "showIcon",
-    "wpshadcn/accordion-heading-level": "headingLevel"
+    "wpshadcn/accordion-show-icon": "showIcon"
   },
   "allowedBlocks": ["wpshadcn/accordion-item"],
   "editorScript": "file:./index.js",

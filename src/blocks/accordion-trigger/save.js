@@ -9,15 +9,14 @@ import {
 } from "@wordpress/block-editor";
 
 export default function save({ attributes }) {
-  const { level, title, iconPosition, showIcon } = attributes;
-  const TagName = "h" + (level || 3);
+  const { title, iconPosition, showIcon } = attributes;
   const typographyProps = getTypographyClassesAndStyles(attributes);
 
   const blockProps = useBlockProps.save();
   const spacingProps = getSpacingClassesAndStyles(attributes);
 
   return (
-    <TagName {...blockProps}>
+    <h3 {...blockProps}>
       <button
         type="button"
         className="wp-block-wpshadcn-accordion-trigger-button"
@@ -45,6 +44,6 @@ export default function save({ attributes }) {
           />
         )}
       </button>
-    </TagName>
+    </h3>
   );
 }
