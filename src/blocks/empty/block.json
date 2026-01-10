@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wpshadcn/empty",
+  "version": "1.0.0",
+  "title": "Empty",
+  "category": "wpshadcn",
+  "icon": "marker",
+  "description": "An empty state placeholder with centered content.",
+  "keywords": ["empty", "placeholder", "no results", "blank"],
+  "textdomain": "wpshadcn-blocks",
+  "attributes": {},
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": ["wide", "full"],
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "width": true,
+      "style": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

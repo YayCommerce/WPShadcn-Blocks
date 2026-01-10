@@ -11,11 +11,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$wrapper_attributes = get_block_wrapper_attributes(
-	array(
-		'class' => 'wp-block-wpshadcn-card-content',
-	)
-);
+$wrapper_attributes = get_block_wrapper_attributes();
 ?>
 
 <div <?php echo $wrapper_attributes; ?>>
