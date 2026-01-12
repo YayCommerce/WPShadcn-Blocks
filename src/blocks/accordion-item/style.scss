@@ -1,0 +1,15 @@
+.wp-block-wpshadcn-accordion-item {
+  margin-block-start: 0 !important;
+  border-bottom: 1px solid var(--wp--preset--color--border, #e5e5e5);
+
+  &:first-child {
+    border-top-left-radius: calc(var(--radius, 0.5rem) - 1px);
+    border-top-right-radius: calc(var(--radius, 0.5rem) - 1px);
+  }
+
+  &:last-child {
+    border-bottom: none;
+    border-bottom-left-radius: calc(var(--radius, 0.5rem) - 1px);
+    border-bottom-right-radius: calc(var(--radius, 0.5rem) - 1px);
+  }
+}
