@@ -1,0 +1,84 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wpshadcn/accordion",
+  "version": "1.0.0",
+  "title": "Accordion",
+  "category": "wpshadcn",
+  "description": "Accordion block to display a list groups content in collapsible sections.",
+  "textdomain": "wpshadcn-blocks",
+  "supports": {
+    "anchor": true,
+    "html": false,
+    "align": ["wide", "full"],
+    "background": {
+      "backgroundImage": true,
+      "backgroundSize": true,
+      "__experimentalDefaultControls": {
+        "backgroundImage": true
+      }
+    },
+    "color": {
+      "background": true,
+      "gradients": true
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true,
+      "__experimentalDefaultControls": {
+        "color": true,
+        "radius": true,
+        "style": true,
+        "width": true
+      }
+    },
+    "spacing": {
+      "padding": true,
+      "margin": ["top", "bottom"],
+      "blockGap": true
+    },
+    "shadow": true,
+    "layout": true,
+    "ariaLabel": true,
+    "interactivity": true,
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "__experimentalFontFamily": true,
+      "__experimentalFontWeight": true,
+      "__experimentalFontStyle": true,
+      "__experimentalTextTransform": true,
+      "__experimentalTextDecoration": true,
+      "__experimentalLetterSpacing": true,
+      "__experimentalDefaultControls": {
+        "fontSize": true
+      }
+    },
+    "contentRole": true
+  },
+  "attributes": {
+    "iconPosition": {
+      "type": "string",
+      "default": "right"
+    },
+    "showIcon": {
+      "type": "boolean",
+      "default": true
+    },
+    "autoclose": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "providesContext": {
+    "wpshadcn/accordion-icon-position": "iconPosition",
+    "wpshadcn/accordion-show-icon": "showIcon"
+  },
+  "allowedBlocks": ["wpshadcn/accordion-item"],
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./view.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
