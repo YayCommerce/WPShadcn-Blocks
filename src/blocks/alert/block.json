@@ -12,6 +12,7 @@
     "html": false,
     "anchor": true,
     "align": ["wide", "full"],
+    "interactivity": true,
     "color": {
       "background": true,
       "text": true

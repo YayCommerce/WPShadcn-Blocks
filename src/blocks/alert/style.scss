@@ -129,6 +129,22 @@
   &.alert-dismissing {
     opacity: 0;
     transform: translateY(-10px);
+    pointer-events: none;
+
+    // Hide completely after animation
+    animation: alertDismiss 0.3s ease forwards;
+  }
+
+  @keyframes alertDismiss {
+    to {
+      opacity: 0;
+      transform: translateY(-10px);
+      max-height: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin: 0;
+      overflow: hidden;
+    }
   }
 
   // Ensure child blocks don't have extra margins
