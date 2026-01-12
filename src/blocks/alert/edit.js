@@ -6,11 +6,7 @@ import {
   InspectorControls,
   useBlockProps,
 } from "@wordpress/block-editor";
-import {
-  PanelBody,
-  SelectControl,
-  ToggleControl,
-} from "@wordpress/components";
+import { PanelBody, SelectControl, ToggleControl } from "@wordpress/components";
 import { __ } from "@wordpress/i18n";
 
 /**
@@ -24,10 +20,7 @@ const TEMPLATE = [
 /**
  * Allowed inner blocks.
  */
-const ALLOWED_BLOCKS = [
-  "wpshadcn/alert-title",
-  "wpshadcn/alert-description",
-];
+const ALLOWED_BLOCKS = ["wpshadcn/alert-title", "wpshadcn/alert-description"];
 
 /**
  * Edit component.
@@ -60,6 +53,14 @@ export default function Edit({ attributes, setAttributes }) {
                 label: __("Destructive", "wpshadcn-blocks"),
                 value: "destructive",
               },
+              {
+                label: __("Warning", "wpshadcn-blocks"),
+                value: "warning",
+              },
+              {
+                label: __("Success", "wpshadcn-blocks"),
+                value: "success",
+              },
             ]}
             onChange={(value) => setAttributes({ variant: value })}
           />
@@ -67,10 +68,7 @@ export default function Edit({ attributes, setAttributes }) {
             label={__("Dismissible", "wpshadcn-blocks")}
             checked={dismissible}
             onChange={(value) => setAttributes({ dismissible: value })}
-            help={__(
-              "Allow users to dismiss the alert",
-              "wpshadcn-blocks"
-            )}
+            help={__("Allow users to dismiss the alert", "wpshadcn-blocks")}
           />
         </PanelBody>
       </InspectorControls>

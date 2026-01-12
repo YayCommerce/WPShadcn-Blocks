@@ -58,7 +58,7 @@
     "title": {
       "type": "string",
       "source": "html",
-      "selector": ".alert-title",
+      "selector": "div",
       "default": ""
     }
   },

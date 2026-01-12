@@ -56,7 +56,7 @@
 
 	// When inside destructive alert
 	.alert-destructive & {
-		color: var(--wp--preset--color--destructive-foreground, #ffffff);
+		color: var(--wp--preset--color--destructive, #dc2626);
 		opacity: 0.9;
 	}
 
