@@ -8,7 +8,6 @@ import {
   BlockControls,
   useBlockEditingMode,
   store as blockEditorStore,
-  HeadingLevelDropdown,
 } from "@wordpress/block-editor";
 import { __ } from "@wordpress/i18n";
 import {
@@ -18,9 +17,8 @@ import {
   __experimentalToolsPanel as ToolsPanel,
   __experimentalToolsPanelItem as ToolsPanelItem,
   ToolbarButton,
-  ToolbarGroup,
 } from "@wordpress/components";
-import { useDispatch, useSelect, useRegistry } from "@wordpress/data";
+import { useDispatch } from "@wordpress/data";
 import { createBlock } from "@wordpress/blocks";
 
 const ACCORDION_BLOCK_NAME = "wpshadcn/accordion-item";
@@ -35,8 +33,6 @@ export default function Edit({
   setAttributes,
   isSelected: isSingleSelected,
 }) {
-  const registry = useRegistry();
-  const { getBlockOrder } = useSelect(blockEditorStore);
   const blockProps = useBlockProps({
     role: "group",
   });
