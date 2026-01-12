@@ -5,11 +5,15 @@
 
 .wp-block-wpshadcn-alert {
   position: relative;
+  display: grid;
+  align-items: flex-start;
+  grid-template-columns: 0 1fr;
   border-radius: calc(var(--radius, 0.625rem));
   border: 1px solid var(--wp--preset--color--border, #e5e5e5);
   background-color: var(--wp--preset--color--background, #ffffff);
   color: var(--wp--preset--color--foreground, #0a0a0a);
-  padding: 1rem;
+  padding-inline: calc(var(--spacing) * 3);
+  padding-block: calc(var(--spacing) * 4);
   transition: opacity 0.3s ease, transform 0.3s ease;
 
   // Default variant styling
@@ -54,11 +58,6 @@
       color: var(--wp--preset--color--info, #279727);
       opacity: 0.9;
     }
-  }
-
-  // Dismissible alert styling
-  &.alert-dismissible {
-    padding-right: 2.5rem;
   }
 
   // Dismiss button

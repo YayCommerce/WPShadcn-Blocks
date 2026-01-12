@@ -12,6 +12,12 @@
   margin-top: 0;
   letter-spacing: -0.01em;
 
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  grid-column-start: 2;
+
   // RichText.Content outputs a div - ensure it inherits styles
   > div {
     margin: 0;
