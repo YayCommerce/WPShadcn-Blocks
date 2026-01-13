@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wpshadcn/drawer-header",
+  "version": "1.0.0",
+  "title": "Drawer Header",
+  "category": "wpshadcn",
+  "parent": ["wpshadcn/drawer"],
+  "icon": "heading",
+  "description": "Drawer header section for title and description.",
+  "textdomain": "wpshadcn-blocks",
+  "attributes": {},
+  "supports": {
+    "html": false,
+    "reusable": false,
+    "lock": false
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
