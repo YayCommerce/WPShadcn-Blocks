@@ -7,7 +7,6 @@
   position: relative;
   display: grid;
   align-items: flex-start;
-  grid-template-columns: 0 1fr;
   border-radius: calc(var(--radius, 0.625rem));
   border: 1px solid var(--wp--preset--color--border, #e5e5e5);
   background-color: var(--wp--preset--color--background, #ffffff);
@@ -15,7 +14,9 @@
   padding-inline: calc(var(--spacing) * 3);
   padding-block: calc(var(--spacing) * 4);
   transition: opacity 0.3s ease, transform 0.3s ease;
-
+  &:not(.block-editor-block-list__block) {
+    grid-template-columns: 0 1fr;
+  }
   // Default variant styling
   &.alert-default {
     border-color: var(--wp--preset--color--border, #e5e5e5);
