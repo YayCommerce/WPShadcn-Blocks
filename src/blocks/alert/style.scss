@@ -1,0 +1,160 @@
+/**
+ * Alert Block Styles
+ * Based on shadcn/ui Alert component
+ */
+
+.wp-block-wpshadcn-alert {
+  box-sizing: border-box;
+  position: relative;
+  display: grid;
+  align-items: flex-start;
+  border-radius: calc(var(--radius, 0.625rem));
+  border: 1px solid var(--wp--preset--color--border, #e5e5e5);
+  background-color: var(--wp--preset--color--background, #ffffff);
+  color: var(--wp--preset--color--foreground, #0a0a0a);
+  padding-inline: calc(var(--spacing) * 3);
+  padding-block: calc(var(--spacing) * 4);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  &:not(.block-editor-block-list__block) {
+    grid-template-columns: 0 1fr;
+  }
+  // Default variant styling
+  &.alert-default {
+    border-color: var(--wp--preset--color--border, #e5e5e5);
+    background-color: var(--wp--preset--color--background, #ffffff);
+  }
+
+  // Destructive variant styling
+  &.alert-destructive {
+    color: var(--wp--preset--color--destructive, #e7000b);
+
+    .alert-title {
+      color: var(--wp--preset--color--destructive, #e7000b);
+    }
+
+    .alert-description {
+      color: var(--wp--preset--color--destructive, #e7000b);
+      opacity: 0.9;
+    }
+  }
+
+  &.alert-warning {
+    color: var(--wp--preset--color--warning, #f9bd09);
+    .alert-title {
+      color: var(--wp--preset--color--warning, #f9bd09);
+    }
+
+    .alert-description {
+      color: var(--wp--preset--color--warning, #f9bd09);
+      opacity: 0.9;
+    }
+  }
+
+  &.alert-success {
+    color: var(--wp--preset--color--info, #279727);
+    .alert-title {
+      color: var(--wp--preset--color--info, #279727);
+    }
+
+    .alert-description {
+      color: var(--wp--preset--color--info, #279727);
+      opacity: 0.9;
+    }
+  }
+
+  // Dismiss button
+  .alert-dismiss {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: calc(var(--radius, 0.625rem) / 2);
+    color: currentColor;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease, background-color 0.2s ease;
+
+    &:hover {
+      opacity: 1;
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    &:focus {
+      outline: 2px solid var(--wp--preset--color--ring, #a1a1a1);
+      outline-offset: 2px;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--wp--preset--color--ring, #a1a1a1);
+      outline-offset: 2px;
+    }
+
+    svg {
+      width: 0.9375rem;
+      height: 0.9375rem;
+      flex-shrink: 0;
+    }
+
+    // Legacy support for text-based dismiss
+    span {
+      font-size: 1.25rem;
+      line-height: 1;
+      font-weight: 700;
+    }
+  }
+
+  // Dark mode adjustments
+  .dark & {
+    border-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--wp--preset--color--card, #171717);
+
+    &.alert-destructive {
+      color: var(--wp--preset--color--destructive, #ff6467);
+    }
+
+    .alert-dismiss {
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+
+  // Dismissing animation
+  &.alert-dismissing {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+
+    // Hide completely after animation
+    animation: alertDismiss 0.3s ease forwards;
+  }
+
+  @keyframes alertDismiss {
+    to {
+      opacity: 0;
+      transform: translateY(-10px);
+      max-height: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin: 0;
+      overflow: hidden;
+    }
+  }
+
+  // Ensure child blocks don't have extra margins
+  > * {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 0.25rem;
+    }
+  }
+}

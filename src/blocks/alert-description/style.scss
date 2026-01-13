@@ -1,0 +1,83 @@
+/**
+ * Alert Description Block Styles
+ * Based on shadcn/ui AlertDescription component
+ */
+
+.wp-block-wpshadcn-alert-description {
+  display: grid;
+  justify-items: start;
+  grid-column-start: 2;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: var(--wp--preset--color--muted-foreground, #737373);
+  margin-top: 0.25rem;
+
+  // First paragraph styling
+  p:first-child {
+    margin-top: 0;
+  }
+
+  // Last element styling
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+  // Paragraph spacing
+  p {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // List styling
+  ul,
+  ol {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    list-style-position: outside;
+
+    li {
+      margin-bottom: 0.25rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+
+  // When inside destructive alert
+  .alert-destructive & {
+    color: var(--wp--preset--color--destructive, #dc2626);
+    opacity: 0.9;
+  }
+
+  // Link styling within description
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+      text-decoration: none;
+    }
+  }
+
+  // Dark mode adjustments
+  .dark & {
+    color: var(--wp--preset--color--muted-foreground, #a1a1a1);
+  }
+}
