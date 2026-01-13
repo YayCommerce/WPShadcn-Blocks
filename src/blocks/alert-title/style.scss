@@ -1,0 +1,62 @@
+/**
+ * Alert Title Block Styles
+ * Based on shadcn/ui AlertTitle component
+ */
+
+.wp-block-wpshadcn-alert-title {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: var(--wp--preset--color--foreground, #0a0a0a);
+  margin-bottom: 0.25rem;
+  margin-top: 0;
+  letter-spacing: -0.01em;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  grid-column-start: 2;
+
+  // RichText.Content outputs a div - ensure it inherits styles
+  > div {
+    margin: 0;
+    padding: 0;
+  }
+
+  // When inside destructive alert, color is set by parent
+  .alert-destructive & {
+    color: var(--wp--preset--color--destructive, #dc2626);
+  }
+
+  // Link styling within title
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      text-decoration: none;
+      opacity: 0.8;
+    }
+
+    &:focus {
+      outline: 2px solid var(--wp--preset--color--ring, #a1a1a1);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+  }
+
+  // Bold text styling
+  strong,
+  b {
+    font-weight: 700;
+  }
+
+  // Italic text styling
+  em,
+  i {
+    font-style: italic;
+  }
+}

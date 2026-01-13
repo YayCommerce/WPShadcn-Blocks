@@ -22,6 +22,13 @@ class Plugin {
 	private static $instance = null;
 
 	/**
+	 * Track which interactive blocks are present on the page.
+	 *
+	 * @var array
+	 */
+	private static $interactive_blocks = array();
+
+	/**
 	 * Get instance.
 	 *
 	 * @return Plugin
@@ -36,19 +43,11 @@ class Plugin {
 	/**
 	 * Constructor.
 	 */
-	/**
-	 * Track if accordion block is present on the page.
-	 *
-	 * @var bool
-	 */
-	private static $accordion_present = false;
-
 	private function __construct() {
 		add_action( 'init', array( $this, 'register_blocks' ) );
 		add_filter( 'block_categories_all', array( $this, 'register_block_category' ), 10, 2 );
-		add_filter( 'render_block', array( $this, 'mark_accordion_present' ), 10, 2 );
-		add_action( 'wp_footer', array( $this, 'enqueue_accordion_script' ), 99 );
-		add_filter( 'script_loader_tag', array( $this, 'add_module_type_to_view_script' ), 10, 3 );
+		add_filter( 'the_content', array( $this, 'detect_interactive_blocks_in_content' ), 5 );
+		add_action( 'wp_footer', array( $this, 'enqueue_interactive_scripts' ), 99 );
 		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_editor_styles' ) );
 	}
 
@@ -96,85 +95,122 @@ class Plugin {
 	}
 
 	/**
-	 * Mark that accordion block is present on the page.
+	 * Detect interactive blocks in the rendered content.
 	 *
-	 * @param string $block_content The block content.
-	 * @param array  $block         The full block, including name and attributes.
-	 * @return string The block content unchanged.
+	 * @param string $content The post content.
+	 * @return string The content unchanged.
 	 */
-	public function mark_accordion_present( $block_content, $block ) {
-		if ( isset( $block['blockName'] ) && 'wpshadcn/accordion' === $block['blockName'] ) {
-			// Set flags that accordion is present.
-			self::$accordion_present = true;
-			if ( ! isset( $GLOBALS['wpshadcn_accordion_present'] ) ) {
-				$GLOBALS['wpshadcn_accordion_present'] = true;
-			}
-			
-			// Ensure Interactivity API is initialized.
-			if ( function_exists( 'wp_interactivity_state' ) ) {
-				wp_interactivity_state( 'wpshadcn/accordion', array() );
-			}
-			
-			if ( function_exists( 'wp_enqueue_script_module' ) ) {
-				wp_enqueue_script_module( '@wordpress/interactivity' );
-			}
+	public function detect_interactive_blocks_in_content( $content ) {
+		// Only on frontend, not in admin.
+		if ( is_admin() ) {
+			return $content;
 		}
-		
-		return $block_content;
+
+		// Parse blocks from content to check attributes before rendering.
+		$blocks = parse_blocks( $content );
+
+		// Define interactive blocks that need view scripts.
+		$interactive_blocks_config = array(
+			'wpshadcn/accordion' => array(
+				'namespace' => 'wpshadcn/accordion',
+				'view_file' => 'accordion/view.js',
+				'check'     => function( $block ) {
+					// Accordion always needs the script if present.
+					return true;
+				},
+			),
+			'wpshadcn/alert'     => array(
+				'namespace' => 'wpshadcn/alert',
+				'view_file' => 'alert/view.js',
+				'check'     => function( $block ) {
+					// Only load if dismissible attribute is true.
+					return isset( $block['attrs']['dismissible'] ) && $block['attrs']['dismissible'] === true;
+				},
+			),
+		);
+
+		// Recursively check blocks and inner blocks.
+		$this->check_blocks_recursive( $blocks, $interactive_blocks_config );
+
+		return $content;
 	}
 
 	/**
-	 * Output accordion view script directly in footer if block is present.
+	 * Recursively check blocks and their inner blocks for interactive blocks.
+	 *
+	 * @param array $blocks Array of parsed blocks.
+	 * @param array $interactive_blocks_config Configuration for interactive blocks.
 	 */
-	public function enqueue_accordion_script() {
+	private function check_blocks_recursive( $blocks, $interactive_blocks_config ) {
+		foreach ( $blocks as $block ) {
+			$block_name = isset( $block['blockName'] ) ? $block['blockName'] : null;
+
+			// Check if this block is an interactive block.
+			if ( $block_name && isset( $interactive_blocks_config[ $block_name ] ) ) {
+				$block_config = $interactive_blocks_config[ $block_name ];
+
+				// Run the check function to determine if script should be loaded.
+				if ( call_user_func( $block_config['check'], $block ) ) {
+					$config_to_store = array(
+						'namespace' => $block_config['namespace'],
+						'view_file' => $block_config['view_file'],
+					);
+					self::$interactive_blocks[ $block_name ] = $config_to_store;
+
+					// Ensure Interactivity API is initialized.
+					if ( function_exists( 'wp_interactivity_state' ) ) {
+						wp_interactivity_state( $block_config['namespace'], array() );
+					}
+					if ( function_exists( 'wp_enqueue_script_module' ) ) {
+						wp_enqueue_script_module( '@wordpress/interactivity' );
+					}
+				}
+			}
+
+			// Recursively check inner blocks.
+			if ( ! empty( $block['innerBlocks'] ) ) {
+				$this->check_blocks_recursive( $block['innerBlocks'], $interactive_blocks_config );
+			}
+		}
+	}
+
+	/**
+	 * Output interactive block view scripts in footer if blocks are present.
+	 */
+	public function enqueue_interactive_scripts() {
 		// Only on frontend, not in admin.
 		if ( is_admin() ) {
 			return;
 		}
 
-		// Check if accordion block is present (static variable set during render_block)
-		if ( ! self::$accordion_present && ( ! isset( $GLOBALS['wpshadcn_accordion_present'] ) || ! $GLOBALS['wpshadcn_accordion_present'] ) ) {
+		// Get blocks from static property or global fallback.
+		$blocks = self::$interactive_blocks;
+		if ( empty( $blocks ) && isset( $GLOBALS['wpshadcn_interactive_blocks'] ) ) {
+			$blocks = $GLOBALS['wpshadcn_interactive_blocks'];
+		}
+
+		if ( empty( $blocks ) ) {
 			return;
 		}
 
-		// Output script tag directly
-		$view_js_path = WPSHADCN_BLOCKS_DIR . 'build/blocks/accordion/view.js';
-		$view_js_url  = WPSHADCN_BLOCKS_URL . 'build/blocks/accordion/view.js';
-		$asset_path   = WPSHADCN_BLOCKS_DIR . 'build/blocks/accordion/view.asset.php';
-		
-		if ( file_exists( $view_js_path ) ) {
-			$asset   = file_exists( $asset_path ) ? require $asset_path : array();
-			$version = isset( $asset['version'] ) ? $asset['version'] : WPSHADCN_BLOCKS_VERSION;
-			
-			// Output script tag directly as a module
-			printf(
-				'<script type="module" src="%s?ver=%s" defer></script>' . "\n",
-				esc_url( $view_js_url ),
-				esc_attr( $version )
-			);
-		}
-	}
+		// Output script tags for each interactive block that's present.
+		foreach ( $blocks as $block_name => $block_config ) {
+			$view_js_path = WPSHADCN_BLOCKS_DIR . 'build/blocks/' . $block_config['view_file'];
+			$view_js_url  = WPSHADCN_BLOCKS_URL . 'build/blocks/' . $block_config['view_file'];
+			$asset_path   = str_replace( '.js', '.asset.php', $view_js_path );
 
-	/**
-	 * Add type="module" to view script tags for ES modules.
-	 *
-	 * @param string $tag    The script tag HTML.
-	 * @string $handle      The script handle.
-	 * @param string $src    The script source URL.
-	 * @return string Modified script tag.
-	 */
-	public function add_module_type_to_view_script( $tag, $handle, $src ) {
-		// Check if this is the accordion view script
-		if ( strpos( $handle, 'wpshadcn-accordion-view-script' ) !== false || 
-		     strpos( $src, 'blocks/accordion/view.js' ) !== false ) {
-			// Remove any existing type attribute
-			$tag = preg_replace( '/\stype="[^"]*"/', '', $tag );
-			// Add type="module" if not already present
-			if ( strpos( $tag, 'type=' ) === false ) {
-				$tag = str_replace( ' src=', ' type="module" src=', $tag );
+			if ( file_exists( $view_js_path ) ) {
+				$asset   = file_exists( $asset_path ) ? require $asset_path : array();
+				$version = isset( $asset['version'] ) ? $asset['version'] : WPSHADCN_BLOCKS_VERSION;
+
+				// Output script tag directly as a module.
+				printf(
+					'<script type="module" src="%s?ver=%s" defer></script>' . "\n",
+					esc_url( $view_js_url ),
+					esc_attr( $version )
+				);
 			}
 		}
-		return $tag;
 	}
 
 	/**
@@ -193,7 +229,6 @@ class Plugin {
 			);
 		}
 	}
-
 }
 
 // Initialize the plugin.

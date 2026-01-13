@@ -1,0 +1,61 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wpshadcn/alert-description",
+  "version": "1.0.0",
+  "title": "Alert Description",
+  "category": "wpshadcn",
+  "description": "Alert description for alert block.",
+  "textdomain": "wpshadcn-blocks",
+  "parent": ["wpshadcn/alert"],
+  "supports": {
+    "anchor": true,
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "align": false,
+    "interactivity": true,
+    "spacing": {
+      "padding": true,
+      "__experimentalDefaultControls": {
+        "padding": true
+      },
+      "__experimentalSkipSerialization": true,
+      "__experimentalSelector": ".wp-block-wpshadcn-alert-description"
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true,
+      "__experimentalDefaultControls": {
+        "color": true,
+        "radius": true,
+        "style": true,
+        "width": true
+      }
+    },
+    "typography": {
+      "__experimentalSkipSerialization": ["textDecoration", "letterSpacing"],
+      "fontSize": true,
+      "__experimentalFontFamily": true,
+      "__experimentalFontWeight": true,
+      "__experimentalFontStyle": true,
+      "__experimentalTextTransform": true,
+      "__experimentalTextDecoration": true,
+      "__experimentalLetterSpacing": true,
+      "__experimentalDefaultControls": {
+        "fontSize": true,
+        "fontFamily": true
+      }
+    },
+    "shadow": true,
+    "visibility": false,
+    "lock": false,
+    "html": false
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
