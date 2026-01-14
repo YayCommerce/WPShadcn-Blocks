@@ -12,7 +12,12 @@ const TEMPLATE = [
     "core/button",
     {
       text: __("Open Drawer", "wpshadcn-blocks"),
-      className: "is-style-primary",
+      className: "is-style-outline",
+      style: {
+        typography: {
+          fontSize: 14,
+        },
+      },
     },
   ],
 ];

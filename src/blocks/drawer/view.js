@@ -40,7 +40,11 @@ const drawerStore = store(
       },
       toggle: () => {
         const context = getContext();
-        drawerStore.actions[context.open ? "close" : "open"]();
+        if (context.open) {
+          drawerStore.actions.close();
+        } else {
+          drawerStore.actions.open();
+        }
       },
       handleEscape: (event) => {
         if (event?.key === "Escape") {

@@ -27,12 +27,31 @@ const TEMPLATE = [
         {
           text: __("Cancel", "wpshadcn-blocks"),
           className: "is-style-outline",
+          style: {
+            typography: {
+              fontSize: 14,
+            },
+          },
         },
       ],
       [
         "core/button",
         {
           text: __("Submit", "wpshadcn-blocks"),
+          style: {
+            spacing: {
+              padding: {
+                top: 8,
+                right: 16,
+                bottom: 8,
+                left: 16,
+              },
+            },
+            // how to set typo  font size to 14px
+            typography: {
+              fontSize: 14,
+            },
+          },
         },
       ],
     ],
