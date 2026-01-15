@@ -3,6 +3,7 @@ import { __ } from "@wordpress/i18n";
 import {
   RangeControl,
   ToggleControl,
+  SelectControl,
   __experimentalToggleGroupControl as ToggleGroupControl,
   __experimentalToggleGroupControlOption as ToggleGroupControlOption,
   __experimentalToolsPanel as ToolsPanel,
@@ -11,11 +12,11 @@ import {
 
 export default function Edit(props) {
   const { attributes, setAttributes } = props;
-  const { maxValue, currentValue, showLabel } = attributes;
-  const { type, value } = currentValue;
+  const { maxValue, currentValue, staticValue, dynamicValue, showLabel } =
+    attributes;
 
   // Calculate percentage for display
-  const percentage = Math.min(Math.max((value / maxValue) * 100, 0), 100);
+  const percentage = Math.min(Math.max((staticValue / maxValue) * 100, 0), 100);
 
   const blockProps = useBlockProps({
     className: "wp-block-wpshadcn-progress",
@@ -29,10 +30,9 @@ export default function Edit(props) {
           resetAll={() => {
             setAttributes({
               maxValue: 100,
-              currentValue: {
-                type: "static",
-                value: 50,
-              },
+              currentValue: "static",
+              staticValue: 50,
+              dynamicValue: "free_shipping",
               showLabel: true,
             });
           }}
@@ -54,52 +54,66 @@ export default function Edit(props) {
           </ToolsPanelItem>
 
           <ToolsPanelItem
-            label={__("Type")}
+            label={__("Current Value")}
             isShownByDefault
-            hasValue={() => type !== "static"}
-            onDeselect={() =>
-              setAttributes({
-                currentValue: { ...currentValue, type: "static" },
-              })
-            }
+            hasValue={() => currentValue !== "static"}
+            onDeselect={() => setAttributes({ currentValue: "static" })}
           >
             <ToggleGroupControl
               __next40pxDefaultSize
               isBlock
-              label={__("Type")}
-              value={type}
-              onChange={(value) => {
-                setAttributes({
-                  currentValue: { ...currentValue, type: value },
-                });
-              }}
+              label={__("Current Value")}
+              value={currentValue}
+              onChange={(value) => setAttributes({ currentValue: value })}
             >
               <ToggleGroupControlOption label={__("Static")} value="static" />
               <ToggleGroupControlOption label={__("Dynamic")} value="dynamic" />
             </ToggleGroupControl>
           </ToolsPanelItem>
-          {type === "static" && (
+          {currentValue === "static" && (
             <ToolsPanelItem
               label={__("Value", "wpshadcn-blocks")}
               isShownByDefault
-              hasValue={() => value !== 50}
+              hasValue={() => staticValue !== 50}
               onDeselect={() =>
                 setAttributes({
-                  currentValue: { ...currentValue, value: 50 },
+                  staticValue: 50,
                 })
               }
             >
               <RangeControl
                 label={__("Value", "wpshadcn-blocks")}
-                value={value}
+                value={staticValue}
                 onChange={(value) =>
                   setAttributes({
-                    currentValue: { ...currentValue, value: value },
+                    staticValue: value,
                   })
                 }
                 min={0}
                 max={maxValue}
                 step={1}
+              />
+            </ToolsPanelItem>
+          )}
+          {currentValue === "dynamic" && (
+            <ToolsPanelItem
+              label={__("Value", "wpshadcn-blocks")}
+              isShownByDefault
+              hasValue={() => dynamicValue !== "free_shipping"}
+              onDeselect={() =>
+                setAttributes({ dynamicValue: "free_shipping" })
+              }
+            >
+              <SelectControl
+                label={__("Value", "wpshadcn-blocks")}
+                value={dynamicValue}
+                onChange={(value) => setAttributes({ dynamicValue: value })}
+                options={[
+                  {
+                    label: __("Free Shipping", "wpshadcn-blocks"),
+                    value: "free_shipping",
+                  },
+                ]}
               />
             </ToolsPanelItem>
           )}
@@ -122,7 +136,7 @@ export default function Edit(props) {
           <div
             className="progress-indicator"
             role="progressbar"
-            aria-valuenow={value}
+            aria-valuenow={staticValue}
             aria-valuemin={0}
             aria-valuemax={maxValue}
             style={{ width: `${percentage}%` }}
@@ -130,7 +144,7 @@ export default function Edit(props) {
         </div>
         {showLabel !== false && type === "static" && (
           <div className="progress-label">
-            {value} / {maxValue} ({Math.round(percentage)}%)
+            {staticValue} / {maxValue} ({Math.round(percentage)}%)
           </div>
         )}
         {showLabel !== false && type === "dynamic" && (

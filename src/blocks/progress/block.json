@@ -14,11 +14,16 @@
       "default": 100
     },
     "currentValue": {
-      "type": "object",
-      "default": {
-        "type": "static",
-        "value": 50
-      }
+      "type": "string",
+      "default": "static"
+    },
+    "staticValue": {
+      "type": "number",
+      "default": 50
+    },
+    "dynamicValue": {
+      "type": "string",
+      "default": "free_shipping"
     },
     "showLabel": {
       "type": "boolean",

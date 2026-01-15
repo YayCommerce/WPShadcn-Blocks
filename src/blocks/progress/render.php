@@ -12,17 +12,37 @@
 defined( 'ABSPATH' ) || exit;
 
 $max_value     = isset( $attributes['maxValue'] ) ? (int) $attributes['maxValue'] : 100;
-$current_value = isset( $attributes['currentValue'] ) ? $attributes['currentValue'] : array(
-	'type'  => 'static',
-	'value' => 50,
-);
+$current_value = isset( $attributes['currentValue'] ) ? $attributes['currentValue'] : 'static';
+$static_value  = isset( $attributes['staticValue'] ) ? (int) $attributes['staticValue'] : 50;
 $show_label    = isset( $attributes['showLabel'] ) ? (bool) $attributes['showLabel'] : true;
 
-$type  = isset( $current_value['type'] ) ? $current_value['type'] : 'static';
-$value = isset( $current_value['value'] ) ? (int) $current_value['value'] : 50;
-
 // Calculate percentage
-$percentage = $max_value > 0 ? min( max( ( $value / $max_value ) * 100, 0 ), 100 ) : 0;
+if( $current_value === 'static' ) {
+    $percentage = $max_value > 0 ? min( max( ( $static_value / $max_value ) * 100, 0 ), 100 ) : 0;
+	$value = $static_value;
+} else if( $current_value === 'dynamic' ) {
+    $dynamic_value = isset( $attributes['dynamicValue'] ) ? $attributes['dynamicValue'] : 'free_shipping';
+
+    if( $dynamic_value === 'free_shipping' ) {
+		if( ! class_exists( 'WooCommerce' ) ) {
+			return '';
+		}
+
+		$free_shipping = \WpShadcnBlocks\FreeShipping::get_instance();
+		$free_shipping_info = $free_shipping->get_free_shipping_info();
+		
+		if ($free_shipping_info === null) {
+            return null;
+        }
+
+        $min_amount       = $free_shipping_info['min_amount'];
+        $ignore_discounts = $free_shipping_info['ignore_discounts'] ?? 'no';
+        $cart_total       = $free_shipping->calculate_cart_total_for_shipping( $ignore_discounts );
+		$value            = $free_shipping->calculate_progress( $min_amount, $cart_total );
+		$percentage       = $max_value > 0 ? min( max( ( $value / $max_value ) * 100, 0 ), 100 ) : 0;
+    }
+}
+
 
 $wrapper_attributes = get_block_wrapper_attributes(
 	array(
@@ -42,13 +62,13 @@ $wrapper_attributes = get_block_wrapper_attributes(
 			style="width: <?php echo esc_attr( $percentage ); ?>%;"
 		></div>
 	</div>
-	<?php if ( $show_label && 'static' === $type ) : ?>
+	<?php if ( $show_label && 'static' === $current_value ) : ?>
 		<div class="progress-label">
 			<?php
 			printf(
 				/* translators: 1: current value, 2: max value, 3: percentage */
 				esc_html__( '%1$d / %2$d (%3$d%%)', 'wpshadcn-blocks' ),
-				$value,
+				$static_value,
 				$max_value,
 				round( $percentage )
 			);
@@ -56,3 +76,5 @@ $wrapper_attributes = get_block_wrapper_attributes(
 		</div>
 	<?php endif; ?>
 </div>
+
+
