@@ -1,8 +1,8 @@
 import { useBlockProps, InspectorControls } from "@wordpress/block-editor";
 import { __ } from "@wordpress/i18n";
 import {
-  PanelBody,
   RangeControl,
+  ToggleControl,
   __experimentalToggleGroupControl as ToggleGroupControl,
   __experimentalToggleGroupControlOption as ToggleGroupControlOption,
   __experimentalToolsPanel as ToolsPanel,
@@ -11,8 +11,11 @@ import {
 
 export default function Edit(props) {
   const { attributes, setAttributes } = props;
-  const { maxValue, currentValue } = attributes;
+  const { maxValue, currentValue, showLabel } = attributes;
   const { type, value } = currentValue;
+
+  // Calculate percentage for display
+  const percentage = Math.min(Math.max((value / maxValue) * 100, 0), 100);
 
   const blockProps = useBlockProps({
     className: "wp-block-wpshadcn-progress",
@@ -30,13 +33,14 @@ export default function Edit(props) {
                 type: "static",
                 value: 50,
               },
+              showLabel: true,
             });
           }}
         >
           <ToolsPanelItem
             label={__("Max Value", "wpshadcn-blocks")}
             isShownByDefault
-            hasValue={() => !!maxValue}
+            hasValue={() => maxValue !== 100}
             onDeselect={() => setAttributes({ maxValue: 100 })}
           >
             <RangeControl
@@ -44,6 +48,7 @@ export default function Edit(props) {
               value={maxValue}
               onChange={(value) => setAttributes({ maxValue: value })}
               min={1}
+              max={1000}
               step={1}
             />
           </ToolsPanelItem>
@@ -77,7 +82,7 @@ export default function Edit(props) {
             <ToolsPanelItem
               label={__("Value", "wpshadcn-blocks")}
               isShownByDefault
-              hasValue={() => !!value}
+              hasValue={() => value !== 50}
               onDeselect={() =>
                 setAttributes({
                   currentValue: { ...currentValue, value: 50 },
@@ -98,9 +103,42 @@ export default function Edit(props) {
               />
             </ToolsPanelItem>
           )}
+          <ToolsPanelItem
+            label={__("Show Label", "wpshadcn-blocks")}
+            isShownByDefault
+            hasValue={() => showLabel !== false}
+            onDeselect={() => setAttributes({ showLabel: false })}
+          >
+            <ToggleControl
+              label={__("Show Label", "wpshadcn-blocks")}
+              onChange={(value) => setAttributes({ showLabel: value })}
+              checked={showLabel !== false}
+            />
+          </ToolsPanelItem>
         </ToolsPanel>
       </InspectorControls>
-      <div {...blockProps}>progress</div>
+      <div {...blockProps}>
+        <div className="progress-container">
+          <div
+            className="progress-indicator"
+            role="progressbar"
+            aria-valuenow={value}
+            aria-valuemin={0}
+            aria-valuemax={maxValue}
+            style={{ width: `${percentage}%` }}
+          />
+        </div>
+        {showLabel !== false && type === "static" && (
+          <div className="progress-label">
+            {value} / {maxValue} ({Math.round(percentage)}%)
+          </div>
+        )}
+        {showLabel !== false && type === "dynamic" && (
+          <div className="progress-label">
+            {__("Dynamic progress", "wpshadcn-blocks")}
+          </div>
+        )}
+      </div>
     </>
   );
 }
