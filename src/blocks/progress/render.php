@@ -18,7 +18,7 @@ $show_label    = isset( $attributes['showLabel'] ) ? (bool) $attributes['showLab
 
 // Calculate percentage
 if( $current_value === 'static' ) {
-    $percentage = $max_value > 0 ? min( max( ( $static_value / $max_value ) * 100, 0 ), 100 ) : 0;
+    $percentage = $max_value > 0 ? min( max( ( $static_value / $max_value ) * 100, 0 ), $max_value ) : 0;
 	$value = $static_value;
 } else if( $current_value === 'dynamic' ) {
     $dynamic_value = isset( $attributes['dynamicValue'] ) ? $attributes['dynamicValue'] : 'free_shipping';
@@ -39,7 +39,7 @@ if( $current_value === 'static' ) {
         $ignore_discounts = $free_shipping_info['ignore_discounts'] ?? 'no';
         $cart_total       = $free_shipping->calculate_cart_total_for_shipping( $ignore_discounts );
 		$value            = $free_shipping->calculate_progress( $min_amount, $cart_total );
-		$percentage       = $max_value > 0 ? min( max( ( $value / $max_value ) * 100, 0 ), 100 ) : 0;
+		$percentage       = $max_value > $value ? $value : $max_value;
     }
 }
 
