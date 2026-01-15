@@ -9,7 +9,7 @@
 
   .progress-container {
     position: relative;
-    height: 1rem;
+    height: calc(var(--spacing, 0.25rem) * 2);
     width: 100%;
     overflow: hidden;
     border-radius: calc(var(--radius, 0.625rem));
@@ -47,13 +47,6 @@
 
     .progress-label {
       color: var(--wp--preset--color--muted-foreground, #a1a1aa);
-    }
-  }
-
-  // Editor specific styles
-  &.block-editor-block-list__block {
-    .progress-container {
-      min-height: 1rem;
     }
   }
 }
