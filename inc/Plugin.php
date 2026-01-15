@@ -128,6 +128,14 @@ class Plugin {
 					return isset( $block['attrs']['dismissible'] ) && $block['attrs']['dismissible'] === true;
 				},
 			),
+			'wpshadcn/drawer' => array(
+				'namespace' => 'wpshadcn/drawer',
+				'view_file' => 'drawer/view.js',
+				'check'     => function( $block ) {
+					// Drawer always needs the script if present.
+					return true;
+				},
+			),
 		);
 
 		// Recursively check blocks and inner blocks.

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wpshadcn/drawer",
+  "version": "1.0.0",
+  "title": "Drawer",
+  "category": "wpshadcn",
+  "description": "Drawer block to display additional content, actions, or navigation without leaving the current page.",
+  "keywords": ["overlay", "modal", "panel"],
+  "textdomain": "wpshadcn-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": ["wide", "full"],
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": false
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "width": true
+    }
+  },
+  "attributes": {
+    "dismissible": {
+      "type": "boolean",
+      "default": false
+    },
+    "direction": {
+      "type": "string",
+      "default": "bottom"
+    }
+  },
+  "allowedBlocks": [
+    "wpshadcn/drawer-trigger",
+    "wpshadcn/drawer-header",
+    "wpshadcn/drawer-content",
+    "wpshadcn/drawer-footer"
+  ],
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}
