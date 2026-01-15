@@ -21,8 +21,10 @@ import "./blocks/card-footer";
 import "./blocks/alert";
 import "./blocks/alert-title";
 import "./blocks/alert-description";
-s;
+
 import "./blocks/accordion";
 import "./blocks/accordion-item";
 import "./blocks/accordion-trigger";
 import "./blocks/accordion-content";
+
+import "./blocks/progress";

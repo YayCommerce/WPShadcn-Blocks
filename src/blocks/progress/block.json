@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wpshadcn/progress",
+  "version": "1.0.0",
+  "title": "Progress",
+  "category": "wpshadcn",
+  "description": "A progress bar for loading indicators and progress bars.",
+  "keywords": ["progress", "bar", "indicator"],
+  "textdomain": "wpshadcn-blocks",
+  "attributes": {
+    "maxValue": {
+      "type": "number",
+      "default": 100
+    },
+    "currentValue": {
+      "type": "object",
+      "default": {
+        "type": "static",
+        "value": 50
+      }
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": ["wide", "full"],
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "width": true,
+      "style": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}
