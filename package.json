@@ -6,7 +6,7 @@
   "license": "GPL-3.0-or-later",
   "main": "build/index.js",
   "scripts": {
-    "build": "wp-scripts build && node scripts/fix-wp-interactivity.js",
+    "build": "wp-scripts build",
     "start": "wp-scripts start",
     "lint:js": "wp-scripts lint-js",
     "lint:css": "wp-scripts lint-style",

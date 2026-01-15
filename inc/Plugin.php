@@ -46,9 +46,10 @@ class Plugin {
 	private function __construct() {
 		add_action( 'init', array( $this, 'register_blocks' ) );
 		add_filter( 'block_categories_all', array( $this, 'register_block_category' ), 10, 2 );
-		add_filter( 'the_content', array( $this, 'detect_interactive_blocks_in_content' ), 5 );
-		add_action( 'wp_footer', array( $this, 'enqueue_interactive_scripts' ), 99 );
 		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_editor_styles' ) );
+		// Detect interactive blocks during content render, then enqueue modules in footer.
+		add_filter( 'the_content', array( $this, 'detect_interactive_blocks_in_content' ), 5 );
+		add_action( 'wp_footer', array( $this, 'enqueue_interactive_scripts' ), 5 );
 	}
 
 	/**
@@ -175,7 +176,7 @@ class Plugin {
 	}
 
 	/**
-	 * Output interactive block view scripts in footer if blocks are present.
+	 * Enqueue interactive block view scripts using WordPress Script Modules API.
 	 */
 	public function enqueue_interactive_scripts() {
 		// Only on frontend, not in admin.
@@ -193,7 +194,7 @@ class Plugin {
 			return;
 		}
 
-		// Output script tags for each interactive block that's present.
+		// Enqueue view scripts for each interactive block using Script Modules API.
 		foreach ( $blocks as $block_name => $block_config ) {
 			$view_js_path = WPSHADCN_BLOCKS_DIR . 'build/blocks/' . $block_config['view_file'];
 			$view_js_url  = WPSHADCN_BLOCKS_URL . 'build/blocks/' . $block_config['view_file'];
@@ -203,12 +204,19 @@ class Plugin {
 				$asset   = file_exists( $asset_path ) ? require $asset_path : array();
 				$version = isset( $asset['version'] ) ? $asset['version'] : WPSHADCN_BLOCKS_VERSION;
 
-				// Output script tag directly as a module.
-				printf(
-					'<script type="module" src="%s?ver=%s" defer></script>' . "\n",
-					esc_url( $view_js_url ),
-					esc_attr( $version )
-				);
+				// Generate unique module ID from block name.
+				$module_id = str_replace( '/', '-', $block_name ) . '-view';
+
+				// Register and enqueue as script module with @wordpress/interactivity dependency.
+				if ( function_exists( 'wp_register_script_module' ) ) {
+					wp_register_script_module(
+						$module_id,
+						$view_js_url,
+						array( '@wordpress/interactivity' ),
+						$version
+					);
+					wp_enqueue_script_module( $module_id );
+				}
 			}
 		}
 	}
@@ -228,6 +236,7 @@ class Plugin {
 				WPSHADCN_BLOCKS_VERSION
 			);
 		}
+
 	}
 }
 
