@@ -17,13 +17,37 @@
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.25s ease;
-  z-index: 50;
+  z-index: 500000;
 }
 
 .wp-block-wpshadcn-drawer__portal.is-open,
 .wp-block-wpshadcn-drawer__portal[data-open="true"] {
   opacity: 1;
   pointer-events: auto;
+}
+
+// Bottom (default)
+.wp-block-wpshadcn-drawer__portal--bottom {
+  align-items: flex-end;
+  justify-content: center;
+}
+
+// Top
+.wp-block-wpshadcn-drawer__portal--top {
+  align-items: flex-start;
+  justify-content: center;
+}
+
+// Left
+.wp-block-wpshadcn-drawer__portal--left {
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+// Right
+.wp-block-wpshadcn-drawer__portal--right {
+  align-items: stretch;
+  justify-content: flex-end;
 }
 
 .wp-block-wpshadcn-drawer__overlay {
@@ -40,21 +64,76 @@
 
 .wp-block-wpshadcn-drawer__panel {
   position: relative;
-  width: min(640px, 100%);
-  max-height: 90vh;
   background: var(--wp--preset--color--background, #fff);
-  border-radius: var(--wp--preset--spacing--3, 12px);
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
-  transform: scale(0.95);
-  opacity: 0;
-  transition: transform 0.28s ease, opacity 0.28s ease;
   overflow: hidden;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.wp-block-wpshadcn-drawer__portal.is-open .wp-block-wpshadcn-drawer__panel,
-.wp-block-wpshadcn-drawer__portal[data-open="true"]
-  .wp-block-wpshadcn-drawer__panel {
-  transform: scale(1);
+// Bottom panel (default)
+.wp-block-wpshadcn-drawer__panel--bottom {
+  width: 100%;
+  max-height: 80vh;
+  border-radius: var(--wp--preset--spacing--3, 12px)
+    var(--wp--preset--spacing--3, 12px) 0 0;
+  transform: translateY(100%);
+}
+
+.wp-block-wpshadcn-drawer__portal--bottom.is-open
+  .wp-block-wpshadcn-drawer__panel--bottom,
+.wp-block-wpshadcn-drawer__portal--bottom[data-open="true"]
+  .wp-block-wpshadcn-drawer__panel--bottom {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+// Top panel
+.wp-block-wpshadcn-drawer__panel--top {
+  width: 100%;
+  max-height: 80vh;
+  border-radius: 0 0 var(--wp--preset--spacing--3, 12px)
+    var(--wp--preset--spacing--3, 12px);
+  transform: translateY(-100%);
+}
+
+.wp-block-wpshadcn-drawer__portal--top.is-open
+  .wp-block-wpshadcn-drawer__panel--top,
+.wp-block-wpshadcn-drawer__portal--top[data-open="true"]
+  .wp-block-wpshadcn-drawer__panel--top {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+// Left panel
+.wp-block-wpshadcn-drawer__panel--left {
+  width: 100%;
+  max-width: min(400px, 85vw);
+  height: 100vh;
+  transform: translateX(-100%);
+}
+
+.wp-block-wpshadcn-drawer__portal--left.is-open
+  .wp-block-wpshadcn-drawer__panel--left,
+.wp-block-wpshadcn-drawer__portal--left[data-open="true"]
+  .wp-block-wpshadcn-drawer__panel--left {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+// Right panel
+.wp-block-wpshadcn-drawer__panel--right {
+  width: 100%;
+  max-width: min(400px, 85vw);
+  height: 100vh;
+  transform: translateX(100%);
+}
+
+.wp-block-wpshadcn-drawer__portal--right.is-open
+  .wp-block-wpshadcn-drawer__panel--right,
+.wp-block-wpshadcn-drawer__portal--right[data-open="true"]
+  .wp-block-wpshadcn-drawer__panel--right {
+  transform: translateX(0);
   opacity: 1;
 }
 
@@ -70,6 +149,51 @@
   background: var(--wp--preset--color--background, #fff);
   color: var(--wp--preset--color--foreground, #09090b);
   cursor: pointer;
+}
+
+.wp-block-wpshadcn-drawer__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: calc(var(--wp--preset--spacing--2, 8px) / 2);
+  color: currentColor;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+  z-index: 10;
+
+  &:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  &:focus {
+    outline: 2px solid var(--wp--preset--color--ring, #a1a1a1);
+    outline-offset: 2px;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--wp--preset--color--ring, #a1a1a1);
+    outline-offset: 2px;
+  }
+
+  svg {
+    width: 0.9375rem;
+    height: 0.9375rem;
+    flex-shrink: 0;
+  }
+}
+
+.wp-block-wpshadcn-drawer-header {
+  position: relative;
 }
 
 body.wpshadcn-drawer-open {

@@ -26,7 +26,16 @@
       "width": true
     }
   },
-  "attributes": {},
+  "attributes": {
+    "dismissible": {
+      "type": "boolean",
+      "default": false
+    },
+    "direction": {
+      "type": "string",
+      "default": "bottom"
+    }
+  },
   "allowedBlocks": [
     "wpshadcn/drawer-trigger",
     "wpshadcn/drawer-header",
