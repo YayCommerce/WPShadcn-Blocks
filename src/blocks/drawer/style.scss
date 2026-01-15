@@ -60,6 +60,9 @@
     transparent
   );
   opacity: 0.7;
+  z-index: 1;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 .wp-block-wpshadcn-drawer__panel {
@@ -69,6 +72,8 @@
   overflow: hidden;
   opacity: 0;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 2;
+  pointer-events: auto;
 }
 
 // Bottom panel (default)

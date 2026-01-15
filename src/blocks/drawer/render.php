@@ -190,9 +190,7 @@ if ( ! function_exists( 'block_wpshadcn_drawer_render' ) ) {
 			>
 				<div
 					class="wp-block-wpshadcn-drawer__overlay"
-					<?php if ( $dismissible ) : ?>
-					data-wp-on--click="actions.close"
-					<?php endif; ?>
+					data-wp-on--click="actions.handleOverlayClick"
 					aria-hidden="true"
 				></div>
 
@@ -205,6 +203,7 @@ if ( ! function_exists( 'block_wpshadcn_drawer_render' ) ) {
 					tabindex="-1"
 					data-wp-bind--aria-hidden="!state.isOpen"
 					data-wp-on--keydown="actions.handleKeydown"
+					data-wp-on--click="actions.handlePanelClick"
 				>
 					<?php echo $panel_html; ?>
 				</div>

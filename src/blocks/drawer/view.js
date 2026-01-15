@@ -58,6 +58,15 @@ const drawerStore = store(
           drawerStore.actions.close();
         }
       },
+      handlePanelClick: (event) => {
+        // Stop propagation so clicks inside the panel don't bubble to overlay
+        event.stopPropagation();
+      },
+      handleOverlayClick: (event) => {
+        // Close drawer when clicking on overlay
+        // The panel's handlePanelClick stops propagation for clicks inside the panel
+        drawerStore.actions.close();
+      },
     },
     callbacks: {
       syncBodyScroll: () => {
