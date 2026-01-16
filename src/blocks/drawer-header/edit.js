@@ -12,6 +12,7 @@ const TEMPLATE = [
     "core/heading",
     {
       level: 3,
+      content: __("Controlled Drawer", "wpshadcn-blocks"),
       placeholder: __("Drawer Title", "wpshadcn-blocks"),
       style: {
         typography: {
@@ -29,6 +30,10 @@ const TEMPLATE = [
   [
     "core/paragraph",
     {
+      content: __(
+        "This drawer's open state is controlled externally.",
+        "wpshadcn-blocks"
+      ),
       placeholder: __("Drawer description", "wpshadcn-blocks"),
       style: {
         typography: {
