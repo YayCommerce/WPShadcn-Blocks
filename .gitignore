@@ -6,3 +6,6 @@ node_modules/
 pnpm-lock.yaml
 package-lock.json
 yarn.lock
+
+# Release artifacts
+*.zip
