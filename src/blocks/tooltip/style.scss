@@ -1,0 +1,372 @@
+/**
+ * Tooltip Block Styles
+ * Based on shadcn/ui Tooltip component
+ */
+
+.wp-block-wpshadcn-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.wp-block-wpshadcn-tooltip-trigger {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.wp-block-wpshadcn-tooltip-content {
+  position: absolute;
+  z-index: 50;
+  overflow: visible;
+  min-width: max-content;
+
+  border-radius: calc(var(--radius, 0.625rem));
+  background-color: var(--wp--preset--color--foreground, #0a0a0a);
+  color: var(--wp--preset--color--background, #ffffff);
+  padding: calc(var(--spacing, 0.25rem) * 2) calc(var(--spacing, 0.25rem) * 3);
+  font-size: 12px;
+  line-height: 1.25rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.95);
+  transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+  // Default positioning (top)
+  bottom: 100%;
+  left: 50%;
+  transform-origin: bottom center;
+  margin-bottom: calc(var(--spacing, 0.25rem) * 2);
+  transform: translateX(-50%);
+
+  // Show when open
+  &.is-open,
+  &[data-open="true"],
+  &[data-open="1"],
+  &[data-open]:not([data-open="false"]):not([data-open="0"]) {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) scale(1);
+  }
+
+  // Positioning variants
+  &[data-side="top"] {
+    bottom: 100%;
+    top: auto;
+    left: 50%;
+    right: auto;
+    transform-origin: bottom center;
+    margin-bottom: calc(var(--spacing, 0.25rem) * 2);
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    transform: translateX(-50%);
+
+    &.is-open,
+    &[data-open="true"],
+    &[data-open="1"],
+    &[data-open]:not([data-open="false"]):not([data-open="0"]) {
+      transform: translateX(-50%) scale(1);
+    }
+  }
+
+  &[data-side="bottom"] {
+    top: 100%;
+    bottom: auto;
+    left: 50%;
+    right: auto;
+    transform-origin: top center;
+    margin-top: calc(var(--spacing, 0.25rem) * 2);
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    transform: translateX(-50%);
+
+    &.is-open,
+    &[data-open="true"],
+    &[data-open="1"],
+    &[data-open]:not([data-open="false"]):not([data-open="0"]) {
+      transform: translateX(-50%) scale(1);
+    }
+  }
+
+  &[data-side="left"] {
+    right: 100%;
+    left: auto;
+    top: 50%;
+    bottom: auto;
+    transform-origin: right center;
+    margin-right: calc(var(--spacing, 0.25rem) * 2);
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    transform: translateY(-50%);
+
+    &.is-open,
+    &[data-open="true"],
+    &[data-open="1"],
+    &[data-open]:not([data-open="false"]):not([data-open="0"]) {
+      transform: translateY(-50%) scale(1);
+    }
+  }
+
+  &[data-side="right"] {
+    left: 100%;
+    right: auto;
+    top: 50%;
+    bottom: auto;
+    transform-origin: left center;
+    margin-left: calc(var(--spacing, 0.25rem) * 2);
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    transform: translateY(-50%);
+
+    &.is-open,
+    &[data-open="true"],
+    &[data-open="1"],
+    &[data-open]:not([data-open="false"]):not([data-open="0"]) {
+      transform: translateY(-50%) scale(1);
+    }
+  }
+
+  .block-editor-rich-text__editable {
+    &.wp-block-paragraph {
+      margin: 0 !important;
+    }
+  }
+
+  // Arrow (pseudo-element) - show when tooltip is visible
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    opacity: 0;
+    z-index: 51;
+    transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    // Default arrow positioning (top) - when no data-side is specified
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 4px 4px 0 4px;
+    border-color: var(--wp--preset--color--foreground, #0a0a0a) transparent
+      transparent transparent;
+  }
+
+  // Show arrow when tooltip is open - use EXACT same selectors as tooltip visibility
+  &.is-open::before,
+  &[data-open="true"]::before,
+  &[data-open="1"]::before,
+  &[data-open]:not([data-open="false"]):not([data-open="0"])::before {
+    opacity: 1;
+  }
+
+  // Arrow positioning for top
+  &[data-side="top"]::before {
+    bottom: -4px;
+    top: auto;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    border-width: 4px 4px 0 4px;
+    border-color: var(--wp--preset--color--foreground, #0a0a0a) transparent
+      transparent transparent;
+  }
+
+  // Arrow positioning for bottom
+  &[data-side="bottom"]::before {
+    top: -4px;
+    bottom: auto;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    border-width: 0 4px 4px 4px;
+    border-color: transparent transparent
+      var(--wp--preset--color--foreground, #0a0a0a) transparent;
+  }
+
+  // Arrow positioning for left
+  &[data-side="left"]::before {
+    right: -4px;
+    left: auto;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    border-width: 4px 0 4px 4px;
+    border-color: transparent transparent transparent
+      var(--wp--preset--color--foreground, #0a0a0a);
+  }
+
+  // Arrow positioning for right
+  &[data-side="right"]::before {
+    left: -4px;
+    right: auto;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    border-width: 4px 4px 4px 0;
+    border-color: transparent var(--wp--preset--color--foreground, #0a0a0a)
+      transparent transparent;
+  }
+
+  // Dark mode adjustments
+  .dark & {
+    background-color: var(--wp--preset--color--foreground, #fafafa);
+    color: var(--wp--preset--color--background, #0a0a0a);
+
+    // Default arrow in dark mode
+    &::before {
+      border-color: var(--wp--preset--color--foreground, #fafafa) transparent
+        transparent transparent;
+    }
+
+    &[data-side="top"]::before {
+      border-color: var(--wp--preset--color--foreground, #fafafa) transparent
+        transparent transparent;
+    }
+
+    &[data-side="bottom"]::before {
+      border-color: transparent transparent
+        var(--wp--preset--color--foreground, #fafafa) transparent;
+    }
+
+    &[data-side="left"]::before {
+      border-color: transparent transparent transparent
+        var(--wp--preset--color--foreground, #fafafa);
+    }
+
+    &[data-side="right"]::before {
+      border-color: transparent var(--wp--preset--color--foreground, #fafafa)
+        transparent transparent;
+    }
+  }
+
+  // Ensure child blocks don't have extra margins
+  > * {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 0.25rem;
+    }
+  }
+}
+
+// Editor styles - Make tooltip work in editor
+.block-editor-block-list__block,
+.editor-styles-wrapper,
+.block-editor-block-list__layout {
+  .wp-block-wpshadcn-tooltip {
+    position: relative !important;
+    display: inline-block !important;
+
+    // Show tooltip content on hover (for hover action)
+    &[data-action="hover"]:hover .wp-block-wpshadcn-tooltip-content,
+    &:not([data-action]):hover .wp-block-wpshadcn-tooltip-content {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      transform: translateX(-50%) scale(1) !important;
+    }
+
+    // Show tooltip content when open (for click action)
+    &[data-tooltip-open="true"] .wp-block-wpshadcn-tooltip-content,
+    &.is-tooltip-open .wp-block-wpshadcn-tooltip-content {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      transform: translateX(-50%) scale(1) !important;
+    }
+
+    // Show arrow on hover (hover action)
+    &[data-action="hover"]:hover .wp-block-wpshadcn-tooltip-content::before,
+    &:not([data-action]):hover .wp-block-wpshadcn-tooltip-content::before {
+      opacity: 1 !important;
+    }
+
+    // Show arrow when open (click action)
+    &[data-tooltip-open="true"] .wp-block-wpshadcn-tooltip-content::before,
+    &.is-tooltip-open .wp-block-wpshadcn-tooltip-content::before {
+      opacity: 1 !important;
+    }
+
+    // Handle positioning variants in editor
+    &[data-action="hover"]:hover
+      .wp-block-wpshadcn-tooltip-content[data-side="bottom"],
+    &:not([data-action]):hover
+      .wp-block-wpshadcn-tooltip-content[data-side="bottom"],
+    &[data-tooltip-open="true"]
+      .wp-block-wpshadcn-tooltip-content[data-side="bottom"],
+    &.is-tooltip-open .wp-block-wpshadcn-tooltip-content[data-side="bottom"] {
+      transform: translateX(-50%) scale(1) !important;
+    }
+
+    &[data-action="hover"]:hover
+      .wp-block-wpshadcn-tooltip-content[data-side="left"],
+    &:not([data-action]):hover
+      .wp-block-wpshadcn-tooltip-content[data-side="left"],
+    &[data-tooltip-open="true"]
+      .wp-block-wpshadcn-tooltip-content[data-side="left"],
+    &.is-tooltip-open .wp-block-wpshadcn-tooltip-content[data-side="left"] {
+      transform: translateY(-50%) scale(1) !important;
+    }
+
+    &[data-action="hover"]:hover
+      .wp-block-wpshadcn-tooltip-content[data-side="right"],
+    &:not([data-action]):hover
+      .wp-block-wpshadcn-tooltip-content[data-side="right"],
+    &[data-tooltip-open="true"]
+      .wp-block-wpshadcn-tooltip-content[data-side="right"],
+    &.is-tooltip-open .wp-block-wpshadcn-tooltip-content[data-side="right"] {
+      transform: translateY(-50%) scale(1) !important;
+    }
+
+    // Show tooltip content when block is selected (for editing)
+    .wp-block-wpshadcn-tooltip-content.is-selected {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      transform: translateX(-50%) scale(1) !important;
+      position: relative !important;
+      bottom: auto !important;
+      left: auto !important;
+      margin: 0.5rem 0 !important;
+      display: block !important;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .wp-block-wpshadcn-tooltip-content {
+    // Ensure tooltip content is positioned correctly in editor
+    position: absolute !important;
+    z-index: 50 !important;
+    overflow: visible !important;
+    min-width: max-content !important;
+    border-radius: calc(var(--radius, 0.625rem)) !important;
+    background-color: var(--wp--preset--color--foreground, #0a0a0a) !important;
+    color: var(--wp--preset--color--background, #ffffff) !important;
+    padding: calc(var(--spacing, 0.25rem) * 2) calc(var(--spacing, 0.25rem) * 3) !important;
+    font-size: 12px !important;
+    line-height: 1.25rem !important;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transform: scale(0.95) translateX(-50%) !important;
+    transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.15s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    // Default positioning (top)
+    bottom: 100% !important;
+    left: 50% !important;
+    top: auto !important;
+    right: auto !important;
+    transform-origin: bottom center !important;
+    margin-bottom: calc(var(--spacing, 0.25rem) * 2) !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    transform: translateX(-50%) scale(0.95) !important;
+  }
+}

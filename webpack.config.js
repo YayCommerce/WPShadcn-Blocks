@@ -20,6 +20,7 @@ class FixInteractivityPlugin {
       { name: "accordion", imports: ["store", "getContext", "withSyncEvent"] },
       { name: "alert", imports: ["store", "getContext"] },
       { name: "drawer", imports: ["store", "getContext"] },
+      { name: "tooltip", imports: ["store", "getContext"] },
     ];
 
     blocks.forEach(({ name, imports }) => {
@@ -33,7 +34,9 @@ class FixInteractivityPlugin {
       // Skip if already fixed
       if (content.startsWith("import {")) return;
 
-      const importStatement = `import { ${imports.join(", ")} } from '@wordpress/interactivity';\n`;
+      const importStatement = `import { ${imports.join(
+        ", "
+      )} } from '@wordpress/interactivity';\n`;
 
       if (isProduction) {
         // Production: fix minified webpack output
@@ -45,7 +48,10 @@ class FixInteractivityPlugin {
         );
         content = content.replace(/\(0,(\w+)\.store\)/g, "store");
         content = content.replace(/\(0,(\w+)\.getContext\)/g, "getContext");
-        content = content.replace(/\(0,(\w+)\.withSyncEvent\)/g, "withSyncEvent");
+        content = content.replace(
+          /\(0,(\w+)\.withSyncEvent\)/g,
+          "withSyncEvent"
+        );
       } else {
         // Development: use source file with ES6 import transformation
         if (!fs.existsSync(srcPath)) return;
@@ -59,7 +65,11 @@ class FixInteractivityPlugin {
         );
 
         // Add clean import at top and wrap in IIFE
-        content = importStatement + "(()=>{\n\"use strict\";\n" + srcContent.trim() + "\n})();";
+        content =
+          importStatement +
+          '(()=>{\n"use strict";\n' +
+          srcContent.trim() +
+          "\n})();";
       }
 
       fs.writeFileSync(buildPath, content, "utf8");

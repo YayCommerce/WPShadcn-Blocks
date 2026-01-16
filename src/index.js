@@ -32,3 +32,7 @@ import "./blocks/drawer-trigger";
 import "./blocks/drawer-header";
 import "./blocks/drawer-content";
 import "./blocks/drawer-footer";
+
+import "./blocks/tooltip";
+import "./blocks/tooltip-trigger";
+import "./blocks/tooltip-content";
