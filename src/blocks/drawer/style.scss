@@ -74,6 +74,19 @@
   transition: transform 0.3s ease, opacity 0.3s ease;
   z-index: 2;
   pointer-events: auto;
+  cursor: grab;
+  user-select: none;
+  touch-action: pan-y pan-x;
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  // Disable transition during drag for smooth movement
+  // When style attribute contains translate, we're dragging
+  &[style*="translate"] {
+    transition: opacity 0.3s ease;
+  }
 }
 
 // Bottom panel (default)
@@ -83,6 +96,7 @@
   border-radius: var(--wp--preset--spacing--3, 12px)
     var(--wp--preset--spacing--3, 12px) 0 0;
   transform: translateY(100%);
+  touch-action: pan-y;
 }
 
 .wp-block-wpshadcn-drawer__portal--bottom.is-open
@@ -100,6 +114,7 @@
   border-radius: 0 0 var(--wp--preset--spacing--3, 12px)
     var(--wp--preset--spacing--3, 12px);
   transform: translateY(-100%);
+  touch-action: pan-y;
 }
 
 .wp-block-wpshadcn-drawer__portal--top.is-open
@@ -116,6 +131,7 @@
   max-width: min(400px, 85vw);
   height: 100vh;
   transform: translateX(-100%);
+  touch-action: pan-x;
 }
 
 .wp-block-wpshadcn-drawer__portal--left.is-open
@@ -132,6 +148,7 @@
   max-width: min(400px, 85vw);
   height: 100vh;
   transform: translateX(100%);
+  touch-action: pan-x;
 }
 
 .wp-block-wpshadcn-drawer__portal--right.is-open
@@ -199,6 +216,50 @@
 
 .wp-block-wpshadcn-drawer-header {
   position: relative;
+}
+
+// Drag handle indicator (like shadcn drawer)
+.wp-block-wpshadcn-drawer__panel--bottom::before,
+.wp-block-wpshadcn-drawer__panel--top::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36px;
+  height: 4px;
+  background: var(--wp--preset--color--border, #e4e4e7);
+  border-radius: 2px;
+  z-index: 1;
+}
+
+.wp-block-wpshadcn-drawer__panel--bottom::before {
+  top: 12px;
+}
+
+.wp-block-wpshadcn-drawer__panel--top::after {
+  bottom: 12px;
+}
+
+// Left and right drawers - vertical handle
+.wp-block-wpshadcn-drawer__panel--left::before,
+.wp-block-wpshadcn-drawer__panel--right::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 36px;
+  background: var(--wp--preset--color--border, #e4e4e7);
+  border-radius: 2px;
+  z-index: 1;
+}
+
+.wp-block-wpshadcn-drawer__panel--left::before {
+  right: 12px;
+}
+
+.wp-block-wpshadcn-drawer__panel--right::after {
+  left: 12px;
 }
 
 body.wpshadcn-drawer-open {
