@@ -11,6 +11,10 @@ const TEMPLATE = [
   [
     "core/paragraph",
     {
+      content: __(
+        "You can control this sheet from outside components or trigger it programmatically based on user actions or application state.",
+        "wpshadcn-blocks"
+      ),
       placeholder: __("Add sheet content here...", "wpshadcn-blocks"),
     },
   ],

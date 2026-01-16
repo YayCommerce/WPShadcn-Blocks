@@ -12,6 +12,7 @@ const TEMPLATE = [
     "core/heading",
     {
       level: 3,
+      content: __("Edit profile", "wpshadcn-blocks"),
       placeholder: __("Sheet Title", "wpshadcn-blocks"),
       style: {
         typography: {
@@ -29,6 +30,10 @@ const TEMPLATE = [
   [
     "core/paragraph",
     {
+      content: __(
+        "Make changes to your profile here. Click save when you're done.",
+        "wpshadcn-blocks"
+      ),
       placeholder: __("Sheet description", "wpshadcn-blocks"),
       style: {
         typography: {
