@@ -1,25 +1,44 @@
 /**
  * WordPress dependencies
  */
-import { registerBlockType } from '@wordpress/blocks';
-import { InnerBlocks } from '@wordpress/block-editor';
+import { registerBlockType } from "@wordpress/blocks";
+import { InnerBlocks } from "@wordpress/block-editor";
 
 /**
  * Internal dependencies
  */
-import Edit from './edit';
-import metadata from './block.json';
+import Edit from "./edit";
+import metadata from "./block.json";
 
 /**
  * Styles
  */
-import './style.scss';
+import "./style.scss";
 
 /**
  * Register the Carousel Item block.
  */
-registerBlockType( metadata.name, {
-	...metadata,
-	edit: Edit,
-	save: () => <InnerBlocks.Content />,
-} );
+registerBlockType(metadata.name, {
+  ...metadata,
+  edit: Edit,
+  save: () => <InnerBlocks.Content />,
+  icon: {
+    src: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M2 3v18" />
+        <rect width="12" height="18" x="6" y="3" rx="2" fill="none" />
+        <path d="M22 3v18" />
+      </svg>
+    ),
+  },
+});
