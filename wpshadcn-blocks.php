@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name: Shadcn Blocks
- * Plugin URI: https://github.com/YayCommerce/wpshadcn-blocks
+ * Plugin URI: https://wpshadcn.com/
  * Description: Gutenberg blocks for the Shadcn theme. Provides Card, Accordion, Tabs, Alert, and Dialog components.
  * Version: 1.0.0
  * Requires at least: 6.5
  * Requires PHP: 7.4
  * Author: YayCommerce
- * Author URI: https://yaycommerce.com
+ * Author URI: https://wpshadcn.com/
  * License: GPLv3 or later
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain: wpshadcn-blocks

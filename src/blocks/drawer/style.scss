@@ -1,0 +1,267 @@
+.wp-block-wpshadcn-drawer {
+  position: relative;
+}
+
+.wp-block-wpshadcn-drawer__trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wp-block-wpshadcn-drawer__portal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 500000;
+}
+
+.wp-block-wpshadcn-drawer__portal.is-open,
+.wp-block-wpshadcn-drawer__portal[data-open="true"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+// Bottom (default)
+.wp-block-wpshadcn-drawer__portal--bottom {
+  align-items: flex-end;
+  justify-content: center;
+}
+
+// Top
+.wp-block-wpshadcn-drawer__portal--top {
+  align-items: flex-start;
+  justify-content: center;
+}
+
+// Left
+.wp-block-wpshadcn-drawer__portal--left {
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+// Right
+.wp-block-wpshadcn-drawer__portal--right {
+  align-items: stretch;
+  justify-content: flex-end;
+}
+
+.wp-block-wpshadcn-drawer__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  background: color-mix(
+    in srgb,
+    var(--wp--preset--color--foreground, #09090b) 55%,
+    transparent
+  );
+  opacity: 0.7;
+  z-index: 1;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.wp-block-wpshadcn-drawer__panel {
+  position: relative;
+  background: var(--wp--preset--color--background, #fff);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  z-index: 2;
+  pointer-events: auto;
+  cursor: grab;
+  user-select: none;
+  touch-action: pan-y pan-x;
+
+  &:active {
+    cursor: grabbing;
+  }
+
+  // Disable transition during drag for smooth movement
+  // When style attribute contains translate, we're dragging
+  &[style*="translate"] {
+    transition: opacity 0.3s ease;
+  }
+}
+
+// Bottom panel (default)
+.wp-block-wpshadcn-drawer__panel--bottom {
+  width: 100%;
+  max-height: 80vh;
+  border-radius: var(--wp--preset--spacing--3, 12px)
+    var(--wp--preset--spacing--3, 12px) 0 0;
+  transform: translateY(100%);
+  touch-action: pan-y;
+}
+
+.wp-block-wpshadcn-drawer__portal--bottom.is-open
+  .wp-block-wpshadcn-drawer__panel--bottom,
+.wp-block-wpshadcn-drawer__portal--bottom[data-open="true"]
+  .wp-block-wpshadcn-drawer__panel--bottom {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+// Top panel
+.wp-block-wpshadcn-drawer__panel--top {
+  width: 100%;
+  max-height: 80vh;
+  border-radius: 0 0 var(--wp--preset--spacing--3, 12px)
+    var(--wp--preset--spacing--3, 12px);
+  transform: translateY(-100%);
+  touch-action: pan-y;
+}
+
+.wp-block-wpshadcn-drawer__portal--top.is-open
+  .wp-block-wpshadcn-drawer__panel--top,
+.wp-block-wpshadcn-drawer__portal--top[data-open="true"]
+  .wp-block-wpshadcn-drawer__panel--top {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+// Left panel
+.wp-block-wpshadcn-drawer__panel--left {
+  width: 100%;
+  max-width: min(400px, 85vw);
+  height: 100vh;
+  transform: translateX(-100%);
+  touch-action: pan-x;
+}
+
+.wp-block-wpshadcn-drawer__portal--left.is-open
+  .wp-block-wpshadcn-drawer__panel--left,
+.wp-block-wpshadcn-drawer__portal--left[data-open="true"]
+  .wp-block-wpshadcn-drawer__panel--left {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+// Right panel
+.wp-block-wpshadcn-drawer__panel--right {
+  width: 100%;
+  max-width: min(400px, 85vw);
+  height: 100vh;
+  transform: translateX(100%);
+  touch-action: pan-x;
+}
+
+.wp-block-wpshadcn-drawer__portal--right.is-open
+  .wp-block-wpshadcn-drawer__panel--right,
+.wp-block-wpshadcn-drawer__portal--right[data-open="true"]
+  .wp-block-wpshadcn-drawer__panel--right {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.wp-block-wpshadcn-drawer__fallback-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--wp--preset--spacing--2, 8px);
+  padding: var(--wp--preset--spacing--2, 8px)
+    var(--wp--preset--spacing--3, 12px);
+  border-radius: var(--wp--preset--spacing--2, 8px);
+  border: 1px solid var(--wp--preset--color--border, #e4e4e7);
+  background: var(--wp--preset--color--background, #fff);
+  color: var(--wp--preset--color--foreground, #09090b);
+  cursor: pointer;
+}
+
+.wp-block-wpshadcn-drawer__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: calc(var(--wp--preset--spacing--2, 8px) / 2);
+  color: currentColor;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+  z-index: 10;
+
+  &:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  &:focus {
+    outline: 2px solid var(--wp--preset--color--ring, #a1a1a1);
+    outline-offset: 2px;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--wp--preset--color--ring, #a1a1a1);
+    outline-offset: 2px;
+  }
+
+  svg {
+    width: 0.9375rem;
+    height: 0.9375rem;
+    flex-shrink: 0;
+  }
+}
+
+.wp-block-wpshadcn-drawer-header {
+  position: relative;
+}
+
+// Drag handle indicator (like shadcn drawer)
+.wp-block-wpshadcn-drawer__panel--bottom::before,
+.wp-block-wpshadcn-drawer__panel--top::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36px;
+  height: 4px;
+  background: var(--wp--preset--color--border, #e4e4e7);
+  border-radius: 2px;
+  z-index: 1;
+}
+
+.wp-block-wpshadcn-drawer__panel--bottom::before {
+  top: 12px;
+}
+
+.wp-block-wpshadcn-drawer__panel--top::after {
+  bottom: 12px;
+}
+
+// Left and right drawers - vertical handle
+.wp-block-wpshadcn-drawer__panel--left::before,
+.wp-block-wpshadcn-drawer__panel--right::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 36px;
+  background: var(--wp--preset--color--border, #e4e4e7);
+  border-radius: 2px;
+  z-index: 1;
+}
+
+.wp-block-wpshadcn-drawer__panel--left::before {
+  right: 12px;
+}
+
+.wp-block-wpshadcn-drawer__panel--right::after {
+  left: 12px;
+}
+
+body.wpshadcn-drawer-open {
+  overflow: hidden;
+}
