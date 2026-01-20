@@ -1,0 +1,9 @@
+.wp-block-wpshadcn-sheet-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--wp--preset--spacing--4, 16px);
+  padding: var(--wp--preset--spacing--6, 24px);
+  padding-top: var(--wp--preset--spacing--4, 16px);
+  flex: 1;
+  overflow-y: auto;
+}

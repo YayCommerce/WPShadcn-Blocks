@@ -144,6 +144,14 @@ class Plugin {
 					return true;
 				},
 			),
+			'wpshadcn/sheet' => array(
+				'namespace' => 'wpshadcn/sheet',
+				'view_file' => 'sheet/view.js',
+				'check'     => function( $block ) {
+					// Sheet always needs the script if present.
+					return true;
+				},
+			),
 		);
 
 		// Recursively check blocks and inner blocks.

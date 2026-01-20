@@ -1,0 +1,49 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wpshadcn/sheet",
+  "version": "1.0.0",
+  "title": "Sheet",
+  "category": "wpshadcn",
+  "description": "Sheet block to display additional content, actions, or navigation in a modal dialog.",
+  "keywords": ["sheet", "modal", "panel"],
+  "textdomain": "wpshadcn-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": ["wide", "full"],
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": false
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "width": true
+    }
+  },
+  "attributes": {
+    "dismissible": {
+      "type": "boolean",
+      "default": true
+    },
+    "direction": {
+      "type": "string",
+      "default": "right"
+    }
+  },
+  "allowedBlocks": [
+    "wpshadcn/sheet-trigger",
+    "wpshadcn/sheet-header",
+    "wpshadcn/sheet-content",
+    "wpshadcn/sheet-footer"
+  ],
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}
