@@ -23,12 +23,83 @@ import { createBlock } from "@wordpress/blocks";
 
 const ACCORDION_BLOCK_NAME = "wpshadcn/accordion-item";
 const ACCORDION_TRIGGER_BLOCK_NAME = "wpshadcn/accordion-trigger";
+const ACCORDION_CONTENT_BLOCK_NAME = "wpshadcn/accordion-content";
 const ACCORDION_BLOCK = {
   name: ACCORDION_BLOCK_NAME,
 };
 
+// Default template matching shadcn preview
+const DEFAULT_TEMPLATE = [
+  [
+    ACCORDION_BLOCK_NAME,
+    {
+      isOpen: true, // First item open by default
+    },
+    [
+      [
+        ACCORDION_TRIGGER_BLOCK_NAME,
+        {
+          title: "Product Information",
+        },
+      ],
+      [
+        ACCORDION_CONTENT_BLOCK_NAME,
+        {},
+        [
+          [
+            "core/paragraph",
+            {
+              content:
+                "Our flagship product combines cutting-edge technology with sleek design. Built with premium materials, it offers unparalleled performance and reliability.",
+            },
+          ],
+          [
+            "core/paragraph",
+            {
+              content:
+                "Key features include advanced processing capabilities, and an intuitive user interface designed for both beginners and experts.",
+            },
+          ],
+        ],
+      ],
+    ],
+  ],
+  [
+    ACCORDION_BLOCK_NAME,
+    {},
+    [
+      [
+        ACCORDION_TRIGGER_BLOCK_NAME,
+        {
+          title: "Shipping Details",
+        },
+      ],
+      [
+        ACCORDION_CONTENT_BLOCK_NAME,
+        {},
+        [
+          [
+            "core/paragraph",
+            {
+              content:
+                "We offer worldwide shipping through trusted courier partners. Standard delivery takes 3-5 business days, while express shipping ensures delivery within 1-2 business days.",
+            },
+          ],
+          [
+            "core/paragraph",
+            {
+              content:
+                "All orders are carefully packaged and fully insured. Track your shipment in real-time through our dedicated tracking portal.",
+            },
+          ],
+        ],
+      ],
+    ],
+  ],
+];
+
 export default function Edit({
-  attributes: { autoclose, iconPosition, showIcon, headingLevel, levelOptions },
+  attributes: { autoclose, iconPosition, showIcon },
   clientId,
   setAttributes,
   isSelected: isSingleSelected,
@@ -36,12 +107,12 @@ export default function Edit({
   const blockProps = useBlockProps({
     role: "group",
   });
-  const { updateBlockAttributes, insertBlock } = useDispatch(blockEditorStore);
+  const { insertBlock } = useDispatch(blockEditorStore);
   const blockEditingMode = useBlockEditingMode();
   const isContentOnlyMode = blockEditingMode === "contentOnly";
 
   const innerBlocksProps = useInnerBlocksProps(blockProps, {
-    template: [[ACCORDION_BLOCK_NAME]],
+    template: DEFAULT_TEMPLATE,
     defaultBlock: ACCORDION_BLOCK,
     directInsert: true,
     templateInsertUpdatesSelection: true,

@@ -18,7 +18,6 @@ export default function Edit({ attributes, setAttributes, context }) {
   const {
     "wpshadcn/accordion-icon-position": iconPosition,
     "wpshadcn/accordion-show-icon": showIcon,
-    "wpshadcn/accordion-heading-level": headingLevel,
   } = context;
   const { __unstableMarkNextChangeAsNotPersistent } =
     useDispatch(blockEditorStore);
