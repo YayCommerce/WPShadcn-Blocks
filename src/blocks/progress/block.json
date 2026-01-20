@@ -25,9 +25,13 @@
       "type": "string",
       "default": "free_shipping"
     },
-    "showLabel": {
-      "type": "boolean",
-      "default": true
+    "trackColor": {
+      "type": "string",
+      "default": "#f5f5f5"
+    },
+    "fillColor": {
+      "type": "string",
+      "default": "#171717"
     }
   },
   "supports": {
@@ -35,8 +39,8 @@
     "anchor": true,
     "align": ["wide", "full"],
     "color": {
-      "background": true,
-      "text": true
+      "background": false,
+      "text": false
     },
     "spacing": {
       "margin": true,

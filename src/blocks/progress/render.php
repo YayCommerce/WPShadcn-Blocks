@@ -14,7 +14,8 @@ defined( 'ABSPATH' ) || exit;
 $max_value     = isset( $attributes['maxValue'] ) ? (int) $attributes['maxValue'] : 100;
 $current_value = isset( $attributes['currentValue'] ) ? $attributes['currentValue'] : 'static';
 $static_value  = isset( $attributes['staticValue'] ) ? (int) $attributes['staticValue'] : 50;
-$show_label    = isset( $attributes['showLabel'] ) ? (bool) $attributes['showLabel'] : true;
+$track_color   = isset( $attributes['style']['trackColor'] ) ? $attributes['style']['trackColor'] : '#f5f5f5';
+$fill_color    = isset( $attributes['style']['fillColor'] ) ? $attributes['style']['fillColor'] : '#171717';
 
 // Calculate percentage
 if( $current_value === 'static' ) {
@@ -52,29 +53,16 @@ $wrapper_attributes = get_block_wrapper_attributes(
 
 ?>
 <div <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-	<div class="progress-container">
+	<div class="progress-container" style="background-color: <?php echo esc_attr( $track_color ); ?>">
 		<div
 			class="progress-indicator"
 			role="progressbar"
 			aria-valuenow="<?php echo esc_attr( $value ); ?>"
 			aria-valuemin="0"
 			aria-valuemax="<?php echo esc_attr( $max_value ); ?>"
-			style="width: <?php echo esc_attr( $percentage ); ?>%;"
+			style="width: <?php echo esc_attr( $percentage ); ?>%; background-color: <?php echo esc_attr( $fill_color ); ?>;"
 		></div>
 	</div>
-	<?php if ( $show_label && 'static' === $current_value ) : ?>
-		<div class="progress-label">
-			<?php
-			printf(
-				/* translators: 1: current value, 2: max value, 3: percentage */
-				esc_html__( '%1$d / %2$d (%3$d%%)', 'wpshadcn-blocks' ),
-				$static_value,
-				$max_value,
-				round( $percentage )
-			);
-			?>
-		</div>
-	<?php endif; ?>
 </div>
 
 

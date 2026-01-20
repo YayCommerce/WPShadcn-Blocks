@@ -1,8 +1,12 @@
-import { useBlockProps, InspectorControls } from "@wordpress/block-editor";
+import {
+  useBlockProps,
+  InspectorControls,
+  __experimentalColorGradientSettingsDropdown as ColorGradientSettingsDropdown,
+  __experimentalUseMultipleOriginColorsAndGradients as useMultipleOriginColorsAndGradients,
+} from "@wordpress/block-editor";
 import { __ } from "@wordpress/i18n";
 import {
   RangeControl,
-  ToggleControl,
   SelectControl,
   __experimentalToggleGroupControl as ToggleGroupControl,
   __experimentalToggleGroupControlOption as ToggleGroupControlOption,
@@ -11,9 +15,13 @@ import {
 } from "@wordpress/components";
 
 export default function Edit(props) {
-  const { attributes, setAttributes } = props;
-  const { maxValue, currentValue, staticValue, dynamicValue, showLabel, type } =
-    attributes;
+  const { attributes, setAttributes, clientId } = props;
+  const { maxValue, currentValue, staticValue, dynamicValue } = attributes;
+
+  const { trackColor = "#f5f5f5", fillColor = "#171717" } =
+    attributes.style ?? {};
+
+  const colorGradientSettings = useMultipleOriginColorsAndGradients();
 
   // Calculate percentage for display
   const percentage = Math.min(Math.max((staticValue / maxValue) * 100, 0), 100);
@@ -117,41 +125,67 @@ export default function Edit(props) {
               />
             </ToolsPanelItem>
           )}
-          <ToolsPanelItem
-            label={__("Show Label", "wpshadcn-blocks")}
-            isShownByDefault
-            hasValue={() => showLabel !== false}
-            onDeselect={() => setAttributes({ showLabel: false })}
-          >
-            <ToggleControl
-              label={__("Show Label", "wpshadcn-blocks")}
-              onChange={(value) => setAttributes({ showLabel: value })}
-              checked={showLabel !== false}
-            />
-          </ToolsPanelItem>
         </ToolsPanel>
       </InspectorControls>
+      <InspectorControls group="color">
+        <ColorGradientSettingsDropdown
+          settings={[
+            {
+              label: __("Track Color", "wpshadcn-blocks"),
+              colorValue: trackColor,
+              clearable: true,
+              onColorChange: (value) => {
+                setAttributes({
+                  style: {
+                    ...(attributes.style ?? {}),
+                    trackColor: value,
+                  },
+                });
+              },
+              resetAllFilter: (prev) => {
+                prev.style.trackColor = "#f5f5f5";
+                return prev;
+              },
+            },
+            {
+              label: __("Fill Color", "wpshadcn-blocks"),
+              colorValue: fillColor,
+              clearable: true,
+              onColorChange: (value) => {
+                setAttributes({
+                  style: {
+                    ...(attributes.style ?? {}),
+                    fillColor: value,
+                  },
+                });
+              },
+              resetAllFilter: (prev) => {
+                prev.style.fillColor = "#171717";
+                return prev;
+              },
+            },
+          ]}
+          panelId={clientId}
+          hasColorsOrGradients={false}
+          disableCustomColors={false}
+          __experimentalIsRenderedInSidebar
+          {...colorGradientSettings}
+        />
+      </InspectorControls>
       <div {...blockProps}>
-        <div className="progress-container">
+        <div
+          className="progress-container"
+          style={{ backgroundColor: trackColor }}
+        >
           <div
             className="progress-indicator"
             role="progressbar"
             aria-valuenow={staticValue}
             aria-valuemin={0}
             aria-valuemax={maxValue}
-            style={{ width: `${percentage}%` }}
+            style={{ width: `${percentage}%`, backgroundColor: fillColor }}
           />
         </div>
-        {showLabel !== false && type === "static" && (
-          <div className="progress-label">
-            {staticValue} / {maxValue} ({Math.round(percentage)}%)
-          </div>
-        )}
-        {showLabel !== false && type === "dynamic" && (
-          <div className="progress-label">
-            {__("Dynamic progress", "wpshadcn-blocks")}
-          </div>
-        )}
       </div>
     </>
   );
