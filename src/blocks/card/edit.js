@@ -7,9 +7,84 @@ import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
  * Card block template.
  */
 const TEMPLATE = [
-	[ 'shadcn/card-header', {} ],
-	[ 'shadcn/card-content', {} ],
-	[ 'shadcn/card-footer', {} ],
+	[
+		'shadcn/card-header',
+		{},
+		[
+			[
+				'core/heading',
+				{
+					content: 'Billing Address',
+					style: {
+						typography: {
+							fontWeight: '600',
+						},
+						spacing: {
+							margin: {
+								top: '0',
+								bottom: '0',
+							},
+						},
+					},
+				},
+			],
+			[
+				'core/paragraph',
+				{
+					content: 'The following addresses will be used on the checkout page by default.',
+					style: {
+						typography: {
+							fontSize: 'var(--wp--preset--font-size--sm)',
+						},
+						color: {
+							text: 'var(--wp--preset--color--muted-foreground)',
+						},
+						spacing: {
+							margin: {
+								top: '0',
+								bottom: '0',
+							},
+						},
+					},
+				},
+			],
+		],
+	],
+	[
+		'shadcn/card-content',
+		{},
+		[
+			[
+				'core/paragraph',
+				{
+					content: 'EBECKS SYSTEMS\nSP.O.Box TK 348\nTarkwa\nHU5 1BA\nUnited Kingdom (UK)\nTarkwa\nHU5 1BA\nUnited Kingdom (UK)',
+				},
+			],
+		],
+	],
+	[
+		'shadcn/card-footer',
+		{},
+		[
+			[
+				'core/buttons',
+				{
+					layout: {
+						type: 'flex',
+						justifyContent: 'left',
+					},
+				},
+				[
+					[
+						'core/button',
+						{
+							text: 'Details',
+						},
+					],
+				],
+			],
+		],
+	],
 ];
 
 /**
