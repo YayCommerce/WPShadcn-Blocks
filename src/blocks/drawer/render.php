@@ -146,6 +146,9 @@ if ( ! function_exists( 'block_wpshadcn_drawer_render' ) ) {
 			'open'        => false,
 			'drawerId'    => $unique_id,
 			'dismissible' => $dismissible,
+			'direction'   => $direction,
+			'isDragging'  => false,
+			'currentDragOffset' => 0,
 		);
 
 		$wrapper_attributes = get_block_wrapper_attributes(
@@ -202,8 +205,13 @@ if ( ! function_exists( 'block_wpshadcn_drawer_render' ) ) {
 					aria-label="<?php echo esc_attr__( 'Drawer panel', 'wpshadcn-blocks' ); ?>"
 					tabindex="-1"
 					data-wp-bind--aria-hidden="!state.isOpen"
+					data-wp-bind--style="state.dragTransform"
 					data-wp-on--keydown="actions.handleKeydown"
 					data-wp-on--click="actions.handlePanelClick"
+					data-wp-on--touchstart="actions.handleDragStart"
+					data-wp-on--touchmove="actions.handleDragMove"
+					data-wp-on--touchend="actions.handleDragEnd"
+					data-wp-on--mousedown="actions.handleDragStart"
 				>
 					<?php echo $panel_html; ?>
 				</div>
