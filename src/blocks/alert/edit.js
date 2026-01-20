@@ -13,8 +13,20 @@ import { __ } from "@wordpress/i18n";
  * Alert block template.
  */
 const TEMPLATE = [
-  ["wpshadcn/alert-title", {}],
-  ["wpshadcn/alert-description", {}],
+  ["wpshadcn/alert-title", { title: "Success! Your changes have been saved" }],
+  [
+    "wpshadcn/alert-description",
+    {},
+    [
+      [
+        "core/paragraph",
+        {
+          content:
+            "This is an alert with title and description.",
+        },
+      ],
+    ],
+  ],
 ];
 
 /**
