@@ -6,7 +6,7 @@ import { registerBlockCollection } from "@wordpress/blocks";
 /**
  * Register block collection.
  */
-registerBlockCollection("wpshadcn", {
+registerBlockCollection("shadcn", {
   title: "Shadcn",
 });
 

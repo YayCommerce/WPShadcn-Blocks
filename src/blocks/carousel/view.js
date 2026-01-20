@@ -12,10 +12,10 @@ import Autoplay from 'embla-carousel-autoplay';
  * @param {HTMLElement} carousel The carousel container element.
  */
 function initCarousel( carousel ) {
-	const viewport = carousel.querySelector( '.wp-block-wpshadcn-carousel__viewport' );
-	const prevButton = carousel.querySelector( '.wp-block-wpshadcn-carousel__prev' );
-	const nextButton = carousel.querySelector( '.wp-block-wpshadcn-carousel__next' );
-	const dotsContainer = carousel.querySelector( '.wp-block-wpshadcn-carousel__dots' );
+	const viewport = carousel.querySelector( '.wp-block-shadcn-carousel__viewport' );
+	const prevButton = carousel.querySelector( '.wp-block-shadcn-carousel__prev' );
+	const nextButton = carousel.querySelector( '.wp-block-shadcn-carousel__next' );
+	const dotsContainer = carousel.querySelector( '.wp-block-shadcn-carousel__dots' );
 
 	if ( ! viewport ) {
 		return;
@@ -36,8 +36,8 @@ function initCarousel( carousel ) {
 		orientation = 'horizontal',
 	} = config;
 
-	let slidesSelector = ".wp-block-wpshadcn-carousel-item";
-	let containerSelector = ".wp-block-wpshadcn-carousel__content";
+	let slidesSelector = ".wp-block-shadcn-carousel-item";
+	let containerSelector = ".wp-block-shadcn-carousel__content";
 
 	if ( carousel.querySelector( '.wp-block-post-template' ) ) {
 		containerSelector = ".wp-block-post-template";
@@ -109,7 +109,7 @@ function initCarousel( carousel ) {
 		slides.forEach( ( _, index ) => {
 			const dot = document.createElement( 'button' );
 			dot.type = 'button';
-			dot.className = 'wp-block-wpshadcn-carousel__dot';
+			dot.className = 'wp-block-shadcn-carousel__dot';
 			dot.setAttribute( 'role', 'tab' );
 			dot.setAttribute( 'aria-label', `Go to slide ${ index + 1 }` );
 			dot.addEventListener( 'click', () => embla.scrollTo( index ) );
@@ -124,7 +124,7 @@ function initCarousel( carousel ) {
 			return;
 		}
 
-		const dots = dotsContainer.querySelectorAll( '.wp-block-wpshadcn-carousel__dot' );
+		const dots = dotsContainer.querySelectorAll( '.wp-block-shadcn-carousel__dot' );
 		const selectedIndex = embla.selectedScrollSnap();
 
 		dots.forEach( ( dot, index ) => {
@@ -154,7 +154,7 @@ function initCarousel( carousel ) {
  * Initialize all carousels on the page.
  */
 function initAllCarousels() {
-	const carousels = document.querySelectorAll( '.wp-block-wpshadcn-carousel' );
+	const carousels = document.querySelectorAll( '.wp-block-shadcn-carousel' );
 	carousels.forEach( initCarousel );
 }
 

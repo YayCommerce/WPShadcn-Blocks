@@ -1,14 +1,14 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "wpshadcn/drawer-content",
+  "name": "shadcn/drawer-content",
   "version": "1.0.0",
   "title": "Drawer Content",
-  "category": "wpshadcn",
-  "parent": ["wpshadcn/drawer"],
+  "category": "shadcn",
+  "parent": ["shadcn/drawer"],
   "icon": "text",
   "description": "Drawer content section for main body content.",
-  "textdomain": "wpshadcn-blocks",
+  "textdomain": "shadcn-blocks",
   "attributes": {},
   "supports": {
     "html": false,

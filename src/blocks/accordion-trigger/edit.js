@@ -16,8 +16,8 @@ import { useDispatch } from "@wordpress/data";
 export default function Edit({ attributes, setAttributes, context }) {
   const { title } = attributes;
   const {
-    "wpshadcn/accordion-icon-position": iconPosition,
-    "wpshadcn/accordion-show-icon": showIcon,
+    "shadcn/accordion-icon-position": iconPosition,
+    "shadcn/accordion-show-icon": showIcon,
   } = context;
   const { __unstableMarkNextChangeAsNotPersistent } =
     useDispatch(blockEditorStore);
@@ -57,13 +57,13 @@ export default function Edit({ attributes, setAttributes, context }) {
   return (
     <h3 {...blockProps}>
       <button
-        className="wp-block-wpshadcn-accordion-trigger-button"
+        className="wp-block-shadcn-accordion-trigger-button"
         style={spacingProps.style}
         tabIndex="-1"
       >
         {showIcon && iconPosition === "left" && (
           <span
-            className="wp-block-wpshadcn-accordion-trigger-icon"
+            className="wp-block-shadcn-accordion-trigger-icon"
             aria-hidden="true"
           />
         )}
@@ -74,7 +74,7 @@ export default function Edit({ attributes, setAttributes, context }) {
           value={title}
           onChange={(newTitle) => setAttributes({ title: newTitle })}
           placeholder={__("Accordion title")}
-          className="wp-block-wpshadcn-accordion-trigger-title"
+          className="wp-block-shadcn-accordion-trigger-title"
           style={{
             letterSpacing: typographyProps.style.letterSpacing,
             textDecoration: typographyProps.style.textDecoration,
@@ -82,7 +82,7 @@ export default function Edit({ attributes, setAttributes, context }) {
         />
         {showIcon && iconPosition === "right" && (
           <span
-            className="wp-block-wpshadcn-accordion-trigger-icon"
+            className="wp-block-shadcn-accordion-trigger-icon"
             aria-hidden="true"
           />
         )}

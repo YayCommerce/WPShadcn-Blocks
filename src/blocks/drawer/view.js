@@ -3,7 +3,7 @@
  */
 import { store, getContext } from "@wordpress/interactivity";
 
-const BODY_OPEN_CLASS = "wpshadcn-drawer-open";
+const BODY_OPEN_CLASS = "shadcn-drawer-open";
 
 // Store drag state per drawer element (to avoid context issues in global handlers)
 const dragStateMap = new WeakMap();
@@ -13,7 +13,7 @@ const closeDrawerByElement = (drawerElement) => {
   if (!drawerElement) return;
   
   // Method 1: Try to trigger close via overlay click (most reliable with Interactivity API)
-  const overlay = drawerElement.querySelector('.wp-block-wpshadcn-drawer__overlay');
+  const overlay = drawerElement.querySelector('.wp-block-shadcn-drawer__overlay');
   if (overlay) {
     // Use requestAnimationFrame to ensure drag has ended and DOM is ready
     requestAnimationFrame(() => {
@@ -36,7 +36,7 @@ const closeDrawerByElement = (drawerElement) => {
         drawerElement.setAttribute('data-wp-context', JSON.stringify(context));
         
         // Also update the portal's data-open attribute directly
-        const portal = drawerElement.querySelector('.wp-block-wpshadcn-drawer__portal');
+        const portal = drawerElement.querySelector('.wp-block-shadcn-drawer__portal');
         if (portal) {
           portal.classList.remove('is-open');
           portal.setAttribute('data-open', 'false');
@@ -59,7 +59,7 @@ const toggleBodyScroll = (isOpen) => {
 };
 
 const drawerStore = store(
-  "wpshadcn/drawer",
+  "shadcn/drawer",
   {
     state: {
       get isOpen() {
@@ -171,14 +171,14 @@ const drawerStore = store(
           target?.closest?.("select") ||
           target?.closest?.("textarea") ||
           target?.closest?.("[role='button']") ||
-          target?.closest?.(".wp-block-wpshadcn-drawer__close")
+          target?.closest?.(".wp-block-shadcn-drawer__close")
         ) {
           return;
         }
 
         const direction = context.direction || "bottom";
         const drawerId = context.drawerId;
-        const panelElement = event.target?.closest?.(".wp-block-wpshadcn-drawer__panel") ||
+        const panelElement = event.target?.closest?.(".wp-block-shadcn-drawer__panel") ||
           document.querySelector(`#${drawerId}-content`);
         
         if (!panelElement) {
@@ -276,7 +276,7 @@ const drawerStore = store(
             // Close if dragged beyond threshold, otherwise snap back
             if (state.currentDragOffset > threshold) {
               // Find the drawer wrapper and close it
-              const drawerWrapper = panelElement.closest('[data-wp-interactive="wpshadcn/drawer"]');
+              const drawerWrapper = panelElement.closest('[data-wp-interactive="shadcn/drawer"]');
               closeDrawerByElement(drawerWrapper);
             } else {
               // Snap back - remove inline style to let CSS transition handle it
@@ -306,7 +306,7 @@ const drawerStore = store(
         }
 
         const direction = context.dragDirection || context.direction || "bottom";
-        const panelElement = event.target?.closest?.(".wp-block-wpshadcn-drawer__panel") ||
+        const panelElement = event.target?.closest?.(".wp-block-shadcn-drawer__panel") ||
           document.querySelector(`#${context.drawerId}-content`);
 
         // Get current touch position
@@ -362,7 +362,7 @@ const drawerStore = store(
         }
 
         const direction = context.dragDirection || context.direction || "bottom";
-        const panelElement = event.target?.closest?.(".wp-block-wpshadcn-drawer__panel") ||
+        const panelElement = event.target?.closest?.(".wp-block-shadcn-drawer__panel") ||
           document.querySelector(`#${context.drawerId}-content`);
         
         const threshold = panelElement 

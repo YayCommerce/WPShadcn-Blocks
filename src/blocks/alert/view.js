@@ -5,7 +5,7 @@
  */
 import { store, getContext } from "@wordpress/interactivity";
 
-store("wpshadcn/alert", {
+store("shadcn/alert", {
   actions: {
     dismiss: () => {
       const context = getContext();

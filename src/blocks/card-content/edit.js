@@ -11,7 +11,7 @@ const TEMPLATE = [
 	[
 		'core/paragraph',
 		{
-			placeholder: __( 'Add card content here...', 'wpshadcn-blocks' ),
+			placeholder: __( 'Add card content here...', 'shadcn-blocks' ),
 		},
 	],
 ];
@@ -23,7 +23,7 @@ const TEMPLATE = [
  */
 export default function Edit() {
 	const blockProps = useBlockProps( {
-		className: 'wp-block-wpshadcn-card-content',
+		className: 'wp-block-shadcn-card-content',
 	} );
 
 	return (

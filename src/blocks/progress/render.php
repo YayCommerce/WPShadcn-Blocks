@@ -2,7 +2,7 @@
 /**
  * Progress block render.
  *
- * @package WpShadcnBlocks
+ * @package ShadcnBlocks
  *
  * @var array    $attributes Block attributes.
  * @var string   $content    Block content (inner blocks).
@@ -29,7 +29,7 @@ if( $current_value === 'static' ) {
 			return '';
 		}
 
-		$free_shipping = \WpShadcnBlocks\FreeShipping::get_instance();
+		$free_shipping = \ShadcnBlocks\FreeShipping::get_instance();
 		$free_shipping_info = $free_shipping->get_free_shipping_info();
 		
 		if ($free_shipping_info === null) {
@@ -47,7 +47,7 @@ if( $current_value === 'static' ) {
 
 $wrapper_attributes = get_block_wrapper_attributes(
 	array(
-		'class' => 'wp-block-wpshadcn-progress',
+		'class' => 'wp-block-shadcn-progress',
 	)
 );
 

@@ -25,7 +25,7 @@ const TEMPLATE = [
       [
         "core/button",
         {
-          text: __("Save changes", "wpshadcn-blocks"),
+          text: __("Save changes", "shadcn-blocks"),
           style: {
             spacing: {
               padding: {
@@ -44,7 +44,7 @@ const TEMPLATE = [
       [
         "core/button",
         {
-          text: __("Close", "wpshadcn-blocks"),
+          text: __("Close", "shadcn-blocks"),
           className: "is-style-outline",
           style: {
             spacing: {
@@ -72,7 +72,7 @@ const TEMPLATE = [
  */
 export default function Edit() {
   const blockProps = useBlockProps({
-    className: "wp-block-wpshadcn-sheet-footer",
+    className: "wp-block-shadcn-sheet-footer",
   });
 
   return (

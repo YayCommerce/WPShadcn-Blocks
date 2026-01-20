@@ -1,14 +1,14 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "wpshadcn/drawer-footer",
+  "name": "shadcn/drawer-footer",
   "version": "1.0.0",
   "title": "Drawer Footer",
-  "category": "wpshadcn",
-  "parent": ["wpshadcn/drawer"],
+  "category": "shadcn",
+  "parent": ["shadcn/drawer"],
   "icon": "heading",
   "description": "Drawer footer section for footer content.",
-  "textdomain": "wpshadcn-blocks",
+  "textdomain": "shadcn-blocks",
   "attributes": {},
   "supports": {
     "html": false,

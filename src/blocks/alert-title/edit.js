@@ -14,7 +14,7 @@ export default function Edit({ attributes, setAttributes }) {
   const { title } = attributes;
 
   const blockProps = useBlockProps({
-    className: "wp-block-wpshadcn-alert-title alert-title",
+    className: "wp-block-shadcn-alert-title alert-title",
   });
 
   return (
@@ -23,7 +23,7 @@ export default function Edit({ attributes, setAttributes }) {
         tagName="div"
         value={title || ""}
         onChange={(value) => setAttributes({ title: value })}
-        placeholder={__("Alert Title", "wpshadcn-blocks")}
+        placeholder={__("Alert Title", "shadcn-blocks")}
         allowedFormats={["core/bold", "core/italic", "core/link"]}
       />
     </div>

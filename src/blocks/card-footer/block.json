@@ -1,14 +1,14 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "wpshadcn/card-footer",
+	"name": "shadcn/card-footer",
 	"version": "1.0.0",
 	"title": "Card Footer",
-	"category": "wpshadcn",
-	"parent": [ "wpshadcn/card" ],
+	"category": "shadcn",
+	"parent": [ "shadcn/card" ],
 	"icon": "minus",
 	"description": "Card footer section for actions and buttons.",
-	"textdomain": "wpshadcn-blocks",
+	"textdomain": "shadcn-blocks",
 	"attributes": {},
 	"supports": {
 		"html": false,

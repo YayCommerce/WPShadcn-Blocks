@@ -21,9 +21,9 @@ import {
 import { useDispatch } from "@wordpress/data";
 import { createBlock } from "@wordpress/blocks";
 
-const ACCORDION_BLOCK_NAME = "wpshadcn/accordion-item";
-const ACCORDION_TRIGGER_BLOCK_NAME = "wpshadcn/accordion-trigger";
-const ACCORDION_CONTENT_BLOCK_NAME = "wpshadcn/accordion-content";
+const ACCORDION_BLOCK_NAME = "shadcn/accordion-item";
+const ACCORDION_TRIGGER_BLOCK_NAME = "shadcn/accordion-trigger";
+const ACCORDION_CONTENT_BLOCK_NAME = "shadcn/accordion-content";
 const ACCORDION_BLOCK = {
   name: ACCORDION_BLOCK_NAME,
 };
@@ -121,7 +121,7 @@ export default function Edit({
   const addAccordionItemBlock = () => {
     const newAccordionItem = createBlock(ACCORDION_BLOCK_NAME, {}, [
       createBlock(ACCORDION_TRIGGER_BLOCK_NAME, {}),
-      createBlock("wpshadcn/accordion-content", {}),
+      createBlock("shadcn/accordion-content", {}),
     ]);
     insertBlock(newAccordionItem, undefined, clientId);
   };

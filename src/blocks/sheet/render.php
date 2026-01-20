@@ -2,7 +2,7 @@
 /**
  * Sheet block render.
  *
- * @package WpShadcnBlocks
+ * @package ShadcnBlocks
  *
  * @var array    $attributes Block attributes.
  * @var string   $content    Block content (inner blocks).
@@ -11,7 +11,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-if ( ! function_exists( 'block_wpshadcn_sheet_render' ) ) {
+if ( ! function_exists( 'block_shadcn_sheet_render' ) ) {
 	/**
 	 * Render callback for the Sheet block.
 	 *
@@ -21,8 +21,8 @@ if ( ! function_exists( 'block_wpshadcn_sheet_render' ) ) {
 	 *
 	 * @return string
 	 */
-	function block_wpshadcn_sheet_render( $attributes, $content, $block ) {
-		$unique_id = wp_unique_id( 'wpshadcn-sheet-' );
+	function block_shadcn_sheet_render( $attributes, $content, $block ) {
+		$unique_id = wp_unique_id( 'shadcn-sheet-' );
 
 		$dismissible = isset( $attributes['dismissible'] ) ? $attributes['dismissible'] : false;
 		$direction   = isset( $attributes['direction'] ) ? sanitize_text_field( $attributes['direction'] ) : 'bottom';
@@ -37,7 +37,7 @@ if ( ! function_exists( 'block_wpshadcn_sheet_render' ) ) {
 		foreach ( $inner_blocks as $inner_block ) {
 			$name = $inner_block['blockName'] ?? '';
 
-			if ( 'wpshadcn/sheet-trigger' === $name ) {
+			if ( 'shadcn/sheet-trigger' === $name ) {
 				$trigger_html .= render_block( $inner_block );
 				continue;
 			}
@@ -51,9 +51,9 @@ if ( ! function_exists( 'block_wpshadcn_sheet_render' ) ) {
 		
 		if ( ! $trigger_html ) {
 			$trigger_html = sprintf(
-				'<button class="wp-block-wpshadcn-sheet__fallback-button" type="button" data-wp-on--click="actions.toggle" data-wp-bind--aria-expanded="state.isOpen" aria-controls="%s-content">%s</button>',
+				'<button class="wp-block-shadcn-sheet__fallback-button" type="button" data-wp-on--click="actions.toggle" data-wp-bind--aria-expanded="state.isOpen" aria-controls="%s-content">%s</button>',
 				esc_attr( $unique_id ),
-				esc_html__( 'Open Sheet', 'wpshadcn-blocks' )
+				esc_html__( 'Open Sheet', 'shadcn-blocks' )
 			);
 			$button_found = true;
 		} else {
@@ -108,8 +108,8 @@ if ( ! function_exists( 'block_wpshadcn_sheet_render' ) ) {
 			// Add close button to drawer-header when dismissible is enabled
 			if ( $dismissible ) {
 				$close_button = sprintf(
-					'<button type="button" class="wp-block-wpshadcn-sheet__close" aria-label="%s" data-wp-on--click="actions.close">%s</button>',
-					esc_attr__( 'Close sheet', 'wpshadcn-blocks' ),
+					'<button type="button" class="wp-block-shadcn-sheet__close" aria-label="%s" data-wp-on--click="actions.close">%s</button>',
+					esc_attr__( 'Close sheet', 'shadcn-blocks' ),
 					'<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M11.7816 4.03157C12.0062 3.80702 12.0062 3.44295 11.7816 3.2184C11.5571 2.99385 11.193 2.99385 10.9685 3.2184L7.50005 6.68682L4.03164 3.2184C3.80708 2.99385 3.44301 2.99385 3.21846 3.2184C2.99391 3.44295 2.99391 3.80702 3.21846 4.03157L6.68688 7.49999L3.21846 10.9684C2.99391 11.193 2.99391 11.557 3.21846 11.7816C3.44301 12.0061 3.80708 12.0061 4.03164 11.7816L7.50005 8.31316L10.9685 11.7816C11.193 12.0061 11.5571 12.0061 11.7816 11.7816C12.0062 11.557 12.0062 11.193 11.7816 10.9684L8.31322 7.49999L11.7816 4.03157Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>'
 				);
 
@@ -119,7 +119,7 @@ if ( ! function_exists( 'block_wpshadcn_sheet_render' ) ) {
 					$found_header = false;
 					
 					// Find drawer-header wrapper div
-					if ( $tags->next_tag( array( 'class_name' => 'wp-block-wpshadcn-sheet-header' ) ) ) {
+					if ( $tags->next_tag( array( 'class_name' => 'wp-block-shadcn-sheet-header' ) ) ) {
 						$found_header = true;
 					}
 
@@ -127,7 +127,7 @@ if ( ! function_exists( 'block_wpshadcn_sheet_render' ) ) {
 						// Insert close button after opening tag of drawer-header
 						$current_html = $tags->get_updated_html();
 						$panel_html   = preg_replace(
-							'/(<div[^>]*class="[^"]*wp-block-wpshadcn-sheet-header[^"]*"[^>]*>)/',
+							'/(<div[^>]*class="[^"]*wp-block-shadcn-sheet-header[^"]*"[^>]*>)/',
 							'$1' . $close_button,
 							$panel_html,
 							1
@@ -136,7 +136,7 @@ if ( ! function_exists( 'block_wpshadcn_sheet_render' ) ) {
 				}
 
 				// If drawer-header not found or injection failed, add close button at the start of panel
-				if ( strpos( $panel_html, 'wp-block-wpshadcn-sheet__close' ) === false ) {
+				if ( strpos( $panel_html, 'wp-block-shadcn-sheet__close' ) === false ) {
 					$panel_html = $close_button . $panel_html;
 				}
 			}
@@ -150,13 +150,13 @@ if ( ! function_exists( 'block_wpshadcn_sheet_render' ) ) {
 
 		$wrapper_attributes = get_block_wrapper_attributes(
 			array(
-				'class' => 'wp-block-wpshadcn-sheet',
+				'class' => 'wp-block-shadcn-sheet',
 			)
 		);
 
-		$panel_classes = array( 'wp-block-wpshadcn-sheet__panel' );
+		$panel_classes = array( 'wp-block-shadcn-sheet__panel' );
 		if ( $direction ) {
-			$panel_classes[] = 'wp-block-wpshadcn-sheet__panel--' . esc_attr( $direction );
+			$panel_classes[] = 'wp-block-shadcn-sheet__panel--' . esc_attr( $direction );
 		}
 		$panel_class = implode( ' ', $panel_classes );
 
@@ -164,13 +164,13 @@ if ( ! function_exists( 'block_wpshadcn_sheet_render' ) ) {
 		?>
 		<div 
 			<?php echo $wrapper_attributes; ?>
-			data-wp-interactive="wpshadcn/sheet"
-			<?php echo wp_interactivity_data_wp_context( $context, 'wpshadcn/sheet' ); ?>
+			data-wp-interactive="shadcn/sheet"
+			<?php echo wp_interactivity_data_wp_context( $context, 'shadcn/sheet' ); ?>
 			data-wp-watch="callbacks.syncBodyScroll"
 			data-wp-on-window--keydown="actions.handleEscape"
 		>
 			<div 
-				class="wp-block-wpshadcn-sheet__trigger"
+				class="wp-block-shadcn-sheet__trigger"
 				<?php if ( ! $button_found && ! empty( $trigger_html ) ) : ?>
 					data-wp-on--click="actions.toggle"
 					role="button"
@@ -183,13 +183,13 @@ if ( ! function_exists( 'block_wpshadcn_sheet_render' ) ) {
 			</div>
 
 			<div
-				class="wp-block-wpshadcn-sheet__portal wp-block-wpshadcn-sheet__portal--<?php echo esc_attr( $direction ); ?>"
+				class="wp-block-shadcn-sheet__portal wp-block-shadcn-sheet__portal--<?php echo esc_attr( $direction ); ?>"
 				data-wp-bind--data-open="state.isOpen"
 				data-wp-class--is-open="state.isOpen"
 				data-wp-bind--inert="!state.isOpen"
 			>
 				<div
-					class="wp-block-wpshadcn-sheet__overlay"
+					class="wp-block-shadcn-sheet__overlay"
 					data-wp-on--click="actions.handleOverlayClick"
 					aria-hidden="true"
 				></div>
@@ -199,7 +199,7 @@ if ( ! function_exists( 'block_wpshadcn_sheet_render' ) ) {
 					id="<?php echo esc_attr( $unique_id ); ?>-content"
 					role="dialog"
 					aria-modal="true"
-					aria-label="<?php echo esc_attr__( 'Sheet panel', 'wpshadcn-blocks' ); ?>"
+					aria-label="<?php echo esc_attr__( 'Sheet panel', 'shadcn-blocks' ); ?>"
 					tabindex="-1"
 					data-wp-bind--aria-hidden="!state.isOpen"
 					data-wp-on--keydown="actions.handleKeydown"
@@ -215,4 +215,4 @@ if ( ! function_exists( 'block_wpshadcn_sheet_render' ) ) {
 	}
 }
 
-echo block_wpshadcn_sheet_render( $attributes ?? array(), $content ?? '', $block ?? null );
+echo block_shadcn_sheet_render( $attributes ?? array(), $content ?? '', $block ?? null );

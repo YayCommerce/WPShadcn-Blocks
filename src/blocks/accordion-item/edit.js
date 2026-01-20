@@ -20,8 +20,8 @@ import {
 import clsx from "clsx";
 
 const TEMPLATE = [
-  ["wpshadcn/accordion-trigger"],
-  ["wpshadcn/accordion-content"],
+  ["shadcn/accordion-trigger"],
+  ["shadcn/accordion-content"],
 ];
 
 export default function Edit({

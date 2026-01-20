@@ -6,8 +6,11 @@
  * @param string $content    Block content.
  * @return string Rendered block HTML.
  */
-if ( ! function_exists( 'render_block_wpshadcn_accordion' ) ) {
-	function render_block_wpshadcn_accordion( $attributes, $content ) {
+
+defined( 'ABSPATH' ) || exit;
+
+if ( ! function_exists( 'render_block_shadcn_accordion' ) ) {
+	function render_block_shadcn_accordion( $attributes, $content ) {
 		if ( ! $content ) {
 			return $content;
 		}
@@ -15,8 +18,8 @@ if ( ! function_exists( 'render_block_wpshadcn_accordion' ) ) {
 		$tags         = new WP_HTML_Tag_Processor( $content );
 		$autoclose = ( ! empty( $attributes['autoclose'] ) ) ? 'true' : 'false';
 
-	if ( $tags->next_tag( array( 'class_name' => 'wp-block-wpshadcn-accordion' ) ) ) {
-		$tags->set_attribute( 'data-wp-interactive', 'wpshadcn/accordion' );
+	if ( $tags->next_tag( array( 'class_name' => 'wp-block-shadcn-accordion' ) ) ) {
+		$tags->set_attribute( 'data-wp-interactive', 'shadcn/accordion' );
 		$tags->set_attribute( 'data-wp-context', '{ "autoclose": ' . $autoclose . ', "accordionItems": [] }' );
 
 		// Only modify content if directives have been set.
@@ -28,4 +31,4 @@ if ( ! function_exists( 'render_block_wpshadcn_accordion' ) ) {
 }
 
 // Call the render function and output the result
-echo render_block_wpshadcn_accordion( $attributes ?? array(), $content ?? '' );
+echo render_block_shadcn_accordion( $attributes ?? array(), $content ?? '' );

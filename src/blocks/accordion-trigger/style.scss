@@ -1,11 +1,11 @@
 /* Wrapper (heading element) - should not interfere with button styling */
-.wp-block-wpshadcn-accordion-trigger {
+.wp-block-shadcn-accordion-trigger {
   margin: 0;
   padding: 0;
 }
 
 /* Button trigger - matches Shadcn UI AccordionTrigger styles */
-.wp-block-wpshadcn-accordion-trigger-button {
+.wp-block-shadcn-accordion-trigger-button {
   /* Reset WordPress default button styles */
   appearance: none;
   -webkit-appearance: none;
@@ -75,13 +75,13 @@
   }
 }
 
-.wp-block-wpshadcn-accordion-trigger-title {
+.wp-block-shadcn-accordion-trigger-title {
   flex: 1;
   font-weight: 500;
   text-align: left;
 }
 
-.wp-block-wpshadcn-accordion-trigger-icon {
+.wp-block-shadcn-accordion-trigger-icon {
   width: 1rem;
   height: 1rem;
   display: flex;
@@ -127,9 +127,9 @@
 }
 
 /* When accordion is open, rotate the chevron to point up (180deg rotation) */
-.wp-block-wpshadcn-accordion-item.is-open
-  .wp-block-wpshadcn-accordion-trigger-button
-  .wp-block-wpshadcn-accordion-trigger-icon::after {
+.wp-block-shadcn-accordion-item.is-open
+  .wp-block-shadcn-accordion-trigger-button
+  .wp-block-shadcn-accordion-trigger-icon::after {
   transform: rotate(225deg);
   margin-top: -0.25rem;
 }

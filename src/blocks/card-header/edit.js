@@ -12,7 +12,7 @@ const TEMPLATE = [
 		'core/heading',
 		{
 			level: 3,
-			placeholder: __( 'Card Title', 'wpshadcn-blocks' ),
+			placeholder: __( 'Card Title', 'shadcn-blocks' ),
 			style: {
 				typography: {
 					fontWeight: '600',
@@ -29,7 +29,7 @@ const TEMPLATE = [
 	[
 		'core/paragraph',
 		{
-			placeholder: __( 'Card description', 'wpshadcn-blocks' ),
+			placeholder: __( 'Card description', 'shadcn-blocks' ),
 			style: {
 				typography: {
 					fontSize: 'var(--wp--preset--font-size--sm)',
@@ -55,7 +55,7 @@ const TEMPLATE = [
  */
 export default function Edit() {
 	const blockProps = useBlockProps( {
-		className: 'wp-block-wpshadcn-card-header',
+		className: 'wp-block-shadcn-card-header',
 	} );
 
 	return (

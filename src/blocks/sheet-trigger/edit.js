@@ -11,7 +11,7 @@ const TEMPLATE = [
   [
     "core/button",
     {
-      text: __("Open Sheet", "wpshadcn-blocks"),
+      text: __("Open Sheet", "shadcn-blocks"),
       className: "is-style-outline",
       style: {
         typography: {
@@ -29,7 +29,7 @@ const TEMPLATE = [
  */
 export default function Edit() {
   const blockProps = useBlockProps({
-    className: "wp-block-wpshadcn-sheet-trigger",
+    className: "wp-block-shadcn-sheet-trigger",
   });
 
   return (

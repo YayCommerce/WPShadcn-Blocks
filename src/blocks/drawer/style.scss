@@ -1,14 +1,14 @@
-.wp-block-wpshadcn-drawer {
+.wp-block-shadcn-drawer {
   position: relative;
 }
 
-.wp-block-wpshadcn-drawer__trigger {
+.wp-block-shadcn-drawer__trigger {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-.wp-block-wpshadcn-drawer__portal {
+.wp-block-shadcn-drawer__portal {
   position: fixed;
   inset: 0;
   display: flex;
@@ -20,37 +20,37 @@
   z-index: 500000;
 }
 
-.wp-block-wpshadcn-drawer__portal.is-open,
-.wp-block-wpshadcn-drawer__portal[data-open="true"] {
+.wp-block-shadcn-drawer__portal.is-open,
+.wp-block-shadcn-drawer__portal[data-open="true"] {
   opacity: 1;
   pointer-events: auto;
 }
 
 // Bottom (default)
-.wp-block-wpshadcn-drawer__portal--bottom {
+.wp-block-shadcn-drawer__portal--bottom {
   align-items: flex-end;
   justify-content: center;
 }
 
 // Top
-.wp-block-wpshadcn-drawer__portal--top {
+.wp-block-shadcn-drawer__portal--top {
   align-items: flex-start;
   justify-content: center;
 }
 
 // Left
-.wp-block-wpshadcn-drawer__portal--left {
+.wp-block-shadcn-drawer__portal--left {
   align-items: stretch;
   justify-content: flex-start;
 }
 
 // Right
-.wp-block-wpshadcn-drawer__portal--right {
+.wp-block-shadcn-drawer__portal--right {
   align-items: stretch;
   justify-content: flex-end;
 }
 
-.wp-block-wpshadcn-drawer__overlay {
+.wp-block-shadcn-drawer__overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.55);
@@ -65,7 +65,7 @@
   cursor: pointer;
 }
 
-.wp-block-wpshadcn-drawer__panel {
+.wp-block-shadcn-drawer__panel {
   position: relative;
   background: var(--wp--preset--color--background, #fff);
   box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
@@ -90,7 +90,7 @@
 }
 
 // Bottom panel (default)
-.wp-block-wpshadcn-drawer__panel--bottom {
+.wp-block-shadcn-drawer__panel--bottom {
   width: 100%;
   max-height: 80vh;
   border-radius: var(--wp--preset--spacing--3, 12px)
@@ -99,16 +99,16 @@
   touch-action: pan-y;
 }
 
-.wp-block-wpshadcn-drawer__portal--bottom.is-open
-  .wp-block-wpshadcn-drawer__panel--bottom,
-.wp-block-wpshadcn-drawer__portal--bottom[data-open="true"]
-  .wp-block-wpshadcn-drawer__panel--bottom {
+.wp-block-shadcn-drawer__portal--bottom.is-open
+  .wp-block-shadcn-drawer__panel--bottom,
+.wp-block-shadcn-drawer__portal--bottom[data-open="true"]
+  .wp-block-shadcn-drawer__panel--bottom {
   transform: translateY(0);
   opacity: 1;
 }
 
 // Top panel
-.wp-block-wpshadcn-drawer__panel--top {
+.wp-block-shadcn-drawer__panel--top {
   width: 100%;
   max-height: 80vh;
   border-radius: 0 0 var(--wp--preset--spacing--3, 12px)
@@ -117,16 +117,16 @@
   touch-action: pan-y;
 }
 
-.wp-block-wpshadcn-drawer__portal--top.is-open
-  .wp-block-wpshadcn-drawer__panel--top,
-.wp-block-wpshadcn-drawer__portal--top[data-open="true"]
-  .wp-block-wpshadcn-drawer__panel--top {
+.wp-block-shadcn-drawer__portal--top.is-open
+  .wp-block-shadcn-drawer__panel--top,
+.wp-block-shadcn-drawer__portal--top[data-open="true"]
+  .wp-block-shadcn-drawer__panel--top {
   transform: translateY(0);
   opacity: 1;
 }
 
 // Left panel
-.wp-block-wpshadcn-drawer__panel--left {
+.wp-block-shadcn-drawer__panel--left {
   width: 100%;
   max-width: min(400px, 85vw);
   height: 100vh;
@@ -134,16 +134,16 @@
   touch-action: pan-x;
 }
 
-.wp-block-wpshadcn-drawer__portal--left.is-open
-  .wp-block-wpshadcn-drawer__panel--left,
-.wp-block-wpshadcn-drawer__portal--left[data-open="true"]
-  .wp-block-wpshadcn-drawer__panel--left {
+.wp-block-shadcn-drawer__portal--left.is-open
+  .wp-block-shadcn-drawer__panel--left,
+.wp-block-shadcn-drawer__portal--left[data-open="true"]
+  .wp-block-shadcn-drawer__panel--left {
   transform: translateX(0);
   opacity: 1;
 }
 
 // Right panel
-.wp-block-wpshadcn-drawer__panel--right {
+.wp-block-shadcn-drawer__panel--right {
   width: 100%;
   max-width: min(400px, 85vw);
   height: 100vh;
@@ -151,15 +151,15 @@
   touch-action: pan-x;
 }
 
-.wp-block-wpshadcn-drawer__portal--right.is-open
-  .wp-block-wpshadcn-drawer__panel--right,
-.wp-block-wpshadcn-drawer__portal--right[data-open="true"]
-  .wp-block-wpshadcn-drawer__panel--right {
+.wp-block-shadcn-drawer__portal--right.is-open
+  .wp-block-shadcn-drawer__panel--right,
+.wp-block-shadcn-drawer__portal--right[data-open="true"]
+  .wp-block-shadcn-drawer__panel--right {
   transform: translateX(0);
   opacity: 1;
 }
 
-.wp-block-wpshadcn-drawer__fallback-button {
+.wp-block-shadcn-drawer__fallback-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -173,7 +173,7 @@
   cursor: pointer;
 }
 
-.wp-block-wpshadcn-drawer__close {
+.wp-block-shadcn-drawer__close {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -214,13 +214,13 @@
   }
 }
 
-.wp-block-wpshadcn-drawer-header {
+.wp-block-shadcn-drawer-header {
   position: relative;
 }
 
 // Drag handle indicator (like shadcn drawer)
-.wp-block-wpshadcn-drawer__panel--bottom::before,
-.wp-block-wpshadcn-drawer__panel--top::after {
+.wp-block-shadcn-drawer__panel--bottom::before,
+.wp-block-shadcn-drawer__panel--top::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -232,17 +232,17 @@
   z-index: 1;
 }
 
-.wp-block-wpshadcn-drawer__panel--bottom::before {
+.wp-block-shadcn-drawer__panel--bottom::before {
   top: 12px;
 }
 
-.wp-block-wpshadcn-drawer__panel--top::after {
+.wp-block-shadcn-drawer__panel--top::after {
   bottom: 12px;
 }
 
 // Left and right drawers - vertical handle
-.wp-block-wpshadcn-drawer__panel--left::before,
-.wp-block-wpshadcn-drawer__panel--right::after {
+.wp-block-shadcn-drawer__panel--left::before,
+.wp-block-shadcn-drawer__panel--right::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -254,14 +254,14 @@
   z-index: 1;
 }
 
-.wp-block-wpshadcn-drawer__panel--left::before {
+.wp-block-shadcn-drawer__panel--left::before {
   right: 12px;
 }
 
-.wp-block-wpshadcn-drawer__panel--right::after {
+.wp-block-shadcn-drawer__panel--right::after {
   left: 12px;
 }
 
-body.wpshadcn-drawer-open {
+body.shadcn-drawer-open {
   overflow: hidden;
 }

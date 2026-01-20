@@ -2,7 +2,7 @@
 /**
  * Carousel block render.
  *
- * @package WpShadcnBlocks
+ * @package ShadcnBlocks
  *
  * @var array    $attributes Block attributes.
  * @var string   $content    Block content (inner blocks).
@@ -56,19 +56,19 @@ $wrapper_attributes = get_block_wrapper_attributes(
 ?>
 
 <div <?php echo $wrapper_attributes; ?>>
-	<div class="wp-block-wpshadcn-carousel__viewport">
-		<div class="wp-block-wpshadcn-carousel__content">
+	<div class="wp-block-shadcn-carousel__viewport">
+		<div class="wp-block-shadcn-carousel__content">
 			<?php echo $content; ?>
 		</div>
 	</div>
 
 	<?php if ( $show_arrows ) : ?>
-		<button type="button" class="wp-block-wpshadcn-carousel__prev" aria-label="<?php esc_attr_e( 'Previous slide', 'wpshadcn-blocks' ); ?>">
+		<button type="button" class="wp-block-shadcn-carousel__prev" aria-label="<?php esc_attr_e( 'Previous slide', 'shadcn-blocks' ); ?>">
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 				<path d="m15 18-6-6 6-6"/>
 			</svg>
 		</button>
-		<button type="button" class="wp-block-wpshadcn-carousel__next" aria-label="<?php esc_attr_e( 'Next slide', 'wpshadcn-blocks' ); ?>">
+		<button type="button" class="wp-block-shadcn-carousel__next" aria-label="<?php esc_attr_e( 'Next slide', 'shadcn-blocks' ); ?>">
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 				<path d="m9 18 6-6-6-6"/>
 			</svg>
@@ -76,6 +76,6 @@ $wrapper_attributes = get_block_wrapper_attributes(
 	<?php endif; ?>
 
 	<?php if ( $show_dots ) : ?>
-		<div class="wp-block-wpshadcn-carousel__dots" role="tablist" aria-label="<?php esc_attr_e( 'Carousel pagination', 'wpshadcn-blocks' ); ?>"></div>
+		<div class="wp-block-shadcn-carousel__dots" role="tablist" aria-label="<?php esc_attr_e( 'Carousel pagination', 'shadcn-blocks' ); ?>"></div>
 	<?php endif; ?>
 </div>

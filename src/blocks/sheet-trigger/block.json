@@ -1,14 +1,14 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "wpshadcn/sheet-trigger",
+  "name": "shadcn/sheet-trigger",
   "version": "1.0.0",
   "title": "Sheet Trigger",
-  "category": "wpshadcn",
-  "parent": ["wpshadcn/sheet"],
+  "category": "shadcn",
+  "parent": ["shadcn/sheet"],
   "icon": "button",
   "description": "Button or control that toggles the sheet.",
-  "textdomain": "wpshadcn-blocks",
+  "textdomain": "shadcn-blocks",
   "attributes": {},
   "supports": {
     "html": false,

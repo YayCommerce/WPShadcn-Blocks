@@ -5,7 +5,7 @@ import { store, getContext, withSyncEvent } from "@wordpress/interactivity";
 
 let hashHandled = false;
 const { actions } = store(
-  "wpshadcn/accordion",
+  "shadcn/accordion",
   {
     state: {
       get isOpen() {
@@ -73,7 +73,7 @@ const { actions } = store(
           return;
         }
         const panelElement = window.document.querySelector(
-          '.wp-block-wpshadcn-accordion-content[aria-labelledby="' + id + '"]'
+          '.wp-block-shadcn-accordion-content[aria-labelledby="' + id + '"]'
         );
         if (!panelElement || !panelElement.contains(targetElement)) {
           return;

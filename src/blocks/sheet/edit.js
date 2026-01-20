@@ -19,20 +19,20 @@ import {
  * Sheet block template.
  */
 const TEMPLATE = [
-  ["wpshadcn/sheet-trigger", {}],
-  ["wpshadcn/sheet-header", {}],
-  ["wpshadcn/sheet-content", {}],
-  ["wpshadcn/sheet-footer", {}],
+  ["shadcn/sheet-trigger", {}],
+  ["shadcn/sheet-header", {}],
+  ["shadcn/sheet-content", {}],
+  ["shadcn/sheet-footer", {}],
 ];
 
 /**
  * Allowed inner blocks.
  */
 const ALLOWED_BLOCKS = [
-  "wpshadcn/sheet-trigger",
-  "wpshadcn/sheet-header",
-  "wpshadcn/sheet-content",
-  "wpshadcn/sheet-footer",
+  "shadcn/sheet-trigger",
+  "shadcn/sheet-header",
+  "shadcn/sheet-content",
+  "shadcn/sheet-footer",
 ];
 
 /**
@@ -45,14 +45,14 @@ export default function Edit(props) {
   const { attributes, setAttributes } = props;
   const { dismissible, direction } = attributes;
   const blockProps = useBlockProps({
-    className: "wp-block-wpshadcn-sheet",
+    className: "wp-block-shadcn-sheet",
   });
 
   return (
     <>
       <InspectorControls key="setting">
         <ToolsPanel
-          label={__("Settings", "wpshadcn-blocks")}
+          label={__("Settings", "shadcn-blocks")}
           resetAll={() => {
             setAttributes({
               dismissible: false,
@@ -61,14 +61,14 @@ export default function Edit(props) {
           }}
         >
           <ToolsPanelItem
-            label={__("Dismissible", "wpshadcn-blocks")}
+            label={__("Dismissible", "shadcn-blocks")}
             isShownByDefault
             hasValue={() => !!dismissible}
             onDeselect={() => setAttributes({ dismissible: false })}
           >
             <ToggleControl
               isBlock
-              label={__("Dismissible", "wpshadcn-blocks")}
+              label={__("Dismissible", "shadcn-blocks")}
               onChange={(value) => {
                 setAttributes({
                   dismissible: value,
@@ -77,13 +77,13 @@ export default function Edit(props) {
               checked={dismissible ?? false}
               help={__(
                 "Allow users to dismiss the sheet by clicking outside or using a close button.",
-                "wpshadcn-blocks"
+                "shadcn-blocks"
               )}
             />
           </ToolsPanelItem>
 
           <ToolsPanelItem
-            label={__("Direction", "wpshadcn-blocks")}
+            label={__("Direction", "shadcn-blocks")}
             isShownByDefault
             hasValue={() => direction !== "bottom"}
             onDeselect={() => setAttributes({ direction: "bottom" })}
@@ -91,26 +91,26 @@ export default function Edit(props) {
             <ToggleGroupControl
               __next40pxDefaultSize
               isBlock
-              label={__("Direction", "wpshadcn-blocks")}
+              label={__("Direction", "shadcn-blocks")}
               value={direction ?? "bottom"}
               onChange={(value) => {
                 setAttributes({ direction: value });
               }}
             >
               <ToggleGroupControlOption
-                label={__("Bottom", "wpshadcn-blocks")}
+                label={__("Bottom", "shadcn-blocks")}
                 value="bottom"
               />
               <ToggleGroupControlOption
-                label={__("Top", "wpshadcn-blocks")}
+                label={__("Top", "shadcn-blocks")}
                 value="top"
               />
               <ToggleGroupControlOption
-                label={__("Left", "wpshadcn-blocks")}
+                label={__("Left", "shadcn-blocks")}
                 value="left"
               />
               <ToggleGroupControlOption
-                label={__("Right", "wpshadcn-blocks")}
+                label={__("Right", "shadcn-blocks")}
                 value="right"
               />
             </ToggleGroupControl>

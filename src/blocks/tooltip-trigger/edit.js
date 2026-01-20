@@ -11,7 +11,7 @@ const TEMPLATE = [
   [
     "core/button",
     {
-      text: __("Hover", "wpshadcn-blocks"),
+      text: __("Hover", "shadcn-blocks"),
       className: "is-style-outline",
       style: {
         typography: {
@@ -29,7 +29,7 @@ const TEMPLATE = [
  */
 export default function Edit() {
   const blockProps = useBlockProps({
-    className: "wp-block-wpshadcn-tooltip-trigger",
+    className: "wp-block-shadcn-tooltip-trigger",
   });
 
   return (

@@ -7,18 +7,18 @@ import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
  * Card block template.
  */
 const TEMPLATE = [
-	[ 'wpshadcn/card-header', {} ],
-	[ 'wpshadcn/card-content', {} ],
-	[ 'wpshadcn/card-footer', {} ],
+	[ 'shadcn/card-header', {} ],
+	[ 'shadcn/card-content', {} ],
+	[ 'shadcn/card-footer', {} ],
 ];
 
 /**
  * Allowed inner blocks.
  */
 const ALLOWED_BLOCKS = [
-	'wpshadcn/card-header',
-	'wpshadcn/card-content',
-	'wpshadcn/card-footer',
+	'shadcn/card-header',
+	'shadcn/card-content',
+	'shadcn/card-footer',
 ];
 
 /**
@@ -29,7 +29,7 @@ const ALLOWED_BLOCKS = [
  */
 export default function Edit( props ) {
 	const blockProps = useBlockProps( {
-		className: 'wp-block-wpshadcn-card',
+		className: 'wp-block-shadcn-card',
 	} );
 
 	return (

@@ -25,7 +25,7 @@ const TEMPLATE = [
       [
         "core/button",
         {
-          text: __("Cancel", "wpshadcn-blocks"),
+          text: __("Cancel", "shadcn-blocks"),
           className: "is-style-outline",
           style: {
             typography: {
@@ -37,7 +37,7 @@ const TEMPLATE = [
       [
         "core/button",
         {
-          text: __("Submit", "wpshadcn-blocks"),
+          text: __("Submit", "shadcn-blocks"),
           style: {
             spacing: {
               padding: {
@@ -65,7 +65,7 @@ const TEMPLATE = [
  */
 export default function Edit() {
   const blockProps = useBlockProps({
-    className: "wp-block-wpshadcn-drawer-footer",
+    className: "wp-block-shadcn-drawer-footer",
   });
 
   return (

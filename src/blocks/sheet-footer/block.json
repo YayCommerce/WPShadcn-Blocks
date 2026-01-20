@@ -1,14 +1,14 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "wpshadcn/sheet-footer",
+  "name": "shadcn/sheet-footer",
   "version": "1.0.0",
   "title": "Sheet Footer",
-  "category": "wpshadcn",
-  "parent": ["wpshadcn/sheet"],
+  "category": "shadcn",
+  "parent": ["shadcn/sheet"],
   "icon": "heading",
   "description": "Sheet footer section for footer content.",
-  "textdomain": "wpshadcn-blocks",
+  "textdomain": "shadcn-blocks",
   "attributes": {},
   "supports": {
     "html": false,

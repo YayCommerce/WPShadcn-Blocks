@@ -2,10 +2,10 @@
 /**
  * Main plugin class.
  *
- * @package WpShadcnBlocks
+ * @package ShadcnBlocks
  */
 
-namespace WpShadcnBlocks;
+namespace ShadcnBlocks;
 
 defined( 'ABSPATH' ) || exit;
 
@@ -63,8 +63,8 @@ class Plugin {
 		return array_merge(
 			array(
 				array(
-					'slug'  => 'wpshadcn',
-					'title' => __( 'Shadcn', 'wpshadcn-blocks' ),
+					'slug'  => 'shadcn',
+					'title' => __( 'Shadcn', 'shadcn-blocks' ),
 					'icon'  => null,
 				),
 			),
@@ -76,7 +76,7 @@ class Plugin {
 	 * Register blocks.
 	 */
 	public function register_blocks() {
-		$build_dir = WPSHADCN_BLOCKS_DIR . 'build/blocks/';
+		$build_dir = SHADCN_BLOCKS_DIR . 'build/blocks/';
 
 		// Check if build directory exists.
 		if ( ! is_dir( $build_dir ) ) {
@@ -112,40 +112,40 @@ class Plugin {
 
 		// Define interactive blocks that need view scripts.
 		$interactive_blocks_config = array(
-			'wpshadcn/accordion' => array(
-				'namespace' => 'wpshadcn/accordion',
+			'shadcn/accordion' => array(
+				'namespace' => 'shadcn/accordion',
 				'view_file' => 'accordion/view.js',
 				'check'     => function( $block ) {
 					// Accordion always needs the script if present.
 					return true;
 				},
 			),
-			'wpshadcn/alert'     => array(
-				'namespace' => 'wpshadcn/alert',
+			'shadcn/alert'     => array(
+				'namespace' => 'shadcn/alert',
 				'view_file' => 'alert/view.js',
 				'check'     => function( $block ) {
 					// Only load if dismissible attribute is true.
 					return isset( $block['attrs']['dismissible'] ) && $block['attrs']['dismissible'] === true;
 				},
 			),
-			'wpshadcn/drawer' => array(
-				'namespace' => 'wpshadcn/drawer',
+			'shadcn/drawer' => array(
+				'namespace' => 'shadcn/drawer',
 				'view_file' => 'drawer/view.js',
 				'check'     => function( $block ) {
 					// Drawer always needs the script if present.
 					return true;
 				},
 			),
-			'wpshadcn/tooltip' => array(
-				'namespace' => 'wpshadcn/tooltip',
+			'shadcn/tooltip' => array(
+				'namespace' => 'shadcn/tooltip',
 				'view_file' => 'tooltip/view.js',
 				'check'     => function( $block ) {
 					// Tooltip always needs the script if present.
 					return true;
 				},
 			),
-			'wpshadcn/sheet' => array(
-				'namespace' => 'wpshadcn/sheet',
+			'shadcn/sheet' => array(
+				'namespace' => 'shadcn/sheet',
 				'view_file' => 'sheet/view.js',
 				'check'     => function( $block ) {
 					// Sheet always needs the script if present.
@@ -210,8 +210,8 @@ class Plugin {
 
 		// Get blocks from static property or global fallback.
 		$blocks = self::$interactive_blocks;
-		if ( empty( $blocks ) && isset( $GLOBALS['wpshadcn_interactive_blocks'] ) ) {
-			$blocks = $GLOBALS['wpshadcn_interactive_blocks'];
+		if ( empty( $blocks ) && isset( $GLOBALS['shadcn_interactive_blocks'] ) ) {
+			$blocks = $GLOBALS['shadcn_interactive_blocks'];
 		}
 
 		if ( empty( $blocks ) ) {
@@ -220,13 +220,13 @@ class Plugin {
 
 		// Enqueue view scripts for each interactive block using Script Modules API.
 		foreach ( $blocks as $block_name => $block_config ) {
-			$view_js_path = WPSHADCN_BLOCKS_DIR . 'build/blocks/' . $block_config['view_file'];
-			$view_js_url  = WPSHADCN_BLOCKS_URL . 'build/blocks/' . $block_config['view_file'];
+			$view_js_path = SHADCN_BLOCKS_DIR . 'build/blocks/' . $block_config['view_file'];
+			$view_js_url  = SHADCN_BLOCKS_URL . 'build/blocks/' . $block_config['view_file'];
 			$asset_path   = str_replace( '.js', '.asset.php', $view_js_path );
 
 			if ( file_exists( $view_js_path ) ) {
 				$asset   = file_exists( $asset_path ) ? require $asset_path : array();
-				$version = isset( $asset['version'] ) ? $asset['version'] : WPSHADCN_BLOCKS_VERSION;
+				$version = isset( $asset['version'] ) ? $asset['version'] : SHADCN_BLOCKS_VERSION;
 
 				// Generate unique module ID from block name.
 				$module_id = str_replace( '/', '-', $block_name ) . '-view';
@@ -249,15 +249,15 @@ class Plugin {
 	 * Enqueue editor styles with CSS variables.
 	 */
 	public function enqueue_editor_styles() {
-		$editor_css_path = WPSHADCN_BLOCKS_DIR . 'src/editor-styles.css';
-		$editor_css_url  = WPSHADCN_BLOCKS_URL . 'src/editor-styles.css';
+		$editor_css_path = SHADCN_BLOCKS_DIR . 'src/editor-styles.css';
+		$editor_css_url  = SHADCN_BLOCKS_URL . 'src/editor-styles.css';
 
 		if ( file_exists( $editor_css_path ) ) {
 			wp_enqueue_style(
-				'wpshadcn-blocks-editor-styles',
+				'shadcn-blocks-editor-styles',
 				$editor_css_url,
 				array(),
-				WPSHADCN_BLOCKS_VERSION
+				SHADCN_BLOCKS_VERSION
 			);
 		}
 

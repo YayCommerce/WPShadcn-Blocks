@@ -19,17 +19,17 @@ export default function save({ attributes }) {
     <h3 {...blockProps}>
       <button
         type="button"
-        className="wp-block-wpshadcn-accordion-trigger-button"
+        className="wp-block-shadcn-accordion-trigger-button"
         style={spacingProps.style}
       >
         {showIcon && iconPosition === "left" && (
           <span
-            className="wp-block-wpshadcn-accordion-trigger-icon"
+            className="wp-block-shadcn-accordion-trigger-icon"
             aria-hidden="true"
           />
         )}
         <RichText.Content
-          className="wp-block-wpshadcn-accordion-trigger-title"
+          className="wp-block-shadcn-accordion-trigger-title"
           tagName="span"
           value={title}
           style={{
@@ -39,7 +39,7 @@ export default function save({ attributes }) {
         />
         {showIcon && iconPosition === "right" && (
           <span
-            className="wp-block-wpshadcn-accordion-trigger-icon"
+            className="wp-block-shadcn-accordion-trigger-icon"
             aria-hidden="true"
           />
         )}

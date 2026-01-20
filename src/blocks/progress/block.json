@@ -1,13 +1,13 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "wpshadcn/progress",
+  "name": "shadcn/progress",
   "version": "1.0.0",
   "title": "Progress",
-  "category": "wpshadcn",
+  "category": "shadcn",
   "description": "A progress bar for loading indicators and progress bars.",
   "keywords": ["progress", "bar", "indicator"],
-  "textdomain": "wpshadcn-blocks",
+  "textdomain": "shadcn-blocks",
   "attributes": {
     "maxValue": {
       "type": "number",

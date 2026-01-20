@@ -2,7 +2,7 @@
 /**
  * Alert block render.
  *
- * @package WpShadcnBlocks
+ * @package ShadcnBlocks
  *
  * @var array    $attributes Block attributes.
  * @var string   $content    Block content (inner blocks).
@@ -15,7 +15,7 @@ $variant      = isset( $attributes['variant'] ) ? $attributes['variant'] : 'defa
 $dismissible  = isset( $attributes['dismissible'] ) ? $attributes['dismissible'] : false;
 
 $wrapper_classes = array(
-	'wp-block-wpshadcn-alert',
+	'wp-block-shadcn-alert',
 	'alert',
 	'alert-' . esc_attr( $variant ),
 );
@@ -41,15 +41,15 @@ $wrapper_attributes = get_block_wrapper_attributes(
 	?>
 	<div
 		<?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-		data-wp-interactive="wpshadcn/alert"
-		<?php echo wp_interactivity_data_wp_context( $context, 'wpshadcn/alert' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+		data-wp-interactive="shadcn/alert"
+		<?php echo wp_interactivity_data_wp_context( $context, 'shadcn/alert' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 		data-wp-class--alert-dismissing="!context.isVisible"
 	>
 		<?php echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 		<button
 			type="button"
 			class="alert-dismiss"
-			aria-label="<?php esc_attr_e( 'Dismiss alert', 'wpshadcn-blocks' ); ?>"
+			aria-label="<?php esc_attr_e( 'Dismiss alert', 'shadcn-blocks' ); ?>"
 			data-wp-on--click="actions.dismiss"
 		>
 			<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">

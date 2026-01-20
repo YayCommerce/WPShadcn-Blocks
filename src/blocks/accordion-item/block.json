@@ -1,14 +1,14 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "wpshadcn/accordion-item",
+  "name": "shadcn/accordion-item",
   "version": "1.0.0",
   "title": "Accordion Item",
-  "category": "wpshadcn",
-  "parent": ["wpshadcn/accordion"],
-  "allowedBlocks": ["wpshadcn/accordion-trigger", "wpshadcn/accordion-content"],
+  "category": "shadcn",
+  "parent": ["shadcn/accordion"],
+  "allowedBlocks": ["shadcn/accordion-trigger", "shadcn/accordion-content"],
   "description": "Wraps the trigger and content of an accordion item.",
-  "textdomain": "wpshadcn-blocks",
+  "textdomain": "shadcn-blocks",
   "supports": {
     "html": false,
     "color": {
@@ -58,7 +58,7 @@
     }
   },
   "providesContext": {
-    "wpshadcn/accordion-is-open": "isOpen"
+    "shadcn/accordion-is-open": "isOpen"
   },
   "editorScript": "file:./index.js",
   "style": "file:./style-index.css",

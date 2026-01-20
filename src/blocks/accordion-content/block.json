@@ -1,14 +1,14 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "wpshadcn/accordion-content",
+  "name": "shadcn/accordion-content",
   "version": "1.0.0",
   "title": "Accordion Content",
-  "category": "wpshadcn",
-  "textdomain": "wpshadcn-blocks",
+  "category": "shadcn",
+  "textdomain": "shadcn-blocks",
   "description": "Contains the hidden or revealed content beneath the heading.",
-  "parent": ["wpshadcn/accordion-item"],
-  "usesContext": ["wpshadcn/accordion-open-by-default"],
+  "parent": ["shadcn/accordion-item"],
+  "usesContext": ["shadcn/accordion-open-by-default"],
   "supports": {
     "html": false,
     "color": {

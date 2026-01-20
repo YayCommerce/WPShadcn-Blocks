@@ -12,8 +12,8 @@ const TEMPLATE = [
     "core/heading",
     {
       level: 3,
-      content: __("Edit profile", "wpshadcn-blocks"),
-      placeholder: __("Sheet Title", "wpshadcn-blocks"),
+      content: __("Edit profile", "shadcn-blocks"),
+      placeholder: __("Sheet Title", "shadcn-blocks"),
       style: {
         typography: {
           fontWeight: "600",
@@ -32,9 +32,9 @@ const TEMPLATE = [
     {
       content: __(
         "Make changes to your profile here. Click save when you're done.",
-        "wpshadcn-blocks"
+        "shadcn-blocks"
       ),
-      placeholder: __("Sheet description", "wpshadcn-blocks"),
+      placeholder: __("Sheet description", "shadcn-blocks"),
       style: {
         typography: {
           fontSize: "var(--wp--preset--font-size--sm)",
@@ -60,7 +60,7 @@ const TEMPLATE = [
  */
 export default function Edit() {
   const blockProps = useBlockProps({
-    className: "wp-block-wpshadcn-sheet-header",
+    className: "wp-block-shadcn-sheet-header",
   });
 
   return (

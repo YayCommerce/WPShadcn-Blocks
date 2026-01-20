@@ -1,12 +1,12 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "wpshadcn/accordion",
+  "name": "shadcn/accordion",
   "version": "1.0.0",
   "title": "Accordion",
-  "category": "wpshadcn",
+  "category": "shadcn",
   "description": "Accordion block to display a list groups content in collapsible sections.",
-  "textdomain": "wpshadcn-blocks",
+  "textdomain": "shadcn-blocks",
   "supports": {
     "anchor": true,
     "html": false,
@@ -73,10 +73,10 @@
     }
   },
   "providesContext": {
-    "wpshadcn/accordion-icon-position": "iconPosition",
-    "wpshadcn/accordion-show-icon": "showIcon"
+    "shadcn/accordion-icon-position": "iconPosition",
+    "shadcn/accordion-show-icon": "showIcon"
   },
-  "allowedBlocks": ["wpshadcn/accordion-item"],
+  "allowedBlocks": ["shadcn/accordion-item"],
   "editorScript": "file:./index.js",
   "viewScript": "file:./view.js",
   "style": "file:./style-index.css",

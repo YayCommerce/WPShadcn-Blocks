@@ -1,14 +1,14 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "wpshadcn/empty",
+  "name": "shadcn/empty",
   "version": "1.0.0",
   "title": "Empty",
-  "category": "wpshadcn",
+  "category": "shadcn",
   "icon": "marker",
   "description": "An empty state placeholder with centered content.",
   "keywords": ["empty", "placeholder", "no results", "blank"],
-  "textdomain": "wpshadcn-blocks",
+  "textdomain": "shadcn-blocks",
   "attributes": {},
   "supports": {
     "html": false,

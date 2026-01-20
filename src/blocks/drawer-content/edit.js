@@ -13,9 +13,9 @@ const TEMPLATE = [
     {
       content: __(
         "You can control this drawer from outside components or trigger it programmatically based on user actions or application state.",
-        "wpshadcn-blocks"
+        "shadcn-blocks"
       ),
-      placeholder: __("Add drawer content here...", "wpshadcn-blocks"),
+      placeholder: __("Add drawer content here...", "shadcn-blocks"),
     },
   ],
 ];
@@ -27,7 +27,7 @@ const TEMPLATE = [
  */
 export default function Edit() {
   const blockProps = useBlockProps({
-    className: "wp-block-wpshadcn-drawer-content",
+    className: "wp-block-shadcn-drawer-content",
   });
 
   return (

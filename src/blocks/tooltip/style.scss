@@ -3,17 +3,17 @@
  * Based on shadcn/ui Tooltip component
  */
 
-.wp-block-wpshadcn-tooltip {
+.wp-block-shadcn-tooltip {
   position: relative;
   display: inline-block;
 }
 
-.wp-block-wpshadcn-tooltip-trigger {
+.wp-block-shadcn-tooltip-trigger {
   display: inline-block;
   cursor: pointer;
 }
 
-.wp-block-wpshadcn-tooltip-content {
+.wp-block-shadcn-tooltip-content {
   position: absolute;
   z-index: 50;
   overflow: visible;
@@ -259,71 +259,71 @@
 .block-editor-block-list__block,
 .editor-styles-wrapper,
 .block-editor-block-list__layout {
-  .wp-block-wpshadcn-tooltip {
+  .wp-block-shadcn-tooltip {
     position: relative !important;
     display: inline-block !important;
 
     // Show tooltip content on hover (for hover action)
-    &[data-action="hover"]:hover .wp-block-wpshadcn-tooltip-content,
-    &:not([data-action]):hover .wp-block-wpshadcn-tooltip-content {
+    &[data-action="hover"]:hover .wp-block-shadcn-tooltip-content,
+    &:not([data-action]):hover .wp-block-shadcn-tooltip-content {
       opacity: 1 !important;
       pointer-events: auto !important;
       transform: translateX(-50%) scale(1) !important;
     }
 
     // Show tooltip content when open (for click action)
-    &[data-tooltip-open="true"] .wp-block-wpshadcn-tooltip-content,
-    &.is-tooltip-open .wp-block-wpshadcn-tooltip-content {
+    &[data-tooltip-open="true"] .wp-block-shadcn-tooltip-content,
+    &.is-tooltip-open .wp-block-shadcn-tooltip-content {
       opacity: 1 !important;
       pointer-events: auto !important;
       transform: translateX(-50%) scale(1) !important;
     }
 
     // Show arrow on hover (hover action)
-    &[data-action="hover"]:hover .wp-block-wpshadcn-tooltip-content::before,
-    &:not([data-action]):hover .wp-block-wpshadcn-tooltip-content::before {
+    &[data-action="hover"]:hover .wp-block-shadcn-tooltip-content::before,
+    &:not([data-action]):hover .wp-block-shadcn-tooltip-content::before {
       opacity: 1 !important;
     }
 
     // Show arrow when open (click action)
-    &[data-tooltip-open="true"] .wp-block-wpshadcn-tooltip-content::before,
-    &.is-tooltip-open .wp-block-wpshadcn-tooltip-content::before {
+    &[data-tooltip-open="true"] .wp-block-shadcn-tooltip-content::before,
+    &.is-tooltip-open .wp-block-shadcn-tooltip-content::before {
       opacity: 1 !important;
     }
 
     // Handle positioning variants in editor
     &[data-action="hover"]:hover
-      .wp-block-wpshadcn-tooltip-content[data-side="bottom"],
+      .wp-block-shadcn-tooltip-content[data-side="bottom"],
     &:not([data-action]):hover
-      .wp-block-wpshadcn-tooltip-content[data-side="bottom"],
+      .wp-block-shadcn-tooltip-content[data-side="bottom"],
     &[data-tooltip-open="true"]
-      .wp-block-wpshadcn-tooltip-content[data-side="bottom"],
-    &.is-tooltip-open .wp-block-wpshadcn-tooltip-content[data-side="bottom"] {
+      .wp-block-shadcn-tooltip-content[data-side="bottom"],
+    &.is-tooltip-open .wp-block-shadcn-tooltip-content[data-side="bottom"] {
       transform: translateX(-50%) scale(1) !important;
     }
 
     &[data-action="hover"]:hover
-      .wp-block-wpshadcn-tooltip-content[data-side="left"],
+      .wp-block-shadcn-tooltip-content[data-side="left"],
     &:not([data-action]):hover
-      .wp-block-wpshadcn-tooltip-content[data-side="left"],
+      .wp-block-shadcn-tooltip-content[data-side="left"],
     &[data-tooltip-open="true"]
-      .wp-block-wpshadcn-tooltip-content[data-side="left"],
-    &.is-tooltip-open .wp-block-wpshadcn-tooltip-content[data-side="left"] {
+      .wp-block-shadcn-tooltip-content[data-side="left"],
+    &.is-tooltip-open .wp-block-shadcn-tooltip-content[data-side="left"] {
       transform: translateY(-50%) scale(1) !important;
     }
 
     &[data-action="hover"]:hover
-      .wp-block-wpshadcn-tooltip-content[data-side="right"],
+      .wp-block-shadcn-tooltip-content[data-side="right"],
     &:not([data-action]):hover
-      .wp-block-wpshadcn-tooltip-content[data-side="right"],
+      .wp-block-shadcn-tooltip-content[data-side="right"],
     &[data-tooltip-open="true"]
-      .wp-block-wpshadcn-tooltip-content[data-side="right"],
-    &.is-tooltip-open .wp-block-wpshadcn-tooltip-content[data-side="right"] {
+      .wp-block-shadcn-tooltip-content[data-side="right"],
+    &.is-tooltip-open .wp-block-shadcn-tooltip-content[data-side="right"] {
       transform: translateY(-50%) scale(1) !important;
     }
 
     // Show tooltip content when block is selected (for editing)
-    .wp-block-wpshadcn-tooltip-content.is-selected {
+    .wp-block-shadcn-tooltip-content.is-selected {
       opacity: 1 !important;
       pointer-events: auto !important;
       transform: translateX(-50%) scale(1) !important;
@@ -339,7 +339,7 @@
     }
   }
 
-  .wp-block-wpshadcn-tooltip-content {
+  .wp-block-shadcn-tooltip-content {
     // Ensure tooltip content is positioned correctly in editor
     position: absolute !important;
     z-index: 50 !important;

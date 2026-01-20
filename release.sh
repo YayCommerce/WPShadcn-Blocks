@@ -1,12 +1,12 @@
 #!/bin/bash
 #
-# Release script for wpshadcn-blocks plugin
+# Release script for shadcn-blocks plugin
 # Creates a distribution ZIP with only production files
 #
 set -e
 
-PLUGIN_SLUG="wpshadcn-blocks"
-PLUGIN_FILE="wpshadcn-blocks.php"
+PLUGIN_SLUG="shadcn-blocks"
+PLUGIN_FILE="shadcn-blocks.php"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "$SCRIPT_DIR"

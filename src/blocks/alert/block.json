@@ -1,12 +1,12 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "wpshadcn/alert",
+  "name": "shadcn/alert",
   "version": "1.0.0",
   "title": "Alert",
-  "category": "wpshadcn",
+  "category": "shadcn",
   "description": "Alert block to displays a callout for user attention.",
-  "textdomain": "wpshadcn-blocks",
+  "textdomain": "shadcn-blocks",
   "keywords": ["alert", "callout", "message", "notification"],
   "supports": {
     "html": false,
@@ -33,10 +33,10 @@
     }
   },
   "providesContext": {
-    "wpshadcn/alert-variant": "variant",
-    "wpshadcn/alert-dismissible": "dismissible"
+    "shadcn/alert-variant": "variant",
+    "shadcn/alert-dismissible": "dismissible"
   },
-  "allowedBlocks": ["wpshadcn/alert-title", "wpshadcn/alert-description"],
+  "allowedBlocks": ["shadcn/alert-title", "shadcn/alert-description"],
   "editorScript": "file:./index.js",
   "viewScript": "file:./view.js",
   "style": "file:./style-index.css",

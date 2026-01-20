@@ -19,14 +19,14 @@ import { __ } from "@wordpress/i18n";
  * Tooltip block template.
  */
 const TEMPLATE = [
-  ["wpshadcn/tooltip-trigger", {}],
-  ["wpshadcn/tooltip-content", {}],
+  ["shadcn/tooltip-trigger", {}],
+  ["shadcn/tooltip-content", {}],
 ];
 
 /**
  * Allowed inner blocks.
  */
-const ALLOWED_BLOCKS = ["wpshadcn/tooltip-trigger", "wpshadcn/tooltip-content"];
+const ALLOWED_BLOCKS = ["shadcn/tooltip-trigger", "shadcn/tooltip-content"];
 
 /**
  * Edit component.
@@ -43,7 +43,7 @@ export default function Edit(props) {
 
   const blockProps = useBlockProps({
     ref: tooltipRef,
-    className: `wp-block-wpshadcn-tooltip ${isOpen ? "is-tooltip-open" : ""}`,
+    className: `wp-block-shadcn-tooltip ${isOpen ? "is-tooltip-open" : ""}`,
     "data-action": currentAction,
     "data-tooltip-open": isOpen ? "true" : "false",
   });
@@ -53,7 +53,7 @@ export default function Edit(props) {
     if (!tooltipRef.current) return;
 
     const tooltipContent = tooltipRef.current.querySelector(
-      ".wp-block-wpshadcn-tooltip-content"
+      ".wp-block-shadcn-tooltip-content"
     );
     if (tooltipContent) {
       if (isOpen) {
@@ -71,7 +71,7 @@ export default function Edit(props) {
     if (!tooltipRef.current) return;
 
     const trigger = tooltipRef.current.querySelector(
-      ".wp-block-wpshadcn-tooltip-trigger"
+      ".wp-block-shadcn-tooltip-trigger"
     );
     if (!trigger) return;
 
@@ -147,11 +147,11 @@ export default function Edit(props) {
   return (
     <>
       <InspectorControls>
-        <PanelBody title={__("Tooltip Settings", "wpshadcn-blocks")}>
+        <PanelBody title={__("Tooltip Settings", "shadcn-blocks")}>
           <ToggleGroupControl
             __next40pxDefaultSize
             isBlock
-            label={__("Action", "wpshadcn-blocks")}
+            label={__("Action", "shadcn-blocks")}
             value={action ?? "hover"}
             onChange={(value) => {
               setAttributes({ action: value });
@@ -159,11 +159,11 @@ export default function Edit(props) {
             }}
           >
             <ToggleGroupControlOption
-              label={__("Hover", "wpshadcn-blocks")}
+              label={__("Hover", "shadcn-blocks")}
               value="hover"
             />
             <ToggleGroupControlOption
-              label={__("Click", "wpshadcn-blocks")}
+              label={__("Click", "shadcn-blocks")}
               value="click"
             />
           </ToggleGroupControl>

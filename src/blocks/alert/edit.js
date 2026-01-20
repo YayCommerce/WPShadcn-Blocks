@@ -13,9 +13,9 @@ import { __ } from "@wordpress/i18n";
  * Alert block template.
  */
 const TEMPLATE = [
-  ["wpshadcn/alert-title", { title: "Success! Your changes have been saved" }],
+  ["shadcn/alert-title", { title: "Success! Your changes have been saved" }],
   [
-    "wpshadcn/alert-description",
+    "shadcn/alert-description",
     {},
     [
       [
@@ -32,7 +32,7 @@ const TEMPLATE = [
 /**
  * Allowed inner blocks.
  */
-const ALLOWED_BLOCKS = ["wpshadcn/alert-title", "wpshadcn/alert-description"];
+const ALLOWED_BLOCKS = ["shadcn/alert-title", "shadcn/alert-description"];
 
 /**
  * Edit component.
@@ -44,7 +44,7 @@ export default function Edit({ attributes, setAttributes }) {
   const { variant, dismissible } = attributes;
 
   const blockProps = useBlockProps({
-    className: `wp-block-wpshadcn-alert alert alert-${variant}${
+    className: `wp-block-shadcn-alert alert alert-${variant}${
       dismissible ? " alert-dismissible" : ""
     }`,
   });
@@ -52,35 +52,35 @@ export default function Edit({ attributes, setAttributes }) {
   return (
     <>
       <InspectorControls>
-        <PanelBody title={__("Alert Settings", "wpshadcn-blocks")}>
+        <PanelBody title={__("Alert Settings", "shadcn-blocks")}>
           <SelectControl
-            label={__("Variant", "wpshadcn-blocks")}
+            label={__("Variant", "shadcn-blocks")}
             value={variant}
             options={[
               {
-                label: __("Default", "wpshadcn-blocks"),
+                label: __("Default", "shadcn-blocks"),
                 value: "default",
               },
               {
-                label: __("Destructive", "wpshadcn-blocks"),
+                label: __("Destructive", "shadcn-blocks"),
                 value: "destructive",
               },
               {
-                label: __("Warning", "wpshadcn-blocks"),
+                label: __("Warning", "shadcn-blocks"),
                 value: "warning",
               },
               {
-                label: __("Success", "wpshadcn-blocks"),
+                label: __("Success", "shadcn-blocks"),
                 value: "success",
               },
             ]}
             onChange={(value) => setAttributes({ variant: value })}
           />
           <ToggleControl
-            label={__("Dismissible", "wpshadcn-blocks")}
+            label={__("Dismissible", "shadcn-blocks")}
             checked={dismissible}
             onChange={(value) => setAttributes({ dismissible: value })}
-            help={__("Allow users to dismiss the alert", "wpshadcn-blocks")}
+            help={__("Allow users to dismiss the alert", "shadcn-blocks")}
           />
         </PanelBody>
       </InspectorControls>
@@ -94,7 +94,7 @@ export default function Edit({ attributes, setAttributes }) {
           <button
             type="button"
             className="alert-dismiss"
-            aria-label={__("Dismiss alert", "wpshadcn-blocks")}
+            aria-label={__("Dismiss alert", "shadcn-blocks")}
             disabled
             style={{ pointerEvents: "none" }}
           >

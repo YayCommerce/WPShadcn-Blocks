@@ -1,13 +1,13 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "wpshadcn/sheet",
+  "name": "shadcn/sheet",
   "version": "1.0.0",
   "title": "Sheet",
-  "category": "wpshadcn",
+  "category": "shadcn",
   "description": "Sheet block to display additional content, actions, or navigation in a modal dialog.",
   "keywords": ["sheet", "modal", "panel"],
-  "textdomain": "wpshadcn-blocks",
+  "textdomain": "shadcn-blocks",
   "supports": {
     "html": false,
     "anchor": true,
@@ -37,10 +37,10 @@
     }
   },
   "allowedBlocks": [
-    "wpshadcn/sheet-trigger",
-    "wpshadcn/sheet-header",
-    "wpshadcn/sheet-content",
-    "wpshadcn/sheet-footer"
+    "shadcn/sheet-trigger",
+    "shadcn/sheet-header",
+    "shadcn/sheet-content",
+    "shadcn/sheet-footer"
   ],
   "editorScript": "file:./index.js",
   "style": "file:./style-index.css",

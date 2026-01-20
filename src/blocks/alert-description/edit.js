@@ -13,7 +13,7 @@ const TEMPLATE = [
     {
       placeholder: __(
         "Add alert description here...",
-        "wpshadcn-blocks"
+        "shadcn-blocks"
       ),
     },
   ],
@@ -26,7 +26,7 @@ const TEMPLATE = [
  */
 export default function Edit() {
   const blockProps = useBlockProps({
-    className: "wp-block-wpshadcn-alert-description alert-description",
+    className: "wp-block-shadcn-alert-description alert-description",
   });
 
   return (

@@ -4,7 +4,7 @@
 import { store, getContext } from "@wordpress/interactivity";
 
 const tooltipStore = store(
-  "wpshadcn/tooltip",
+  "shadcn/tooltip",
   {
     state: {
       get isOpen() {
@@ -36,7 +36,7 @@ const tooltipStore = store(
         const relatedTarget = event?.relatedTarget;
         if (relatedTarget) {
           const tooltipContent = relatedTarget.closest?.(
-            ".wp-block-wpshadcn-tooltip-content"
+            ".wp-block-shadcn-tooltip-content"
           );
           if (tooltipContent) {
             return; // Don't close if moving to tooltip content
@@ -76,7 +76,7 @@ const tooltipStore = store(
             // Find the tooltip content element by ID
             const tooltipContent = document.getElementById(`${tooltipId}-content`);
             if (tooltipContent) {
-              const tooltipWrapper = tooltipContent.closest?.('.wp-block-wpshadcn-tooltip');
+              const tooltipWrapper = tooltipContent.closest?.('.wp-block-shadcn-tooltip');
               const clickedElement = event.target;
               
               // Close if click is outside the tooltip wrapper

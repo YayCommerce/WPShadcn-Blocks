@@ -2,10 +2,10 @@
 /**
  * Main plugin class.
  *
- * @package WpShadcnBlocks
+ * @package ShadcnBlocks
  */
 
-namespace WpShadcnBlocks;
+namespace ShadcnBlocks;
 
 defined( 'ABSPATH' ) || exit;
 

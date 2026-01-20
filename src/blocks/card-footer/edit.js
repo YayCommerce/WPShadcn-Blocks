@@ -20,7 +20,7 @@ const TEMPLATE = [
 			[
 				'core/button',
 				{
-					text: __( 'Action', 'wpshadcn-blocks' ),
+					text: __( 'Action', 'shadcn-blocks' ),
 				},
 			],
 		],
@@ -34,7 +34,7 @@ const TEMPLATE = [
  */
 export default function Edit() {
 	const blockProps = useBlockProps( {
-		className: 'wp-block-wpshadcn-card-footer',
+		className: 'wp-block-shadcn-card-footer',
 	} );
 
 	return (

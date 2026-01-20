@@ -11,7 +11,7 @@ const TEMPLATE = [
   [
     "core/button",
     {
-      text: __("Open Drawer", "wpshadcn-blocks"),
+      text: __("Open Drawer", "shadcn-blocks"),
       className: "is-style-outline",
       style: {
         typography: {
@@ -29,7 +29,7 @@ const TEMPLATE = [
  */
 export default function Edit() {
   const blockProps = useBlockProps({
-    className: "wp-block-wpshadcn-drawer-trigger",
+    className: "wp-block-shadcn-drawer-trigger",
   });
 
   return (

@@ -13,9 +13,9 @@ const TEMPLATE = [
     {
       content: __(
         "You can control this sheet from outside components or trigger it programmatically based on user actions or application state.",
-        "wpshadcn-blocks"
+        "shadcn-blocks"
       ),
-      placeholder: __("Add sheet content here...", "wpshadcn-blocks"),
+      placeholder: __("Add sheet content here...", "shadcn-blocks"),
     },
   ],
 ];
@@ -27,7 +27,7 @@ const TEMPLATE = [
  */
 export default function Edit() {
   const blockProps = useBlockProps({
-    className: "wp-block-wpshadcn-sheet-content",
+    className: "wp-block-shadcn-sheet-content",
   });
 
   return (

@@ -1,40 +1,40 @@
 /**
  * Carousel block styles.
  */
-.wp-block-wpshadcn-carousel {
+.wp-block-shadcn-carousel {
 	--carousel-gap: 1rem;
 
 	position: relative;
 	width: 100%;
 }
 
-.wp-block-wpshadcn-carousel__viewport {
+.wp-block-shadcn-carousel__viewport {
 	overflow: hidden;
 }
 
-.wp-block-wpshadcn-carousel:not(.block-editor-block-list__block) .wp-block-wpshadcn-carousel__content:not(:has(.wp-block-post-template,.wc-block-product-template)),
-.wp-block-wpshadcn-carousel:not(.block-editor-block-list__block) .wp-block-wpshadcn-carousel__content .wp-block-post-template,
-.wp-block-wpshadcn-carousel:not(.block-editor-block-list__block) .wp-block-wpshadcn-carousel__content .wc-block-product-template{
+.wp-block-shadcn-carousel:not(.block-editor-block-list__block) .wp-block-shadcn-carousel__content:not(:has(.wp-block-post-template,.wc-block-product-template)),
+.wp-block-shadcn-carousel:not(.block-editor-block-list__block) .wp-block-shadcn-carousel__content .wp-block-post-template,
+.wp-block-shadcn-carousel:not(.block-editor-block-list__block) .wp-block-shadcn-carousel__content .wc-block-product-template{
 	display: flex;
 	gap: var(--carousel-gap);
 	touch-action: pan-y pinch-zoom;
 	backface-visibility: hidden;
 }
 
-.wp-block-wpshadcn-carousel:not(.block-editor-block-list__block) .wp-block-wpshadcn-carousel__content .wp-block-wpshadcn-carousel-item,
-.wp-block-wpshadcn-carousel:not(.block-editor-block-list__block) .wp-block-wpshadcn-carousel__content .wp-block-post,
-.wp-block-wpshadcn-carousel:not(.block-editor-block-list__block) .wp-block-wpshadcn-carousel__content .wc-block-product {
+.wp-block-shadcn-carousel:not(.block-editor-block-list__block) .wp-block-shadcn-carousel__content .wp-block-shadcn-carousel-item,
+.wp-block-shadcn-carousel:not(.block-editor-block-list__block) .wp-block-shadcn-carousel__content .wp-block-post,
+.wp-block-shadcn-carousel:not(.block-editor-block-list__block) .wp-block-shadcn-carousel__content .wc-block-product {
     flex: 0 0 100%;
     min-width: 0;
 }
 
-.wp-block-wpshadcn-carousel.orientation-vertical .wp-block-wpshadcn-carousel__content {
+.wp-block-shadcn-carousel.orientation-vertical .wp-block-shadcn-carousel__content {
 	flex-direction: column;
 }
 
 /* Navigation arrows */
-.wp-block-wpshadcn-carousel__prev,
-.wp-block-wpshadcn-carousel__next {
+.wp-block-shadcn-carousel__prev,
+.wp-block-shadcn-carousel__next {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
@@ -73,23 +73,23 @@
 	}
 }
 
-.wp-block-wpshadcn-carousel__prev {
+.wp-block-shadcn-carousel__prev {
 	left: -1.25rem;
 }
 
-.wp-block-wpshadcn-carousel__next {
+.wp-block-shadcn-carousel__next {
 	right: -1.25rem;
 }
 
 /* Dots pagination */
-.wp-block-wpshadcn-carousel__dots {
+.wp-block-shadcn-carousel__dots {
 	display: flex;
 	justify-content: center;
 	gap: 0.5rem;
 	margin-top: 1rem;
 }
 
-.wp-block-wpshadcn-carousel__dot {
+.wp-block-shadcn-carousel__dot {
 	width: 0.625rem;
 	height: 0.625rem;
 	padding: 0;

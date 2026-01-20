@@ -2,7 +2,7 @@
 /**
  * Alert Title block render.
  *
- * @package WpShadcnBlocks
+ * @package ShadcnBlocks
  *
  * @var array    $attributes Block attributes.
  * @var string   $content    Block content (saved HTML from save function).
@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 // We need to wrap it with the block wrapper classes
 $wrapper_attributes = get_block_wrapper_attributes(
 	array(
-		'class' => 'wp-block-wpshadcn-alert-title alert-title',
+		'class' => 'wp-block-shadcn-alert-title alert-title',
 	)
 );
 ?>

@@ -1,14 +1,14 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "wpshadcn/carousel",
+	"name": "shadcn/carousel",
 	"version": "1.0.0",
 	"title": "Carousel",
-	"category": "wpshadcn",
+	"category": "shadcn",
 	"icon": "slides",
 	"description": "A flexible carousel that wraps any content including posts and products.",
 	"keywords": [ "carousel", "slider", "gallery", "slideshow" ],
-	"textdomain": "wpshadcn-blocks",
+	"textdomain": "shadcn-blocks",
 	"attributes": {
 		"autoplay": {
 			"type": "boolean",

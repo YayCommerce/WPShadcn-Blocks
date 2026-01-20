@@ -2,14 +2,14 @@
 /**
  * Empty block render.
  *
- * @package WpShadcnBlocks
+ * @package ShadcnBlocks
  */
 
 defined( 'ABSPATH' ) || exit;
 
 $wrapper_attributes = get_block_wrapper_attributes(
   array(
-    'class' => 'wp-block-wpshadcn-empty',
+    'class' => 'wp-block-shadcn-empty',
   )
 );
 ?>

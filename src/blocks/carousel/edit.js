@@ -16,7 +16,7 @@ import { __ } from "@wordpress/i18n";
 
 const TEMPLATE = [
   [
-    "wpshadcn/carousel-item",
+    "shadcn/carousel-item",
     {},
     [
       ["core/heading", { content: "Carousel Item 1" }],
@@ -30,7 +30,7 @@ const TEMPLATE = [
     ],
   ],
   [
-    "wpshadcn/carousel-item",
+    "shadcn/carousel-item",
     {},
     [
       ["core/heading", { content: "Carousel Item 2" }],
@@ -44,7 +44,7 @@ const TEMPLATE = [
     ],
   ],
   [
-    "wpshadcn/carousel-item",
+    "shadcn/carousel-item",
     {},
     [
       ["core/heading", { content: "Carousel Item 3" }],
@@ -79,21 +79,21 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
   } = attributes;
 
   const blockProps = useBlockProps({
-    className: "wp-block-wpshadcn-carousel",
+    className: "wp-block-shadcn-carousel",
   });
 
   return (
     <>
       <InspectorControls>
-        <PanelBody title={__("Carousel Settings", "wpshadcn-blocks")}>
+        <PanelBody title={__("Carousel Settings", "shadcn-blocks")}>
           <ToggleControl
-            label={__("Autoplay", "wpshadcn-blocks")}
+            label={__("Autoplay", "shadcn-blocks")}
             checked={autoplay}
             onChange={(value) => setAttributes({ autoplay: value })}
           />
           {autoplay && (
             <RangeControl
-              label={__("Autoplay Delay (ms)", "wpshadcn-blocks")}
+              label={__("Autoplay Delay (ms)", "shadcn-blocks")}
               value={autoplayDelay}
               onChange={(value) => setAttributes({ autoplayDelay: value })}
               min={1000}
@@ -102,52 +102,52 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
             />
           )}
           <ToggleControl
-            label={__("Loop", "wpshadcn-blocks")}
+            label={__("Loop", "shadcn-blocks")}
             checked={loop}
             onChange={(value) => setAttributes({ loop: value })}
           />
           <SelectControl
-            label={__("Orientation", "wpshadcn-blocks")}
+            label={__("Orientation", "shadcn-blocks")}
             value={orientation}
             options={[
               {
-                label: __("Horizontal", "wpshadcn-blocks"),
+                label: __("Horizontal", "shadcn-blocks"),
                 value: "horizontal",
               },
-              { label: __("Vertical", "wpshadcn-blocks"), value: "vertical" },
+              { label: __("Vertical", "shadcn-blocks"), value: "vertical" },
             ]}
             onChange={(value) => setAttributes({ orientation: value })}
           />
         </PanelBody>
-        <PanelBody title={__("Navigation", "wpshadcn-blocks")}>
+        <PanelBody title={__("Navigation", "shadcn-blocks")}>
           <ToggleControl
-            label={__("Show Arrows", "wpshadcn-blocks")}
+            label={__("Show Arrows", "shadcn-blocks")}
             checked={showArrows}
             onChange={(value) => setAttributes({ showArrows: value })}
           />
           <ToggleControl
-            label={__("Show Dots", "wpshadcn-blocks")}
+            label={__("Show Dots", "shadcn-blocks")}
             checked={showDots}
             onChange={(value) => setAttributes({ showDots: value })}
           />
         </PanelBody>
-        <PanelBody title={__("Responsive", "wpshadcn-blocks")}>
+        <PanelBody title={__("Responsive", "shadcn-blocks")}>
           <RangeControl
-            label={__("Slides Per View (Mobile)", "wpshadcn-blocks")}
+            label={__("Slides Per View (Mobile)", "shadcn-blocks")}
             value={slidesPerView}
             onChange={(value) => setAttributes({ slidesPerView: value })}
             min={1}
             max={6}
           />
           <RangeControl
-            label={__("Slides Per View (Tablet)", "wpshadcn-blocks")}
+            label={__("Slides Per View (Tablet)", "shadcn-blocks")}
             value={slidesPerViewTablet}
             onChange={(value) => setAttributes({ slidesPerViewTablet: value })}
             min={1}
             max={6}
           />
           <RangeControl
-            label={__("Slides Per View (Desktop)", "wpshadcn-blocks")}
+            label={__("Slides Per View (Desktop)", "shadcn-blocks")}
             value={slidesPerViewDesktop}
             onChange={(value) => setAttributes({ slidesPerViewDesktop: value })}
             min={1}
@@ -156,7 +156,7 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
         </PanelBody>
       </InspectorControls>
       <div {...blockProps}>
-        <div className="wp-block-wpshadcn-carousel__content">
+        <div className="wp-block-shadcn-carousel__content">
           <InnerBlocks template={TEMPLATE} templateLock={false} />
         </div>
       </div>

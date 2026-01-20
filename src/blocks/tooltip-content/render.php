@@ -2,7 +2,7 @@
 /**
  * Tooltip Content block render.
  *
- * @package WpShadcnBlocks
+ * @package ShadcnBlocks
  *
  * @var array    $attributes Block attributes.
  * @var string   $content    Block content (inner blocks).
@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 
 $wrapper_attributes = get_block_wrapper_attributes(
 	array(
-		'class' => 'wp-block-wpshadcn-tooltip-content',
+		'class' => 'wp-block-shadcn-tooltip-content',
 	)
 );
 ?>

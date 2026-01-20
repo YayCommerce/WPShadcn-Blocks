@@ -1,14 +1,14 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "wpshadcn/drawer-trigger",
+  "name": "shadcn/drawer-trigger",
   "version": "1.0.0",
   "title": "Drawer Trigger",
-  "category": "wpshadcn",
-  "parent": ["wpshadcn/drawer"],
+  "category": "shadcn",
+  "parent": ["shadcn/drawer"],
   "icon": "button",
   "description": "Button or control that toggles the drawer.",
-  "textdomain": "wpshadcn-blocks",
+  "textdomain": "shadcn-blocks",
   "attributes": {},
   "supports": {
     "html": false,

@@ -1,16 +1,16 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "wpshadcn/accordion-trigger",
+  "name": "shadcn/accordion-trigger",
   "version": "1.0.0",
   "title": "Accordion Trigger",
-  "category": "wpshadcn",
+  "category": "shadcn",
   "description": "Accordion trigger for accordion item to open the accordion content.",
-  "textdomain": "wpshadcn-blocks",
-  "parent": ["wpshadcn/accordion-item"],
+  "textdomain": "shadcn-blocks",
+  "parent": ["shadcn/accordion-item"],
   "usesContext": [
-    "wpshadcn/accordion-icon-position",
-    "wpshadcn/accordion-show-icon"
+    "shadcn/accordion-icon-position",
+    "shadcn/accordion-show-icon"
   ],
   "supports": {
     "anchor": true,
@@ -26,7 +26,7 @@
         "padding": true
       },
       "__experimentalSkipSerialization": true,
-      "__experimentalSelector": ".wp-block-wpshadcn-accordion-trigger"
+      "__experimentalSelector": ".wp-block-shadcn-accordion-trigger"
     },
     "__experimentalBorder": {
       "color": true,
@@ -60,8 +60,8 @@
   },
   "selectors": {
     "typography": {
-      "letterSpacing": ".wp-block-wpshadcn-accordion-trigger .wp-block-wpshadcn-accordion-trigger-title",
-      "textDecoration": ".wp-block-wpshadcn-accordion-trigger .wp-block-wpshadcn-accordion-trigger-title"
+      "letterSpacing": ".wp-block-shadcn-accordion-trigger .wp-block-shadcn-accordion-trigger-title",
+      "textDecoration": ".wp-block-shadcn-accordion-trigger .wp-block-shadcn-accordion-trigger-title"
     }
   },
   "attributes": {
@@ -72,7 +72,7 @@
     "title": {
       "type": "rich-text",
       "source": "rich-text",
-      "selector": ".wp-block-wpshadcn-accordion-trigger-title",
+      "selector": ".wp-block-shadcn-accordion-trigger-title",
       "role": "content"
     },
     "showIcon": {

@@ -2,7 +2,7 @@
 /**
  * Tooltip block render.
  *
- * @package WpShadcnBlocks
+ * @package ShadcnBlocks
  *
  * @var array    $attributes Block attributes.
  * @var string   $content    Block content (inner blocks).
@@ -11,7 +11,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-if ( ! function_exists( 'block_wpshadcn_tooltip_render' ) ) {
+if ( ! function_exists( 'block_shadcn_tooltip_render' ) ) {
 	/**
 	 * Render callback for the Tooltip block.
 	 *
@@ -21,8 +21,8 @@ if ( ! function_exists( 'block_wpshadcn_tooltip_render' ) ) {
 	 *
 	 * @return string
 	 */
-	function block_wpshadcn_tooltip_render( $attributes, $content, $block ) {
-		$unique_id = wp_unique_id( 'wpshadcn-tooltip-' );
+	function block_shadcn_tooltip_render( $attributes, $content, $block ) {
+		$unique_id = wp_unique_id( 'shadcn-tooltip-' );
 		
 		$side = isset( $attributes['side'] ) ? sanitize_text_field( $attributes['side'] ) : 'top';
 		$action = isset( $attributes['action'] ) ? sanitize_text_field( $attributes['action'] ) : 'hover';
@@ -37,12 +37,12 @@ if ( ! function_exists( 'block_wpshadcn_tooltip_render' ) ) {
 		foreach ( $inner_blocks as $inner_block ) {
 			$name = $inner_block['blockName'] ?? '';
 
-			if ( 'wpshadcn/tooltip-trigger' === $name ) {
+			if ( 'shadcn/tooltip-trigger' === $name ) {
 				$trigger_html .= render_block( $inner_block );
 				continue;
 			}
 
-			if ( 'wpshadcn/tooltip-content' === $name ) {
+			if ( 'shadcn/tooltip-content' === $name ) {
 				$content_html .= render_block( $inner_block );
 				continue;
 			}
@@ -83,7 +83,7 @@ if ( ! function_exists( 'block_wpshadcn_tooltip_render' ) ) {
 		if ( ! empty( $content_html ) && class_exists( 'WP_HTML_Tag_Processor' ) ) {
 			$tags = new WP_HTML_Tag_Processor( $content_html );
 			// Find the tooltip-content div
-			if ( $tags->next_tag( array( 'class_name' => 'wp-block-wpshadcn-tooltip-content' ) ) ) {
+			if ( $tags->next_tag( array( 'class_name' => 'wp-block-shadcn-tooltip-content' ) ) ) {
 				$tags->set_attribute( 'id', $unique_id . '-content' );
 				$tags->set_attribute( 'role', 'tooltip' );
 				$tags->set_attribute( 'data-side', $side ? $side : 'top' );
@@ -111,7 +111,7 @@ if ( ! function_exists( 'block_wpshadcn_tooltip_render' ) ) {
 
 		$wrapper_attributes = get_block_wrapper_attributes(
 			array(
-				'class' => 'wp-block-wpshadcn-tooltip',
+				'class' => 'wp-block-shadcn-tooltip',
 			)
 		);
 
@@ -119,8 +119,8 @@ if ( ! function_exists( 'block_wpshadcn_tooltip_render' ) ) {
 		?>
 		<div 
 			<?php echo $wrapper_attributes; ?>
-			data-wp-interactive="wpshadcn/tooltip"
-			<?php echo wp_interactivity_data_wp_context( $context, 'wpshadcn/tooltip' ); ?>
+			data-wp-interactive="shadcn/tooltip"
+			<?php echo wp_interactivity_data_wp_context( $context, 'shadcn/tooltip' ); ?>
 			<?php if ( $action === 'click' ) : ?>
 				data-wp-on-window--click="actions.handleClickOutside"
 				data-wp-on-window--keydown="actions.handleEscape"
@@ -132,7 +132,7 @@ if ( ! function_exists( 'block_wpshadcn_tooltip_render' ) ) {
 			<?php endif; ?>
 		>
 			<div 
-				class="wp-block-wpshadcn-tooltip-trigger"
+				class="wp-block-shadcn-tooltip-trigger"
 				<?php if ( $action === 'hover' ) : ?>
 					data-wp-on--mouseenter="actions.handleMouseEnter"
 					data-wp-on--mouseleave="actions.handleMouseLeave"
@@ -153,4 +153,4 @@ if ( ! function_exists( 'block_wpshadcn_tooltip_render' ) ) {
 	}
 }
 
-echo block_wpshadcn_tooltip_render( $attributes ?? array(), $content ?? '', $block ?? null );
+echo block_shadcn_tooltip_render( $attributes ?? array(), $content ?? '', $block ?? null );

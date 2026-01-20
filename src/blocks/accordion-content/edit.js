@@ -10,7 +10,7 @@ import { useSelect } from "@wordpress/data";
 
 export default function Edit({ attributes, context, clientId, isSelected }) {
   const { allowedBlocks, templateLock } = attributes;
-  const openByDefault = context["wpshadcn/accordion-open-by-default"];
+  const openByDefault = context["shadcn/accordion-open-by-default"];
   const { hasSelection } = useSelect(
     (select) => {
       if (isSelected || openByDefault) {

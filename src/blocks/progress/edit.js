@@ -27,7 +27,7 @@ export default function Edit(props) {
   const percentage = Math.min(Math.max((staticValue / maxValue) * 100, 0), 100);
 
   const blockProps = useBlockProps({
-    className: "wp-block-wpshadcn-progress",
+    className: "wp-block-shadcn-progress",
   });
 
   return (
@@ -46,13 +46,13 @@ export default function Edit(props) {
           }}
         >
           <ToolsPanelItem
-            label={__("Max Value", "wpshadcn-blocks")}
+            label={__("Max Value", "shadcn-blocks")}
             isShownByDefault
             hasValue={() => maxValue !== 100}
             onDeselect={() => setAttributes({ maxValue: 100 })}
           >
             <RangeControl
-              label={__("Max Value", "wpshadcn-blocks")}
+              label={__("Max Value", "shadcn-blocks")}
               value={maxValue}
               onChange={(value) => setAttributes({ maxValue: value })}
               min={1}
@@ -80,7 +80,7 @@ export default function Edit(props) {
           </ToolsPanelItem>
           {currentValue === "static" && (
             <ToolsPanelItem
-              label={__("Value", "wpshadcn-blocks")}
+              label={__("Value", "shadcn-blocks")}
               isShownByDefault
               hasValue={() => staticValue !== 50}
               onDeselect={() =>
@@ -90,7 +90,7 @@ export default function Edit(props) {
               }
             >
               <RangeControl
-                label={__("Value", "wpshadcn-blocks")}
+                label={__("Value", "shadcn-blocks")}
                 value={staticValue}
                 onChange={(value) =>
                   setAttributes({
@@ -105,7 +105,7 @@ export default function Edit(props) {
           )}
           {currentValue === "dynamic" && (
             <ToolsPanelItem
-              label={__("Value", "wpshadcn-blocks")}
+              label={__("Value", "shadcn-blocks")}
               isShownByDefault
               hasValue={() => dynamicValue !== "free_shipping"}
               onDeselect={() =>
@@ -113,12 +113,12 @@ export default function Edit(props) {
               }
             >
               <SelectControl
-                label={__("Value", "wpshadcn-blocks")}
+                label={__("Value", "shadcn-blocks")}
                 value={dynamicValue}
                 onChange={(value) => setAttributes({ dynamicValue: value })}
                 options={[
                   {
-                    label: __("Free Shipping", "wpshadcn-blocks"),
+                    label: __("Free Shipping", "shadcn-blocks"),
                     value: "free_shipping",
                   },
                 ]}
@@ -131,7 +131,7 @@ export default function Edit(props) {
         <ColorGradientSettingsDropdown
           settings={[
             {
-              label: __("Track Color", "wpshadcn-blocks"),
+              label: __("Track Color", "shadcn-blocks"),
               colorValue: trackColor,
               clearable: true,
               onColorChange: (value) => {
@@ -148,7 +148,7 @@ export default function Edit(props) {
               },
             },
             {
-              label: __("Fill Color", "wpshadcn-blocks"),
+              label: __("Fill Color", "shadcn-blocks"),
               colorValue: fillColor,
               clearable: true,
               onColorChange: (value) => {

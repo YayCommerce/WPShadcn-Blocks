@@ -29,7 +29,7 @@ const TEMPLATE = [
  */
 export default function Edit() {
 	const blockProps = useBlockProps( {
-		className: 'wp-block-wpshadcn-carousel-item',
+		className: 'wp-block-shadcn-carousel-item',
 	} );
 
 	return (

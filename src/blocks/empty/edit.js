@@ -97,7 +97,7 @@ const TEMPLATE = [
 
 export default function Edit() {
   const blockProps = useBlockProps({
-    className: "wp-block-wpshadcn-empty",
+    className: "wp-block-shadcn-empty",
   });
 
   return (

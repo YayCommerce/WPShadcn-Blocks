@@ -1,14 +1,14 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "wpshadcn/tooltip-trigger",
+  "name": "shadcn/tooltip-trigger",
   "version": "1.0.0",
   "title": "Tooltip Trigger",
-  "category": "wpshadcn",
-  "parent": ["wpshadcn/tooltip"],
+  "category": "shadcn",
+  "parent": ["shadcn/tooltip"],
   "icon": "button",
   "description": "Button or control that toggles the tooltip.",
-  "textdomain": "wpshadcn-blocks",
+  "textdomain": "shadcn-blocks",
   "attributes": {},
   "supports": {
     "html": false,

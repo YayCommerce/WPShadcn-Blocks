@@ -3,7 +3,7 @@
  */
 import { store, getContext } from "@wordpress/interactivity";
 
-const BODY_OPEN_CLASS = "wpshadcn-sheet-open";
+const BODY_OPEN_CLASS = "shadcn-sheet-open";
 
 const toggleBodyScroll = (isOpen) => {
   if (typeof document === "undefined") {
@@ -13,7 +13,7 @@ const toggleBodyScroll = (isOpen) => {
 };
 
 const drawerStore = store(
-  "wpshadcn/sheet",
+  "shadcn/sheet",
   {
     state: {
       get isOpen() {

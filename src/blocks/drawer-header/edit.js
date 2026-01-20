@@ -12,8 +12,8 @@ const TEMPLATE = [
     "core/heading",
     {
       level: 3,
-      content: __("Controlled Drawer", "wpshadcn-blocks"),
-      placeholder: __("Drawer Title", "wpshadcn-blocks"),
+      content: __("Controlled Drawer", "shadcn-blocks"),
+      placeholder: __("Drawer Title", "shadcn-blocks"),
       style: {
         typography: {
           fontWeight: "600",
@@ -32,9 +32,9 @@ const TEMPLATE = [
     {
       content: __(
         "This drawer's open state is controlled externally.",
-        "wpshadcn-blocks"
+        "shadcn-blocks"
       ),
-      placeholder: __("Drawer description", "wpshadcn-blocks"),
+      placeholder: __("Drawer description", "shadcn-blocks"),
       style: {
         typography: {
           fontSize: "var(--wp--preset--font-size--sm)",
@@ -60,7 +60,7 @@ const TEMPLATE = [
  */
 export default function Edit() {
   const blockProps = useBlockProps({
-    className: "wp-block-wpshadcn-drawer-header",
+    className: "wp-block-shadcn-drawer-header",
   });
 
   return (

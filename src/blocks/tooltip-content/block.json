@@ -1,14 +1,14 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "wpshadcn/tooltip-content",
+  "name": "shadcn/tooltip-content",
   "version": "1.0.0",
   "title": "Tooltip Content",
-  "category": "wpshadcn",
-  "parent": ["wpshadcn/tooltip"],
+  "category": "shadcn",
+  "parent": ["shadcn/tooltip"],
   "icon": "text",
   "description": "Tooltip content section for additional information.",
-  "textdomain": "wpshadcn-blocks",
+  "textdomain": "shadcn-blocks",
   "attributes": {},
   "supports": {
     "html": false,

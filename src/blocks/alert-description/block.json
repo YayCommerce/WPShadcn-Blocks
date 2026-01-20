@@ -1,13 +1,13 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "wpshadcn/alert-description",
+  "name": "shadcn/alert-description",
   "version": "1.0.0",
   "title": "Alert Description",
-  "category": "wpshadcn",
+  "category": "shadcn",
   "description": "Alert description for alert block.",
-  "textdomain": "wpshadcn-blocks",
-  "parent": ["wpshadcn/alert"],
+  "textdomain": "shadcn-blocks",
+  "parent": ["shadcn/alert"],
   "supports": {
     "anchor": true,
     "color": {
@@ -22,7 +22,7 @@
         "padding": true
       },
       "__experimentalSkipSerialization": true,
-      "__experimentalSelector": ".wp-block-wpshadcn-alert-description"
+      "__experimentalSelector": ".wp-block-shadcn-alert-description"
     },
     "__experimentalBorder": {
       "color": true,
