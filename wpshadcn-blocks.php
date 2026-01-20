@@ -61,7 +61,8 @@ function wpshadcn_blocks_init() {
 		return;
 	}
 
-	// Load the main plugin class.
+	// Load the main plugin class and free shipping class.
 	require_once WPSHADCN_BLOCKS_DIR . 'inc/Plugin.php';
+	require_once WPSHADCN_BLOCKS_DIR . 'inc/FreeShipping.php';
 }
 add_action( 'plugins_loaded', 'wpshadcn_blocks_init' );

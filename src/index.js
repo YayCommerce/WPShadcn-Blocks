@@ -27,6 +27,8 @@ import "./blocks/accordion-item";
 import "./blocks/accordion-trigger";
 import "./blocks/accordion-content";
 
+import "./blocks/progress";
+
 import "./blocks/drawer";
 import "./blocks/drawer-trigger";
 import "./blocks/drawer-header";
