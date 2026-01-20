@@ -136,6 +136,14 @@ class Plugin {
 					return true;
 				},
 			),
+			'wpshadcn/tooltip' => array(
+				'namespace' => 'wpshadcn/tooltip',
+				'view_file' => 'tooltip/view.js',
+				'check'     => function( $block ) {
+					// Tooltip always needs the script if present.
+					return true;
+				},
+			),
 			'wpshadcn/sheet' => array(
 				'namespace' => 'wpshadcn/sheet',
 				'view_file' => 'sheet/view.js',

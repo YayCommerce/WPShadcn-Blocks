@@ -20,6 +20,7 @@ class FixInteractivityPlugin {
       { name: "accordion", imports: ["store", "getContext", "withSyncEvent"] },
       { name: "alert", imports: ["store", "getContext"] },
       { name: "drawer", imports: ["store", "getContext"] },
+      { name: "tooltip", imports: ["store", "getContext"] },
       { name: "sheet", imports: ["store", "getContext"] },
     ];
 

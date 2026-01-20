@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wpshadcn/tooltip",
+  "version": "1.0.0",
+  "title": "Tooltip",
+  "category": "wpshadcn",
+  "icon": "editor-help",
+  "description": "A tooltip for displaying additional information.",
+  "keywords": ["tooltip", "information", "help", "popup"],
+  "textdomain": "wpshadcn-blocks",
+  "attributes": {
+    "action": {
+      "type": "string",
+      "default": "hover",
+      "enum": ["hover", "click"]
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": ["wide", "full"],
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": false
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "width": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

@@ -33,6 +33,10 @@ import "./blocks/drawer-header";
 import "./blocks/drawer-content";
 import "./blocks/drawer-footer";
 
+import "./blocks/tooltip";
+import "./blocks/tooltip-trigger";
+import "./blocks/tooltip-content";
+
 import "./blocks/sheet";
 import "./blocks/sheet-trigger";
 import "./blocks/sheet-header";
