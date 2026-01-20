@@ -12,7 +12,7 @@ import {
 
 export default function Edit(props) {
   const { attributes, setAttributes } = props;
-  const { maxValue, currentValue, staticValue, dynamicValue, showLabel } =
+  const { maxValue, currentValue, staticValue, dynamicValue, showLabel, type } =
     attributes;
 
   // Calculate percentage for display
