@@ -1,0 +1,61 @@
+.wp-block-wpshadcn-sheet-footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--wp--preset--spacing--3, 12px);
+  padding: var(--wp--preset--spacing--6, 24px);
+  margin-top: auto;
+  flex-shrink: 0;
+
+  // Make buttons container full width
+  .wp-block-buttons {
+    width: 100%;
+    flex-direction: column;
+    gap: var(--wp--preset--spacing--3, 12px);
+  }
+
+  // Make all buttons full width
+  .wp-block-button {
+    width: 100%;
+
+    .wp-block-button__link {
+      width: 100%;
+      justify-content: center;
+      border-radius: var(--wp--preset--spacing--2, 8px);
+      font-size: 14px;
+      padding: 8px 16px;
+      transition: all 0.2s ease;
+    }
+  }
+
+  // Primary button (Save changes) - solid black
+  .wp-block-button:not(.is-style-outline) .wp-block-button__link {
+    background-color: var(--wp--preset--color--foreground, #09090b);
+    color: var(--wp--preset--color--background, #fff);
+    border: none;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &:focus {
+      outline: 2px solid var(--wp--preset--color--ring, #a1a1a1);
+      outline-offset: 2px;
+    }
+  }
+
+  // Secondary button (Close) - outlined white
+  .wp-block-button.is-style-outline .wp-block-button__link {
+    background-color: var(--wp--preset--color--background, #fff);
+    color: var(--wp--preset--color--foreground, #09090b);
+    border: 1px solid var(--wp--preset--color--border, #e4e4e7);
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    &:focus {
+      outline: 2px solid var(--wp--preset--color--ring, #a1a1a1);
+      outline-offset: 2px;
+    }
+  }
+}
