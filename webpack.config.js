@@ -45,7 +45,7 @@ class FixInteractivityPlugin {
         content = importStatement + content;
         content = content.replace(
           /const\s+\w+\s*=\s*window\.wp\.interactivity[,;]?\s*/g,
-          name === "drawer" ? "const " : ""
+          ["drawer", "tooltip", "popover", "sheet"].includes(name) ? "const " : ""
         );
         content = content.replace(/\(0,(\w+)\.store\)/g, "store");
         content = content.replace(/\(0,(\w+)\.getContext\)/g, "getContext");
