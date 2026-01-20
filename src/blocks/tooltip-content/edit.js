@@ -11,6 +11,7 @@ const TEMPLATE = [
   [
     "core/paragraph",
     {
+      "content": "This is a tooltip content",
       placeholder: __("Add tooltip content here...", "wpshadcn-blocks"),
     },
   ],
