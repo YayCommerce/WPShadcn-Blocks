@@ -163,9 +163,9 @@ if ( ! function_exists( 'block_shadcn_sheet_render' ) ) {
 		ob_start();
 		?>
 		<div 
-			<?php echo $wrapper_attributes; ?>
+			<?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			data-wp-interactive="shadcn/sheet"
-			<?php echo wp_interactivity_data_wp_context( $context, 'shadcn/sheet' ); ?>
+			<?php echo wp_interactivity_data_wp_context( $context, 'shadcn/sheet' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			data-wp-watch="callbacks.syncBodyScroll"
 			data-wp-on-window--keydown="actions.handleEscape"
 		>
@@ -179,7 +179,7 @@ if ( ! function_exists( 'block_shadcn_sheet_render' ) ) {
 					data-wp-bind--aria-expanded="state.isOpen"
 				<?php endif; ?>
 			>
-				<?php echo $trigger_html; ?>
+				<?php echo $trigger_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			</div>
 
 			<div
@@ -205,7 +205,7 @@ if ( ! function_exists( 'block_shadcn_sheet_render' ) ) {
 					data-wp-on--keydown="actions.handleKeydown"
 					data-wp-on--click="actions.handlePanelClick"
 				>
-					<?php echo $panel_html; ?>
+					<?php echo $panel_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 				</div>
 			</div>
 		</div>
@@ -215,4 +215,4 @@ if ( ! function_exists( 'block_shadcn_sheet_render' ) ) {
 	}
 }
 
-echo block_shadcn_sheet_render( $attributes ?? array(), $content ?? '', $block ?? null );
+echo block_shadcn_sheet_render( $attributes ?? array(), $content ?? '', $block ?? null ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped

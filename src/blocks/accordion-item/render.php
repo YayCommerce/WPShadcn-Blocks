@@ -60,4 +60,4 @@ if ( ! function_exists( 'block_shadcn_accordion_item_render' ) ) {
 }
 
 // Call the render function and output the result
-echo block_shadcn_accordion_item_render( $attributes ?? array(), $content ?? '' );
+echo block_shadcn_accordion_item_render( $attributes ?? array(), $content ?? '' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped

@@ -6,7 +6,7 @@
  * Version: 1.0.0
  * Requires at least: 6.5
  * Requires PHP: 7.4
- * Tested up to: 6.9.0
+ * Tested up to: 6.9
  * Author: YayCommerce
  * Author URI: https://wpshadcn.com/
  * License: GPLv3 or later

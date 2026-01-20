@@ -118,9 +118,9 @@ if ( ! function_exists( 'block_shadcn_tooltip_render' ) ) {
 		ob_start();
 		?>
 		<div 
-			<?php echo $wrapper_attributes; ?>
+			<?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped?>
 			data-wp-interactive="shadcn/tooltip"
-			<?php echo wp_interactivity_data_wp_context( $context, 'shadcn/tooltip' ); ?>
+			<?php echo wp_interactivity_data_wp_context( $context, 'shadcn/tooltip' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped?>
 			<?php if ( $action === 'click' ) : ?>
 				data-wp-on-window--click="actions.handleClickOutside"
 				data-wp-on-window--keydown="actions.handleEscape"
@@ -143,9 +143,9 @@ if ( ! function_exists( 'block_shadcn_tooltip_render' ) ) {
 					data-wp-bind--aria-expanded="state.isOpen"
 				<?php endif; ?>
 			>
-				<?php echo $trigger_html; ?>
+				<?php echo $trigger_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped?>
 			</div>
-			<?php echo $content_html; ?>
+			<?php echo $content_html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped?>
 		</div>
 		<?php
 
@@ -153,4 +153,4 @@ if ( ! function_exists( 'block_shadcn_tooltip_render' ) ) {
 	}
 }
 
-echo block_shadcn_tooltip_render( $attributes ?? array(), $content ?? '', $block ?? null );
+echo block_shadcn_tooltip_render( $attributes ?? array(), $content ?? '', $block ?? null ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
