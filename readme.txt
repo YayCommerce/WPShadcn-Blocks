@@ -8,7 +8,7 @@ Stable tag: 1.0.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Gutenberg blocks for the Shadcn theme. Provides Card, Accordion, Tabs, Alert, Drawer, Sheet, Tooltip, Carousel, and Progress components.
+Gutenberg blocks for the Shadcn theme. Provides Card, Accordion, Tabs, Alert, Bubble, Drawer, Sheet, Tooltip, Carousel, and Progress components.
 
 == Description ==
 
@@ -21,6 +21,7 @@ Shadcn Blocks is a companion plugin for the [Shadcn theme](https://wpshadcn.com/
 * **Card** - A versatile card container with header, content, and footer sections
 * **Accordion** - Collapsible sections to display grouped content with customizable icons
 * **Alert** - Dismissible notification messages with title and description
+* **Bubble** - Conversational message bubbles with variants and start/end alignment for chat mockups
 * **Drawer** - Slide-out panel from the bottom of the screen
 * **Sheet** - Side panel overlay for additional content
 * **Tooltip** - Hover-activated content hints
@@ -71,6 +72,11 @@ Shadcn Blocks is a companion plugin for the [Shadcn theme](https://wpshadcn.com/
 **Tooltip Block**
 - Tooltip Trigger
 - Tooltip Content
+
+**Bubble Block**
+- Bubble Group (vertical stack with shared default alignment)
+- 7 variants (default, secondary, muted, tinted, outline, ghost, destructive)
+- Start/end alignment with group inheritance
 
 == Installation ==
 

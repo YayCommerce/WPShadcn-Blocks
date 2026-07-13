@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "shadcn/bubble-group",
+  "version": "1.0.0",
+  "title": "Bubble Group",
+  "category": "shadcn",
+  "description": "A vertical stack of message bubbles for chat and conversation mockups.",
+  "textdomain": "shadcn-blocks",
+  "keywords": ["bubble", "chat", "conversation", "messages"],
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": false,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "start"
+    }
+  },
+  "providesContext": {
+    "shadcn/bubble-align": "align"
+  },
+  "allowedBlocks": ["shadcn/bubble"],
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

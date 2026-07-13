@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "shadcn/bubble",
+  "version": "1.0.0",
+  "title": "Bubble",
+  "category": "shadcn",
+  "description": "A conversational message bubble with variants and start/end alignment.",
+  "textdomain": "shadcn-blocks",
+  "keywords": ["bubble", "chat", "message", "conversation"],
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": false,
+    "spacing": {
+      "margin": true
+    }
+  },
+  "attributes": {
+    "variant": {
+      "type": "string",
+      "default": "default"
+    },
+    "align": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "usesContext": ["shadcn/bubble-align"],
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
