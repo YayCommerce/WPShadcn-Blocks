@@ -46,7 +46,7 @@ function shadcn_blocks_theme_notice() {
 	<div class="notice notice-error">
 		<p>
 			<strong><?php esc_html_e( 'Shadcn Blocks', 'shadcn-blocks' ); ?>:</strong>
-			<?php esc_html_e( 'This plugin requires the Shadcn theme to be active.', 'shadcn-blocks' ); ?>
+			<?php printf( __( 'This plugin requires the %1$sShadcn%2$s theme to be active.', 'shadcn-blocks' ), '<a href="' . \admin_url( 'theme-install.php?search=shadcn' ) . '">', '</a>' ); ?>
 		</p>
 	</div>
 	<?php
@@ -62,8 +62,9 @@ function shadcn_blocks_init() {
 		return;
 	}
 
-	// Load the main plugin class and free shipping class.
+	// Load the main plugin class, free shipping class, and avatar helper.
 	require_once SHADCN_BLOCKS_DIR . 'inc/Plugin.php';
 	require_once SHADCN_BLOCKS_DIR . 'inc/FreeShipping.php';
+	require_once SHADCN_BLOCKS_DIR . 'inc/Avatar.php';
 }
 add_action( 'plugins_loaded', 'shadcn_blocks_init' );

@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "shadcn/avatar",
+  "version": "1.0.0",
+  "title": "Avatar",
+  "category": "shadcn",
+  "description": "A circular avatar image with fallback initials shown when no image is set or it fails to load.",
+  "keywords": ["avatar", "profile", "image", "user"],
+  "textdomain": "shadcn-blocks",
+  "attributes": {
+    "mediaId": {
+      "type": "number",
+      "default": 0
+    },
+    "mediaUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "mediaAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "size": {
+      "type": "string",
+      "default": "md"
+    },
+    "fallback": {
+      "type": "string",
+      "default": "A"
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": false,
+    "color": {
+      "background": false,
+      "text": false
+    },
+    "spacing": {
+      "margin": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

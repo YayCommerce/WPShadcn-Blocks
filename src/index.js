@@ -44,3 +44,6 @@ import "./blocks/sheet-trigger";
 import "./blocks/sheet-header";
 import "./blocks/sheet-content";
 import "./blocks/sheet-footer";
+
+import "./blocks/avatar";
+import "./blocks/avatar-group";

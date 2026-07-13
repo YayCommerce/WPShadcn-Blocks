@@ -1,0 +1,35 @@
+.shadcn-avatar-group {
+	display: flex;
+	align-items: center;
+}
+
+// Ring: purely visual, safe to apply to the inner circle element directly
+// regardless of how deeply it's nested.
+.shadcn-avatar-group .shadcn-avatar {
+	box-shadow: 0 0 0 2px var(--wp--preset--color--background);
+}
+
+// Overlap + stacking: MUST apply to the actual flex item. Each avatar block
+// (editor and frontend alike) renders its own `.wp-block-shadcn-avatar`
+// wrapper div around the `.shadcn-avatar` circle — that div, not the inner
+// span, is the direct child of `.shadcn-avatar-group`. The overflow "+N"
+// indicator (see render.php) is wrapped in the same class for consistency.
+.shadcn-avatar-group > .wp-block-shadcn-avatar {
+	&:not(:first-child) {
+		margin-left: -0.625rem;
+	}
+
+	// Fixed z-index ladder so earlier avatars stack above later ones. Covers
+	// up to 10 children (matches the maxVisible RangeControl max) — a known
+	// v1 limit; groups larger than that lose deterministic stacking order.
+	&:nth-child(1) { z-index: 10; }
+	&:nth-child(2) { z-index: 9; }
+	&:nth-child(3) { z-index: 8; }
+	&:nth-child(4) { z-index: 7; }
+	&:nth-child(5) { z-index: 6; }
+	&:nth-child(6) { z-index: 5; }
+	&:nth-child(7) { z-index: 4; }
+	&:nth-child(8) { z-index: 3; }
+	&:nth-child(9) { z-index: 2; }
+	&:nth-child(10) { z-index: 1; }
+}
