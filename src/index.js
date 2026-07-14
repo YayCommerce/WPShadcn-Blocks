@@ -22,11 +22,6 @@ import "./blocks/alert";
 import "./blocks/alert-title";
 import "./blocks/alert-description";
 
-import "./blocks/accordion";
-import "./blocks/accordion-item";
-import "./blocks/accordion-trigger";
-import "./blocks/accordion-content";
-
 import "./blocks/progress";
 
 import "./blocks/drawer";

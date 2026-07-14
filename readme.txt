@@ -8,7 +8,7 @@ Stable tag: 1.0.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Gutenberg blocks for the Shadcn theme. Provides Card, Accordion, Tabs, Alert, Badge, Bubble, Drawer, Sheet, Tooltip, Carousel, and Progress components.
+Gutenberg blocks for the Shadcn theme. Provides Card, Tabs, Alert, Badge, Bubble, Marker, Drawer, Sheet, Tooltip, Carousel, and Progress components.
 
 == Description ==
 
@@ -19,7 +19,6 @@ Shadcn Blocks is a companion plugin for the [Shadcn theme](https://wpshadcn.com/
 = Available Blocks =
 
 * **Card** - A versatile card container with header, content, and footer sections
-* **Accordion** - Collapsible sections to display grouped content with customizable icons
 * **Alert** - Dismissible notification messages with title and description
 * **Badge** - Small inline label or status pill with 6 variants and an optional link
 * **Bubble** - Conversational message bubbles with variants and start/end alignment for chat mockups
@@ -46,13 +45,6 @@ Shadcn Blocks is a companion plugin for the [Shadcn theme](https://wpshadcn.com/
 - Card Header
 - Card Content
 - Card Footer
-
-**Accordion Block**
-- Accordion Item
-- Accordion Trigger
-- Accordion Content
-- Icon position (left/right)
-- Auto-close functionality
 
 **Alert Block**
 - Alert Title
@@ -95,7 +87,7 @@ No, this plugin is designed specifically as a companion to the Shadcn theme. It 
 
 = How do I find the blocks in the editor? =
 
-All Shadcn blocks are grouped under the "Shadcn" category in the Block Editor. You can also search for them by name (Card, Accordion, Alert, etc.).
+All Shadcn blocks are grouped under the "Shadcn" category in the Block Editor. You can also search for them by name (Card, Alert, Badge, etc.).
 
 = Are the blocks responsive? =
 
@@ -107,7 +99,7 @@ Yes, blocks inherit styling from the Shadcn theme and support WordPress block ed
 
 = Do the interactive blocks work without JavaScript? =
 
-The static content will always display, but interactive features (accordion toggle, drawer open/close, etc.) require JavaScript to function.
+The static content will always display, but interactive features (drawer open/close, tooltip, etc.) require JavaScript to function.
 
 == Screenshots ==
 

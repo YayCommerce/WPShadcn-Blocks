@@ -112,14 +112,6 @@ class Plugin {
 
 		// Define interactive blocks that need view scripts.
 		$interactive_blocks_config = array(
-			'shadcn/accordion' => array(
-				'namespace' => 'shadcn/accordion',
-				'view_file' => 'accordion/view.js',
-				'check'     => function( $block ) {
-					// Accordion always needs the script if present.
-					return true;
-				},
-			),
 			'shadcn/alert'     => array(
 				'namespace' => 'shadcn/alert',
 				'view_file' => 'alert/view.js',
