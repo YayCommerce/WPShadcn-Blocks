@@ -1,0 +1,141 @@
+/**
+ * Marker Block Styles
+ * Ported from shadcn/ui base Marker (default / separator / border).
+ * Base cva: flex min-h-4 w-full items-center gap-2 text-left text-sm
+ * text-muted-foreground; links underline (hover -> foreground).
+ */
+
+.wp-block-shadcn-marker.marker {
+  display: flex;
+  width: 100%;
+  min-height: 1rem; // min-h-4
+  align-items: center;
+  gap: calc(var(--spacing, 0.25rem) * 2); // gap-2
+  text-align: left;
+  font-size: 0.875rem; // text-sm
+  line-height: 1.25rem;
+  color: var(--wp--preset--color--muted-foreground, #737373);
+
+  .marker-content {
+    min-width: 0;
+    overflow-wrap: break-word;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  a:hover {
+    color: var(--wp--preset--color--foreground, #0a0a0a);
+  }
+
+  // separator: content centered between two hairline rules.
+  &.marker-separator {
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      min-width: 0;
+      height: 1px;
+      background-color: var(--wp--preset--color--border, #e5e5e5);
+    }
+
+    &::before {
+      margin-right: calc(var(--spacing, 0.25rem) * 1);
+    }
+
+    &::after {
+      margin-left: calc(var(--spacing, 0.25rem) * 1);
+    }
+
+    .marker-content {
+      flex: none;
+      text-align: center;
+    }
+  }
+
+  // border: bottom rule under the row.
+  &.marker-border {
+    border-bottom: 1px solid var(--wp--preset--color--border, #e5e5e5);
+    padding-bottom: calc(var(--spacing, 0.25rem) * 2); // pb-2
+  }
+}
+
+// Whole-marker-as-link (renders as <a>): underline the label, hover -> foreground.
+a.wp-block-shadcn-marker.marker {
+  // Resting color stays muted (from the base rule); hover -> foreground below.
+  text-decoration: none;
+
+  .marker-content {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  &:hover {
+    color: var(--wp--preset--color--foreground, #0a0a0a);
+  }
+}
+
+// Shimmer: animated streaming-text effect. Faithful port of shadcn's `shimmer`
+// utility — built on currentColor (adapts to the marker's muted text), a
+// highlight band of width `calc(3ch + 40px)` swept across via background-clip:text.
+@property --shimmer-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 20deg;
+}
+
+@keyframes shadcn-marker-shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+.wp-block-shadcn-marker.marker-shimmer .marker-content {
+  --_spread: var(--shimmer-spread, calc(3ch + 40px));
+  --_base: currentColor;
+  --_highlight: var(
+    --shimmer-color,
+    oklch(from currentColor l c h / calc(alpha * 0.2))
+  );
+
+  background-image: linear-gradient(
+    calc(90deg + var(--shimmer-angle, 20deg)),
+    var(--_base) calc(50% - var(--_spread)),
+    color-mix(in oklch, var(--_highlight), var(--_base) 50%)
+      calc(50% - var(--_spread) * 0.5),
+    var(--_highlight) 50%,
+    color-mix(in oklch, var(--_highlight), var(--_base) 50%)
+      calc(50% + var(--_spread) * 0.5),
+    var(--_base) calc(50% + var(--_spread))
+  );
+  background-repeat: no-repeat;
+  background-size: calc(200% + var(--_spread) * 2) 100%;
+  background-position: 0 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shadcn-marker-shimmer var(--shimmer-duration, 2s) linear infinite;
+}
+
+// Dark mode: brighter/less-transparent highlight (per shadcn).
+.dark .wp-block-shadcn-marker.marker-shimmer .marker-content {
+  --_highlight: var(
+    --shimmer-color,
+    oklch(from currentColor max(0.8, calc(l + 0.4)) c h / calc(alpha + 0.4))
+  );
+}
+
+// Respect reduced-motion: render the label normally, no animation.
+@media (prefers-reduced-motion: reduce) {
+  .wp-block-shadcn-marker.marker-shimmer .marker-content {
+    animation: none;
+    background-image: none;
+    -webkit-text-fill-color: currentColor;
+  }
+}

@@ -23,6 +23,7 @@ Shadcn Blocks is a companion plugin for the [Shadcn theme](https://wpshadcn.com/
 * **Alert** - Dismissible notification messages with title and description
 * **Badge** - Small inline label or status pill with 6 variants and an optional link
 * **Bubble** - Conversational message bubbles with variants and start/end alignment for chat mockups
+* **Marker** - Small labeled meta-row: muted text line, centered separator, or bordered label
 * **Drawer** - Slide-out panel from the bottom of the screen
 * **Sheet** - Side panel overlay for additional content
 * **Tooltip** - Hover-activated content hints
