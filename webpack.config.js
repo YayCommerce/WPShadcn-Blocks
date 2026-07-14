@@ -21,6 +21,7 @@ class FixInteractivityPlugin {
       { name: "drawer", imports: ["store", "getContext"] },
       { name: "tooltip", imports: ["store", "getContext"] },
       { name: "sheet", imports: ["store", "getContext"] },
+      { name: "accordion", imports: ["store", "getContext"] },
     ];
 
     blocks.forEach(({ name, imports }) => {

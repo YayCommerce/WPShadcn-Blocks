@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "shadcn/accordion-item",
+  "version": "1.0.0",
+  "title": "Accordion Item",
+  "category": "shadcn",
+  "description": "A single collapsible section with a trigger and panel content.",
+  "textdomain": "shadcn-blocks",
+  "parent": ["shadcn/accordion"],
+  "usesContext": ["shadcn/headingLevel"],
+  "supports": {
+    "html": false,
+    "reusable": false,
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "spacing": {
+      "padding": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "disabled": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

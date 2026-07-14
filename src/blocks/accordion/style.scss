@@ -1,0 +1,27 @@
+/**
+ * Accordion (parent) styles.
+ *
+ * Shared across editor and frontend. Colors use theme.json preset tokens so
+ * dark mode works with no extra rules.
+ */
+.wp-block-shadcn-accordion {
+  display: block;
+  width: 100%;
+
+  // Collapse default block margins between stacked items.
+  > .wp-block-shadcn-accordion-item + .wp-block-shadcn-accordion-item {
+    margin-top: 0;
+  }
+
+  // Outlined variant: bordered, rounded container with inner padding.
+  &.is-outlined {
+    border: 1px solid var(--wp--preset--color--border, #e5e5e5);
+    border-radius: var(--radius, 0.5rem);
+    padding-inline: 1rem;
+
+    // No divider under the last item inside the container.
+    > .wp-block-shadcn-accordion-item:last-child {
+      border-bottom: 0;
+    }
+  }
+}

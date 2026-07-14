@@ -144,6 +144,14 @@ class Plugin {
 					return true;
 				},
 			),
+			'shadcn/accordion' => array(
+				'namespace' => 'shadcn/accordion',
+				'view_file' => 'accordion/view.js',
+				'check'     => function( $block ) {
+					// Accordion always needs the script if present.
+					return true;
+				},
+			),
 		);
 
 		// Recursively check blocks and inner blocks.

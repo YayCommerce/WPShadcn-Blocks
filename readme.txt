@@ -8,7 +8,7 @@ Stable tag: 1.0.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Gutenberg blocks for the Shadcn theme. Provides Card, Tabs, Alert, Badge, Bubble, Marker, Drawer, Sheet, Tooltip, Carousel, and Progress components.
+Gutenberg blocks for the Shadcn theme. Provides Card, Accordion, Tabs, Alert, Badge, Bubble, Marker, Drawer, Sheet, Tooltip, Carousel, and Progress components.
 
 == Description ==
 
@@ -19,6 +19,7 @@ Shadcn Blocks is a companion plugin for the [Shadcn theme](https://wpshadcn.com/
 = Available Blocks =
 
 * **Card** - A versatile card container with header, content, and footer sections
+* **Accordion** - Vertically stacked collapsible sections; one item open at a time, collapsible, accessible
 * **Alert** - Dismissible notification messages with title and description
 * **Badge** - Small inline label or status pill with 6 variants and an optional link
 * **Bubble** - Conversational message bubbles with variants and start/end alignment for chat mockups
@@ -45,6 +46,14 @@ Shadcn Blocks is a companion plugin for the [Shadcn theme](https://wpshadcn.com/
 - Card Header
 - Card Content
 - Card Footer
+
+**Accordion Block**
+- Accordion Item (trigger + panel content)
+- Single-open (exclusive) by default, or allow multiple open at once
+- Collapsible, all closed on load
+- Selectable heading level (H2–H6) for item triggers
+- Outlined (bordered container) variant
+- Per-item disabled state
 
 **Alert Block**
 - Alert Title
@@ -114,7 +123,7 @@ The static content will always display, but interactive features (drawer open/cl
 = 1.0.0 =
 * Initial release
 * Card block with header, content, and footer components
-* Accordion block with customizable icons and auto-close
+* Accordion block: single-open (exclusive), collapsible, accessible, selectable heading level
 * Alert block with dismissible option
 * Drawer block with trigger, header, content, and footer
 * Sheet block for side panel overlays

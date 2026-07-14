@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "shadcn/accordion",
+  "version": "1.0.0",
+  "title": "Accordion",
+  "category": "shadcn",
+  "description": "A vertically stacked set of collapsible sections. One section opens at a time.",
+  "keywords": ["accordion", "collapse", "faq", "toggle", "disclosure"],
+  "textdomain": "shadcn-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": ["wide", "full"],
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": false
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "width": true
+    }
+  },
+  "attributes": {
+    "headingLevel": {
+      "type": "number",
+      "default": 3
+    },
+    "allowMultiple": {
+      "type": "boolean",
+      "default": false
+    },
+    "outlined": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "providesContext": {
+    "shadcn/headingLevel": "headingLevel"
+  },
+  "allowedBlocks": ["shadcn/accordion-item"],
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}
