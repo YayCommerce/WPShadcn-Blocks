@@ -20,6 +20,7 @@ Shadcn Blocks is a companion plugin for the [Shadcn theme](https://wpshadcn.com/
 
 * **Card** - A versatile card container with header, content, and footer sections
 * **Accordion** - Vertically stacked collapsible sections; one item open at a time, collapsible, accessible
+* **Sonner (Toast)** - A button that fires a toast notification on click, with type variants and rich colors
 * **Alert** - Dismissible notification messages with title and description
 * **Badge** - Small inline label or status pill with 6 variants and an optional link
 * **Bubble** - Conversational message bubbles with variants and start/end alignment for chat mockups
@@ -54,6 +55,12 @@ Shadcn Blocks is a companion plugin for the [Shadcn theme](https://wpshadcn.com/
 - Selectable heading level (H2–H6) for item triggers
 - Outlined (bordered container) variant
 - Per-item disabled state
+
+**Sonner (Toast) Block**
+- Trigger button fires a toast on click (bottom-right, auto-dismiss)
+- Type variants with rich colors + icons: default, success, error, warning, info
+- Configurable button label, toast title, and description
+- Stacks multiple toasts; single shared toaster
 
 **Alert Block**
 - Alert Title
@@ -124,6 +131,7 @@ The static content will always display, but interactive features (drawer open/cl
 * Initial release
 * Card block with header, content, and footer components
 * Accordion block: single-open (exclusive), collapsible, accessible, selectable heading level
+* Sonner (Toast) block: click-to-fire toasts with type variants and rich colors
 * Alert block with dismissible option
 * Drawer block with trigger, header, content, and footer
 * Sheet block for side panel overlays

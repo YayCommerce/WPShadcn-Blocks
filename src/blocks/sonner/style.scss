@@ -1,0 +1,192 @@
+/**
+ * Sonner (Toast) styles (shared editor + frontend).
+ *
+ * Toaster is fixed bottom-right; toasts stack with per-type rich colors + icons.
+ * Base colors use theme.json preset tokens; rich colors are explicit with dark
+ * variants. Icons are CSS masks so no per-toast SVG is needed in data-wp-each.
+ */
+
+/* Trigger button — shadcn outline button. */
+.wp-block-shadcn-sonner {
+  &__trigger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 2.25rem;
+    padding-inline: 1rem;
+    border: 1px solid var(--wp--preset--color--border, #e5e5e5);
+    border-radius: var(--radius, 0.5rem);
+    background: var(--wp--preset--color--background, #fff);
+    color: var(--wp--preset--color--foreground, #0a0a0a);
+    font: inherit;
+    font-weight: 500;
+    line-height: 1;
+    cursor: pointer;
+    transition: background-color 150ms ease, color 150ms ease;
+
+    &:hover {
+      background: var(--wp--preset--color--accent, #f5f5f5);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--wp--preset--color--ring, #a1a1a1);
+      outline-offset: 2px;
+    }
+  }
+}
+
+/* Toaster region — fixed top-center; toasts are absolutely stacked (JS-driven). */
+.wp-block-shadcn-sonner__toaster {
+  position: fixed;
+  inset-block-start: 1rem;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  width: min(356px, calc(100vw - 2rem));
+  pointer-events: none;
+}
+
+/* Individual toast card. */
+.wp-block-shadcn-sonner__toast {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  padding: 1rem;
+  border: 1px solid var(--wp--preset--color--border, #e5e5e5);
+  border-radius: var(--radius, 0.5rem);
+  background: var(--wp--preset--color--popover, #fff);
+  color: var(--wp--preset--color--popover-foreground, #0a0a0a);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  pointer-events: auto;
+  transform-origin: 50% 0;
+  /* Initial (pre-layout) state: off the top + transparent, so JS layout
+     transitions each new toast into place (slides down + fades in). */
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 400ms cubic-bezier(0.21, 1.02, 0.73, 1),
+    opacity 400ms cubic-bezier(0.21, 1.02, 0.73, 1);
+
+  &__icon {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    margin-top: 0.125rem;
+  }
+
+  /* Inline outline (stroke) icons; inherit the toast's type text color. */
+  &__ico {
+    display: none;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  &[data-type="success"] .wp-block-shadcn-sonner__toast__ico--success,
+  &[data-type="error"] .wp-block-shadcn-sonner__toast__ico--error,
+  &[data-type="warning"] .wp-block-shadcn-sonner__toast__ico--warning,
+  &[data-type="info"] .wp-block-shadcn-sonner__toast__ico--info {
+    display: block;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 0;
+  }
+
+  &__title {
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  &__desc {
+    line-height: 1.4;
+    color: var(--wp--preset--color--muted-foreground, #737373);
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  /* Default type has no leading icon. */
+  &[data-type="default"] .wp-block-shadcn-sonner__toast__icon {
+    display: none;
+  }
+
+  /* Rich colors per type (light) — exact Sonner values. Icon inherits color. */
+  &[data-type="success"] {
+    background: hsl(143, 85%, 96%);
+    border-color: hsl(145, 92%, 87%);
+    color: hsl(140, 100%, 27%);
+  }
+
+  &[data-type="error"] {
+    background: hsl(359, 100%, 97%);
+    border-color: hsl(359, 100%, 94%);
+    color: hsl(360, 100%, 45%);
+  }
+
+  &[data-type="warning"] {
+    background: hsl(49, 100%, 97%);
+    border-color: hsl(49, 91%, 84%);
+    color: hsl(31, 92%, 45%);
+  }
+
+  &[data-type="info"] {
+    background: hsl(208, 100%, 97%);
+    border-color: hsl(221, 91%, 93%);
+    color: hsl(210, 92%, 45%);
+  }
+
+  /* Rich toasts: description shares the type text color, slightly softened. */
+  &[data-type="success"],
+  &[data-type="error"],
+  &[data-type="warning"],
+  &[data-type="info"] {
+    .wp-block-shadcn-sonner__toast__desc {
+      color: inherit;
+      opacity: 0.9;
+    }
+  }
+}
+
+/* Dark mode rich colors — exact Sonner values. */
+.dark .wp-block-shadcn-sonner__toast {
+  &[data-type="success"] {
+    background: hsl(150, 100%, 6%);
+    border-color: hsl(147, 100%, 12%);
+    color: hsl(150, 86%, 65%);
+  }
+
+  &[data-type="error"] {
+    background: hsl(358, 76%, 10%);
+    border-color: hsl(357, 89%, 16%);
+    color: hsl(358, 100%, 81%);
+  }
+
+  &[data-type="warning"] {
+    background: hsl(64, 100%, 6%);
+    border-color: hsl(60, 100%, 9%);
+    color: hsl(46, 87%, 65%);
+  }
+
+  &[data-type="info"] {
+    background: hsl(215, 100%, 6%);
+    border-color: hsl(223, 43%, 17%);
+    color: hsl(216, 87%, 65%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wp-block-shadcn-sonner__toast {
+    transition: none;
+  }
+}

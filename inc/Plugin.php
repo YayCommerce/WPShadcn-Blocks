@@ -50,6 +50,9 @@ class Plugin {
 		// Detect interactive blocks during content render, then enqueue modules in footer.
 		add_filter( 'the_content', array( $this, 'detect_interactive_blocks_in_content' ), 5 );
 		add_action( 'wp_footer', array( $this, 'enqueue_interactive_scripts' ), 5 );
+		// Print the single shared Sonner toaster (and enqueue its module) when a
+		// sonner block rendered on the page. Runs before wp_print_footer_scripts.
+		add_action( 'wp_footer', array( $this, 'render_sonner_toaster' ), 5 );
 	}
 
 	/**
@@ -243,6 +246,62 @@ class Plugin {
 				}
 			}
 		}
+	}
+
+	/**
+	 * Print the single shared Sonner toaster in the footer and enqueue its view
+	 * module. Runs only when a sonner block rendered on the page (flag set in
+	 * the sonner block render.php), so it works for content AND FSE templates.
+	 */
+	public function render_sonner_toaster() {
+		if ( is_admin() || empty( $GLOBALS['shadcn_sonner_present'] ) ) {
+			return;
+		}
+
+		// Initialize store state for SSR hydration (empty toast list).
+		if ( function_exists( 'wp_interactivity_state' ) ) {
+			wp_interactivity_state( 'shadcn/sonner', array( 'toasts' => array() ) );
+		}
+
+		// Register + enqueue the view module (mirrors enqueue_interactive_scripts).
+		$view_js_path = SHADCN_BLOCKS_DIR . 'build/blocks/sonner/view.js';
+		$view_js_url  = SHADCN_BLOCKS_URL . 'build/blocks/sonner/view.js';
+		$asset_path   = str_replace( '.js', '.asset.php', $view_js_path );
+
+		if ( file_exists( $view_js_path ) && function_exists( 'wp_register_script_module' ) ) {
+			$asset   = file_exists( $asset_path ) ? require $asset_path : array();
+			$version = isset( $asset['version'] ) ? $asset['version'] : SHADCN_BLOCKS_VERSION;
+
+			wp_register_script_module(
+				'shadcn-sonner-view',
+				$view_js_url,
+				array( '@wordpress/interactivity' ),
+				$version
+			);
+			wp_enqueue_script_module( 'shadcn-sonner-view' );
+			wp_enqueue_script_module( '@wordpress/interactivity' );
+		}
+
+		// Single shared toaster; data-wp-each renders state.toasts client-side.
+		$toaster = '<div class="wp-block-shadcn-sonner__toaster" data-wp-interactive="shadcn/sonner" data-wp-watch="callbacks.onToastsChange" data-wp-bind--data-expanded="state.expanded" role="region" aria-label="' . esc_attr__( 'Notifications', 'shadcn-blocks' ) . '" aria-live="polite">'
+			. '<template data-wp-each--toast="state.toasts" data-wp-each-key="context.toast.id">'
+			. '<div class="wp-block-shadcn-sonner__toast" data-wp-bind--data-type="context.toast.type" data-wp-on--mouseenter="actions.expand" data-wp-on--mouseleave="actions.collapse">'
+			. '<span class="wp-block-shadcn-sonner__toast__icon" aria-hidden="true">'
+			. '<svg class="wp-block-shadcn-sonner__toast__ico wp-block-shadcn-sonner__toast__ico--success" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>'
+			. '<svg class="wp-block-shadcn-sonner__toast__ico wp-block-shadcn-sonner__toast__ico--error" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg>'
+			. '<svg class="wp-block-shadcn-sonner__toast__ico wp-block-shadcn-sonner__toast__ico--warning" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg>'
+			. '<svg class="wp-block-shadcn-sonner__toast__ico wp-block-shadcn-sonner__toast__ico--info" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>'
+			. '</span>'
+			. '<div class="wp-block-shadcn-sonner__toast__content">'
+			. '<div class="wp-block-shadcn-sonner__toast__title" data-wp-text="context.toast.title"></div>'
+			. '<div class="wp-block-shadcn-sonner__toast__desc" data-wp-text="context.toast.description"></div>'
+			. '</div></div></template></div>';
+
+		if ( function_exists( 'wp_interactivity_process_directives' ) ) {
+			$toaster = wp_interactivity_process_directives( $toaster );
+		}
+
+		echo $toaster; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	/**

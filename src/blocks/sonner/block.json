@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "shadcn/sonner",
+  "version": "1.0.0",
+  "title": "Sonner (Toast)",
+  "category": "shadcn",
+  "description": "A button that shows a toast notification on click, with type variants and rich colors.",
+  "keywords": ["toast", "sonner", "notification", "snackbar", "alert"],
+  "textdomain": "shadcn-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": false,
+    "spacing": {
+      "margin": true
+    }
+  },
+  "attributes": {
+    "buttonLabel": {
+      "type": "string",
+      "default": "Show Toast"
+    },
+    "toastType": {
+      "type": "string",
+      "default": "default"
+    },
+    "toastTitle": {
+      "type": "string",
+      "default": ""
+    },
+    "toastDescription": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

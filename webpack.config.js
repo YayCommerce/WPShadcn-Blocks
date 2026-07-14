@@ -22,6 +22,7 @@ class FixInteractivityPlugin {
       { name: "tooltip", imports: ["store", "getContext"] },
       { name: "sheet", imports: ["store", "getContext"] },
       { name: "accordion", imports: ["store", "getContext"] },
+      { name: "sonner", imports: ["store", "getContext"] },
     ];
 
     blocks.forEach(({ name, imports }) => {
