@@ -15,6 +15,13 @@ import {
 import { __ } from "@wordpress/i18n";
 
 /**
+ * Internal dependencies — shared icon picker.
+ */
+import { IconPanelBody } from "../../shared/icons/icon-panel.js";
+import { IconGlyph } from "../../shared/icons/icon-picker.js";
+import { buildIconClasses } from "../../shared/icons/icon-attributes.js";
+
+/**
  * Variant options shared with render.php class names.
  */
 const VARIANT_OPTIONS = [
@@ -33,13 +40,37 @@ const VARIANT_OPTIONS = [
  * @return {Element} Block edit element.
  */
 export default function Edit({ attributes, setAttributes }) {
-  const { text, variant, url, linkTarget } = attributes;
+  const {
+    text,
+    variant,
+    url,
+    linkTarget,
+    iconName = "",
+    iconPosition = "left",
+    iconSize = "",
+  } = attributes;
+
+  const isRight = iconPosition === "right";
+  // Shared class contract (single source: buildIconClasses()).
+  const iconClasses = buildIconClasses(iconName, iconPosition);
 
   // Keep the badge a span in the editor even when linked (avoids nested-anchor
   // issues); the <a> only materializes on the frontend render.
   const blockProps = useBlockProps({
-    className: `wp-block-shadcn-badge badge badge-${variant}`,
+    className: `wp-block-shadcn-badge badge badge-${variant}${
+      iconClasses ? ` ${iconClasses}` : ""
+    }`,
   });
+
+  // Editor icon preview mirrors the frontend render (DOM order = position).
+  const glyph = iconName ? (
+    <span
+      className="shadcn-icon"
+      style={iconSize ? { width: iconSize, height: iconSize } : undefined}
+    >
+      <IconGlyph name={iconName} />
+    </span>
+  ) : null;
 
   return (
     <>
@@ -78,15 +109,20 @@ export default function Edit({ attributes, setAttributes }) {
             }
           />
         </PanelBody>
+        <IconPanelBody attributes={attributes} setAttributes={setAttributes} />
       </InspectorControls>
-      <RichText
-        {...blockProps}
-        tagName="span"
-        value={text}
-        allowedFormats={["core/bold", "core/italic"]}
-        placeholder={__("Badge", "shadcn-blocks")}
-        onChange={(value) => setAttributes({ text: value })}
-      />
+      <span {...blockProps}>
+        {!isRight && glyph}
+        <RichText
+          tagName="span"
+          className="wp-block-shadcn-badge__text"
+          value={text}
+          allowedFormats={["core/bold", "core/italic"]}
+          placeholder={__("Badge", "shadcn-blocks")}
+          onChange={(value) => setAttributes({ text: value })}
+        />
+        {isRight && glyph}
+      </span>
     </>
   );
 }

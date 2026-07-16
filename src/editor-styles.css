@@ -106,3 +106,82 @@
   --destructive: var(--wp--preset--color--destructive);
   --destructive-foreground: var(--wp--preset--color--destructive-foreground);
 }
+
+/* -------------------------------------------------------------------------
+ * Icon picker (editor-only). Grid + selection UI for the shared IconPicker.
+ * ---------------------------------------------------------------------- */
+.shadcn-icon-picker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.shadcn-icon-picker__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.shadcn-icon-picker__toggle-glyph svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+}
+.shadcn-icon-picker__toggle-label {
+  font-family: monospace;
+  font-size: 12px;
+}
+.shadcn-icon-picker__panel {
+  padding: 8px;
+  width: 280px;
+  max-width: 80vw;
+}
+.shadcn-icon-picker__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+  max-height: 260px;
+  overflow-y: auto;
+  margin-top: 8px;
+}
+.shadcn-icon-picker__cell.components-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  width: 100%;
+  padding: 0;
+}
+.shadcn-icon-picker__cell svg {
+  width: 20px;
+  height: 20px;
+  display: block;
+  fill: none;
+}
+.shadcn-icon-picker__empty {
+  margin: 12px 0 4px;
+  color: var(--muted-foreground, #6b6258);
+  font-style: italic;
+}
+
+/* -------------------------------------------------------------------------
+ * core/button icon — editor canvas preview only.
+ * Frontend renders a real inline SVG (inc/Icons.php). Here the selected icon
+ * is exposed as a CSS mask so it inherits the button's text color.
+ * ---------------------------------------------------------------------- */
+.wp-block-button.has-icon .wp-block-button__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+}
+.wp-block-button.has-icon .wp-block-button__link::before {
+  content: "";
+  flex: none;
+  width: var(--shadcn-btn-icon-size, 1em);
+  height: var(--shadcn-btn-icon-size, 1em);
+  background-color: currentColor;
+  -webkit-mask: var(--shadcn-btn-icon) center / contain no-repeat;
+  mask: var(--shadcn-btn-icon) center / contain no-repeat;
+}
+.wp-block-button.has-icon-right .wp-block-button__link::before {
+  order: 2;
+}

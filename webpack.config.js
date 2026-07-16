@@ -79,7 +79,28 @@ class FixInteractivityPlugin {
   }
 }
 
+/**
+ * Resolve wp-scripts' auto-detected entries (block.json scripts + src/index),
+ * then add our standalone core/button icon extension entry. wp-scripts exposes
+ * `entry` as a function; call it and merge.
+ */
+function buildEntry() {
+  const base =
+    typeof defaultConfig.entry === "function"
+      ? defaultConfig.entry()
+      : defaultConfig.entry;
+
+  return {
+    ...base,
+    "extensions/core-button-icon": path.resolve(
+      __dirname,
+      "src/extensions/core-button-icon/index.js"
+    ),
+  };
+}
+
 module.exports = {
   ...defaultConfig,
+  entry: buildEntry,
   plugins: [...(defaultConfig.plugins || []), new FixInteractivityPlugin()],
 };

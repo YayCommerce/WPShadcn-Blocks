@@ -36,6 +36,18 @@
     "rel": {
       "type": "string",
       "default": ""
+    },
+    "iconName": {
+      "type": "string",
+      "default": ""
+    },
+    "iconPosition": {
+      "type": "string",
+      "default": "left"
+    },
+    "iconSize": {
+      "type": "string",
+      "default": ""
     }
   },
   "editorScript": "file:./index.js",

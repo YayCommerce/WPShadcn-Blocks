@@ -4,7 +4,7 @@ Tags: gutenberg, blocks, shadcn
 Requires at least: 6.5
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -126,6 +126,9 @@ The static content will always display, but interactive features (drawer open/cl
 5. Block category in the editor
 
 == Changelog ==
+
+= 1.1.0 =
+* Icon picker: add a searchable Lucide icon picker (curated set) to the Badge block and the core Button block, with left/right position and size controls. Icons render as inline SVG and inherit the current text color.
 
 = 1.0.0 =
 * Initial release

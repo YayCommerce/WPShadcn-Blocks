@@ -6,6 +6,9 @@
   "license": "GPL-3.0-or-later",
   "main": "build/index.js",
   "scripts": {
+    "icons": "node scripts/build-icon-manifest.mjs",
+    "prebuild": "npm run icons",
+    "prestart": "npm run icons",
     "build": "wp-scripts build",
     "start": "wp-scripts start",
     "lint:js": "wp-scripts lint-js",
@@ -22,6 +25,7 @@
   },
   "devDependencies": {
     "@wordpress/scripts": "^28.0.0",
-    "clsx": "^2.1.1"
+    "clsx": "^2.1.1",
+    "lucide-static": "^1.24.0"
   }
 }
