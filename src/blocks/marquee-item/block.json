@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "shadcn/marquee-item",
+	"version": "1.0.0",
+	"title": "Marquee Item",
+	"category": "shadcn",
+	"parent": [ "shadcn/marquee" ],
+	"icon": "index-card",
+	"description": "A single item within a marquee.",
+	"textdomain": "shadcn-blocks",
+	"attributes": {},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"lock": false,
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"spacing": {
+			"padding": true
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"width": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

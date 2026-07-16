@@ -1,0 +1,38 @@
+/**
+ * Marquee block editor styles.
+ *
+ * Editor preview is a static, un-duplicated horizontal row so authors edit a
+ * single InnerBlocks tree. The seamless-loop animation only exists on the
+ * frontend (rendered by render.php), never in the editor.
+ */
+.wp-block-shadcn-marquee {
+	.wp-block-shadcn-marquee__editor-row {
+		display: flex;
+		align-items: stretch;
+		gap: 2rem;
+		overflow-x: auto;
+		padding: 1rem;
+		border: 1px dashed var(--wp--preset--color--border, #e5e5e5);
+		border-radius: 8px;
+		background: var(--wp--preset--color--muted, rgba(0, 0, 0, 0.02));
+
+		.block-editor-block-list__layout {
+			display: flex;
+			align-items: stretch;
+			gap: inherit;
+			width: max-content;
+		}
+
+		// The "+" block appender at the end of the row — keep it inline with
+		// items instead of the default block-width row below them.
+		.block-list-appender {
+			flex: 0 0 auto;
+			align-self: center;
+		}
+	}
+
+	.wp-block-shadcn-marquee-item {
+		flex: 0 0 auto;
+		min-width: 120px;
+	}
+}

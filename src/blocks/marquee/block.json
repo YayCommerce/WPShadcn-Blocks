@@ -1,0 +1,53 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "shadcn/marquee",
+	"version": "1.0.0",
+	"title": "Marquee",
+	"category": "shadcn",
+	"icon": "controls-repeat",
+	"description": "A continuously scrolling, seamless marquee for logos, testimonials, or any content.",
+	"keywords": [ "marquee", "ticker", "scroll", "logos" ],
+	"textdomain": "shadcn-blocks",
+	"attributes": {
+		"speed": {
+			"type": "number",
+			"default": 30,
+			"minimum": 1
+		},
+		"direction": {
+			"type": "string",
+			"default": "left",
+			"enum": [ "left", "right" ]
+		},
+		"pauseOnHover": {
+			"type": "boolean",
+			"default": true
+		},
+		"showFade": {
+			"type": "boolean",
+			"default": false
+		},
+		"gap": {
+			"type": "string",
+			"default": "2rem",
+			"pattern": "^[0-9]+(\\.[0-9]+)?(px|rem|em|%|vw)$"
+		}
+	},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
