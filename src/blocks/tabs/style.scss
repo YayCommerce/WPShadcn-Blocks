@@ -1,0 +1,94 @@
+/**
+ * Tabs (parent) styles.
+ *
+ * Shared across editor and frontend. Colors use theme.json preset tokens so
+ * dark mode works with no extra rules.
+ */
+.wp-block-shadcn-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+
+  &__list {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: fit-content;
+    gap: 0.25rem;
+    padding: 0.1875rem;
+    border-radius: var(--radius, 0.5rem);
+    background: var(--wp--preset--color--muted, #f5f5f5);
+    color: var(--wp--preset--color--muted-foreground, #737373);
+  }
+
+  &__trigger {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+    padding-block: 0.375rem;
+    padding-inline: 0.75rem;
+    border: 1px solid transparent;
+    border-radius: calc(var(--radius, 0.5rem) - 0.125rem);
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 150ms ease, color 150ms ease;
+
+    &:focus-visible {
+      outline: 2px solid var(--wp--preset--color--ring, #a1a1a1);
+      outline-offset: 2px;
+    }
+
+    // Frontend toggles .is-active; the editor sets it directly.
+    &.is-active {
+      background: var(--wp--preset--color--background, #ffffff);
+      color: var(--wp--preset--color--foreground, #0a0a0a);
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  // Stretch triggers across the full width.
+  &.is-fitted &__list {
+    width: 100%;
+  }
+
+  &.is-fitted &__trigger {
+    flex: 1 1 0;
+  }
+
+  &__panel {
+    // Flush panel content: no stray margin at the top/bottom edges.
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--wp--preset--color--ring, #a1a1a1);
+      outline-offset: 2px;
+      border-radius: var(--radius, 0.5rem);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wp-block-shadcn-tabs__trigger {
+    transition: none;
+  }
+}

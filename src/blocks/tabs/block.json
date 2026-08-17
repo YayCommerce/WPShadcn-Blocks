@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "shadcn/tabs",
+  "version": "1.0.0",
+  "title": "Tabs",
+  "category": "shadcn",
+  "description": "A set of layered sections of content that displays one panel at a time.",
+  "keywords": ["tabs", "tab", "panel", "switcher", "section"],
+  "textdomain": "shadcn-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": ["wide", "full"],
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": false
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "width": true
+    }
+  },
+  "attributes": {
+    "defaultTab": {
+      "type": "number",
+      "default": 0
+    },
+    "fitted": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "allowedBlocks": ["shadcn/tab"],
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

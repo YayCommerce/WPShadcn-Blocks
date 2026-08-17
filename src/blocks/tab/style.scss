@@ -1,0 +1,31 @@
+/**
+ * Tab (panel body) styles.
+ *
+ * The `role="tabpanel"` wrapper and its show/hide handling belong to the
+ * parent block; this file styles only the author-facing panel body.
+ */
+.wp-block-shadcn-tab {
+  // Flush content: no stray margin at the top/bottom edges.
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  // Editor-only affordances: the label is edited in place above the panel.
+  &__label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--wp--preset--color--muted-foreground, #737373);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  &.is-disabled {
+    opacity: 0.5;
+  }
+}

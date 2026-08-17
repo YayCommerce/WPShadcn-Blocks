@@ -155,6 +155,14 @@ class Plugin {
 					return true;
 				},
 			),
+			'shadcn/tabs' => array(
+				'namespace' => 'shadcn/tabs',
+				'view_file' => 'tabs/view.js',
+				'check'     => function( $block ) {
+					// Tabs always needs the script if present.
+					return true;
+				},
+			),
 		);
 
 		// Recursively check blocks and inner blocks.

@@ -23,6 +23,7 @@ class FixInteractivityPlugin {
       { name: "sheet", imports: ["store", "getContext"] },
       { name: "accordion", imports: ["store", "getContext"] },
       { name: "sonner", imports: ["store", "getContext"] },
+      { name: "tabs", imports: ["store", "getContext"] },
     ];
 
     blocks.forEach(({ name, imports }) => {
@@ -81,8 +82,13 @@ class FixInteractivityPlugin {
 
 /**
  * Resolve wp-scripts' auto-detected entries (block.json scripts + src/index),
- * then add our standalone core/button icon extension entry. wp-scripts exposes
- * `entry` as a function; call it and merge.
+ * then add our standalone entries. wp-scripts exposes `entry` as a function;
+ * call it and merge.
+ *
+ * `blocks/tabs/view` is listed explicitly because tabs deliberately omits the
+ * `viewScript` field: that field makes WordPress enqueue the file as a classic
+ * script, which cannot execute the ES module import FixInteractivityPlugin
+ * rewrites it to. Plugin.php enqueues it as a script module instead.
  */
 function buildEntry() {
   const base =
@@ -96,6 +102,7 @@ function buildEntry() {
       __dirname,
       "src/extensions/core-button-icon/index.js"
     ),
+    "blocks/tabs/view": path.resolve(__dirname, "src/blocks/tabs/view.js"),
   };
 }
 
