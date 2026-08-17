@@ -36,9 +36,9 @@ registerBlockType(metadata.name, {
         stroke-linejoin="round"
         aria-hidden="true"
       >
-        <path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-        <path d="M3 11V9a2 2 0 0 1 2-2h4v4"></path>
-        <path d="M13 7h6a2 2 0 0 1 2 2v2"></path>
+        <rect width="18" height="11" x="3" y="9" rx="2"></rect>
+        <path d="M3 9V6a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3"></path>
+        <path d="M12 9V7a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path>
       </svg>
     ),
   },

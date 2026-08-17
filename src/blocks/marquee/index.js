@@ -35,8 +35,11 @@ registerBlockType(metadata.name, {
         stroke-width="1.5"
         stroke-linecap="round"
         stroke-linejoin="round"
+        aria-hidden="true"
       >
-        <path d="M18.178 8c5.096 0 5.096 8 0 8-5.095 0-7.133-8-12.739-8-4.585 0-4.585 8 0 8 5.606 0 7.644-8 12.74-8z" />
+        <rect width="20" height="12" x="2" y="6" rx="2"></rect>
+        <path d="M6 12h6"></path>
+        <path d="m14 9.5 2.5 2.5-2.5 2.5"></path>
       </svg>
     ),
   },
