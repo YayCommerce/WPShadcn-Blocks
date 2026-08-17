@@ -22,6 +22,12 @@ $slides_per_view_tablet = $attributes['slidesPerViewTablet'] ?? 2;
 $slides_per_view_desktop = $attributes['slidesPerViewDesktop'] ?? 3;
 $gap                  = $attributes['gap'] ?? '1rem';
 $orientation          = $attributes['orientation'] ?? 'horizontal';
+$effect               = $attributes['effect'] ?? 'none';
+
+// Only a known effect may reach the class list or the JS config.
+if ( ! in_array( $effect, array( 'none', 'coverflow' ), true ) ) {
+	$effect = 'none';
+}
 
 // Build data attributes for JS initialization.
 $carousel_data = array(
@@ -33,11 +39,30 @@ $carousel_data = array(
 	'slidesPerViewDesktop' => $slides_per_view_desktop,
 	'gap'                  => $gap,
 	'orientation'          => $orientation,
+	'effect'               => $effect,
 );
 
 $wrapper_classes = array(
 	'orientation-' . $orientation,
 );
+
+$wrapper_extra = array();
+
+if ( 'none' !== $effect ) {
+	$wrapper_classes[] = 'has-effect-' . $effect;
+
+	// Slide sizing is published as custom properties only for the effect
+	// styles to read. `slidesPerView` and `gap` are otherwise inert on this
+	// block — every plain carousel is pinned to one full-width slide by CSS —
+	// so scoping them here keeps existing carousels rendering exactly as before.
+	$wrapper_extra['style'] = sprintf(
+		'--carousel-gap:%s;--carousel-slides:%d;--carousel-slides-tablet:%d;--carousel-slides-desktop:%d;',
+		preg_match( '/^[0-9]+(\.[0-9]+)?(px|rem|em|%|vw)$/', (string) $gap ) ? $gap : '1rem',
+		max( 1, (int) $slides_per_view ),
+		max( 1, (int) $slides_per_view_tablet ),
+		max( 1, (int) $slides_per_view_desktop )
+	);
+}
 
 if ( $show_arrows ) {
 	$wrapper_classes[] = 'has-arrows';
@@ -48,9 +73,12 @@ if ( $show_dots ) {
 }
 
 $wrapper_attributes = get_block_wrapper_attributes(
-	array(
-		'class'         => implode( ' ', $wrapper_classes ),
-		'data-carousel' => wp_json_encode( $carousel_data ),
+	array_merge(
+		array(
+			'class'         => implode( ' ', $wrapper_classes ),
+			'data-carousel' => wp_json_encode( $carousel_data ),
+		),
+		$wrapper_extra
 	)
 );
 ?>

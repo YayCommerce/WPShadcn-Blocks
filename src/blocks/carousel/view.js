@@ -34,7 +34,10 @@ function initCarousel( carousel ) {
 		autoplayDelay = 3000,
 		loop = true,
 		orientation = 'horizontal',
+		effect = 'none',
 	} = config;
+
+	const isCoverflow = 'coverflow' === effect;
 
 	let slidesSelector = ".wp-block-shadcn-carousel-item";
 	let containerSelector = ".wp-block-shadcn-carousel__content";
@@ -49,14 +52,13 @@ function initCarousel( carousel ) {
 		slidesSelector = ".wc-block-product ";
 	}
 
-	console.log( containerSelector, slidesSelector );
-
-	// Embla options.
+	// Embla options. Coverflow centres the active slide and must not trim the
+	// snaps, otherwise the first and last slides cannot reach the middle.
 	const options = {
 		loop,
 		axis: orientation === 'vertical' ? 'y' : 'x',
-		align: 'start',
-		containScroll: 'trimSnaps',
+		align: isCoverflow ? 'center' : 'start',
+		containScroll: isCoverflow ? false : 'trimSnaps',
 		container: containerSelector,
 		slides: slidesSelector,
 	};
@@ -133,10 +135,46 @@ function initCarousel( carousel ) {
 		} );
 	};
 
+	/**
+	 * Coverflow depth: scale, fade and stack slides by how far each one sits
+	 * from the middle of the viewport.
+	 *
+	 * Measured from live DOM positions rather than Embla's scroll progress so
+	 * that looped slides — which Embla repositions as they wrap around — are
+	 * handled without any special casing.
+	 */
+	const applyCoverflow = () => {
+		const viewportRect = viewport.getBoundingClientRect();
+		const viewportCenter = viewportRect.left + viewportRect.width / 2;
+
+		if ( ! viewportRect.width ) {
+			return;
+		}
+
+		embla.slideNodes().forEach( ( slide ) => {
+			const rect = slide.getBoundingClientRect();
+			const slideCenter = rect.left + rect.width / 2;
+
+			// 0 when centred, 1 once a slide is half a viewport away or more.
+			const distance = Math.min(
+				( Math.abs( slideCenter - viewportCenter ) / viewportRect.width ) * 2,
+				1
+			);
+
+			slide.style.setProperty( '--shadcn-carousel-scale', ( 1 - distance * 0.22 ).toFixed( 3 ) );
+			slide.style.setProperty( '--shadcn-carousel-opacity', ( 1 - distance * 0.3 ).toFixed( 3 ) );
+			// Keep the centred slide above its neighbours as they overlap.
+			slide.style.setProperty( '--shadcn-carousel-depth', String( Math.round( ( 1 - distance ) * 10 ) ) );
+		} );
+	};
+
 	// Event listeners.
 	embla.on( 'init', () => {
 		updateButtons();
 		setupDots();
+		if ( isCoverflow ) {
+			applyCoverflow();
+		}
 	} );
 
 	embla.on( 'select', () => {
@@ -147,7 +185,15 @@ function initCarousel( carousel ) {
 	embla.on( 'reInit', () => {
 		updateButtons();
 		setupDots();
+		if ( isCoverflow ) {
+			applyCoverflow();
+		}
 	} );
+
+	if ( isCoverflow ) {
+		embla.on( 'scroll', applyCoverflow );
+		embla.on( 'resize', applyCoverflow );
+	}
 }
 
 /**

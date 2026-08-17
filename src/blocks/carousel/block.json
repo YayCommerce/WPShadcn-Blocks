@@ -49,6 +49,11 @@
 		"orientation": {
 			"type": "string",
 			"default": "horizontal"
+		},
+		"effect": {
+			"type": "string",
+			"default": "none",
+			"enum": [ "none", "coverflow" ]
 		}
 	},
 	"supports": {

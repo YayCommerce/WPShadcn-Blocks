@@ -32,6 +32,59 @@
 	flex-direction: column;
 }
 
+/* Coverflow effect
+ *
+ * Opt-in via the `effect` attribute. Slides are sized from the
+ * `--carousel-slides*` properties that render.php publishes, then scaled,
+ * faded and stacked per frame by view.js so the centred slide reads as the
+ * front card. Scoped to `.has-effect-coverflow` so plain carousels keep their
+ * existing one-slide-per-view layout.
+ */
+.wp-block-shadcn-carousel.has-effect-coverflow {
+	--carousel-slides-current: var(--carousel-slides, 1);
+
+	.wp-block-shadcn-carousel__viewport {
+		/* Room for the scaled-up centre card to breathe. */
+		padding-block: 1.5rem;
+	}
+
+	&:not(.block-editor-block-list__block) .wp-block-shadcn-carousel__content .wp-block-shadcn-carousel-item {
+		flex: 0 0
+			calc(
+				(100% - (var(--carousel-slides-current) - 1) * var(--carousel-gap)) /
+					var(--carousel-slides-current)
+			);
+		z-index: var(--shadcn-carousel-depth, 1);
+	}
+
+	/* The depth tween lives on the slide's inner wrapper, never on the slide
+	 * itself: in loop mode Embla writes an inline `transform: translate3d()`
+	 * onto slides as it wraps them around, and an inline style beats this
+	 * stylesheet — a transform declared here would simply be dropped on every
+	 * slide Embla has repositioned. Driven per frame from view.js, so no
+	 * transition, which would otherwise lag behind a drag. */
+	&:not(.block-editor-block-list__block) .wp-block-shadcn-carousel__content .wp-block-shadcn-carousel-item > * {
+		display: block;
+		transform: scale(var(--shadcn-carousel-scale, 1));
+		opacity: var(--shadcn-carousel-opacity, 1);
+		will-change: transform, opacity;
+	}
+
+	@media (min-width: 600px) {
+		--carousel-slides-current: var(--carousel-slides-tablet, 2);
+	}
+
+	@media (min-width: 1024px) {
+		--carousel-slides-current: var(--carousel-slides-desktop, 3);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.wp-block-shadcn-carousel.has-effect-coverflow .wp-block-shadcn-carousel-item {
+		will-change: auto;
+	}
+}
+
 /* Navigation arrows */
 .wp-block-shadcn-carousel__prev,
 .wp-block-shadcn-carousel__next {

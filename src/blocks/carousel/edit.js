@@ -76,6 +76,7 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
     slidesPerViewTablet,
     slidesPerViewDesktop,
     orientation,
+    effect,
   } = attributes;
 
   const blockProps = useBlockProps({
@@ -117,6 +118,19 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
               { label: __("Vertical", "shadcn-blocks"), value: "vertical" },
             ]}
             onChange={(value) => setAttributes({ orientation: value })}
+          />
+          <SelectControl
+            label={__("Effect", "shadcn-blocks")}
+            help={__(
+              "Coverflow centres the active slide and scales back its neighbours. It also applies the Responsive slides-per-view settings, which plain carousels ignore.",
+              "shadcn-blocks"
+            )}
+            value={effect || "none"}
+            options={[
+              { label: __("None", "shadcn-blocks"), value: "none" },
+              { label: __("Coverflow", "shadcn-blocks"), value: "coverflow" },
+            ]}
+            onChange={(value) => setAttributes({ effect: value })}
           />
         </PanelBody>
         <PanelBody title={__("Navigation", "shadcn-blocks")}>
