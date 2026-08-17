@@ -1,0 +1,59 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "shadcn/pricing",
+  "version": "1.0.0",
+  "title": "Pricing",
+  "category": "shadcn",
+  "description": "Holds the billing interval for everything inside it. Lay the plans out with any blocks; add a Pricing Switch to change interval and Pricing Price wherever a figure should follow it.",
+  "keywords": ["pricing", "plans", "billing", "subscription", "tiers"],
+  "textdomain": "shadcn-blocks",
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": ["wide", "full"],
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "blockGap": true
+    },
+    "layout": {
+      "allowSwitching": true,
+      "allowEditing": true,
+      "default": {
+        "type": "constrained"
+      }
+    }
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "wide"
+    },
+    "intervals": {
+      "type": "array",
+      "default": [
+        { "key": "monthly", "label": "Monthly" },
+        { "key": "yearly", "label": "Yearly" }
+      ],
+      "items": {
+        "type": "object"
+      }
+    },
+    "defaultInterval": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "providesContext": {
+    "shadcn/intervals": "intervals"
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

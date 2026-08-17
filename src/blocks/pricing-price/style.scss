@@ -1,0 +1,73 @@
+/**
+ * Pricing Price styles.
+ *
+ * Shared across editor and frontend. The two placement modifiers cover the
+ * layouts seen in practice: a suffix sitting beside the figure, and a caption
+ * stacked under it with the currency raised above the digits.
+ */
+.wp-block-shadcn-pricing-price {
+  margin: 0;
+
+  &__figure {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.15em;
+
+    // The switch hides the inactive figure with the `hidden` attribute, whose
+    // `display: none` comes from the UA stylesheet and so loses to the
+    // `display: inline-flex` above. Restate it or both figures show at once.
+    &[hidden] {
+      display: none;
+    }
+  }
+
+  // Every part is sized in `em` against the wrapper, never against a sibling:
+  // the currency and the amount sit next to each other, so an `em` on the
+  // currency resolves against this block's font size, not the amount's. Sizing
+  // them all from the same place is also what lets the block's own font-size
+  // control scale the whole figure at once.
+  &__amount {
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  &__currency {
+    font-size: 2.5em;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  &__period {
+    color: var(--wp--preset--color--muted-foreground, #737373);
+    font-size: 1em;
+  }
+
+  // Currency lifted to the cap height and set smaller than the digits, which
+  // stay oversized. The figure keeps its baseline alignment: raising it here
+  // instead would lift the period caption along with the currency, when that
+  // caption belongs on the baseline beside the amount.
+  &.is-currency-superscript &__figure {
+    gap: 0.1em;
+  }
+
+  &.is-currency-superscript &__currency {
+    align-self: flex-start;
+    margin-top: 0.35em;
+    font-size: 1.15em;
+  }
+
+  // Caption drops onto its own line under the figure.
+  &.is-period-below &__figure {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &.is-period-below &__period {
+    flex: 1 0 100%;
+    margin-top: 0.2em;
+    font-size: 0.9em;
+  }
+}

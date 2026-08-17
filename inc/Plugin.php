@@ -163,6 +163,14 @@ class Plugin {
 					return true;
 				},
 			),
+			'shadcn/pricing' => array(
+				'namespace' => 'shadcn/pricing',
+				'view_file' => 'pricing/view.js',
+				'check'     => function( $block ) {
+					// Pricing always needs the script if present.
+					return true;
+				},
+			),
 		);
 
 		// Recursively check blocks and inner blocks.

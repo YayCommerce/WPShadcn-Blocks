@@ -1,0 +1,12 @@
+/**
+ * Pricing Price editor styles.
+ *
+ * Which figure shows is decided by a scoped rule the parent Pricing block
+ * injects, keyed on `data-interval-key`. Nothing here hides anything, so a
+ * price block dropped outside a Pricing block still renders visibly.
+ */
+.wp-block-shadcn-pricing-price {
+	.wp-block-shadcn-pricing-price__figure {
+		display: inline-flex;
+	}
+}

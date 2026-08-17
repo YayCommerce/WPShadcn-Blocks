@@ -1,0 +1,13 @@
+/**
+ * Pricing Switch editor styles.
+ *
+ * The control is a drawn stand-in; the parent Pricing block's toolbar is what
+ * flips the preview. The parent also injects the rule that highlights whichever
+ * option matches, because that selector has to name the interval key literally.
+ */
+.wp-block-shadcn-pricing-switch {
+	.wp-block-shadcn-pricing-switch__control,
+	.wp-block-shadcn-pricing-switch__option {
+		cursor: default;
+	}
+}

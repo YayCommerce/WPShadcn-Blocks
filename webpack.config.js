@@ -24,6 +24,7 @@ class FixInteractivityPlugin {
       { name: "accordion", imports: ["store", "getContext"] },
       { name: "sonner", imports: ["store", "getContext"] },
       { name: "tabs", imports: ["store", "getContext"] },
+      { name: "pricing", imports: ["store", "getContext"] },
     ];
 
     blocks.forEach(({ name, imports }) => {
@@ -103,6 +104,10 @@ function buildEntry() {
       "src/extensions/core-button-icon/index.js"
     ),
     "blocks/tabs/view": path.resolve(__dirname, "src/blocks/tabs/view.js"),
+    "blocks/pricing/view": path.resolve(
+      __dirname,
+      "src/blocks/pricing/view.js"
+    ),
   };
 }
 

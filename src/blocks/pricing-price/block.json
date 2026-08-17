@@ -1,0 +1,74 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "shadcn/pricing-price",
+  "version": "1.0.0",
+  "title": "Pricing Price",
+  "category": "shadcn",
+  "description": "A price figure that follows the billing interval of the Pricing block around it.",
+  "keywords": [
+    "price",
+    "amount",
+    "cost",
+    "billing"
+  ],
+  "textdomain": "shadcn-blocks",
+  "ancestor": [
+    "shadcn/pricing"
+  ],
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "__experimentalFontWeight": true,
+      "__experimentalFontFamily": true,
+      "__experimentalLetterSpacing": true
+    }
+  },
+  "attributes": {
+    "currency": {
+      "type": "string",
+      "default": "$"
+    },
+    "currencyPlacement": {
+      "type": "string",
+      "default": "inline",
+      "enum": [
+        "inline",
+        "superscript"
+      ]
+    },
+    "periodPlacement": {
+      "type": "string",
+      "default": "inline",
+      "enum": [
+        "inline",
+        "below"
+      ]
+    },
+    "prices": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "usesContext": [
+    "shadcn/intervals"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "shadcn/pricing-switch",
+  "version": "1.0.0",
+  "title": "Pricing Switch",
+  "category": "shadcn",
+  "description": "Chooses the billing interval for every price inside the surrounding Pricing block.",
+  "keywords": [
+    "switch",
+    "toggle",
+    "billing",
+    "monthly",
+    "yearly"
+  ],
+  "textdomain": "shadcn-blocks",
+  "ancestor": [
+    "shadcn/pricing"
+  ],
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "color": {
+      "background": false,
+      "text": true
+    },
+    "spacing": {
+      "margin": true
+    },
+    "typography": {
+      "fontSize": true,
+      "__experimentalFontWeight": true
+    }
+  },
+  "attributes": {
+    "variant": {
+      "type": "string",
+      "default": "switch",
+      "enum": [
+        "switch",
+        "segmented"
+      ]
+    },
+    "justification": {
+      "type": "string",
+      "default": "center",
+      "enum": [
+        "left",
+        "center",
+        "right"
+      ]
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "usesContext": [
+    "shadcn/intervals"
+  ]
+}

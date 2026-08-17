@@ -1,0 +1,20 @@
+/**
+ * Pricing editor styles.
+ *
+ * The preview rule itself is injected inline by edit.js, because it has to
+ * interpolate the previewed interval key.
+ */
+.wp-block-shadcn-pricing {
+	width: 100%;
+}
+
+.wp-block-shadcn-pricing__interval-row {
+	display: flex;
+	align-items: flex-end;
+	gap: 0.5rem;
+	margin-bottom: 0.75rem;
+
+	> :first-child {
+		flex: 1 1 auto;
+	}
+}
