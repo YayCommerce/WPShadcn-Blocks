@@ -69,6 +69,7 @@ function shadcn_blocks_init() {
 	require_once SHADCN_BLOCKS_DIR . 'inc/Avatar.php';
 	require_once SHADCN_BLOCKS_DIR . 'inc/Icons.php';
 	require_once SHADCN_BLOCKS_DIR . 'inc/Pricing.php';
+	require_once SHADCN_BLOCKS_DIR . 'inc/BlockStyles.php';
 	\ShadcnBlocks\Icons::init();
 }
 add_action( 'plugins_loaded', 'shadcn_blocks_init' );

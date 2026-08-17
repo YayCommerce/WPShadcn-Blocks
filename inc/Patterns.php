@@ -54,8 +54,38 @@ class Patterns {
 	private function __construct() {
 		// Default priority runs after the theme registers the `shadcn`
 		// pattern categories on init priority 1.
+		add_action( 'init', array( $this, 'register_pattern_categories' ), 2 );
 		add_action( 'init', array( $this, 'register_patterns' ) );
 		add_filter( 'shadcn_ai_pattern_hints', array( $this, 'add_pattern_hints' ) );
+	}
+
+	/**
+	 * Register the section categories this plugin's pattern files declare.
+	 *
+	 * The theme registers the `shadcn` categories, but not the per-section
+	 * ones. A pattern naming a category that nobody registered is filed under
+	 * `shadcn` alone and the declaration silently does nothing, so register
+	 * them here rather than leave the headers decorative.
+	 */
+	public function register_pattern_categories() {
+		if ( ! function_exists( 'register_block_pattern_category' ) ) {
+			return;
+		}
+
+		$categories = array(
+			'hero'    => __( 'Hero', 'shadcn-blocks' ),
+			'pricing' => __( 'Pricing', 'shadcn-blocks' ),
+		);
+
+		$registry = \WP_Block_Pattern_Categories_Registry::get_instance();
+
+		foreach ( $categories as $slug => $label ) {
+			if ( $registry->is_registered( $slug ) ) {
+				continue;
+			}
+
+			register_block_pattern_category( $slug, array( 'label' => $label ) );
+		}
 	}
 
 	/**
