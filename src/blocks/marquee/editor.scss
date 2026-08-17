@@ -1,9 +1,14 @@
 /**
  * Marquee block editor styles.
  *
- * Editor preview is a static, un-duplicated horizontal row so authors edit a
- * single InnerBlocks tree. The seamless-loop animation only exists on the
- * frontend (rendered by render.php), never in the editor.
+ * Authors edit a single InnerBlocks tree, so the editor cannot reproduce the
+ * frontend's duplicated, seamless loop — render.php emits each item twice for
+ * that. The preview instead pans the real row across the visible area and back
+ * (see `.is-preview-playing`), which conveys the direction and the configured
+ * speed without ever showing the empty gap a one-way scroll would leave.
+ *
+ * Preview runs on insert; the toolbar's pause button restores the static row
+ * for comfortable editing.
  */
 .wp-block-shadcn-marquee {
 	.wp-block-shadcn-marquee__editor-row {
@@ -15,6 +20,8 @@
 		border: 1px dashed var(--wp--preset--color--border, #e5e5e5);
 		border-radius: 8px;
 		background: var(--wp--preset--color--muted, rgba(0, 0, 0, 0.02));
+		/* Lets the keyframes below refer to this box's width via `cqw`. */
+		container-type: inline-size;
 
 		.block-editor-block-list__layout {
 			display: flex;
@@ -34,5 +41,47 @@
 	.wp-block-shadcn-marquee-item {
 		flex: 0 0 auto;
 		min-width: 120px;
+	}
+
+	/* Playing: hide the scrollbar and pan the row instead. */
+	&.is-preview-playing .wp-block-shadcn-marquee__editor-row {
+		overflow-x: hidden;
+
+		.block-editor-block-list__layout {
+			animation: shadcn-marquee-editor-preview
+				var(--marquee-editor-duration, 30s) ease-in-out infinite alternate;
+		}
+
+		/* Right-travelling marquees start from the far end. */
+		&[data-direction="right"] .block-editor-block-list__layout {
+			animation-direction: alternate-reverse;
+		}
+
+		/* Never animate away from whatever the author is typing in. */
+		&:focus-within .block-editor-block-list__layout {
+			animation-play-state: paused;
+		}
+	}
+}
+
+/* Travels exactly the distance the row overflows its container: `100%` is the
+ * row's own width, `100cqw` the visible width, so the row stops flush with the
+ * right edge rather than sliding into empty space. Rows that already fit
+ * resolve to a positive value and simply do not move. */
+@keyframes shadcn-marquee-editor-preview {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(min(0px, calc(-100% + 100cqw)));
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.wp-block-shadcn-marquee.is-preview-playing
+		.wp-block-shadcn-marquee__editor-row
+		.block-editor-block-list__layout {
+		animation: none;
 	}
 }
