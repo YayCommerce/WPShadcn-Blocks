@@ -36,8 +36,8 @@ registerBlockType(metadata.name, {
         stroke-linejoin="round"
         aria-hidden="true"
       >
-        <rect width="20" height="12" x="2" y="6" rx="6"></rect>
-        <circle cx="16" cy="12" r="2"></circle>
+        <rect width="20" height="12" x="2" y="6" rx="6" fill="none"></rect>
+        <circle cx="16" cy="12" r="2" fill="none"></circle>
       </svg>
     ),
   },
