@@ -14,11 +14,57 @@ if ( ! function_exists( 'shadcn_blocks_register_block_styles' ) ) {
 	 * The check list replaces the bullet with a tick drawn as a mask, so it
 	 * takes its colour from `currentColor` and therefore follows the text and
 	 * dark mode without a second rule.
+	 *
+	 * The sticky column pins a group to the top of the viewport while a taller
+	 * sibling scrolls past it. Core's own position support would do this, but
+	 * it only renders when the active theme opts in via `settings.position`,
+	 * and these patterns ship with the plugin, not the theme.
+	 *
+	 * The divided group rules its own children rather than asking every row to
+	 * carry a border and matching padding, so rows stay plain blocks that can
+	 * be duplicated or reordered without any styling to keep in sync.
 	 */
 	function shadcn_blocks_register_block_styles() {
 		if ( ! function_exists( 'register_block_style' ) ) {
 			return;
 		}
+
+		register_block_style(
+			'core/group',
+			array(
+				'name'         => 'shadcn-sticky',
+				'label'        => __( 'Sticky column', 'shadcn-blocks' ),
+				'inline_style' => '
+/* Below the columns breakpoint the siblings stack, so there is nothing left to
+   scroll past and pinning would only strand the group mid-screen. */
+@media (min-width: 782px) {
+	.wp-block-group.is-style-shadcn-sticky {
+		position: sticky;
+		top: calc(2rem + var(--wp-admin--admin-bar--position-offset, 0px));
+	}
+}
+',
+			)
+		);
+
+		register_block_style(
+			'core/group',
+			array(
+				'name'         => 'shadcn-divided',
+				'label'        => __( 'Divided rows', 'shadcn-blocks' ),
+				'inline_style' => '
+.wp-block-group.is-style-shadcn-divided > * {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid var(--wp--preset--color--border, #e5e5e5);
+}
+
+.wp-block-group.is-style-shadcn-divided > *:first-child {
+	padding-top: 0;
+}
+',
+			)
+		);
 
 		register_block_style(
 			'core/list',
