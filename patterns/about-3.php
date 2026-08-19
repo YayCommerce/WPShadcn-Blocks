@@ -10,12 +10,12 @@
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","about"],"patternName":"shadcn/about-3","name":"About 3"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}},"backgroundColor":"background"} -->
 <div class="wp-block-group alignwide has-background-background-color has-background" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"760px"}} -->
-<div class="wp-block-group"><!-- wp:heading {"fontSize":"5-xl"} -->
-<h2 class="wp-block-heading has-5-xl-font-size">Software built with people in mind</h2>
+<div class="wp-block-group"><!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"fontSize":"5-xl"} -->
+<h2 class="wp-block-heading has-text-align-center has-5-xl-font-size">About Our Company</h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"textColor":"muted-foreground","fontSize":"lg"} -->
-<p class="has-muted-foreground-color has-text-color has-lg-font-size">We help teams turn ideas into working products without waiting on scarce engineering time, pairing thoughtful design with tools anyone can pick up.</p>
+<!-- wp:paragraph {"style":{"typography":{"textAlign":"center"}},"textColor":"muted-foreground","fontSize":"lg"} -->
+<p class="has-text-align-center has-muted-foreground-color has-text-color has-lg-font-size">We are dedicated to providing innovative solutions that empower our customers.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -99,16 +99,16 @@
 
 <!-- wp:group {"style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|8","bottom":"var:preset|spacing|8","left":"var:preset|spacing|7","right":"var:preset|spacing|7"},"blockGap":"var:preset|spacing|8"}},"backgroundColor":"muted"} -->
 <div class="wp-block-group has-muted-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--8);padding-right:var(--wp--preset--spacing--7);padding-bottom:var(--wp--preset--spacing--8);padding-left:var(--wp--preset--spacing--7)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"640px"}} -->
-<div class="wp-block-group"><!-- wp:heading {"fontSize":"3-xl"} -->
-<h2 class="wp-block-heading has-3-xl-font-size">Where we stand today</h2>
+<div class="wp-block-group"><!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"fontSize":"3-xl"} -->
+<h2 class="wp-block-heading has-text-align-center has-3-xl-font-size">Where we stand today</h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"textColor":"muted-foreground"} -->
-<p class="has-muted-foreground-color has-text-color">A quick look at the impact our platform has had for the teams building on it.</p>
+<!-- wp:paragraph {"style":{"typography":{"textAlign":"center"}},"textColor":"muted-foreground"} -->
+<p class="has-text-align-center has-muted-foreground-color has-text-color">A quick look at the impact our platform has had for the teams building on it.</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|6"}},"layout":{"type":"grid","minimumColumnWidth":"9rem"}} -->
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|6"}},"layout":{"type":"grid","minimumColumnWidth":"9rem","columnCount":4}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:heading {"level":3,"fontSize":"4-xl"} -->
 <h3 class="wp-block-heading has-4-xl-font-size">250+</h3>
