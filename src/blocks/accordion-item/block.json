@@ -25,6 +25,22 @@
       "type": "string",
       "default": ""
     },
+    "summary": {
+      "type": "string",
+      "default": ""
+    },
+    "iconId": {
+      "type": "number",
+      "default": 0
+    },
+    "iconUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "iconAlt": {
+      "type": "string",
+      "default": ""
+    },
     "disabled": {
       "type": "boolean",
       "default": false

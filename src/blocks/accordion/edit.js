@@ -8,6 +8,7 @@ import {
 } from "@wordpress/block-editor";
 import { __ } from "@wordpress/i18n";
 import {
+  RangeControl,
   ToggleControl,
   __experimentalToggleGroupControl as ToggleGroupControl,
   __experimentalToggleGroupControlOption as ToggleGroupControlOption,
@@ -34,7 +35,18 @@ const HEADING_LEVELS = [2, 3, 4, 5, 6];
  * @return {Element} Block edit element.
  */
 export default function Edit({ attributes, setAttributes }) {
-  const { headingLevel, allowMultiple, outlined } = attributes;
+  const {
+    headingLevel,
+    allowMultiple,
+    outlined,
+    openFirst,
+    autoplay,
+    autoplayDelay,
+  } = attributes;
+
+  // Opening one item on load and rotating between items both assume a single
+  // open item, so neither is offered once multiple items may be open.
+  const singleOpen = !allowMultiple;
 
   const blockProps = useBlockProps({
     className: outlined
@@ -121,6 +133,71 @@ export default function Edit({ attributes, setAttributes }) {
               onChange={(value) => setAttributes({ outlined: value })}
             />
           </ToolsPanelItem>
+
+          {singleOpen && (
+            <ToolsPanelItem
+              label={__("Open first item", "shadcn-blocks")}
+              isShownByDefault
+              hasValue={() => !!openFirst}
+              onDeselect={() => setAttributes({ openFirst: false })}
+            >
+              <ToggleControl
+                __nextHasNoMarginBottom
+                label={__("Open first item", "shadcn-blocks")}
+                help={__(
+                  "Show the first item already open when the page loads.",
+                  "shadcn-blocks"
+                )}
+                checked={!!openFirst || !!autoplay}
+                disabled={!!autoplay}
+                onChange={(value) => setAttributes({ openFirst: value })}
+              />
+            </ToolsPanelItem>
+          )}
+
+          {singleOpen && (
+            <ToolsPanelItem
+              label={__("Auto rotate", "shadcn-blocks")}
+              isShownByDefault
+              hasValue={() => !!autoplay}
+              onDeselect={() =>
+                setAttributes({ autoplay: false, autoplayDelay: 5000 })
+              }
+            >
+              <ToggleControl
+                __nextHasNoMarginBottom
+                label={__("Auto rotate", "shadcn-blocks")}
+                help={__(
+                  "Open each item in turn, with a progress bar counting down to the next one. Always starts on the first item.",
+                  "shadcn-blocks"
+                )}
+                checked={!!autoplay}
+                onChange={(value) => setAttributes({ autoplay: value })}
+              />
+            </ToolsPanelItem>
+          )}
+
+          {singleOpen && autoplay && (
+            <ToolsPanelItem
+              label={__("Time per item", "shadcn-blocks")}
+              isShownByDefault
+              hasValue={() => autoplayDelay !== 5000}
+              onDeselect={() => setAttributes({ autoplayDelay: 5000 })}
+            >
+              <RangeControl
+                __next40pxDefaultSize
+                __nextHasNoMarginBottom
+                label={__("Time per item (seconds)", "shadcn-blocks")}
+                value={(autoplayDelay ?? 5000) / 1000}
+                min={1}
+                max={30}
+                step={1}
+                onChange={(value) =>
+                  setAttributes({ autoplayDelay: (value ?? 5) * 1000 })
+                }
+              />
+            </ToolsPanelItem>
+          )}
         </ToolsPanel>
       </InspectorControls>
       <div {...innerBlocksProps} />

@@ -6,8 +6,11 @@ import {
   useInnerBlocksProps,
   RichText,
   InspectorControls,
+  MediaUpload,
+  MediaUploadCheck,
 } from "@wordpress/block-editor";
 import {
+  Button,
   ToggleControl,
   __experimentalToolsPanel as ToolsPanel,
   __experimentalToolsPanelItem as ToolsPanelItem,
@@ -53,7 +56,7 @@ function Chevron() {
  * @return {Element} Block edit element.
  */
 export default function Edit({ attributes, setAttributes, context }) {
-  const { title, disabled } = attributes;
+  const { title, summary, iconId, iconUrl, iconAlt, disabled } = attributes;
   const headingLevel = context["shadcn/headingLevel"] || 3;
   const TagName = `h${headingLevel}`;
 
@@ -76,8 +79,76 @@ export default function Edit({ attributes, setAttributes, context }) {
       <InspectorControls>
         <ToolsPanel
           label={__("Settings", "shadcn-blocks")}
-          resetAll={() => setAttributes({ disabled: false })}
+          resetAll={() =>
+            setAttributes({
+              disabled: false,
+              iconId: 0,
+              iconUrl: "",
+              iconAlt: "",
+            })
+          }
         >
+          <ToolsPanelItem
+            label={__("Icon", "shadcn-blocks")}
+            isShownByDefault
+            hasValue={() => !!iconUrl}
+            onDeselect={() =>
+              setAttributes({ iconId: 0, iconUrl: "", iconAlt: "" })
+            }
+          >
+            <MediaUploadCheck>
+              <MediaUpload
+                allowedTypes={["image"]}
+                value={iconId || undefined}
+                onSelect={(media) =>
+                  setAttributes({
+                    iconId: media?.id ?? 0,
+                    iconUrl: media?.url ?? "",
+                    iconAlt: media?.alt ?? "",
+                  })
+                }
+                render={({ open }) => (
+                  <div className="shadcn-accordion-item__icon-control">
+                    {iconUrl && (
+                      <img
+                        src={iconUrl}
+                        alt={iconAlt}
+                        width="28"
+                        height="28"
+                        style={{ borderRadius: "0.375rem" }}
+                      />
+                    )}
+                    <Button
+                      __next40pxDefaultSize
+                      variant="secondary"
+                      onClick={open}
+                    >
+                      {iconUrl
+                        ? __("Replace icon", "shadcn-blocks")
+                        : __("Select icon", "shadcn-blocks")}
+                    </Button>
+                    {iconUrl && (
+                      <Button
+                        __next40pxDefaultSize
+                        variant="tertiary"
+                        isDestructive
+                        onClick={() =>
+                          setAttributes({
+                            iconId: 0,
+                            iconUrl: "",
+                            iconAlt: "",
+                          })
+                        }
+                      >
+                        {__("Remove", "shadcn-blocks")}
+                      </Button>
+                    )}
+                  </div>
+                )}
+              />
+            </MediaUploadCheck>
+          </ToolsPanelItem>
+
           <ToolsPanelItem
             label={__("Disabled", "shadcn-blocks")}
             isShownByDefault
@@ -100,13 +171,30 @@ export default function Edit({ attributes, setAttributes, context }) {
       <div {...blockProps}>
         <TagName className="wp-block-shadcn-accordion-item__heading">
           <span className="wp-block-shadcn-accordion-item__trigger">
+            <span className="wp-block-shadcn-accordion-item__label">
+              {iconUrl && (
+                <img
+                  className="wp-block-shadcn-accordion-item__icon"
+                  src={iconUrl}
+                  alt={iconAlt}
+                />
+              )}
+              <RichText
+                tagName="span"
+                className="wp-block-shadcn-accordion-item__title"
+                value={title || ""}
+                onChange={(value) => setAttributes({ title: value })}
+                placeholder={__("Accordion title", "shadcn-blocks")}
+                allowedFormats={[]}
+              />
+            </span>
             <RichText
               tagName="span"
-              className="wp-block-shadcn-accordion-item__title"
-              value={title || ""}
-              onChange={(value) => setAttributes({ title: value })}
-              placeholder={__("Accordion title", "shadcn-blocks")}
-              allowedFormats={[]}
+              className="wp-block-shadcn-accordion-item__summary"
+              value={summary || ""}
+              onChange={(value) => setAttributes({ summary: value })}
+              placeholder={__("Summary (optional)", "shadcn-blocks")}
+              allowedFormats={["core/bold", "core/italic"]}
             />
             <Chevron />
           </span>

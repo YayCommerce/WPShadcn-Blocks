@@ -38,6 +38,18 @@
     "outlined": {
       "type": "boolean",
       "default": false
+    },
+    "openFirst": {
+      "type": "boolean",
+      "default": false
+    },
+    "autoplay": {
+      "type": "boolean",
+      "default": false
+    },
+    "autoplayDelay": {
+      "type": "number",
+      "default": 5000
     }
   },
   "providesContext": {

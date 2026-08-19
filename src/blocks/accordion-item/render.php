@@ -30,6 +30,9 @@ if ( ! function_exists( 'block_shadcn_accordion_item_render' ) ) {
 		$trigger_id  = $item_id . '-trigger';
 		$panel_id    = $item_id . '-panel';
 		$title       = isset( $attributes['title'] ) ? (string) $attributes['title'] : '';
+		$summary     = isset( $attributes['summary'] ) ? (string) $attributes['summary'] : '';
+		$icon_url    = isset( $attributes['iconUrl'] ) ? (string) $attributes['iconUrl'] : '';
+		$icon_alt    = isset( $attributes['iconAlt'] ) ? (string) $attributes['iconAlt'] : '';
 		$disabled    = ! empty( $attributes['disabled'] );
 
 		// Heading level from parent context; clamp to h2–h6, default h3.
@@ -41,9 +44,11 @@ if ( ! function_exists( 'block_shadcn_accordion_item_render' ) ) {
 		$tag   = 'h' . $level;
 
 		// `open` holds this item's local state used only in multiple mode.
+		// `disabled` is read by the store so autoplay skips this item.
 		$context = array(
-			'id'   => $item_id,
-			'open' => false,
+			'id'       => $item_id,
+			'open'     => false,
+			'disabled' => $disabled,
 		);
 
 		$item_classes = 'wp-block-shadcn-accordion-item';
@@ -64,6 +69,7 @@ if ( ! function_exists( 'block_shadcn_accordion_item_render' ) ) {
 		<div
 			<?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			<?php echo wp_interactivity_data_wp_context( $context, 'shadcn/accordion' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+			data-wp-init--register="callbacks.register"
 		>
 			<<?php echo esc_attr( $tag ); ?> class="wp-block-shadcn-accordion-item__heading">
 				<button
@@ -76,7 +82,21 @@ if ( ! function_exists( 'block_shadcn_accordion_item_render' ) ) {
 					data-wp-bind--aria-expanded="state.isOpen"
 					data-wp-class--is-open="state.isOpen"
 				>
-					<span class="wp-block-shadcn-accordion-item__title"><?php echo esc_html( $title ); ?></span>
+					<span class="wp-block-shadcn-accordion-item__label">
+						<?php if ( '' !== $icon_url ) : ?>
+							<img
+								class="wp-block-shadcn-accordion-item__icon"
+								src="<?php echo esc_url( $icon_url ); ?>"
+								alt="<?php echo esc_attr( $icon_alt ); ?>"
+								loading="lazy"
+								decoding="async"
+							/>
+						<?php endif; ?>
+						<span class="wp-block-shadcn-accordion-item__title"><?php echo esc_html( $title ); ?></span>
+					</span>
+					<?php if ( '' !== trim( wp_strip_all_tags( $summary ) ) ) : ?>
+						<span class="wp-block-shadcn-accordion-item__summary"><?php echo wp_kses_post( $summary ); ?></span>
+					<?php endif; ?>
 					<?php echo $chevron; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 				</button>
 			</<?php echo esc_attr( $tag ); ?>>
@@ -90,6 +110,13 @@ if ( ! function_exists( 'block_shadcn_accordion_item_render' ) ) {
 			>
 				<div class="wp-block-shadcn-accordion-item__panel-inner">
 					<?php echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+					<?php // Rendered for every item but only shown under `.has-autoplay`, so the root owns the decision. ?>
+					<div class="wp-block-shadcn-accordion-item__progress" aria-hidden="true">
+						<span
+							class="wp-block-shadcn-accordion-item__progress-bar"
+							data-wp-style--width="state.progressWidth"
+						></span>
+					</div>
 				</div>
 			</div>
 		</div>
