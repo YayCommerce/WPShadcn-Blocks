@@ -1,0 +1,20 @@
+/**
+ * Counter Block Styles
+ *
+ * Just the number. Tabular figures keep the width steady while the digits
+ * change, so surrounding content does not shift during the count-up.
+ */
+
+.wp-block-shadcn-counter {
+  box-sizing: border-box;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.1;
+
+  .counter-value {
+    // Tabular figures only on the number: the suffix is usually letters or a
+    // symbol, which these figures would not affect anyway.
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+  }
+}
