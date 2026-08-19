@@ -1,5 +1,9 @@
 plans
 
+# Claude Code state. The skills under .claude/skills/ are part of the repo;
+# agent memory is per-machine scratch and must not be shared.
+.claude/agent-memory/
+
 build/
 node_modules/
 .vscode/
