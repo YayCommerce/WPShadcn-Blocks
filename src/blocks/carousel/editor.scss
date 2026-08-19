@@ -6,6 +6,13 @@
  * wrapper — styling `__content` alone leaves every slide full width and
  * stacked, which is what the editor used to show.
  *
+ * Every block placed inside a slide nests that same pair of wrappers, so the
+ * slide row must be addressed by its exact depth rather than as any
+ * descendant. A descendant selector turns each card's own inner blocks into a
+ * gapped flex row too, and once a slide holds anything with nested inner
+ * blocks — a cover with columns inside it, say — its content is laid out
+ * sideways and pushed clean off the canvas.
+ *
  * Playing: the row is clipped and stepped one slide at a time from
  * `--carousel-editor-index`, so the block previews as a slider.
  * Paused: the transform is dropped and the row scrolls, so every slide stays
@@ -19,13 +26,17 @@
  * list instead — every slide full width, fully readable and editable, no
  * animation to fight while typing.
  */
+
+/* The slide row itself: InnerBlocks' own wrapper, then the block list. */
+$slide-row: "> .block-editor-inner-blocks > .block-editor-block-list__layout";
+
 .wp-block-shadcn-carousel:not(.orientation-vertical) {
 	.wp-block-shadcn-carousel__content {
 		overflow-x: auto;
 		scrollbar-width: thin;
 	}
 
-	.wp-block-shadcn-carousel__content .block-editor-block-list__layout {
+	.wp-block-shadcn-carousel__content #{$slide-row} {
 		display: flex;
 		align-items: stretch;
 		gap: var(--carousel-editor-gap, 1rem);
@@ -51,7 +62,7 @@
 		/* One step is a slide plus a gap. Because the row is exactly as wide as
 		 * its container, `100%` here resolves to the visible width, so
 		 * (100% + gap) / slides is that step. */
-		.wp-block-shadcn-carousel__content .block-editor-block-list__layout {
+		.wp-block-shadcn-carousel__content #{$slide-row} {
 			transform: translateX(
 				calc(
 					-1 * var(--carousel-editor-index, 0) *
@@ -63,16 +74,14 @@
 		}
 
 		/* Never slide away from whatever the author is typing in. */
-		&:focus-within
-			.wp-block-shadcn-carousel__content
-			.block-editor-block-list__layout {
+		&:focus-within .wp-block-shadcn-carousel__content #{$slide-row} {
 			transition: none;
 		}
 	}
 }
 
 .wp-block-shadcn-carousel.orientation-vertical {
-	.wp-block-shadcn-carousel__content .block-editor-block-list__layout {
+	.wp-block-shadcn-carousel__content #{$slide-row} {
 		display: flex;
 		flex-direction: column;
 		gap: var(--carousel-editor-gap, 1rem);
@@ -86,7 +95,7 @@
 @media (prefers-reduced-motion: reduce) {
 	.wp-block-shadcn-carousel.is-preview-playing
 		.wp-block-shadcn-carousel__content
-		.block-editor-block-list__layout {
+		#{$slide-row} {
 		transition: none;
 	}
 }
