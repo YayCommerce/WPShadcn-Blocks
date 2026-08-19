@@ -126,10 +126,18 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
     [clientId]
   );
 
-  const visibleSlides = Math.max(
-    1,
-    "coverflow" === effect ? slidesPerViewDesktop || 3 : slidesPerViewDesktop || 1
-  );
+  // `slidesPerViewDesktop` only drives layout on the frontend for the
+  // coverflow effect (see render.php/style.scss) — a plain carousel is
+  // always pinned to one full-width slide there, however that attribute is
+  // set. The editor used to trust it unconditionally, so an untouched
+  // default (3) squeezed every slide to a third of the block's rendered
+  // width — brutal once that width is a narrow column rather than the full
+  // viewport, and nonsensical for orientation:"vertical", where "N slides
+  // visible" only ever meant N side-by-side columns. Matching the frontend
+  // rule fixes both: one slide, sized to whatever container the carousel is
+  // actually embedded in.
+  const visibleSlides =
+    "coverflow" === effect ? Math.max(1, slidesPerViewDesktop || 3) : 1;
   // Last position that still fills the viewport, so the preview never scrolls
   // past the final slide into blank space.
   const lastIndex = Math.max(0, slideCount - visibleSlides);
@@ -153,10 +161,16 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
     setPreviewIndex((current) => Math.min(current, lastIndex));
   }, [lastIndex]);
 
+  const isVertical = "vertical" === orientation;
+
   const blockProps = useBlockProps({
-    className: isPlaying
-      ? "wp-block-shadcn-carousel is-preview-playing"
-      : "wp-block-shadcn-carousel",
+    className: [
+      "wp-block-shadcn-carousel",
+      `orientation-${orientation}`,
+      isPlaying && !isVertical ? "is-preview-playing" : "",
+    ]
+      .filter(Boolean)
+      .join(" "),
     style: {
       "--carousel-editor-slides": visibleSlides,
       "--carousel-editor-gap": gap || "1rem",
@@ -166,20 +180,22 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
 
   return (
     <>
-      <BlockControls>
-        <ToolbarGroup>
-          <ToolbarButton
-            icon={isPlaying ? PauseIcon : PlayIcon}
-            label={
-              isPlaying
-                ? __("Pause preview", "shadcn-blocks")
-                : __("Play preview", "shadcn-blocks")
-            }
-            isPressed={isPlaying}
-            onClick={() => setIsPlaying(!isPlaying)}
-          />
-        </ToolbarGroup>
-      </BlockControls>
+      {!isVertical && (
+        <BlockControls>
+          <ToolbarGroup>
+            <ToolbarButton
+              icon={isPlaying ? PauseIcon : PlayIcon}
+              label={
+                isPlaying
+                  ? __("Pause preview", "shadcn-blocks")
+                  : __("Play preview", "shadcn-blocks")
+              }
+              isPressed={isPlaying}
+              onClick={() => setIsPlaying(!isPlaying)}
+            />
+          </ToolbarGroup>
+        </BlockControls>
+      )}
       <InspectorControls>
         <PanelBody title={__("Carousel Settings", "shadcn-blocks")}>
           <ToggleControl

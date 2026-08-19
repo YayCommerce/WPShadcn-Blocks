@@ -10,8 +10,16 @@
  * `--carousel-editor-index`, so the block previews as a slider.
  * Paused: the transform is dropped and the row scrolls, so every slide stays
  * reachable for editing.
+ *
+ * Vertical carousels skip all of the above: a horizontal filmstrip has
+ * nothing to do with a rail that pages top-to-bottom on the frontend, and
+ * without a real container height (the frontend gets one from the
+ * `is-style-shadcn-vertical-rail` block style, opt-in per pattern) there is
+ * no sound way to clip-and-step vertically either. They get a plain stacked
+ * list instead — every slide full width, fully readable and editable, no
+ * animation to fight while typing.
  */
-.wp-block-shadcn-carousel {
+.wp-block-shadcn-carousel:not(.orientation-vertical) {
 	.wp-block-shadcn-carousel__content {
 		overflow-x: auto;
 		scrollbar-width: thin;
@@ -60,6 +68,18 @@
 			.block-editor-block-list__layout {
 			transition: none;
 		}
+	}
+}
+
+.wp-block-shadcn-carousel.orientation-vertical {
+	.wp-block-shadcn-carousel__content .block-editor-block-list__layout {
+		display: flex;
+		flex-direction: column;
+		gap: var(--carousel-editor-gap, 1rem);
+	}
+
+	.wp-block-shadcn-carousel-item {
+		width: 100%;
 	}
 }
 
