@@ -91,6 +91,36 @@ if ( ! function_exists( 'shadcn_blocks_register_block_styles' ) ) {
 		);
 
 		register_block_style(
+			'core/group',
+			array(
+				'name'         => 'shadcn-on-dark',
+				'label'        => __( 'On dark', 'shadcn-blocks' ),
+				'inline_style' => '
+/* Links inside a dark panel. The theme paints links with the `primary`
+ * colour, which is near-black in light mode and so invisible against a dark
+ * section. Inheriting instead lets each block keep whatever colour it already
+ * set — a muted nav column stays muted, body copy stays bright — while
+ * buttons, which carry their own colours, are left alone.
+ *
+ * `style.elements.link` is the usual way to do this and cannot be used from a
+ * pattern: its class is a hash of the whole block, so hand-written markup can
+ * never match what save() emits and the block loads as invalid.
+ *
+ * The border token is re-pointed at the value the theme uses in dark mode, so
+ * hairlines from other styles read as a faint light rule rather than the
+ * bright one the light-mode token would paint. */
+.wp-block-group.is-style-shadcn-on-dark {
+	--wp--preset--color--border: rgba(255, 255, 255, 0.1);
+}
+
+.wp-block-group.is-style-shadcn-on-dark a:where(:not(.wp-element-button)) {
+	color: inherit;
+}
+',
+			)
+		);
+
+		register_block_style(
 			'core/list',
 			array(
 				'name'         => 'shadcn-check',
