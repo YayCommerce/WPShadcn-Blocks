@@ -63,6 +63,7 @@ function shadcn_blocks_init() {
 	}
 
 	// Load the main plugin class, pattern loader, free shipping class, avatar and icon helpers.
+	require_once SHADCN_BLOCKS_DIR . 'inc/Traits/SingletonTrait.php';
 	require_once SHADCN_BLOCKS_DIR . 'inc/Plugin.php';
 	require_once SHADCN_BLOCKS_DIR . 'inc/Patterns.php';
 	require_once SHADCN_BLOCKS_DIR . 'inc/FreeShipping.php';
@@ -70,6 +71,9 @@ function shadcn_blocks_init() {
 	require_once SHADCN_BLOCKS_DIR . 'inc/Icons.php';
 	require_once SHADCN_BLOCKS_DIR . 'inc/Pricing.php';
 	require_once SHADCN_BLOCKS_DIR . 'inc/BlockStyles.php';
+	// AI Layout Builder: plans pages out of the `shadcn/*` patterns this
+	// plugin registers, so it loads after the pattern loader above.
+	require_once SHADCN_BLOCKS_DIR . 'inc/AiLayoutBuilder/Caller.php';
 	\ShadcnBlocks\Icons::init();
 }
 add_action( 'plugins_loaded', 'shadcn_blocks_init' );

@@ -50,6 +50,11 @@ if [ -d "build" ]; then
     cp -r build "$DEST_DIR/"
 fi
 
+# Block patterns (the AI Layout Builder plans from these)
+if [ -d "patterns" ]; then
+    cp -r patterns "$DEST_DIR/"
+fi
+
 # Languages
 if [ -d "languages" ]; then
     cp -r languages "$DEST_DIR/"
