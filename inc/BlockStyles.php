@@ -106,14 +106,27 @@ if ( ! function_exists( 'shadcn_blocks_register_block_styles' ) ) {
  * pattern: its class is a hash of the whole block, so hand-written markup can
  * never match what save() emits and the block loads as invalid.
  *
- * The border token is re-pointed at the value the theme uses in dark mode, so
- * hairlines from other styles read as a faint light rule rather than the
- * bright one the light-mode token would paint. */
+ * The border and muted-foreground tokens are re-pointed at the values the theme
+ * uses in dark mode, so hairlines read as a faint light rule and secondary copy
+ * lifts off the dark ground, rather than the light-mode values which assume a
+ * pale background underneath them. */
 .wp-block-group.is-style-shadcn-on-dark {
 	--wp--preset--color--border: rgba(255, 255, 255, 0.1);
+	--wp--preset--color--muted-foreground: #a1a1a1;
 }
 
 .wp-block-group.is-style-shadcn-on-dark a:where(:not(.wp-element-button)) {
+	color: inherit;
+}
+
+/* Headings do not inherit the group\'s text colour: theme.json sets
+ * `elements.heading.color.text` to the `foreground` preset, which WordPress
+ * emits as `:root :where(h1,…,h6)` and which therefore beats plain inheritance
+ * — painting every heading in a dark panel near-black on near-black. Matching
+ * that with one extra class outweighs it, while the inner `:where()` keeps
+ * specificity low enough that a heading setting its own palette colour still
+ * wins. */
+.wp-block-group.is-style-shadcn-on-dark :where(h1, h2, h3, h4, h5, h6) {
 	color: inherit;
 }
 ',
@@ -154,6 +167,35 @@ if ( ! function_exists( 'shadcn_blocks_register_block_styles' ) ) {
 
 :root {
 	--shadcn-check-mask: url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23000\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-linejoin=\'round\'%3E%3Cpath d=\'M20 6 9 17l-5-5\'/%3E%3C/svg%3E");
+}
+',
+			)
+		);
+
+		register_block_style(
+			'core/list',
+			array(
+				'name'         => 'shadcn-plain',
+				'label'        => __( 'Plain list', 'shadcn-blocks' ),
+				'inline_style' => '
+/* Navigation columns are lists semantically but never read as bullets. Using
+ * core/list keeps a footer column one block instead of one paragraph per link,
+ * which also keeps the AI layout catalog from filling up with link labels it
+ * has no business rewriting. */
+.wp-block-list.is-style-shadcn-plain {
+	list-style: none;
+	padding-left: 0;
+}
+
+/* The theme underlines content links, which is right for prose and wrong for a
+ * column of twenty nav labels. The rule is restored on hover so the affordance
+ * is not lost. */
+.wp-block-list.is-style-shadcn-plain a:where(:not(.wp-element-button)) {
+	text-decoration: none;
+}
+
+.wp-block-list.is-style-shadcn-plain a:where(:not(.wp-element-button)):hover {
+	text-decoration: underline;
 }
 ',
 			)
