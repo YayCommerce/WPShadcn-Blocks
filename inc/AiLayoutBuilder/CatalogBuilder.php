@@ -26,30 +26,118 @@ class CatalogBuilder {
 	const MEDIA_BLOCK_NAMES = array( 'core/video', 'core/embed' );
 
 	/**
+	 * Transient name prefix. The pattern set's fingerprint completes the key.
+	 */
+	const CACHE_KEY_PREFIX = 'shadcn_ai_catalog_';
+
+	/**
+	 * Only garbage collection: a changed pattern produces a different key
+	 * rather than a stale hit, so the entry never needs to expire to stay
+	 * correct.
+	 */
+	const CACHE_TTL = WEEK_IN_SECONDS;
+
+	/**
 	 * Build the catalog: slug/title/description/categories/textSlots/structure
 	 * for every `shadcn/*` registered pattern, including patterns with zero
 	 * text slots.
 	 *
+	 * Cached: building it parses every pattern's block tree, and the result
+	 * only changes when a pattern file does.
+	 *
 	 * @return array[]
 	 */
 	public function build() {
-		$catalog  = array();
-		$hints    = ( new PatternHintReader() )->hints();
-		$patterns = \WP_Block_Patterns_Registry::get_instance()->get_all_registered();
+		$patterns  = $this->registered_patterns();
+		$hints     = ( new PatternHintReader() )->hints();
+		$cache_key = self::CACHE_KEY_PREFIX . $this->fingerprint( $patterns, $hints );
+		$cached    = get_transient( $cache_key );
 
-		// get_all_registered() returns array_values() of its internal
-		// registry — a plain indexed array (0, 1, 2...), NOT keyed by
-		// pattern slug. The slug lives in each element's own 'name' field.
-		// (A stub used during standalone testing returned an associative
-		// array keyed by slug, which masked this — every real pattern was
-		// silently skipped in production since the array's numeric index
-		// never matched the 'shadcn/' prefix check.)
-		foreach ( $patterns as $pattern ) {
+		if ( is_array( $cached ) ) {
+			return $cached;
+		}
+
+		$catalog = $this->build_catalog( $patterns, $hints );
+
+		set_transient( $cache_key, $catalog, self::CACHE_TTL );
+
+		return $catalog;
+	}
+
+	/**
+	 * Every registered pattern whose slug carries this theme's prefix.
+	 *
+	 * get_all_registered() returns array_values() of its internal registry —
+	 * a plain indexed array (0, 1, 2...), NOT keyed by pattern slug. The slug
+	 * lives in each element's own 'name' field. (A stub used during standalone
+	 * testing returned an associative array keyed by slug, which masked this —
+	 * every real pattern was silently skipped in production since the array's
+	 * numeric index never matched the 'shadcn/' prefix check.)
+	 *
+	 * @return array[]
+	 */
+	private function registered_patterns() {
+		$patterns = array();
+
+		foreach ( \WP_Block_Patterns_Registry::get_instance()->get_all_registered() as $pattern ) {
 			$slug = isset( $pattern['name'] ) ? $pattern['name'] : '';
 
 			if ( 0 !== strpos( $slug, self::SLUG_PREFIX ) ) {
 				continue;
 			}
+
+			$patterns[] = $pattern;
+		}
+
+		return $patterns;
+	}
+
+	/**
+	 * Identity of the current pattern set, as a cache key component. Catches a
+	 * pattern being added, removed, renamed or edited — including while one is
+	 * being authored — without parsing any block markup.
+	 *
+	 * Hashes each pattern's content rather than its file's modification time:
+	 * the registry hydrates content from `filePath` on first read and drops
+	 * the path afterwards, so mtime is only available on some calls and a key
+	 * built from it changes part-way through a request.
+	 *
+	 * The hint map is folded in separately because `AI Hint` headers sit above
+	 * a pattern file's content — editing only a hint leaves every content hash
+	 * untouched and would otherwise keep serving the old catalog.
+	 *
+	 * @param array[]              $patterns Registered `shadcn/*` patterns.
+	 * @param array<string,string> $hints    Slug => AI hint.
+	 * @return string
+	 */
+	private function fingerprint( array $patterns, array $hints ) {
+		$parts = array();
+
+		foreach ( $patterns as $pattern ) {
+			$content = isset( $pattern['content'] ) ? $pattern['content'] : '';
+			$parts[] = $pattern['name'] . ':' . md5( $content );
+		}
+
+		sort( $parts );
+		ksort( $hints );
+
+		$parts[] = 'hints:' . md5( (string) wp_json_encode( $hints ) );
+
+		return md5( implode( '|', $parts ) );
+	}
+
+	/**
+	 * Do the actual parsing work behind the cache.
+	 *
+	 * @param array[]              $patterns Registered `shadcn/*` patterns.
+	 * @param array<string,string> $hints    Slug => AI hint.
+	 * @return array[]
+	 */
+	private function build_catalog( array $patterns, array $hints ) {
+		$catalog = array();
+
+		foreach ( $patterns as $pattern ) {
+			$slug = $pattern['name'];
 
 			// Parse once; both the slot extractor and the structure
 			// collector walk the same tree.
