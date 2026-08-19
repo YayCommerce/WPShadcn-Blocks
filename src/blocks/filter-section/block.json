@@ -1,0 +1,43 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "shadcn/filter-section",
+	"version": "1.0.0",
+	"title": "Filter Section",
+	"category": "shadcn",
+	"parent": [ "shadcn/filterable-sections" ],
+	"icon": "editor-ul",
+	"description": "One labelled section. Its label becomes both the heading and the dropdown option that reveals it.",
+	"textdomain": "shadcn-blocks",
+	"attributes": {
+		"label": {
+			"type": "string",
+			"default": ""
+		},
+		"headingLevel": {
+			"type": "number",
+			"default": 2
+		}
+	},
+	"supports": {
+		"html": false,
+		"reusable": false,
+		"lock": false,
+		"anchor": true,
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"typography": {
+			"fontSize": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

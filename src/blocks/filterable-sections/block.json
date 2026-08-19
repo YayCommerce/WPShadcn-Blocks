@@ -1,0 +1,44 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "shadcn/filterable-sections",
+	"version": "1.0.0",
+	"title": "Filterable Sections",
+	"category": "shadcn",
+	"icon": "filter",
+	"description": "Labelled sections with a dropdown that narrows the page down to one of them.",
+	"keywords": [ "filter", "sections", "categories", "listings", "careers", "jobs" ],
+	"textdomain": "shadcn-blocks",
+	"attributes": {
+		"filterLabel": {
+			"type": "string",
+			"default": "Filter"
+		},
+		"allOptionLabel": {
+			"type": "string",
+			"default": "All"
+		}
+	},
+	"supports": {
+		"html": false,
+		"anchor": true,
+		"align": [ "wide", "full" ],
+		"color": {
+			"background": true,
+			"text": true
+		},
+		"spacing": {
+			"margin": true,
+			"padding": true
+		},
+		"typography": {
+			"fontSize": true
+		}
+	},
+	"allowedBlocks": [ "shadcn/filter-section" ],
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
+}

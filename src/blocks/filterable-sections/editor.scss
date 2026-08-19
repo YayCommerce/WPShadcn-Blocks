@@ -1,0 +1,29 @@
+/**
+ * Filterable Sections block editor styles.
+ *
+ * The filter row renders exactly as it does on the frontend, but must not
+ * actually filter: hiding sections in the editor would hide the content the
+ * author is working on, and the block would look broken rather than filtered.
+ * Blocking pointer events keeps the preview honest without disabling the
+ * control, which would grey it out and misrepresent how it really looks.
+ */
+.wp-block-shadcn-filterable-sections__control {
+	pointer-events: none;
+}
+
+/* InnerBlocks nests the sections two wrappers down — `__sections >
+ * .block-editor-inner-blocks > .block-editor-block-list__layout` — rather
+ * than dropping them straight into `__sections`, so the frontend's flex
+ * column lands on a single wrapper and spaces nothing. Repeat it at the depth
+ * the editor actually uses, or the sections show jammed together.
+ *
+ * Spelling out both child combinators is load-bearing: every card inside a
+ * section nests that same pair of wrappers, so a descendant selector would
+ * lay out the inside of each card as a 4rem-gapped column too. */
+.wp-block-shadcn-filterable-sections__sections
+	> .block-editor-inner-blocks
+	> .block-editor-block-list__layout {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+}

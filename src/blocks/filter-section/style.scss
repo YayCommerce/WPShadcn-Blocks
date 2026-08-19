@@ -1,0 +1,13 @@
+/**
+ * Filter Section block styles.
+ *
+ * The label reads as an oversized section header, so it is sized from the
+ * fluid presets rather than a fixed value and keeps scaling with the viewport
+ * the way the rest of the display type does.
+ */
+.wp-block-shadcn-filter-section__title {
+	margin: 0 0 1.5rem;
+	font-size: var(--wp--preset--font-size--fluid-4-xl, 2.5rem);
+	font-weight: 700;
+	line-height: 1.1;
+}

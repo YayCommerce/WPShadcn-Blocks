@@ -1,0 +1,13 @@
+/**
+ * Filter Section block editor styles.
+ *
+ * Stand-in for the heading when no label is set. It exists only so an
+ * unlabelled section is visibly deliberate in the editor rather than looking
+ * like a section whose heading failed to render.
+ */
+.wp-block-shadcn-filter-section__title-placeholder {
+	margin: 0 0 1.5rem;
+	font-size: var(--wp--preset--font-size--sm, 0.875rem);
+	font-style: italic;
+	color: var(--wp--preset--color--muted-foreground, #737373);
+}
