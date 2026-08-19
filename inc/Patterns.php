@@ -75,6 +75,7 @@ class Patterns {
 		$categories = array(
 			'hero'    => __( 'Hero', 'shadcn-blocks' ),
 			'pricing' => __( 'Pricing', 'shadcn-blocks' ),
+			'careers' => __( 'Careers', 'shadcn-blocks' ),
 		);
 
 		$registry = \WP_Block_Pattern_Categories_Registry::get_instance();
