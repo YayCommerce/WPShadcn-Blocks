@@ -88,7 +88,7 @@
             (err && err.message) ||
             __(
               "Something went wrong generating the layout. Please try again.",
-              "shadcn"
+              "shadcn-blocks"
             );
 
           // On a total-plan-failure (422), the server includes per-entry
@@ -119,23 +119,23 @@
       el(
         PluginSidebarMoreMenuItem,
         { target: PLUGIN_NAME, icon: "art" },
-        __("AI Layout Builder", "shadcn")
+        __("AI Layout Builder", "shadcn-blocks")
       ),
       el(
         PluginSidebar,
         {
           name: PLUGIN_NAME,
           icon: "art",
-          title: __("AI Layout Builder", "shadcn"),
+          title: __("AI Layout Builder", "shadcn-blocks"),
         },
         el(
           PanelBody,
           null,
           el(TextareaControl, {
-            label: __("Describe the layout you want", "shadcn"),
+            label: __("Describe the layout you want", "shadcn-blocks"),
             help: __(
               "e.g. “landing page with a hero, three features, and a footer”",
-              "shadcn"
+              "shadcn-blocks"
             ),
             value: prompt,
             onChange: setPrompt,
@@ -152,7 +152,7 @@
               isBusy: loading,
               className: "shadcn-ai-layout-builder__generate",
             },
-            loading ? __("Generating…", "shadcn") : __("Generate", "shadcn")
+            loading ? __("Generating…", "shadcn-blocks") : __("Generate", "shadcn-blocks")
           ),
           loading &&
             el(
@@ -195,7 +195,7 @@
                     null,
                     __(
                       "Preview isn't available in this WordPress version, but you can still insert the layout below.",
-                      "shadcn"
+                      "shadcn-blocks"
                     )
                   )
             ),
@@ -206,12 +206,12 @@
               el(
                 Button,
                 { variant: "primary", onClick: handleInsert },
-                __("Insert", "shadcn")
+                __("Insert", "shadcn-blocks")
               ),
               el(
                 Button,
                 { variant: "tertiary", onClick: resetPanel },
-                __("Discard", "shadcn")
+                __("Discard", "shadcn-blocks")
               )
             )
         )

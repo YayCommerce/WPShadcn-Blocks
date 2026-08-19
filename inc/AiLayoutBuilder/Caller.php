@@ -66,6 +66,15 @@ class Caller {
 			true
 		);
 
+		// Without this the panel's __() calls have no JSON translations to
+		// read and every string stays in English, however complete the
+		// plugin's .po files are.
+		wp_set_script_translations(
+			'shadcn-ai-layout-builder',
+			'shadcn-blocks',
+			SHADCN_BLOCKS_DIR . 'languages'
+		);
+
 		wp_enqueue_style(
 			'shadcn-ai-layout-builder',
 			SHADCN_BLOCKS_URL . 'inc/AiLayoutBuilder/style.css',
