@@ -54,11 +54,16 @@ function initCarousel( carousel ) {
 
 	// Embla options. Coverflow centres the active slide and must not trim the
 	// snaps, otherwise the first and last slides cannot reach the middle.
+	// `containScroll: 'trimSnaps'` is documented as a no-op once `loop` is
+	// on, but empirically it isn't: paired with `loop: true` it can collapse
+	// the whole snap list down to a single entry (`[0]`), which silently
+	// disables both dragging and autoplay — there is nowhere left to scroll
+	// to. Skipping it whenever looping sidesteps the interaction entirely.
 	const options = {
 		loop,
 		axis: orientation === 'vertical' ? 'y' : 'x',
 		align: isCoverflow ? 'center' : 'start',
-		containScroll: isCoverflow ? false : 'trimSnaps',
+		containScroll: isCoverflow || loop ? false : 'trimSnaps',
 		container: containerSelector,
 		slides: slidesSelector,
 	};
@@ -77,6 +82,38 @@ function initCarousel( carousel ) {
 
 	// Initialize Embla.
 	const embla = EmblaCarousel( viewport, options, plugins );
+
+	// Embla only loops when every slide could be moved to the far end and the
+	// rest would still cover the viewport — in practice the slides other than
+	// the tallest one must together be at least as tall as it. A horizontal
+	// carousel satisfies that for free (each slide is one viewport wide, so
+	// any two slides already exceed it), but a vertical rail takes its height
+	// from CSS, which knows nothing about how many slides there are or how
+	// tall they grew. A rail taller than that budget makes Embla drop back to
+	// `loop: false` with no error: scrolling simply stops dead on the last
+	// slide. Cap the viewport to the height that still permits looping so
+	// `loop` keeps meaning loop, rather than leaving it silently broken.
+	//
+	// Only the frontend can measure this, and only after layout, so it can't
+	// move into the stylesheet. The cap is applied once at init; a later
+	// viewport resize leaves it in place rather than recomputing.
+	if ( 'vertical' === orientation && loop && ! embla.internalEngine().options.loop ) {
+		const slideHeights = embla
+			.slideNodes()
+			.map( ( slide ) => slide.getBoundingClientRect().height );
+
+		if ( slideHeights.length > 1 ) {
+			const loopBudget =
+				slideHeights.reduce( ( sum, height ) => sum + height, 0 ) -
+				Math.max( ...slideHeights );
+
+			if ( loopBudget > 0 && loopBudget < viewport.getBoundingClientRect().height ) {
+				viewport.style.height = `${ Math.floor( loopBudget ) }px`;
+				embla.reInit();
+			}
+		}
+	}
+
 	// Arrow navigation.
 	if ( prevButton ) {
 		prevButton.addEventListener( 'click', () => {
