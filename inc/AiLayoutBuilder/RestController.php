@@ -53,8 +53,21 @@ class RestController {
 	 * Gated on edit_theme_options (not edit_posts) — this route spends an
 	 * admin-configured, cost-bearing external credential; edit_posts would
 	 * let any Contributor-level account independently drive billed requests.
+	 *
+	 * The theme requirement is re-checked here rather than trusted from
+	 * registration time: a theme switch mid-session must not leave a live
+	 * route that spends money to produce markup the active theme cannot
+	 * render.
 	 */
 	public function check_permission() {
+		if ( ! Caller::is_supported() ) {
+			return new \WP_Error(
+				'shadcn_ai_layout_unsupported_theme',
+				__( 'The AI Layout Builder requires the Shadcn theme, or a child theme of it, to be active.', 'shadcn-blocks' ),
+				array( 'status' => 403 )
+			);
+		}
+
 		return current_user_can( 'edit_theme_options' );
 	}
 

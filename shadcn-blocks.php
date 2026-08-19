@@ -26,13 +26,27 @@ define( 'SHADCN_BLOCKS_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SHADCN_BLOCKS_URL', plugin_dir_url( __FILE__ ) );
 
 /**
- * Check if the Shadcn theme is active.
+ * Whether the Shadcn theme — or a child of it — is the active theme.
+ *
+ * get_template() names the parent's directory even when a child theme is
+ * active, so a Shadcn child passes exactly the same checks as the parent.
+ *
+ * The text domain is checked as well as the directory name: a theme installed
+ * from a GitHub archive lands in a folder like `WPShadcn-main`, and renaming a
+ * folder should not switch the blocks off.
  *
  * @return bool
  */
 function shadcn_blocks_is_theme_active() {
-	$theme = wp_get_theme();
-	return 'shadcn' === $theme->get_template() || 'WPShadcn' === $theme->get_template();
+	$template = strtolower( (string) get_template() );
+
+	if ( in_array( $template, array( 'shadcn', 'wpshadcn' ), true ) ) {
+		return true;
+	}
+
+	$parent = wp_get_theme( get_template() );
+
+	return 'shadcn' === strtolower( (string) $parent->get( 'TextDomain' ) );
 }
 
 /**

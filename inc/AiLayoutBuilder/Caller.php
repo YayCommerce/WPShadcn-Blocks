@@ -17,6 +17,23 @@ use ShadcnBlocks\Traits\SingletonTrait;
 class Caller {
 	use SingletonTrait;
 
+	/**
+	 * Whether the builder is allowed to run at all.
+	 *
+	 * It plans pages out of `shadcn/*` patterns built from `shadcn/*` blocks,
+	 * and the markup it inserts only renders as designed under the Shadcn
+	 * theme's presets — so it requires that theme, or a child of it. The
+	 * plugin bootstrap already refuses to load under any other theme; this
+	 * repeats the check so the feature stays inert if the file is ever loaded
+	 * some other way.
+	 *
+	 * @return bool
+	 */
+	public static function is_supported() {
+		return function_exists( 'shadcn_blocks_is_theme_active' )
+			&& shadcn_blocks_is_theme_active();
+	}
+
 	protected function __construct() {
 		require_once __DIR__ . '/TextSlotHtml.php';
 		require_once __DIR__ . '/PatternHintReader.php';
@@ -84,4 +101,6 @@ class Caller {
 	}
 }
 
-Caller::get_instance();
+if ( Caller::is_supported() ) {
+	Caller::get_instance();
+}
