@@ -75,7 +75,11 @@ $postarr = array(
 	'post_name'    => $slug,
 	'post_type'    => 'page',
 	'post_status'  => 'publish',
-	'post_content' => $content,
+	// wp_insert_post()/wp_update_post() unslash what they are given, so raw
+	// content loses every backslash. That silently mangles the \uXXXX escapes
+	// WordPress itself writes into block attributes — a `<strong>`
+	// in an attribute would preview as literal `u003cstrong`.
+	'post_content' => wp_slash( $content ),
 	'meta_input'   => array( SHADCN_PREVIEW_META => $name ),
 );
 

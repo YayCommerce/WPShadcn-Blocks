@@ -162,8 +162,11 @@ $allowed_prefixes = array(
 	'is-size-',
 	// core/image sizeSlug, e.g. size-large.
 	'size-',
-	// core/column and core/columns vertical alignment.
+	// core/column vertical alignment (align-self on the single column).
 	'is-vertically-aligned-',
+	// core/columns vertical alignment (align-items on the row). Core styles
+	// it in wp-includes/blocks/columns/style.css.
+	'are-vertically-aligned-',
 	// core flex layout justification, e.g. is-content-justification-center.
 	'is-content-justification-',
 	// core/cover position support.
