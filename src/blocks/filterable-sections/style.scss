@@ -23,6 +23,8 @@
 	font-weight: 500;
 }
 
+/* ---------------------------------------------------------------- dropdown */
+
 .wp-block-shadcn-filterable-sections__select-wrap {
 	position: relative;
 	display: inline-flex;
@@ -72,13 +74,84 @@
 	}
 }
 
+/* ----------------------------------------------------------- button rail */
+
+.wp-block-shadcn-filterable-sections__buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.25rem;
+}
+
+/* Idle filters read as ghost buttons; the chosen one fills in, so the active
+ * filter is legible without relying on colour alone against the others. */
+.wp-block-shadcn-filterable-sections__button {
+	appearance: none;
+	border: 0;
+	margin: 0;
+	padding: 0.5rem 0.75rem;
+	border-radius: var(--radius, 0.625rem);
+	background-color: transparent;
+	color: inherit;
+	font-family: inherit;
+	font-size: var(--wp--preset--font-size--sm, 0.875rem);
+	line-height: 1.5;
+	text-align: left;
+	cursor: pointer;
+
+	&:hover {
+		background-color: var(--wp--preset--color--accent, #f2f2f2);
+	}
+
+	&.is-active {
+		background-color: var(--wp--preset--color--secondary, #f2f2f2);
+		font-weight: 500;
+	}
+
+	&:focus-visible {
+		outline: 2px solid var(--wp--preset--color--ring, #0a0a0b);
+		outline-offset: 2px;
+	}
+}
+
+/* --------------------------------------------------------- side placement */
+
+/* Below the breakpoint the rail sits above the sections instead of beside
+ * them. It is deliberately not hidden: the filter is the only way to narrow
+ * the list, so dropping it on small screens would take the feature away from
+ * exactly the visitors who scroll most. */
+@media (min-width: 782px) {
+	.wp-block-shadcn-filterable-sections.has-control-side {
+		display: grid;
+		grid-template-columns: minmax(0, 14rem) minmax(0, 1fr);
+		gap: 3rem;
+		align-items: start;
+
+		.wp-block-shadcn-filterable-sections__control {
+			flex-direction: column;
+			align-items: stretch;
+			margin-bottom: 0;
+		}
+
+		.wp-block-shadcn-filterable-sections__buttons {
+			flex-direction: column;
+		}
+	}
+}
+
+/* ---------------------------------------------------------------- sections */
+
 /* A flex column rather than margins on the sections: `gap` collapses along
  * with a section when the filter hides it, so filtering never leaves the
- * blank band a bottom margin would strand behind. */
+ * blank band a bottom margin would strand behind.
+ *
+ * The gap is the block's own block-gap, published by render.php as a custom
+ * property so an author can close it up — a feed of rows that carry their own
+ * dividers wants no seam between groups, while headed sections want plenty.
+ * The editor reads the same property, so the two cannot disagree. */
 .wp-block-shadcn-filterable-sections__sections {
 	display: flex;
 	flex-direction: column;
-	gap: 4rem;
+	gap: var(--shadcn-filter-sections-gap, 4rem);
 }
 
 .wp-block-shadcn-filter-section.is-filtered-out {

@@ -6,7 +6,12 @@ import {
 	InspectorControls,
 	useBlockProps,
 } from '@wordpress/block-editor';
-import { PanelBody, SelectControl, TextControl } from '@wordpress/components';
+import {
+	PanelBody,
+	SelectControl,
+	TextControl,
+	ToggleControl,
+} from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 /**
@@ -37,7 +42,7 @@ const HEADING_LEVELS = [
  * @return {Element} Block edit element.
  */
 export default function Edit( { attributes, setAttributes } ) {
-	const { label, headingLevel } = attributes;
+	const { label, headingLevel, showLabel } = attributes;
 
 	const blockProps = useBlockProps( {
 		className: 'wp-block-shadcn-filter-section',
@@ -58,23 +63,43 @@ export default function Edit( { attributes, setAttributes } ) {
 						value={ label }
 						onChange={ ( value ) => setAttributes( { label: value } ) }
 					/>
-					<SelectControl
-						label={ __( 'Heading level', 'shadcn-blocks' ) }
-						value={ headingLevel }
-						options={ HEADING_LEVELS }
-						onChange={ ( value ) =>
-							setAttributes( { headingLevel: parseInt( value, 10 ) } )
-						}
+					<ToggleControl
+						label={ __( 'Show label as heading', 'shadcn-blocks' ) }
+						help={ __(
+							'Turn off to keep this section filterable without printing a heading above it.',
+							'shadcn-blocks'
+						) }
+						checked={ showLabel }
+						onChange={ ( value ) => setAttributes( { showLabel: value } ) }
 					/>
+					{ showLabel && (
+						<SelectControl
+							label={ __( 'Heading level', 'shadcn-blocks' ) }
+							value={ headingLevel }
+							options={ HEADING_LEVELS }
+							onChange={ ( value ) =>
+								setAttributes( { headingLevel: parseInt( value, 10 ) } )
+							}
+						/>
+					) }
 				</PanelBody>
 			</InspectorControls>
 
 			<div { ...blockProps }>
-				{ label ? (
+				{ /* With the heading turned off the label still matters — it is what
+				     the filter matches on — so the editor keeps showing it as a
+				     caption, or the author cannot tell these sections apart. */ }
+				{ label && showLabel && (
 					<HeadingTag className="wp-block-shadcn-filter-section__title">
 						{ label }
 					</HeadingTag>
-				) : (
+				) }
+				{ label && ! showLabel && (
+					<p className="wp-block-shadcn-filter-section__title-placeholder">
+						{ label }
+					</p>
+				) }
+				{ ! label && (
 					<p className="wp-block-shadcn-filter-section__title-placeholder">
 						{ __( 'Unlabelled section — always visible', 'shadcn-blocks' ) }
 					</p>

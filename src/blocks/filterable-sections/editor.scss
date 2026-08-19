@@ -25,5 +25,5 @@
 	> .block-editor-block-list__layout {
 	display: flex;
 	flex-direction: column;
-	gap: 4rem;
+	gap: var(--shadcn-filter-sections-gap, 4rem);
 }

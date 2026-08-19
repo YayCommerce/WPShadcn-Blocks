@@ -12,6 +12,10 @@
  * it stays visible under every selection — the way to keep an intro or a
  * standing "featured" group above the filtered ones.
  *
+ * `showLabel` separates the two jobs the label does: a section can still be
+ * filterable by its label while printing no heading, which is what a feed of
+ * rows wants when each row already names its own category.
+ *
  * @package ShadcnBlocks
  *
  * @var array    $attributes Block attributes.
@@ -29,13 +33,15 @@ if ( $heading_level < 1 || $heading_level > 6 ) {
 }
 $heading_tag = 'h' . $heading_level;
 
+$show_label = ! isset( $attributes['showLabel'] ) || (bool) $attributes['showLabel'];
+
 $wrapper_attributes = get_block_wrapper_attributes(
 	'' !== $label ? array( 'data-filter-label' => $label ) : array()
 );
 ?>
 
 <div <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-	<?php if ( '' !== $label ) : ?>
+	<?php if ( '' !== $label && $show_label ) : ?>
 		<<?php echo esc_attr( $heading_tag ); ?> class="wp-block-shadcn-filter-section__title">
 			<?php echo esc_html( $label ); ?>
 		</<?php echo esc_attr( $heading_tag ); ?>>

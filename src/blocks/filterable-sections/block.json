@@ -17,6 +17,16 @@
 		"allOptionLabel": {
 			"type": "string",
 			"default": "All"
+		},
+		"control": {
+			"type": "string",
+			"default": "dropdown",
+			"enum": [ "dropdown", "buttons" ]
+		},
+		"controlPosition": {
+			"type": "string",
+			"default": "top",
+			"enum": [ "top", "side" ]
 		}
 	},
 	"supports": {
@@ -29,7 +39,8 @@
 		},
 		"spacing": {
 			"margin": true,
-			"padding": true
+			"padding": true,
+			"blockGap": true
 		},
 		"typography": {
 			"fontSize": true

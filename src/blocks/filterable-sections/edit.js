@@ -7,11 +7,32 @@ import {
 	useBlockProps,
 	store as blockEditorStore,
 } from '@wordpress/block-editor';
-import { PanelBody, TextControl } from '@wordpress/components';
+import { PanelBody, SelectControl, TextControl } from '@wordpress/components';
 import { useSelect } from '@wordpress/data';
 import { __ } from '@wordpress/i18n';
 
 const ALLOWED_BLOCKS = [ 'shadcn/filter-section' ];
+
+/**
+ * Resolve a block-gap value to CSS, mirroring render.php.
+ *
+ * Core only turns `blockGap` into CSS for blocks with layout support, so the
+ * editor has to publish the same custom property the frontend does or the two
+ * would disagree about how far apart the sections sit.
+ *
+ * @param {string|Object} blockGap Raw blockGap attribute value.
+ * @return {string} A CSS length, or '' when unset or unrecognised.
+ */
+function resolveSectionsGap( blockGap ) {
+	const raw = ( typeof blockGap === 'object' && null !== blockGap ? blockGap?.top : blockGap ) || '';
+	const preset = /^var:preset\|spacing\|([A-Za-z0-9-]+)$/.exec( raw.trim() );
+
+	if ( preset ) {
+		return `var(--wp--preset--spacing--${ preset[ 1 ] })`;
+	}
+
+	return /^(0|[0-9]+(\.[0-9]+)?(px|rem|em|vh|vw|%))$/.test( raw.trim() ) ? raw.trim() : '';
+}
 
 /**
  * Two sections, so the dropdown has something to switch between as soon as
@@ -29,7 +50,7 @@ const TEMPLATE = [
  * @return {Element} Block edit element.
  */
 export default function Edit( { attributes, setAttributes, clientId } ) {
-	const { filterLabel, allOptionLabel } = attributes;
+	const { filterLabel, allOptionLabel, control, controlPosition } = attributes;
 
 	// Mirror render.php: the options are the children's labels, de-duplicated
 	// in author order, so the preview shows exactly what the frontend will.
@@ -51,14 +72,40 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 		[ clientId ]
 	);
 
+	const sectionsGap = resolveSectionsGap( attributes.style?.spacing?.blockGap );
+
+	// Mirror render.php's class list so the editor lays the block out exactly
+	// the way the frontend will.
 	const blockProps = useBlockProps( {
-		className: 'wp-block-shadcn-filterable-sections',
+		className: `wp-block-shadcn-filterable-sections has-control-${ control } has-control-${ controlPosition }`,
 	} );
 
 	return (
 		<>
 			<InspectorControls>
 				<PanelBody title={ __( 'Filter Settings', 'shadcn-blocks' ) }>
+					<SelectControl
+						label={ __( 'Control', 'shadcn-blocks' ) }
+						value={ control }
+						options={ [
+							{ label: __( 'Dropdown', 'shadcn-blocks' ), value: 'dropdown' },
+							{ label: __( 'Buttons', 'shadcn-blocks' ), value: 'buttons' },
+						] }
+						onChange={ ( value ) => setAttributes( { control: value } ) }
+					/>
+					<SelectControl
+						label={ __( 'Control position', 'shadcn-blocks' ) }
+						help={ __(
+							'Beside the sections becomes a rail on wide screens and moves above them on narrow ones.',
+							'shadcn-blocks'
+						) }
+						value={ controlPosition }
+						options={ [
+							{ label: __( 'Above the sections', 'shadcn-blocks' ), value: 'top' },
+							{ label: __( 'Beside the sections', 'shadcn-blocks' ), value: 'side' },
+						] }
+						onChange={ ( value ) => setAttributes( { controlPosition: value } ) }
+					/>
 					<TextControl
 						label={ __( 'Filter label', 'shadcn-blocks' ) }
 						help={ __(
@@ -91,22 +138,44 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 								{ filterLabel }
 							</span>
 						) }
-						<span className="wp-block-shadcn-filterable-sections__select-wrap">
-							<select
-								className="wp-block-shadcn-filterable-sections__select"
-								tabIndex={ -1 }
+						{ 'buttons' === control ? (
+							<div
+								className="wp-block-shadcn-filterable-sections__buttons"
 								aria-hidden="true"
 							>
-								<option>{ allOptionLabel }</option>
+								<span className="wp-block-shadcn-filterable-sections__button is-active">
+									{ allOptionLabel }
+								</span>
 								{ labels.map( ( label ) => (
-									<option key={ label }>{ label }</option>
+									<span
+										key={ label }
+										className="wp-block-shadcn-filterable-sections__button"
+									>
+										{ label }
+									</span>
 								) ) }
-							</select>
-						</span>
+							</div>
+						) : (
+							<span className="wp-block-shadcn-filterable-sections__select-wrap">
+								<select
+									className="wp-block-shadcn-filterable-sections__select"
+									tabIndex={ -1 }
+									aria-hidden="true"
+								>
+									<option>{ allOptionLabel }</option>
+									{ labels.map( ( label ) => (
+										<option key={ label }>{ label }</option>
+									) ) }
+								</select>
+							</span>
+						) }
 					</div>
 				) }
 
-				<div className="wp-block-shadcn-filterable-sections__sections">
+				<div
+					className="wp-block-shadcn-filterable-sections__sections"
+					style={ sectionsGap ? { '--shadcn-filter-sections-gap': sectionsGap } : undefined }
+				>
 					<InnerBlocks
 						allowedBlocks={ ALLOWED_BLOCKS }
 						template={ TEMPLATE }

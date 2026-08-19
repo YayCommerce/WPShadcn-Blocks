@@ -5,10 +5,14 @@
  * class rather than the `hidden` attribute: `hidden` carries its
  * `display: none` from the UA stylesheet, so any author-set `display` on a
  * section would quietly outrank it and leave a "hidden" section on screen.
+ *
+ * Either control ends up calling the same `applyFilter`, so the dropdown and
+ * the button rail can never drift apart in what they actually filter.
  */
 
 const ROOT_SELECTOR = '.wp-block-shadcn-filterable-sections';
 const HIDDEN_CLASS = 'is-filtered-out';
+const ACTIVE_CLASS = 'is-active';
 
 /**
  * Wire up a single filterable sections block.
@@ -16,10 +20,18 @@ const HIDDEN_CLASS = 'is-filtered-out';
  * @param {HTMLElement} root The block's root element.
  */
 function initFilterableSections( root ) {
-	const select = root.querySelector( '.wp-block-shadcn-filterable-sections__select' );
 	const container = root.querySelector( '.wp-block-shadcn-filterable-sections__sections' );
 
-	if ( ! select || ! container ) {
+	if ( ! container ) {
+		return;
+	}
+
+	const select = root.querySelector( '.wp-block-shadcn-filterable-sections__select' );
+	const buttons = Array.from(
+		root.querySelectorAll( '.wp-block-shadcn-filterable-sections__button' )
+	);
+
+	if ( ! select && ! buttons.length ) {
 		return;
 	}
 
@@ -31,9 +43,7 @@ function initFilterableSections( root ) {
 		return;
 	}
 
-	const applyFilter = () => {
-		const selected = select.value;
-
+	const applyFilter = ( selected ) => {
 		sections.forEach( ( section ) => {
 			const label = section.dataset.filterLabel || '';
 
@@ -43,13 +53,26 @@ function initFilterableSections( root ) {
 
 			section.classList.toggle( HIDDEN_CLASS, ! isVisible );
 		} );
+
+		buttons.forEach( ( button ) => {
+			const isActive = button.value === selected;
+
+			button.classList.toggle( ACTIVE_CLASS, isActive );
+			button.setAttribute( 'aria-pressed', isActive ? 'true' : 'false' );
+		} );
 	};
 
-	select.addEventListener( 'change', applyFilter );
+	if ( select ) {
+		select.addEventListener( 'change', () => applyFilter( select.value ) );
+	}
+
+	buttons.forEach( ( button ) => {
+		button.addEventListener( 'click', () => applyFilter( button.value ) );
+	} );
 
 	// A browser restoring the previous selection on reload would otherwise
 	// leave the markup showing every section while the control says otherwise.
-	applyFilter();
+	applyFilter( select ? select.value : '' );
 }
 
 /**

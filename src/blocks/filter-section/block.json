@@ -17,6 +17,10 @@
 		"headingLevel": {
 			"type": "number",
 			"default": 2
+		},
+		"showLabel": {
+			"type": "boolean",
+			"default": true
 		}
 	},
 	"supports": {
