@@ -45,6 +45,16 @@
   background: #fff;
 }
 
+/* BlockPreview hard-caps content at 2000px unscaled (Gutenberg's MAX_HEIGHT,
+   set as an inline style on both the scaled wrapper and the preview iframe) —
+   a full multi-section page is far taller, so its bottom never rendered no
+   matter how far this panel scrolled. !important is what outranks an inline
+   style. */
+.shadcn-ai-modal__preview .block-editor-block-preview__content,
+.shadcn-ai-modal__preview .block-editor-block-preview__content iframe {
+  max-height: none !important;
+}
+
 /* Generating: the outline list, one row per planned section. */
 
 .shadcn-ai-progress__list {
