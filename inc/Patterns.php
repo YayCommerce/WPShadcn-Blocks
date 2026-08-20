@@ -83,6 +83,7 @@ class Patterns {
 			'incentives'   => __( 'Incentives', 'shadcn-blocks' ),
 			'industries'   => __( 'Industries', 'shadcn-blocks' ),
 			'process'      => __( 'Process', 'shadcn-blocks' ),
+			'stats'        => __( 'Stats', 'shadcn-blocks' ),
 		);
 
 		$registry = \WP_Block_Pattern_Categories_Registry::get_instance();
