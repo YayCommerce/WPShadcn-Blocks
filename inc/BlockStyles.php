@@ -47,6 +47,17 @@ if ( ! function_exists( 'shadcn_blocks_register_block_styles' ) ) {
 	 *   silently falls back to `loop: false` — `scrollNext()` stops dead at
 	 *   the last slide instead of wrapping. Capping the container below the
 	 *   slides' total restores the size gap Embla's loop check needs.
+	 *
+	 * The hover reveal parks a panel below a row and slides it up on hover.
+	 * `isolation: isolate` is what makes the panel land in the right layer: it
+	 * opens a stacking context on the row, so the `z-index: -1` pseudo paints
+	 * above the row's own background but below every child. Without it the
+	 * panel sinks behind whatever section background sits underneath and is
+	 * never seen. Hover sits behind `@media (hover: hover)` because touch
+	 * browsers leave an emulated hover stuck on the last-tapped element, and
+	 * `:focus-within` carries the same reveal for keyboard users. The panel is
+	 * decoration only — a device that cannot hover never reveals it, so nothing
+	 * informational may be placed inside.
 	 */
 	function shadcn_blocks_register_block_styles() {
 		if ( ! function_exists( 'register_block_style' ) ) {
@@ -218,6 +229,47 @@ if ( ! function_exists( 'shadcn_blocks_register_block_styles' ) ) {
 .wp-block-shadcn-carousel.is-style-shadcn-vertical-rail.orientation-vertical .wp-block-shadcn-carousel-item {
 	flex: 0 0 auto;
 	width: 100%;
+}
+',
+			)
+		);
+
+		register_block_style(
+			'core/group',
+			array(
+				'name'         => 'shadcn-hover-reveal',
+				'label'        => __( 'Hover reveal panel', 'shadcn-blocks' ),
+				'inline_style' => '
+.wp-block-group.is-style-shadcn-hover-reveal {
+	position: relative;
+	overflow: hidden;
+	isolation: isolate;
+}
+
+.wp-block-group.is-style-shadcn-hover-reveal::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+	background: var(--wp--preset--color--muted, #f5f5f5);
+	transform: translateY(100%);
+	transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.wp-block-group.is-style-shadcn-hover-reveal:focus-within::before {
+	transform: translateY(0);
+}
+
+@media (hover: hover) {
+	.wp-block-group.is-style-shadcn-hover-reveal:hover::before {
+		transform: translateY(0);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.wp-block-group.is-style-shadcn-hover-reveal::before {
+		transition: none;
+	}
 }
 ',
 			)
