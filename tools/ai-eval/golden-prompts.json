@@ -1,5 +1,5 @@
 {
-  "description": "Golden prompt set for the AI Layout Builder eval runner (wp shadcn-ai-eval run). expectedSections values map to slug prefixes: hero, features, incentives, cta, logo, blog, header, footer, 404.",
+  "description": "Golden prompt set for the Shadcn AI eval runner (wp shadcn-ai-eval run). expectedSections values map to slug prefixes: hero, features, incentives, cta, logo, blog, header, footer, 404.",
   "prompts": [
     {
       "id": "saas-landing-en",

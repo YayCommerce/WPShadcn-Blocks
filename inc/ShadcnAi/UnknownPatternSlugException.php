@@ -8,6 +8,6 @@
  * @since 1.0.0
  */
 
-namespace ShadcnBlocks\AiLayoutBuilder;
+namespace ShadcnBlocks\ShadcnAi;
 
 class UnknownPatternSlugException extends \RuntimeException {}

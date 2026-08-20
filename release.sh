@@ -50,7 +50,7 @@ if [ -d "build" ]; then
     cp -r build "$DEST_DIR/"
 fi
 
-# Block patterns (the AI Layout Builder plans from these)
+# Block patterns (the Shadcn AI plans from these)
 if [ -d "patterns" ]; then
     cp -r patterns "$DEST_DIR/"
 fi

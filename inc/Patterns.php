@@ -8,7 +8,7 @@
  *
  * WordPress core only auto-loads pattern files from themes, so a plugin has
  * to replicate that behavior itself. Slugs use the `shadcn/` namespace: the
- * AI Layout Builder catalog only indexes `shadcn/*` patterns.
+ * Shadcn AI catalog only indexes `shadcn/*` patterns.
  *
  * @package ShadcnBlocks
  */

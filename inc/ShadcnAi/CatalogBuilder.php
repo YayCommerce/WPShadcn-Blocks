@@ -1,12 +1,12 @@
 <?php
 /**
- * Builds the pattern catalog sent to the AI Layout Builder's LLM endpoint.
+ * Builds the pattern catalog sent to Shadcn AI's LLM endpoint.
  *
  * @package ShadcnBlocks
  * @since 1.0.0
  */
 
-namespace ShadcnBlocks\AiLayoutBuilder;
+namespace ShadcnBlocks\ShadcnAi;
 
 class CatalogBuilder {
 

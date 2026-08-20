@@ -1,6 +1,6 @@
 <?php
 /**
- * Bootstrap for the AI Layout Builder feature.
+ * Bootstrap for the Shadcn AI feature.
  *
  * Lives in the plugin rather than the theme because everything the builder
  * offers comes from here: the `shadcn/*` patterns it plans with and the
@@ -10,7 +10,7 @@
  * @since 1.0.0
  */
 
-namespace ShadcnBlocks\AiLayoutBuilder;
+namespace ShadcnBlocks\ShadcnAi;
 
 use ShadcnBlocks\Traits\SingletonTrait;
 
@@ -65,8 +65,8 @@ class Caller {
 		$version = SHADCN_BLOCKS_VERSION;
 
 		wp_enqueue_script(
-			'shadcn-ai-layout-builder',
-			SHADCN_BLOCKS_URL . 'inc/AiLayoutBuilder/script.js',
+			'shadcn-ai',
+			SHADCN_BLOCKS_URL . 'inc/ShadcnAi/script.js',
 			array(
 				'wp-plugins',
 				'wp-editor',
@@ -87,14 +87,14 @@ class Caller {
 		// read and every string stays in English, however complete the
 		// plugin's .po files are.
 		wp_set_script_translations(
-			'shadcn-ai-layout-builder',
+			'shadcn-ai',
 			'shadcn-blocks',
 			SHADCN_BLOCKS_DIR . 'languages'
 		);
 
 		wp_enqueue_style(
-			'shadcn-ai-layout-builder',
-			SHADCN_BLOCKS_URL . 'inc/AiLayoutBuilder/style.css',
+			'shadcn-ai',
+			SHADCN_BLOCKS_URL . 'inc/ShadcnAi/style.css',
 			array(),
 			$version
 		);

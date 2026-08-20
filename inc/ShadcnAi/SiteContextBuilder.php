@@ -1,6 +1,6 @@
 <?php
 /**
- * Auto-derives the site's business identity for the AI Layout Builder.
+ * Auto-derives the site's business identity for Shadcn AI.
  *
  * Collected signals: site title, tagline, and (when WooCommerce is active)
  * the most-used product categories. Empty or known-default values are
@@ -11,7 +11,7 @@
  * @since 1.0.0
  */
 
-namespace ShadcnBlocks\AiLayoutBuilder;
+namespace ShadcnBlocks\ShadcnAi;
 
 class SiteContextBuilder {
 

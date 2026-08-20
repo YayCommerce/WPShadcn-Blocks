@@ -8,14 +8,14 @@
  *
  * WordPress core parses only its known pattern headers (Title, Slug,
  * Description, Categories, …) into WP_Block_Patterns_Registry — custom
- * headers never reach the registry. So the hint used to enrich the AI
- * Layout Builder catalog is read straight from the pattern files here.
+ * headers never reach the registry. So the hint used to enrich the Shadcn AI
+ * catalog is read straight from the pattern files here.
  *
  * @package ShadcnBlocks
  * @since 1.0.0
  */
 
-namespace ShadcnBlocks\AiLayoutBuilder;
+namespace ShadcnBlocks\ShadcnAi;
 
 class PatternHintReader {
 
@@ -59,7 +59,7 @@ class PatternHintReader {
 
 		/**
 		 * Lets any plugin that ships its own `shadcn/*` pattern files
-		 * contribute hints for the AI Layout Builder catalog — this plugin's
+		 * contribute hints for the Shadcn AI catalog — this plugin's
 		 * pattern loader included. Runs before the per-request cache is
 		 * returned, so contributed hints are cached alongside the theme's own.
 		 *

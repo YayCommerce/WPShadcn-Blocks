@@ -1,6 +1,6 @@
 <?php
 /**
- * REST route for the AI Layout Builder: prompt in, plan validated, resolved
+ * REST route for the Shadcn AI: prompt in, plan validated, resolved
  * markup + warnings out. Owns the security trust boundary — permission
  * check, rate limit, LLM response shape validation, and slug whitelisting
  * all happen here before anything reaches PlanResolver.
@@ -9,7 +9,7 @@
  * @since 1.0.0
  */
 
-namespace ShadcnBlocks\AiLayoutBuilder;
+namespace ShadcnBlocks\ShadcnAi;
 
 use ShadcnBlocks\Traits\SingletonTrait;
 
@@ -33,7 +33,7 @@ class RestController {
 	public function register_route() {
 		register_rest_route(
 			'shadcn/v1',
-			'/ai-layout/generate',
+			'/ai/generate',
 			array(
 				'methods'             => 'POST',
 				'callback'            => array( $this, 'handle_generate' ),
@@ -62,8 +62,8 @@ class RestController {
 	public function check_permission() {
 		if ( ! Caller::is_supported() ) {
 			return new \WP_Error(
-				'shadcn_ai_layout_unsupported_theme',
-				__( 'The AI Layout Builder requires the Shadcn theme, or a child theme of it, to be active.', 'shadcn-blocks' ),
+				'shadcn_ai_unsupported_theme',
+				__( 'Shadcn AI requires the Shadcn theme, or a child theme of it, to be active.', 'shadcn-blocks' ),
 				array( 'status' => 403 )
 			);
 		}
@@ -72,14 +72,13 @@ class RestController {
 	}
 
 	public function handle_generate( \WP_REST_Request $request ) {
-		$user_id = get_current_user_id();
-
 		// Rate limit is checked FIRST, before any catalog build or LLM call,
-		// to fail closed on cost rather than just on abuse.
-		if ( ! $this->rate_limiter->is_allowed( $user_id ) ) {
+		// to fail closed on cost rather than just on abuse. The cap is
+		// site-wide per day, so it does not read the current user.
+		if ( ! $this->rate_limiter->is_allowed() ) {
 			return new \WP_Error(
-				'shadcn_ai_layout_rate_limited',
-				__( 'You have reached the AI Layout Builder request limit for this hour. Please try again later.', 'shadcn-blocks' ),
+				'shadcn_ai_rate_limited',
+				__( 'This site has reached the Shadcn AI request limit for today. Please try again tomorrow.', 'shadcn-blocks' ),
 				array( 'status' => 429 )
 			);
 		}
@@ -94,7 +93,7 @@ class RestController {
 			$raw_plan   = $llm_client->request( $prompt, $catalog, $site_context );
 		} catch ( LlmRequestException $e ) {
 			return new \WP_Error(
-				'shadcn_ai_layout_llm_error',
+				'shadcn_ai_llm_error',
 				$e->getMessage(),
 				array( 'status' => 502 )
 			);
@@ -115,7 +114,7 @@ class RestController {
 			// ran); an empty catalog means CatalogBuilder found no patterns
 			// to send in the first place — two very different root causes.
 			return new \WP_Error(
-				'shadcn_ai_layout_empty_plan',
+				'shadcn_ai_empty_plan',
 				__( 'No valid layout could be generated from that prompt.', 'shadcn-blocks' ),
 				array(
 					'status'         => 422,
@@ -136,7 +135,7 @@ class RestController {
 			// filter had a bug, not that the LLM is untrustworthy. Fail
 			// closed rather than surface a fatal.
 			return new \WP_Error(
-				'shadcn_ai_layout_resolve_error',
+				'shadcn_ai_resolve_error',
 				__( 'Layout could not be generated.', 'shadcn-blocks' ),
 				array( 'status' => 500 )
 			);

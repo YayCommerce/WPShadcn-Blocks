@@ -1,21 +1,21 @@
 <?php
 /**
- * Settings page for the AI Layout Builder's external endpoint configuration.
+ * Settings page for Shadcn AI's external endpoint configuration.
  *
  * @package ShadcnBlocks
  * @since 1.0.0
  */
 
-namespace ShadcnBlocks\AiLayoutBuilder;
+namespace ShadcnBlocks\ShadcnAi;
 
 use ShadcnBlocks\Traits\SingletonTrait;
 
 class SettingsPage {
 	use SingletonTrait;
 
-	const OPTION_GROUP      = 'shadcn_ai_layout_builder';
-	const OPTION_ENDPOINT   = 'shadcn_ai_layout_endpoint_url';
-	const OPTION_AUTH_TOKEN = 'shadcn_ai_layout_auth_token';
+	const OPTION_GROUP      = 'shadcn_ai_settings';
+	const OPTION_ENDPOINT   = 'shadcn_ai_endpoint_url';
+	const OPTION_AUTH_TOKEN = 'shadcn_ai_auth_token';
 
 	protected function __construct() {
 		add_action( 'admin_menu', array( $this, 'add_admin_menu' ) );
@@ -23,15 +23,39 @@ class SettingsPage {
 	}
 
 	public function add_admin_menu() {
-		// Settings menu rather than Appearance: the feature ships with a
-		// plugin now, and its sibling (Shadcn AI Proxy) sits here too.
-		add_options_page(
-			__( 'AI Layout Builder', 'shadcn-blocks' ),
-			__( 'AI Layout Builder', 'shadcn-blocks' ),
+		// Top-level "Shadcn" menu, config as a submenu — no longer buried under
+		// Settings. The sibling plugin (shadcn-ai-proxy) may be active on the
+		// same site and registers the very same parent slug; whichever's
+		// admin_menu fires first creates the top-level, the other only attaches
+		// its submenu. The guard on $admin_page_hooks (which add_menu_page
+		// populates) is what stops a duplicate top-level entry.
+		global $admin_page_hooks;
+
+		if ( empty( $admin_page_hooks['shadcn'] ) ) {
+			add_menu_page(
+				__( 'Shadcn', 'shadcn-blocks' ),
+				__( 'Shadcn', 'shadcn-blocks' ),
+				'manage_options',
+				'shadcn',
+				'',
+				'dashicons-layout',
+				59
+			);
+		}
+
+		add_submenu_page(
+			'shadcn',
+			__( 'Shadcn AI', 'shadcn-blocks' ),
+			__( 'Shadcn AI', 'shadcn-blocks' ),
 			'manage_options',
-			'shadcn-ai-layout-builder',
+			'shadcn-ai',
 			array( $this, 'render_settings_page' )
 		);
+
+		// add_menu_page auto-adds a first submenu mirroring the parent slug
+		// ("Shadcn" → an empty page). Drop it so the first real submenu becomes
+		// the menu's landing. Idempotent: a no-op once the sibling removed it.
+		remove_submenu_page( 'shadcn', 'shadcn' );
 	}
 
 	public function register_settings() {
@@ -76,7 +100,7 @@ class SettingsPage {
 		if ( '' !== $url && 0 !== strpos( $url, 'https://' ) ) {
 			add_settings_error(
 				self::OPTION_ENDPOINT,
-				'shadcn_ai_layout_non_https',
+				'shadcn_ai_non_https',
 				__( 'AI Endpoint URL must use https://. The previous value was kept.', 'shadcn-blocks' )
 			);
 
@@ -103,7 +127,7 @@ class SettingsPage {
 		}
 		?>
 		<div class="wrap">
-			<h1><?php esc_html_e( 'AI Layout Builder', 'shadcn-blocks' ); ?></h1>
+			<h1><?php esc_html_e( 'Shadcn AI', 'shadcn-blocks' ); ?></h1>
 			<?php settings_errors(); ?>
 			<form method="post" action="options.php">
 				<?php settings_fields( self::OPTION_GROUP ); ?>

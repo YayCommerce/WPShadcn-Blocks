@@ -180,7 +180,7 @@ if ( ! function_exists( 'shadcn_blocks_register_block_styles' ) ) {
 				'inline_style' => '
 /* Navigation columns are lists semantically but never read as bullets. Using
  * core/list keeps a footer column one block instead of one paragraph per link,
- * which also keeps the AI layout catalog from filling up with link labels it
+ * which also keeps the Shadcn AI catalog from filling up with link labels it
  * has no business rewriting. */
 .wp-block-list.is-style-shadcn-plain {
 	list-style: none;

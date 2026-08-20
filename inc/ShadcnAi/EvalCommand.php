@@ -1,6 +1,6 @@
 <?php
 /**
- * WP-CLI eval runner for the AI Layout Builder.
+ * WP-CLI eval runner for Shadcn AI.
  *
  * Exercises the real pipeline (CatalogBuilder → LlmClient → proxy) against
  * the golden prompt set in tools/ai-eval/golden-prompts.json and records
@@ -16,7 +16,7 @@
  * @since 1.0.0
  */
 
-namespace ShadcnBlocks\AiLayoutBuilder;
+namespace ShadcnBlocks\ShadcnAi;
 
 class EvalCommand {
 
@@ -55,8 +55,8 @@ class EvalCommand {
 		$label     = isset( $assoc_args['label'] ) ? sanitize_key( $assoc_args['label'] ) : 'run';
 		$prompt_id = isset( $assoc_args['prompt-id'] ) ? $assoc_args['prompt-id'] : '';
 
-		if ( '' === get_option( 'shadcn_ai_layout_endpoint_url', '' ) ) {
-			\WP_CLI::error( 'AI endpoint URL is not configured. Set it under Appearance → AI Layout Builder first.' );
+		if ( '' === get_option( 'shadcn_ai_endpoint_url', '' ) ) {
+			\WP_CLI::error( 'AI endpoint URL is not configured. Set it under Shadcn → Shadcn AI first.' );
 		}
 
 		$prompts = $this->load_golden_prompts();

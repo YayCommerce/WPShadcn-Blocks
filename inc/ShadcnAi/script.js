@@ -1,7 +1,7 @@
 /**
- * AI Layout Builder — editor sidebar panel.
+ * Shadcn AI — editor sidebar panel.
  *
- * Prompt in, calls the /shadcn/v1/ai-layout/generate REST route, previews
+ * Prompt in, calls the /shadcn/v1/ai/generate REST route, previews
  * the returned blocks read-only, and inserts them into the post being
  * edited on confirmation.
  */
@@ -30,9 +30,9 @@
   var BlockPreview =
     wp.blockEditor.BlockPreview || wp.blockEditor.__experimentalBlockPreview;
 
-  var PLUGIN_NAME = "shadcn-ai-layout-builder";
+  var PLUGIN_NAME = "shadcn-ai";
 
-  function AiLayoutBuilderPanel() {
+  function ShadcnAiPanel() {
     var promptState = useState("");
     var prompt = promptState[0];
     var setPrompt = promptState[1];
@@ -71,7 +71,7 @@
       setPreviewBlocks(null);
 
       wp.apiFetch({
-        path: "/shadcn/v1/ai-layout/generate",
+        path: "/shadcn/v1/ai/generate",
         method: "POST",
         data: { prompt: prompt },
       })
@@ -119,14 +119,14 @@
       el(
         PluginSidebarMoreMenuItem,
         { target: PLUGIN_NAME, icon: "art" },
-        __("AI Layout Builder", "shadcn-blocks")
+        __("Shadcn AI", "shadcn-blocks")
       ),
       el(
         PluginSidebar,
         {
           name: PLUGIN_NAME,
           icon: "art",
-          title: __("AI Layout Builder", "shadcn-blocks"),
+          title: __("Shadcn AI", "shadcn-blocks"),
         },
         el(
           PanelBody,
@@ -150,14 +150,14 @@
               onClick: handleGenerate,
               disabled: loading || !prompt,
               isBusy: loading,
-              className: "shadcn-ai-layout-builder__generate",
+              className: "shadcn-ai__generate",
             },
             loading ? __("Generating…", "shadcn-blocks") : __("Generate", "shadcn-blocks")
           ),
           loading &&
             el(
               "div",
-              { className: "shadcn-ai-layout-builder__loading" },
+              { className: "shadcn-ai__loading" },
               el(Spinner, null)
             ),
           error &&
@@ -166,7 +166,7 @@
               {
                 status: "error",
                 isDismissible: false,
-                className: "shadcn-ai-layout-builder__notice",
+                className: "shadcn-ai__notice",
               },
               error
             ),
@@ -177,14 +177,14 @@
               {
                 status: "warning",
                 isDismissible: false,
-                className: "shadcn-ai-layout-builder__notice",
+                className: "shadcn-ai__notice",
               },
               warnings.join(" ")
             ),
           previewBlocks &&
             el(
               "div",
-              { className: "shadcn-ai-layout-builder__preview" },
+              { className: "shadcn-ai__preview" },
               BlockPreview
                 ? el(BlockPreview, {
                     blocks: previewBlocks,
@@ -202,7 +202,7 @@
           previewBlocks &&
             el(
               "div",
-              { className: "shadcn-ai-layout-builder__actions" },
+              { className: "shadcn-ai__actions" },
               el(
                 Button,
                 { variant: "primary", onClick: handleInsert },
@@ -220,7 +220,7 @@
   }
 
   registerPlugin(PLUGIN_NAME, {
-    render: AiLayoutBuilderPanel,
+    render: ShadcnAiPanel,
     icon: "art",
   });
 })();

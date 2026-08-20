@@ -1,6 +1,6 @@
 <?php
 /**
- * Text-slot HTML helper for the AI Layout Builder.
+ * Text-slot HTML helper for Shadcn AI.
  *
  * Locates the single text node inside a leaf block's `innerHTML` fragment
  * (core/heading, core/paragraph, core/button) and reads/replaces its text
@@ -10,7 +10,7 @@
  * @since 1.0.0
  */
 
-namespace ShadcnBlocks\AiLayoutBuilder;
+namespace ShadcnBlocks\ShadcnAi;
 
 class TextSlotHtml {
 

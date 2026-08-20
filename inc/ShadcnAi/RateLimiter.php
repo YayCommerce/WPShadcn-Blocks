@@ -1,6 +1,10 @@
 <?php
 /**
- * Per-user, per-hour rate limiter for the AI Layout Builder REST route.
+ * Site-wide, per-day rate limiter for the Shadcn AI REST route.
+ *
+ * The cap is on the whole site's spend, not each user's: every eligible
+ * account shares one daily budget, so N admins cannot multiply the bill by N.
+ * The bucket is keyed only by the UTC day, with no user component.
  *
  * Uses a direct atomic SQL increment against wp_options rather than
  * get_transient()/set_transient() or wp_cache_incr(): a plain transient
@@ -14,7 +18,7 @@
  * @since 1.0.0
  */
 
-namespace ShadcnBlocks\AiLayoutBuilder;
+namespace ShadcnBlocks\ShadcnAi;
 
 class RateLimiter {
 
@@ -22,16 +26,15 @@ class RateLimiter {
 	 * Placeholder threshold — no real usage data exists yet to size this
 	 * properly (see plan.md Open Questions). Tune via this constant.
 	 */
-	const LIMIT_PER_HOUR = 20;
+	const LIMIT_PER_DAY = 20;
 
 	/**
-	 * @param int $user_id
-	 * @return bool True if this request is allowed under the current hour's cap.
+	 * @return bool True if this request is allowed under the current day's cap.
 	 */
-	public function is_allowed( $user_id ) {
+	public function is_allowed() {
 		global $wpdb;
 
-		$option_name = $this->option_name( $user_id );
+		$option_name = $this->option_name();
 
 		// phpcs:ignore WordPress.DB.DirectDatabaseQuery -- atomic increment has no Settings-API equivalent.
 		$write_result = $wpdb->query(
@@ -62,15 +65,15 @@ class RateLimiter {
 			return false; // Read failed right after a successful write — fail closed, not "0 requests so far".
 		}
 
-		return (int) $count <= self::LIMIT_PER_HOUR;
+		return (int) $count <= self::LIMIT_PER_DAY;
 	}
 
 	/**
-	 * One row per user per hour bucket — rows naturally stop growing once a
-	 * user stops using the tool. No cleanup job exists yet (accepted v1
-	 * limitation: row count is bounded by realistic usage, not unbounded).
+	 * One row per UTC day for the whole site. At most one new row per day, so
+	 * the option table grows by 365 rows a year at the absolute worst; no
+	 * cleanup job exists yet (accepted v1 limitation).
 	 */
-	private function option_name( $user_id ) {
-		return sprintf( 'shadcn_ai_layout_rl_%d_%s', (int) $user_id, gmdate( 'YmdH' ) );
+	private function option_name() {
+		return sprintf( 'shadcn_ai_rl_%s', gmdate( 'Ymd' ) );
 	}
 }

@@ -1,13 +1,13 @@
 <?php
 /**
- * HTTP client for the configured external AI Layout Builder endpoint.
+ * HTTP client for the configured external Shadcn AI endpoint.
  * Purely an HTTP client — no knowledge of patterns/catalog internals.
  *
  * @package ShadcnBlocks
  * @since 1.0.0
  */
 
-namespace ShadcnBlocks\AiLayoutBuilder;
+namespace ShadcnBlocks\ShadcnAi;
 
 class LlmClient {
 
@@ -31,8 +31,8 @@ class LlmClient {
 	 *                              non-200 response, or malformed JSON.
 	 */
 	public function request( $prompt, array $catalog, array $site_context = array() ) {
-		$endpoint = get_option( 'shadcn_ai_layout_endpoint_url', '' );
-		$token    = get_option( 'shadcn_ai_layout_auth_token', '' );
+		$endpoint = get_option( 'shadcn_ai_endpoint_url', '' );
+		$token    = get_option( 'shadcn_ai_auth_token', '' );
 
 		if ( empty( $endpoint ) ) {
 			throw new LlmRequestException( 'AI endpoint URL is not configured.' );
