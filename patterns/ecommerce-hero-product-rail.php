@@ -27,7 +27,7 @@
 
 <!-- wp:column {"width":"34%"} -->
 <div class="wp-block-column" style="flex-basis:34%"><!-- wp:group {"backgroundColor":"foreground","style":{"spacing":{"padding":{"top":"var:preset|spacing|3","right":"0","bottom":"var:preset|spacing|3","left":"0"},"blockGap":"var:preset|spacing|2"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
-<div class="wp-block-group has-foreground-background-color has-background" style="padding-top:var(--wp--preset--spacing--3);padding-right:0;padding-bottom:var(--wp--preset--spacing--3);padding-left:0"><!-- wp:shadcn/carousel {"autoplay":true,"autoplayDelay":3500,"loop":true,"showArrows":false,"showDots":false,"orientation":"vertical","className":"is-style-shadcn-vertical-rail"} -->
+<div class="wp-block-group has-foreground-background-color has-background" style="padding-top:var(--wp--preset--spacing--3);padding-right:0;padding-bottom:var(--wp--preset--spacing--3);padding-left:0"><!-- wp:shadcn/carousel {"autoplay":true,"autoplayDelay":3500,"loop":true,"showArrows":false,"showDots":false,"slidesPerView":1,"slidesPerViewTablet":1,"slidesPerViewDesktop":1,"orientation":"vertical","className":"is-style-shadcn-vertical-rail"} -->
 <!-- wp:shadcn/carousel-item -->
 <!-- wp:group {"backgroundColor":"card","textColor":"card-foreground","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group has-card-foreground-color has-card-background-color has-text-color has-background"><!-- wp:image {"width":"100%","height":"112px","scale":"cover","sizeSlug":"large"} -->

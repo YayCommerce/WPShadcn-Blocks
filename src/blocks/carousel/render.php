@@ -50,19 +50,24 @@ $wrapper_extra = array();
 
 if ( 'none' !== $effect ) {
 	$wrapper_classes[] = 'has-effect-' . $effect;
-
-	// Slide sizing is published as custom properties only for the effect
-	// styles to read. `slidesPerView` and `gap` are otherwise inert on this
-	// block — every plain carousel is pinned to one full-width slide by CSS —
-	// so scoping them here keeps existing carousels rendering exactly as before.
-	$wrapper_extra['style'] = sprintf(
-		'--carousel-gap:%s;--carousel-slides:%d;--carousel-slides-tablet:%d;--carousel-slides-desktop:%d;',
-		preg_match( '/^[0-9]+(\.[0-9]+)?(px|rem|em|%|vw)$/', (string) $gap ) ? $gap : '1rem',
-		max( 1, (int) $slides_per_view ),
-		max( 1, (int) $slides_per_view_tablet ),
-		max( 1, (int) $slides_per_view_desktop )
-	);
 }
+
+// Slide sizing is published for every carousel, not just the effect ones. The
+// editor has always offered per-breakpoint "slides per view" controls, but the
+// properties they set were previously emitted only under an effect, so a plain
+// carousel silently ignored them and stayed pinned to one full-width slide —
+// the control was there and did nothing.
+//
+// Every carousel in this plugin and the theme now states its slide counts
+// explicitly, so widening this changes no existing layout; a pattern that wants
+// one slide per view says so rather than relying on the emission being skipped.
+$wrapper_extra['style'] = sprintf(
+	'--carousel-gap:%s;--carousel-slides:%d;--carousel-slides-tablet:%d;--carousel-slides-desktop:%d;',
+	preg_match( '/^[0-9]+(\.[0-9]+)?(px|rem|em|%|vw)$/', (string) $gap ) ? $gap : '1rem',
+	max( 1, (int) $slides_per_view ),
+	max( 1, (int) $slides_per_view_tablet ),
+	max( 1, (int) $slides_per_view_desktop )
+);
 
 if ( $show_arrows ) {
 	$wrapper_classes[] = 'has-arrows';

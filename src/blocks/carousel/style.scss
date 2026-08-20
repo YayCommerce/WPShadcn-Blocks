@@ -21,11 +21,37 @@
 	backface-visibility: hidden;
 }
 
+/* Slides are sized from the `--carousel-slides*` properties render.php
+ * publishes. At the default of one slide the calc reduces to `100%`, which is
+ * what every carousel rendered before these properties were honoured outside
+ * the coverflow effect. */
+.wp-block-shadcn-carousel {
+	--carousel-slides-current: var(--carousel-slides, 1);
+
+	@media (min-width: 600px) {
+		--carousel-slides-current: var(--carousel-slides-tablet, 1);
+	}
+
+	@media (min-width: 1024px) {
+		--carousel-slides-current: var(--carousel-slides-desktop, 1);
+	}
+}
+
 .wp-block-shadcn-carousel:not(.block-editor-block-list__block) .wp-block-shadcn-carousel__content .wp-block-shadcn-carousel-item,
 .wp-block-shadcn-carousel:not(.block-editor-block-list__block) .wp-block-shadcn-carousel__content .wp-block-post,
 .wp-block-shadcn-carousel:not(.block-editor-block-list__block) .wp-block-shadcn-carousel__content .wc-block-product {
-    flex: 0 0 100%;
+    flex: 0 0
+        calc(
+            (100% - (var(--carousel-slides-current) - 1) * var(--carousel-gap)) /
+                var(--carousel-slides-current)
+        );
     min-width: 0;
+}
+
+/* A vertical carousel pages top-to-bottom, so horizontal slide counts do not
+ * apply — the vertical-rail style sizes those slides on the cross axis. */
+.wp-block-shadcn-carousel.orientation-vertical {
+	--carousel-slides-current: 1;
 }
 
 .wp-block-shadcn-carousel.orientation-vertical .wp-block-shadcn-carousel__content {
@@ -34,26 +60,19 @@
 
 /* Coverflow effect
  *
- * Opt-in via the `effect` attribute. Slides are sized from the
- * `--carousel-slides*` properties that render.php publishes, then scaled,
- * faded and stacked per frame by view.js so the centred slide reads as the
- * front card. Scoped to `.has-effect-coverflow` so plain carousels keep their
- * existing one-slide-per-view layout.
+ * Opt-in via the `effect` attribute. Slides take their width from the shared
+ * rule above, then this scales, fades and stacks them per frame via view.js so
+ * the centred slide reads as the front card.
  */
 .wp-block-shadcn-carousel.has-effect-coverflow {
-	--carousel-slides-current: var(--carousel-slides, 1);
-
 	.wp-block-shadcn-carousel__viewport {
 		/* Room for the scaled-up centre card to breathe. */
 		padding-block: 1.5rem;
 	}
 
+	/* Slide width comes from the shared rule above; coverflow only adds the
+	 * stacking order its per-frame depth tween needs. */
 	&:not(.block-editor-block-list__block) .wp-block-shadcn-carousel__content .wp-block-shadcn-carousel-item {
-		flex: 0 0
-			calc(
-				(100% - (var(--carousel-slides-current) - 1) * var(--carousel-gap)) /
-					var(--carousel-slides-current)
-			);
 		z-index: var(--shadcn-carousel-depth, 1);
 	}
 
@@ -68,14 +87,6 @@
 		transform: scale(var(--shadcn-carousel-scale, 1));
 		opacity: var(--shadcn-carousel-opacity, 1);
 		will-change: transform, opacity;
-	}
-
-	@media (min-width: 600px) {
-		--carousel-slides-current: var(--carousel-slides-tablet, 2);
-	}
-
-	@media (min-width: 1024px) {
-		--carousel-slides-current: var(--carousel-slides-desktop, 3);
 	}
 }
 
