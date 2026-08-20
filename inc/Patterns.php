@@ -80,6 +80,7 @@ class Patterns {
 			'case-studies' => __( 'Case Studies', 'shadcn-blocks' ),
 			'community'    => __( 'Community', 'shadcn-blocks' ),
 			'changelog'    => __( 'Changelog', 'shadcn-blocks' ),
+			'incentives'   => __( 'Incentives', 'shadcn-blocks' ),
 		);
 
 		$registry = \WP_Block_Pattern_Categories_Registry::get_instance();
