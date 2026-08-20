@@ -39,16 +39,23 @@
     color: #fff;
   }
 
+  // The two chrome-free variants inherit their colour instead of naming
+  // `foreground`. They paint no background of their own, so whatever is behind
+  // them decides what is readable: on the page background inheritance resolves
+  // to `foreground` and nothing changes, while on a painted panel — a promo bar
+  // filled with `primary`, a dark footer — naming `foreground` put near-black
+  // text on a near-black ground. The filled variants below keep an explicit
+  // pair, since they bring their own background and must state both halves.
   &.badge-outline {
     background-color: transparent;
     border-color: var(--wp--preset--color--border, #e5e5e5);
-    color: var(--wp--preset--color--foreground, #0a0a0a);
+    color: inherit;
   }
 
   &.badge-ghost {
     background-color: transparent;
     border-color: transparent;
-    color: var(--wp--preset--color--foreground, #0a0a0a);
+    color: inherit;
   }
 
   &.badge-link {
