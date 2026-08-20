@@ -1,6 +1,10 @@
 <?php
 /**
- * HTTP client for the configured external Shadcn AI endpoint.
+ * HTTP client for the Shadcn AI proxy: the shipped server
+ * (Client::server_url()) with a site token the site earns by registering
+ * itself on first use. A 401 forgets the token so the next attempt
+ * registers fresh — how a rotated token or a moved domain self-heals.
+ *
  * Purely an HTTP client — no knowledge of patterns/catalog internals.
  *
  * @package ShadcnBlocks
@@ -18,39 +22,34 @@ class LlmClient {
 	const MAX_RESPONSE_BYTES = 524288; // 512KB.
 
 	/**
-	 * Send { prompt, catalog, siteContext } to the configured endpoint and
-	 * return the decoded JSON response as-is (shape validation is
-	 * RestController's job, not this class's — see Phase 2 plan).
+	 * Send { prompt, catalogVersion, siteContext } to the AI proxy and return
+	 * the decoded JSON response as-is (shape validation is RestController's
+	 * job, not this class's).
+	 *
+	 * The catalog itself is NOT sent: the proxy holds its own committed copy
+	 * (exported with `wp shadcn-ai-eval export-catalog`), so the request stays
+	 * ~1KB regardless of how many patterns exist. catalogVersion only lets the
+	 * server log version skew — the plan is whitelisted against this site's
+	 * real patterns either way.
 	 *
 	 * @param string $prompt       User's design request.
-	 * @param array  $catalog      Pattern catalog.
 	 * @param array  $site_context Optional site identity hints; omitted from
 	 *                             the request body when empty.
 	 * @return mixed Whatever the endpoint's JSON body decodes to.
-	 * @throws LlmRequestException On missing config, transport error,
+	 * @throws LlmRequestException On transport error, refused registration,
 	 *                              non-200 response, or malformed JSON.
 	 */
-	public function request( $prompt, array $catalog, array $site_context = array() ) {
-		$endpoint = get_option( 'shadcn_ai_endpoint_url', '' );
-		$token    = get_option( 'shadcn_ai_auth_token', '' );
-
-		if ( empty( $endpoint ) ) {
-			throw new LlmRequestException( 'AI endpoint URL is not configured.' );
-		}
-
-		// HTTPS is normally enforced at save time (SettingsPage::sanitize_endpoint_url()),
-		// but the option could be set through a path that bypasses that
-		// sanitize callback (WP-CLI, direct DB import) — re-check here so
-		// the bearer token is never sent in cleartext regardless of how the
-		// option was set.
-		if ( 0 !== strpos( $endpoint, 'https://' ) ) {
-			throw new LlmRequestException( 'AI endpoint URL must use https://.' );
+	public function request( $prompt, array $site_context = array() ) {
+		$endpoint = Client::server_url() . '/?rest_route=/shadcn-ai-proxy/v1/generate';
+		$token    = Client::token_or_register();
+		if ( is_wp_error( $token ) ) {
+			throw new LlmRequestException( $token->get_error_message() );
 		}
 
 		// Clamp below the environment's max_execution_time so PHP doesn't
 		// kill the request before our own HTTP timeout would have fired.
 		$max_execution_time = (int) ini_get( 'max_execution_time' );
-		$timeout             = min( 30, $max_execution_time ?: 30 );
+		$timeout             = min( 30, $max_execution_time ? $max_execution_time : 30 );
 
 		$response = wp_remote_post(
 			$endpoint,
@@ -64,8 +63,8 @@ class LlmClient {
 				'body'                => wp_json_encode(
 					array_merge(
 						array(
-							'prompt'  => $prompt,
-							'catalog' => $catalog,
+							'prompt'         => $prompt,
+							'catalogVersion' => SHADCN_BLOCKS_VERSION,
 						),
 						// Force object encoding — a PHP array with string keys
 						// already encodes as an object, but never send an
@@ -81,14 +80,23 @@ class LlmClient {
 		}
 
 		$status_code = (int) wp_remote_retrieve_response_code( $response );
+		$body        = wp_remote_retrieve_body( $response );
 
 		if ( 200 !== $status_code ) {
-			throw new LlmRequestException(
-				sprintf( 'AI endpoint returned HTTP %d.', $status_code )
-			);
+			// A dead site token self-heals: forget it so the next attempt
+			// registers fresh — also how a moved domain recovers on its own.
+			if ( 401 === $status_code ) {
+				Client::forget_token();
+			}
+			// The proxy's refusal (quota used up, capacity reached) says what
+			// to do; relay its message rather than a bare status code.
+			$json    = json_decode( $body, true );
+			$message = ( is_array( $json ) && isset( $json['message'] ) && is_string( $json['message'] ) )
+				? $json['message']
+				: sprintf( 'AI endpoint returned HTTP %d.', $status_code );
+			throw new LlmRequestException( $message );
 		}
 
-		$body = wp_remote_retrieve_body( $response );
 		$data = json_decode( $body, true );
 
 		if ( null === $data && JSON_ERROR_NONE !== json_last_error() ) {

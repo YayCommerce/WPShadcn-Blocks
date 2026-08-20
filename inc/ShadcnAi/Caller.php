@@ -42,6 +42,7 @@ class Caller {
 		require_once __DIR__ . '/UnknownPatternSlugException.php';
 		require_once __DIR__ . '/PlanResolver.php';
 		require_once __DIR__ . '/LlmRequestException.php';
+		require_once __DIR__ . '/Client.php';
 		require_once __DIR__ . '/LlmClient.php';
 		require_once __DIR__ . '/RateLimiter.php';
 		require_once __DIR__ . '/RestController.php';

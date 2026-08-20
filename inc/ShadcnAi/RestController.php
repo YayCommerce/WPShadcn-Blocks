@@ -47,6 +47,41 @@ class RestController {
 				),
 			)
 		);
+
+		// The AI proxy's registration callback: when this site self-registers,
+		// the proxy calls back here with a fresh challenge — only a live site
+		// running this code can echo it, which is what earns the site token.
+		// Public by design: it discloses nothing but the plugin's presence,
+		// which the register flow needs.
+		register_rest_route(
+			'shadcn/v1',
+			'/ai/ping',
+			array(
+				'methods'             => \WP_REST_Server::READABLE,
+				'callback'            => array( $this, 'handle_ping' ),
+				'permission_callback' => '__return_true',
+				'args'                => array(
+					'challenge' => array(
+						'type'      => 'string',
+						'required'  => false,
+						'maxLength' => 64,
+					),
+				),
+			)
+		);
+	}
+
+	/**
+	 * @param \WP_REST_Request $request the proxy's verification call
+	 * @return \WP_REST_Response
+	 */
+	public function handle_ping( \WP_REST_Request $request ) {
+		return rest_ensure_response(
+			array(
+				'shadcn_ai' => true,
+				'challenge' => (string) $request['challenge'],
+			)
+		);
 	}
 
 	/**
@@ -90,7 +125,7 @@ class RestController {
 
 		try {
 			$llm_client = new LlmClient();
-			$raw_plan   = $llm_client->request( $prompt, $catalog, $site_context );
+			$raw_plan   = $llm_client->request( $prompt, $site_context );
 		} catch ( LlmRequestException $e ) {
 			return new \WP_Error(
 				'shadcn_ai_llm_error',

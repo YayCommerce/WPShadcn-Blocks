@@ -55,8 +55,10 @@ class EvalCommand {
 		$label     = isset( $assoc_args['label'] ) ? sanitize_key( $assoc_args['label'] ) : 'run';
 		$prompt_id = isset( $assoc_args['prompt-id'] ) ? $assoc_args['prompt-id'] : '';
 
-		if ( '' === get_option( 'shadcn_ai_endpoint_url', '' ) ) {
-			\WP_CLI::error( 'AI endpoint URL is not configured. Set it under Shadcn → Shadcn AI first.' );
+		// LlmClient talks to the default AI service and self-registers — only
+		// a server URL blanked via the shadcn_ai_server_url filter is fatal.
+		if ( '' === Client::server_url() ) {
+			\WP_CLI::error( 'No AI server available — the shadcn_ai_server_url filter returned an empty URL.' );
 		}
 
 		$prompts = $this->load_golden_prompts();
@@ -115,7 +117,7 @@ class EvalCommand {
 				// The proxy returns a BARE array of {slug, textSlots} entries —
 				// no envelope object (see the theme's RestController, which
 				// consumes LlmClient::request()'s return directly as the plan).
-				$response = $client->request( $golden['prompt'], $catalog, $site_context );
+				$response = $client->request( $golden['prompt'], $site_context );
 				$plan     = is_array( $response ) ? $response : array();
 
 				if ( empty( $plan ) ) {
@@ -184,6 +186,53 @@ class EvalCommand {
 		if ( ! empty( $missing_hints ) ) {
 			\WP_CLI::warning( 'Patterns missing an AI Hint header: ' . implode( ', ', $missing_hints ) );
 		}
+	}
+
+	/**
+	 * Export the catalog artifact for the AI proxy: the proxy serves every
+	 * remote compose from its own committed copy (data/catalog.json in the
+	 * shadcn-ai-proxy plugin), so clients send only a prompt — this command
+	 * is how that copy is produced. Run it after pattern changes and commit
+	 * the artifact alongside the proxy release that uses it.
+	 *
+	 * ## OPTIONS
+	 *
+	 * <file>
+	 * : Path to write the artifact to (the proxy's data/catalog.json).
+	 *
+	 * @subcommand export-catalog
+	 *
+	 * @param array $args Positional args: [0] output file path.
+	 */
+	public function export_catalog( $args ) {
+		$catalog = ( new CatalogBuilder() )->build();
+
+		if ( empty( $catalog ) ) {
+			\WP_CLI::error( 'Pattern catalog is empty — are the shadcn/* patterns registered?' );
+		}
+
+		$artifact = array(
+			'catalogVersion' => SHADCN_BLOCKS_VERSION,
+			'generatedAt'    => gmdate( 'c' ),
+			'entries'        => $catalog,
+		);
+
+		$written = file_put_contents(
+			$args[0],
+			wp_json_encode( $artifact, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) . "\n"
+		);
+
+		if ( false === $written ) {
+			\WP_CLI::error( sprintf( 'Could not write %s.', $args[0] ) );
+		}
+
+		\WP_CLI::success( sprintf(
+			'Wrote %d entries (%d bytes, catalog version %s) to %s.',
+			count( $catalog ),
+			$written,
+			SHADCN_BLOCKS_VERSION,
+			$args[0]
+		) );
 	}
 
 	/**
