@@ -77,6 +77,7 @@ class Patterns {
 			'pricing' => __( 'Pricing', 'shadcn-blocks' ),
 			'careers' => __( 'Careers', 'shadcn-blocks' ),
 			'awards'  => __( 'Awards', 'shadcn-blocks' ),
+			'case-studies' => __( 'Case Studies', 'shadcn-blocks' ),
 		);
 
 		$registry = \WP_Block_Pattern_Categories_Registry::get_instance();
