@@ -137,7 +137,9 @@ class RestController {
 		}
 
 		try {
-			$llm_client = new LlmClient();
+			// The proxy running on this very install answers in-process — no
+			// HTTP loop back to ourselves, no token; remote otherwise.
+			$llm_client = InProcessProxy::available() ? new InProcessProxy() : new LlmClient();
 			$raw_plan   = $llm_client->request( $prompt, $site_context );
 		} catch ( LlmRequestException $e ) {
 			return new \WP_Error(
@@ -223,7 +225,11 @@ class RestController {
 		$upstream_error = false;
 
 		try {
-			( new LlmClient() )->request_stream(
+			// Same selection as the blocking path: the proxy on this very
+			// install answers in-process, emitting the identical event
+			// sequence, so everything below is transport-blind.
+			$llm_client = InProcessProxy::available() ? new InProcessProxy() : new LlmClient();
+			$llm_client->request_stream(
 				$prompt,
 				$site_context,
 				function ( $event, array $data ) use ( &$plan, &$upstream_error ) {

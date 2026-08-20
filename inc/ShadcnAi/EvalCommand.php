@@ -92,7 +92,9 @@ class EvalCommand {
 		$site_context = ( new SiteContextBuilder() )->build();
 		\WP_CLI::log( 'siteContext sent: ' . ( empty( $site_context ) ? '(none)' : wp_json_encode( $site_context, JSON_UNESCAPED_UNICODE ) ) );
 
-		$client  = new LlmClient();
+		// Same transport selection as the live REST route, so the eval scores
+		// what users actually get on this install.
+		$client  = InProcessProxy::available() ? new InProcessProxy() : new LlmClient();
 		$results = array();
 		$rows    = array();
 
