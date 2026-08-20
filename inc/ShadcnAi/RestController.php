@@ -44,6 +44,15 @@ class RestController {
 						'type'              => 'string',
 						'sanitize_callback' => 'sanitize_text_field',
 					),
+					// Ask for Server-Sent Events: progress frames relayed
+					// from the AI proxy while the model writes, then a final
+					// `result {markup, warnings}` once the plan is resolved
+					// into real block markup here.
+					'stream' => array(
+						'required' => false,
+						'type'     => 'boolean',
+						'default'  => false,
+					),
 				),
 			)
 		);
@@ -123,6 +132,10 @@ class RestController {
 		$catalog         = $catalog_builder->build();
 		$site_context    = ( new SiteContextBuilder() )->build();
 
+		if ( $request->get_param( 'stream' ) ) {
+			$this->handle_generate_stream( $prompt, $catalog, $site_context ); // Never returns.
+		}
+
 		try {
 			$llm_client = new LlmClient();
 			$raw_plan   = $llm_client->request( $prompt, $site_context );
@@ -182,6 +195,131 @@ class RestController {
 				'warnings' => $warnings,
 			)
 		);
+	}
+
+	/**
+	 * Serve the generation as Server-Sent Events and exit. The proxy's
+	 * progress frames (`status`, `entry`) are relayed to the browser as they
+	 * arrive; its final `plan` is intercepted, validated and resolved into
+	 * real block markup HERE — the trust boundary does not move just because
+	 * the transport streams — and leaves as one `result {markup, warnings}`
+	 * event. A stream that ends without `result` or `error` is a dropped
+	 * connection, and the browser treats it as one.
+	 *
+	 * @param string $prompt       The user's design request.
+	 * @param array  $catalog      Pattern catalog (slug whitelist source).
+	 * @param array  $site_context Site identity hints for the proxy.
+	 */
+	private function handle_generate_stream( $prompt, array $catalog, array $site_context ) {
+		// The relay outlives PHP's default limit on a slow generation; the
+		// proxy hop is uncapped and throughput-guarded, so match it.
+		if ( function_exists( 'set_time_limit' ) ) {
+			set_time_limit( 300 );
+		}
+
+		self::begin_event_stream();
+
+		$plan       = null;
+		$upstream_error = false;
+
+		try {
+			( new LlmClient() )->request_stream(
+				$prompt,
+				$site_context,
+				function ( $event, array $data ) use ( &$plan, &$upstream_error ) {
+					if ( 'plan' === $event ) {
+						// Intercepted, not relayed: raw slugs mean nothing to
+						// the browser until they survive the whitelist below.
+						$plan = isset( $data['plan'] ) && is_array( $data['plan'] ) ? $data['plan'] : array();
+						return;
+					}
+					if ( 'error' === $event ) {
+						$upstream_error = true;
+					}
+					self::emit( $event, $data );
+				}
+			);
+		} catch ( LlmRequestException $e ) {
+			self::emit( 'error', array( 'message' => $e->getMessage() ) );
+			exit;
+		}
+
+		if ( $upstream_error ) {
+			exit; // The proxy's own error frame was already relayed.
+		}
+
+		if ( null === $plan ) {
+			self::emit(
+				'error',
+				array( 'message' => __( 'The AI service stopped responding partway through.', 'shadcn-blocks' ) )
+			);
+			exit;
+		}
+
+		// The wait is over but the browser is not done waiting: naming the
+		// build step covers the resolve that follows.
+		self::emit( 'status', array( 'stage' => 'building' ) );
+
+		list( $valid_plan, $warnings ) = $this->validate_and_filter_plan( $plan, $catalog );
+
+		if ( empty( $valid_plan ) ) {
+			self::emit(
+				'error',
+				array(
+					'message'  => __( 'No valid layout could be generated from that prompt.', 'shadcn-blocks' ),
+					'warnings' => $warnings,
+				)
+			);
+			exit;
+		}
+
+		try {
+			$markup = ( new PlanResolver() )->resolve_plan( $valid_plan );
+		} catch ( UnknownPatternSlugException $e ) {
+			self::emit(
+				'error',
+				array( 'message' => __( 'Layout could not be generated.', 'shadcn-blocks' ) )
+			);
+			exit;
+		}
+
+		self::emit(
+			'result',
+			array(
+				'markup'   => $markup,
+				'warnings' => $warnings,
+			)
+		);
+		exit;
+	}
+
+	/**
+	 * Take the response over from WordPress and hold it open: SSE content
+	 * type, no caching, opt out of reverse-proxy buffering, drop every
+	 * output buffer so each event leaves as it is written. Mirrors the
+	 * proxy's transport — the protocol's home is there.
+	 */
+	private static function begin_event_stream() {
+		header( 'Content-Type: text/event-stream; charset=utf-8' );
+		header( 'Cache-Control: no-cache, no-store, must-revalidate' );
+		header( 'X-Accel-Buffering: no' );
+
+		@ini_set( 'zlib.output_compression', '0' ); // phpcs:ignore WordPress.PHP.NoSilencedErrors
+		@ini_set( 'implicit_flush', '1' ); // phpcs:ignore WordPress.PHP.NoSilencedErrors
+		while ( ob_get_level() > 0 ) {
+			ob_end_flush();
+		}
+		ob_implicit_flush( true );
+	}
+
+	/**
+	 * @param string $event SSE event name.
+	 * @param array  $data  JSON payload.
+	 */
+	private static function emit( $event, array $data ) {
+		echo 'event: ' . $event . "\n"; // phpcs:ignore WordPress.Security.EscapeOutput -- SSE protocol frame, name is a literal.
+		echo 'data: ' . wp_json_encode( $data ) . "\n\n"; // phpcs:ignore WordPress.Security.EscapeOutput -- JSON-encoded SSE payload.
+		flush();
 	}
 
 	/**

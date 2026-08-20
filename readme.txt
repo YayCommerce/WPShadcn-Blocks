@@ -4,7 +4,7 @@ Tags: gutenberg, blocks, shadcn
 Requires at least: 6.5
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -126,6 +126,10 @@ The static content will always display, but interactive features (drawer open/cl
 5. Block category in the editor
 
 == Changelog ==
+
+= 1.2.0 =
+* Shadcn AI: prompt-to-layout now opens in a modal with live progress — each planned section is named as the AI writes it, streamed over Server-Sent Events — then a full block preview with Insert, Copy blocks, and Start over. Generation can be cancelled at any point.
+* Shadcn AI: the site now registers itself with the AI service on first use (no endpoint or key to configure); a manually issued token is only needed for sites unreachable from the outside (Settings → Shadcn AI).
 
 = 1.1.0 =
 * Icon picker: add a searchable Lucide icon picker (curated set) to the Badge block and the core Button block, with left/right position and size controls. Icons render as inline SVG and inherit the current text color.

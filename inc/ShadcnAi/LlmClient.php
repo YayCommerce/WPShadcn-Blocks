@@ -105,4 +105,91 @@ class LlmClient {
 
 		return $data;
 	}
+
+	/**
+	 * Streaming twin of request(): asks the proxy for Server-Sent Events and
+	 * calls $on_event(event, data) for every frame as it arrives — `status`
+	 * and `entry` during the model call, then `plan` with the finished plan.
+	 * The caller decides what to do with each (relay, collect, both).
+	 *
+	 * cURL directly rather than wp_remote_post: the WP HTTP API buffers the
+	 * whole body, and a stream that arrives all at once is a spinner, not
+	 * progress. No total timeout — the point is outliving a slow generation;
+	 * a stall is caught by throughput instead (under 1 B/s for 30s aborts).
+	 *
+	 * @param string   $prompt       User's design request.
+	 * @param array    $site_context Optional site identity hints.
+	 * @param callable $on_event     fn(string $event, array $data): void.
+	 * @throws LlmRequestException On registration refusal, transport error,
+	 *                              or an HTTP error response.
+	 */
+	public function request_stream( $prompt, array $site_context, $on_event ) {
+		$endpoint = Client::server_url() . '/?rest_route=/shadcn-ai-proxy/v1/generate';
+		$token    = Client::token_or_register();
+		if ( is_wp_error( $token ) ) {
+			throw new LlmRequestException( $token->get_error_message() );
+		}
+
+		$parser     = new SseFrameParser();
+		$status     = 0;
+		$error_body = '';
+
+		$ch = curl_init( $endpoint );
+		curl_setopt_array(
+			$ch,
+			array(
+				CURLOPT_POST            => true,
+				CURLOPT_POSTFIELDS      => wp_json_encode(
+					array_merge(
+						array(
+							'prompt'         => $prompt,
+							'catalogVersion' => SHADCN_BLOCKS_VERSION,
+							'stream'         => true,
+						),
+						empty( $site_context ) ? array() : array( 'siteContext' => (object) $site_context )
+					)
+				),
+				CURLOPT_HTTPHEADER      => array(
+					'Content-Type: application/json',
+					'Authorization: Bearer ' . $token,
+					'Accept: text/event-stream',
+				),
+				CURLOPT_RETURNTRANSFER  => false,
+				CURLOPT_TIMEOUT         => 0,
+				CURLOPT_CONNECTTIMEOUT  => 15,
+				CURLOPT_LOW_SPEED_LIMIT => 1,
+				CURLOPT_LOW_SPEED_TIME  => 30,
+				CURLOPT_WRITEFUNCTION   => function ( $handle, $chunk ) use ( &$status, &$error_body, $parser, $on_event ) {
+					$status = (int) curl_getinfo( $handle, CURLINFO_RESPONSE_CODE );
+					// A refusal (quota, capacity, auth) arrives as a JSON
+					// body, not a stream; collect it for the error message.
+					if ( $status < 200 || $status >= 300 ) {
+						$error_body .= $chunk;
+						return strlen( $chunk );
+					}
+					foreach ( $parser->push( $chunk ) as $frame ) {
+						call_user_func( $on_event, $frame['event'], $frame['data'] );
+					}
+					return strlen( $chunk );
+				},
+			)
+		);
+		$ok = curl_exec( $ch );
+		curl_close( $ch );
+
+		if ( $status < 200 || $status >= 300 || false === $ok ) {
+			// Same self-heal as the blocking path: a dead token is forgotten
+			// so the next attempt registers fresh.
+			if ( 401 === $status ) {
+				Client::forget_token();
+			}
+			$json    = json_decode( $error_body, true );
+			$message = ( is_array( $json ) && isset( $json['message'] ) && is_string( $json['message'] ) )
+				? $json['message']
+				: ( $status >= 300
+					? sprintf( 'AI endpoint returned HTTP %d.', $status )
+					: __( 'The AI service could not be reached. Please try again.', 'shadcn-blocks' ) );
+			throw new LlmRequestException( $message );
+		}
+	}
 }
