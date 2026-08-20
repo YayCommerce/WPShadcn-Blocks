@@ -28,7 +28,7 @@ class CatalogBuilder {
 	/**
 	 * Transient name prefix. The pattern set's fingerprint completes the key.
 	 */
-	const CACHE_KEY_PREFIX = 'shadcn_ai_catalog_';
+	const CACHE_KEY_PREFIX = 'shadcn_ai_catalog_v2_';
 
 	/**
 	 * Only garbage collection: a changed pattern produces a different key
@@ -166,6 +166,19 @@ class CatalogBuilder {
 				'structure'   => $this->format_structure( $stats, $blocks ),
 			);
 		}
+
+		// Registration order is file-alphabetical, so each family's "-1"
+		// pattern always leads and soaks up the LLM's primacy bias. Ordering
+		// by slug hash keeps the sequence byte-stable between requests (the
+		// proxy's prompt-prefix cache depends on that) while making which
+		// pattern happens to appear first arbitrary instead of always the
+		// lowest-numbered one.
+		usort(
+			$catalog,
+			function ( $a, $b ) {
+				return strcmp( md5( $a['slug'] ), md5( $b['slug'] ) );
+			}
+		);
 
 		return $catalog;
 	}

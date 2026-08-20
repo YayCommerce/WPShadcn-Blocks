@@ -2,10 +2,11 @@
 /**
  * WP-CLI eval runner for Shadcn AI.
  *
- * Exercises the real pipeline (CatalogBuilder → LlmClient → proxy) against
- * the golden prompt set in tools/ai-eval/golden-prompts.json and records
- * results for before/after quality comparison. Requires the AI endpoint URL
- * and auth token to be configured in wp-admin first.
+ * Exercises the real pipeline against the golden prompt set in
+ * tools/ai-eval/golden-prompts.json and records results for before/after
+ * quality comparison. Uses the same transport as the live REST route: the
+ * proxy pipeline in-process when the proxy plugin is active on this site,
+ * otherwise the AI service (self-registering on first use).
  *
  * Usage (from the site shell, e.g. LocalWP "Open Site Shell"):
  *   wp shadcn-ai-eval run --label=baseline
