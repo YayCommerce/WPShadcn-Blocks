@@ -44,6 +44,25 @@
 
   var PLUGIN_NAME = "shadcn-ai";
 
+  // Sparkle mark for every editor surface the feature owns (sidebar tab,
+  // more-menu item, plugin registration).
+  var SPARKLE_ICON = el(
+    "svg",
+    {
+      width: 24,
+      height: 24,
+      viewBox: "0 0 24 24",
+      fill: "none",
+      xmlns: "http://www.w3.org/2000/svg",
+      "aria-hidden": "true",
+      focusable: "false",
+    },
+    el("path", {
+      fill: "currentColor",
+      d: "M12 2l1.9 5.6L19.5 9.5l-5.6 1.9L12 17l-1.9-5.6L4.5 9.5l5.6-1.9L12 2zm7 11l.95 2.8 2.8.95-2.8.95L19 20.5l-.95-2.8-2.8-.95 2.8-.95L19 13zM5 14l.8 2.3 2.3.8-2.3.8L5 20.2l-.8-2.3-2.3-.8 2.3-.8L5 14z",
+    })
+  );
+
   // Silence thresholds, in ms. The stream reports the model's own writing,
   // so a gap is evidence — but the FIRST entry is honestly slow: the model
   // reads the whole catalog before one section can be named.
@@ -632,14 +651,14 @@
       null,
       el(
         PluginSidebarMoreMenuItem,
-        { target: PLUGIN_NAME, icon: "art" },
+        { target: PLUGIN_NAME, icon: SPARKLE_ICON },
         __("Shadcn AI", "shadcn-blocks")
       ),
       el(
         PluginSidebar,
         {
           name: PLUGIN_NAME,
-          icon: "art",
+          icon: SPARKLE_ICON,
           title: __("Shadcn AI", "shadcn-blocks"),
         },
         el(
@@ -678,6 +697,6 @@
 
   registerPlugin(PLUGIN_NAME, {
     render: ShadcnAiPanel,
-    icon: "art",
+    icon: SPARKLE_ICON,
   });
 })();
