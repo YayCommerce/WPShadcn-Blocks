@@ -17,7 +17,7 @@ defined( 'ABSPATH' ) || exit;
 
 class Client {
 
-	const DEFAULT_SERVER = 'https://thien.ninjateam.org';
+	const DEFAULT_SERVER = 'https://ai-server.instawp.co';
 
 	const TOKEN_OPTION = 'shadcn_ai_site_token';
 
