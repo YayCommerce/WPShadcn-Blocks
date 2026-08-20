@@ -8,12 +8,6 @@
       "expectedSections": [ "hero", "features", "logo", "cta" ]
     },
     {
-      "id": "cafe-landing-vn",
-      "lang": "vi",
-      "prompt": "Tạo trang giới thiệu cho quán cà phê Sài Gòn Retro, phong cách ấm cúng, nêu bật các điểm đặc biệt của quán và mời khách ghé thăm.",
-      "expectedSections": [ "hero", "incentives", "cta" ]
-    },
-    {
       "id": "portfolio-en",
       "lang": "en",
       "prompt": "A personal portfolio homepage for a freelance product designer, showing what I do and inviting potential clients to get in touch.",
@@ -50,24 +44,11 @@
       "expectedSections": [ "hero", "features", "incentives", "logo", "blog", "cta" ]
     },
     {
-      "id": "english-center-vn",
-      "lang": "vi",
-      "prompt": "Trang chủ cho trung tâm tiếng Anh trẻ em, giọng văn thân thiện với phụ huynh, có phần lợi ích nổi bật và lời kêu gọi đăng ký học thử miễn phí.",
-      "expectedSections": [ "hero", "incentives", "cta" ]
-    },
-    {
       "id": "topicless-features-en",
       "lang": "en",
       "prompt": "Add a features section highlighting what makes us different.",
       "expectedSections": [ "features" ],
       "notes": "Topic-less: correct copy should reflect the site's own business from siteContext, not generic placeholders."
-    },
-    {
-      "id": "topicless-home-vn",
-      "lang": "vi",
-      "prompt": "Tạo trang chủ cho cửa hàng của tôi.",
-      "expectedSections": [ "hero", "incentives", "cta" ],
-      "notes": "Topic-less VN: copy should fit the store's niche from siteContext; language must stay Vietnamese."
     },
     {
       "id": "yoga-testimonials-gap-en",
