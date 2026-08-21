@@ -81,6 +81,7 @@ class Patterns {
 			'community'    => __( 'Community', 'shadcn-blocks' ),
 			'changelog'    => __( 'Changelog', 'shadcn-blocks' ),
 			'compare'      => __( 'Compare', 'shadcn-blocks' ),
+			'compliance'   => __( 'Compliance', 'shadcn-blocks' ),
 			'incentives'   => __( 'Incentives', 'shadcn-blocks' ),
 			'industries'   => __( 'Industries', 'shadcn-blocks' ),
 			'process'      => __( 'Process', 'shadcn-blocks' ),
