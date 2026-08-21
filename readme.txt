@@ -4,7 +4,7 @@ Tags: gutenberg, blocks, shadcn
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.1.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -132,9 +132,11 @@ The static content will always display, but interactive features (drawer open/cl
 
 == Changelog ==
 
-= Unreleased =
+= 1.1.0 =
 * Form blocks: Form, Input, Textarea, Select, and Form Submit Button. Submissions are emailed to the site admin (or a per-form recipient) through a public REST endpoint guarded by a honeypot and per-IP rate limiting — nothing is stored. Email delivery uses wp_mail(), so a mail/SMTP plugin is recommended for reliable delivery. Developers can veto submissions (e.g. to add a captcha) via the `shadcn_form_validate` filter.
 * Contact Demo Booking Split pattern: a two-column demo-booking section pairing social proof with a working booking form.
+* 39 new section patterns: 20 download sections and 19 FAQ sections.
+* Shadcn AI: generated copy now reaches text in the newer blocks — alert titles, marker labels, form field labels, submit buttons — and accordion item summaries where a pattern shows them.
 
 = 1.0.0 =
 * Initial release
