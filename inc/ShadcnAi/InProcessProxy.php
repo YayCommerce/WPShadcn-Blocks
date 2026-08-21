@@ -75,6 +75,12 @@ class InProcessProxy {
 				$user,
 				function ( array $entry ) use ( $on_event ) {
 					call_user_func( $on_event, 'entry', $entry );
+				},
+				// Heartbeat between entries — the same `tick` the remote proxy
+				// streams, so the REST relay keeps bytes moving to the browser
+				// during model silences on this path too.
+				function () use ( $on_event ) {
+					call_user_func( $on_event, 'tick', array() );
 				}
 			);
 		} catch ( \ShadcnAiProxy\LlmProviderException $e ) {

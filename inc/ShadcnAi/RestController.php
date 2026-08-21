@@ -22,6 +22,18 @@ class RestController {
 	 */
 	const MAX_PLAN_ENTRIES = 10;
 
+	/**
+	 * Anti-buffering weights, sized against nginx defaults: proxy buffers
+	 * run 4-64KB, so the primer overflows even a generous one at stream
+	 * open, and the per-event pad forces each event out on its own. The
+	 * host in front of this site can ignore X-Accel-Buffering and hold
+	 * small SSE writes until a buffer fills — the browser's watchdog reads
+	 * that silence as a dead server. Oversized SSE comments are the
+	 * portable opt-out; parsers drop them by spec.
+	 */
+	const STREAM_PRIMER_BYTES = 16384;
+	const EVENT_PAD_BYTES     = 4096;
+
 	private $rate_limiter;
 
 	protected function __construct() {
@@ -202,7 +214,8 @@ class RestController {
 	/**
 	 * Serve the generation as Server-Sent Events and exit. The proxy's
 	 * progress frames (`status`, `entry`) are relayed to the browser as they
-	 * arrive; its final `plan` is intercepted, validated and resolved into
+	 * arrive (its `tick` heartbeat leaves as pure comment padding — see
+	 * emit()); its final `plan` is intercepted, validated and resolved into
 	 * real block markup HERE — the trust boundary does not move just because
 	 * the transport streams — and leaves as one `result {markup, warnings}`
 	 * event. A stream that ends without `result` or `error` is a dropped
@@ -316,6 +329,14 @@ class RestController {
 			ob_end_flush();
 		}
 		ob_implicit_flush( true );
+
+		// Some hosts ignore the opt-out header above and hold small SSE
+		// writes until a buffer fills — the browser reads that silence as a
+		// dead server. This primer overflows the buffer the moment the
+		// stream opens; every event pushes itself through with its own pad
+		// (see emit()).
+		echo ':' . str_repeat( ' ', self::STREAM_PRIMER_BYTES ) . "\n\n"; // phpcs:ignore WordPress.Security.EscapeOutput -- SSE comment frame, literal padding.
+		flush();
 	}
 
 	/**
@@ -323,8 +344,18 @@ class RestController {
 	 * @param array  $data  JSON payload.
 	 */
 	private static function emit( $event, array $data ) {
-		echo 'event: ' . $event . "\n"; // phpcs:ignore WordPress.Security.EscapeOutput -- SSE protocol frame, name is a literal.
-		echo 'data: ' . wp_json_encode( $data ) . "\n\n"; // phpcs:ignore WordPress.Security.EscapeOutput -- JSON-encoded SSE payload.
+		// `tick` is the generation's heartbeat, relayed from the proxy (or
+		// raised in-process): it exists only to keep bytes moving through
+		// buffering hosts and the browser's watchdog, so it ships as pure
+		// comment padding — SSE parsers drop comments by spec, and the
+		// editor never sees an event it would have to ignore.
+		if ( 'tick' !== $event ) {
+			echo 'event: ' . $event . "\n"; // phpcs:ignore WordPress.Security.EscapeOutput -- SSE protocol frame, name is a literal.
+			echo 'data: ' . wp_json_encode( $data ) . "\n\n"; // phpcs:ignore WordPress.Security.EscapeOutput -- JSON-encoded SSE payload.
+		}
+		// The pad forces this write through a buffering host on its own
+		// instead of waiting for later events to fill the buffer behind it.
+		echo ':' . str_repeat( ' ', self::EVENT_PAD_BYTES ) . "\n\n"; // phpcs:ignore WordPress.Security.EscapeOutput -- SSE comment frame, literal padding.
 		flush();
 	}
 

@@ -234,9 +234,6 @@
             }
 
             var readFrame = createFrameReader(function (event, data) {
-              lastEventAt = Date.now();
-              setStalled(false);
-
               if (event === "status") {
                 setStage(data.stage || "designing");
                 return;
@@ -266,6 +263,13 @@
                 if (step.done) {
                   return null;
                 }
+                // Any bytes prove the server is alive — the stream's
+                // heartbeat between entries arrives as SSE comments that
+                // never become frames, so liveness is measured here, not in
+                // the frame reader. A dead connection delivers no reads and
+                // the watchdog still fires.
+                lastEventAt = Date.now();
+                setStalled(false);
                 readFrame(step.value);
                 return pump();
               });
