@@ -65,6 +65,40 @@ if [ -f "readme.txt" ]; then
     cp readme.txt "$DEST_DIR/"
 fi
 
+# Static assets the patterns point at (the placeholder image)
+if [ -d "assets" ]; then
+    cp -r assets "$DEST_DIR/"
+fi
+
+# Editor stylesheet, which inc/Plugin.php loads from src/ rather than build/
+if [ -f "src/editor-styles.css" ]; then
+    mkdir -p "$DEST_DIR/src"
+    cp src/editor-styles.css "$DEST_DIR/src/"
+fi
+
+# Lucide license, required because inc/icon-map.php ships their icon SVGs
+if [ -f "LICENSE-lucide.txt" ]; then
+    cp LICENSE-lucide.txt "$DEST_DIR/"
+fi
+
+# Drop macOS metadata that cp -r drags along
+find "$DEST_DIR" -name ".DS_Store" -delete
+
+# Fail loudly when a file the plugin loads at runtime did not make it in,
+# rather than shipping a ZIP that 404s once the plugin is installed somewhere else.
+for required in \
+    "shadcn-blocks.php" \
+    "inc/icon-map.php" \
+    "assets/images/placeholder.svg" \
+    "src/editor-styles.css" \
+    "build/extensions/core-button-icon.js"
+do
+    if [ ! -f "$DEST_DIR/$required" ]; then
+        echo "Error: $required is missing from the release"
+        exit 1
+    fi
+done
+
 # Create ZIP
 ZIP_NAME="${PLUGIN_SLUG}-${VERSION}.zip"
 echo "Creating $ZIP_NAME..."
