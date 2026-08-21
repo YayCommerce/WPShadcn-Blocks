@@ -1,0 +1,18 @@
+/**
+ * Textarea editor styles: the control chrome the theme applies to bare
+ * textareas on the frontend, replicated for the editor canvas
+ * (see _field-control.scss). Height is content-driven, matching the theme's
+ * `textarea { height: auto }` override.
+ */
+
+@use "../../shared/styles/field-control" as *;
+
+.wp-block-shadcn-textarea {
+
+	&__control {
+
+		@include field-control-chrome;
+
+		height: auto;
+	}
+}

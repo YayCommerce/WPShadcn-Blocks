@@ -1,0 +1,21 @@
+/**
+ * Form field control chrome for the EDITOR canvas.
+ *
+ * On the frontend the theme styles bare input/textarea/select elements
+ * (themes/shadcn/style.css "Inputs" section); those element-level rules never
+ * reach the editor iframe, which only receives the theme's CSS variables
+ * (assets/css/editor-style.css). This mixin replicates that chrome for the
+ * blocks' editor previews — keep its values in step with the theme rule.
+ */
+
+@mixin field-control-chrome {
+	background-color: transparent;
+	color: var(--wp--preset--color--foreground, #0a0a0a);
+	border: 1px solid var(--wp--preset--color--border, #e5e5e5);
+	border-radius: calc(var(--radius, 0.625rem) - 2px);
+	padding: 0.25rem 0.75rem;
+	font-size: 0.875rem;
+	line-height: calc(1.25 / 0.875);
+	height: calc(var(--spacing, 0.25rem) * 9);
+	box-shadow: 0 0.0625rem 0.125rem 0 rgb(0 0 0 / 0.05);
+}

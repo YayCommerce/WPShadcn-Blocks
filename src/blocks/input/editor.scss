@@ -1,0 +1,14 @@
+/**
+ * Input editor styles: the control chrome the theme applies to bare inputs on
+ * the frontend, replicated for the editor canvas (see _field-control.scss).
+ */
+
+@use "../../shared/styles/field-control" as *;
+
+.wp-block-shadcn-input {
+
+	&__control {
+
+		@include field-control-chrome;
+	}
+}

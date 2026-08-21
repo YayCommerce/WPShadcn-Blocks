@@ -31,6 +31,11 @@ Shadcn Blocks is a companion plugin for the [Shadcn theme](https://wpshadcn.com/
 * **Carousel** - Image and content slider
 * **Progress** - Visual progress indicator bar
 * **Empty** - Placeholder state for empty content areas
+* **Form** - A form wrapper that emails submissions to the site admin or a chosen recipient, with honeypot and rate-limit spam protection
+* **Input** - Labeled text, email, or phone field for forms
+* **Textarea** - Labeled multi-line message field for forms
+* **Select** - Labeled dropdown of predefined options for forms
+* **Form Submit Button** - Real submit button with a pending spinner
 
 = Features =
 
@@ -126,6 +131,10 @@ The static content will always display, but interactive features (drawer open/cl
 5. Block category in the editor
 
 == Changelog ==
+
+= Unreleased =
+* Form blocks: Form, Input, Textarea, Select, and Form Submit Button. Submissions are emailed to the site admin (or a per-form recipient) through a public REST endpoint guarded by a honeypot and per-IP rate limiting — nothing is stored. Email delivery uses wp_mail(), so a mail/SMTP plugin is recommended for reliable delivery. Developers can veto submissions (e.g. to add a captcha) via the `shadcn_form_validate` filter.
+* Contact Demo Booking Split pattern: a two-column demo-booking section pairing social proof with a working booking form.
 
 = 1.0.0 =
 * Initial release

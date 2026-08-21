@@ -1,0 +1,30 @@
+/**
+ * Input Block Styles
+ *
+ * The control itself (border, radius, focus ring, dark mode) is styled by the
+ * theme's element-level rules for input[type=text|email|tel]; this file only
+ * owns the field layout and the label, mirroring shadcn's Field + Label
+ * (grid gap-2, text-sm font-medium leading-none).
+ */
+
+.wp-block-shadcn-input {
+	display: grid;
+	gap: calc(var(--spacing, 0.25rem) * 2); // gap-2
+
+	&__label {
+		font-size: 0.875rem; // text-sm
+		line-height: 1; // leading-none
+		font-weight: 500; // font-medium
+		color: var(--wp--preset--color--foreground, #0a0a0a);
+	}
+
+	&.is-required &__label::after {
+		content: " *";
+		color: var(--wp--preset--color--destructive, #e7000b);
+	}
+
+	&__control {
+		box-sizing: border-box;
+		width: 100%;
+	}
+}

@@ -1,0 +1,49 @@
+/**
+ * Form Block Styles
+ *
+ * Owns the vertical rhythm of the fields (shadcn forms: grid gap-4), the
+ * honeypot hiding, and the result messages. The pending-state spinner lives
+ * in the form-submit block's stylesheet, keyed off .is-pending set here.
+ */
+
+.wp-block-shadcn-form {
+
+	&__fields {
+		display: grid;
+		gap: calc(var(--spacing, 0.25rem) * 4); // gap-4
+	}
+
+	// Screen-reader-safe visual removal; display:none would be skipped by the
+	// naive bots the honeypot exists to catch.
+	&__hp {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		white-space: nowrap;
+	}
+
+	&__error {
+		margin: calc(var(--spacing, 0.25rem) * 3) 0 0;
+		font-size: 0.875rem; // text-sm
+		color: var(--wp--preset--color--destructive, #e7000b);
+	}
+
+	&__success {
+		margin: 0;
+		padding:
+			calc(var(--spacing, 0.25rem) * 3)
+			calc(var(--spacing, 0.25rem) * 4);
+		border: 1px solid var(--wp--preset--color--border, #e5e5e5);
+		border-radius: calc(var(--radius, 0.625rem) - 2px);
+		font-size: 0.875rem; // text-sm
+		color: var(--wp--preset--color--foreground, #0a0a0a);
+	}
+
+	&__error[hidden],
+	&__success[hidden] {
+		display: none;
+	}
+}

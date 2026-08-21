@@ -1,0 +1,22 @@
+/**
+ * Select editor styles: the control chrome the theme applies to bare selects
+ * on the frontend, replicated for the editor canvas (see _field-control.scss).
+ * The editor preview <select> is disabled (it is a drawn stand-in, options are
+ * edited in the sidebar), so the browser's disabled graying is undone and the
+ * placeholder text reads muted like the frontend.
+ */
+
+@use "../../shared/styles/field-control" as *;
+
+.wp-block-shadcn-select {
+
+	&__control {
+
+		@include field-control-chrome;
+
+		&:disabled {
+			opacity: 1;
+			color: var(--wp--preset--color--muted-foreground, #737373);
+		}
+	}
+}

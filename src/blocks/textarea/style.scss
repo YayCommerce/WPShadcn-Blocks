@@ -1,0 +1,30 @@
+/**
+ * Textarea Block Styles
+ *
+ * The control (border, radius, focus ring, dark mode) comes from the theme's
+ * element-level textarea rules; this file owns the field layout and label,
+ * mirroring the Input block.
+ */
+
+.wp-block-shadcn-textarea {
+	display: grid;
+	gap: calc(var(--spacing, 0.25rem) * 2); // gap-2
+
+	&__label {
+		font-size: 0.875rem; // text-sm
+		line-height: 1; // leading-none
+		font-weight: 500; // font-medium
+		color: var(--wp--preset--color--foreground, #0a0a0a);
+	}
+
+	&.is-required &__label::after {
+		content: " *";
+		color: var(--wp--preset--color--destructive, #e7000b);
+	}
+
+	&__control {
+		box-sizing: border-box;
+		width: 100%;
+		resize: vertical;
+	}
+}

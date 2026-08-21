@@ -1,0 +1,82 @@
+/**
+ * Form Submit Button Block Styles
+ *
+ * Mirrors the shadcn Button default variant (h-9 px-4 rounded-md text-sm
+ * font-medium, primary colors). The block's color support classes win over
+ * the defaults because WordPress emits them as has-*-color utilities with
+ * their own specificity on the same element.
+ *
+ * The spinner is shown by the parent form's .is-pending class (set by the
+ * form block's view.js), replacing the label to keep the button width stable
+ * enough not to jump the layout.
+ */
+
+.wp-block-shadcn-form-submit {
+	box-sizing: border-box;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: calc(var(--spacing, 0.25rem) * 2);
+	height: calc(var(--spacing, 0.25rem) * 9); // h-9
+	padding-inline: calc(var(--spacing, 0.25rem) * 4); // px-4
+	border: 0;
+	border-radius: calc(var(--radius, 0.625rem) - 2px);
+	background-color: var(--wp--preset--color--primary, #171717);
+	color: var(--wp--preset--color--primary-foreground, #fafafa);
+	font-size: 0.875rem; // text-sm
+	font-weight: 500; // font-medium
+	line-height: 1;
+	cursor: pointer;
+	transition: opacity 0.15s ease;
+
+	&:hover {
+		opacity: 0.9;
+	}
+
+	&:disabled {
+		opacity: 0.6;
+		cursor: default;
+	}
+
+	// Position inside the form's grid track. Any explicit alignment stops the
+	// grid's default stretch, so an alignment without a width hugs the label.
+	&.is-align-left {
+		justify-self: start;
+	}
+
+	&.is-align-center {
+		justify-self: center;
+	}
+
+	&.is-align-right {
+		justify-self: end;
+	}
+
+	&__spinner {
+		display: none;
+		width: 1em;
+		height: 1em;
+		border: 2px solid currentcolor;
+		border-right-color: transparent;
+		border-radius: 9999px;
+		animation: shadcn-form-submit-spin 0.6s linear infinite;
+	}
+
+	.wp-block-shadcn-form.is-pending & {
+
+		&__label {
+			display: none;
+		}
+
+		&__spinner {
+			display: inline-block;
+		}
+	}
+}
+
+@keyframes shadcn-form-submit-spin {
+
+	to {
+		transform: rotate(360deg);
+	}
+}

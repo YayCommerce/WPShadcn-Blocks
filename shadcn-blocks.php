@@ -85,6 +85,8 @@ function shadcn_blocks_init() {
 	require_once SHADCN_BLOCKS_DIR . 'inc/Icons.php';
 	require_once SHADCN_BLOCKS_DIR . 'inc/Pricing.php';
 	require_once SHADCN_BLOCKS_DIR . 'inc/BlockStyles.php';
+	// Form block backend: the public submit REST route + rate limiter.
+	require_once SHADCN_BLOCKS_DIR . 'inc/Form/Caller.php';
 	// Shadcn AI: plans pages out of the `shadcn/*` patterns this
 	// plugin registers, so it loads after the pattern loader above.
 	require_once SHADCN_BLOCKS_DIR . 'inc/ShadcnAi/Caller.php';
