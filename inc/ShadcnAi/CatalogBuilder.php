@@ -27,8 +27,12 @@ class CatalogBuilder {
 
 	/**
 	 * Transient name prefix. The pattern set's fingerprint completes the key.
+	 * The version segment must move whenever slot-extraction logic changes
+	 * (e.g. TextSlotHtml gains a block): the fingerprint only hashes pattern
+	 * content and hints, so a code change alone would otherwise serve a
+	 * stale catalog.
 	 */
-	const CACHE_KEY_PREFIX = 'shadcn_ai_catalog_v2_';
+	const CACHE_KEY_PREFIX = 'shadcn_ai_catalog_v6_';
 
 	/**
 	 * Only garbage collection: a changed pattern produces a different key
@@ -201,12 +205,38 @@ class CatalogBuilder {
 			$this->count_block( $block, $stats );
 
 			if ( TextSlotHtml::is_slot_block( $block['blockName'] ) ) {
-				$slots[] = array(
-					'index'       => $index,
-					'blockName'   => $block['blockName'],
-					'defaultText' => TextSlotHtml::read( $block['blockName'], $block['innerHTML'] ),
-				);
-				++$index;
+				$attrs     = isset( $block['attrs'] ) ? (array) $block['attrs'] : array();
+				$attr_keys = TextSlotHtml::slot_attr_keys( $block['blockName'], $attrs );
+
+				if ( empty( $attr_keys ) ) {
+					// HTML slot: the one text node in the leaf's innerHTML.
+					$slots[] = array(
+						'index'       => $index,
+						'blockName'   => $block['blockName'],
+						'defaultText' => TextSlotHtml::read( $block['blockName'], $block['innerHTML'] ),
+					);
+					++$index;
+					continue;
+				}
+
+				// Attr slots: one slot per participating attribute, in the
+				// order slot_attr_keys() dictates.
+				foreach ( $attr_keys as $attr_key ) {
+					$slots[] = array(
+						'index'       => $index,
+						'blockName'   => $block['blockName'],
+						'attr'        => $attr_key,
+						'defaultText' => isset( $attrs[ $attr_key ] ) ? (string) $attrs[ $attr_key ] : '',
+					);
+					++$index;
+				}
+
+				// HTML slots are leaves, but an attr-slot block can wrap more
+				// slots (an accordion item's panel) — keep walking so those
+				// inner slots keep their place in the index sequence.
+				if ( ! empty( $block['innerBlocks'] ) ) {
+					$this->walk( $block['innerBlocks'], $slots, $index, $stats );
+				}
 				continue;
 			}
 

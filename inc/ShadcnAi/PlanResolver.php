@@ -75,17 +75,42 @@ class PlanResolver {
 			}
 
 			if ( TextSlotHtml::is_slot_block( $block['blockName'] ) ) {
-				if ( array_key_exists( $index, $overrides ) ) {
-					$new_html = TextSlotHtml::write(
-						$block['blockName'],
-						$block['innerHTML'],
-						(string) $overrides[ $index ]
-					);
+				$attrs     = isset( $block['attrs'] ) ? (array) $block['attrs'] : array();
+				$attr_keys = TextSlotHtml::slot_attr_keys( $block['blockName'], $attrs );
 
-					$block['innerHTML']       = $new_html;
-					$block['innerContent'][0] = $new_html;
+				if ( empty( $attr_keys ) ) {
+					// HTML slot: replace the leaf's one text node.
+					if ( array_key_exists( $index, $overrides ) ) {
+						$new_html = TextSlotHtml::write(
+							$block['blockName'],
+							$block['innerHTML'],
+							(string) $overrides[ $index ]
+						);
+
+						$block['innerHTML']       = $new_html;
+						$block['innerContent'][0] = $new_html;
+					}
+					++$index;
+					continue;
 				}
-				++$index;
+
+				// Attr slots, in the same order slot_attr_keys() gave
+				// CatalogBuilder. slot_attr_keys() was computed from the
+				// pristine attrs above, so assigning into $block['attrs']
+				// here cannot change which keys count as slots.
+				foreach ( $attr_keys as $attr_key ) {
+					if ( array_key_exists( $index, $overrides ) ) {
+						$block['attrs'][ $attr_key ] = (string) $overrides[ $index ];
+					}
+					++$index;
+				}
+
+				// Mirror CatalogBuilder::walk() exactly: attr-slot blocks wrap
+				// more slots, so recursion continues or the index sequences
+				// drift.
+				if ( ! empty( $block['innerBlocks'] ) ) {
+					$this->apply_overrides( $block['innerBlocks'], $overrides, $index );
+				}
 				continue;
 			}
 
