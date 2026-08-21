@@ -22,23 +22,6 @@ namespace ShadcnBlocks\ShadcnAi;
 class EvalCommand {
 
 	/**
-	 * Slug-prefix → section-type map. The token is the first dash-separated
-	 * word of the pattern name after the "shadcn/" prefix.
-	 */
-	const SECTION_TYPES = array(
-		'hero'       => 'hero',
-		'features'   => 'features',
-		'feature'    => 'features',
-		'incentives' => 'incentives',
-		'cta'        => 'cta',
-		'logo'       => 'logo',
-		'blog'       => 'blog',
-		'header'     => 'header',
-		'footer'     => 'footer',
-		'404'        => '404',
-	);
-
-	/**
 	 * Run the golden prompt set through the live pipeline.
 	 *
 	 * ## OPTIONS
@@ -131,7 +114,7 @@ class EvalCommand {
 					$slug = isset( $step['slug'] ) ? (string) $step['slug'] : '';
 
 					$result['returnedSlugs'][]    = $slug;
-					$result['returnedSections'][] = $this->section_type( $slug );
+					$result['returnedSections'][] = $this->section_type( $slug, $catalog_by_slug );
 
 					if ( ! isset( $catalog_by_slug[ $slug ] ) ) {
 						$result['inventedSlugs'][] = $slug;
@@ -258,14 +241,26 @@ class EvalCommand {
 	}
 
 	/**
-	 * @param string $slug Pattern slug, e.g. "shadcn/hero-section-3".
+	 * Section type from the pattern's own registered categories — names are
+	 * free-form ("shadcn/hero-impact-statement"), so the first category that
+	 * is not the umbrella "shadcn" one is the reliable signal.
+	 *
+	 * @param string $slug            Pattern slug.
+	 * @param array  $catalog_by_slug Catalog entries keyed by slug.
 	 * @return string Section type or "unknown".
 	 */
-	private function section_type( $slug ) {
-		$name  = str_replace( CatalogBuilder::SLUG_PREFIX, '', $slug );
-		$token = strtok( $name, '-' );
+	private function section_type( $slug, array $catalog_by_slug ) {
+		if ( ! isset( $catalog_by_slug[ $slug ]['categories'] ) ) {
+			return 'unknown';
+		}
 
-		return isset( self::SECTION_TYPES[ $token ] ) ? self::SECTION_TYPES[ $token ] : 'unknown';
+		foreach ( (array) $catalog_by_slug[ $slug ]['categories'] as $category ) {
+			if ( 'shadcn' !== $category ) {
+				return $category;
+			}
+		}
+
+		return 'unknown';
 	}
 
 	/**
