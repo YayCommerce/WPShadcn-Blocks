@@ -24,7 +24,7 @@
 <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"grid","minimumColumnWidth":"22rem"}} -->
 <div class="wp-block-group alignwide"><!-- wp:group {"className":"is-style-shadcn-hover-reveal","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|3","right":"var:preset|spacing|3","bottom":"var:preset|spacing|3","left":"var:preset|spacing|3"},"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-shadcn-hover-reveal" style="border-radius:12px;padding-top:var(--wp--preset--spacing--3);padding-right:var(--wp--preset--spacing--3);padding-bottom:var(--wp--preset--spacing--3);padding-left:var(--wp--preset--spacing--3)"><!-- wp:image {"width":"100%","height":"280px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Halden Coffee Roasters bags lined up along a shop shelf" style="border-radius:8px;object-fit:cover;width:100%;height:280px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Halden Coffee Roasters bags lined up along a shop shelf" style="border-radius:8px;object-fit:cover;width:100%;height:280px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|1"}},"layout":{"type":"constrained"}} -->
@@ -40,7 +40,7 @@
 
 <!-- wp:group {"className":"is-style-shadcn-hover-reveal","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|3","right":"var:preset|spacing|3","bottom":"var:preset|spacing|3","left":"var:preset|spacing|3"},"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-shadcn-hover-reveal" style="border-radius:12px;padding-top:var(--wp--preset--spacing--3);padding-right:var(--wp--preset--spacing--3);padding-bottom:var(--wp--preset--spacing--3);padding-left:var(--wp--preset--spacing--3)"><!-- wp:image {"width":"100%","height":"280px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Meridian Dental lettering mounted above a clinic entrance" style="border-radius:8px;object-fit:cover;width:100%;height:280px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Meridian Dental lettering mounted above a clinic entrance" style="border-radius:8px;object-fit:cover;width:100%;height:280px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|1"}},"layout":{"type":"constrained"}} -->
@@ -56,7 +56,7 @@
 
 <!-- wp:group {"className":"is-style-shadcn-hover-reveal","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|3","right":"var:preset|spacing|3","bottom":"var:preset|spacing|3","left":"var:preset|spacing|3"},"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-shadcn-hover-reveal" style="border-radius:12px;padding-top:var(--wp--preset--spacing--3);padding-right:var(--wp--preset--spacing--3);padding-bottom:var(--wp--preset--spacing--3);padding-left:var(--wp--preset--spacing--3)"><!-- wp:image {"width":"100%","height":"280px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Fern and Slate plant labels resting on a bed of potting soil" style="border-radius:8px;object-fit:cover;width:100%;height:280px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Fern and Slate plant labels resting on a bed of potting soil" style="border-radius:8px;object-fit:cover;width:100%;height:280px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|1"}},"layout":{"type":"constrained"}} -->
@@ -76,7 +76,7 @@
 <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"grid","minimumColumnWidth":"22rem"}} -->
 <div class="wp-block-group alignwide"><!-- wp:group {"className":"is-style-shadcn-hover-reveal","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|3","right":"var:preset|spacing|3","bottom":"var:preset|spacing|3","left":"var:preset|spacing|3"},"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-shadcn-hover-reveal" style="border-radius:12px;padding-top:var(--wp--preset--spacing--3);padding-right:var(--wp--preset--spacing--3);padding-bottom:var(--wp--preset--spacing--3);padding-left:var(--wp--preset--spacing--3)"><!-- wp:image {"width":"100%","height":"280px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Postbox Banking account screens shown on two phones" style="border-radius:8px;object-fit:cover;width:100%;height:280px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Postbox Banking account screens shown on two phones" style="border-radius:8px;object-fit:cover;width:100%;height:280px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|1"}},"layout":{"type":"constrained"}} -->
@@ -92,7 +92,7 @@
 
 <!-- wp:group {"className":"is-style-shadcn-hover-reveal","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|3","right":"var:preset|spacing|3","bottom":"var:preset|spacing|3","left":"var:preset|spacing|3"},"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-shadcn-hover-reveal" style="border-radius:12px;padding-top:var(--wp--preset--spacing--3);padding-right:var(--wp--preset--spacing--3);padding-bottom:var(--wp--preset--spacing--3);padding-left:var(--wp--preset--spacing--3)"><!-- wp:image {"width":"100%","height":"280px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Torvald Museum exhibition page open on a laptop screen" style="border-radius:8px;object-fit:cover;width:100%;height:280px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Torvald Museum exhibition page open on a laptop screen" style="border-radius:8px;object-fit:cover;width:100%;height:280px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|1"}},"layout":{"type":"constrained"}} -->
@@ -112,7 +112,7 @@
 <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"grid","minimumColumnWidth":"22rem"}} -->
 <div class="wp-block-group alignwide"><!-- wp:group {"className":"is-style-shadcn-hover-reveal","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|3","right":"var:preset|spacing|3","bottom":"var:preset|spacing|3","left":"var:preset|spacing|3"},"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-shadcn-hover-reveal" style="border-radius:12px;padding-top:var(--wp--preset--spacing--3);padding-right:var(--wp--preset--spacing--3);padding-bottom:var(--wp--preset--spacing--3);padding-left:var(--wp--preset--spacing--3)"><!-- wp:image {"width":"100%","height":"280px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Northlight annual report opened to a folded data spread" style="border-radius:8px;object-fit:cover;width:100%;height:280px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Northlight annual report opened to a folded data spread" style="border-radius:8px;object-fit:cover;width:100%;height:280px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|1"}},"layout":{"type":"constrained"}} -->
@@ -128,7 +128,7 @@
 
 <!-- wp:group {"className":"is-style-shadcn-hover-reveal","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|3","right":"var:preset|spacing|3","bottom":"var:preset|spacing|3","left":"var:preset|spacing|3"},"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group is-style-shadcn-hover-reveal" style="border-radius:12px;padding-top:var(--wp--preset--spacing--3);padding-right:var(--wp--preset--spacing--3);padding-bottom:var(--wp--preset--spacing--3);padding-left:var(--wp--preset--spacing--3)"><!-- wp:image {"width":"100%","height":"280px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Ridgeway Festival posters pasted in a row along a hoarding" style="border-radius:8px;object-fit:cover;width:100%;height:280px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Ridgeway Festival posters pasted in a row along a hoarding" style="border-radius:8px;object-fit:cover;width:100%;height:280px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|1"}},"layout":{"type":"constrained"}} -->

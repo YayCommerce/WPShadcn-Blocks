@@ -22,7 +22,7 @@
 <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->
 <div class="wp-block-columns alignwide"><!-- wp:column {"width":"44%"} -->
 <div class="wp-block-column" style="flex-basis:44%"><!-- wp:image {"aspectRatio":"4/5","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A model in an undyed cabled sweater standing beside a spinning frame, lit by the mill's north windows" style="border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A model in an undyed cabled sweater standing beside a spinning frame, lit by the mill's north windows" style="border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 

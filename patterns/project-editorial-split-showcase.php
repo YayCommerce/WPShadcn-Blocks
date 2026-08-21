@@ -26,7 +26,7 @@
 
 <!-- wp:column {"width":"67%"} -->
 <div class="wp-block-column" style="flex-basis:67%"><!-- wp:image {"width":"100%","height":"480px","scale":"cover","sizeSlug":"large","style":{"border":{"color":"var:preset|color|border","width":"1px","style":"solid","radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A printed dinner menu resting on a marble pass" class="has-border-color" style="border-color:var(--wp--preset--color--border);border-style:solid;border-width:1px;border-radius:8px;object-fit:cover;width:100%;height:480px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A printed dinner menu resting on a marble pass" class="has-border-color" style="border-color:var(--wp--preset--color--border);border-style:solid;border-width:1px;border-radius:8px;object-fit:cover;width:100%;height:480px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
@@ -44,7 +44,7 @@
 
 <!-- wp:column {"width":"67%"} -->
 <div class="wp-block-column" style="flex-basis:67%"><!-- wp:image {"width":"100%","height":"480px","scale":"cover","sizeSlug":"large","style":{"border":{"color":"var:preset|color|border","width":"1px","style":"solid","radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Open field guide spreads laid out across a studio table" class="has-border-color" style="border-color:var(--wp--preset--color--border);border-style:solid;border-width:1px;border-radius:8px;object-fit:cover;width:100%;height:480px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Open field guide spreads laid out across a studio table" class="has-border-color" style="border-color:var(--wp--preset--color--border);border-style:solid;border-width:1px;border-radius:8px;object-fit:cover;width:100%;height:480px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
@@ -62,7 +62,7 @@
 
 <!-- wp:column {"width":"67%"} -->
 <div class="wp-block-column" style="flex-basis:67%"><!-- wp:image {"width":"100%","height":"480px","scale":"cover","sizeSlug":"large","style":{"border":{"color":"var:preset|color|border","width":"1px","style":"solid","radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A freight trailer parked at a terminal loading bay" class="has-border-color" style="border-color:var(--wp--preset--color--border);border-style:solid;border-width:1px;border-radius:8px;object-fit:cover;width:100%;height:480px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A freight trailer parked at a terminal loading bay" class="has-border-color" style="border-color:var(--wp--preset--color--border);border-style:solid;border-width:1px;border-radius:8px;object-fit:cover;width:100%;height:480px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>

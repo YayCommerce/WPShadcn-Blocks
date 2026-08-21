@@ -13,7 +13,7 @@
 <div class="wp-block-group alignwide"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|7","left":"var:preset|spacing|7"}}}} -->
 <div class="wp-block-columns"><!-- wp:column {"width":"32%","style":{"spacing":{"blockGap":"var:preset|spacing|5"}}} -->
 <div class="wp-block-column" style="flex-basis:32%"><!-- wp:image {"height":"32px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Ridgeway logo" style="height:32px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Ridgeway logo" style="height:32px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

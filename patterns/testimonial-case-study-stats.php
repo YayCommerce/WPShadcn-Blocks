@@ -28,7 +28,7 @@
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"40px","height":"40px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"},"layout":{"selfStretch":"fixed","flexSize":""}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Priya Raman" style="border-radius:9999px;object-fit:cover;width:40px;height:40px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Priya Raman" style="border-radius:9999px;object-fit:cover;width:40px;height:40px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
@@ -43,7 +43,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"height":"24px","aspectRatio":"4/3","scale":"cover","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Lumen Labs logo" style="aspect-ratio:4/3;object-fit:cover;height:24px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Lumen Labs logo" style="aspect-ratio:4/3;object-fit:cover;height:24px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:column -->
@@ -56,7 +56,7 @@
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"40px","height":"40px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Tom Okafor" style="border-radius:9999px;object-fit:cover;width:40px;height:40px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Tom Okafor" style="border-radius:9999px;object-fit:cover;width:40px;height:40px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
@@ -71,7 +71,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"height":"24px","aspectRatio":"4/3","scale":"cover","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Fielder logo" style="aspect-ratio:4/3;object-fit:cover;height:24px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Fielder logo" style="aspect-ratio:4/3;object-fit:cover;height:24px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:column --></div>
@@ -88,7 +88,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"height":"120px","aspectRatio":"4/3","scale":"cover","sizeSlug":"large","align":"center"} -->
-<figure class="wp-block-image aligncenter size-large is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Lumen Labs case study" style="aspect-ratio:4/3;object-fit:cover;height:120px"/></figure>
+<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Lumen Labs case study" style="aspect-ratio:4/3;object-fit:cover;height:120px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}}} -->
@@ -106,7 +106,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"height":"120px","aspectRatio":"4/3","scale":"cover","sizeSlug":"large","align":"center"} -->
-<figure class="wp-block-image aligncenter size-large is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Fielder case study" style="aspect-ratio:4/3;object-fit:cover;height:120px"/></figure>
+<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Fielder case study" style="aspect-ratio:4/3;object-fit:cover;height:120px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}}} -->
@@ -124,7 +124,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"height":"120px","aspectRatio":"4/3","scale":"cover","sizeSlug":"large","align":"center"} -->
-<figure class="wp-block-image aligncenter size-large is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Northwind case study" style="aspect-ratio:4/3;object-fit:cover;height:120px"/></figure>
+<figure class="wp-block-image aligncenter size-large is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Northwind case study" style="aspect-ratio:4/3;object-fit:cover;height:120px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}}} -->

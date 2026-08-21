@@ -33,15 +33,15 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:shadcn/avatar-group {"maxVisible":5} -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Priya Raghunathan","size":"md","fallback":"PR"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Priya Raghunathan","size":"md","fallback":"PR"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Léon Marchetti","size":"md","fallback":"LM"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Léon Marchetti","size":"md","fallback":"LM"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Thandiwe Mokoena","size":"md","fallback":"TM"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Thandiwe Mokoena","size":"md","fallback":"TM"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Jonas Halvorsen","size":"md","fallback":"JH"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Jonas Halvorsen","size":"md","fallback":"JH"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Camila Restrepo","size":"md","fallback":"CR"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Camila Restrepo","size":"md","fallback":"CR"} /-->
 <!-- /wp:shadcn/avatar-group -->
 
 <!-- wp:shadcn/badge {"text":"4.9 out of 5 from 2,300 teams","variant":"ghost","iconName":"star"} /--></div>

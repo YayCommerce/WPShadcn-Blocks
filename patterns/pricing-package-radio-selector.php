@@ -94,7 +94,7 @@
 <div class="wp-block-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"16px","height":"16px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="" style="width:16px;height:16px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="" style="width:16px;height:16px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"textColor":"muted-foreground","fontSize":"sm"} -->
@@ -106,7 +106,7 @@
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"16px","height":"16px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="" style="width:16px;height:16px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="" style="width:16px;height:16px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"textColor":"muted-foreground","fontSize":"sm"} -->
@@ -180,7 +180,7 @@
 <div class="wp-block-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"16px","height":"16px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="" style="width:16px;height:16px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="" style="width:16px;height:16px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"textColor":"muted-foreground","fontSize":"sm"} -->
@@ -192,7 +192,7 @@
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"16px","height":"16px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="" style="width:16px;height:16px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="" style="width:16px;height:16px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"textColor":"muted-foreground","fontSize":"sm"} -->
@@ -270,7 +270,7 @@
 <div class="wp-block-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"16px","height":"16px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="" style="width:16px;height:16px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="" style="width:16px;height:16px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"textColor":"muted-foreground","fontSize":"sm"} -->
@@ -282,7 +282,7 @@
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"16px","height":"16px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="" style="width:16px;height:16px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="" style="width:16px;height:16px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"textColor":"muted-foreground","fontSize":"sm"} -->

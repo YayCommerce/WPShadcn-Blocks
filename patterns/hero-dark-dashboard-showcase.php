@@ -30,6 +30,6 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"aspectRatio":"21/9","scale":"cover","width":"100%","sizeSlug":"large","align":"wide","style":{"border":{"radius":"16px"}}} -->
-<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="The Ridgewatch console showing regional spend beside a deploy timeline" style="border-radius:16px;aspect-ratio:21/9;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The Ridgewatch console showing regional spend beside a deploy timeline" style="border-radius:16px;aspect-ratio:21/9;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->

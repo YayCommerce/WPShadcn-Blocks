@@ -33,7 +33,7 @@
 
 <!-- wp:column {"width":"27%"} -->
 <div class="wp-block-column" style="flex-basis:27%"><!-- wp:image {"width":"100%","height":"400px","scale":"cover","sizeSlug":"large"} -->
-<figure class="wp-block-image size-large is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="A hydroelectric dam seen from above" style="object-fit:cover;width:100%;height:400px"/></figure>
+<figure class="wp-block-image size-large is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A hydroelectric dam seen from above" style="object-fit:cover;width:100%;height:400px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 

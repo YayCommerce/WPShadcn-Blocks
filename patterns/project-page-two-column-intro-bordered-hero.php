@@ -76,6 +76,6 @@
 <!-- /wp:columns -->
 
 <!-- wp:image {"align":"wide","width":"100%","height":"640px","scale":"cover","sizeSlug":"large","style":{"border":{"color":"var:preset|color|border","width":"1px","style":"solid","radius":"8px"}}} -->
-<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A pontoon at dusk with the new departure board lit above the gangway" class="has-border-color" style="border-color:var(--wp--preset--color--border);border-style:solid;border-width:1px;border-radius:8px;object-fit:cover;width:100%;height:640px"/><figcaption class="wp-element-caption">The north pontoon, forty minutes after the last light — the board shows the next two departures and nothing else.</figcaption></figure>
+<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A pontoon at dusk with the new departure board lit above the gangway" class="has-border-color" style="border-color:var(--wp--preset--color--border);border-style:solid;border-width:1px;border-radius:8px;object-fit:cover;width:100%;height:640px"/><figcaption class="wp-element-caption">The north pontoon, forty minutes after the last light — the board shows the next two departures and nothing else.</figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->

@@ -64,7 +64,7 @@
 <!-- /wp:columns -->
 
 <!-- wp:image {"align":"wide","width":"100%","aspectRatio":"16/9","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Trays of young ferns lined up on a potting bench under the glasshouse roof" style="border-radius:12px;aspect-ratio:16/9;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Trays of young ferns lined up on a potting bench under the glasshouse roof" style="border-radius:12px;aspect-ratio:16/9;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|9"}}}} -->

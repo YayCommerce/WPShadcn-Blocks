@@ -25,15 +25,15 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|7"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"100%","height":"480px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A steel radio mast rising out of marsh grass under a low grey sky" style="border-radius:12px;object-fit:cover;width:100%;height:480px"/><figcaption class="wp-element-caption">Mast four, Hallow Point, photographed an hour before high water.</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A steel radio mast rising out of marsh grass under a low grey sky" style="border-radius:12px;object-fit:cover;width:100%;height:480px"/><figcaption class="wp-element-caption">Mast four, Hallow Point, photographed an hour before high water.</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"width":"100%","height":"480px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="The inside of an equipment hut with a wall of dials and a stool pushed under the bench" style="border-radius:12px;object-fit:cover;width:100%;height:480px"/><figcaption class="wp-element-caption">Hut nine still held its logbook, open at the last entry anyone wrote.</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The inside of an equipment hut with a wall of dials and a stool pushed under the bench" style="border-radius:12px;object-fit:cover;width:100%;height:480px"/><figcaption class="wp-element-caption">Hut nine still held its logbook, open at the last entry anyone wrote.</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"width":"100%","height":"480px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A coil of severed aerial cable lying in wet sand at the mouth of an estuary" style="border-radius:12px;object-fit:cover;width:100%;height:480px"/><figcaption class="wp-element-caption">Aerial cable at the Nyre mouth, three days after decommissioning.</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A coil of severed aerial cable lying in wet sand at the mouth of an estuary" style="border-radius:12px;object-fit:cover;width:100%;height:480px"/><figcaption class="wp-element-caption">Aerial cable at the Nyre mouth, three days after decommissioning.</figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 

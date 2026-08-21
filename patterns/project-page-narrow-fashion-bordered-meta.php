@@ -24,7 +24,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"aspectRatio":"3/2","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A model in a pale linen coat standing against a whitewashed wall in raking morning light" style="border-radius:8px;aspect-ratio:3/2;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Look nine, photographed on the second morning at the Kalami house.</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A model in a pale linen coat standing against a whitewashed wall in raking morning light" style="border-radius:8px;aspect-ratio:3/2;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Look nine, photographed on the second morning at the Kalami house.</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"border":{"color":"var:preset|color|border","width":"1px","style":"solid","radius":"8px"},"spacing":{"padding":{"top":"var:preset|spacing|5","right":"var:preset|spacing|5","bottom":"var:preset|spacing|5","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|5"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"}} -->

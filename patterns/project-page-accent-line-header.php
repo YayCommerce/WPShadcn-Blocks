@@ -72,7 +72,7 @@
 <!-- /wp:columns -->
 
 <!-- wp:image {"align":"wide","width":"100%","height":"600px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="The warehouse gallery at dusk, framed tide photographs lit in a single line along the brick wall" style="border-radius:12px;object-fit:cover;width:100%;height:600px"/></figure>
+<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The warehouse gallery at dusk, framed tide photographs lit in a single line along the brick wall" style="border-radius:12px;object-fit:cover;width:100%;height:600px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->
@@ -92,13 +92,13 @@
 <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|5","left":"var:preset|spacing|5"}}}} -->
 <div class="wp-block-columns alignwide"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"width":"100%","aspectRatio":"1","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Contact sheets pinned across a studio wall and reordered by tide height" style="border-radius:12px;aspect-ratio:1;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Contact sheets pinned across a studio wall and reordered by tide height" style="border-radius:12px;aspect-ratio:1;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"width":"100%","aspectRatio":"1","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A test print held up against the warehouse brick to check its tone in daylight" style="border-radius:12px;aspect-ratio:1;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A test print held up against the warehouse brick to check its tone in daylight" style="border-radius:12px;aspect-ratio:1;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>

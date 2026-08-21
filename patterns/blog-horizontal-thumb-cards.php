@@ -28,7 +28,7 @@
 <div class="wp-block-group has-border-color has-card-background-color has-background" style="border-color:var(--wp--preset--color--border);border-style:solid;border-width:1px;border-radius:14px;padding-top:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--5);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|5","left":"var:preset|spacing|6"}}}} -->
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"32%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:32%"><!-- wp:image {"width":"100%","height":"210px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"10px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A support desk with three screens and a printed queue board" style="border-radius:10px;object-fit:cover;width:100%;height:210px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A support desk with three screens and a printed queue board" style="border-radius:10px;object-fit:cover;width:100%;height:210px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -66,7 +66,7 @@
 <div class="wp-block-group has-border-color has-card-background-color has-background" style="border-color:var(--wp--preset--color--border);border-style:solid;border-width:1px;border-radius:14px;padding-top:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--5);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|5","left":"var:preset|spacing|6"}}}} -->
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"32%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:32%"><!-- wp:image {"width":"100%","height":"210px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"10px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Three price cards sketched on a whiteboard with the middle one crossed out" style="border-radius:10px;object-fit:cover;width:100%;height:210px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Three price cards sketched on a whiteboard with the middle one crossed out" style="border-radius:10px;object-fit:cover;width:100%;height:210px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -104,7 +104,7 @@
 <div class="wp-block-group has-border-color has-card-background-color has-background" style="border-color:var(--wp--preset--color--border);border-style:solid;border-width:1px;border-radius:14px;padding-top:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--5);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|5","left":"var:preset|spacing|6"}}}} -->
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"32%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:32%"><!-- wp:image {"width":"100%","height":"210px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"10px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A hand resting on a keyboard beside a printed focus-ring diagram" style="border-radius:10px;object-fit:cover;width:100%;height:210px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A hand resting on a keyboard beside a printed focus-ring diagram" style="border-radius:10px;object-fit:cover;width:100%;height:210px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -142,7 +142,7 @@
 <div class="wp-block-group has-border-color has-card-background-color has-background" style="border-color:var(--wp--preset--color--border);border-style:solid;border-width:1px;border-radius:14px;padding-top:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--5);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|5","left":"var:preset|spacing|6"}}}} -->
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"32%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:32%"><!-- wp:image {"width":"100%","height":"210px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"10px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A handheld scanner propped against steel racking in a warehouse aisle" style="border-radius:10px;object-fit:cover;width:100%;height:210px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A handheld scanner propped against steel racking in a warehouse aisle" style="border-radius:10px;object-fit:cover;width:100%;height:210px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -180,7 +180,7 @@
 <div class="wp-block-group has-border-color has-card-background-color has-background" style="border-color:var(--wp--preset--color--border);border-style:solid;border-width:1px;border-radius:14px;padding-top:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--5);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|5","left":"var:preset|spacing|6"}}}} -->
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"32%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:32%"><!-- wp:image {"width":"100%","height":"210px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"10px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A wall monitor showing three large numbers instead of a chart grid" style="border-radius:10px;object-fit:cover;width:100%;height:210px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A wall monitor showing three large numbers instead of a chart grid" style="border-radius:10px;object-fit:cover;width:100%;height:210px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 

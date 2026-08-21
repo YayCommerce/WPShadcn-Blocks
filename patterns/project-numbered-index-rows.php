@@ -47,7 +47,7 @@
 
 <!-- wp:column {"verticalAlignment":"center","width":"15%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:15%"><!-- wp:image {"width":"96px","height":"96px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Harbor Atlas signage" style="border-radius:8px;object-fit:cover;width:96px;height:96px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Harbor Atlas signage" style="border-radius:8px;object-fit:cover;width:96px;height:96px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
@@ -79,7 +79,7 @@
 
 <!-- wp:column {"verticalAlignment":"center","width":"15%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:15%"><!-- wp:image {"width":"96px","height":"96px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Fold Coffee packaging" style="border-radius:8px;object-fit:cover;width:96px;height:96px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Fold Coffee packaging" style="border-radius:8px;object-fit:cover;width:96px;height:96px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
@@ -111,7 +111,7 @@
 
 <!-- wp:column {"verticalAlignment":"center","width":"15%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:15%"><!-- wp:image {"width":"96px","height":"96px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Meridian Type specimen" style="border-radius:8px;object-fit:cover;width:96px;height:96px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Meridian Type specimen" style="border-radius:8px;object-fit:cover;width:96px;height:96px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
@@ -143,7 +143,7 @@
 
 <!-- wp:column {"verticalAlignment":"center","width":"15%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:15%"><!-- wp:image {"width":"96px","height":"96px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Rowan Clinic booking screen" style="border-radius:8px;object-fit:cover;width:96px;height:96px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Rowan Clinic booking screen" style="border-radius:8px;object-fit:cover;width:96px;height:96px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
@@ -175,7 +175,7 @@
 
 <!-- wp:column {"verticalAlignment":"center","width":"15%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:15%"><!-- wp:image {"width":"96px","height":"96px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Northgate Press archive" style="border-radius:8px;object-fit:cover;width:96px;height:96px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Northgate Press archive" style="border-radius:8px;object-fit:cover;width:96px;height:96px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>

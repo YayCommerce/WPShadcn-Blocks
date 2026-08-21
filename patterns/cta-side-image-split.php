@@ -12,7 +12,7 @@
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->
 <div class="wp-block-columns alignwide"><!-- wp:column {"width":"50%"} -->
 <div class="wp-block-column" style="flex-basis:50%"><!-- wp:image {"aspectRatio":"4/3","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":{"topLeft":"16px","bottomLeft":"16px"}}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A joiner checking a cut list on a tablet beside a bench saw" style="border-top-left-radius:16px;border-bottom-left-radius:16px;aspect-ratio:4/3;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A joiner checking a cut list on a tablet beside a bench saw" style="border-top-left-radius:16px;border-bottom-left-radius:16px;aspect-ratio:4/3;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 

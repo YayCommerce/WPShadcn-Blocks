@@ -48,7 +48,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"align":"wide","width":"100%","height":"560px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"16px"}}} -->
-<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Suspended directional signs above the ferry terminal concourse at dusk" style="border-radius:16px;object-fit:cover;width:100%;height:560px"/></figure>
+<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Suspended directional signs above the ferry terminal concourse at dusk" style="border-radius:16px;object-fit:cover;width:100%;height:560px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

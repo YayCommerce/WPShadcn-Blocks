@@ -39,37 +39,37 @@
 <!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|4","left":"var:preset|spacing|4"}}}} -->
 <div class="wp-block-columns"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"align":"center","width":"90px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Customer wordmark" style="width:90px"/></figure>
+<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Customer wordmark" style="width:90px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"align":"center","width":"90px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Customer wordmark" style="width:90px"/></figure>
+<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Customer wordmark" style="width:90px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"align":"center","width":"90px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Customer wordmark" style="width:90px"/></figure>
+<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Customer wordmark" style="width:90px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"align":"center","width":"90px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Customer wordmark" style="width:90px"/></figure>
+<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Customer wordmark" style="width:90px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"align":"center","width":"90px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Customer wordmark" style="width:90px"/></figure>
+<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Customer wordmark" style="width:90px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"align":"center","width":"90px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Customer wordmark" style="width:90px"/></figure>
+<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Customer wordmark" style="width:90px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>

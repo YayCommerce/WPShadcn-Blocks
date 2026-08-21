@@ -19,7 +19,7 @@
 <!-- wp:column {"verticalAlignment":"center"} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"32px","height":"32px","sizeSlug":"thumbnail","align":"center"} -->
-<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="" style="width:32px;height:32px"/></figure>
+<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="" style="width:32px;height:32px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3,"style":{"typography":{"textAlign":"center","fontWeight":"600"}},"fontSize":"xl"} -->
@@ -35,7 +35,7 @@
 <!-- wp:column {"verticalAlignment":"center"} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"32px","height":"32px","sizeSlug":"thumbnail","align":"center"} -->
-<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="" style="width:32px;height:32px"/></figure>
+<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="" style="width:32px;height:32px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3,"style":{"typography":{"textAlign":"center","fontWeight":"600"}},"fontSize":"xl"} -->
@@ -51,7 +51,7 @@
 <!-- wp:column {"verticalAlignment":"center"} -->
 <div class="wp-block-column is-vertically-aligned-center"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"32px","height":"32px","sizeSlug":"thumbnail","align":"center"} -->
-<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="" style="width:32px;height:32px"/></figure>
+<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="" style="width:32px;height:32px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3,"style":{"typography":{"textAlign":"center","fontWeight":"600"}},"fontSize":"xl"} -->

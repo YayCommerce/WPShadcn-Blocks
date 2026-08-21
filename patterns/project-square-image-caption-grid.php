@@ -22,7 +22,7 @@
 <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"grid","minimumColumnWidth":"22rem"}} -->
 <div class="wp-block-group alignwide"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"100%","aspectRatio":"1","scale":"cover","sizeSlug":"large"} -->
-<figure class="wp-block-image size-large is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Northwind Coffee bags photographed on a bare counter" style="aspect-ratio:1;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Northwind Coffee bags photographed on a bare counter" style="aspect-ratio:1;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
@@ -38,7 +38,7 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"100%","aspectRatio":"1","scale":"cover","sizeSlug":"large"} -->
-<figure class="wp-block-image size-large is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Open spread of the Verso Press quarterly showing a two-column layout" style="aspect-ratio:1;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Open spread of the Verso Press quarterly showing a two-column layout" style="aspect-ratio:1;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
@@ -54,7 +54,7 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"100%","aspectRatio":"1","scale":"cover","sizeSlug":"large"} -->
-<figure class="wp-block-image size-large is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Cadence Athletics shoe boxes stacked in a colour sequence" style="aspect-ratio:1;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Cadence Athletics shoe boxes stacked in a colour sequence" style="aspect-ratio:1;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
@@ -70,7 +70,7 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"100%","aspectRatio":"1","scale":"cover","sizeSlug":"large"} -->
-<figure class="wp-block-image size-large is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Mercer House reception desk lit by a tall window" style="aspect-ratio:1;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Mercer House reception desk lit by a tall window" style="aspect-ratio:1;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
@@ -86,7 +86,7 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"100%","aspectRatio":"1","scale":"cover","sizeSlug":"large"} -->
-<figure class="wp-block-image size-large is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Quiet Signal wordmark printed on a folded card" style="aspect-ratio:1;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Quiet Signal wordmark printed on a folded card" style="aspect-ratio:1;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
@@ -102,7 +102,7 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"100%","aspectRatio":"1","scale":"cover","sizeSlug":"large"} -->
-<figure class="wp-block-image size-large is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Foundry Lane site shown on a laptop beside a notebook" style="aspect-ratio:1;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Foundry Lane site shown on a laptop beside a notebook" style="aspect-ratio:1;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->

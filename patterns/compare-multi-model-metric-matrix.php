@@ -30,7 +30,7 @@
 <!-- wp:column {"width":"24%","verticalAlignment":"center","style":{"spacing":{"padding":{"top":"var:preset|spacing|3","right":"var:preset|spacing|4","bottom":"var:preset|spacing|3","left":"var:preset|spacing|4"}}}} -->
 <div class="wp-block-column is-vertically-aligned-center" style="padding-top:var(--wp--preset--spacing--3);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--3);padding-left:var(--wp--preset--spacing--4);flex-basis:24%"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"flex","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"height":"16px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Northline mark" style="height:16px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Northline mark" style="height:16px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"fontSize":"sm"} -->
@@ -42,7 +42,7 @@
 <!-- wp:column {"width":"24%","verticalAlignment":"center","style":{"spacing":{"padding":{"top":"var:preset|spacing|3","right":"var:preset|spacing|4","bottom":"var:preset|spacing|3","left":"var:preset|spacing|4"}}}} -->
 <div class="wp-block-column is-vertically-aligned-center" style="padding-top:var(--wp--preset--spacing--3);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--3);padding-left:var(--wp--preset--spacing--4);flex-basis:24%"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"flex","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"height":"16px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Harbourway mark" style="height:16px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Harbourway mark" style="height:16px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"fontSize":"sm"} -->
@@ -54,7 +54,7 @@
 <!-- wp:column {"width":"24%","verticalAlignment":"center","style":{"spacing":{"padding":{"top":"var:preset|spacing|3","right":"var:preset|spacing|4","bottom":"var:preset|spacing|3","left":"var:preset|spacing|4"}}}} -->
 <div class="wp-block-column is-vertically-aligned-center" style="padding-top:var(--wp--preset--spacing--3);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--3);padding-left:var(--wp--preset--spacing--4);flex-basis:24%"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"flex","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"height":"16px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Kestrel mark" style="height:16px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Kestrel mark" style="height:16px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"fontSize":"sm"} -->

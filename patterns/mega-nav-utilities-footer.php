@@ -165,7 +165,7 @@
 
 <!-- wp:column {"width":"8%"} -->
 <div class="wp-block-column" style="flex-basis:8%"><!-- wp:image {"height":"36px","aspectRatio":"1","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Solvent brand mark" style="border-radius:8px;aspect-ratio:1;object-fit:cover;height:36px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Solvent brand mark" style="border-radius:8px;aspect-ratio:1;object-fit:cover;height:36px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->

@@ -11,7 +11,7 @@
 <!-- wp:group {"metadata":{"categories":["shadcn","footer"],"patternName":"shadcn/compact-logo-menu-footer","name":"Compact Logo Menu Footer"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|7","right":"var:preset|spacing|4","bottom":"var:preset|spacing|7","left":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|6"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--7);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--7);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"layout":{"type":"flex","justifyContent":"center","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"height":"28px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Alderway logo" style="height:28px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Alderway logo" style="height:28px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 

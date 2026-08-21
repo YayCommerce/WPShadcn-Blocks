@@ -34,16 +34,16 @@
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"28%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:28%"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}}} -->
 <div class="wp-block-group"><!-- wp:image {"height":"24px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Foundry Platform wordmark" style="height:24px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Foundry Platform wordmark" style="height:24px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:shadcn/avatar-group {"maxVisible":3} -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Nadia Fontaine","size":"sm","fallback":"NF"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Nadia Fontaine","size":"sm","fallback":"NF"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Oskar Brandt","size":"sm","fallback":"OB"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Oskar Brandt","size":"sm","fallback":"OB"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Rhea Kulkarni","size":"sm","fallback":"RK"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Rhea Kulkarni","size":"sm","fallback":"RK"} /-->
 <!-- /wp:shadcn/avatar-group -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}}} -->
@@ -90,16 +90,16 @@
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"28%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:28%"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}}} -->
 <div class="wp-block-group"><!-- wp:image {"height":"24px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Loom Design Systems wordmark" style="height:24px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Loom Design Systems wordmark" style="height:24px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:shadcn/avatar-group {"maxVisible":3} -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Ingrid Solheim","size":"sm","fallback":"IS"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Ingrid Solheim","size":"sm","fallback":"IS"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Caleb Mensah","size":"sm","fallback":"CM"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Caleb Mensah","size":"sm","fallback":"CM"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Yuki Tanabe","size":"sm","fallback":"YT"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Yuki Tanabe","size":"sm","fallback":"YT"} /-->
 <!-- /wp:shadcn/avatar-group -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}}} -->
@@ -146,16 +146,16 @@
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"28%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:28%"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}}} -->
 <div class="wp-block-group"><!-- wp:image {"height":"24px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Harbor Data wordmark" style="height:24px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Harbor Data wordmark" style="height:24px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:shadcn/avatar-group {"maxVisible":3} -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Tomasz Wierzba","size":"sm","fallback":"TW"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Tomasz Wierzba","size":"sm","fallback":"TW"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Elif Karadag","size":"sm","fallback":"EK"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Elif Karadag","size":"sm","fallback":"EK"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Bram de Ridder","size":"sm","fallback":"BR"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Bram de Ridder","size":"sm","fallback":"BR"} /-->
 <!-- /wp:shadcn/avatar-group -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}}} -->
@@ -202,16 +202,16 @@
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"28%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:28%"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}}} -->
 <div class="wp-block-group"><!-- wp:image {"height":"24px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Wren Mobile wordmark" style="height:24px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Wren Mobile wordmark" style="height:24px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:shadcn/avatar-group {"maxVisible":3} -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Sofia Almeida","size":"sm","fallback":"SA"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Sofia Almeida","size":"sm","fallback":"SA"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Marcus Hollingsworth","size":"sm","fallback":"MH"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Marcus Hollingsworth","size":"sm","fallback":"MH"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Amara Ndiaye","size":"sm","fallback":"AN"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Amara Ndiaye","size":"sm","fallback":"AN"} /-->
 <!-- /wp:shadcn/avatar-group -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}}} -->
@@ -258,16 +258,16 @@
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"28%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:28%"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}}} -->
 <div class="wp-block-group"><!-- wp:image {"height":"24px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Sable Reliability wordmark" style="height:24px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Sable Reliability wordmark" style="height:24px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:shadcn/avatar-group {"maxVisible":3} -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Joaquin Reyes","size":"sm","fallback":"JR"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Joaquin Reyes","size":"sm","fallback":"JR"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Hanne Vestergaard","size":"sm","fallback":"HV"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Hanne Vestergaard","size":"sm","fallback":"HV"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Devon Achebe","size":"sm","fallback":"DA"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Devon Achebe","size":"sm","fallback":"DA"} /-->
 <!-- /wp:shadcn/avatar-group -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}}} -->

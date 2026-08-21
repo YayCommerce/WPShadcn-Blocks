@@ -22,21 +22,21 @@
 <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|6"}}}} -->
 <div class="wp-block-columns alignwide"><!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|6"}}} -->
 <div class="wp-block-column"><!-- wp:image {"width":"100%","height":"600px","scale":"cover","sizeSlug":"large","style":{"color":{"duotone":["#000000","#ffffff"]}}} -->
-<figure class="wp-block-image size-large is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="A dry lake bed cracked into plates, running flat to the horizon" style="object-fit:cover;width:100%;height:600px"/></figure>
+<figure class="wp-block-image size-large is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A dry lake bed cracked into plates, running flat to the horizon" style="object-fit:cover;width:100%;height:600px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"width":"100%","height":"360px","scale":"cover","sizeSlug":"large","style":{"color":{"duotone":["#000000","#ffffff"]}}} -->
-<figure class="wp-block-image size-large is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="A surveyor's tripod standing alone on the salt, shadow stretched long" style="object-fit:cover;width:100%;height:360px"/></figure>
+<figure class="wp-block-image size-large is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A surveyor's tripod standing alone on the salt, shadow stretched long" style="object-fit:cover;width:100%;height:360px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|6"}}} -->
 <div class="wp-block-column"><!-- wp:image {"width":"100%","height":"360px","scale":"cover","sizeSlug":"large","style":{"color":{"duotone":["#000000","#ffffff"]}}} -->
-<figure class="wp-block-image size-large is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Wind ridging the salt crust into low parallel lines" style="object-fit:cover;width:100%;height:360px"/></figure>
+<figure class="wp-block-image size-large is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Wind ridging the salt crust into low parallel lines" style="object-fit:cover;width:100%;height:360px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"width":"100%","height":"600px","scale":"cover","sizeSlug":"large","style":{"color":{"duotone":["#000000","#ffffff"]}}} -->
-<figure class="wp-block-image size-large is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="A field vehicle parked at dusk with its rear doors open onto camera cases" style="object-fit:cover;width:100%;height:600px"/></figure>
+<figure class="wp-block-image size-large is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A field vehicle parked at dusk with its rear doors open onto camera cases" style="object-fit:cover;width:100%;height:600px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
@@ -94,6 +94,6 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"align":"wide","width":"100%","height":"620px","scale":"cover","sizeSlug":"large","style":{"color":{"duotone":["#000000","#ffffff"]}}} -->
-<figure class="wp-block-image alignwide size-large is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="The salt flat photographed end to end at last light, a single track crossing it" style="object-fit:cover;width:100%;height:620px"/></figure>
+<figure class="wp-block-image alignwide size-large is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The salt flat photographed end to end at last light, a single track crossing it" style="object-fit:cover;width:100%;height:620px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->

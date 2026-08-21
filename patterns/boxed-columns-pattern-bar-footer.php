@@ -14,7 +14,7 @@
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--8);padding-right:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--8);padding-left:var(--wp--preset--spacing--6)"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|7","left":"var:preset|spacing|7"}}}} -->
 <div class="wp-block-columns"><!-- wp:column {"width":"34%","style":{"spacing":{"blockGap":"var:preset|spacing|5"}}} -->
 <div class="wp-block-column" style="flex-basis:34%"><!-- wp:image {"height":"30px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Lattice logo" style="height:30px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Lattice logo" style="height:30px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"textColor":"muted-foreground","fontSize":"sm"} -->

@@ -147,19 +147,19 @@
 
 <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"grid","minimumColumnWidth":"28rem"}} -->
 <div class="wp-block-group alignwide"><!-- wp:image {"aspectRatio":"3/2","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A baker sliding trays into an oven behind a lit shop window at night" style="border-radius:8px;aspect-ratio:3/2;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Ovens On, Baker Lane — 01:10</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A baker sliding trays into an oven behind a lit shop window at night" style="border-radius:8px;aspect-ratio:3/2;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Ovens On, Baker Lane — 01:10</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"3/2","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Stacked tyres under a floodlight in an open yard beside a parked van" style="border-radius:8px;aspect-ratio:3/2;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Delivery, Attercliffe Tyres — 03:24</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Stacked tyres under a floodlight in an open yard beside a parked van" style="border-radius:8px;aspect-ratio:3/2;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Delivery, Attercliffe Tyres — 03:24</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"3/2","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A dispatcher on the phone in a bright taxi office with a wet street outside" style="border-radius:8px;aspect-ratio:3/2;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Dispatch Window — 02:47</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A dispatcher on the phone in a bright taxi office with a wet street outside" style="border-radius:8px;aspect-ratio:3/2;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Dispatch Window — 02:47</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"3/2","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="An empty canal towpath with the first light showing behind a mill roof" style="border-radius:8px;aspect-ratio:3/2;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Towpath Before the First Train — 05:52</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="An empty canal towpath with the first light showing behind a mill roof" style="border-radius:8px;aspect-ratio:3/2;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Towpath Before the First Train — 05:52</figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
@@ -171,37 +171,37 @@
 <!-- wp:shadcn/marquee {"speed":35,"showFade":true,"gap":"1.5rem","align":"wide"} -->
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"width":"320px","height":"220px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"6px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Steam rising from a vent grate under a street lamp" style="border-radius:6px;object-fit:cover;width:320px;height:220px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Steam rising from a vent grate under a street lamp" style="border-radius:6px;object-fit:cover;width:320px;height:220px"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"width":"320px","height":"220px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"6px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A cleaner mopping the floor of a lit office lobby seen from the pavement" style="border-radius:6px;object-fit:cover;width:320px;height:220px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A cleaner mopping the floor of a lit office lobby seen from the pavement" style="border-radius:6px;object-fit:cover;width:320px;height:220px"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"width":"320px","height":"220px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"6px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Shuttered shopfronts reflected in standing water on the road" style="border-radius:6px;object-fit:cover;width:320px;height:220px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Shuttered shopfronts reflected in standing water on the road" style="border-radius:6px;object-fit:cover;width:320px;height:220px"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"width":"320px","height":"220px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"6px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A night bus pulling away from a stop with one passenger aboard" style="border-radius:6px;object-fit:cover;width:320px;height:220px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A night bus pulling away from a stop with one passenger aboard" style="border-radius:6px;object-fit:cover;width:320px;height:220px"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"width":"320px","height":"220px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"6px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Forklift headlights crossing a warehouse doorway in the small hours" style="border-radius:6px;object-fit:cover;width:320px;height:220px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Forklift headlights crossing a warehouse doorway in the small hours" style="border-radius:6px;object-fit:cover;width:320px;height:220px"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"width":"320px","height":"220px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"6px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A railway bridge with the sky going pale above the parapet" style="border-radius:6px;object-fit:cover;width:320px;height:220px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A railway bridge with the sky going pale above the parapet" style="border-radius:6px;object-fit:cover;width:320px;height:220px"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 <!-- /wp:shadcn/marquee --></div>

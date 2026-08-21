@@ -31,59 +31,59 @@
 
 <!-- wp:shadcn/marquee {"speed":28,"direction":"left","showFade":true,"gap":"1.25rem","align":"wide"} -->
 <!-- wp:shadcn/marquee-item -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Adaeze Nwachukwu, talent partner","size":"lg","fallback":"AN"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Adaeze Nwachukwu, talent partner","size":"lg","fallback":"AN"} /-->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Rune Bjornstad, engineering manager","size":"lg","fallback":"RB"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Rune Bjornstad, engineering manager","size":"lg","fallback":"RB"} /-->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Chiara Lombardi, people operations","size":"lg","fallback":"CL"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Chiara Lombardi, people operations","size":"lg","fallback":"CL"} /-->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Devendra Rao, technical recruiter","size":"lg","fallback":"DR"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Devendra Rao, technical recruiter","size":"lg","fallback":"DR"} /-->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Solene Fabre, head of talent","size":"lg","fallback":"SF"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Solene Fabre, head of talent","size":"lg","fallback":"SF"} /-->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Marcus Whitlow, hiring panel lead","size":"lg","fallback":"MW"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Marcus Whitlow, hiring panel lead","size":"lg","fallback":"MW"} /-->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Yuki Tanabe, design director","size":"lg","fallback":"YT"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Yuki Tanabe, design director","size":"lg","fallback":"YT"} /-->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Priyanka Deshmukh, sourcing lead","size":"lg","fallback":"PD"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Priyanka Deshmukh, sourcing lead","size":"lg","fallback":"PD"} /-->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Tomas Ferreira, staff engineer","size":"lg","fallback":"TF"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Tomas Ferreira, staff engineer","size":"lg","fallback":"TF"} /-->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Halima Yusuf, people partner","size":"lg","fallback":"HY"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Halima Yusuf, people partner","size":"lg","fallback":"HY"} /-->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Eero Lahtinen, product lead","size":"lg","fallback":"EL"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Eero Lahtinen, product lead","size":"lg","fallback":"EL"} /-->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Beatriz Salgado, operations manager","size":"lg","fallback":"BS"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Beatriz Salgado, operations manager","size":"lg","fallback":"BS"} /-->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Owen Kirkbride, finance lead","size":"lg","fallback":"OK"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Owen Kirkbride, finance lead","size":"lg","fallback":"OK"} /-->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Anneke Visser, chief of staff","size":"lg","fallback":"AV"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Anneke Visser, chief of staff","size":"lg","fallback":"AV"} /-->
 <!-- /wp:shadcn/marquee-item -->
 <!-- /wp:shadcn/marquee -->
 

@@ -60,13 +60,13 @@
 <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|4","left":"var:preset|spacing|4"}}}} -->
 <div class="wp-block-columns alignwide"><!-- wp:column {"width":"74%"} -->
 <div class="wp-block-column" style="flex-basis:74%"><!-- wp:image {"width":"100%","height":"520px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A row of enamel jetty signs standing along the quay at low tide" style="border-radius:12px;object-fit:cover;width:100%;height:520px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A row of enamel jetty signs standing along the quay at low tide" style="border-radius:12px;object-fit:cover;width:100%;height:520px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"width":"25%"} -->
 <div class="wp-block-column" style="flex-basis:25%"><!-- wp:image {"width":"100%","height":"520px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Close crop of a painted deck number stencilled onto wet timber planking" style="border-radius:12px;object-fit:cover;width:100%;height:520px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Close crop of a painted deck number stencilled onto wet timber planking" style="border-radius:12px;object-fit:cover;width:100%;height:520px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->

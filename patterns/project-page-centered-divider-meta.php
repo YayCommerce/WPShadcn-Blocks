@@ -56,7 +56,7 @@
 <!-- /wp:columns -->
 
 <!-- wp:image {"align":"wide","width":"100%","height":"520px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="The full Salt and Signal range lined up on a pale studio shelf" style="border-radius:12px;object-fit:cover;width:100%;height:520px"/><figcaption class="wp-element-caption">The launch range photographed on the studio shelf, two weeks before the first shipment left the building.</figcaption></figure>
+<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The full Salt and Signal range lined up on a pale studio shelf" style="border-radius:12px;object-fit:cover;width:100%;height:520px"/><figcaption class="wp-element-caption">The launch range photographed on the studio shelf, two weeks before the first shipment left the building.</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

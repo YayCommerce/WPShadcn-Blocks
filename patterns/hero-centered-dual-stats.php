@@ -51,15 +51,15 @@
 
 <!-- wp:group {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-group"><!-- wp:shadcn/avatar-group {"maxVisible":5} -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Bilal Tahir, staff engineer","size":"md","fallback":"BT"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Bilal Tahir, staff engineer","size":"md","fallback":"BT"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Noemi Bertolucci, payments lead","size":"md","fallback":"NB"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Noemi Bertolucci, payments lead","size":"md","fallback":"NB"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Kwabena Osei, backend developer","size":"md","fallback":"KO"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Kwabena Osei, backend developer","size":"md","fallback":"KO"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Sanne de Bruijn, treasury analyst","size":"md","fallback":"SB"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Sanne de Bruijn, treasury analyst","size":"md","fallback":"SB"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Rafael Quintana, platform architect","size":"md","fallback":"RQ"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Rafael Quintana, platform architect","size":"md","fallback":"RQ"} /-->
 <!-- /wp:shadcn/avatar-group --></div>
 <!-- /wp:group -->
 

@@ -36,7 +36,7 @@
 <!-- wp:column {"width":"33%","style":{"spacing":{"padding":{"right":"var:preset|spacing|5","left":"var:preset|spacing|5"}},"border":{"radius":{"topLeft":"0.75rem","topRight":"0.75rem"}}},"backgroundColor":"muted","layout":{"type":"default"}} -->
 <div class="wp-block-column has-muted-background-color has-background" style="border-top-left-radius:0.75rem;border-top-right-radius:0.75rem;padding-right:var(--wp--preset--spacing--5);padding-left:var(--wp--preset--spacing--5);flex-basis:33%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--6)"><!-- wp:image {"align":"center","height":"28px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Halo wordmark" style="height:28px"/></figure>
+<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Halo wordmark" style="height:28px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3,"style":{"typography":{"textAlign":"center"}},"fontSize":"xl"} -->
@@ -52,7 +52,7 @@
 <!-- wp:column {"width":"33%","layout":{"type":"default"}} -->
 <div class="wp-block-column" style="flex-basis:33%"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--6)"><!-- wp:image {"align":"center","height":"28px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Meridian wordmark" style="height:28px"/></figure>
+<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Meridian wordmark" style="height:28px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"level":3,"style":{"typography":{"textAlign":"center"}},"fontSize":"xl"} -->

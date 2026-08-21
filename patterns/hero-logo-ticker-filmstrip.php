@@ -12,49 +12,49 @@
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:shadcn/marquee {"speed":20,"direction":"left","showFade":true,"gap":"3.5rem","align":"wide"} -->
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"width":"90px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Customer wordmark placeholder" style="width:90px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Customer wordmark placeholder" style="width:90px"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"width":"90px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Customer wordmark placeholder" style="width:90px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Customer wordmark placeholder" style="width:90px"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"width":"90px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Customer wordmark placeholder" style="width:90px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Customer wordmark placeholder" style="width:90px"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"width":"90px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Customer wordmark placeholder" style="width:90px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Customer wordmark placeholder" style="width:90px"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"width":"90px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Customer wordmark placeholder" style="width:90px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Customer wordmark placeholder" style="width:90px"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"width":"90px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Customer wordmark placeholder" style="width:90px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Customer wordmark placeholder" style="width:90px"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"width":"90px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Customer wordmark placeholder" style="width:90px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Customer wordmark placeholder" style="width:90px"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"width":"90px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Customer wordmark placeholder" style="width:90px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Customer wordmark placeholder" style="width:90px"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 <!-- /wp:shadcn/marquee -->
@@ -81,38 +81,38 @@
 
 <!-- wp:shadcn/carousel {"align":"wide","loop":true,"showArrows":true,"showDots":false,"slidesPerView":1,"slidesPerViewTablet":2,"slidesPerViewDesktop":4,"gap":"1rem"} -->
 <!-- wp:shadcn/carousel-item -->
-<!-- wp:cover {"url":"https://ui.shadcn.com/placeholder.svg","alt":"Editor open on a half-written product page","dimRatio":50,"minHeight":260,"minHeightUnit":"px","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|4","right":"var:preset|spacing|4","bottom":"var:preset|spacing|4","left":"var:preset|spacing|4"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-cover" style="border-radius:12px;padding-top:var(--wp--preset--spacing--4);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--4);padding-left:var(--wp--preset--spacing--4);min-height:260px"><img class="wp-block-cover__image-background" alt="Editor open on a half-written product page" src="https://ui.shadcn.com/placeholder.svg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><div class="wp-block-cover__inner-container"></div></div>
+<!-- wp:cover {"url":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","alt":"Editor open on a half-written product page","dimRatio":50,"minHeight":260,"minHeightUnit":"px","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|4","right":"var:preset|spacing|4","bottom":"var:preset|spacing|4","left":"var:preset|spacing|4"}}},"layout":{"type":"default"}} -->
+<div class="wp-block-cover" style="border-radius:12px;padding-top:var(--wp--preset--spacing--4);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--4);padding-left:var(--wp--preset--spacing--4);min-height:260px"><img class="wp-block-cover__image-background" alt="Editor open on a half-written product page" src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><div class="wp-block-cover__inner-container"></div></div>
 <!-- /wp:cover -->
 <!-- /wp:shadcn/carousel-item -->
 
 <!-- wp:shadcn/carousel-item -->
-<!-- wp:cover {"url":"https://ui.shadcn.com/placeholder.svg","alt":"Writer marking up a printed layout at a shared desk","dimRatio":50,"minHeight":260,"minHeightUnit":"px","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|4","right":"var:preset|spacing|4","bottom":"var:preset|spacing|4","left":"var:preset|spacing|4"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-cover" style="border-radius:12px;padding-top:var(--wp--preset--spacing--4);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--4);padding-left:var(--wp--preset--spacing--4);min-height:260px"><img class="wp-block-cover__image-background" alt="Writer marking up a printed layout at a shared desk" src="https://ui.shadcn.com/placeholder.svg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><div class="wp-block-cover__inner-container"></div></div>
+<!-- wp:cover {"url":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","alt":"Writer marking up a printed layout at a shared desk","dimRatio":50,"minHeight":260,"minHeightUnit":"px","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|4","right":"var:preset|spacing|4","bottom":"var:preset|spacing|4","left":"var:preset|spacing|4"}}},"layout":{"type":"default"}} -->
+<div class="wp-block-cover" style="border-radius:12px;padding-top:var(--wp--preset--spacing--4);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--4);padding-left:var(--wp--preset--spacing--4);min-height:260px"><img class="wp-block-cover__image-background" alt="Writer marking up a printed layout at a shared desk" src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><div class="wp-block-cover__inner-container"></div></div>
 <!-- /wp:cover -->
 <!-- /wp:shadcn/carousel-item -->
 
 <!-- wp:shadcn/carousel-item -->
-<!-- wp:cover {"url":"https://ui.shadcn.com/placeholder.svg","alt":"Packing bench in a small warehouse before the morning run","dimRatio":50,"minHeight":260,"minHeightUnit":"px","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|4","right":"var:preset|spacing|4","bottom":"var:preset|spacing|4","left":"var:preset|spacing|4"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-cover" style="border-radius:12px;padding-top:var(--wp--preset--spacing--4);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--4);padding-left:var(--wp--preset--spacing--4);min-height:260px"><img class="wp-block-cover__image-background" alt="Packing bench in a small warehouse before the morning run" src="https://ui.shadcn.com/placeholder.svg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><div class="wp-block-cover__inner-container"></div></div>
+<!-- wp:cover {"url":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","alt":"Packing bench in a small warehouse before the morning run","dimRatio":50,"minHeight":260,"minHeightUnit":"px","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|4","right":"var:preset|spacing|4","bottom":"var:preset|spacing|4","left":"var:preset|spacing|4"}}},"layout":{"type":"default"}} -->
+<div class="wp-block-cover" style="border-radius:12px;padding-top:var(--wp--preset--spacing--4);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--4);padding-left:var(--wp--preset--spacing--4);min-height:260px"><img class="wp-block-cover__image-background" alt="Packing bench in a small warehouse before the morning run" src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><div class="wp-block-cover__inner-container"></div></div>
 <!-- /wp:cover -->
 <!-- /wp:shadcn/carousel-item -->
 
 <!-- wp:shadcn/carousel-item -->
-<!-- wp:cover {"url":"https://ui.shadcn.com/placeholder.svg","alt":"Two colleagues reviewing a campaign draft on a laptop","dimRatio":50,"minHeight":260,"minHeightUnit":"px","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|4","right":"var:preset|spacing|4","bottom":"var:preset|spacing|4","left":"var:preset|spacing|4"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-cover" style="border-radius:12px;padding-top:var(--wp--preset--spacing--4);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--4);padding-left:var(--wp--preset--spacing--4);min-height:260px"><img class="wp-block-cover__image-background" alt="Two colleagues reviewing a campaign draft on a laptop" src="https://ui.shadcn.com/placeholder.svg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><div class="wp-block-cover__inner-container"></div></div>
+<!-- wp:cover {"url":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","alt":"Two colleagues reviewing a campaign draft on a laptop","dimRatio":50,"minHeight":260,"minHeightUnit":"px","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|4","right":"var:preset|spacing|4","bottom":"var:preset|spacing|4","left":"var:preset|spacing|4"}}},"layout":{"type":"default"}} -->
+<div class="wp-block-cover" style="border-radius:12px;padding-top:var(--wp--preset--spacing--4);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--4);padding-left:var(--wp--preset--spacing--4);min-height:260px"><img class="wp-block-cover__image-background" alt="Two colleagues reviewing a campaign draft on a laptop" src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><div class="wp-block-cover__inner-container"></div></div>
 <!-- /wp:cover -->
 <!-- /wp:shadcn/carousel-item -->
 
 <!-- wp:shadcn/carousel-item -->
-<!-- wp:cover {"url":"https://ui.shadcn.com/placeholder.svg","alt":"Shop counter with a tablet showing the day's orders","dimRatio":50,"minHeight":260,"minHeightUnit":"px","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|4","right":"var:preset|spacing|4","bottom":"var:preset|spacing|4","left":"var:preset|spacing|4"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-cover" style="border-radius:12px;padding-top:var(--wp--preset--spacing--4);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--4);padding-left:var(--wp--preset--spacing--4);min-height:260px"><img class="wp-block-cover__image-background" alt="Shop counter with a tablet showing the day's orders" src="https://ui.shadcn.com/placeholder.svg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><div class="wp-block-cover__inner-container"></div></div>
+<!-- wp:cover {"url":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","alt":"Shop counter with a tablet showing the day's orders","dimRatio":50,"minHeight":260,"minHeightUnit":"px","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|4","right":"var:preset|spacing|4","bottom":"var:preset|spacing|4","left":"var:preset|spacing|4"}}},"layout":{"type":"default"}} -->
+<div class="wp-block-cover" style="border-radius:12px;padding-top:var(--wp--preset--spacing--4);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--4);padding-left:var(--wp--preset--spacing--4);min-height:260px"><img class="wp-block-cover__image-background" alt="Shop counter with a tablet showing the day's orders" src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><div class="wp-block-cover__inner-container"></div></div>
 <!-- /wp:cover -->
 <!-- /wp:shadcn/carousel-item -->
 
 <!-- wp:shadcn/carousel-item -->
-<!-- wp:cover {"url":"https://ui.shadcn.com/placeholder.svg","alt":"Studio wall covered in printed page layouts","dimRatio":50,"minHeight":260,"minHeightUnit":"px","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|4","right":"var:preset|spacing|4","bottom":"var:preset|spacing|4","left":"var:preset|spacing|4"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-cover" style="border-radius:12px;padding-top:var(--wp--preset--spacing--4);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--4);padding-left:var(--wp--preset--spacing--4);min-height:260px"><img class="wp-block-cover__image-background" alt="Studio wall covered in printed page layouts" src="https://ui.shadcn.com/placeholder.svg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><div class="wp-block-cover__inner-container"></div></div>
+<!-- wp:cover {"url":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","alt":"Studio wall covered in printed page layouts","dimRatio":50,"minHeight":260,"minHeightUnit":"px","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|4","right":"var:preset|spacing|4","bottom":"var:preset|spacing|4","left":"var:preset|spacing|4"}}},"layout":{"type":"default"}} -->
+<div class="wp-block-cover" style="border-radius:12px;padding-top:var(--wp--preset--spacing--4);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--4);padding-left:var(--wp--preset--spacing--4);min-height:260px"><img class="wp-block-cover__image-background" alt="Studio wall covered in printed page layouts" src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim"></span><div class="wp-block-cover__inner-container"></div></div>
 <!-- /wp:cover -->
 <!-- /wp:shadcn/carousel-item -->
 <!-- /wp:shadcn/carousel --></div>

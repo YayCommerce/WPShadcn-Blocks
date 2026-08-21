@@ -34,7 +34,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"aspectRatio":"21/9","scale":"cover","width":"100%","sizeSlug":"large","align":"wide","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="The full stoneware service laid out in rows on a scrubbed pine table beside the kiln shed" style="border-radius:12px;aspect-ratio:21/9;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The full stoneware service laid out in rows on a scrubbed pine table beside the kiln shed" style="border-radius:12px;aspect-ratio:21/9;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->
@@ -54,13 +54,13 @@
 <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|5","left":"var:preset|spacing|5"}}}} -->
 <div class="wp-block-columns alignwide"><!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"aspectRatio":"1","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A single dinner plate held at an angle so the green tidemark glaze breaks over the heavy rim" style="border-radius:12px;aspect-ratio:1;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Dinner plate, 280mm, second glaze trial — the rim carries two extra millimetres of wall.</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A single dinner plate held at an angle so the green tidemark glaze breaks over the heavy rim" style="border-radius:12px;aspect-ratio:1;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Dinner plate, 280mm, second glaze trial — the rim carries two extra millimetres of wall.</figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"aspectRatio":"1","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Sanded unglazed foot rings on a stack of bowls turned upside down on the drying rack" style="border-radius:12px;aspect-ratio:1;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Unglazed feet, sanded by hand — the stack grips itself straight out of the wash.</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Sanded unglazed foot rings on a stack of bowls turned upside down on the drying rack" style="border-radius:12px;aspect-ratio:1;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Unglazed feet, sanded by hand — the stack grips itself straight out of the wash.</figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->

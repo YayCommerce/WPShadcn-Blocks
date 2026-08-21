@@ -20,7 +20,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"aspectRatio":"2/1","scale":"cover","width":"100%","sizeSlug":"large","align":"wide","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A model in a long undyed wool coat standing at the foot of a concrete stairwell in an empty print works" style="border-radius:12px;aspect-ratio:2/1;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Look eleven, shot on the fourth landing before the light moved off the west wall.</figcaption></figure>
+<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A model in a long undyed wool coat standing at the foot of a concrete stairwell in an empty print works" style="border-radius:12px;aspect-ratio:2/1;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Look eleven, shot on the fourth landing before the light moved off the west wall.</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|7","left":"var:preset|spacing|8"}}}} -->

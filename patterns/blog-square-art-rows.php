@@ -23,7 +23,7 @@
 <div class="wp-block-group is-style-shadcn-divided"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|5","left":"var:preset|spacing|8"}}}} -->
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"24%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:24%"><!-- wp:image {"aspectRatio":"1/1","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A deploy checklist scrawled across a whiteboard beside an open laptop" style="border-radius:12px;aspect-ratio:1/1;object-fit:cover"/></figure>
+<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A deploy checklist scrawled across a whiteboard beside an open laptop" style="border-radius:12px;aspect-ratio:1/1;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -51,7 +51,7 @@
 <!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|5","left":"var:preset|spacing|8"}}}} -->
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"24%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:24%"><!-- wp:image {"aspectRatio":"1/1","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A wall-mounted status board glowing in an empty meeting room" style="border-radius:12px;aspect-ratio:1/1;object-fit:cover"/></figure>
+<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A wall-mounted status board glowing in an empty meeting room" style="border-radius:12px;aspect-ratio:1/1;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -79,7 +79,7 @@
 <!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|5","left":"var:preset|spacing|8"}}}} -->
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"24%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:24%"><!-- wp:image {"aspectRatio":"1/1","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="An error dialog reflected in the lens of a pair of glasses" style="border-radius:12px;aspect-ratio:1/1;object-fit:cover"/></figure>
+<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="An error dialog reflected in the lens of a pair of glasses" style="border-radius:12px;aspect-ratio:1/1;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -107,7 +107,7 @@
 <!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|5","left":"var:preset|spacing|8"}}}} -->
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"24%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:24%"><!-- wp:image {"aspectRatio":"1/1","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Printed type specimens fanned out across a bare studio desk" style="border-radius:12px;aspect-ratio:1/1;object-fit:cover"/></figure>
+<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Printed type specimens fanned out across a bare studio desk" style="border-radius:12px;aspect-ratio:1/1;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -135,7 +135,7 @@
 <!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|5","left":"var:preset|spacing|8"}}}} -->
 <div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"24%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:24%"><!-- wp:image {"aspectRatio":"1/1","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A stack of index cards bound with an elastic band on an empty table" style="border-radius:12px;aspect-ratio:1/1;object-fit:cover"/></figure>
+<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A stack of index cards bound with an elastic band on an empty table" style="border-radius:12px;aspect-ratio:1/1;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 

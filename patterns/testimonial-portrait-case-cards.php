@@ -28,7 +28,7 @@
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"32px","height":"32px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Jonah Reyes" style="border-radius:9999px;object-fit:cover;width:32px;height:32px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Jonah Reyes" style="border-radius:9999px;object-fit:cover;width:32px;height:32px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
@@ -43,7 +43,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"height":"20px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Vantage Row logo" style="height:20px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Vantage Row logo" style="height:20px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:column -->
@@ -56,7 +56,7 @@
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"32px","height":"32px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Sofia Marchetti" style="border-radius:9999px;object-fit:cover;width:32px;height:32px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Sofia Marchetti" style="border-radius:9999px;object-fit:cover;width:32px;height:32px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
@@ -71,15 +71,15 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"height":"20px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Kestrelane logo" style="height:20px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Kestrelane logo" style="height:20px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 
 <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"grid","minimumColumnWidth":"22rem"}} -->
-<div class="wp-block-group alignwide"><!-- wp:cover {"url":"https://ui.shadcn.com/placeholder.svg","alt":"Designer reviewing a page layout on a laptop","dimRatio":60,"minHeight":480,"minHeightUnit":"px","contentPosition":"bottom left","style":{"border":{"radius":"16px"}},"layout":{"type":"default"}} -->
-<div class="wp-block-cover has-custom-content-position is-position-bottom-left" style="border-radius:16px;min-height:480px"><img class="wp-block-cover__image-background" alt="Designer reviewing a page layout on a laptop" src="https://ui.shadcn.com/placeholder.svg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-60 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|6","right":"var:preset|spacing|6","bottom":"var:preset|spacing|6","left":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|1"}},"layout":{"type":"default"}} -->
+<div class="wp-block-group alignwide"><!-- wp:cover {"url":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","alt":"Designer reviewing a page layout on a laptop","dimRatio":60,"minHeight":480,"minHeightUnit":"px","contentPosition":"bottom left","style":{"border":{"radius":"16px"}},"layout":{"type":"default"}} -->
+<div class="wp-block-cover has-custom-content-position is-position-bottom-left" style="border-radius:16px;min-height:480px"><img class="wp-block-cover__image-background" alt="Designer reviewing a page layout on a laptop" src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-60 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|6","right":"var:preset|spacing|6","bottom":"var:preset|spacing|6","left":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|1"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--6);padding-right:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--6);padding-left:var(--wp--preset--spacing--6)"><!-- wp:paragraph {"style":{"color":{"text":"#ffffff"},"typography":{"fontWeight":"600"}},"fontSize":"4-xl"} -->
 <p class="has-text-color has-4-xl-font-size" style="color:#ffffff;font-weight:600">4x</p>
 <!-- /wp:paragraph -->
@@ -94,8 +94,8 @@
 <!-- /wp:group --></div></div>
 <!-- /wp:cover -->
 
-<!-- wp:cover {"url":"https://ui.shadcn.com/placeholder.svg","alt":"Two colleagues comparing page layouts at a desk","dimRatio":60,"minHeight":480,"minHeightUnit":"px","contentPosition":"bottom left","style":{"border":{"radius":"16px"}},"layout":{"type":"default"}} -->
-<div class="wp-block-cover has-custom-content-position is-position-bottom-left" style="border-radius:16px;min-height:480px"><img class="wp-block-cover__image-background" alt="Two colleagues comparing page layouts at a desk" src="https://ui.shadcn.com/placeholder.svg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-60 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|6","right":"var:preset|spacing|6","bottom":"var:preset|spacing|6","left":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|1"}},"layout":{"type":"default"}} -->
+<!-- wp:cover {"url":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","alt":"Two colleagues comparing page layouts at a desk","dimRatio":60,"minHeight":480,"minHeightUnit":"px","contentPosition":"bottom left","style":{"border":{"radius":"16px"}},"layout":{"type":"default"}} -->
+<div class="wp-block-cover has-custom-content-position is-position-bottom-left" style="border-radius:16px;min-height:480px"><img class="wp-block-cover__image-background" alt="Two colleagues comparing page layouts at a desk" src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-60 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|6","right":"var:preset|spacing|6","bottom":"var:preset|spacing|6","left":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|1"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--6);padding-right:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--6);padding-left:var(--wp--preset--spacing--6)"><!-- wp:paragraph {"style":{"color":{"text":"#ffffff"},"typography":{"fontWeight":"600"}},"fontSize":"4-xl"} -->
 <p class="has-text-color has-4-xl-font-size" style="color:#ffffff;font-weight:600">55%</p>
 <!-- /wp:paragraph -->
@@ -110,8 +110,8 @@
 <!-- /wp:group --></div></div>
 <!-- /wp:cover -->
 
-<!-- wp:cover {"url":"https://ui.shadcn.com/placeholder.svg","alt":"Launch day dashboard on a studio wall","dimRatio":60,"minHeight":480,"minHeightUnit":"px","contentPosition":"bottom left","style":{"border":{"radius":"16px"}},"layout":{"type":"default"}} -->
-<div class="wp-block-cover has-custom-content-position is-position-bottom-left" style="border-radius:16px;min-height:480px"><img class="wp-block-cover__image-background" alt="Launch day dashboard on a studio wall" src="https://ui.shadcn.com/placeholder.svg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-60 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|6","right":"var:preset|spacing|6","bottom":"var:preset|spacing|6","left":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|1"}},"layout":{"type":"default"}} -->
+<!-- wp:cover {"url":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","alt":"Launch day dashboard on a studio wall","dimRatio":60,"minHeight":480,"minHeightUnit":"px","contentPosition":"bottom left","style":{"border":{"radius":"16px"}},"layout":{"type":"default"}} -->
+<div class="wp-block-cover has-custom-content-position is-position-bottom-left" style="border-radius:16px;min-height:480px"><img class="wp-block-cover__image-background" alt="Launch day dashboard on a studio wall" src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-60 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|6","right":"var:preset|spacing|6","bottom":"var:preset|spacing|6","left":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|1"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--6);padding-right:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--6);padding-left:var(--wp--preset--spacing--6)"><!-- wp:paragraph {"style":{"color":{"text":"#ffffff"},"typography":{"fontWeight":"600"}},"fontSize":"4-xl"} -->
 <p class="has-text-color has-4-xl-font-size" style="color:#ffffff;font-weight:600">18k</p>
 <!-- /wp:paragraph -->

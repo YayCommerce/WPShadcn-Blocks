@@ -20,7 +20,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"align":"wide","width":"100%","height":"620px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"16px"}}} -->
-<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A model in a long wool coat walking the crest of a dune with the sea behind her" style="border-radius:16px;object-fit:cover;width:100%;height:620px"/></figure>
+<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A model in a long wool coat walking the crest of a dune with the sea behind her" style="border-radius:16px;object-fit:cover;width:100%;height:620px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

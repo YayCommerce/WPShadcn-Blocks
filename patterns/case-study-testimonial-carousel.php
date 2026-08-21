@@ -26,7 +26,7 @@
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:45%"><!-- wp:columns {"metadata":{"name":"Mosaic"},"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|3","left":"var:preset|spacing|3"}}}} -->
 <div class="wp-block-columns"><!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}}} -->
 <div class="wp-block-column"><!-- wp:image {"width":"100%","height":"130px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Crates of washed leeks stacked beside the packing shed" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Crates of washed leeks stacked beside the packing shed" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"border":{"radius":"8px"},"dimensions":{"minHeight":"130px"},"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"backgroundColor":"muted","layout":{"type":"constrained"}} -->
@@ -40,13 +40,13 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"width":"100%","height":"130px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Hands tying a bundle of beetroot at a sorting bench" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Hands tying a bundle of beetroot at a sorting bench" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}}} -->
 <div class="wp-block-column"><!-- wp:image {"width":"100%","height":"130px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Van doors open at dawn beside a field gate" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Van doors open at dawn beside a field gate" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"border":{"radius":"8px"},"dimensions":{"minHeight":"130px"},"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"backgroundColor":"muted","layout":{"type":"constrained"}} -->
@@ -58,7 +58,7 @@
 
 <!-- wp:column {"verticalAlignment":"center","width":"55%","style":{"spacing":{"blockGap":"var:preset|spacing|4"}}} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:55%"><!-- wp:image {"width":"110px","height":"24px","scale":"contain","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Harrowgate Fields wordmark" style="object-fit:contain;width:110px;height:24px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Harrowgate Fields wordmark" style="object-fit:contain;width:110px;height:24px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"metadata":{"name":"Quote"},"fontSize":"base"} -->
@@ -88,13 +88,13 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"width":"100%","height":"130px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Waiting room chairs beside a bay window" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Waiting room chairs beside a bay window" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}}} -->
 <div class="wp-block-column"><!-- wp:image {"width":"100%","height":"130px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Nurse laying instruments out on a tray" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Nurse laying instruments out on a tray" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"border":{"radius":"8px"},"dimensions":{"minHeight":"130px"},"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"backgroundColor":"muted","layout":{"type":"constrained"}} -->
@@ -108,7 +108,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"width":"100%","height":"130px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Reception desk with the morning list on screen" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Reception desk with the morning list on screen" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
@@ -116,7 +116,7 @@
 
 <!-- wp:column {"verticalAlignment":"center","width":"55%","style":{"spacing":{"blockGap":"var:preset|spacing|4"}}} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:55%"><!-- wp:image {"width":"110px","height":"24px","scale":"contain","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Lantern Bay Dental wordmark" style="object-fit:contain;width:110px;height:24px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Lantern Bay Dental wordmark" style="object-fit:contain;width:110px;height:24px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"metadata":{"name":"Quote"},"fontSize":"base"} -->
@@ -142,11 +142,11 @@
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:45%"><!-- wp:columns {"metadata":{"name":"Mosaic"},"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|3","left":"var:preset|spacing|3"}}}} -->
 <div class="wp-block-columns"><!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}}} -->
 <div class="wp-block-column"><!-- wp:image {"width":"100%","height":"130px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Sewing frame holding a half-bound book" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Sewing frame holding a half-bound book" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"width":"100%","height":"130px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Gold tooling pressed into a leather spine" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Gold tooling pressed into a leather spine" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -156,7 +156,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"width":"100%","height":"130px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Offcuts of marbled paper spread across a workbench" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Offcuts of marbled paper spread across a workbench" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -174,7 +174,7 @@
 
 <!-- wp:column {"verticalAlignment":"center","width":"55%","style":{"spacing":{"blockGap":"var:preset|spacing|4"}}} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:55%"><!-- wp:image {"width":"110px","height":"24px","scale":"contain","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Corbin and Rowe wordmark" style="object-fit:contain;width:110px;height:24px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Corbin and Rowe wordmark" style="object-fit:contain;width:110px;height:24px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"metadata":{"name":"Quote"},"fontSize":"base"} -->
@@ -204,7 +204,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"width":"100%","height":"130px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Runners warming up on a wet track" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Runners warming up on a wet track" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -220,11 +220,11 @@
 
 <!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}}} -->
 <div class="wp-block-column"><!-- wp:image {"width":"100%","height":"130px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Club noticeboard pinned with fixture cards" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Club noticeboard pinned with fixture cards" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"width":"100%","height":"130px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Kit bags lined along a changing room bench" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Kit bags lined along a changing room bench" style="border-radius:8px;object-fit:cover;width:100%;height:130px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
@@ -232,7 +232,7 @@
 
 <!-- wp:column {"verticalAlignment":"center","width":"55%","style":{"spacing":{"blockGap":"var:preset|spacing|4"}}} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:55%"><!-- wp:image {"width":"110px","height":"24px","scale":"contain","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Ferrymead Athletics wordmark" style="object-fit:contain;width:110px;height:24px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Ferrymead Athletics wordmark" style="object-fit:contain;width:110px;height:24px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"metadata":{"name":"Quote"},"fontSize":"base"} -->

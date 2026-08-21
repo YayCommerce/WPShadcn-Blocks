@@ -26,19 +26,19 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"aspectRatio":"4/5","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A baker lifting a tray of proved rolls out of a steel rack at half past two in the morning" style="border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A baker lifting a tray of proved rolls out of a steel rack at half past two in the morning" style="border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"4/5","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Flour hanging in the light of a single bulb above a scarred wooden bench" style="border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Flour hanging in the light of a single bulb above a scarred wooden bench" style="border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"4/5","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Two hands scoring the top of a rye loaf with a blade held almost flat" style="border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Two hands scoring the top of a rye loaf with a blade held almost flat" style="border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"4/5","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A delivery van idling at an open shutter door with bread crates stacked on the wet pavement" style="border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A delivery van idling at an open shutter door with bread crates stacked on the wet pavement" style="border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained"}} -->

@@ -21,7 +21,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:image {"width":"64px","height":"64px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait of Marisol Quintero" style="border-radius:9999px;object-fit:cover;width:64px;height:64px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait of Marisol Quintero" style="border-radius:9999px;object-fit:cover;width:64px;height:64px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"textColor":"muted-foreground","fontSize":"sm"} -->
@@ -51,7 +51,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:image {"width":"64px","height":"64px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait of Bastien Roux" style="border-radius:9999px;object-fit:cover;width:64px;height:64px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait of Bastien Roux" style="border-radius:9999px;object-fit:cover;width:64px;height:64px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"textColor":"muted-foreground","fontSize":"sm"} -->
@@ -81,7 +81,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:image {"width":"64px","height":"64px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait of Wren Halloway" style="border-radius:9999px;object-fit:cover;width:64px;height:64px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait of Wren Halloway" style="border-radius:9999px;object-fit:cover;width:64px;height:64px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"textColor":"muted-foreground","fontSize":"sm"} -->
@@ -111,7 +111,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:image {"width":"64px","height":"64px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait of Chidinma Eze" style="border-radius:9999px;object-fit:cover;width:64px;height:64px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait of Chidinma Eze" style="border-radius:9999px;object-fit:cover;width:64px;height:64px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"textColor":"muted-foreground","fontSize":"sm"} -->
@@ -141,7 +141,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:image {"width":"64px","height":"64px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait of Janek Sobczak" style="border-radius:9999px;object-fit:cover;width:64px;height:64px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait of Janek Sobczak" style="border-radius:9999px;object-fit:cover;width:64px;height:64px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"textColor":"muted-foreground","fontSize":"sm"} -->
@@ -169,7 +169,7 @@
 <!-- /wp:heading -->
 
 <!-- wp:image {"width":"64px","height":"64px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait of Aurora Pellini" style="border-radius:9999px;object-fit:cover;width:64px;height:64px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait of Aurora Pellini" style="border-radius:9999px;object-fit:cover;width:64px;height:64px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"textColor":"muted-foreground","fontSize":"sm"} -->

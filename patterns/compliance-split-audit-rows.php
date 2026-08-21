@@ -27,11 +27,11 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"88px","height":"88px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Privacy framework seal" style="border-radius:9999px;object-fit:cover;width:88px;height:88px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Privacy framework seal" style="border-radius:9999px;object-fit:cover;width:88px;height:88px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"width":"88px","height":"88px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Regional data rules seal" style="border-radius:9999px;object-fit:cover;width:88px;height:88px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Regional data rules seal" style="border-radius:9999px;object-fit:cover;width:88px;height:88px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:column -->
@@ -50,7 +50,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"width":"88px","height":"88px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Independent audit seal" style="border-radius:9999px;object-fit:cover;width:88px;height:88px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Independent audit seal" style="border-radius:9999px;object-fit:cover;width:88px;height:88px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
@@ -66,7 +66,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"width":"88px","height":"88px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Information security standard seal" style="border-radius:9999px;object-fit:cover;width:88px;height:88px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Information security standard seal" style="border-radius:9999px;object-fit:cover;width:88px;height:88px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
@@ -82,7 +82,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"width":"88px","height":"88px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Retention policy seal" style="border-radius:9999px;object-fit:cover;width:88px;height:88px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Retention policy seal" style="border-radius:9999px;object-fit:cover;width:88px;height:88px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

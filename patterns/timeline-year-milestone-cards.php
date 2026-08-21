@@ -36,7 +36,7 @@
 <!-- wp:columns {"align":"wide","verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|7"}}}} -->
 <div class="wp-block-columns alignwide are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"34%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:34%"><!-- wp:image {"aspectRatio":"4/3","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Three desks pushed together in a rented back room, one whiteboard behind them" style="border-radius:12px;aspect-ratio:4/3;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Three desks pushed together in a rented back room, one whiteboard behind them" style="border-radius:12px;aspect-ratio:4/3;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -64,7 +64,7 @@
 <!-- wp:columns {"align":"wide","verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|7"}}}} -->
 <div class="wp-block-columns alignwide are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"34%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:34%"><!-- wp:image {"aspectRatio":"4/3","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A signed term sheet lying on a meeting table beside two coffee cups" style="border-radius:12px;aspect-ratio:4/3;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A signed term sheet lying on a meeting table beside two coffee cups" style="border-radius:12px;aspect-ratio:4/3;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -92,7 +92,7 @@
 <!-- wp:columns {"align":"wide","verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|7"}}}} -->
 <div class="wp-block-columns alignwide are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"34%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:34%"><!-- wp:image {"aspectRatio":"4/3","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A laptop screen showing public API documentation open at an authentication page" style="border-radius:12px;aspect-ratio:4/3;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A laptop screen showing public API documentation open at an authentication page" style="border-radius:12px;aspect-ratio:4/3;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -120,7 +120,7 @@
 <!-- wp:columns {"align":"wide","verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|7"}}}} -->
 <div class="wp-block-columns alignwide are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"34%"} -->
 <div class="wp-block-column is-vertically-aligned-center" style="flex-basis:34%"><!-- wp:image {"aspectRatio":"4/3","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A wall of clocks labelled with four city names above a shared support desk" style="border-radius:12px;aspect-ratio:4/3;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A wall of clocks labelled with four city names above a shared support desk" style="border-radius:12px;aspect-ratio:4/3;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 

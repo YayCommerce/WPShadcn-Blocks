@@ -24,7 +24,7 @@
 <!-- wp:column {"width":"30%","style":{"border":{"radius":{"topLeft":"0.75rem","topRight":"0.75rem"}},"spacing":{"padding":{"top":"var:preset|spacing|4","right":"var:preset|spacing|5","bottom":"var:preset|spacing|4","left":"var:preset|spacing|5"}}},"backgroundColor":"muted"} -->
 <div class="wp-block-column has-muted-background-color has-background" style="border-top-left-radius:0.75rem;border-top-right-radius:0.75rem;padding-top:var(--wp--preset--spacing--4);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--4);padding-left:var(--wp--preset--spacing--5);flex-basis:30%"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"height":"20px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Northpeak logo" style="height:20px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Northpeak logo" style="height:20px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"fontSize":"base"} -->
@@ -36,7 +36,7 @@
 <!-- wp:column {"width":"30%","style":{"border":{"radius":{"topLeft":"0.75rem","topRight":"0.75rem"},"left":{"color":"var:preset|color|border","style":"solid","width":"1px"}},"spacing":{"padding":{"top":"var:preset|spacing|4","right":"var:preset|spacing|5","bottom":"var:preset|spacing|4","left":"var:preset|spacing|5"}}},"backgroundColor":"popover"} -->
 <div class="wp-block-column has-popover-background-color has-background" style="border-top-left-radius:0.75rem;border-top-right-radius:0.75rem;border-left-color:var(--wp--preset--color--border);border-left-style:solid;border-left-width:1px;padding-top:var(--wp--preset--spacing--4);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--4);padding-left:var(--wp--preset--spacing--5);flex-basis:30%"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"height":"20px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Casetide logo" style="height:20px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Casetide logo" style="height:20px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"fontSize":"base"} -->

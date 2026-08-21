@@ -9,8 +9,8 @@
 
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-architecture-carousel-sections","name":"Project Page Architecture Carousel Sections"},"align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"0"},"blockGap":"0"}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull" style="padding-top:0;padding-bottom:0"><!-- wp:cover {"url":"https://ui.shadcn.com/placeholder.svg","alt":"The field station raised on steel piles above the saltmarsh, its timber shutters open to the water on a grey morning","dimRatio":60,"minHeight":680,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|8","right":"var:preset|spacing|7","bottom":"var:preset|spacing|8","left":"var:preset|spacing|7"}}},"layout":{"type":"default"}} -->
-<div class="wp-block-cover alignfull" style="padding-top:var(--wp--preset--spacing--8);padding-right:var(--wp--preset--spacing--7);padding-bottom:var(--wp--preset--spacing--8);padding-left:var(--wp--preset--spacing--7);min-height:680px"><img class="wp-block-cover__image-background" alt="The field station raised on steel piles above the saltmarsh, its timber shutters open to the water on a grey morning" src="https://ui.shadcn.com/placeholder.svg" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-60 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"dimensions":{"minHeight":"520px"},"spacing":{"blockGap":"var:preset|spacing|6"}},"layout":{"type":"flex","orientation":"vertical","verticalAlignment":"space-between","justifyContent":"stretch"}} -->
+<div class="wp-block-group alignfull" style="padding-top:0;padding-bottom:0"><!-- wp:cover {"url":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","alt":"The field station raised on steel piles above the saltmarsh, its timber shutters open to the water on a grey morning","dimRatio":60,"minHeight":680,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|8","right":"var:preset|spacing|7","bottom":"var:preset|spacing|8","left":"var:preset|spacing|7"}}},"layout":{"type":"default"}} -->
+<div class="wp-block-cover alignfull" style="padding-top:var(--wp--preset--spacing--8);padding-right:var(--wp--preset--spacing--7);padding-bottom:var(--wp--preset--spacing--8);padding-left:var(--wp--preset--spacing--7);min-height:680px"><img class="wp-block-cover__image-background" alt="The field station raised on steel piles above the saltmarsh, its timber shutters open to the water on a grey morning" src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-60 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"style":{"dimensions":{"minHeight":"520px"},"spacing":{"blockGap":"var:preset|spacing|6"}},"layout":{"type":"flex","orientation":"vertical","verticalAlignment":"space-between","justifyContent":"stretch"}} -->
 <div class="wp-block-group" style="min-height:520px"><!-- wp:paragraph {"style":{"color":{"text":"#ffffff"},"typography":{"fontWeight":"600","letterSpacing":"0.14em","textTransform":"uppercase"}},"fontSize":"xs"} -->
 <p class="has-text-color has-xs-font-size" style="color:#ffffff;font-weight:600;letter-spacing:0.14em;text-transform:uppercase">Project — Coastal research</p>
 <!-- /wp:paragraph -->
@@ -73,54 +73,54 @@
 <!-- wp:shadcn/carousel {"align":"wide","loop":true,"showArrows":true,"showDots":false,"slidesPerView":1,"slidesPerViewTablet":2,"slidesPerViewDesktop":3,"gap":"1.5rem"} -->
 <!-- wp:shadcn/carousel-item -->
 <!-- wp:image {"width":"100%","aspectRatio":"4/5","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="The steel helical piles seen from below the deck at low tide, with marsh grass growing between them" style="border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Fourteen helical piles wound into the clay, no concrete anywhere on the site.</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The steel helical piles seen from below the deck at low tide, with marsh grass growing between them" style="border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Fourteen helical piles wound into the clay, no concrete anywhere on the site.</figcaption></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/carousel-item -->
 
 <!-- wp:shadcn/carousel-item -->
 <!-- wp:image {"width":"100%","aspectRatio":"4/5","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="The working room with benches running the length of the glazed east wall and microscopes set out under it" style="border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">The long bench, sited so that anyone counting can look up at the water.</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The working room with benches running the length of the glazed east wall and microscopes set out under it" style="border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">The long bench, sited so that anyone counting can look up at the water.</figcaption></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/carousel-item -->
 
 <!-- wp:shadcn/carousel-item -->
 <!-- wp:image {"width":"100%","aspectRatio":"4/5","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="The larch shutter folded back against the wall, showing its exposed hinges and hand pull" style="border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">The larch shutter open, the building's only moving part.</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The larch shutter folded back against the wall, showing its exposed hinges and hand pull" style="border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">The larch shutter open, the building's only moving part.</figcaption></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/carousel-item -->
 
 <!-- wp:shadcn/carousel-item -->
 <!-- wp:image {"width":"100%","aspectRatio":"4/5","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="The boat hatch at the western end of the deck with crates of sample jars stacked beside it" style="border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Crates come up through the hatch at the seaward end.</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The boat hatch at the western end of the deck with crates of sample jars stacked beside it" style="border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Crates come up through the hatch at the seaward end.</figcaption></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/carousel-item -->
 
 <!-- wp:shadcn/carousel-item -->
 <!-- wp:image {"width":"100%","aspectRatio":"4/5","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="The warm room at dusk with lamps on over a table of notebooks and a bunk built into the end wall" style="border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">The insulated western third, used for writing up and overnight stays.</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The warm room at dusk with lamps on over a table of notebooks and a bunk built into the end wall" style="border-radius:12px;aspect-ratio:4/5;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">The insulated western third, used for writing up and overnight stays.</figcaption></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/carousel-item -->
 <!-- /wp:shadcn/carousel -->
 
 <!-- wp:image {"align":"wide","width":"100%","aspectRatio":"21/9","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="The full length of the station seen along the sea wall, a low dark line above the marsh with the estuary behind it" style="border-radius:12px;aspect-ratio:21/9;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Thirty-two metres seen from the sea wall path, the view most people arrive on.</figcaption></figure>
+<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The full length of the station seen along the sea wall, a low dark line above the marsh with the estuary behind it" style="border-radius:12px;aspect-ratio:21/9;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Thirty-two metres seen from the sea wall path, the view most people arrive on.</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"grid","minimumColumnWidth":"17rem"}} -->
 <div class="wp-block-group alignwide"><!-- wp:image {"width":"100%","aspectRatio":"1/1","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Close view of the untreated larch cladding weathering to grey along the north elevation" style="border-radius:8px;aspect-ratio:1/1;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Close view of the untreated larch cladding weathering to grey along the north elevation" style="border-radius:8px;aspect-ratio:1/1;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"width":"100%","aspectRatio":"1/1","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A bolted junction between the steel frame and a cross-laminated timber floor panel" style="border-radius:8px;aspect-ratio:1/1;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A bolted junction between the steel frame and a cross-laminated timber floor panel" style="border-radius:8px;aspect-ratio:1/1;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"width":"100%","aspectRatio":"1/1","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Rainwater running off the shallow roof into an open galvanised gutter above the deck" style="border-radius:8px;aspect-ratio:1/1;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Rainwater running off the shallow roof into an open galvanised gutter above the deck" style="border-radius:8px;aspect-ratio:1/1;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"width":"100%","aspectRatio":"1/1","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="The open steel stair from the marsh path up to the deck, with tide marks visible on its lower treads" style="border-radius:8px;aspect-ratio:1/1;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The open steel stair from the marsh path up to the deck, with tide marks visible on its lower treads" style="border-radius:8px;aspect-ratio:1/1;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 

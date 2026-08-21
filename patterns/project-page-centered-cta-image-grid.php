@@ -59,27 +59,27 @@
 
 <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"grid","minimumColumnWidth":"22rem"}} -->
 <div class="wp-block-group alignwide"><!-- wp:image {"aspectRatio":"4/3","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A wooden tide mill standing in shallow water at first light" style="border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Tide Mill, Low Water — March 2014</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A wooden tide mill standing in shallow water at first light" style="border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Tide Mill, Low Water — March 2014</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"4/3","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Mooring ropes coiled on a wet timber jetty beside an empty berth" style="border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Ropes at Berth Nine — August 2016</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Mooring ropes coiled on a wet timber jetty beside an empty berth" style="border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Ropes at Berth Nine — August 2016</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"4/3","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A fisherman mending a net across his knees in the door of a boat shed" style="border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Netting Shed, Third Reach — October 2017</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A fisherman mending a net across his knees in the door of a boat shed" style="border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Netting Shed, Third Reach — October 2017</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"4/3","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Saltmarsh grass bending under wind with the channel visible beyond it" style="border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Marsh Above the Cut — June 2019</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Saltmarsh grass bending under wind with the channel visible beyond it" style="border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Marsh Above the Cut — June 2019</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"4/3","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="An upturned clinker dinghy resting on trestles under a corrugated roof" style="border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Winter Repairs, Hallam Yard — January 2022</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="An upturned clinker dinghy resting on trestles under a corrugated roof" style="border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Winter Repairs, Hallam Yard — January 2022</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"4/3","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="The estuary mouth opening to flat open water beneath a wide pale sky" style="border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Where the River Gives Up Its Name — May 2025</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The estuary mouth opening to flat open water beneath a wide pale sky" style="border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Where the River Gives Up Its Name — May 2025</figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->

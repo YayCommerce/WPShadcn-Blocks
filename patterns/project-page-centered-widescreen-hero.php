@@ -20,7 +20,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"align":"full","aspectRatio":"16/9","scale":"cover","width":"100%","sizeSlug":"large"} -->
-<figure class="wp-block-image alignfull size-large is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="The opening look photographed against a grey seawall, a long wool coat caught mid-turn in the wind" style="aspect-ratio:16/9;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image alignfull size-large is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The opening look photographed against a grey seawall, a long wool coat caught mid-turn in the wind" style="aspect-ratio:16/9;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"right":"var:preset|spacing|5","left":"var:preset|spacing|5"}}},"layout":{"type":"default"}} -->

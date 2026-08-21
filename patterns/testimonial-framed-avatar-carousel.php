@@ -20,7 +20,7 @@
 <div class="wp-block-group"><!-- wp:group {"style":{"border":{"radius":"24px"},"spacing":{"padding":{"top":"10px","right":"10px","bottom":"10px","left":"10px"}}},"backgroundColor":"foreground","layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-group has-foreground-background-color has-background" style="border-radius:24px;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px"><!-- wp:group {"style":{"border":{"radius":"16px"},"spacing":{"padding":{"top":"10px","right":"10px","bottom":"10px","left":"10px"}}},"backgroundColor":"background","layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-group has-background-background-color has-background" style="border-radius:16px;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px"><!-- wp:image {"width":"80px","height":"80px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait of Elena Duarte" style="border-radius:9999px;object-fit:cover;width:80px;height:80px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait of Elena Duarte" style="border-radius:9999px;object-fit:cover;width:80px;height:80px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
@@ -50,7 +50,7 @@
 <div class="wp-block-group"><!-- wp:group {"style":{"border":{"radius":"24px"},"spacing":{"padding":{"top":"10px","right":"10px","bottom":"10px","left":"10px"}}},"backgroundColor":"foreground","layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-group has-foreground-background-color has-background" style="border-radius:24px;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px"><!-- wp:group {"style":{"border":{"radius":"16px"},"spacing":{"padding":{"top":"10px","right":"10px","bottom":"10px","left":"10px"}}},"backgroundColor":"background","layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-group has-background-background-color has-background" style="border-radius:16px;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px"><!-- wp:image {"width":"80px","height":"80px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait of Idris Falade" style="border-radius:9999px;object-fit:cover;width:80px;height:80px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait of Idris Falade" style="border-radius:9999px;object-fit:cover;width:80px;height:80px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
@@ -80,7 +80,7 @@
 <div class="wp-block-group"><!-- wp:group {"style":{"border":{"radius":"24px"},"spacing":{"padding":{"top":"10px","right":"10px","bottom":"10px","left":"10px"}}},"backgroundColor":"foreground","layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-group has-foreground-background-color has-background" style="border-radius:24px;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px"><!-- wp:group {"style":{"border":{"radius":"16px"},"spacing":{"padding":{"top":"10px","right":"10px","bottom":"10px","left":"10px"}}},"backgroundColor":"background","layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-group has-background-background-color has-background" style="border-radius:16px;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px"><!-- wp:image {"width":"80px","height":"80px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait of Hanne Vogel" style="border-radius:9999px;object-fit:cover;width:80px;height:80px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait of Hanne Vogel" style="border-radius:9999px;object-fit:cover;width:80px;height:80px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
@@ -110,7 +110,7 @@
 <div class="wp-block-group"><!-- wp:group {"style":{"border":{"radius":"24px"},"spacing":{"padding":{"top":"10px","right":"10px","bottom":"10px","left":"10px"}}},"backgroundColor":"foreground","layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-group has-foreground-background-color has-background" style="border-radius:24px;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px"><!-- wp:group {"style":{"border":{"radius":"16px"},"spacing":{"padding":{"top":"10px","right":"10px","bottom":"10px","left":"10px"}}},"backgroundColor":"background","layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-group has-background-background-color has-background" style="border-radius:16px;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px"><!-- wp:image {"width":"80px","height":"80px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait of Samir Qureshi" style="border-radius:9999px;object-fit:cover;width:80px;height:80px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait of Samir Qureshi" style="border-radius:9999px;object-fit:cover;width:80px;height:80px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
@@ -140,7 +140,7 @@
 <div class="wp-block-group"><!-- wp:group {"style":{"border":{"radius":"24px"},"spacing":{"padding":{"top":"10px","right":"10px","bottom":"10px","left":"10px"}}},"backgroundColor":"foreground","layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-group has-foreground-background-color has-background" style="border-radius:24px;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px"><!-- wp:group {"style":{"border":{"radius":"16px"},"spacing":{"padding":{"top":"10px","right":"10px","bottom":"10px","left":"10px"}}},"backgroundColor":"background","layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-group has-background-background-color has-background" style="border-radius:16px;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px"><!-- wp:image {"width":"80px","height":"80px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait of Wren Callahan" style="border-radius:9999px;object-fit:cover;width:80px;height:80px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait of Wren Callahan" style="border-radius:9999px;object-fit:cover;width:80px;height:80px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
@@ -170,7 +170,7 @@
 <div class="wp-block-group"><!-- wp:group {"style":{"border":{"radius":"24px"},"spacing":{"padding":{"top":"10px","right":"10px","bottom":"10px","left":"10px"}}},"backgroundColor":"foreground","layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-group has-foreground-background-color has-background" style="border-radius:24px;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px"><!-- wp:group {"style":{"border":{"radius":"16px"},"spacing":{"padding":{"top":"10px","right":"10px","bottom":"10px","left":"10px"}}},"backgroundColor":"background","layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-group has-background-background-color has-background" style="border-radius:16px;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px"><!-- wp:image {"width":"80px","height":"80px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait of Bea Ostrowski" style="border-radius:9999px;object-fit:cover;width:80px;height:80px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait of Bea Ostrowski" style="border-radius:9999px;object-fit:cover;width:80px;height:80px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

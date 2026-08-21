@@ -42,17 +42,17 @@
 <!-- /wp:group -->
 
 <!-- wp:shadcn/avatar-group {"maxVisible":4} -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Rosalind Achebe, night shift supervisor","size":"lg","fallback":"RA"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Rosalind Achebe, night shift supervisor","size":"lg","fallback":"RA"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Teodor Vasiliev, inventory analyst","size":"lg","fallback":"TV"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Teodor Vasiliev, inventory analyst","size":"lg","fallback":"TV"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Mai Sasaki, receiving lead","size":"lg","fallback":"MS"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Mai Sasaki, receiving lead","size":"lg","fallback":"MS"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Delphine Okonjo, operations manager","size":"lg","fallback":"DO"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Delphine Okonjo, operations manager","size":"lg","fallback":"DO"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Hamish Craddock, dispatch coordinator","size":"lg","fallback":"HC"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Hamish Craddock, dispatch coordinator","size":"lg","fallback":"HC"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Ingrid Solheim, warehouse director","size":"lg","fallback":"IS"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Ingrid Solheim, warehouse director","size":"lg","fallback":"IS"} /-->
 <!-- /wp:shadcn/avatar-group --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>

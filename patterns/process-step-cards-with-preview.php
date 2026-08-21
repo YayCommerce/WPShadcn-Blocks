@@ -48,7 +48,7 @@
 
 <!-- wp:column {"verticalAlignment":"top","width":"34%"} -->
 <div class="wp-block-column is-vertically-aligned-top" style="flex-basis:34%"><!-- wp:image {"aspectRatio":"1","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A printed comparison of three support levels marked up in pencil" style="border-radius:12px;aspect-ratio:1;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A printed comparison of three support levels marked up in pencil" style="border-radius:12px;aspect-ratio:1;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
@@ -74,7 +74,7 @@
 
 <!-- wp:column {"verticalAlignment":"top","width":"34%"} -->
 <div class="wp-block-column is-vertically-aligned-top" style="flex-basis:34%"><!-- wp:image {"aspectRatio":"1","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A short project brief open on a tablet beside a cooling coffee cup" style="border-radius:12px;aspect-ratio:1;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A short project brief open on a tablet beside a cooling coffee cup" style="border-radius:12px;aspect-ratio:1;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
@@ -100,7 +100,7 @@
 
 <!-- wp:column {"verticalAlignment":"top","width":"34%"} -->
 <div class="wp-block-column is-vertically-aligned-top" style="flex-basis:34%"><!-- wp:image {"aspectRatio":"1","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A shared delivery board showing the first week of tasks in progress" style="border-radius:12px;aspect-ratio:1;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A shared delivery board showing the first week of tasks in progress" style="border-radius:12px;aspect-ratio:1;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>

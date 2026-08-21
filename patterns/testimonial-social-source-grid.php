@@ -24,7 +24,7 @@
 <div class="wp-block-group has-border-color has-card-background-color has-background" style="border-color:var(--wp--preset--color--border);border-style:solid;border-width:1px;border-radius:12px;padding-top:var(--wp--preset--spacing--6);padding-right:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--6);padding-left:var(--wp--preset--spacing--6)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"36px","height":"36px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Nadia Fournier" style="border-radius:9999px;object-fit:cover;width:36px;height:36px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Nadia Fournier" style="border-radius:9999px;object-fit:cover;width:36px;height:36px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
@@ -39,7 +39,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"height":"20px","sizeSlug":"thumbnail","href":"#"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><a href="#"><img src="https://ui.shadcn.com/placeholder.svg" alt="Read this review on Trailhead" style="height:20px"/></a></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><a href="#"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Read this review on Trailhead" style="height:20px"/></a></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
@@ -52,7 +52,7 @@
 <div class="wp-block-group has-border-color has-card-background-color has-background" style="border-color:var(--wp--preset--color--border);border-style:solid;border-width:1px;border-radius:12px;padding-top:var(--wp--preset--spacing--6);padding-right:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--6);padding-left:var(--wp--preset--spacing--6)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"36px","height":"36px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Kwame Boateng" style="border-radius:9999px;object-fit:cover;width:36px;height:36px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Kwame Boateng" style="border-radius:9999px;object-fit:cover;width:36px;height:36px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
@@ -67,7 +67,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"height":"20px","sizeSlug":"thumbnail","href":"#"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><a href="#"><img src="https://ui.shadcn.com/placeholder.svg" alt="Read this review on Trailhead" style="height:20px"/></a></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><a href="#"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Read this review on Trailhead" style="height:20px"/></a></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
@@ -80,7 +80,7 @@
 <div class="wp-block-group has-border-color has-card-background-color has-background" style="border-color:var(--wp--preset--color--border);border-style:solid;border-width:1px;border-radius:12px;padding-top:var(--wp--preset--spacing--6);padding-right:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--6);padding-left:var(--wp--preset--spacing--6)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"36px","height":"36px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Lena Vogt" style="border-radius:9999px;object-fit:cover;width:36px;height:36px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Lena Vogt" style="border-radius:9999px;object-fit:cover;width:36px;height:36px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
@@ -95,7 +95,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"height":"20px","sizeSlug":"thumbnail","href":"#"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><a href="#"><img src="https://ui.shadcn.com/placeholder.svg" alt="Read this review on Trailhead" style="height:20px"/></a></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><a href="#"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Read this review on Trailhead" style="height:20px"/></a></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
@@ -108,7 +108,7 @@
 <div class="wp-block-group has-border-color has-card-background-color has-background" style="border-color:var(--wp--preset--color--border);border-style:solid;border-width:1px;border-radius:12px;padding-top:var(--wp--preset--spacing--6);padding-right:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--6);padding-left:var(--wp--preset--spacing--6)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"36px","height":"36px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Owen Marsh" style="border-radius:9999px;object-fit:cover;width:36px;height:36px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Owen Marsh" style="border-radius:9999px;object-fit:cover;width:36px;height:36px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
@@ -123,7 +123,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"height":"20px","sizeSlug":"thumbnail","href":"#"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><a href="#"><img src="https://ui.shadcn.com/placeholder.svg" alt="Read this review on Trailhead" style="height:20px"/></a></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><a href="#"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Read this review on Trailhead" style="height:20px"/></a></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
@@ -136,7 +136,7 @@
 <div class="wp-block-group has-border-color has-card-background-color has-background" style="border-color:var(--wp--preset--color--border);border-style:solid;border-width:1px;border-radius:12px;padding-top:var(--wp--preset--spacing--6);padding-right:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--6);padding-left:var(--wp--preset--spacing--6)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"36px","height":"36px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Chiara Bellini" style="border-radius:9999px;object-fit:cover;width:36px;height:36px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Chiara Bellini" style="border-radius:9999px;object-fit:cover;width:36px;height:36px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
@@ -151,7 +151,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"height":"20px","sizeSlug":"thumbnail","href":"#"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><a href="#"><img src="https://ui.shadcn.com/placeholder.svg" alt="Read this review on Trailhead" style="height:20px"/></a></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><a href="#"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Read this review on Trailhead" style="height:20px"/></a></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
@@ -164,7 +164,7 @@
 <div class="wp-block-group has-border-color has-card-background-color has-background" style="border-color:var(--wp--preset--color--border);border-style:solid;border-width:1px;border-radius:12px;padding-top:var(--wp--preset--spacing--6);padding-right:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--6);padding-left:var(--wp--preset--spacing--6)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"36px","height":"36px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"9999px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Ravi Menon" style="border-radius:9999px;object-fit:cover;width:36px;height:36px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Ravi Menon" style="border-radius:9999px;object-fit:cover;width:36px;height:36px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->
@@ -179,7 +179,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"height":"20px","sizeSlug":"thumbnail","href":"#"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><a href="#"><img src="https://ui.shadcn.com/placeholder.svg" alt="Read this review on Trailhead" style="height:20px"/></a></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><a href="#"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Read this review on Trailhead" style="height:20px"/></a></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 

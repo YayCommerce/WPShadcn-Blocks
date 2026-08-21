@@ -22,11 +22,11 @@
 <!-- /wp:group -->
 
 <!-- wp:shadcn/accordion {"headingLevel":3,"autoplay":true,"autoplayDelay":5000} -->
-<!-- wp:shadcn/accordion-item {"title":"Descript","summary":"Completed \u003cstrong\u003e12 major projects in 2 months\u003c/strong\u003e","iconUrl":"https://ui.shadcn.com/placeholder.svg","iconAlt":"Descript logo"} -->
+<!-- wp:shadcn/accordion-item {"title":"Descript","summary":"Completed \u003cstrong\u003e12 major projects in 2 months\u003c/strong\u003e","iconUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","iconAlt":"Descript logo"} -->
 <!-- wp:columns {"verticalAlignment":"top","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|6"}}}} -->
 <div class="wp-block-columns are-vertically-aligned-top"><!-- wp:column {"verticalAlignment":"top","width":"200px"} -->
 <div class="wp-block-column is-vertically-aligned-top" style="flex-basis:200px"><!-- wp:image {"aspectRatio":"1","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait of Samantha Lee" style="border-radius:12px;aspect-ratio:1;object-fit:cover"/></figure>
+<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait of Samantha Lee" style="border-radius:12px;aspect-ratio:1;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -34,7 +34,7 @@
 <div class="wp-block-column is-vertically-aligned-top"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:group {"metadata":{"name":"Wordmark"},"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"20px","height":"20px","scale":"cover","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Descript logo" style="object-fit:cover;width:20px;height:20px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Descript logo" style="object-fit:cover;width:20px;height:20px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}}} -->
@@ -60,11 +60,11 @@
 <!-- /wp:columns -->
 <!-- /wp:shadcn/accordion-item -->
 
-<!-- wp:shadcn/accordion-item {"title":"Ramp","summary":"Increased productivity by \u003cstrong\u003e40% in one quarter\u003c/strong\u003e","iconUrl":"https://ui.shadcn.com/placeholder.svg","iconAlt":"Ramp logo"} -->
+<!-- wp:shadcn/accordion-item {"title":"Ramp","summary":"Increased productivity by \u003cstrong\u003e40% in one quarter\u003c/strong\u003e","iconUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","iconAlt":"Ramp logo"} -->
 <!-- wp:columns {"verticalAlignment":"top","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|6"}}}} -->
 <div class="wp-block-columns are-vertically-aligned-top"><!-- wp:column {"verticalAlignment":"top","width":"200px"} -->
 <div class="wp-block-column is-vertically-aligned-top" style="flex-basis:200px"><!-- wp:image {"aspectRatio":"1","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait of Carlos Rivera" style="border-radius:12px;aspect-ratio:1;object-fit:cover"/></figure>
+<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait of Carlos Rivera" style="border-radius:12px;aspect-ratio:1;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -72,7 +72,7 @@
 <div class="wp-block-column is-vertically-aligned-top"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:group {"metadata":{"name":"Wordmark"},"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"20px","height":"20px","scale":"cover","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Ramp logo" style="object-fit:cover;width:20px;height:20px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Ramp logo" style="object-fit:cover;width:20px;height:20px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}}} -->
@@ -98,11 +98,11 @@
 <!-- /wp:columns -->
 <!-- /wp:shadcn/accordion-item -->
 
-<!-- wp:shadcn/accordion-item {"title":"Watershed","summary":"Saved over 30 hours, \u003cstrong\u003ereduced admin time by 60%\u003c/strong\u003e","iconUrl":"https://ui.shadcn.com/placeholder.svg","iconAlt":"Watershed logo"} -->
+<!-- wp:shadcn/accordion-item {"title":"Watershed","summary":"Saved over 30 hours, \u003cstrong\u003ereduced admin time by 60%\u003c/strong\u003e","iconUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","iconAlt":"Watershed logo"} -->
 <!-- wp:columns {"verticalAlignment":"top","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|6"}}}} -->
 <div class="wp-block-columns are-vertically-aligned-top"><!-- wp:column {"verticalAlignment":"top","width":"200px"} -->
 <div class="wp-block-column is-vertically-aligned-top" style="flex-basis:200px"><!-- wp:image {"aspectRatio":"1","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait of Priya Patel" style="border-radius:12px;aspect-ratio:1;object-fit:cover"/></figure>
+<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait of Priya Patel" style="border-radius:12px;aspect-ratio:1;object-fit:cover"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -110,7 +110,7 @@
 <div class="wp-block-column is-vertically-aligned-top"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:group {"metadata":{"name":"Wordmark"},"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
 <div class="wp-block-group"><!-- wp:image {"width":"20px","height":"20px","scale":"cover","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Watershed logo" style="object-fit:cover;width:20px;height:20px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Watershed logo" style="object-fit:cover;width:20px;height:20px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}}} -->

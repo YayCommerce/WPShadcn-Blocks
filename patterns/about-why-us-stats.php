@@ -37,7 +37,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"aspectRatio":"21/9","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"16px"}}} -->
-<figure class="wp-block-image size-large has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Two colleagues reviewing release metrics on a wall display" style="border-radius:16px;aspect-ratio:21/9;object-fit:cover"/></figure>
+<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Two colleagues reviewing release metrics on a wall display" style="border-radius:16px;aspect-ratio:21/9;object-fit:cover"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"className":"is-style-shadcn-divided","style":{"spacing":{"blockGap":"0"}}} -->

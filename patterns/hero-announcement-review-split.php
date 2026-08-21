@@ -54,9 +54,9 @@
 <!-- /wp:group -->
 
 <!-- wp:shadcn/avatar-group {"maxVisible":2} -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Ottilie Bergström","size":"md","fallback":"OB"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Ottilie Bergström","size":"md","fallback":"OB"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Desmond Achebe","size":"md","fallback":"DA"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Desmond Achebe","size":"md","fallback":"DA"} /-->
 <!-- /wp:shadcn/avatar-group --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>

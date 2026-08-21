@@ -46,7 +46,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"width":"104px","height":"104px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"10px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait of Rowan Petrescu" style="border-radius:10px;object-fit:cover;width:104px;height:104px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait of Rowan Petrescu" style="border-radius:10px;object-fit:cover;width:104px;height:104px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
@@ -70,7 +70,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"width":"104px","height":"104px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"10px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait of Thandiwe Molefe" style="border-radius:10px;object-fit:cover;width:104px;height:104px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait of Thandiwe Molefe" style="border-radius:10px;object-fit:cover;width:104px;height:104px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
@@ -96,7 +96,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"width":"104px","height":"104px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"10px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait of Casper Vandenberg" style="border-radius:10px;object-fit:cover;width:104px;height:104px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait of Casper Vandenberg" style="border-radius:10px;object-fit:cover;width:104px;height:104px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
@@ -120,7 +120,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"width":"104px","height":"104px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"10px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait of Noor Al-Sabah" style="border-radius:10px;object-fit:cover;width:104px;height:104px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait of Noor Al-Sabah" style="border-radius:10px;object-fit:cover;width:104px;height:104px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
@@ -146,7 +146,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"width":"104px","height":"104px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"10px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait of Emeka Nwachukwu" style="border-radius:10px;object-fit:cover;width:104px;height:104px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait of Emeka Nwachukwu" style="border-radius:10px;object-fit:cover;width:104px;height:104px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
@@ -170,7 +170,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"width":"104px","height":"104px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"10px"}}} -->
-<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait of Sanne de Vries" style="border-radius:10px;object-fit:cover;width:104px;height:104px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait of Sanne de Vries" style="border-radius:10px;object-fit:cover;width:104px;height:104px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>

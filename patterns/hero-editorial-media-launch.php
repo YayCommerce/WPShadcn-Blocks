@@ -20,7 +20,7 @@
 
 <!-- wp:group {"style":{"dimensions":{"minHeight":"340px"}},"layout":{"type":"flex","orientation":"vertical","verticalAlignment":"center","justifyContent":"center"}} -->
 <div class="wp-block-group" style="min-height:340px"><!-- wp:image {"width":"230px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Almanac launch desk showing a brief, its asset list and the go-live date" style="width:230px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Almanac launch desk showing a brief, its asset list and the go-live date" style="width:230px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 

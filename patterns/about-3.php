@@ -22,7 +22,7 @@
 <!-- wp:columns -->
 <div class="wp-block-columns"><!-- wp:column {"width":"66.66%"} -->
 <div class="wp-block-column" style="flex-basis:66.66%"><!-- wp:image {"sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Team collaborating in a studio" style="border-radius:12px"/></figure>
+<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Team collaborating in a studio" style="border-radius:12px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column -->
 
@@ -30,7 +30,7 @@
 <div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|6"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group"><!-- wp:group {"style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6","left":"var:preset|spacing|6","right":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|4"}},"backgroundColor":"muted","layout":{"type":"flex","orientation":"vertical","justifyContent":"space-between"}} -->
 <div class="wp-block-group has-muted-background-color has-background" style="border-radius:12px;padding-top:var(--wp--preset--spacing--6);padding-right:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--6);padding-left:var(--wp--preset--spacing--6)"><!-- wp:image {"width":"48px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Studio mark" style="width:48px"/></figure>
+<figure class="wp-block-image size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Studio mark" style="width:48px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"constrained"}} -->
@@ -51,7 +51,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Product detail close-up" style="border-radius:12px"/></figure>
+<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Product detail close-up" style="border-radius:12px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:column --></div>
@@ -61,37 +61,37 @@
 <div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--8);padding-bottom:var(--wp--preset--spacing--8)"><!-- wp:shadcn/marquee {"speed":25,"showFade":true} -->
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail"><img src="https://ui.shadcn.com/placeholder.svg" alt="Partner logo placeholder"/></figure>
+<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Partner logo placeholder"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail"><img src="https://ui.shadcn.com/placeholder.svg" alt="Partner logo placeholder"/></figure>
+<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Partner logo placeholder"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail"><img src="https://ui.shadcn.com/placeholder.svg" alt="Partner logo placeholder"/></figure>
+<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Partner logo placeholder"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail"><img src="https://ui.shadcn.com/placeholder.svg" alt="Partner logo placeholder"/></figure>
+<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Partner logo placeholder"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail"><img src="https://ui.shadcn.com/placeholder.svg" alt="Partner logo placeholder"/></figure>
+<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Partner logo placeholder"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image size-thumbnail"><img src="https://ui.shadcn.com/placeholder.svg" alt="Partner logo placeholder"/></figure>
+<figure class="wp-block-image size-thumbnail"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Partner logo placeholder"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 <!-- /wp:shadcn/marquee --></div>

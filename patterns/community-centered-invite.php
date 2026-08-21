@@ -10,7 +10,7 @@
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"560px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:image {"align":"center","width":"40px","sizeSlug":"thumbnail"} -->
-<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Brand mark" style="width:40px"/></figure>
+<figure class="wp-block-image aligncenter size-thumbnail is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Brand mark" style="width:40px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:heading {"textAlign":"center","level":2,"fontSize":"4-xl"} -->

@@ -21,27 +21,27 @@
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"grid","minimumColumnWidth":"20rem"}} -->
 <div class="wp-block-group"><!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="https://ui.shadcn.com/placeholder.svg" alt="The team at a whiteboard"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The team at a whiteboard"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="https://ui.shadcn.com/placeholder.svg" alt="A designer reviewing screens"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A designer reviewing screens"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="https://ui.shadcn.com/placeholder.svg" alt="The office kitchen at lunch"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The office kitchen at lunch"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="https://ui.shadcn.com/placeholder.svg" alt="Two engineers pairing"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Two engineers pairing"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="https://ui.shadcn.com/placeholder.svg" alt="Sketches pinned to a wall"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Sketches pinned to a wall"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"sizeSlug":"large"} -->
-<figure class="wp-block-image size-large"><img src="https://ui.shadcn.com/placeholder.svg" alt="The team on a release day"/></figure>
+<figure class="wp-block-image size-large"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The team on a release day"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 

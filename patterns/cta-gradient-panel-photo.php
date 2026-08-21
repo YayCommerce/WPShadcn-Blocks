@@ -36,7 +36,7 @@
 
 <!-- wp:column {"width":"44%"} -->
 <div class="wp-block-column" style="flex-basis:44%"><!-- wp:image {"aspectRatio":"1/1","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":{"topRight":"16px","bottomRight":"16px"}}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Late daylight falling across an empty rehearsal room with an upright piano" style="border-top-right-radius:16px;border-bottom-right-radius:16px;aspect-ratio:1/1;object-fit:cover;width:100%"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Late daylight falling across an empty rehearsal room with an upright piano" style="border-top-right-radius:16px;border-bottom-right-radius:16px;aspect-ratio:1/1;object-fit:cover;width:100%"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>

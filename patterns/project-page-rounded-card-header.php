@@ -69,15 +69,15 @@
 
 <!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide"><!-- wp:image {"width":"100%","height":"560px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="The terminal concourse at dusk with overhead departure blades lit above the gangway doors" style="border-radius:12px;object-fit:cover;width:100%;height:560px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The terminal concourse at dusk with overhead departure blades lit above the gangway doors" style="border-radius:12px;object-fit:cover;width:100%;height:560px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"width":"100%","height":"560px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A tide-linked timetable panel bolted to the harbour wall beside the passenger ramp" style="border-radius:12px;object-fit:cover;width:100%;height:560px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A tide-linked timetable panel bolted to the harbour wall beside the passenger ramp" style="border-radius:12px;object-fit:cover;width:100%;height:560px"/></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"width":"100%","height":"560px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Close view of a routed aluminium sign stacking the same direction in three languages" style="border-radius:12px;object-fit:cover;width:100%;height:560px"/></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Close view of a routed aluminium sign stacking the same direction in three languages" style="border-radius:12px;object-fit:cover;width:100%;height:560px"/></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 

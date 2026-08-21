@@ -15,11 +15,11 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:shadcn/avatar-group {"maxVisible":3} -->
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Amara Osei","size":"lg","fallback":"AO"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Amara Osei","size":"lg","fallback":"AO"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Ruben Castellanos","size":"lg","fallback":"RC"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Ruben Castellanos","size":"lg","fallback":"RC"} /-->
 
-<!-- wp:shadcn/avatar {"mediaUrl":"https://ui.shadcn.com/placeholder.svg","mediaAlt":"Ingrid Halvorsen","size":"lg","fallback":"IH"} /-->
+<!-- wp:shadcn/avatar {"mediaUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","mediaAlt":"Ingrid Halvorsen","size":"lg","fallback":"IH"} /-->
 <!-- /wp:shadcn/avatar-group -->
 
 <!-- wp:paragraph {"align":"center","style":{"typography":{"fontWeight":"700"}},"fontSize":"fluid-5-xl"} -->

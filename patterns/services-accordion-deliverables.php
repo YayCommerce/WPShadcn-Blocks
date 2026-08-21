@@ -20,7 +20,7 @@
 <!-- /wp:group -->
 
 <!-- wp:shadcn/accordion {"headingLevel":3,"outlined":true,"openFirst":true} -->
-<!-- wp:shadcn/accordion-item {"title":"Brand foundations","summary":"4 to 6 weeks","iconUrl":"https://ui.shadcn.com/placeholder.svg","iconAlt":""} -->
+<!-- wp:shadcn/accordion-item {"title":"Brand foundations","summary":"4 to 6 weeks","iconUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","iconAlt":""} -->
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"textColor":"muted-foreground"} -->
 <p class="has-muted-foreground-color has-text-color">We start with the story before the visuals. Interviews with your team and a handful of customers give us the language you already own, and we shape that into a positioning line, a tone of voice and a first visual direction you can defend in a board meeting.</p>
@@ -74,7 +74,7 @@
 <!-- /wp:group -->
 <!-- /wp:shadcn/accordion-item -->
 
-<!-- wp:shadcn/accordion-item {"title":"Website design and build","summary":"8 to 12 weeks","iconUrl":"https://ui.shadcn.com/placeholder.svg","iconAlt":""} -->
+<!-- wp:shadcn/accordion-item {"title":"Website design and build","summary":"8 to 12 weeks","iconUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","iconAlt":""} -->
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"textColor":"muted-foreground"} -->
 <p class="has-muted-foreground-color has-text-color">A full site, from the sitemap to the day it goes live. We design in the browser early so nobody signs off a picture of a website, and every template is built to be edited by your own team without a developer standing over them.</p>
@@ -128,7 +128,7 @@
 <!-- /wp:group -->
 <!-- /wp:shadcn/accordion-item -->
 
-<!-- wp:shadcn/accordion-item {"title":"Design system","summary":"6 to 8 weeks","iconUrl":"https://ui.shadcn.com/placeholder.svg","iconAlt":""} -->
+<!-- wp:shadcn/accordion-item {"title":"Design system","summary":"6 to 8 weeks","iconUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","iconAlt":""} -->
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"textColor":"muted-foreground"} -->
 <p class="has-muted-foreground-color has-text-color">Once the product has more than one team touching it, consistency stops being a matter of taste. We inventory what exists, cut it down to the components that earn their place, and document the rules so a new hire can ship a screen in week one.</p>
@@ -182,7 +182,7 @@
 <!-- /wp:group -->
 <!-- /wp:shadcn/accordion-item -->
 
-<!-- wp:shadcn/accordion-item {"title":"Launch and handover","summary":"2 weeks","iconUrl":"https://ui.shadcn.com/placeholder.svg","iconAlt":""} -->
+<!-- wp:shadcn/accordion-item {"title":"Launch and handover","summary":"2 weeks","iconUrl":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","iconAlt":""} -->
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"textColor":"muted-foreground"} -->
 <p class="has-muted-foreground-color has-text-color">The last stretch is the one most projects rush. We keep two weeks aside for the unglamorous work: redirects, analytics, a proper content freeze, and enough time with your team that nobody is left guessing how the thing they now own actually works.</p>

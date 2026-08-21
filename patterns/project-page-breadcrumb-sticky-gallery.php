@@ -92,23 +92,23 @@
 
 <!-- wp:column {"width":"68%","style":{"spacing":{"blockGap":"var:preset|spacing|7"}}} -->
 <div class="wp-block-column" style="flex-basis:68%"><!-- wp:image {"aspectRatio":"4/3","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="The Fold Press wordmark printed in two overlapping risograph inks on uncoated stock" style="border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">The wordmark at press size, with the second drum deliberately offset by a millimetre.</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The Fold Press wordmark printed in two overlapping risograph inks on uncoated stock" style="border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">The wordmark at press size, with the second drum deliberately offset by a millimetre.</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"3/4","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A tall stack of four cover editions fanned on a studio table under raking light" style="border-radius:8px;aspect-ratio:3/4;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Four cover editions, printed from one grid and two plates each.</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A tall stack of four cover editions fanned on a studio table under raking light" style="border-radius:8px;aspect-ratio:3/4;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Four cover editions, printed from one grid and two plates each.</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"16/9","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A spread from the catalogue showing the two-column text grid and a full-bleed plate" style="border-radius:8px;aspect-ratio:16/9;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">The catalogue spread, set to a two-column grid that survives a hand-fed sheet.</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A spread from the catalogue showing the two-column text grid and a full-bleed plate" style="border-radius:8px;aspect-ratio:16/9;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">The catalogue spread, set to a two-column grid that survives a hand-fed sheet.</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"1","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="The shipping kit laid flat: a printed band, a stamped card and a folded paper sleeve" style="border-radius:8px;aspect-ratio:1;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">The shipping kit, three parts the press can assemble in about forty seconds.</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The shipping kit laid flat: a printed band, a stamped card and a folded paper sleeve" style="border-radius:8px;aspect-ratio:1;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">The shipping kit, three parts the press can assemble in about forty seconds.</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:image {"aspectRatio":"4/3","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="The risograph in the Fold Press workshop mid-run, finished sheets curing on a rack behind it" style="border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">The second drum going down on the autumn run, eight hundred sheets in a day.</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The risograph in the Fold Press workshop mid-run, finished sheets curing on a rack behind it" style="border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">The second drum going down on the autumn run, eight hundred sheets in a day.</figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>

@@ -68,7 +68,7 @@
 <!-- /wp:columns -->
 
 <!-- wp:image {"aspectRatio":"3/2","scale":"cover","width":"100%","sizeSlug":"large","align":"wide","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Six coffee bags from the new Nightjar packaging system lined up on a steel roasting-room bench" style="border-radius:8px;aspect-ratio:3/2;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">The finished packaging system, photographed at the Dock Street roastery a week before the spring release.</figcaption></figure>
+<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Six coffee bags from the new Nightjar packaging system lined up on a steel roasting-room bench" style="border-radius:8px;aspect-ratio:3/2;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">The finished packaging system, photographed at the Dock Street roastery a week before the spring release.</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|5","left":"var:preset|spacing|8"}}}} -->

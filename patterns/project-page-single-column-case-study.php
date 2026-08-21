@@ -82,7 +82,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"align":"wide","width":"100%","height":"520px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A row of new departure boards mounted above the gangways at the mainland ferry terminal" style="border-radius:12px;object-fit:cover;width:100%;height:520px"/><figcaption class="wp-element-caption">Departure boards at Cardan Pier, each gangway named for its island rather than its vessel.</figcaption></figure>
+<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A row of new departure boards mounted above the gangways at the mainland ferry terminal" style="border-radius:12px;object-fit:cover;width:100%;height:520px"/><figcaption class="wp-element-caption">Departure boards at Cardan Pier, each gangway named for its island rather than its vessel.</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->
@@ -100,7 +100,7 @@
 <!-- /wp:group -->
 
 <!-- wp:image {"align":"wide","width":"100%","height":"520px","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="The folded pocket timetable opened flat beside a colour-coded ticket stub on a wooden bench" style="border-radius:12px;object-fit:cover;width:100%;height:520px"/><figcaption class="wp-element-caption">The pocket timetable folds to the width of a ticket, one island colour per panel.</figcaption></figure>
+<figure class="wp-block-image alignwide size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The folded pocket timetable opened flat beside a colour-coded ticket stub on a wooden bench" style="border-radius:12px;object-fit:cover;width:100%;height:520px"/><figcaption class="wp-element-caption">The pocket timetable folds to the width of a ticket, one island colour per panel.</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

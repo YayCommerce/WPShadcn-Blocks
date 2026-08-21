@@ -38,37 +38,37 @@
 <div class="wp-block-group"><!-- wp:shadcn/marquee {"speed":40,"showFade":true,"gap":"3rem"} -->
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"width":"120px","sizeSlug":"large"} -->
-<figure class="wp-block-image size-large is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Customer logo placeholder" style="width:120px"/></figure>
+<figure class="wp-block-image size-large is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Customer logo placeholder" style="width:120px"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"width":"120px","sizeSlug":"large"} -->
-<figure class="wp-block-image size-large is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Customer logo placeholder" style="width:120px"/></figure>
+<figure class="wp-block-image size-large is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Customer logo placeholder" style="width:120px"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"width":"120px","sizeSlug":"large"} -->
-<figure class="wp-block-image size-large is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Customer logo placeholder" style="width:120px"/></figure>
+<figure class="wp-block-image size-large is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Customer logo placeholder" style="width:120px"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"width":"120px","sizeSlug":"large"} -->
-<figure class="wp-block-image size-large is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Customer logo placeholder" style="width:120px"/></figure>
+<figure class="wp-block-image size-large is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Customer logo placeholder" style="width:120px"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"width":"120px","sizeSlug":"large"} -->
-<figure class="wp-block-image size-large is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Customer logo placeholder" style="width:120px"/></figure>
+<figure class="wp-block-image size-large is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Customer logo placeholder" style="width:120px"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 
 <!-- wp:shadcn/marquee-item -->
 <!-- wp:image {"width":"120px","sizeSlug":"large"} -->
-<figure class="wp-block-image size-large is-resized"><img src="https://ui.shadcn.com/placeholder.svg" alt="Customer logo placeholder" style="width:120px"/></figure>
+<figure class="wp-block-image size-large is-resized"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Customer logo placeholder" style="width:120px"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/marquee-item -->
 <!-- /wp:shadcn/marquee -->
@@ -76,37 +76,37 @@
 <!-- wp:shadcn/carousel {"autoplay":true,"autoplayDelay":3500,"loop":true,"showArrows":false,"showDots":true,"slidesPerView":1,"slidesPerViewTablet":2,"slidesPerViewDesktop":3,"gap":"1rem","effect":"coverflow"} -->
 <!-- wp:shadcn/carousel-item {"style":{"border":{"radius":"12px"}}} -->
 <!-- wp:image {"aspectRatio":"3/4","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait card placeholder" style="border-radius:12px;aspect-ratio:3/4;object-fit:cover"/></figure>
+<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait card placeholder" style="border-radius:12px;aspect-ratio:3/4;object-fit:cover"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/carousel-item -->
 
 <!-- wp:shadcn/carousel-item {"style":{"border":{"radius":"12px"}}} -->
 <!-- wp:image {"aspectRatio":"3/4","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait card placeholder" style="border-radius:12px;aspect-ratio:3/4;object-fit:cover"/></figure>
+<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait card placeholder" style="border-radius:12px;aspect-ratio:3/4;object-fit:cover"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/carousel-item -->
 
 <!-- wp:shadcn/carousel-item {"style":{"border":{"radius":"12px"}}} -->
 <!-- wp:image {"aspectRatio":"3/4","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait card placeholder" style="border-radius:12px;aspect-ratio:3/4;object-fit:cover"/></figure>
+<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait card placeholder" style="border-radius:12px;aspect-ratio:3/4;object-fit:cover"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/carousel-item -->
 
 <!-- wp:shadcn/carousel-item {"style":{"border":{"radius":"12px"}}} -->
 <!-- wp:image {"aspectRatio":"3/4","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait card placeholder" style="border-radius:12px;aspect-ratio:3/4;object-fit:cover"/></figure>
+<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait card placeholder" style="border-radius:12px;aspect-ratio:3/4;object-fit:cover"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/carousel-item -->
 
 <!-- wp:shadcn/carousel-item {"style":{"border":{"radius":"12px"}}} -->
 <!-- wp:image {"aspectRatio":"3/4","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait card placeholder" style="border-radius:12px;aspect-ratio:3/4;object-fit:cover"/></figure>
+<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait card placeholder" style="border-radius:12px;aspect-ratio:3/4;object-fit:cover"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/carousel-item -->
 
 <!-- wp:shadcn/carousel-item {"style":{"border":{"radius":"12px"}}} -->
 <!-- wp:image {"aspectRatio":"3/4","scale":"cover","sizeSlug":"large","style":{"border":{"radius":"12px"}}} -->
-<figure class="wp-block-image size-large has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Portrait card placeholder" style="border-radius:12px;aspect-ratio:3/4;object-fit:cover"/></figure>
+<figure class="wp-block-image size-large has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Portrait card placeholder" style="border-radius:12px;aspect-ratio:3/4;object-fit:cover"/></figure>
 <!-- /wp:image -->
 <!-- /wp:shadcn/carousel-item -->
 <!-- /wp:shadcn/carousel --></div>

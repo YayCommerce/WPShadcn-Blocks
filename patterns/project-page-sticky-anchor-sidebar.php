@@ -119,7 +119,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"aspectRatio":"16/9","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="The old timetable at Sørvik pier, a curled printed sheet taped behind cracked acrylic" style="border-radius:8px;aspect-ratio:16/9;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Sørvik pier as we found it in January, four departures listed and two of them wrong.</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="The old timetable at Sørvik pier, a curled printed sheet taped behind cracked acrylic" style="border-radius:8px;aspect-ratio:16/9;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Sørvik pier as we found it in January, four departures listed and two of them wrong.</figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
@@ -137,7 +137,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"aspectRatio":"16/9","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="Route notes and annotated departure boards spread across a table in the harbour office" style="border-radius:8px;aspect-ratio:16/9;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Three weeks of pier observations, sorted by the moment each failure happened.</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="Route notes and annotated departure boards spread across a table in the harbour office" style="border-radius:8px;aspect-ratio:16/9;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">Three weeks of pier observations, sorted by the moment each failure happened.</figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
@@ -155,7 +155,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"aspectRatio":"16/9","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="An enamelled steel departure panel mounted on a fjord pier with the next sailing shown large" style="border-radius:8px;aspect-ratio:16/9;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">The mid-size departure panel, installed at Kvitnes in April.</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="An enamelled steel departure panel mounted on a fjord pier with the next sailing shown large" style="border-radius:8px;aspect-ratio:16/9;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">The mid-size departure panel, installed at Kvitnes in April.</figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group -->
 
@@ -173,7 +173,7 @@
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"aspectRatio":"16/9","scale":"cover","width":"100%","sizeSlug":"large","style":{"border":{"radius":"8px"}}} -->
-<figure class="wp-block-image size-large is-resized has-custom-border"><img src="https://ui.shadcn.com/placeholder.svg" alt="A passenger buying a ticket at the redesigned pier screen while the ferry approaches behind" style="border-radius:8px;aspect-ratio:16/9;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">The pier screen at Halden Kai, opening on the next sailing and nothing else.</figcaption></figure>
+<figure class="wp-block-image size-large is-resized has-custom-border"><img src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" alt="A passenger buying a ticket at the redesigned pier screen while the ferry approaches behind" style="border-radius:8px;aspect-ratio:16/9;object-fit:cover;width:100%"/><figcaption class="wp-element-caption">The pier screen at Halden Kai, opening on the next sailing and nothing else.</figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:group --></div>
 <!-- /wp:column --></div>
