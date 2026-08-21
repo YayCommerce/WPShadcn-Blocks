@@ -80,6 +80,7 @@ class Patterns {
 			'case-studies' => __( 'Case Studies', 'shadcn-blocks' ),
 			'community'    => __( 'Community', 'shadcn-blocks' ),
 			'changelog'    => __( 'Changelog', 'shadcn-blocks' ),
+			'compare'      => __( 'Compare', 'shadcn-blocks' ),
 			'incentives'   => __( 'Incentives', 'shadcn-blocks' ),
 			'industries'   => __( 'Industries', 'shadcn-blocks' ),
 			'process'      => __( 'Process', 'shadcn-blocks' ),
