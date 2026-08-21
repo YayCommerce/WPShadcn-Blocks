@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Shadcn Blocks
  * Plugin URI: https://wpshadcn.com/
- * Description: Gutenberg blocks for the Shadcn theme. Provides Card, Accordion, Tabs, Alert, and Dialog components.
- * Version: 1.1.0
+ * Description: Gutenberg blocks and 473 section patterns for the Shadcn theme, with a Lucide icon picker and AI prompt-to-layout page building.
+ * Version: 1.0.0
  * Requires at least: 6.5
  * Requires PHP: 7.4
  * Tested up to: 7.1
@@ -20,7 +20,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // Define plugin constants.
-define( 'SHADCN_BLOCKS_VERSION', '1.1.0' );
+define( 'SHADCN_BLOCKS_VERSION', '1.0.0' );
 define( 'SHADCN_BLOCKS_FILE', __FILE__ );
 define( 'SHADCN_BLOCKS_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SHADCN_BLOCKS_URL', plugin_dir_url( __FILE__ ) );
