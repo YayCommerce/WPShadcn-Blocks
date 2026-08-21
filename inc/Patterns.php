@@ -83,6 +83,7 @@ class Patterns {
 			'compare'      => __( 'Compare', 'shadcn-blocks' ),
 			'compliance'   => __( 'Compliance', 'shadcn-blocks' ),
 			'download'     => __( 'Download', 'shadcn-blocks' ),
+			'faq'          => __( 'FAQ', 'shadcn-blocks' ),
 			'incentives'   => __( 'Incentives', 'shadcn-blocks' ),
 			'industries'   => __( 'Industries', 'shadcn-blocks' ),
 			'process'      => __( 'Process', 'shadcn-blocks' ),
