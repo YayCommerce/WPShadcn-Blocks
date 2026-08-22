@@ -10,6 +10,16 @@
 	"description": "A single item within a marquee.",
 	"textdomain": "shadcn-blocks",
 	"attributes": {},
+	"example": {
+		"attributes": {},
+		"innerBlocks": [
+			{
+				"name": "core/paragraph",
+				"attributes": { "content": "Northwind" }
+			}
+		],
+		"viewportWidth": 400
+	},
 	"supports": {
 		"html": false,
 		"reusable": false,

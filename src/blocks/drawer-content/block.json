@@ -10,6 +10,23 @@
   "description": "Drawer content section for main body content.",
   "textdomain": "shadcn-blocks",
   "attributes": {},
+  "example": {
+    "innerBlocks": [
+      {
+        "name": "core/paragraph",
+        "attributes": {
+          "content": "Strictly necessary cookies keep the site working and cannot be switched off."
+        }
+      },
+      {
+        "name": "core/paragraph",
+        "attributes": {
+          "content": "Analytics and personalisation cookies stay off until you allow them."
+        }
+      }
+    ],
+    "viewportWidth": 600
+  },
   "supports": {
     "html": false,
     "reusable": false,

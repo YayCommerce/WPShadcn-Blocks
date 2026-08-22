@@ -10,6 +10,30 @@
   "description": "Sheet footer section for footer content.",
   "textdomain": "shadcn-blocks",
   "attributes": {},
+  "example": {
+    "innerBlocks": [
+      {
+        "name": "core/buttons",
+        "attributes": {},
+        "innerBlocks": [
+          {
+            "name": "core/button",
+            "attributes": {
+              "text": "Save changes"
+            }
+          },
+          {
+            "name": "core/button",
+            "attributes": {
+              "text": "Close",
+              "className": "is-style-outline"
+            }
+          }
+        ]
+      }
+    ],
+    "viewportWidth": 600
+  },
   "supports": {
     "html": false,
     "reusable": false,

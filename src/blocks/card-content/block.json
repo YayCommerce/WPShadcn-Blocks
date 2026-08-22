@@ -10,6 +10,18 @@
 	"description": "Card content section for main body content.",
 	"textdomain": "shadcn-blocks",
 	"attributes": {},
+	"example": {
+		"attributes": {},
+		"innerBlocks": [
+			{
+				"name": "core/paragraph",
+				"attributes": {
+					"content": "$19 per month, billed yearly. Three active projects, unlimited pages and monthly component drops."
+				}
+			}
+		],
+		"viewportWidth": 600
+	},
 	"supports": {
 		"html": false,
 		"reusable": false,

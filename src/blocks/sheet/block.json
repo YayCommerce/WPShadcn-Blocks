@@ -36,6 +36,90 @@
       "default": "right"
     }
   },
+  "example": {
+    "attributes": {
+      "dismissible": true,
+      "direction": "right"
+    },
+    "innerBlocks": [
+      {
+        "name": "shadcn/sheet-trigger",
+        "attributes": {},
+        "innerBlocks": [
+          {
+            "name": "core/buttons",
+            "attributes": {},
+            "innerBlocks": [
+              {
+                "name": "core/button",
+                "attributes": {
+                  "text": "Edit profile",
+                  "className": "is-style-outline"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "shadcn/sheet-header",
+        "attributes": {},
+        "innerBlocks": [
+          {
+            "name": "core/heading",
+            "attributes": {
+              "level": 3,
+              "content": "Edit profile"
+            }
+          },
+          {
+            "name": "core/paragraph",
+            "attributes": {
+              "content": "Make changes to your profile here. Click save when you're done."
+            }
+          }
+        ]
+      },
+      {
+        "name": "shadcn/sheet-content",
+        "attributes": {},
+        "innerBlocks": [
+          {
+            "name": "core/paragraph",
+            "attributes": {
+              "content": "Your display name and contact details appear on every comment and order confirmation you send."
+            }
+          }
+        ]
+      },
+      {
+        "name": "shadcn/sheet-footer",
+        "attributes": {},
+        "innerBlocks": [
+          {
+            "name": "core/buttons",
+            "attributes": {},
+            "innerBlocks": [
+              {
+                "name": "core/button",
+                "attributes": {
+                  "text": "Save changes"
+                }
+              },
+              {
+                "name": "core/button",
+                "attributes": {
+                  "text": "Close",
+                  "className": "is-style-outline"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "viewportWidth": 900
+  },
   "allowedBlocks": [
     "shadcn/sheet-trigger",
     "shadcn/sheet-header",

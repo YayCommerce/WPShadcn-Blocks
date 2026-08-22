@@ -10,6 +10,24 @@
   "description": "Sheet header section for title and description.",
   "textdomain": "shadcn-blocks",
   "attributes": {},
+  "example": {
+    "innerBlocks": [
+      {
+        "name": "core/heading",
+        "attributes": {
+          "level": 3,
+          "content": "Edit profile"
+        }
+      },
+      {
+        "name": "core/paragraph",
+        "attributes": {
+          "content": "Make changes to your profile here. Click save when you're done."
+        }
+      }
+    ],
+    "viewportWidth": 600
+  },
   "supports": {
     "html": false,
     "reusable": false,

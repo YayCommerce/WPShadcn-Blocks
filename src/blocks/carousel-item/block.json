@@ -10,6 +10,25 @@
 	"description": "A single slide within a carousel.",
 	"textdomain": "shadcn-blocks",
 	"attributes": {},
+	"example": {
+		"attributes": {},
+		"innerBlocks": [
+			{
+				"name": "core/heading",
+				"attributes": {
+					"level": 3,
+					"content": "Plan your work"
+				}
+			},
+			{
+				"name": "core/paragraph",
+				"attributes": {
+					"content": "Map out the release, then hand each step to the right person."
+				}
+			}
+		],
+		"viewportWidth": 700
+	},
 	"supports": {
 		"html": false,
 		"reusable": false,

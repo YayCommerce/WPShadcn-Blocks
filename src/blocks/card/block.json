@@ -10,6 +10,61 @@
 	"keywords": [ "card", "container", "box", "panel" ],
 	"textdomain": "shadcn-blocks",
 	"attributes": {},
+	"example": {
+		"attributes": {},
+		"innerBlocks": [
+			{
+				"name": "shadcn/card-header",
+				"attributes": {},
+				"innerBlocks": [
+					{
+						"name": "core/heading",
+						"attributes": {
+							"level": 3,
+							"content": "Starter plan"
+						}
+					},
+					{
+						"name": "core/paragraph",
+						"attributes": {
+							"content": "Everything one person needs to launch a first site."
+						}
+					}
+				]
+			},
+			{
+				"name": "shadcn/card-content",
+				"attributes": {},
+				"innerBlocks": [
+					{
+						"name": "core/paragraph",
+						"attributes": {
+							"content": "$19 per month, billed yearly. Three active projects, unlimited pages and monthly component drops."
+						}
+					}
+				]
+			},
+			{
+				"name": "shadcn/card-footer",
+				"attributes": {},
+				"innerBlocks": [
+					{
+						"name": "core/buttons",
+						"attributes": {},
+						"innerBlocks": [
+							{
+								"name": "core/button",
+								"attributes": {
+									"text": "Choose Starter"
+								}
+							}
+						]
+					}
+				]
+			}
+		],
+		"viewportWidth": 700
+	},
 	"supports": {
 		"html": false,
 		"anchor": true,

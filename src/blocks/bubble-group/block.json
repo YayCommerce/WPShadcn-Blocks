@@ -23,6 +23,59 @@
       "default": "start"
     }
   },
+  "example": {
+    "attributes": {
+      "align": "start"
+    },
+    "innerBlocks": [
+      {
+        "name": "shadcn/bubble",
+        "attributes": {
+          "variant": "muted",
+          "align": "start"
+        },
+        "innerBlocks": [
+          {
+            "name": "core/paragraph",
+            "attributes": {
+              "content": "Hey! Is the new landing page ready to review?"
+            }
+          }
+        ]
+      },
+      {
+        "name": "shadcn/bubble",
+        "attributes": {
+          "variant": "default",
+          "align": "end"
+        },
+        "innerBlocks": [
+          {
+            "name": "core/paragraph",
+            "attributes": {
+              "content": "Just pushed it — take a look whenever."
+            }
+          }
+        ]
+      },
+      {
+        "name": "shadcn/bubble",
+        "attributes": {
+          "variant": "muted",
+          "align": "start"
+        },
+        "innerBlocks": [
+          {
+            "name": "core/paragraph",
+            "attributes": {
+              "content": "Looks great. Shipping it today."
+            }
+          }
+        ]
+      }
+    ],
+    "viewportWidth": 700
+  },
   "providesContext": {
     "shadcn/bubble-align": "align"
   },

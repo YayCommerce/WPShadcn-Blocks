@@ -10,6 +10,70 @@
   "keywords": ["empty", "placeholder", "no results", "blank"],
   "textdomain": "shadcn-blocks",
   "attributes": {},
+  "example": {
+    "attributes": {},
+    "innerBlocks": [
+      {
+        "name": "core/group",
+        "attributes": {
+          "layout": {
+            "type": "flex",
+            "flexWrap": "nowrap",
+            "justifyContent": "center"
+          }
+        },
+        "innerBlocks": [
+          {
+            "name": "core/group",
+            "attributes": {},
+            "innerBlocks": [
+              {
+                "name": "core/heading",
+                "attributes": {
+                  "level": 3,
+                  "style": { "typography": { "textAlign": "center" } },
+                  "content": "No projects yet"
+                }
+              },
+              {
+                "name": "core/paragraph",
+                "attributes": {
+                  "align": "center",
+                  "content": "Create your first project to start tracking work, inviting teammates and sharing progress.",
+                  "textColor": "muted-foreground"
+                }
+              },
+              {
+                "name": "core/buttons",
+                "attributes": {
+                  "layout": {
+                    "type": "flex",
+                    "justifyContent": "center"
+                  }
+                },
+                "innerBlocks": [
+                  {
+                    "name": "core/button",
+                    "attributes": {
+                      "text": "Create project"
+                    }
+                  },
+                  {
+                    "name": "core/button",
+                    "attributes": {
+                      "text": "Import project",
+                      "className": "is-style-outline"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "viewportWidth": 700
+  },
   "supports": {
     "html": false,
     "anchor": true,

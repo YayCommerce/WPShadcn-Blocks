@@ -31,6 +31,53 @@
       "default": ""
     }
   },
+  "example": {
+    "attributes": {
+      "formName": "Contact",
+      "recipient": "",
+      "successMessage": "Thanks — we’ll get back to you soon."
+    },
+    "innerBlocks": [
+      {
+        "name": "shadcn/input",
+        "attributes": {
+          "label": "Full name",
+          "fieldName": "full-name",
+          "type": "text",
+          "placeholder": "Ada Okafor",
+          "required": true
+        }
+      },
+      {
+        "name": "shadcn/input",
+        "attributes": {
+          "label": "Email",
+          "fieldName": "email",
+          "type": "email",
+          "placeholder": "you@example.com",
+          "required": true
+        }
+      },
+      {
+        "name": "shadcn/textarea",
+        "attributes": {
+          "label": "Message",
+          "fieldName": "message",
+          "placeholder": "Tell us what you need",
+          "required": true,
+          "rows": 4
+        }
+      },
+      {
+        "name": "shadcn/form-submit",
+        "attributes": {
+          "label": "Send message",
+          "width": 100
+        }
+      }
+    ],
+    "viewportWidth": 800
+  },
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",

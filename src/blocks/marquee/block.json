@@ -34,6 +34,78 @@
 			"pattern": "^[0-9]+(\\.[0-9]+)?(px|rem|em|%|vw)$"
 		}
 	},
+	"example": {
+		"attributes": {
+			"speed": 30,
+			"direction": "left",
+			"pauseOnHover": true,
+			"showFade": true,
+			"gap": "2rem"
+		},
+		"innerBlocks": [
+			{
+				"name": "shadcn/marquee-item",
+				"attributes": {},
+				"innerBlocks": [
+					{
+						"name": "core/paragraph",
+						"attributes": { "content": "Northwind" }
+					}
+				]
+			},
+			{
+				"name": "shadcn/marquee-item",
+				"attributes": {},
+				"innerBlocks": [
+					{
+						"name": "core/paragraph",
+						"attributes": { "content": "Acme Labs" }
+					}
+				]
+			},
+			{
+				"name": "shadcn/marquee-item",
+				"attributes": {},
+				"innerBlocks": [
+					{
+						"name": "core/paragraph",
+						"attributes": { "content": "Lumen" }
+					}
+				]
+			},
+			{
+				"name": "shadcn/marquee-item",
+				"attributes": {},
+				"innerBlocks": [
+					{
+						"name": "core/paragraph",
+						"attributes": { "content": "Trailhead" }
+					}
+				]
+			},
+			{
+				"name": "shadcn/marquee-item",
+				"attributes": {},
+				"innerBlocks": [
+					{
+						"name": "core/paragraph",
+						"attributes": { "content": "Basecamp Co" }
+					}
+				]
+			},
+			{
+				"name": "shadcn/marquee-item",
+				"attributes": {},
+				"innerBlocks": [
+					{
+						"name": "core/paragraph",
+						"attributes": { "content": "Orbital" }
+					}
+				]
+			}
+		],
+		"viewportWidth": 1100
+	},
 	"supports": {
 		"html": false,
 		"anchor": true,

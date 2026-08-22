@@ -51,6 +51,13 @@
       ]
     }
   },
+  "example": {
+    "attributes": {
+      "variant": "switch",
+      "justification": "center"
+    },
+    "viewportWidth": 400
+  },
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",

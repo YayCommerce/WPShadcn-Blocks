@@ -42,6 +42,17 @@
       "default": ""
     }
   },
+  "example": {
+    "attributes": {
+      "showDays": true,
+      "showSeconds": true,
+      "showLabels": true,
+      "separator": ":",
+      "pulseSeparator": false,
+      "onExpire": "hide"
+    },
+    "viewportWidth": 700
+  },
   "supports": {
     "html": false,
     "anchor": true,

@@ -46,6 +46,20 @@
       "default": false
     }
   },
+  "example": {
+    "attributes": {
+      "title": "Can I return an item?"
+    },
+    "innerBlocks": [
+      {
+        "name": "core/paragraph",
+        "attributes": {
+          "content": "You have thirty days from delivery. Send it back unworn in its original packaging and the refund lands on your card within a week."
+        }
+      }
+    ],
+    "viewportWidth": 600
+  },
   "editorScript": "file:./index.js",
   "style": "file:./style-index.css",
   "render": "file:./render.php"

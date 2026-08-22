@@ -41,6 +41,22 @@
       }
     }
   },
+  "example": {
+    "attributes": {
+      "label": "Subject",
+      "fieldName": "subject",
+      "placeholder": "What is this about?",
+      "required": true,
+      "options": [
+        "New project enquiry",
+        "Partnership",
+        "Press and speaking",
+        "Careers",
+        "Something else"
+      ]
+    },
+    "viewportWidth": 500
+  },
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",

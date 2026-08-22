@@ -1,14 +1,30 @@
 /**
  * WordPress dependencies
  */
-import { InspectorControls, useBlockProps } from "@wordpress/block-editor";
+import {
+  InspectorControls,
+  useBlockProps,
+  store as blockEditorStore,
+} from "@wordpress/block-editor";
 import {
   PanelBody,
   Notice,
   __experimentalToggleGroupControl as ToggleGroupControl,
   __experimentalToggleGroupControlOption as ToggleGroupControlOption,
 } from "@wordpress/components";
+import { useSelect } from "@wordpress/data";
 import { __ } from "@wordpress/i18n";
+
+/**
+ * Interval labels the inserter preview falls back to.
+ *
+ * Mirrors the defaults the parent Pricing block ships with, so the preview
+ * shows the same pair an author gets on insertion.
+ */
+const PREVIEW_INTERVALS = [
+  { key: "monthly", label: __("Monthly", "shadcn-blocks") },
+  { key: "yearly", label: __("Yearly", "shadcn-blocks") },
+];
 
 /**
  * Edit component.
@@ -25,7 +41,17 @@ import { __ } from "@wordpress/i18n";
 export default function Edit({ attributes, setAttributes, context }) {
   const { variant, justification } = attributes;
 
-  const intervals = context["shadcn/intervals"] || [];
+  // The inserter preview renders this block with no parent Pricing block, so
+  // the labels it normally inherits are missing and the control would draw as
+  // an empty box. Only the preview borrows the fallback; inside a real Pricing
+  // block an empty list still means "nothing to show yet".
+  const isPreview = useSelect(
+    (select) => !!select(blockEditorStore).getSettings().isPreviewMode,
+    []
+  );
+  const inherited = context["shadcn/intervals"] || [];
+  const intervals =
+    isPreview && 0 === inherited.length ? PREVIEW_INTERVALS : inherited;
   // A toggle cannot express three or more choices.
   const effective = "switch" === variant && 2 === intervals.length
     ? "switch"

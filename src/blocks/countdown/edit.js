@@ -1,7 +1,11 @@
 /**
  * WordPress dependencies
  */
-import { InspectorControls, useBlockProps } from "@wordpress/block-editor";
+import {
+  InspectorControls,
+  useBlockProps,
+  store as blockEditorStore,
+} from "@wordpress/block-editor";
 import {
   DateTimePicker,
   PanelBody,
@@ -10,8 +14,14 @@ import {
   TextControl,
   ToggleControl,
 } from "@wordpress/components";
+import { useSelect } from "@wordpress/data";
 import { Fragment } from "@wordpress/element";
 import { __ } from "@wordpress/i18n";
+
+/**
+ * How far ahead the inserter preview pretends the deadline is, in ms.
+ */
+const PREVIEW_LEAD_MS = 3 * 24 * 60 * 60 * 1000;
 
 const LABELS = {
   days: __("Days", "shadcn-blocks"),
@@ -74,7 +84,20 @@ export default function Edit({ attributes, setAttributes }) {
     className: "wp-block-shadcn-countdown",
   });
 
-  const targetMs = targetDate ? Date.parse(targetDate) : NaN;
+  // The inserter preview renders this same component with whatever the block's
+  // `example` carries, and a date baked into block.json is wrong the day after
+  // it ships — too far out and it reads as five-figure hours, past and the
+  // block hides itself. So the example omits the date and the preview borrows a
+  // relative one instead, computed fresh on every render.
+  const isPreview = useSelect(
+    (select) => !!select(blockEditorStore).getSettings().isPreviewMode,
+    []
+  );
+  const targetMs = targetDate
+    ? Date.parse(targetDate)
+    : isPreview
+      ? Date.now() + PREVIEW_LEAD_MS
+      : NaN;
   const remaining = Number.isFinite(targetMs)
     ? Math.max(0, Math.floor((targetMs - Date.now()) / 1000))
     : 0;
@@ -155,7 +178,8 @@ export default function Edit({ attributes, setAttributes }) {
     </InspectorControls>
   );
 
-  if (!targetDate) {
+  // Authors still get the "pick a date" prompt; only the inert preview skips it.
+  if (!targetDate && !isPreview) {
     return (
       <>
         {controls}

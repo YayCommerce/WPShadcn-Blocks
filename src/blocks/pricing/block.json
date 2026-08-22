@@ -49,6 +49,265 @@
       "default": ""
     }
   },
+  "example": {
+    "attributes": {
+      "align": "wide",
+      "intervals": [
+        { "key": "monthly", "label": "Monthly" },
+        { "key": "yearly", "label": "Yearly" }
+      ],
+      "defaultInterval": "monthly"
+    },
+    "innerBlocks": [
+      {
+        "name": "shadcn/pricing-switch",
+        "attributes": { "variant": "segmented", "justification": "center" }
+      },
+      {
+        "name": "core/columns",
+        "attributes": {},
+        "innerBlocks": [
+          {
+            "name": "core/column",
+            "attributes": {
+              "backgroundColor": "card",
+              "style": {
+                "border": {
+                  "color": "var:preset|color|border",
+                  "width": "1px",
+                  "style": "solid",
+                  "radius": "0.75rem"
+                },
+                "spacing": {
+                  "padding": {
+                    "top": "var:preset|spacing|6",
+                    "right": "var:preset|spacing|6",
+                    "bottom": "var:preset|spacing|6",
+                    "left": "var:preset|spacing|6"
+                  }
+                }
+              }
+            },
+            "innerBlocks": [
+              {
+                "name": "core/heading",
+                "attributes": { "level": 3, "content": "Starter", "fontSize": "xl" }
+              },
+              {
+                "name": "shadcn/pricing-price",
+                "attributes": {
+                  "periodPlacement": "below",
+                  "prices": [
+                    { "key": "monthly", "amount": "0", "period": "Free forever" }
+                  ]
+                }
+              },
+              {
+                "name": "core/paragraph",
+                "attributes": {
+                  "content": "For side projects and first drafts.",
+                  "textColor": "muted-foreground",
+                  "fontSize": "sm"
+                }
+              },
+              {
+                "name": "core/list",
+                "attributes": {
+                  "className": "is-style-shadcn-check",
+                  "fontSize": "sm"
+                },
+                "innerBlocks": [
+                  {
+                    "name": "core/list-item",
+                    "attributes": { "content": "One editor seat" }
+                  },
+                  {
+                    "name": "core/list-item",
+                    "attributes": { "content": "Base component set" }
+                  },
+                  {
+                    "name": "core/list-item",
+                    "attributes": { "content": "Community support" }
+                  }
+                ]
+              },
+              {
+                "name": "core/buttons",
+                "attributes": {},
+                "innerBlocks": [
+                  {
+                    "name": "core/button",
+                    "attributes": {
+                      "text": "Start free",
+                      "className": "is-style-outline"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "core/column",
+            "attributes": {
+              "backgroundColor": "card",
+              "style": {
+                "border": {
+                  "color": "var:preset|color|border",
+                  "width": "1px",
+                  "style": "solid",
+                  "radius": "0.75rem"
+                },
+                "spacing": {
+                  "padding": {
+                    "top": "var:preset|spacing|6",
+                    "right": "var:preset|spacing|6",
+                    "bottom": "var:preset|spacing|6",
+                    "left": "var:preset|spacing|6"
+                  }
+                }
+              }
+            },
+            "innerBlocks": [
+              {
+                "name": "core/heading",
+                "attributes": { "level": 3, "content": "Pro", "fontSize": "xl" }
+              },
+              {
+                "name": "shadcn/pricing-price",
+                "attributes": {
+                  "periodPlacement": "below",
+                  "prices": [
+                    { "key": "monthly", "amount": "29", "period": "Per month" },
+                    { "key": "yearly", "amount": "290", "period": "Per year" }
+                  ]
+                }
+              },
+              {
+                "name": "core/paragraph",
+                "attributes": {
+                  "content": "For growing teams shipping every week.",
+                  "textColor": "muted-foreground",
+                  "fontSize": "sm"
+                }
+              },
+              {
+                "name": "core/list",
+                "attributes": {
+                  "className": "is-style-shadcn-check",
+                  "fontSize": "sm"
+                },
+                "innerBlocks": [
+                  {
+                    "name": "core/list-item",
+                    "attributes": { "content": "Five editor seats" }
+                  },
+                  {
+                    "name": "core/list-item",
+                    "attributes": { "content": "Every component and pattern" }
+                  },
+                  {
+                    "name": "core/list-item",
+                    "attributes": { "content": "Priority support" }
+                  }
+                ]
+              },
+              {
+                "name": "core/buttons",
+                "attributes": {},
+                "innerBlocks": [
+                  {
+                    "name": "core/button",
+                    "attributes": { "text": "Get Pro" }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "core/column",
+            "attributes": {
+              "backgroundColor": "card",
+              "style": {
+                "border": {
+                  "color": "var:preset|color|border",
+                  "width": "1px",
+                  "style": "solid",
+                  "radius": "0.75rem"
+                },
+                "spacing": {
+                  "padding": {
+                    "top": "var:preset|spacing|6",
+                    "right": "var:preset|spacing|6",
+                    "bottom": "var:preset|spacing|6",
+                    "left": "var:preset|spacing|6"
+                  }
+                }
+              }
+            },
+            "innerBlocks": [
+              {
+                "name": "core/heading",
+                "attributes": { "level": 3, "content": "Business", "fontSize": "xl" }
+              },
+              {
+                "name": "shadcn/pricing-price",
+                "attributes": {
+                  "periodPlacement": "below",
+                  "prices": [
+                    { "key": "monthly", "amount": "79", "period": "Per month" },
+                    { "key": "yearly", "amount": "790", "period": "Per year" }
+                  ]
+                }
+              },
+              {
+                "name": "core/paragraph",
+                "attributes": {
+                  "content": "For organisations that need review and control.",
+                  "textColor": "muted-foreground",
+                  "fontSize": "sm"
+                }
+              },
+              {
+                "name": "core/list",
+                "attributes": {
+                  "className": "is-style-shadcn-check",
+                  "fontSize": "sm"
+                },
+                "innerBlocks": [
+                  {
+                    "name": "core/list-item",
+                    "attributes": { "content": "Unlimited seats" }
+                  },
+                  {
+                    "name": "core/list-item",
+                    "attributes": { "content": "SSO and audit logs" }
+                  },
+                  {
+                    "name": "core/list-item",
+                    "attributes": { "content": "Dedicated success manager" }
+                  }
+                ]
+              },
+              {
+                "name": "core/buttons",
+                "attributes": {},
+                "innerBlocks": [
+                  {
+                    "name": "core/button",
+                    "attributes": {
+                      "text": "Contact sales",
+                      "className": "is-style-outline"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "viewportWidth": 1200
+  },
   "providesContext": {
     "shadcn/intervals": "intervals"
   },

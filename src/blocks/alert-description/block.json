@@ -55,6 +55,17 @@
     "lock": false,
     "html": false
   },
+  "example": {
+    "innerBlocks": [
+      {
+        "name": "core/paragraph",
+        "attributes": {
+          "content": "Renew before Friday to keep access to your shared projects, billing history and team seats."
+        }
+      }
+    ],
+    "viewportWidth": 600
+  },
   "editorScript": "file:./index.js",
   "style": "file:./style-index.css",
   "render": "file:./render.php"

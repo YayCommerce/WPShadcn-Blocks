@@ -56,6 +56,80 @@
 			"enum": [ "none", "coverflow" ]
 		}
 	},
+	"example": {
+		"attributes": {
+			"autoplay": false,
+			"loop": true,
+			"showArrows": true,
+			"showDots": true,
+			"slidesPerView": 1,
+			"slidesPerViewTablet": 2,
+			"slidesPerViewDesktop": 3,
+			"gap": "1.5rem",
+			"orientation": "horizontal",
+			"effect": "coverflow"
+		},
+		"innerBlocks": [
+			{
+				"name": "shadcn/carousel-item",
+				"attributes": {},
+				"innerBlocks": [
+					{
+						"name": "core/heading",
+						"attributes": {
+							"level": 3,
+							"content": "Plan your work"
+						}
+					},
+					{
+						"name": "core/paragraph",
+						"attributes": {
+							"content": "Map out the release, then hand each step to the right person."
+						}
+					}
+				]
+			},
+			{
+				"name": "shadcn/carousel-item",
+				"attributes": {},
+				"innerBlocks": [
+					{
+						"name": "core/heading",
+						"attributes": {
+							"level": 3,
+							"content": "Build it together"
+						}
+					},
+					{
+						"name": "core/paragraph",
+						"attributes": {
+							"content": "Review changes side by side and keep everyone on the same version."
+						}
+					}
+				]
+			},
+			{
+				"name": "shadcn/carousel-item",
+				"attributes": {},
+				"innerBlocks": [
+					{
+						"name": "core/heading",
+						"attributes": {
+							"level": 3,
+							"content": "Ship with confidence"
+						}
+					},
+					{
+						"name": "core/paragraph",
+						"attributes": {
+							"content": "Publish when the checks pass and roll back in a single click."
+						}
+					}
+				]
+			}
+		],
+		"viewportWidth": 1200
+	},
 	"supports": {
 		"html": false,
 		"anchor": true,

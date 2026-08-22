@@ -36,6 +36,95 @@
       "default": "bottom"
     }
   },
+  "example": {
+    "attributes": {
+      "dismissible": true,
+      "direction": "bottom"
+    },
+    "innerBlocks": [
+      {
+        "name": "shadcn/drawer-trigger",
+        "attributes": {},
+        "innerBlocks": [
+          {
+            "name": "core/buttons",
+            "attributes": {},
+            "innerBlocks": [
+              {
+                "name": "core/button",
+                "attributes": {
+                  "text": "Cookie settings",
+                  "className": "is-style-outline"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "shadcn/drawer-header",
+        "attributes": {},
+        "innerBlocks": [
+          {
+            "name": "core/heading",
+            "attributes": {
+              "level": 3,
+              "content": "Cookie preferences"
+            }
+          },
+          {
+            "name": "core/paragraph",
+            "attributes": {
+              "content": "Choose which categories of cookies this site may use."
+            }
+          }
+        ]
+      },
+      {
+        "name": "shadcn/drawer-content",
+        "attributes": {},
+        "innerBlocks": [
+          {
+            "name": "core/paragraph",
+            "attributes": {
+              "content": "Strictly necessary cookies keep the site working and cannot be switched off. Analytics and personalisation cookies stay off until you allow them."
+            }
+          }
+        ]
+      },
+      {
+        "name": "shadcn/drawer-footer",
+        "attributes": {},
+        "innerBlocks": [
+          {
+            "name": "core/buttons",
+            "attributes": {
+              "layout": {
+                "type": "flex",
+                "justifyContent": "right"
+              }
+            },
+            "innerBlocks": [
+              {
+                "name": "core/button",
+                "attributes": {
+                  "text": "Reject all",
+                  "className": "is-style-outline"
+                }
+              },
+              {
+                "name": "core/button",
+                "attributes": {
+                  "text": "Save preferences"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "viewportWidth": 900
+  },
   "allowedBlocks": [
     "shadcn/drawer-trigger",
     "shadcn/drawer-header",

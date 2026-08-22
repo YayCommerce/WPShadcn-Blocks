@@ -32,6 +32,33 @@
       "default": false
     }
   },
+  "example": {
+    "attributes": {
+      "variant": "warning",
+      "dismissible": false
+    },
+    "innerBlocks": [
+      {
+        "name": "shadcn/alert-title",
+        "attributes": {
+          "title": "Your subscription expires in 3 days"
+        }
+      },
+      {
+        "name": "shadcn/alert-description",
+        "attributes": {},
+        "innerBlocks": [
+          {
+            "name": "core/paragraph",
+            "attributes": {
+              "content": "Renew before Friday to keep access to your shared projects, billing history and team seats."
+            }
+          }
+        ]
+      }
+    ],
+    "viewportWidth": 700
+  },
   "providesContext": {
     "shadcn/alert-variant": "variant",
     "shadcn/alert-dismissible": "dismissible"

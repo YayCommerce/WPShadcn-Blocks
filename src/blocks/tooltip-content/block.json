@@ -10,6 +10,16 @@
   "description": "Tooltip content section for additional information.",
   "textdomain": "shadcn-blocks",
   "attributes": {},
+  "example": {
+    "attributes": {},
+    "innerBlocks": [
+      {
+        "name": "core/paragraph",
+        "attributes": { "content": "Extra detail, only when it is needed." }
+      }
+    ],
+    "viewportWidth": 400
+  },
   "supports": {
     "html": false,
     "reusable": false,

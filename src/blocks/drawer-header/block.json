@@ -10,6 +10,24 @@
   "description": "Drawer header section for title and description.",
   "textdomain": "shadcn-blocks",
   "attributes": {},
+  "example": {
+    "innerBlocks": [
+      {
+        "name": "core/heading",
+        "attributes": {
+          "level": 3,
+          "content": "Cookie preferences"
+        }
+      },
+      {
+        "name": "core/paragraph",
+        "attributes": {
+          "content": "Choose which categories of cookies this site may use."
+        }
+      }
+    ],
+    "viewportWidth": 600
+  },
   "supports": {
     "html": false,
     "reusable": false,

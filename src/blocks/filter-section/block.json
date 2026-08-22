@@ -23,6 +23,28 @@
 			"default": true
 		}
 	},
+	"example": {
+		"attributes": {
+			"label": "Engineering",
+			"headingLevel": 2,
+			"showLabel": true
+		},
+		"innerBlocks": [
+			{
+				"name": "core/paragraph",
+				"attributes": {
+					"content": "Senior Platform Engineer — Lisbon, Portugal · Hybrid"
+				}
+			},
+			{
+				"name": "core/paragraph",
+				"attributes": {
+					"content": "Site Reliability Engineer — Remote · Europe"
+				}
+			}
+		],
+		"viewportWidth": 900
+	},
 	"supports": {
 		"html": false,
 		"reusable": false,

@@ -34,6 +34,17 @@
       "default": ""
     }
   },
+  "example": {
+    "attributes": {
+      "startValue": 0,
+      "endValue": 1250,
+      "duration": 2000,
+      "decimals": 0,
+      "separator": true,
+      "suffix": "+"
+    },
+    "viewportWidth": 600
+  },
   "supports": {
     "html": false,
     "anchor": true,

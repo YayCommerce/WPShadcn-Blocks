@@ -33,6 +33,14 @@
       "default": ""
     }
   },
+  "example": {
+    "attributes": {
+      "label": "Send message",
+      "width": 100,
+      "alignment": ""
+    },
+    "viewportWidth": 400
+  },
   "editorScript": "file:./index.js",
   "style": "file:./style-index.css",
   "render": "file:./render.php"

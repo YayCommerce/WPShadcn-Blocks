@@ -52,6 +52,57 @@
       "default": 5000
     }
   },
+  "example": {
+    "attributes": {
+      "headingLevel": 3,
+      "openFirst": true
+    },
+    "innerBlocks": [
+      {
+        "name": "shadcn/accordion-item",
+        "attributes": {
+          "title": "How long does delivery take?"
+        },
+        "innerBlocks": [
+          {
+            "name": "core/paragraph",
+            "attributes": {
+              "content": "Orders leave the warehouse within one working day and arrive in two to four days, with tracking sent as soon as the parcel is scanned."
+            }
+          }
+        ]
+      },
+      {
+        "name": "shadcn/accordion-item",
+        "attributes": {
+          "title": "Can I return an item?"
+        },
+        "innerBlocks": [
+          {
+            "name": "core/paragraph",
+            "attributes": {
+              "content": "You have thirty days from delivery. Send it back unworn in its original packaging and the refund lands on your card within a week."
+            }
+          }
+        ]
+      },
+      {
+        "name": "shadcn/accordion-item",
+        "attributes": {
+          "title": "Do you ship internationally?"
+        },
+        "innerBlocks": [
+          {
+            "name": "core/paragraph",
+            "attributes": {
+              "content": "We ship to most of Europe and North America. Duties are shown at checkout, so the price you pay is the final one."
+            }
+          }
+        ]
+      }
+    ],
+    "viewportWidth": 800
+  },
   "providesContext": {
     "shadcn/headingLevel": "headingLevel"
   },

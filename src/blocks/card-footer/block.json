@@ -10,6 +10,24 @@
 	"description": "Card footer section for actions and buttons.",
 	"textdomain": "shadcn-blocks",
 	"attributes": {},
+	"example": {
+		"attributes": {},
+		"innerBlocks": [
+			{
+				"name": "core/buttons",
+				"attributes": {},
+				"innerBlocks": [
+					{
+						"name": "core/button",
+						"attributes": {
+							"text": "Choose Starter"
+						}
+					}
+				]
+			}
+		],
+		"viewportWidth": 600
+	},
 	"supports": {
 		"html": false,
 		"reusable": false,

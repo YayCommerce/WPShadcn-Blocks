@@ -10,6 +10,24 @@
   "description": "Button or control that toggles the drawer.",
   "textdomain": "shadcn-blocks",
   "attributes": {},
+  "example": {
+    "innerBlocks": [
+      {
+        "name": "core/buttons",
+        "attributes": {},
+        "innerBlocks": [
+          {
+            "name": "core/button",
+            "attributes": {
+              "text": "Cookie settings",
+              "className": "is-style-outline"
+            }
+          }
+        ]
+      }
+    ],
+    "viewportWidth": 400
+  },
   "supports": {
     "html": false,
     "reusable": false,

@@ -29,6 +29,25 @@
       "default": false
     }
   },
+  "example": {
+    "attributes": {
+      "label": "Account",
+      "disabled": false
+    },
+    "innerBlocks": [
+      {
+        "name": "core/heading",
+        "attributes": { "level": 4, "content": "Account" }
+      },
+      {
+        "name": "core/paragraph",
+        "attributes": {
+          "content": "Update your name and email address, then save when you are done."
+        }
+      }
+    ],
+    "viewportWidth": 500
+  },
   "editorScript": "file:./index.js",
   "style": "file:./style-index.css",
   "render": "file:./render.php"

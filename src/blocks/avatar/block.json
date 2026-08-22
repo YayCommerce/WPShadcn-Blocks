@@ -30,6 +30,16 @@
       "default": "A"
     }
   },
+  "example": {
+    "attributes": {
+      "mediaId": 0,
+      "mediaUrl": "",
+      "mediaAlt": "",
+      "size": "lg",
+      "fallback": "CN"
+    },
+    "viewportWidth": 400
+  },
   "supports": {
     "html": false,
     "anchor": true,

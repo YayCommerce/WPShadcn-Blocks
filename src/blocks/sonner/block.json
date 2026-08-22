@@ -34,6 +34,15 @@
       "default": ""
     }
   },
+  "example": {
+    "attributes": {
+      "buttonLabel": "Show notification",
+      "toastType": "success",
+      "toastTitle": "Event has been created",
+      "toastDescription": "Sunday, December 3 at 9:00 AM"
+    },
+    "viewportWidth": 400
+  },
   "editorScript": "file:./index.js",
   "style": "file:./style-index.css",
   "render": "file:./render.php",

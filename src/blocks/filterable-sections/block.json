@@ -29,6 +29,77 @@
 			"enum": [ "top", "side" ]
 		}
 	},
+	"example": {
+		"attributes": {
+			"filterLabel": "Filter",
+			"allOptionLabel": "All departments",
+			"control": "dropdown",
+			"controlPosition": "top"
+		},
+		"innerBlocks": [
+			{
+				"name": "shadcn/filter-section",
+				"attributes": {
+					"label": "Engineering",
+					"headingLevel": 3,
+					"showLabel": true
+				},
+				"innerBlocks": [
+					{
+						"name": "core/paragraph",
+						"attributes": {
+							"content": "Senior Platform Engineer — Lisbon, Portugal · Hybrid"
+						}
+					},
+					{
+						"name": "core/paragraph",
+						"attributes": {
+							"content": "Site Reliability Engineer — Remote · Europe"
+						}
+					}
+				]
+			},
+			{
+				"name": "shadcn/filter-section",
+				"attributes": {
+					"label": "Design",
+					"headingLevel": 3,
+					"showLabel": true
+				},
+				"innerBlocks": [
+					{
+						"name": "core/paragraph",
+						"attributes": {
+							"content": "Senior Product Designer — Remote · Worldwide"
+						}
+					},
+					{
+						"name": "core/paragraph",
+						"attributes": {
+							"content": "Design Systems Lead — Berlin, Germany"
+						}
+					}
+				]
+			},
+			{
+				"name": "shadcn/filter-section",
+				"attributes": {
+					"label": "Customer Operations",
+					"headingLevel": 3,
+					"showLabel": true
+				},
+				"innerBlocks": [
+					{
+						"name": "core/paragraph",
+						"attributes": {
+							"content": "Customer Success Lead — Sydney, Australia"
+						}
+					}
+				]
+			}
+		],
+		"viewportWidth": 1100
+	},
 	"supports": {
 		"html": false,
 		"anchor": true,

@@ -34,6 +34,37 @@
       "width": true
     }
   },
+  "example": {
+    "attributes": {
+      "action": "hover"
+    },
+    "innerBlocks": [
+      {
+        "name": "shadcn/tooltip-trigger",
+        "attributes": {},
+        "innerBlocks": [
+          {
+            "name": "core/button",
+            "attributes": {
+              "text": "Hover me",
+              "className": "is-style-outline"
+            }
+          }
+        ]
+      },
+      {
+        "name": "shadcn/tooltip-content",
+        "attributes": {},
+        "innerBlocks": [
+          {
+            "name": "core/paragraph",
+            "attributes": { "content": "Extra detail, only when it is needed." }
+          }
+        ]
+      }
+    ],
+    "viewportWidth": 400
+  },
   "editorScript": "file:./index.js",
   "style": "file:./style-index.css",
   "render": "file:./render.php",

@@ -50,6 +50,15 @@
       "default": ""
     }
   },
+  "example": {
+    "attributes": {
+      "text": "Version 2.0 is live",
+      "variant": "secondary",
+      "iconName": "sparkles",
+      "iconPosition": "left"
+    },
+    "viewportWidth": 400
+  },
   "editorScript": "file:./index.js",
   "style": "file:./style-index.css",
   "render": "file:./render.php"

@@ -14,6 +14,49 @@
       "default": 5
     }
   },
+  "example": {
+    "attributes": {
+      "maxVisible": 5
+    },
+    "innerBlocks": [
+      {
+        "name": "shadcn/avatar",
+        "attributes": {
+          "size": "lg",
+          "fallback": "CN"
+        }
+      },
+      {
+        "name": "shadcn/avatar",
+        "attributes": {
+          "size": "lg",
+          "fallback": "AB"
+        }
+      },
+      {
+        "name": "shadcn/avatar",
+        "attributes": {
+          "size": "lg",
+          "fallback": "JD"
+        }
+      },
+      {
+        "name": "shadcn/avatar",
+        "attributes": {
+          "size": "lg",
+          "fallback": "MK"
+        }
+      },
+      {
+        "name": "shadcn/avatar",
+        "attributes": {
+          "size": "lg",
+          "fallback": "RF"
+        }
+      }
+    ],
+    "viewportWidth": 600
+  },
   "supports": {
     "html": false,
     "anchor": true,

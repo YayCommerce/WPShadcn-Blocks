@@ -10,6 +10,25 @@
 	"description": "Card header section for title and description.",
 	"textdomain": "shadcn-blocks",
 	"attributes": {},
+	"example": {
+		"attributes": {},
+		"innerBlocks": [
+			{
+				"name": "core/heading",
+				"attributes": {
+					"level": 3,
+					"content": "Starter plan"
+				}
+			},
+			{
+				"name": "core/paragraph",
+				"attributes": {
+					"content": "Everything one person needs to launch a first site."
+				}
+			}
+		],
+		"viewportWidth": 600
+	},
 	"supports": {
 		"html": false,
 		"reusable": false,

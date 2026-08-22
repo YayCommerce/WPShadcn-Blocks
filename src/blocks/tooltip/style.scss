@@ -39,6 +39,9 @@
   margin-bottom: calc(var(--spacing, 0.25rem) * 2);
   transform: translateX(-50%);
 
+  // Inserter preview: no trigger to hover and no tooltip to anchor to, so the
+  // bubble is drawn in normal flow instead of floating invisibly off-canvas.
+  // Editor-only — the class is added by edit.js in preview mode, never saved.
   // Show when open
   &.is-open,
   &[data-open="true"],
@@ -368,5 +371,20 @@
     margin-left: 0 !important;
     margin-right: 0 !important;
     transform: translateX(-50%) scale(0.95) !important;
+  }
+
+  // Inserter preview: the block is rendered on its own, with no trigger to
+  // hover and nothing to anchor to, so the rule above would leave it floating
+  // off-canvas at zero opacity and the preview would read as blank. edit.js
+  // adds this class in preview mode only, so it never reaches saved content.
+  // Both the specificity and the !important are needed to outrank that rule.
+  .wp-block-shadcn-tooltip-content.is-editor-preview {
+    position: static !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+    bottom: auto !important;
+    left: auto !important;
   }
 }

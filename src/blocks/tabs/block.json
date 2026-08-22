@@ -36,6 +36,63 @@
       "default": false
     }
   },
+  "example": {
+    "attributes": {
+      "defaultTab": 0,
+      "fitted": false
+    },
+    "innerBlocks": [
+      {
+        "name": "shadcn/tab",
+        "attributes": { "label": "Account" },
+        "innerBlocks": [
+          {
+            "name": "core/heading",
+            "attributes": { "level": 4, "content": "Account" }
+          },
+          {
+            "name": "core/paragraph",
+            "attributes": {
+              "content": "Update your name and email address, then save when you are done."
+            }
+          }
+        ]
+      },
+      {
+        "name": "shadcn/tab",
+        "attributes": { "label": "Password" },
+        "innerBlocks": [
+          {
+            "name": "core/heading",
+            "attributes": { "level": 4, "content": "Password" }
+          },
+          {
+            "name": "core/paragraph",
+            "attributes": {
+              "content": "Change your password here. You will be signed out on other devices."
+            }
+          }
+        ]
+      },
+      {
+        "name": "shadcn/tab",
+        "attributes": { "label": "Notifications" },
+        "innerBlocks": [
+          {
+            "name": "core/heading",
+            "attributes": { "level": 4, "content": "Notifications" }
+          },
+          {
+            "name": "core/paragraph",
+            "attributes": {
+              "content": "Choose which updates reach your inbox and how often they arrive."
+            }
+          }
+        ]
+      }
+    ],
+    "viewportWidth": 900
+  },
   "allowedBlocks": ["shadcn/tab"],
   "editorScript": "file:./index.js",
   "style": "file:./style-index.css",

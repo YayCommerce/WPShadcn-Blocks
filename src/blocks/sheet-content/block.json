@@ -10,6 +10,23 @@
   "description": "Sheet content section for main body content.",
   "textdomain": "shadcn-blocks",
   "attributes": {},
+  "example": {
+    "innerBlocks": [
+      {
+        "name": "core/paragraph",
+        "attributes": {
+          "content": "Your display name and contact details appear on every comment you post."
+        }
+      },
+      {
+        "name": "core/paragraph",
+        "attributes": {
+          "content": "Updates take effect as soon as you save."
+        }
+      }
+    ],
+    "viewportWidth": 600
+  },
   "supports": {
     "html": false,
     "reusable": false,

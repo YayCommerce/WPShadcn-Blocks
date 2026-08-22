@@ -10,6 +10,35 @@
   "description": "Drawer footer section for footer content.",
   "textdomain": "shadcn-blocks",
   "attributes": {},
+  "example": {
+    "innerBlocks": [
+      {
+        "name": "core/buttons",
+        "attributes": {
+          "layout": {
+            "type": "flex",
+            "justifyContent": "right"
+          }
+        },
+        "innerBlocks": [
+          {
+            "name": "core/button",
+            "attributes": {
+              "text": "Reject all",
+              "className": "is-style-outline"
+            }
+          },
+          {
+            "name": "core/button",
+            "attributes": {
+              "text": "Save preferences"
+            }
+          }
+        ]
+      }
+    ],
+    "viewportWidth": 600
+  },
   "supports": {
     "html": false,
     "reusable": false,

@@ -26,6 +26,21 @@
       "default": ""
     }
   },
+  "example": {
+    "attributes": {
+      "variant": "muted",
+      "align": "start"
+    },
+    "innerBlocks": [
+      {
+        "name": "core/paragraph",
+        "attributes": {
+          "content": "Hey! Is the new landing page ready to review?"
+        }
+      }
+    ],
+    "viewportWidth": 600
+  },
   "usesContext": ["shadcn/bubble-align"],
   "editorScript": "file:./index.js",
   "style": "file:./style-index.css",

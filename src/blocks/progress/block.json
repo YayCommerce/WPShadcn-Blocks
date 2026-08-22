@@ -34,6 +34,14 @@
       "default": "#171717"
     }
   },
+  "example": {
+    "attributes": {
+      "maxValue": 100,
+      "currentValue": "static",
+      "staticValue": 72
+    },
+    "viewportWidth": 700
+  },
   "supports": {
     "html": false,
     "anchor": true,

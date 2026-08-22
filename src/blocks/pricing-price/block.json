@@ -64,6 +64,21 @@
       }
     }
   },
+  "example": {
+    "attributes": {
+      "currency": "$",
+      "currencyPlacement": "superscript",
+      "periodPlacement": "below",
+      "prices": [
+        {
+          "key": "monthly",
+          "amount": "29",
+          "period": "Per month"
+        }
+      ]
+    },
+    "viewportWidth": 400
+  },
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",
