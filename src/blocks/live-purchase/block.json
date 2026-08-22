@@ -1,0 +1,97 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "shadcn/live-purchase",
+  "version": "1.0.0",
+  "title": "Live Purchase",
+  "category": "shadcn",
+  "description": "A floating toast that rotates through recent purchases. Feeds from real WooCommerce orders, or from simulated ones drawn from your best-selling products. Requires WooCommerce.",
+  "keywords": [
+    "purchase",
+    "order",
+    "notification",
+    "toast",
+    "social proof",
+    "woocommerce"
+  ],
+  "textdomain": "shadcn-blocks",
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "align": false,
+    "multiple": false,
+    "spacing": {
+      "margin": false
+    }
+  },
+  "attributes": {
+    "source": {
+      "type": "string",
+      "default": "orders"
+    },
+    "showName": {
+      "type": "boolean",
+      "default": true
+    },
+    "showLocation": {
+      "type": "boolean",
+      "default": false
+    },
+    "showProduct": {
+      "type": "boolean",
+      "default": true
+    },
+    "showImage": {
+      "type": "boolean",
+      "default": false
+    },
+    "showTime": {
+      "type": "boolean",
+      "default": true
+    },
+    "rotationInterval": {
+      "type": "number",
+      "default": 12
+    },
+    "displayDuration": {
+      "type": "number",
+      "default": 6
+    },
+    "batchSize": {
+      "type": "number",
+      "default": 10
+    },
+    "minOrders": {
+      "type": "number",
+      "default": 8
+    },
+    "lookbackDays": {
+      "type": "number",
+      "default": 30
+    },
+    "dismissible": {
+      "type": "boolean",
+      "default": true
+    },
+    "hideOnMobile": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "example": {
+    "attributes": {
+      "source": "simulated",
+      "showName": false,
+      "showLocation": false,
+      "showProduct": true,
+      "showImage": false,
+      "showTime": true,
+      "dismissible": true
+    },
+    "viewportWidth": 600
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

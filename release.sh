@@ -91,7 +91,9 @@ for required in \
     "inc/icon-map.php" \
     "assets/images/placeholder.svg" \
     "src/editor-styles.css" \
-    "build/extensions/core-button-icon.js"
+    "build/extensions/core-button-icon.js" \
+    "build/blocks/live-purchase/view.js" \
+    "inc/LivePurchase/RestController.php"
 do
     if [ ! -f "$DEST_DIR/$required" ]; then
         echo "Error: $required is missing from the release"

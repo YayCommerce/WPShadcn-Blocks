@@ -29,6 +29,18 @@ class Plugin {
 	private static $interactive_blocks = array();
 
 	/**
+	 * Resolved config of the first Live Purchase block rendered this request,
+	 * or null when none has rendered.
+	 *
+	 * A class static rather than a global: this holds per-instance state, so
+	 * unlike $GLOBALS['shadcn_sonner_present'] (a presence flag) a stray
+	 * second write would silently change what the toast shows.
+	 *
+	 * @var array|null
+	 */
+	private static $live_purchase_config = null;
+
+	/**
 	 * Get instance.
 	 *
 	 * @return Plugin
@@ -53,6 +65,9 @@ class Plugin {
 		// Print the single shared Sonner toaster (and enqueue its module) when a
 		// sonner block rendered on the page. Runs before wp_print_footer_scripts.
 		add_action( 'wp_footer', array( $this, 'render_sonner_toaster' ), 5 );
+		// Same idea for the Live Purchase toast: the block itself renders
+		// nothing in place, and the fixed-position region is printed here.
+		add_action( 'wp_footer', array( $this, 'render_live_purchase_region' ), 5 );
 	}
 
 	/**
@@ -92,9 +107,17 @@ class Plugin {
 		foreach ( $block_dirs as $block_dir ) {
 			$block_json = $block_dir . '/block.json';
 
-			if ( file_exists( $block_json ) ) {
-				register_block_type( $block_dir );
+			if ( ! file_exists( $block_json ) ) {
+				continue;
 			}
+
+			// The glob registers whatever it finds, so a block that is
+			// meaningless without another plugin has to be skipped by name.
+			if ( 'live-purchase' === basename( $block_dir ) && ! shadcn_blocks_woo_active() ) {
+				continue;
+			}
+
+			register_block_type( $block_dir );
 		}
 	}
 
@@ -318,6 +341,190 @@ class Plugin {
 		}
 
 		echo $toaster; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	}
+
+	/**
+	 * Record the Live Purchase config and enqueue its view module.
+	 *
+	 * The block's render callback returns an empty string and hands its
+	 * resolved config here, because a fixed-position toast must not sit inside
+	 * whatever container the author dropped the block into; the region is
+	 * printed later by render_live_purchase_region().
+	 *
+	 * The region starts empty. Phase 3's view script fills it — from the REST
+	 * feed in `orders` mode, or from the config's own entries in `custom` mode
+	 * — so a page whose feed turns out to be empty renders no toast markup at
+	 * all rather than an empty box.
+	 *
+	 * @param array $config Resolved block config.
+	 */
+	public function register_live_purchase_config( array $config ) {
+		// First render wins for the *config*. `multiple: false` only stops a
+		// second instance in one editor document; it does nothing about the
+		// same block rendering several times in one request — a query loop
+		// over posts that each contain it, or the block sitting in both a
+		// template part and the content. Last-wins would silently run the
+		// toast with a config the author never saw on this page, so the first
+		// one is kept and the rest are ignored in document order.
+		if ( null === self::$live_purchase_config ) {
+			self::$live_purchase_config = $config;
+		}
+
+		// The enqueue, though, runs on *every* render, deliberately.
+		//
+		// A page can render the content more than once — an excerpt pass, an
+		// SEO description, a feed — and only some of those passes leave the
+		// script-module queue intact. Enqueuing behind the first-wins guard
+		// therefore loses the module whenever the first pass is a throwaway
+		// one. Enqueuing is idempotent (WP_Script_Modules::enqueue() checks
+		// the queue before appending), so repeating it costs nothing and
+		// removes the dependence on which pass happened to be first.
+		//
+		// It also has to happen here rather than in the footer callback: in a
+		// block theme the import map is printed during `wp_head`, and
+		// template-canvas.php renders the whole template *before* `<head>`
+		// precisely so blocks can enqueue in time. A `wp_footer` enqueue is
+		// past that point — the module tag would be emitted with
+		// `@wordpress/interactivity` missing from the map, and the browser
+		// would fail to resolve the bare specifier.
+		$this->enqueue_live_purchase_module();
+	}
+
+	/**
+	 * Register and enqueue the Live Purchase view module.
+	 *
+	 * Idempotent: WP_Script_Modules::register() ignores a repeat id and
+	 * enqueue() checks the queue before appending, so calling this from both
+	 * block-render time and the footer is safe.
+	 */
+	private function enqueue_live_purchase_module() {
+		// The block's own stylesheet has to be asked for by name. WordPress
+		// ties automatic block-style enqueueing to a block producing output,
+		// and this one deliberately returns an empty string so its toast can
+		// be printed in the footer instead — which leaves the registered
+		// handle sitting there unused and the toast unstyled.
+		if ( wp_style_is( 'shadcn-live-purchase-style', 'registered' ) ) {
+			wp_enqueue_style( 'shadcn-live-purchase-style' );
+		}
+
+		$view_js_path = SHADCN_BLOCKS_DIR . 'build/blocks/live-purchase/view.js';
+		$view_js_url  = SHADCN_BLOCKS_URL . 'build/blocks/live-purchase/view.js';
+		$asset_path   = str_replace( '.js', '.asset.php', $view_js_path );
+
+		if ( ! file_exists( $view_js_path ) || ! function_exists( 'wp_register_script_module' ) ) {
+			return;
+		}
+
+		$asset   = file_exists( $asset_path ) ? require $asset_path : array();
+		$version = isset( $asset['version'] ) ? $asset['version'] : SHADCN_BLOCKS_VERSION;
+
+		wp_register_script_module(
+			'shadcn-live-purchase-view',
+			$view_js_url,
+			array( '@wordpress/interactivity' ),
+			$version
+		);
+		wp_enqueue_script_module( 'shadcn-live-purchase-view' );
+		wp_enqueue_script_module( '@wordpress/interactivity' );
+	}
+
+	/**
+	 * Print the Live Purchase toast region.
+	 *
+	 * Repeats the enqueue. The render-time call in
+	 * register_live_purchase_config() is the one that can reach the
+	 * block-theme import map, but on at least one real install its queue entry
+	 * does not survive to print time — verified by dumping
+	 * WP_Script_Modules::$queue immediately after the call (entry present) and
+	 * again at `wp_head` priority 1 on the same object instance (entry gone).
+	 * The cause was not identified. Enqueuing again here is idempotent and is
+	 * what actually gets the module tag emitted, so both calls stay: the early
+	 * one for the import map, this one for the script tag.
+	 */
+	public function render_live_purchase_region() {
+		if ( is_admin() || null === self::$live_purchase_config ) {
+			return;
+		}
+
+		$config = self::$live_purchase_config;
+
+		// Guards against a theme or plugin calling wp_footer() twice; the
+		// multi-render case is already handled by first-wins on the setter.
+		self::$live_purchase_config = null;
+
+		$this->enqueue_live_purchase_module();
+
+		// A class of its own, not the block wrapper class. WordPress adds
+		// `wp-block-shadcn-live-purchase` to the editor wrapper automatically,
+		// so hanging the fixed-position region styling on that name leaks
+		// position:fixed and pointer-events:none onto the canvas preview.
+		$classes = 'wp-block-shadcn-live-purchase__region';
+		if ( ! empty( $config['hideOnMobile'] ) ) {
+			$classes .= ' is-hidden-on-mobile';
+		}
+
+		// Sentence pieces travel with the config. The view module runs in
+		// module scope where wp.i18n is not reliably available, and building
+		// the sentence in JS from untranslated fragments would leave the
+		// block unlocalisable. Abbreviated time units ("4 min ago") are used
+		// deliberately: they read naturally at any count, so the client never
+		// has to reimplement plural rules for every locale.
+		$config['i18n'] = array(
+			'from'      => __( 'from', 'shadcn-blocks' ),
+			'purchased' => __( 'just purchased', 'shadcn-blocks' ),
+			// Simulated mode has no buyer to name, so it uses this as the
+			// subject of the sentence rather than inventing a person.
+			'someone'   => __( 'Someone', 'shadcn-blocks' ),
+			'justNow'   => __( 'just now', 'shadcn-blocks' ),
+			/* translators: %d: number of minutes. */
+			'minutes'   => __( '%d min ago', 'shadcn-blocks' ),
+			/* translators: %d: number of hours. */
+			'hours'     => __( '%d hr ago', 'shadcn-blocks' ),
+			'recently'  => __( 'recently', 'shadcn-blocks' ),
+		);
+
+		$region = '<div class="' . esc_attr( $classes ) . '"'
+			. ' data-wp-interactive="shadcn/live-purchase"'
+			. ' ' . wp_interactivity_data_wp_context( $config, 'shadcn/live-purchase' )
+			. ' data-wp-init="callbacks.start"'
+			. ' role="region"'
+			. ' aria-label="' . esc_attr__( 'Recent purchases', 'shadcn-blocks' ) . '"'
+			. ' aria-live="polite"'
+			. '>'
+			// Visibility is a class, not the `hidden` attribute: `[hidden]`
+			// carries only the UA stylesheet's `display:none`, which loses to
+			// the author `display:flex` this toast needs when shown.
+			. '<div class="wp-block-shadcn-live-purchase__toast" data-wp-class--is-visible="state.isVisible">'
+			. '<img class="wp-block-shadcn-live-purchase__thumb" alt="" width="40" height="40" decoding="async"'
+			. ' data-wp-bind--src="state.image" data-wp-class--is-shown="state.hasImage" />'
+			. '<div class="wp-block-shadcn-live-purchase__body">'
+			. '<p class="wp-block-shadcn-live-purchase__line">'
+			. '<strong data-wp-text="state.name"></strong> '
+			. '<span data-wp-text="state.locationText"></span> '
+			. '<span data-wp-text="state.purchasedText"></span> '
+			. '<strong data-wp-text="state.product"></strong>'
+			. '</p>'
+			. '<p class="wp-block-shadcn-live-purchase__time" data-wp-text="state.timeText"></p>'
+			. '</div>'
+			. '<button type="button" class="wp-block-shadcn-live-purchase__dismiss"'
+			// The label is a constant, so it is written straight into the
+			// markup. Binding it through the store made it depend on
+			// hydration order and it came back null in the DOM; there is
+			// nothing reactive about it to justify the risk.
+			. ' data-wp-on--click="actions.dismiss" data-wp-class--is-shown="state.dismissible"'
+			. ' aria-label="' . esc_attr__( 'Dismiss', 'shadcn-blocks' ) . '">'
+			. '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"'
+			. ' stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+			. '<path d="M18 6 6 18" fill="none"></path><path d="m6 6 12 12" fill="none"></path></svg>'
+			. '</button>'
+			. '</div>'
+			. '</div>';
+
+		if ( function_exists( 'wp_interactivity_process_directives' ) ) {
+			$region = wp_interactivity_process_directives( $region );
+		}
+
+		echo $region; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 
 	/**

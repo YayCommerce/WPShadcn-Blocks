@@ -25,6 +25,7 @@ class FixInteractivityPlugin {
       { name: "sonner", imports: ["store", "getContext"] },
       { name: "tabs", imports: ["store", "getContext"] },
       { name: "pricing", imports: ["store", "getContext"] },
+      { name: "live-purchase", imports: ["store", "getContext"] },
     ];
 
     blocks.forEach(({ name, imports }) => {
@@ -46,9 +47,29 @@ class FixInteractivityPlugin {
         // Production: fix minified webpack output
         content = content.replace(/\(\(\)=>\{import[^;]+;\s*/, "(()=>{");
         content = importStatement + content;
+        // Drop the `const x = window.wp.interactivity` binding the dependency
+        // extraction inserts, now that the real ES import is back at the top.
+        //
+        // The terminator decides how much to drop. Minified output merges
+        // consecutive declarations, so a view file with its own module-level
+        // constants emits `const e=window.wp.interactivity,t="KEY",...`. Eating
+        // the whole match there would take the `const` keyword with it and
+        // leave `t="KEY"` as a bare assignment — which in strict mode throws
+        // `ReferenceError: t is not defined` at load, killing the block. A
+        // trailing comma therefore keeps `const `, while a `;` (or nothing)
+        // means the binding stood alone and the statement goes entirely.
         content = content.replace(
-          /const\s+\w+\s*=\s*window\.wp\.interactivity[,;]?\s*/g,
-          ["drawer", "tooltip", "popover", "sheet"].includes(name) ? "const " : ""
+          /const\s+\w+\s*=\s*window\.wp\.interactivity(\s*[,;])?\s*/g,
+          (match, terminator) => {
+            if (terminator && terminator.trim() === ",") {
+              return "const ";
+            }
+
+            // Some blocks re-declare below and need the keyword preserved.
+            return ["drawer", "tooltip", "popover", "sheet"].includes(name)
+              ? "const "
+              : "";
+          }
         );
         content = content.replace(/\(0,(\w+)\.store\)/g, "store");
         content = content.replace(/\(0,(\w+)\.getContext\)/g, "getContext");

@@ -63,6 +63,14 @@ Submissions travel over a public REST endpoint guarded by a honeypot and per-IP 
 
 * **Filterable Sections** - Labelled Filter Section children with a dropdown that narrows the page down to one of them.
 
+= Live Purchase (WooCommerce only) =
+
+* **Live Purchase** - A toast pinned to the corner of the page that rotates through recent purchases and auto-dismisses. Only available while WooCommerce is active.
+
+It runs from one of two sources. **Real orders** publishes genuine recent purchases: a shortened buyer name such as "Sarah M.", the product, how long ago, and optionally the city. Read that sentence again before switching it on — it means customer first names, and city if you enable it, become visible to every anonymous visitor. Full names, addresses, order totals, order IDs and email addresses are never included, orders below a threshold you set keep the toast silent, and the feed is served over a rate-limited endpoint whose fields are signed so they cannot be widened from the outside.
+
+**Simulated** invents the purchases instead, drawing products from your own best sellers. No buyer is invented: every notification reads "Someone just purchased ...", with no name and no location. Presenting invented purchases as genuine is restricted under EU consumer law and by the FTC, so treat this as a demo and staging feature and think hard before running it on a live shop.
+
 = Patterns =
 
 473 section patterns ship with the plugin, filed under their own categories in the inserter: about, awards, banner, call to action, careers, case studies, changelog, community, compare, compliance, contact, download, FAQ, footer, hero, incentives, industries, portfolio, posts, pricing, process, services, stats, team, testimonials, text and timeline.
@@ -179,6 +187,7 @@ First public release. Requires the Shadcn theme (or a child of it) to be active.
 * Empty — empty-state placeholder with centered content.
 * Pricing, Pricing Switch and Pricing Price — the Pricing block holds the billing interval, the Switch changes it, and every Price inside follows it. Plans are laid out with ordinary blocks.
 * Filterable Sections — labelled Filter Section children with a dropdown that narrows the page down to one of them.
+* Live Purchase — a corner toast that rotates through recent purchases, shown only when WooCommerce is active. Real orders are served over a rate-limited REST route with the visible fields signed by the site, so the endpoint cannot be talked into returning more than the block was configured to show; names are shortened, location is off by default, and order IDs, totals, emails and addresses are never sent. A simulated source draws products from your best sellers and names no one. Deactivating WooCommerce removes the block, and pages that already use it show it as an unsupported block in the editor until WooCommerce is active again.
 * Form, Input, Textarea, Select and Form Submit Button — submissions are emailed to the site admin (or a per-form recipient) through a public REST endpoint guarded by a honeypot and per-IP rate limiting; nothing is stored. Delivery uses wp_mail(), so a mail/SMTP plugin is recommended. Developers can veto a submission (to add a captcha, for example) with the `shadcn_form_validate` filter.
 
 **Patterns**

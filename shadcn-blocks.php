@@ -50,6 +50,42 @@ function shadcn_blocks_is_theme_active() {
 }
 
 /**
+ * Whether WooCommerce is active.
+ *
+ * Blocks that read shop data are registered only when this is true, so the
+ * check has to be callable before `plugins_loaded` finishes. `class_exists`
+ * is what WooCommerce itself documents for this, and it is already what
+ * inc/FreeShipping.php uses.
+ *
+ * @return bool
+ */
+function shadcn_blocks_woo_active() {
+	return class_exists( 'WooCommerce' );
+}
+
+/**
+ * Tell WooCommerce this plugin is compatible with High-Performance Order
+ * Storage.
+ *
+ * Declared for the plugin as a whole, outside any block gate: WooCommerce
+ * reads these declarations to decide whether HPOS can be enabled at all, and a
+ * plugin that stays silent is listed as incompatible even when it never
+ * touches an order.
+ */
+add_action(
+	'before_woocommerce_init',
+	function () {
+		if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
+			\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility(
+				'custom_order_tables',
+				SHADCN_BLOCKS_FILE,
+				true
+			);
+		}
+	}
+);
+
+/**
  * Display admin notice if Shadcn theme is not active.
  */
 function shadcn_blocks_theme_notice() {
@@ -87,6 +123,8 @@ function shadcn_blocks_init() {
 	require_once SHADCN_BLOCKS_DIR . 'inc/BlockStyles.php';
 	// Form block backend: the public submit REST route + rate limiter.
 	require_once SHADCN_BLOCKS_DIR . 'inc/Form/Caller.php';
+	// Live Purchase backend: the recent-orders feed and its REST route.
+	require_once SHADCN_BLOCKS_DIR . 'inc/LivePurchase/Caller.php';
 	// Shadcn AI: plans pages out of the `shadcn/*` patterns this
 	// plugin registers, so it loads after the pattern loader above.
 	require_once SHADCN_BLOCKS_DIR . 'inc/ShadcnAi/Caller.php';

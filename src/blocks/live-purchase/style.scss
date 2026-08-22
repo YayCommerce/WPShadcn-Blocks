@@ -1,0 +1,194 @@
+/**
+ * Live Purchase Block Styles
+ *
+ * The region is fixed-position and printed in the footer, so it sits outside
+ * whatever container the block was inserted into.
+ *
+ * The toast is hidden with opacity + visibility rather than `display`, because
+ * a display toggle gives the browser nothing to interpolate and kills the
+ * enter/exit transitions outright.
+ */
+
+.wp-block-shadcn-live-purchase__region {
+	position: fixed;
+	inset-block-end: calc(var(--spacing, 0.25rem) * 5);
+	inset-inline-start: calc(var(--spacing, 0.25rem) * 5);
+	z-index: 9999;
+	display: flex;
+	max-width: min(22rem, calc(100vw - 2rem));
+	pointer-events: none;
+
+	&.is-hidden-on-mobile {
+
+		@media (max-width: 781px) {
+			display: none;
+		}
+	}
+}
+
+.wp-block-shadcn-live-purchase__toast {
+	// Never toggled with `display`. Going from `display:none` to `display:flex`
+	// gives the browser no start value to interpolate from, so opacity and
+	// transform transitions are simply skipped and the toast pops. The element
+	// therefore stays laid out and is hidden with opacity + visibility
+	// instead — the region is `position:fixed`, so an always-present toast
+	// costs the page no layout either way.
+
+	// `visibility` is what keeps a faded-out toast from swallowing clicks and
+	// from being read aloud by a screen reader. It is not interpolatable, so
+	// it is switched at the far end of the fade when hiding (delay = the
+	// duration) and immediately when showing.
+
+	// Timing note: the fade-out length is mirrored by EXIT_MS in view.js,
+	// which waits it out before advancing to the next entry. Change one and
+	// change the other, or the text will swap mid-fade.
+	display: flex;
+	align-items: flex-start;
+	gap: calc(var(--spacing, 0.25rem) * 3);
+	width: 100%;
+	padding: calc(var(--spacing, 0.25rem) * 3);
+	border: 1px solid var(--wp--preset--color--border, #e5e5e5);
+	border-radius: var(--radius, 0.625rem);
+	background-color: var(--wp--preset--color--card, #fff);
+	color: var(--wp--preset--color--card-foreground, #0a0a0a);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(0.75rem) scale(0.98);
+	pointer-events: none;
+	transition:
+		opacity 0.3s ease-in,
+		transform 0.3s ease-in,
+		visibility 0s linear 0.3s;
+
+	&.is-visible {
+		opacity: 1;
+		visibility: visible;
+		// Rises into place with a slight overshoot-free ease-out, which is
+		// what makes it read as "something just happened" rather than as a
+		// panel being revealed.
+		transform: translateY(0) scale(1);
+		pointer-events: auto;
+		transition:
+			opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+			transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+			visibility 0s linear 0s;
+	}
+}
+
+.wp-block-shadcn-live-purchase__thumb {
+	display: none;
+	flex: 0 0 auto;
+	width: calc(var(--spacing, 0.25rem) * 10);
+	height: calc(var(--spacing, 0.25rem) * 10);
+	border-radius: calc(var(--radius, 0.625rem) - 2px);
+	object-fit: cover;
+
+	&.is-shown {
+		display: block;
+	}
+}
+
+.wp-block-shadcn-live-purchase__body {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.wp-block-shadcn-live-purchase__line {
+	margin: 0;
+	font-size: 0.875rem;
+	line-height: 1.4;
+}
+
+.wp-block-shadcn-live-purchase__time {
+	margin: calc(var(--spacing, 0.25rem) * 1) 0 0;
+	color: var(--wp--preset--color--muted-foreground, #737373);
+	font-size: 0.75rem;
+	line-height: 1.3;
+
+	// An entry with no usable time leaves this paragraph empty; without this
+	// it would still take a line box and push the toast taller.
+	&:empty {
+		display: none;
+	}
+}
+
+.wp-block-shadcn-live-purchase__dismiss {
+	display: none;
+	flex: 0 0 auto;
+	align-items: center;
+	justify-content: center;
+	width: calc(var(--spacing, 0.25rem) * 5);
+	height: calc(var(--spacing, 0.25rem) * 5);
+	padding: 0;
+	border: 0;
+	border-radius: calc(var(--radius, 0.625rem) - 4px);
+	background: none;
+	color: var(--wp--preset--color--muted-foreground, #737373);
+	cursor: pointer;
+
+	&.is-shown {
+		display: inline-flex;
+	}
+
+	&:hover {
+		color: var(--wp--preset--color--foreground, #0a0a0a);
+	}
+}
+
+/**
+ * Editor preview. The canvas cannot show a fixed-position footer element in
+ * place, so the preview is a plain static card sized like the real toast.
+ */
+.wp-block-shadcn-live-purchase-preview {
+
+	.wp-block-shadcn-live-purchase__toast {
+		// The canvas sample is not driven by the store, so it never gets
+		// `is-visible` and would otherwise inherit the hidden state the real
+		// toast starts in. Forced visible, and static: an editor preview that
+		// slides about while the author types is a distraction.
+		max-width: 22rem;
+		opacity: 1;
+		visibility: visible;
+		transform: none;
+		pointer-events: auto;
+		transition: none;
+	}
+
+	// The canvas stands in for the product image with a plain swatch rather
+	// than loading the shipped placeholder file: the preview only has to show
+	// where the image sits and how much room it takes.
+	.wp-block-shadcn-live-purchase__thumb.is-placeholder {
+		background-color: var(--wp--preset--color--muted, #f5f5f5);
+	}
+}
+
+/**
+ * Explanatory paragraph in the inspector, sitting between a notice and the
+ * controls it describes.
+ */
+.wp-block-shadcn-live-purchase__panel-note {
+	margin-block: 12px;
+	color: var(--wp--preset--color--muted-foreground, #737373);
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.wp-block-shadcn-live-purchase__note {
+	margin: calc(var(--spacing, 0.25rem) * 2) 0 0;
+	color: var(--wp--preset--color--muted-foreground, #737373);
+	font-size: 0.75rem;
+	font-style: italic;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	// Appear and disappear outright, with no slide and no fade. The transform
+	// is reset too — leaving it would park the toast 12px low forever, since
+	// nothing is animating it back.
+	.wp-block-shadcn-live-purchase__toast {
+		transform: none !important;
+		transition: none !important;
+		animation: none !important;
+	}
+}
