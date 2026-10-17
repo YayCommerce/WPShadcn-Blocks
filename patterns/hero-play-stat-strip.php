@@ -7,6 +7,8 @@
  * AI Hint: Split hero with a proof band — a 52/48 row putting a display headline, muted lead and two calls to action, one filled and one outline carrying a play icon, beside a tall rounded muted panel holding a centred preview image, then three equal columns each stacking a large semibold figure above a small muted caption; best for a course, programme or product launch page whose main call is to watch a tour and whose credibility rests on a few round numbers.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|7","left":"var:preset|spacing|8"}}}} -->

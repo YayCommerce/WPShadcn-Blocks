@@ -7,6 +7,8 @@
  * AI Hint: Release notes laid out as a version rail — a left-aligned Changelog heading and muted lead, then a hairline-divided group whose rows each split a sticky 22% rail carrying an outline version badge and a tiny muted date against a 78% column holding the release headline, a muted summary, a checked list of four or five shipped items, a muted panel framing a release screenshot and a trailing ghost arrow link; best for a product changelog page where readers scan by version number rather than by date or category.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"640px","justifyContent":"left"}} -->

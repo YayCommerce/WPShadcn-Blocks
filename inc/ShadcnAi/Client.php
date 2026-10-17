@@ -99,7 +99,7 @@ class Client {
 		if ( is_wp_error( $response ) ) {
 			return new \WP_Error(
 				'shadcn_ai_upstream_unreachable',
-				__( 'The AI service could not be reached. Please try again.', 'shadcn-blocks' ),
+				__( 'The AI service could not be reached. Please try again.', 'yaycommerce-blocks-for-shadcn-ui' ),
 				array( 'status' => 502 )
 			);
 		}
@@ -111,12 +111,12 @@ class Client {
 			// relay it rather than translating it into something vaguer.
 			$message = ( is_array( $body ) && isset( $body['message'] ) )
 				? (string) $body['message']
-				: __( 'The AI service refused this site\'s registration.', 'shadcn-blocks' );
+				: __( 'The AI service refused this site\'s registration.', 'yaycommerce-blocks-for-shadcn-ui' );
 			return new \WP_Error( 'shadcn_ai_registration_refused', $message, array( 'status' => 400 ) );
 		}
 
 		self::store_token( $token );
-		error_log( 'shadcn-blocks: registered with ' . self::server_url() );
+		error_log( 'yaycommerce-blocks-for-shadcn-ui: registered with ' . self::server_url() );
 		return $token;
 	}
 }

@@ -7,6 +7,8 @@
  * AI Hint: Stacked blog list — a centred badge, headline and standfirst above a single editorial column of chrome-free entries laid one beneath the other, each opening with a wide rounded image, then a category badge with author and date, a large linked title, a generous muted excerpt and a link-styled read-more row, with an outline archive button centred underneath; best as a long-form journal index or an essay archive page where each entry needs room to breathe rather than a card grid.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","posts"],"patternName":"shadcn/blog-stacked-centered-cards","name":"Blog Stacked Centered Cards"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

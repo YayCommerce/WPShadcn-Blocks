@@ -7,6 +7,8 @@
  * AI Hint: FAQ with a topic strip — a small outlined badge, an oversized heading and a two-line muted lead fill the left column, while the right column runs three evenly spaced topic labels across a hairline, the first marked current with a thicker dark rule, and drops a five-row collapsed accordion beneath them; reach for it when the questions belong to distinct areas of the product and the first area deserves to be the one on show.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","right":"var:preset|spacing|4","bottom":"var:preset|spacing|10","left":"var:preset|spacing|4"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--4)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

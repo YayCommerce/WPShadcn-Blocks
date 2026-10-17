@@ -7,6 +7,8 @@
  * AI Hint: Hero and feature grid in one section: a 720px centred column holding a secondary pill badge, a fluid oversized h1 and a muted two-line lead, followed by a wide three-column grid of outlined cards that each open with a portrait three-by-four image flush to the card's top corners and close with a padded centred title over a two-line muted description; reach for it on a product landing page that has to introduce the product and name its three pillars before the fold ends.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","right":"var:preset|spacing|4","bottom":"var:preset|spacing|10","left":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"720px"}} -->

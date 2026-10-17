@@ -7,6 +7,8 @@
  * AI Hint: Site footer — a dark full-width panel stacking four tiers: a rounded hairline-framed banner with a centred headline, supporting line and one primary trial button; a two-column newsletter row pairing a short heading and blurb with a subscribe button; a four-column grid of headed link lists; and a bottom bar with a copyright line opposite plain social icons; reach for it when the last screen of a SaaS marketing site has to sell the free trial and still carry the full site map.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"className":"is-style-shadcn-on-dark","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|4","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|8"}},"backgroundColor":"foreground","textColor":"background","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull is-style-shadcn-on-dark has-background-color has-foreground-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"align":"wide","style":{"border":{"color":"var:preset|color|border","width":"1px","style":"solid","radius":"16px"},"spacing":{"padding":{"top":"var:preset|spacing|8","right":"var:preset|spacing|6","bottom":"var:preset|spacing|8","left":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Single-plan pricing card centred on a plain background: a short heading and supporting line, then one narrow bordered card holding the plan name, an oversized price with its billing note set beneath, three hairline-divided feature groups that each carry an uppercase label above a short check list, and a full-width call-to-action at the foot; reach for it when one plan bundles enough to need its features sorted into named groups rather than run together as a flat list.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:heading {"textAlign":"center","style":{"typography":{"fontWeight":"600","lineHeight":"1.15"}},"fontSize":"fluid-4-xl"} -->

@@ -7,6 +7,8 @@
  * AI Hint: Heading-and-figures band — a two-column header putting a heading and one explanatory line opposite a right-aligned text link, above a row of four counting figures each with a bold caption and a line of qualification; reach for it when a section needs to state its numbers and still send the reader somewhere for the full report.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","stats"],"patternName":"shadcn/stats-grid-heading-link","name":"Stats Grid Heading Link"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|7"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"verticalAlignment":"bottom","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|4","left":"var:preset|spacing|8"}}}} -->

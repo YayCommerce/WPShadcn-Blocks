@@ -11,7 +11,7 @@ const TEMPLATE = [
 	[
 		'core/paragraph',
 		{
-			placeholder: __( 'Add card content here...', 'shadcn-blocks' ),
+			placeholder: __( 'Add card content here...', 'yaycommerce-blocks-for-shadcn-ui' ),
 		},
 	],
 ];

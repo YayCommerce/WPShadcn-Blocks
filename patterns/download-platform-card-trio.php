@@ -7,6 +7,8 @@
  * AI Hint: Tinted download band whose three bordered cards each stack a round icon chip, a small muted category label, a bold platform name, a two-line muted note and a download button pinned to the card foot, with the first card tinted so it reads as the recommended build; reach for it when one app ships to desktop and mobile and the reader should be nudged towards the platform you expect them to be on.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","right":"var:preset|spacing|4","bottom":"var:preset|spacing|10","left":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|8"}},"backgroundColor":"muted","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-muted-background-color has-background" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"640px"}} -->

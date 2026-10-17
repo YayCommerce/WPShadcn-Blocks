@@ -21,7 +21,7 @@ import { __ } from "@wordpress/i18n";
  * Default panel content.
  */
 const TEMPLATE = [
-  ["core/paragraph", { placeholder: __("Add content…", "shadcn-blocks") }],
+  ["core/paragraph", { placeholder: __("Add content…", "yaycommerce-blocks-for-shadcn-ui") }],
 ];
 
 /**
@@ -78,7 +78,7 @@ export default function Edit({ attributes, setAttributes, context }) {
     <>
       <InspectorControls>
         <ToolsPanel
-          label={__("Settings", "shadcn-blocks")}
+          label={__("Settings", "yaycommerce-blocks-for-shadcn-ui")}
           resetAll={() =>
             setAttributes({
               disabled: false,
@@ -89,7 +89,7 @@ export default function Edit({ attributes, setAttributes, context }) {
           }
         >
           <ToolsPanelItem
-            label={__("Icon", "shadcn-blocks")}
+            label={__("Icon", "yaycommerce-blocks-for-shadcn-ui")}
             isShownByDefault
             hasValue={() => !!iconUrl}
             onDeselect={() =>
@@ -124,8 +124,8 @@ export default function Edit({ attributes, setAttributes, context }) {
                       onClick={open}
                     >
                       {iconUrl
-                        ? __("Replace icon", "shadcn-blocks")
-                        : __("Select icon", "shadcn-blocks")}
+                        ? __("Replace icon", "yaycommerce-blocks-for-shadcn-ui")
+                        : __("Select icon", "yaycommerce-blocks-for-shadcn-ui")}
                     </Button>
                     {iconUrl && (
                       <Button
@@ -140,7 +140,7 @@ export default function Edit({ attributes, setAttributes, context }) {
                           })
                         }
                       >
-                        {__("Remove", "shadcn-blocks")}
+                        {__("Remove", "yaycommerce-blocks-for-shadcn-ui")}
                       </Button>
                     )}
                   </div>
@@ -150,17 +150,17 @@ export default function Edit({ attributes, setAttributes, context }) {
           </ToolsPanelItem>
 
           <ToolsPanelItem
-            label={__("Disabled", "shadcn-blocks")}
+            label={__("Disabled", "yaycommerce-blocks-for-shadcn-ui")}
             isShownByDefault
             hasValue={() => !!disabled}
             onDeselect={() => setAttributes({ disabled: false })}
           >
             <ToggleControl
               __nextHasNoMarginBottom
-              label={__("Disabled", "shadcn-blocks")}
+              label={__("Disabled", "yaycommerce-blocks-for-shadcn-ui")}
               help={__(
                 "Prevent this item from being opened or closed.",
-                "shadcn-blocks"
+                "yaycommerce-blocks-for-shadcn-ui"
               )}
               checked={!!disabled}
               onChange={(value) => setAttributes({ disabled: value })}
@@ -184,7 +184,7 @@ export default function Edit({ attributes, setAttributes, context }) {
                 className="wp-block-shadcn-accordion-item__title"
                 value={title || ""}
                 onChange={(value) => setAttributes({ title: value })}
-                placeholder={__("Accordion title", "shadcn-blocks")}
+                placeholder={__("Accordion title", "yaycommerce-blocks-for-shadcn-ui")}
                 allowedFormats={[]}
               />
             </span>
@@ -193,7 +193,7 @@ export default function Edit({ attributes, setAttributes, context }) {
               className="wp-block-shadcn-accordion-item__summary"
               value={summary || ""}
               onChange={(value) => setAttributes({ summary: value })}
-              placeholder={__("Summary (optional)", "shadcn-blocks")}
+              placeholder={__("Summary (optional)", "yaycommerce-blocks-for-shadcn-ui")}
               allowedFormats={["core/bold", "core/italic"]}
             />
             <Chevron />

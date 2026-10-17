@@ -7,6 +7,8 @@
  * AI Hint: Enterprise-flavoured about layout for a payments company — uppercase eyebrow above a large headline and lead paragraph, a wide carousel of bordered stat cards showing four figures at a time, a left-aligned mission block, a queue of tall portrait photographs that advance on their own, a right-positioned platform note, and a closing two-column founders row pairing a photograph with the origin story; best for a company or about page that needs several distinct bands rather than one block of text.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","about"],"patternName":"shadcn/about-fintech-stats-carousel","name":"About Fintech Stats Carousel"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"760px","justifyContent":"left"}} -->

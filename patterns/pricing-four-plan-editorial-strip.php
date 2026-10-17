@@ -7,6 +7,8 @@
  * AI Hint: Four-tier pricing set as a single newspaper-style rate table instead of four separate cards: a left-aligned H2, a supporting line and a segmented Monthly/Yearly toggle sit above one bordered container split by vertical hairlines into four equal columns, each holding a plan name, a large price that follows the toggle, a rule, a short "What you get" checklist and a full-width button pinned to the bottom; the columns become stacked bands on narrow screens; reach for it when four closely related tiers should read as one comparable price list rather than as competing cards.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:shadcn/pricing {"align":"","intervals":[{"key":"monthly","label":"Monthly"},{"key":"yearly","label":"Yearly"}],"defaultInterval":"monthly","style":{"spacing":{"blockGap":"var:preset|spacing|6"}},"layout":{"type":"default"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Compact add-on pricing kept inside a single bordered, rounded container: a heading and short paragraph on the left with a decorative mark on the right, then three equal accent-filled cards each naming an optional extra with a one-line description and, pinned to the bottom of the card, either a monthly price or a "talk to sales" label; best for a small, fixed set of extras that should read as one grouped block rather than as separate floating plan cards.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","pricing"],"patternName":"shadcn/pricing-addon-bordered-trio","name":"Pricing Addon Bordered Trio"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:shadcn/pricing {"align":"","intervals":[{"key":"monthly","label":"Monthly"}],"layout":{"type":"default"}} -->

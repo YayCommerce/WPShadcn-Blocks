@@ -20,9 +20,9 @@ import {
  * Available avatar sizes.
  */
 const SIZE_OPTIONS = [
-  { value: "sm", label: __("Small", "shadcn-blocks") },
-  { value: "md", label: __("Medium", "shadcn-blocks") },
-  { value: "lg", label: __("Large", "shadcn-blocks") },
+  { value: "sm", label: __("Small", "yaycommerce-blocks-for-shadcn-ui") },
+  { value: "md", label: __("Medium", "yaycommerce-blocks-for-shadcn-ui") },
+  { value: "lg", label: __("Large", "yaycommerce-blocks-for-shadcn-ui") },
 ];
 
 /**
@@ -55,13 +55,13 @@ export default function Edit(props) {
     <>
       <InspectorControls>
         <PanelBody
-          title={__("Avatar Settings", "shadcn-blocks")}
+          title={__("Avatar Settings", "yaycommerce-blocks-for-shadcn-ui")}
           initialOpen
         >
           <ToggleGroupControl
             __next40pxDefaultSize
             isBlock
-            label={__("Size", "shadcn-blocks")}
+            label={__("Size", "yaycommerce-blocks-for-shadcn-ui")}
             value={size}
             onChange={(value) => setAttributes({ size: value })}
           >
@@ -74,10 +74,10 @@ export default function Edit(props) {
             ))}
           </ToggleGroupControl>
           <TextControl
-            label={__("Fallback initials", "shadcn-blocks")}
+            label={__("Fallback initials", "yaycommerce-blocks-for-shadcn-ui")}
             help={__(
               "Shown when no image is set or it fails to load.",
-              "shadcn-blocks"
+              "yaycommerce-blocks-for-shadcn-ui"
             )}
             value={fallback}
             onChange={(value) => setAttributes({ fallback: value })}
@@ -91,8 +91,8 @@ export default function Edit(props) {
                 <div className="wp-block-shadcn-avatar__controls">
                   <Button variant="secondary" onClick={open}>
                     {mediaUrl
-                      ? __("Replace image", "shadcn-blocks")
-                      : __("Select image", "shadcn-blocks")}
+                      ? __("Replace image", "yaycommerce-blocks-for-shadcn-ui")
+                      : __("Select image", "yaycommerce-blocks-for-shadcn-ui")}
                   </Button>
                   {mediaUrl && (
                     <Button
@@ -100,7 +100,7 @@ export default function Edit(props) {
                       isDestructive
                       onClick={onRemoveMedia}
                     >
-                      {__("Remove", "shadcn-blocks")}
+                      {__("Remove", "yaycommerce-blocks-for-shadcn-ui")}
                     </Button>
                   )}
                 </div>

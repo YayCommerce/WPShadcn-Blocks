@@ -147,11 +147,11 @@ export default function Edit(props) {
   return (
     <>
       <InspectorControls>
-        <PanelBody title={__("Tooltip Settings", "shadcn-blocks")}>
+        <PanelBody title={__("Tooltip Settings", "yaycommerce-blocks-for-shadcn-ui")}>
           <ToggleGroupControl
             __next40pxDefaultSize
             isBlock
-            label={__("Action", "shadcn-blocks")}
+            label={__("Action", "yaycommerce-blocks-for-shadcn-ui")}
             value={action ?? "hover"}
             onChange={(value) => {
               setAttributes({ action: value });
@@ -159,11 +159,11 @@ export default function Edit(props) {
             }}
           >
             <ToggleGroupControlOption
-              label={__("Hover", "shadcn-blocks")}
+              label={__("Hover", "yaycommerce-blocks-for-shadcn-ui")}
               value="hover"
             />
             <ToggleGroupControlOption
-              label={__("Click", "shadcn-blocks")}
+              label={__("Click", "yaycommerce-blocks-for-shadcn-ui")}
               value="click"
             />
           </ToggleGroupControl>

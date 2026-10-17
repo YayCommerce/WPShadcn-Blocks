@@ -7,6 +7,8 @@
  * AI Hint: Compact reassurance row — four equal columns across the wide width, each a circled icon beside a two-line stack of a bold promise and a small muted qualifier, with no section heading of its own; reach for it directly under a hero or above a footer when support, returns, delivery and warranty terms need stating without taking a full section of vertical space.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","incentives"],"patternName":"shadcn/incentives-icon-row-four-up","name":"Incentives Icon Row Four Up"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|7","right":"var:preset|spacing|5","bottom":"var:preset|spacing|7","left":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--7);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--7);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|6"}}}} -->

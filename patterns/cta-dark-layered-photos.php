@@ -7,6 +7,8 @@
  * AI Hint: Dark enterprise split call to action — a near-black full-bleed band holding a serif headline, a short lead, eight ticked benefits in two columns and one pale button on the left, with three photographs on the right offset sideways and pulled up over one another into a layered collage; reach for it when the closing pitch is aimed at procurement and the page needs one heavy, credible break.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","className":"is-style-shadcn-on-dark","style":{"color":{"text":"#fafafa","background":"#0a0a0a"},"spacing":{"padding":{"top":"var:preset|spacing|10","right":"var:preset|spacing|5","bottom":"var:preset|spacing|10","left":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull is-style-shadcn-on-dark has-text-color has-background" style="color:#fafafa;background-color:#0a0a0a;padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

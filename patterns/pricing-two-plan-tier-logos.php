@@ -7,6 +7,8 @@
  * AI Hint: Editorial two-tier pricing pair held inside a narrow centred column so it never spans the full marketing width — each card stacks a square tier logo, plan name, one supporting line, a flat monthly figure with a short billing caption, a full-width button, then a hairline and an uppercase Features label over small check rows, with the recommended card wearing a solid ribbon across its top edge; reach for it when two tiers are sold at one fixed interval and the section should read quiet and typographic rather than wide and promotional.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained","contentSize":"820px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"constrained"}} -->

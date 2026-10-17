@@ -7,6 +7,8 @@
  * AI Hint: Dashboard-flavoured services layout — a narrow left column holds an eyebrow, an oversized two-line heading, a short intro, a hairline rule, two plus-marked highlight lines and a primary button, while the wider right column stacks four soft-filled rows that each pair a small cropped thumbnail with a service name, a category label and a four-dot progress indicator that fills further down the list; reach for it on an agency or studio services page that needs a compact, scannable menu of what is on offer.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|9"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->

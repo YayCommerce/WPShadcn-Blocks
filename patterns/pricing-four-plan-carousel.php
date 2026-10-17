@@ -7,6 +7,8 @@
  * AI Hint: Four-tier pricing carousel — a centred H2, a Monthly/Yearly segmented control, then a carousel of bordered cards, four abreast on desktop and swipeable below, each carrying the plan name, an oversized interval-aware price, a short cadence line, a two-line description, a full-width call to action, a hairline rule under a small Features label and a check list, with the recommended tier marked by a heavier border and a filled button; reach for it when the plans must stay readable on a phone without collapsing into a very long column.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"layout":{"type":"constrained","contentSize":"680px"}} -->

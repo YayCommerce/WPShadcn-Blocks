@@ -7,6 +7,8 @@
  * AI Hint: Classic SaaS tier comparison: a centred heading and lead above one bordered, rounded container holding four equal columns divided by vertical hairlines, each column stacking the plan name, one supporting line, an oversized price with a superscript currency mark and its period beneath, and a full-width button, then a bottom band opened by a hairline and an uppercase "everything in the previous tier, plus" label over a check list that is pinned to the foot so the rules line up across all four; the recommended column takes a muted background and a solid button while the rest stay on the card surface with outline buttons. Reach for it when the job is comparing four tiers feature by feature rather than selling one of them.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"fontSize":"fluid-5-xl"} -->

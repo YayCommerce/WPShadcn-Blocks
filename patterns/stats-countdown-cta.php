@@ -11,6 +11,8 @@
  * was written.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 $shadcn_countdown_target = ( new DateTimeImmutable( '+21 days', wp_timezone() ) )->format( 'Y-m-d\TH:i:s' );
 
 ?>

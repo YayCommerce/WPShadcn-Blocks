@@ -22,8 +22,8 @@ import { __ } from "@wordpress/i18n";
  * shows the same pair an author gets on insertion.
  */
 const PREVIEW_INTERVALS = [
-  { key: "monthly", label: __("Monthly", "shadcn-blocks") },
-  { key: "yearly", label: __("Yearly", "shadcn-blocks") },
+  { key: "monthly", label: __("Monthly", "yaycommerce-blocks-for-shadcn-ui") },
+  { key: "yearly", label: __("Yearly", "yaycommerce-blocks-for-shadcn-ui") },
 ];
 
 /**
@@ -66,12 +66,12 @@ export default function Edit({ attributes, setAttributes, context }) {
   return (
     <>
       <InspectorControls>
-        <PanelBody title={__("Switch", "shadcn-blocks")}>
+        <PanelBody title={__("Switch", "yaycommerce-blocks-for-shadcn-ui")}>
           {intervals.length < 2 && (
             <Notice status="warning" isDismissible={false}>
               {__(
                 "Add at least two billing intervals on the Pricing block for this to render.",
-                "shadcn-blocks"
+                "yaycommerce-blocks-for-shadcn-ui"
               )}
             </Notice>
           )}
@@ -80,12 +80,12 @@ export default function Edit({ attributes, setAttributes, context }) {
             __next40pxDefaultSize
             __nextHasNoMarginBottom
             isBlock
-            label={__("Style", "shadcn-blocks")}
+            label={__("Style", "yaycommerce-blocks-for-shadcn-ui")}
             help={
               "switch" === variant && 2 !== intervals.length
                 ? __(
                     "Shown as a segmented control because there are not exactly two intervals.",
-                    "shadcn-blocks"
+                    "yaycommerce-blocks-for-shadcn-ui"
                   )
                 : undefined
             }
@@ -93,11 +93,11 @@ export default function Edit({ attributes, setAttributes, context }) {
             onChange={(value) => setAttributes({ variant: value })}
           >
             <ToggleGroupControlOption
-              label={__("Toggle", "shadcn-blocks")}
+              label={__("Toggle", "yaycommerce-blocks-for-shadcn-ui")}
               value="switch"
             />
             <ToggleGroupControlOption
-              label={__("Segmented", "shadcn-blocks")}
+              label={__("Segmented", "yaycommerce-blocks-for-shadcn-ui")}
               value="segmented"
             />
           </ToggleGroupControl>
@@ -106,20 +106,20 @@ export default function Edit({ attributes, setAttributes, context }) {
             __next40pxDefaultSize
             __nextHasNoMarginBottom
             isBlock
-            label={__("Alignment", "shadcn-blocks")}
+            label={__("Alignment", "yaycommerce-blocks-for-shadcn-ui")}
             value={justification || "center"}
             onChange={(value) => setAttributes({ justification: value })}
           >
             <ToggleGroupControlOption
-              label={__("Left", "shadcn-blocks")}
+              label={__("Left", "yaycommerce-blocks-for-shadcn-ui")}
               value="left"
             />
             <ToggleGroupControlOption
-              label={__("Center", "shadcn-blocks")}
+              label={__("Center", "yaycommerce-blocks-for-shadcn-ui")}
               value="center"
             />
             <ToggleGroupControlOption
-              label={__("Right", "shadcn-blocks")}
+              label={__("Right", "yaycommerce-blocks-for-shadcn-ui")}
               value="right"
             />
           </ToggleGroupControl>

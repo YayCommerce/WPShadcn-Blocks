@@ -29,7 +29,7 @@ Source TSX (shadcnblocks.com or elsewhere) is **layout reference only**. The plu
 - Slug must NOT contain `header-1`, `header-2`, or `footer-` substrings (PromptBuilder excludes those as template-part territory).
 - Categories: always `shadcn`; add extra categories only if the theme registers them.
 - AI Hint: one sentence — visual arrangement + best use, matching the voice of hints in `themes/shadcn/patterns/*.php`.
-- Translatable copy may use `esc_html__( '...', 'shadcn-blocks' )`.
+- Translatable copy may use `esc_html__( '...', 'yaycommerce-blocks-for-shadcn-ui' )`.
 
 ## Class policy (audited 2026-07-14)
 

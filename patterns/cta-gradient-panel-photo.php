@@ -7,6 +7,8 @@
  * AI Hint: Gradient-panel split call to action — the left panel is washed with a diagonal gradient built from the theme's own muted, accent and background tokens so it flips with dark mode, carrying an uppercase eyebrow, a fluid headline, a short lead and a primary button beside an outline button, while a square-cropped photograph fills the right panel flush to it; reach for it when a closing invitation needs a little atmosphere without going fully dark.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->

@@ -124,8 +124,8 @@ const featureColumn = (features, divider) => [
  * @return {Array} Price entries.
  */
 const defaultPrices = (monthly, yearly) => [
-  { key: "monthly", amount: monthly, period: __("Per month", "shadcn-blocks") },
-  { key: "yearly", amount: yearly, period: __("Per year", "shadcn-blocks") },
+  { key: "monthly", amount: monthly, period: __("Per month", "yaycommerce-blocks-for-shadcn-ui") },
+  { key: "yearly", amount: yearly, period: __("Per year", "yaycommerce-blocks-for-shadcn-ui") },
 ];
 
 /**
@@ -165,35 +165,35 @@ const TEMPLATE = [
         { style: { border: { bottom: HAIRLINE }, spacing: { blockGap: "0" } } },
         [
           tier(
-            __("Standard Plan", "shadcn-blocks"),
+            __("Standard Plan", "yaycommerce-blocks-for-shadcn-ui"),
             __(
               "For growing teams that need more power. Start with a 30-day free trial.",
-              "shadcn-blocks"
+              "yaycommerce-blocks-for-shadcn-ui"
             ),
             defaultPrices("20", "200"),
-            __("Get Started", "shadcn-blocks"),
+            __("Get Started", "yaycommerce-blocks-for-shadcn-ui"),
             true,
             true
           ),
           tier(
-            __("Premium Plan", "shadcn-blocks"),
+            __("Premium Plan", "yaycommerce-blocks-for-shadcn-ui"),
             __(
               "For large organizations with advanced needs. Everything in Standard, and more.",
-              "shadcn-blocks"
+              "yaycommerce-blocks-for-shadcn-ui"
             ),
             defaultPrices("80", "800"),
-            __("Buy Now", "shadcn-blocks"),
+            __("Buy Now", "yaycommerce-blocks-for-shadcn-ui"),
             false,
             true
           ),
           tier(
-            __("Enterprise", "shadcn-blocks"),
+            __("Enterprise", "yaycommerce-blocks-for-shadcn-ui"),
             __(
               "For organizations that need governance, security reviews and dedicated support.",
-              "shadcn-blocks"
+              "yaycommerce-blocks-for-shadcn-ui"
             ),
             defaultPrices("199", "1990"),
-            __("Contact sales", "shadcn-blocks"),
+            __("Contact sales", "yaycommerce-blocks-for-shadcn-ui"),
             false,
             false
           ),
@@ -207,33 +207,33 @@ const TEMPLATE = [
         [
           featureColumn(
             [
-              __("Unlimited components", "shadcn-blocks"),
-              __("Priority support", "shadcn-blocks"),
-              __("Daily updates", "shadcn-blocks"),
-              __("10GB storage", "shadcn-blocks"),
-              __("Advanced analytics", "shadcn-blocks"),
+              __("Unlimited components", "yaycommerce-blocks-for-shadcn-ui"),
+              __("Priority support", "yaycommerce-blocks-for-shadcn-ui"),
+              __("Daily updates", "yaycommerce-blocks-for-shadcn-ui"),
+              __("10GB storage", "yaycommerce-blocks-for-shadcn-ui"),
+              __("Advanced analytics", "yaycommerce-blocks-for-shadcn-ui"),
             ],
             true
           ),
           featureColumn(
             [
-              __("Unlimited components", "shadcn-blocks"),
-              __("Dedicated support", "shadcn-blocks"),
-              __("Real-time updates", "shadcn-blocks"),
-              __("Unlimited storage", "shadcn-blocks"),
-              __("Custom integrations", "shadcn-blocks"),
+              __("Unlimited components", "yaycommerce-blocks-for-shadcn-ui"),
+              __("Dedicated support", "yaycommerce-blocks-for-shadcn-ui"),
+              __("Real-time updates", "yaycommerce-blocks-for-shadcn-ui"),
+              __("Unlimited storage", "yaycommerce-blocks-for-shadcn-ui"),
+              __("Custom integrations", "yaycommerce-blocks-for-shadcn-ui"),
             ],
             true
           ),
           featureColumn(
             [
-              __("SSO and audit logs", "shadcn-blocks"),
-              __("Data residency options", "shadcn-blocks"),
-              __("Dedicated success manager", "shadcn-blocks"),
-              __("Custom reporting and SLAs", "shadcn-blocks"),
-              __("Workflow automation at scale", "shadcn-blocks"),
-              __("Executive business reviews", "shadcn-blocks"),
-              __("Early access to beta features", "shadcn-blocks"),
+              __("SSO and audit logs", "yaycommerce-blocks-for-shadcn-ui"),
+              __("Data residency options", "yaycommerce-blocks-for-shadcn-ui"),
+              __("Dedicated success manager", "yaycommerce-blocks-for-shadcn-ui"),
+              __("Custom reporting and SLAs", "yaycommerce-blocks-for-shadcn-ui"),
+              __("Workflow automation at scale", "yaycommerce-blocks-for-shadcn-ui"),
+              __("Executive business reviews", "yaycommerce-blocks-for-shadcn-ui"),
+              __("Early access to beta features", "yaycommerce-blocks-for-shadcn-ui"),
             ],
             false
           ),
@@ -261,7 +261,7 @@ const TEMPLATE = [
                 "core/heading",
                 {
                   level: 3,
-                  content: __("Basic Plan", "shadcn-blocks"),
+                  content: __("Basic Plan", "yaycommerce-blocks-for-shadcn-ui"),
                   fontSize: "2-xl",
                 },
               ],
@@ -270,7 +270,7 @@ const TEMPLATE = [
                 {
                   content: __(
                     "Ideal for individuals getting started. No credit card required.",
-                    "shadcn-blocks"
+                    "yaycommerce-blocks-for-shadcn-ui"
                   ),
                   textColor: "muted-foreground",
                 },
@@ -296,7 +296,7 @@ const TEMPLATE = [
                     "core/button",
                     {
                       className: "is-style-outline",
-                      text: __("Start for Free", "shadcn-blocks"),
+                      text: __("Start for Free", "yaycommerce-blocks-for-shadcn-ui"),
                     },
                   ],
                 ],
@@ -361,7 +361,7 @@ export default function Edit({ attributes, setAttributes }) {
   const addInterval = () => {
     const label = sprintf(
       /* translators: %d: position of the new billing interval. */
-      __("Interval %d", "shadcn-blocks"),
+      __("Interval %d", "yaycommerce-blocks-for-shadcn-ui"),
       list.length + 1
     );
     setAttributes({
@@ -382,7 +382,7 @@ export default function Edit({ attributes, setAttributes }) {
               key={interval.key}
               label={sprintf(
                 /* translators: %s: billing interval label. */
-                __("Preview %s prices", "shadcn-blocks"),
+                __("Preview %s prices", "yaycommerce-blocks-for-shadcn-ui"),
                 interval.label || interval.key
               )}
               isPressed={interval.key === active}
@@ -395,7 +395,7 @@ export default function Edit({ attributes, setAttributes }) {
       </BlockControls>
 
       <InspectorControls>
-        <PanelBody title={__("Billing intervals", "shadcn-blocks")}>
+        <PanelBody title={__("Billing intervals", "yaycommerce-blocks-for-shadcn-ui")}>
           {list.map((interval, index) => (
             <div
               key={index}
@@ -406,7 +406,7 @@ export default function Edit({ attributes, setAttributes }) {
                 __nextHasNoMarginBottom
                 label={sprintf(
                   /* translators: %d: position in the interval list. */
-                  __("Interval %d", "shadcn-blocks"),
+                  __("Interval %d", "yaycommerce-blocks-for-shadcn-ui"),
                   index + 1
                 )}
                 value={interval.label || ""}
@@ -419,18 +419,18 @@ export default function Edit({ attributes, setAttributes }) {
                 disabled={list.length < 2}
                 onClick={() => removeInterval(index)}
               >
-                {__("Remove", "shadcn-blocks")}
+                {__("Remove", "yaycommerce-blocks-for-shadcn-ui")}
               </Button>
             </div>
           ))}
 
           <Button variant="secondary" onClick={addInterval}>
-            {__("Add interval", "shadcn-blocks")}
+            {__("Add interval", "yaycommerce-blocks-for-shadcn-ui")}
           </Button>
         </PanelBody>
 
-        <PanelBody title={__("Settings", "shadcn-blocks")}>
-          <p>{__("Shown first to visitors", "shadcn-blocks")}</p>
+        <PanelBody title={__("Settings", "yaycommerce-blocks-for-shadcn-ui")}>
+          <p>{__("Shown first to visitors", "yaycommerce-blocks-for-shadcn-ui")}</p>
           {list.map((interval) => (
             <Button
               key={interval.key}

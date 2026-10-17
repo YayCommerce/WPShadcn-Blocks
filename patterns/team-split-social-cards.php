@@ -7,6 +7,8 @@
  * AI Hint: Split team cards — a centred users badge, headline and intro sit above a three-column grid of bordered cards, each divided left to right with the name, role and a row of social buttons on one side and a square rounded portrait on the other; reach for it when a roster should read as contact cards rather than a wall of avatars.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"720px"}} -->

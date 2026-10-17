@@ -11,7 +11,7 @@ const TEMPLATE = [
   [
     "core/button",
     {
-      text: __("Hover", "shadcn-blocks"),
+      text: __("Hover", "yaycommerce-blocks-for-shadcn-ui"),
       className: "is-style-outline",
       style: {
         typography: {

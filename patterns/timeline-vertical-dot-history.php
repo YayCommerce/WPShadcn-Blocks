@@ -7,6 +7,8 @@
  * AI Hint: Chronological dot timeline — a left-aligned eyebrow badge, heading and intro above a single narrow column of entries joined by a continuous hairline rail, where each entry opens with a filled foreground dot beside an uppercase date, then a title, a paragraph of prose and on two of them a three-item bulleted list of what shipped; reach for it when a company history, funding story or changelog should read as a dated log from newest to oldest without cards, images or interaction.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","timeline"],"patternName":"shadcn/timeline-vertical-dot-history","name":"Timeline Vertical Dot History"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"metadata":{"name":"Header"},"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"720px","justifyContent":"left"}} -->

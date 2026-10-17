@@ -7,6 +7,8 @@
  * AI Hint: Two stacked contact blocks — an oversized centred headline over a filled and an outline button with a small reassurance line, then a two-by-two grid of borderless channels that each pair a line icon with a bold label, a two-line muted note and a bold text link; below it a second centred heading introduces five bordered office cards laid three to a row, each opening with a small colour swatch beside a city name and closing with a muted street address; reach for it when a page must route four kinds of enquiry and still show where the company physically sits.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|10"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->

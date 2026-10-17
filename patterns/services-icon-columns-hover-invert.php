@@ -7,6 +7,8 @@
  * AI Hint: Airy four-up service columns — a centred heading and standfirst over four equal-height centred stacks, each led by a circular muted icon disc and followed by a bold service name, two lines of explanation and three small capability labels, with a muted background sliding up behind a column on hover or keyboard focus; reach for it when a company wants its disciplines listed with typography and whitespace rather than cards, and every word must stay readable without interacting.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","services"],"patternName":"shadcn/services-icon-columns-hover-invert","name":"Services Icon Columns Hover Invert"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"metadata":{"name":"Header"},"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

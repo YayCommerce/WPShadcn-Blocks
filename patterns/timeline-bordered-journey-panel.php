@@ -7,6 +7,8 @@
  * AI Hint: Single bordered panel timeline — a panel header pairing a title with a call-to-action button, then three side-by-side stage cells, each opening on a hairline rail segment with a split index-and-name pill, a stage title, a short description, a progress bar and a duration line; reach for it when a process needs to be readable at a glance in one framed block rather than scrolled through.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","timeline"],"patternName":"shadcn/timeline-bordered-journey-panel","name":"Timeline Bordered Journey Panel"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|7"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"680px"}} -->

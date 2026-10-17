@@ -7,6 +7,8 @@
  * AI Hint: Site footer — a wide brand block on the left carrying a wordmark above a single sentence of positioning copy, four narrower columns of headed text links filling the rest of the row, then a hairline and a final bar with the copyright on one side and terms and privacy links on the other; the default choice when a site needs a plain, dense sitemap footer with no calls to action.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","footer"],"patternName":"shadcn/brand-columns-legal-footer","name":"Brand Columns Legal Footer"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4","right":"var:preset|spacing|4"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|8"}},"layout":{"type":"default"}} -->

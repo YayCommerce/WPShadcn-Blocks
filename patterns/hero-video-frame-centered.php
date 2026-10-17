@@ -7,6 +7,8 @@
  * AI Hint: Video-led launch hero — a narrow centred column stacks a large h1, a two-sentence muted lead and one filled call to action, followed by a wide hairline-bordered rounded panel that centres a product still above a pill play button; reach for it when a short recorded walkthrough sells the product better than a screenshot and the page should offer exactly one thing to do.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|9"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained","contentSize":"720px"}} -->

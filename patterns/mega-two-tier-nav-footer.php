@@ -7,6 +7,8 @@
  * AI Hint: Site footer — a dark full-width panel split one third to two thirds: the narrow side stacks a small logo, plain social icons and a copyright line, while the wide side holds a four-column grid of headed link lists and, beneath it, a rounded hairline panel carrying a second tier of guides, tools and plan links; reach for it when a large product site needs its whole site map in the footer without the two tiers reading as one flat wall of links.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","footer"],"patternName":"shadcn/mega-two-tier-nav-footer","name":"Mega Two Tier Nav Footer"},"className":"is-style-shadcn-on-dark","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|4","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4"}}},"backgroundColor":"foreground","textColor":"background","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull is-style-shadcn-on-dark has-background-color has-foreground-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

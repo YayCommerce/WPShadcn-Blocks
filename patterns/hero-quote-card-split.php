@@ -7,6 +7,8 @@
  * AI Hint: Split hero that swaps the usual product screenshot for customer voices — the left half holds a fluid h1, a muted two-sentence lead and a filled primary button beside an outline button, while the right half stacks two bordered rounded quote cards, the second stepped inward, each carrying a short quote above a small round avatar with the speaker's name and role; reach for it when the opening screen has to earn trust immediately and a single testimonial pair says more than an interface shot.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

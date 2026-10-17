@@ -7,6 +7,8 @@
  * AI Hint: Interactive awards list — intro heading and lead paragraph above full-width rows divided by hairlines, each row pairing a small coloured swatch with an award title, its category and year, and a ghost link with an arrow icon on the right, with a muted panel sliding up behind the row on hover; best for an awards or recognition section that should read as browsable rather than as a table.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"620px","justifyContent":"left"}} -->

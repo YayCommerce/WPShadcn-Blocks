@@ -25,12 +25,12 @@ import { buildIconClasses } from "../../shared/icons/icon-attributes.js";
  * Variant options shared with render.php class names.
  */
 const VARIANT_OPTIONS = [
-  { label: __("Default", "shadcn-blocks"), value: "default" },
-  { label: __("Secondary", "shadcn-blocks"), value: "secondary" },
-  { label: __("Destructive", "shadcn-blocks"), value: "destructive" },
-  { label: __("Outline", "shadcn-blocks"), value: "outline" },
-  { label: __("Ghost", "shadcn-blocks"), value: "ghost" },
-  { label: __("Link", "shadcn-blocks"), value: "link" },
+  { label: __("Default", "yaycommerce-blocks-for-shadcn-ui"), value: "default" },
+  { label: __("Secondary", "yaycommerce-blocks-for-shadcn-ui"), value: "secondary" },
+  { label: __("Destructive", "yaycommerce-blocks-for-shadcn-ui"), value: "destructive" },
+  { label: __("Outline", "yaycommerce-blocks-for-shadcn-ui"), value: "outline" },
+  { label: __("Ghost", "yaycommerce-blocks-for-shadcn-ui"), value: "ghost" },
+  { label: __("Link", "yaycommerce-blocks-for-shadcn-ui"), value: "link" },
 ];
 
 /**
@@ -75,21 +75,21 @@ export default function Edit({ attributes, setAttributes }) {
   return (
     <>
       <InspectorControls>
-        <PanelBody title={__("Badge Settings", "shadcn-blocks")}>
+        <PanelBody title={__("Badge Settings", "yaycommerce-blocks-for-shadcn-ui")}>
           <SelectControl
-            label={__("Variant", "shadcn-blocks")}
+            label={__("Variant", "yaycommerce-blocks-for-shadcn-ui")}
             value={variant}
             options={VARIANT_OPTIONS}
             onChange={(value) => setAttributes({ variant: value })}
           />
           <TextControl
-            label={__("Link URL", "shadcn-blocks")}
+            label={__("Link URL", "yaycommerce-blocks-for-shadcn-ui")}
             type="url"
             value={url}
             placeholder="https://"
             help={__(
               "Optional. When set, the badge renders as a link.",
-              "shadcn-blocks"
+              "yaycommerce-blocks-for-shadcn-ui"
             )}
             onChange={(value) =>
               setAttributes(
@@ -98,7 +98,7 @@ export default function Edit({ attributes, setAttributes }) {
             }
           />
           <ToggleControl
-            label={__("Open in new tab", "shadcn-blocks")}
+            label={__("Open in new tab", "yaycommerce-blocks-for-shadcn-ui")}
             checked={linkTarget === "_blank"}
             disabled={!url}
             onChange={(checked) =>
@@ -118,7 +118,7 @@ export default function Edit({ attributes, setAttributes }) {
           className="wp-block-shadcn-badge__text"
           value={text}
           allowedFormats={["core/bold", "core/italic"]}
-          placeholder={__("Badge", "shadcn-blocks")}
+          placeholder={__("Badge", "yaycommerce-blocks-for-shadcn-ui")}
           onChange={(value) => setAttributes({ text: value })}
         />
         {isRight && glyph}

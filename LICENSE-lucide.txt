@@ -1,4 +1,4 @@
-Shadcn Blocks bundles a curated subset of Lucide icons (https://lucide.dev),
+YayCommerce Blocks for Shadcn UI bundles a curated subset of Lucide icons (https://lucide.dev),
 generated from the `lucide-static` package (v1.24.0) into inc/icon-map.php and
 src/shared/icons/icon-registry.js. Lucide is distributed under the ISC License;
 a portion of its icons derive from the Feather project under the MIT License.

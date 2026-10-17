@@ -7,6 +7,8 @@
  * AI Hint: Left-aligned eyebrow and a large two-line headline over a three-column row of bordered cards that each hold a bold heading, a two-line muted note and a plain text link for demos, support and general contact; underneath, a wide lightly dimmed cover image carries a small bordered card at its left naming how many offices the company runs; reach for it when a contact page has to split traffic three ways before it talks about locations.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Asymmetric split hero where a wide bordered rounded frame carries a single tall product screenshot across roughly two thirds of the row and a narrow right column holds a fluid h1, a muted three-line lead and a filled arrow button beside an outline arrow button; reach for it when the interface needs room to be legible at a glance and the pitch can be reduced to one sentence and two choices.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

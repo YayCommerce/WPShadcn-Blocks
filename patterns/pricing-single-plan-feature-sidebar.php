@@ -7,6 +7,8 @@
  * AI Hint: Single-plan pricing section split into two vertically centred columns: the wider side carries the section heading, a short paragraph and an uppercase-labelled check list of everything included, while the narrower side holds one bordered card on a muted surface with the plan name, an oversized price, a full-width button and a reassurance line; reach for it when the features need room to be read as prose-width copy rather than crammed inside the price card.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:shadcn/pricing {"align":"wide","intervals":[{"key":"monthly","label":"Monthly"}],"layout":{"type":"default"}} -->

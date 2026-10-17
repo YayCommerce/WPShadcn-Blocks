@@ -7,6 +7,8 @@
  * AI Hint: Testimonial carousel introduced by a left-aligned section heading, a short supporting paragraph and an outline link to fuller customer stories; each slide is a bordered card with a square portrait on top, a large pull quote beneath it, and the author's name and company in small type, with arrows and dots stepping through four stories. Best for social proof that needs a lead-in and a route to longer case studies.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","testimonials"],"patternName":"shadcn/testimonial-photo-quote-carousel","name":"Testimonial Photo Quote Carousel"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5","right":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"metadata":{"name":"Intro"},"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

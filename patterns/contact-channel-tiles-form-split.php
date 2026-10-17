@@ -7,6 +7,8 @@
  * AI Hint: Channel-tile contact split: a centred "Contact Us" heading and muted lead sit above a narrow left column of four rounded secondary tiles, each pairing a line-art icon with a bold channel label, a one-line muted explanation and the address, number or location in bold, while the wider right column is a bordered card-background form asking for name, email, company and a message, with a consent line naming the Terms of Service and Privacy Policy and a full-width submit; a wide muted panel underneath repeats office hours and contact information in two columns, so reach for it when the page must show every way to reach you and still put the form in front of the reader.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|9"}},"layout":{"type":"constrained","contentSize":"1120px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"640px"}} -->

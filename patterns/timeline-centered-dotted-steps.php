@@ -7,6 +7,8 @@
  * AI Hint: Centred vertical timeline — every step stacks a circular hairline icon badge, a centred title and a centred muted paragraph, and a dotted one-pixel connector runs down the middle between steps so the three read as a single sequence instead of three separate cards; reach for it when a short setup, migration or onboarding process should sit down the centre of the page with no columns, no card chrome and no numbering.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"620px"}} -->

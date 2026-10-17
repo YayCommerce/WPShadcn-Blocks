@@ -7,6 +7,8 @@
  * AI Hint: Metric index rows — a small sticky label and heading in a narrow left column beside a stack of hairline-divided rows, each pairing an oversized figure on the left with a sentence or two of explanation on the right; reach for it when there are six or more numbers to report and each deserves real prose rather than a three-word caption.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","stats"],"patternName":"shadcn/stats-divided-index-rows","name":"Stats Divided Index Rows"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|9"}}}} -->

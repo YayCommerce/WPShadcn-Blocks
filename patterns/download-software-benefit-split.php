@@ -7,6 +7,8 @@
  * AI Hint: Product download hero for software that runs everywhere: the left column stacks a heading, a three-line muted lead, four check-icon benefit lines and a filled plus outline button pair, the right column holds a large tinted rounded panel for a product shot, and a full-width strip below sets a centred availability label between two hairlines above a wrapped row of eight small icon and caption pairs; reach for it when the pitch and the platform list have to share one screen above the fold.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10","left":"var:preset|spacing|4","right":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--4)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

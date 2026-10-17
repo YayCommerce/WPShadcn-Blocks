@@ -7,6 +7,8 @@
  * AI Hint: Documentation guide layout — a three-crumb breadcrumb, an oversized two-line h1, a muted two-line lead and a filled-plus-outline button pair sit above a three-column body whose narrow left rail labels the topics and the last-updated date, whose wide centre column runs a rounded muted media panel, a section h2 and four anchored h3-and-paragraph passages including a nested checklist with inline code and an inline link, and whose narrow right rail repeats those headings as an uppercase on-this-page list; reach for it on a handbook, knowledge-base or developer-guide page that needs metadata and in-page navigation flanking the prose.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"default"}} -->

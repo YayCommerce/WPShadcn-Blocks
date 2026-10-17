@@ -7,6 +7,8 @@
  * AI Hint: Developer-facing three-plan pricing on a muted full-width band that reads like documentation — a centred sans-serif heading and lead sit above a segmented monthly/yearly control, then three equal columns each led by an uppercase tier-code badge, a plan name, a monospace price with its period underneath, one supporting line closed by a hairline, a dense monospace check list and a full-width button pinned to the bottom edge; the recommended column trades the dashed outline for a solid primary one and carries a small default badge, and a monospace footnote under the grid explains that the codes are stable identifiers. Reach for it on API, infrastructure and developer-tool sites where buyers want the numbers plainly rather than a glossy marketing table.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|3"}},"backgroundColor":"muted","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-muted-background-color has-background" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"fontSize":"fluid-5-xl"} -->

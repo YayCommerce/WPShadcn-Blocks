@@ -7,6 +7,8 @@
  * AI Hint: Statement-and-cards split — a narrow left column carrying a small eyebrow label, an oversized paragraph whose opening clause is bold and whose remainder is regular weight, and a solid button pinned to the bottom of the column, beside a two-by-two grid of outlined cards each holding an icon, a title and a three-line description; reach for it when a brand promise needs room to be argued in prose while the concrete benefits sit alongside it.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","incentives"],"patternName":"shadcn/incentives-statement-benefit-cards","name":"Incentives Statement Benefit Cards"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

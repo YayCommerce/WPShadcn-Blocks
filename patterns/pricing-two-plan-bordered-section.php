@@ -7,6 +7,8 @@
  * AI Hint: Two-plan pricing section built as a single rounded outlined surface rather than floating cards — a centred H2, a muted lead line and a segmented monthly/yearly control sit above a hairline, then two columns divided by a vertical rule carry plan name, supporting line, a price that follows the billing interval, a check list and a full-width button, with the recommended column shaded muted; reach for it when a product sells on exactly two tiers and the comparison should read as one dense, contained UI surface.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:shadcn/pricing {"align":"wide","intervals":[{"key":"monthly","label":"Monthly"},{"key":"yearly","label":"Yearly"}],"layout":{"type":"default"}} -->

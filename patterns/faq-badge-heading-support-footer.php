@@ -7,6 +7,8 @@
  * AI Hint: Long single-column FAQ list — a small solid pill badge over a left-aligned heading and one muted lead line, then eight collapsed accordion rows separated by hairlines, and beneath a rule a "Still have questions?" sub-heading with a reassuring sentence on the left and an arrow contact link pushed to the right of the same row; reach for it when a product has enough recurring billing or account questions to fill a page on its own and the reader should still land somewhere human at the end.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained","contentSize":"1120px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

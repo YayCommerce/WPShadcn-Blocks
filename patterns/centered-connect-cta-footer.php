@@ -7,6 +7,8 @@
  * AI Hint: Site footer — a narrow centred column with an italic eyebrow above a very large two-line headline, a muted supporting sentence, a single filled call-to-action button, a centred row of plain social icons and a small contact email line at the bottom; reach for it when the page should end on one invitation to get in touch rather than on a site map.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4","right":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:paragraph {"align":"center","style":{"typography":{"fontStyle":"italic","fontWeight":"400"}},"textColor":"muted-foreground","fontSize":"sm"} -->

@@ -7,6 +7,8 @@
  * AI Hint: Three-option evaluation matrix for a shortlist: a header row pairing a small mark with each option name sits above eight hairline-separated metric rows whose cells each hold a status icon beside a short value, the best cell in every row taking a tint, and underneath a bordered panel opens with an uppercase label and lays three monospace note cards side by side over a wider summary card; reach for it when a decision turns on many small measurements rather than on a few headline features.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","compare"],"patternName":"shadcn/compare-multi-model-metric-matrix","name":"Compare Multi Model Metric Matrix"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|6"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"680px","justifyContent":"left"}} -->

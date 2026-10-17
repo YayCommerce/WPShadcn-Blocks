@@ -74,7 +74,7 @@ if ( ! function_exists( 'block_shadcn_pricing_switch_render' ) ) {
 				type="button"
 				role="switch"
 				class="wp-block-shadcn-pricing-switch__control"
-				aria-label="<?php esc_attr_e( 'Billing interval', 'shadcn-blocks' ); ?>"
+				aria-label="<?php esc_attr_e( 'Billing interval', 'yaycommerce-blocks-for-shadcn-ui' ); ?>"
 				<?php
 				// Carries both keys: the toggle has to know what to go back to.
 				echo wp_interactivity_data_wp_context( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
@@ -98,7 +98,7 @@ if ( ! function_exists( 'block_shadcn_pricing_switch_render' ) ) {
 				data-wp-on--click="actions.select"
 			><?php echo esc_html( $on['label'] ); ?></span>
 		<?php else : ?>
-			<div class="wp-block-shadcn-pricing-switch__group" role="group" aria-label="<?php esc_attr_e( 'Billing interval', 'shadcn-blocks' ); ?>">
+			<div class="wp-block-shadcn-pricing-switch__group" role="group" aria-label="<?php esc_attr_e( 'Billing interval', 'yaycommerce-blocks-for-shadcn-ui' ); ?>">
 				<?php foreach ( $intervals as $interval ) : ?>
 					<button
 						type="button"

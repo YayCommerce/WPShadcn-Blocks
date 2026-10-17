@@ -7,6 +7,8 @@
  * AI Hint: Classic two-tier pricing section — a centred H2 with a supporting line, a Monthly/Yearly toggle beneath them, then two equal-height cards each holding a plan name, a large price that follows the toggle, a one-line audience note, a hairline rule, a ticked feature list and a full-width call-to-action pinned to the card foot, with the paid card marked out by a thicker primary border; best for a product sold as a free tier plus one paid tier.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","pricing"],"patternName":"shadcn/pricing-two-plan-switch-cards","name":"Pricing Two Plan Switch Cards"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

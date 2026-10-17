@@ -7,6 +7,8 @@
  * AI Hint: Two-column team carousel — a narrow left column carries a headline whose second line drops to muted, plus a short lead, while a wider right column runs an arrow-driven carousel of bordered portrait cards, each closing on a rule and a callout naming years in the craft and where the person worked before; reach for it when a team is too large for a grid and you want the years-of-experience proof to travel with every face rather than sitting in a separate stats strip.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","team"],"patternName":"shadcn/team-experience-callout-carousel","name":"Team Experience Callout Carousel"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Flash sale bar that pairs two pressures — a countdown whose separators blink, and the number of items left stated beside it. Use it only where that figure is real and kept current, since it is copy an author types rather than live inventory; the plain flash sale bar is the honest choice when only the deadline is genuine. The countdown starts six hours out and the author sets the real deadline.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 // The countdown needs a real instant, and a date hard-coded into a pattern file
 // is wrong the day after it is written: too far out and the preview reads
 // "38277 hours", past and the block hides itself entirely. Computing it as the

@@ -7,6 +7,8 @@
  * AI Hint: Two-part trust section pairing a left column of eyebrow, oversized three-line heading and muted lead with a bordered four-cell bar of round seals on the right, then a full-width bordered strip led by a plain tinted band and split by hairlines into three cells that each hold a line icon, a large title and a two-line muted note; reach for it when a compliance claim has to feel like a statement of scale rather than a checklist.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"top","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

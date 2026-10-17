@@ -7,6 +7,8 @@
  * AI Hint: Compact centred testimonial band on a tinted accent background — a white rounded pill combining a stack of overlapping customer avatars with a short "trusted by" label, followed by a single medium-weight quote centred beneath it. Best as a quiet proof strip between two heavier sections when one sentence of praise is enough.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|6"}},"backgroundColor":"accent","textColor":"accent-foreground","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-accent-foreground-color has-accent-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"layout":{"type":"flex","justifyContent":"center"}} -->

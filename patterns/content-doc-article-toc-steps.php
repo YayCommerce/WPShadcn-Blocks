@@ -7,6 +7,8 @@
  * AI Hint: Documentation article layout that pairs a wide prose column — pill badge, H1, muted lead, muted media panel, then sectioned H2s carrying icon-chip steps, a striped two-column settings table and closing notes — with a narrow sticky rail listing the page's own section links; reach for it when a page has to be read top to bottom yet still let a returning reader jump straight to one section.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained","contentSize":"1040px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

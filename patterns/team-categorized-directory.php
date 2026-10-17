@@ -7,6 +7,8 @@
  * AI Hint: Org-chart style team directory — a narrow sticky left column holds the section heading while the right column runs down named categories, each introduced by a heading and a one-line note and laid out as two columns of people, every one of them a small round avatar beside a name and a role badge with a two-line bio underneath; reach for it when a practice or department wants its structure legible on the page, with no filter control and nothing hidden behind a hover.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","team"],"patternName":"shadcn/team-categorized-directory","name":"Team Categorized Directory"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

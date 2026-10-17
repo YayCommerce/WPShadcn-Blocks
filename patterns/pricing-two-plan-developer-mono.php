@@ -7,6 +7,8 @@
  * AI Hint: Developer-facing two-plan pricing on a muted full-width band with a terminal feel — a centred sans-serif heading and lead over a billing toggle, then two dashed-outline cards where prices, plan-code badges and feature rows are set in a monospace stack, the recommended card swapping the dashed rule for a solid primary border plus a small default badge, and a monospace footnote under the pair; reach for it on API, infrastructure and developer-tool sites where the pricing table should read like documentation rather than marketing.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|3"}},"backgroundColor":"muted","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-muted-background-color has-background" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"fontSize":"fluid-5-xl"} -->

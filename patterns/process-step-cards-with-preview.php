@@ -7,6 +7,8 @@
  * AI Hint: Two-column process layout — a sticky left column with a monospace step count, heading and lead paragraph, and a right stack of three rounded bordered cards that each carry a step label, a title, a short description and a square preview thumbnail; reach for it when a short onboarding or ordering process needs one supporting image per step.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","process"],"patternName":"shadcn/process-step-cards-with-preview","name":"Process Step Cards With Preview"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"backgroundColor":"background"} -->
 <div class="wp-block-group alignwide has-background-background-color has-background" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|10"}}}} -->

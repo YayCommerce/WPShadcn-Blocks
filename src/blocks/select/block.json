@@ -6,7 +6,7 @@
   "title": "Select",
   "category": "shadcn",
   "description": "A labeled dropdown of predefined options for forms.",
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "keywords": ["select", "dropdown", "options", "field", "form"],
   "supports": {
     "html": false,

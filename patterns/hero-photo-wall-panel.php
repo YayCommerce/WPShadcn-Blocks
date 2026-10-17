@@ -7,6 +7,8 @@
  * AI Hint: Photography-led hero built from three wide rows of six short cropped image tiles each, eighteen in all, filling the full wide measure above a narrow bordered panel that carries a centred oversized h1, a short muted lead and a filled primary button beside an outline button; reach for it when the work itself is the argument — a studio, gallery, archive or portfolio home page where the reader should see the breadth of the library before reading a word.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Message-card contact split in two vertically centred columns: the left carries a very large heading, a muted two-line lead and three icon-and-text rows for phone, email and website; the right is a rounded muted panel titled "Send us a message" holding name, email, subject and message fields closed by a full-width submit; reach for it on a general contact page that must show how to reach you and let visitors write in the same view.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

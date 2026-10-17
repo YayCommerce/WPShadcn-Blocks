@@ -7,6 +7,8 @@
  * AI Hint: Looping incentive ticker — a single marquee row of six icon-and-text items that drifts sideways, pauses when hovered and fades out at both edges, with no heading of its own; reach for it when a store has more service promises than fit a static row and the strip should read as an ongoing list rather than a fixed set of four.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","incentives"],"patternName":"shadcn/incentives-scrolling-icon-marquee","name":"Incentives Scrolling Icon Marquee"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|7","bottom":"var:preset|spacing|7"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--7);padding-bottom:var(--wp--preset--spacing--7)"><!-- wp:shadcn/marquee {"speed":40,"showFade":true,"gap":"3rem","align":"wide"} -->

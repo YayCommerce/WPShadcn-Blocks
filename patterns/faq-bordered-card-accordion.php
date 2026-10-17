@@ -7,6 +7,8 @@
  * AI Hint: Card-per-question FAQ — a header band ruled top and bottom holds a small outlined pill badge with an icon, a large heading and one muted line containing an underlined inline link, and below it six separately bordered rounded rows sit centred in a narrow column, each a one-item accordion whose question and chevron stay on a single line until it is opened; reach for it when the questions are short product qualifiers and each one should read as its own tappable object rather than a row in a list.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|9"}},"layout":{"type":"constrained","contentSize":"1120px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"border":{"top":{"color":"var:preset|color|border","width":"1px","style":"solid"},"bottom":{"color":"var:preset|color|border","width":"1px","style":"solid"}},"spacing":{"padding":{"top":"var:preset|spacing|8","right":"var:preset|spacing|5","bottom":"var:preset|spacing|8","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

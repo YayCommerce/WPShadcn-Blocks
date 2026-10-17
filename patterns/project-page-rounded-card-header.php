@@ -7,6 +7,8 @@
  * AI Hint: Single-project case study page that opens with a rounded muted card instead of a bare heading — inside it a two-column split puts the oversized project title and a one-paragraph summary on the left and a two-by-two grid of small label and value pairs on the right, followed by three full-bleed rounded images stacked with a tight gap and a muted footer strip carrying a closing line beside a small link button; reach for it when one piece of work needs its own page and the brief facts should sit level with the title rather than below the fold.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-rounded-card-header","name":"Project Page Rounded Card Header"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"align":"wide","style":{"border":{"radius":"16px"},"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|9"}}},"backgroundColor":"muted","layout":{"type":"default"}} -->

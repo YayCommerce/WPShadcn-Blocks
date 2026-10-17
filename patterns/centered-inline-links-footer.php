@@ -7,6 +7,8 @@
  * AI Hint: Site footer — no columns at all: a single centred row of navigation links with social icons at its end, a quieter centred row of policy links beneath it, and the brand name closing the page as a giant edge-to-edge wordmark; reach for it on a small site whose footer only needs a handful of links and a memorable sign-off.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","footer"],"patternName":"shadcn/centered-inline-links-footer","name":"Centered Inline Links Footer"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|4","bottom":"var:preset|spacing|6","left":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|6"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--6);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"flex","justifyContent":"center","flexWrap":"wrap","verticalAlignment":"center"}} -->

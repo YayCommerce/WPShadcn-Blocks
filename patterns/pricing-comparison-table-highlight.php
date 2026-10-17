@@ -7,6 +7,8 @@
  * AI Hint: Three-plan pricing comparison table with one steered column: feature names run down the first column, three plan columns hold a name, a price that follows the billing switch and a call-to-action, and the recommended column sits on a rounded muted band running the full height of the table; named category rows break the features into groups and each row is ruled off inside its own column; best when one tier should be visibly recommended without hiding the other two.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","pricing"],"patternName":"shadcn/pricing-comparison-table-highlight","name":"Pricing Comparison Table Highlight"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"620px","justifyContent":"left"}} -->

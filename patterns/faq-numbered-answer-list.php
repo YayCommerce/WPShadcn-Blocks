@@ -7,6 +7,8 @@
  * AI Hint: Open FAQ column where a pill badge, centred heading and one-line lead sit above four stacked entries that each pair a small tinted number chip in a left gutter with a bold question and a muted two-to-three-line answer indented under it; reach for it when the answers are short enough to read straight through and hiding them behind an accordion would only add a click.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10","left":"var:preset|spacing|4","right":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|9"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"680px"}} -->

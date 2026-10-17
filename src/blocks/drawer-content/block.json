@@ -8,7 +8,7 @@
   "parent": ["shadcn/drawer"],
   "icon": "text",
   "description": "Drawer content section for main body content.",
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "attributes": {},
   "example": {
     "innerBlocks": [

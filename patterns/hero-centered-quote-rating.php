@@ -7,6 +7,8 @@
  * AI Hint: Image-free centred hero in a 720px column: a fluid oversized h1, a two-line muted lead, one filled primary button, then a medium-weight centred pull-quote with a small attribution line and a closing proof row pairing an overlapping five-avatar stack with a star row, a bold rating figure and a muted review count; reach for it when one quotable sentence from a named customer carries more weight than a screenshot.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained","contentSize":"720px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:heading {"textAlign":"center","level":1,"fontSize":"fluid-7-xl"} -->

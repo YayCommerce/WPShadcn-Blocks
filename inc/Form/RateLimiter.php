@@ -20,6 +20,8 @@
 
 namespace ShadcnBlocks\Form;
 
+defined( 'ABSPATH' ) || exit;
+
 class RateLimiter {
 
 	/**

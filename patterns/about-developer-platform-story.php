@@ -7,6 +7,8 @@
  * AI Hint: Developer-facing about layout on a muted band — eyebrow and headline on the left with the lead paragraph on the right, a full-width rounded image with a right-aligned caption beneath it, a centred tagline over a row of partner logos, then a two-column close pairing origin-story copy and two bordered stat cards with a supporting photo; best for a product or platform about page aimed at a technical audience.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"border":{"radius":"16px"},"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|7","bottom":"var:preset|spacing|9","left":"var:preset|spacing|7"},"blockGap":"var:preset|spacing|10"}},"backgroundColor":"muted"} -->
 <div class="wp-block-group alignwide has-muted-background-color has-background" style="border-radius:16px;padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--7);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--7)"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|10"}}}} -->

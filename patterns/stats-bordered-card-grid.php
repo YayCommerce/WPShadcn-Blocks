@@ -7,6 +7,8 @@
  * AI Hint: Six-up metric card grid — a heading and lead over three columns of outlined rounded cards, each holding a large figure that counts up on view above a bold label and two lines telling the reader how the number was arrived at; reach for it when a product has more than three numbers worth stating and each needs a sentence of qualification rather than a bare caption.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","stats"],"patternName":"shadcn/stats-bordered-card-grid","name":"Stats Bordered Card Grid"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|7"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"720px"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Blog index — an oversized headline beside a short muted standfirst, then a horizontal row of topic filter buttons above a three-column grid of muted rounded post cards, each card stacking a wide cover image, an outline category badge, a linked title and a two-line excerpt; the buttons narrow the grid to a single topic client-side, so best for a magazine-style latest-posts page where the cover images do the selling.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"bottom","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|4","left":"var:preset|spacing|8"}}}} -->

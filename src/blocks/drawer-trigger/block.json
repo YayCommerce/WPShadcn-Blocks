@@ -8,7 +8,7 @@
   "parent": ["shadcn/drawer"],
   "icon": "button",
   "description": "Button or control that toggles the drawer.",
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "attributes": {},
   "example": {
     "innerBlocks": [

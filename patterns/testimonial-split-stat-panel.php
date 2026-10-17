@@ -7,6 +7,8 @@
  * AI Hint: Social-proof section built as an asymmetric split — the left column carries a heading, a supporting line and two lightly filled quote cards, each closing with an avatar beside the author name and role and the company name opposite; the right column is one bordered panel holding hairline-divided rows that pair a small rounded thumbnail with an oversized stat figure and a one-line outcome; best for a comparison or results page where the stories read down one side and the proof points stack as a compact list beside them.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","testimonials"],"patternName":"shadcn/testimonial-split-stat-panel","name":"Testimonial Split Stat Panel"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

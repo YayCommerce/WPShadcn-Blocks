@@ -7,6 +7,8 @@
  * AI Hint: Single-card desktop download layout with a centred app mark, an oversized centred H2 and a two-line muted lead, then one bordered card whose header row puts the product name and its platform line on the left against a right-aligned version and file size, followed by a bold requirements label, four ticked requirement lines, a filled download button beside an outline release-notes button and a centred fine-print line, closing with a small muted trust line under the card; reach for it when one build serves every platform and the buyer's real question is whether their machine qualifies.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10","left":"var:preset|spacing|4","right":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"620px"}} -->

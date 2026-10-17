@@ -7,6 +7,8 @@
  * AI Hint: Head-to-head product comparison — a centred oversized H2 naming both products with a two-line muted lead, then a pair of cards each carrying a small logo-and-name lockup, a hairline rule and a seven-line capability list where the weaker product's later lines are struck through and greyed, closed by two left-aligned prose sections in a narrower column that explain who the alternative suits and what to weigh before switching; reach for it on a competitor comparison page where the tick list alone would read as unfair and the buyer needs the nuance underneath.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"900px"}} -->

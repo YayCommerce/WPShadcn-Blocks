@@ -7,6 +7,8 @@
  * AI Hint: Single-project case study page for editorial or fashion work — a centred project title with a one-line subtitle, a full wide 2:1 photograph with a caption beneath it, then an asymmetric split where a narrow left sidebar stacks small uppercase metadata labels above their values while a wider right column carries three paragraphs of narrative, closing with a hairline bordered panel that pairs a short statement with a small outline button; reach for it when one shoot, collection or campaign needs its own page with credits kept visible beside the story.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-wide-image-meta-sidebar","name":"Project Page Wide Image Meta Sidebar"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

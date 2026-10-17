@@ -7,6 +7,8 @@
  * AI Hint: Two oversized tinted panels sitting side by side under a left-aligned heading, each stacking a big bold platform name, a single muted line of detail, one download button and a rounded device screenshot beneath; reach for it when a product ships to exactly two mobile platforms and each deserves a poster-sized panel rather than a small card.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|7"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:heading {"level":2,"style":{"typography":{"fontWeight":"700","letterSpacing":"-0.03em"}},"fontSize":"fluid-5-xl"} -->

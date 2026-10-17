@@ -7,7 +7,7 @@
   "category": "shadcn",
   "description": "A button that shows a toast notification on click, with type variants and rich colors.",
   "keywords": ["toast", "sonner", "notification", "snackbar", "alert"],
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "supports": {
     "html": false,
     "anchor": true,

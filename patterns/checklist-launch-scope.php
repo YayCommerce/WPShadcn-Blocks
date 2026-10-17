@@ -7,6 +7,8 @@
  * AI Hint: Grouped launch checklist — an outlined panel divided into three labelled columns (content, technical, legal), each holding a ticked list of the work completed before going live, with a closing note naming who signs it off; reach for it when a studio or agency page needs to show the rigour behind a launch. The ticks are typographic marks describing finished work, not interactive checkboxes.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","process"],"patternName":"shadcn/checklist-launch-scope","name":"Checklist Launch Scope"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|7"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"700px"}} -->

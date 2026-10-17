@@ -7,6 +7,8 @@
  * AI Hint: Split hero with an icon outline badge above the H1, subtext, and a primary button with a trailing icon plus an outline button with a leading icon on the left, one large rounded image right; best for a SaaS/product landing page announcing a release.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"backgroundColor":"background"} -->
 <div class="wp-block-group alignwide has-background-background-color has-background" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|7"}},"layout":{"type":"grid","minimumColumnWidth":"32rem"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Scope-first hero — a centred H1, a short muted two-line lead, a filled plus outline button pair and a centred check list naming the four deliverables inside a narrow 720px column, followed by one wide rounded card outlined with a hairline border framing a single centred device still; best for a studio or agency landing page where the reader wants to know what is actually included before seeing the work.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|9"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained","contentSize":"720px"}} -->

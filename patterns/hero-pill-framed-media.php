@@ -7,6 +7,8 @@
  * AI Hint: Split hero built around a shape — a 46/54 row whose left half stacks a small secondary badge, a fluid h1, a two-sentence muted lead and a filled primary button next to an outline button carrying a play icon, and whose right half is a tall muted panel rounded to a full pill radius with a single small preview image centred inside it; reach for it when the page needs one memorable silhouette above the fold and the offer is short enough that the frame, not a stat band or a feature list, does the persuading.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

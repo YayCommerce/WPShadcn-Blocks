@@ -7,6 +7,8 @@
  * AI Hint: Blog image grid — a centred badge, oversized headline, supporting line and an archive link above a responsive three-column grid of tall rounded photo tiles, each tile dimming its own image and stacking a category badge pinned to the top corner against a linked white article title with an author and date line pinned to the bottom edge; best for a picture-led magazine index or a featured-stories block where the imagery should carry the section.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","posts"],"patternName":"shadcn/blog-category-overlay-grid","name":"Blog Category Overlay Grid"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

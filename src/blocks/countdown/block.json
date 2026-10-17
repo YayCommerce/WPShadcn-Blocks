@@ -7,7 +7,7 @@
   "category": "shadcn",
   "description": "A timer counting down to a date and time, for promo banners and launch pages.",
   "keywords": ["countdown", "timer", "deadline", "sale", "launch"],
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "attributes": {
     "targetDate": {
       "type": "string",

@@ -7,6 +7,8 @@
  * AI Hint: Blog list — a left-aligned badge, headline and intro line above five full-width bordered cards on the card surface, each splitting into a rounded landscape thumbnail on the left and a text stack on the right holding a category badge with author and date, a linked title, a short excerpt and a read-more link, closing with a centred outline button to the archive; best for a recent-posts list where every entry should read as a discrete card rather than a divided row or a grid tile.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

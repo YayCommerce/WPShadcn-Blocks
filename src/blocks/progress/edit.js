@@ -46,13 +46,13 @@ export default function Edit(props) {
           }}
         >
           <ToolsPanelItem
-            label={__("Max Value", "shadcn-blocks")}
+            label={__("Max Value", "yaycommerce-blocks-for-shadcn-ui")}
             isShownByDefault
             hasValue={() => maxValue !== 100}
             onDeselect={() => setAttributes({ maxValue: 100 })}
           >
             <RangeControl
-              label={__("Max Value", "shadcn-blocks")}
+              label={__("Max Value", "yaycommerce-blocks-for-shadcn-ui")}
               value={maxValue}
               onChange={(value) => setAttributes({ maxValue: value })}
               min={1}
@@ -80,7 +80,7 @@ export default function Edit(props) {
           </ToolsPanelItem>
           {currentValue === "static" && (
             <ToolsPanelItem
-              label={__("Value", "shadcn-blocks")}
+              label={__("Value", "yaycommerce-blocks-for-shadcn-ui")}
               isShownByDefault
               hasValue={() => staticValue !== 50}
               onDeselect={() =>
@@ -90,7 +90,7 @@ export default function Edit(props) {
               }
             >
               <RangeControl
-                label={__("Value", "shadcn-blocks")}
+                label={__("Value", "yaycommerce-blocks-for-shadcn-ui")}
                 value={staticValue}
                 onChange={(value) =>
                   setAttributes({
@@ -105,7 +105,7 @@ export default function Edit(props) {
           )}
           {currentValue === "dynamic" && (
             <ToolsPanelItem
-              label={__("Value", "shadcn-blocks")}
+              label={__("Value", "yaycommerce-blocks-for-shadcn-ui")}
               isShownByDefault
               hasValue={() => dynamicValue !== "free_shipping"}
               onDeselect={() =>
@@ -113,12 +113,12 @@ export default function Edit(props) {
               }
             >
               <SelectControl
-                label={__("Value", "shadcn-blocks")}
+                label={__("Value", "yaycommerce-blocks-for-shadcn-ui")}
                 value={dynamicValue}
                 onChange={(value) => setAttributes({ dynamicValue: value })}
                 options={[
                   {
-                    label: __("Free Shipping", "shadcn-blocks"),
+                    label: __("Free Shipping", "yaycommerce-blocks-for-shadcn-ui"),
                     value: "free_shipping",
                   },
                 ]}
@@ -131,7 +131,7 @@ export default function Edit(props) {
         <ColorGradientSettingsDropdown
           settings={[
             {
-              label: __("Track Color", "shadcn-blocks"),
+              label: __("Track Color", "yaycommerce-blocks-for-shadcn-ui"),
               colorValue: trackColor,
               clearable: true,
               onColorChange: (value) => {
@@ -148,7 +148,7 @@ export default function Edit(props) {
               },
             },
             {
-              label: __("Fill Color", "shadcn-blocks"),
+              label: __("Fill Color", "yaycommerce-blocks-for-shadcn-ui"),
               colorValue: fillColor,
               clearable: true,
               onColorChange: (value) => {

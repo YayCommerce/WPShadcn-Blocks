@@ -7,6 +7,8 @@
  * AI Hint: Blog row list — a centred badge, oversized headline and supporting line above a stack of wide hairline-divided article rows, each pairing a cover image with a pair of tag pills, a linked headline, a short excerpt and an author-and-date line, with the image and copy trading sides row by row and asymmetric padding stepping each column down so the stack reads as an offset editorial list rather than a card grid; best for a long-form journal, magazine index or engineering blog where each story deserves its own full-width row.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","posts"],"patternName":"shadcn/blog-offset-rows-tags","name":"Blog Offset Rows Tags"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

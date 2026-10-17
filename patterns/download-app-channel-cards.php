@@ -7,6 +7,8 @@
  * AI Hint: Three bordered download cards that each carry a bold channel name over a two-line muted note, then differ at the foot: stacked full-width buttons for desktop, a small muted caption above a pair of store buttons for mobile, and a row of three bordered icon tiles for the browser add-on; reach for it when one product ships through several distribution channels and each needs its own shape of call to action.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|9"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"660px"}} -->

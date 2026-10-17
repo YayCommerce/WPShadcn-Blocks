@@ -7,6 +7,8 @@
  * AI Hint: Priced service cards with scope and timing — a two-up grid of equal-height bordered cards, each opening with a small icon tile, the service name and a duration label on the far right, then a paragraph, a "What's included" list of three or four items, and a rule-topped footer that sets a real per-project price figure against an outline button; reach for it when an agency or freelancer publishes fixed-scope engagements and buyers compare on time and cost before they enquire.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","services"],"patternName":"shadcn/services-priced-duration-cards","name":"Services Priced Duration Cards"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"metadata":{"name":"Header"},"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

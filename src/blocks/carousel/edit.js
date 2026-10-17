@@ -187,8 +187,8 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
               icon={isPlaying ? PauseIcon : PlayIcon}
               label={
                 isPlaying
-                  ? __("Pause preview", "shadcn-blocks")
-                  : __("Play preview", "shadcn-blocks")
+                  ? __("Pause preview", "yaycommerce-blocks-for-shadcn-ui")
+                  : __("Play preview", "yaycommerce-blocks-for-shadcn-ui")
               }
               isPressed={isPlaying}
               onClick={() => setIsPlaying(!isPlaying)}
@@ -197,15 +197,15 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
         </BlockControls>
       )}
       <InspectorControls>
-        <PanelBody title={__("Carousel Settings", "shadcn-blocks")}>
+        <PanelBody title={__("Carousel Settings", "yaycommerce-blocks-for-shadcn-ui")}>
           <ToggleControl
-            label={__("Autoplay", "shadcn-blocks")}
+            label={__("Autoplay", "yaycommerce-blocks-for-shadcn-ui")}
             checked={autoplay}
             onChange={(value) => setAttributes({ autoplay: value })}
           />
           {autoplay && (
             <RangeControl
-              label={__("Autoplay Delay (ms)", "shadcn-blocks")}
+              label={__("Autoplay Delay (ms)", "yaycommerce-blocks-for-shadcn-ui")}
               value={autoplayDelay}
               onChange={(value) => setAttributes({ autoplayDelay: value })}
               min={1000}
@@ -214,65 +214,65 @@ export default function Edit({ attributes, setAttributes, clientId, name }) {
             />
           )}
           <ToggleControl
-            label={__("Loop", "shadcn-blocks")}
+            label={__("Loop", "yaycommerce-blocks-for-shadcn-ui")}
             checked={loop}
             onChange={(value) => setAttributes({ loop: value })}
           />
           <SelectControl
-            label={__("Orientation", "shadcn-blocks")}
+            label={__("Orientation", "yaycommerce-blocks-for-shadcn-ui")}
             value={orientation}
             options={[
               {
-                label: __("Horizontal", "shadcn-blocks"),
+                label: __("Horizontal", "yaycommerce-blocks-for-shadcn-ui"),
                 value: "horizontal",
               },
-              { label: __("Vertical", "shadcn-blocks"), value: "vertical" },
+              { label: __("Vertical", "yaycommerce-blocks-for-shadcn-ui"), value: "vertical" },
             ]}
             onChange={(value) => setAttributes({ orientation: value })}
           />
           <SelectControl
-            label={__("Effect", "shadcn-blocks")}
+            label={__("Effect", "yaycommerce-blocks-for-shadcn-ui")}
             help={__(
               "Coverflow centres the active slide and scales back its neighbours. It also applies the Responsive slides-per-view settings, which plain carousels ignore.",
-              "shadcn-blocks"
+              "yaycommerce-blocks-for-shadcn-ui"
             )}
             value={effect || "none"}
             options={[
-              { label: __("None", "shadcn-blocks"), value: "none" },
-              { label: __("Coverflow", "shadcn-blocks"), value: "coverflow" },
+              { label: __("None", "yaycommerce-blocks-for-shadcn-ui"), value: "none" },
+              { label: __("Coverflow", "yaycommerce-blocks-for-shadcn-ui"), value: "coverflow" },
             ]}
             onChange={(value) => setAttributes({ effect: value })}
           />
         </PanelBody>
-        <PanelBody title={__("Navigation", "shadcn-blocks")}>
+        <PanelBody title={__("Navigation", "yaycommerce-blocks-for-shadcn-ui")}>
           <ToggleControl
-            label={__("Show Arrows", "shadcn-blocks")}
+            label={__("Show Arrows", "yaycommerce-blocks-for-shadcn-ui")}
             checked={showArrows}
             onChange={(value) => setAttributes({ showArrows: value })}
           />
           <ToggleControl
-            label={__("Show Dots", "shadcn-blocks")}
+            label={__("Show Dots", "yaycommerce-blocks-for-shadcn-ui")}
             checked={showDots}
             onChange={(value) => setAttributes({ showDots: value })}
           />
         </PanelBody>
-        <PanelBody title={__("Responsive", "shadcn-blocks")}>
+        <PanelBody title={__("Responsive", "yaycommerce-blocks-for-shadcn-ui")}>
           <RangeControl
-            label={__("Slides Per View (Mobile)", "shadcn-blocks")}
+            label={__("Slides Per View (Mobile)", "yaycommerce-blocks-for-shadcn-ui")}
             value={slidesPerView}
             onChange={(value) => setAttributes({ slidesPerView: value })}
             min={1}
             max={6}
           />
           <RangeControl
-            label={__("Slides Per View (Tablet)", "shadcn-blocks")}
+            label={__("Slides Per View (Tablet)", "yaycommerce-blocks-for-shadcn-ui")}
             value={slidesPerViewTablet}
             onChange={(value) => setAttributes({ slidesPerViewTablet: value })}
             min={1}
             max={6}
           />
           <RangeControl
-            label={__("Slides Per View (Desktop)", "shadcn-blocks")}
+            label={__("Slides Per View (Desktop)", "yaycommerce-blocks-for-shadcn-ui")}
             value={slidesPerViewDesktop}
             onChange={(value) => setAttributes({ slidesPerViewDesktop: value })}
             min={1}

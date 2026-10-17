@@ -7,6 +7,8 @@
  * AI Hint: Editorial about layout — an oversized headline pushed to the right, then a row splitting a small date label, a founding-story paragraph signed with a round avatar, name and role, and a large belief statement with supporting note, finished by a full-width cropped photo; best for an about page that opens with narrative rather than statistics.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","layout":{"type":"constrained","contentSize":"820px","justifyContent":"right"}} -->

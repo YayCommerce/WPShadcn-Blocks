@@ -7,6 +7,8 @@
  * AI Hint: Inverted service strip — a full-bleed near-black band carrying a two-line bold statement in a narrow left column and three evenly spaced centered columns to its right, each stacking a small icon, a bold title and one muted line; reach for it when a page needs a hard visual break between sections and the store's service promises are what should fill it.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","incentives"],"patternName":"shadcn/incentives-dark-service-band","name":"Incentives Dark Service Band"},"className":"is-style-shadcn-on-dark","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|8","right":"var:preset|spacing|5","bottom":"var:preset|spacing|8","left":"var:preset|spacing|5"}}},"backgroundColor":"foreground","textColor":"background","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull is-style-shadcn-on-dark has-background-color has-foreground-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--8);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--8);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"align":"wide","verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|7","left":"var:preset|spacing|8"}}}} -->

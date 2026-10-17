@@ -7,6 +7,8 @@
  * AI Hint: The quietest hero in the set and the only one with no image, badge or card: a 900px centred column holding a fluid oversized h1 that runs two or three lines, a one-sentence muted lead, a centred pair of buttons with a filled primary beside an outline, and beneath a hairline a three-across proof strip of bare columns each stacking a semibold figure over a tiny muted caption; reach for it when the sentence itself is the argument and any artwork would only dilute it.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"layout":{"type":"constrained","contentSize":"900px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:group {"className":"is-style-shadcn-divided","style":{"spacing":{"blockGap":"0"}}} -->

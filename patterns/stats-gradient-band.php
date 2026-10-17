@@ -7,6 +7,8 @@
  * AI Hint: Dark gradient metric band — a full-width panel washed with a fixed dark gradient, holding a short eyebrow and heading above four counting figures divided by vertical hairlines, each with a pale caption; reach for it when a page needs one visually heavy break between light sections and the numbers are the reason for it.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","stats"],"patternName":"shadcn/stats-gradient-band","name":"Stats Gradient Band"},"align":"full","className":"is-style-shadcn-on-dark","style":{"color":{"gradient":"linear-gradient(135deg,rgb(9,9,11) 0%,rgb(39,39,45) 55%,rgb(24,24,27) 100%)"},"spacing":{"padding":{"top":"var:preset|spacing|10","right":"var:preset|spacing|5","bottom":"var:preset|spacing|10","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull is-style-shadcn-on-dark has-background" style="background:linear-gradient(135deg,rgb(9,9,11) 0%,rgb(39,39,45) 55%,rgb(24,24,27) 100%);padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"720px"}} -->

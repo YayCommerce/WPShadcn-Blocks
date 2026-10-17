@@ -1,12 +1,12 @@
 #!/bin/bash
 #
-# Release script for shadcn-blocks plugin
+# Release script for yaycommerce-blocks-for-shadcn-ui plugin
 # Creates a distribution ZIP with only production files
 #
 set -e
 
-PLUGIN_SLUG="shadcn-blocks"
-PLUGIN_FILE="shadcn-blocks.php"
+PLUGIN_SLUG="yaycommerce-blocks-for-shadcn-ui"
+PLUGIN_FILE="yaycommerce-blocks-for-shadcn-ui.php"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "$SCRIPT_DIR"
@@ -44,6 +44,10 @@ cp "$PLUGIN_FILE" "$DEST_DIR/"
 if [ -d "inc" ]; then
     cp -r inc "$DEST_DIR/"
 fi
+
+# Shadcn AI stays out of the WordPress.org build for now; the main plugin
+# file only loads it when the directory is present.
+rm -rf "$DEST_DIR/inc/ShadcnAi"
 
 # Build assets
 if [ -d "build" ]; then
@@ -87,7 +91,7 @@ find "$DEST_DIR" -name ".DS_Store" -delete
 # Fail loudly when a file the plugin loads at runtime did not make it in,
 # rather than shipping a ZIP that 404s once the plugin is installed somewhere else.
 for required in \
-    "shadcn-blocks.php" \
+    "yaycommerce-blocks-for-shadcn-ui.php" \
     "inc/icon-map.php" \
     "assets/images/placeholder.svg" \
     "src/editor-styles.css" \
@@ -100,6 +104,11 @@ do
         exit 1
     fi
 done
+
+if [ -e "$DEST_DIR/inc/ShadcnAi" ]; then
+    echo "Error: inc/ShadcnAi must not ship in the release"
+    exit 1
+fi
 
 # Create ZIP
 ZIP_NAME="${PLUGIN_SLUG}-${VERSION}.zip"

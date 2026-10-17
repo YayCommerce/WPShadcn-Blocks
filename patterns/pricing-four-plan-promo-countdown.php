@@ -7,6 +7,8 @@
  * AI Hint: Four-tier pricing grid with a deadline on it — a centred H2 and lead, a Monthly/Yearly segmented control, then four bordered cards each holding the plan name, an oversized interval-aware price, a cadence line, a hairline rule, a check list and a full-width button pinned to the card bottom, where the recommended tier is capped by a filled ribbon carrying a clock badge and a running countdown, and a muted checkout line above a row of payment marks closes it; reach for it when a promotion has an actual deadline and the page should say so without a popup.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 // The countdown needs a real instant, and a date hard-coded into a pattern file
 // is wrong the day after it is written: too far out and the preview reads in
 // thousands of hours, past and the block hides itself entirely. Computing it as

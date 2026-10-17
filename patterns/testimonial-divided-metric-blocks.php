@@ -7,6 +7,8 @@
  * AI Hint: Social-proof section that reads as a list rather than a card wall — a centred heading and supporting line sit above a single bordered panel whose hairline-divided rows each run a wide quote along the left with the avatar, name, role and customer logo pinned to the right, followed by a three-column row of compact bordered blocks pairing an oversized figure with a caption and a one-line outcome; reach for it when two long quotes carry the section and the numbers should land underneath as separate proof points.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","testimonials"],"patternName":"shadcn/testimonial-divided-metric-blocks","name":"Testimonial Divided Metric Blocks"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

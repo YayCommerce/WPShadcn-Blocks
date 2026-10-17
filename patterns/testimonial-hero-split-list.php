@@ -7,6 +7,8 @@
  * AI Hint: Community or membership hero backed by proof — the left half carries a large centred heading, a short intro, a primary call-to-action button and a small uppercase label above a wrapping row of customer logos, while the right half stacks four rounded rows that alternate between filled and outlined, each holding a round avatar beside the member name and a short quote. Reach for it when the invitation and the social proof have to share one section.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"border":{"radius":"16px"},"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|8","bottom":"var:preset|spacing|9","left":"var:preset|spacing|8"},"blockGap":"var:preset|spacing|8"}},"backgroundColor":"muted","layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide has-muted-background-color has-background" style="border-radius:16px;padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--8);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--8)"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

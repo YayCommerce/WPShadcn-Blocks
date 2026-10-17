@@ -7,6 +7,8 @@
  * AI Hint: Text-only two-column timeline — a sticky statement and supporting paragraph on the left, and on the right a run of numbered rows separated by hairlines, each a large monospaced index beside a bold label and one line of detail; reach for it when an ordered set of results or principles should be scanned without any imagery.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","timeline"],"patternName":"shadcn/timeline-two-column-numbered-list","name":"Timeline Two Column Numbered List"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|7","left":"var:preset|spacing|9"}}}} -->

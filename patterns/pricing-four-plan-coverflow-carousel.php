@@ -7,6 +7,8 @@
  * AI Hint: Four-tier pricing presented as a looping coverflow carousel rather than a static row: a centred H2, supporting line and Monthly/Yearly switch sit above a perspective track where the middle plan card stands upright and full size while the cards either side rotate and recede; each card carries the plan name, a price that follows the switch with the cadence stacked below it, a short pitch, a full-width call to action, a Features rule and a tick list; arrows and dots drive the track, and it collapses to one card per view on phones; reach for it when four plans deserve equal weight and the section should feel like a shelf you browse.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:shadcn/pricing {"align":"","intervals":[{"key":"monthly","label":"Monthly"},{"key":"yearly","label":"Yearly"}],"defaultInterval":"monthly","style":{"spacing":{"blockGap":"var:preset|spacing|7"}},"layout":{"type":"default"}} -->

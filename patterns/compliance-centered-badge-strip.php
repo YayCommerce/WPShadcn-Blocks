@@ -7,6 +7,8 @@
  * AI Hint: The quietest trust strip: a narrow centred H2 with a one-sentence muted lead, a widely spaced row of four unlabelled round seal images, and one small filled button carrying a trailing arrow; reach for it when a page only needs a brief nod to assurance between two heavier sections.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","compliance"],"patternName":"shadcn/compliance-centered-badge-strip","name":"Compliance Centered Badge Strip"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"720px"}} -->

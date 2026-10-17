@@ -7,6 +7,8 @@
  * AI Hint: Image-free centred hero in a 760px column: a secondary badge with a sparkle, a fluid oversized h1, a two-sentence muted lead, a filled primary button next to an outline one, and a proof row pairing an overlapping five-avatar stack with a ghost rating badge above a small reassurance line; reach for it when the launch argument rests on customers already using the product rather than on a screenshot.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained","contentSize":"760px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"layout":{"type":"flex","justifyContent":"center"}} -->

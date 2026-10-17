@@ -7,6 +7,8 @@
  * AI Hint: Blog index — a left-aligned eyebrow, oversized headline and standfirst, then a topic dropdown that swaps a tinted accent spotlight band pairing a lead story with a wide cover image, and beneath it a three-column grid of bordered card-background posts each carrying a 16:9 image, a reading-time and date line, a linked title and a short excerpt; best for a topic-led journal where one long read should headline each category.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"760px","justifyContent":"left"}} -->

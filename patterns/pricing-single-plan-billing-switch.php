@@ -7,6 +7,8 @@
  * AI Hint: Single-plan pricing section built around a live billing toggle: centred H2 and supporting line, a Monthly/Yearly switch, then one narrow card holding the plan name, a price that swaps with the chosen interval, a positioning line, a rule, an included-features check list and two side-by-side buttons; reach for it when one plan is sold on two billing periods and the annual discount is the main argument.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"fontSize":"fluid-5-xl"} -->

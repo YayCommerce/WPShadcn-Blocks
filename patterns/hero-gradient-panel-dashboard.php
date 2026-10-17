@@ -7,6 +7,8 @@
  * AI Hint: Split hero with a tinted media wash — the left half stacks a two-line display h1, a two-sentence muted lead and one filled arrow button sitting inline with a small muted reassurance line, while the right half is an accent-tinted rounded panel insetting a bordered product screenshot above a compact stat card naming one figure; reach for it when the page wants a soft branded surface behind the interface shot and a single low-friction call to action.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Dense social-proof wall — a centred heading with a supporting line, then three columns of bordered cards whose quotes vary in length so the stacks settle at different heights; every card leads with a round avatar beside the author name and role and follows with a short muted quote. Reach for it when many short quotes should be visible at once without a rigid uniform grid.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

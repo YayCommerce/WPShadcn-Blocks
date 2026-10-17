@@ -7,6 +7,8 @@
  * AI Hint: Site footer — a wide five-column row where the first column stacks a small logo, a one-line product description, a row of plain social icons and an outlined status badge with a tick icon, followed by four link columns each headed by a small bold label, closed by a legal line opposite a short credit; reach for it when the footer should reassure visitors that the service is up while still exposing the full site map.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","footer"],"patternName":"shadcn/status-badge-columns-footer","name":"Status Badge Columns Footer"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|4","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

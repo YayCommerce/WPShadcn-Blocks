@@ -7,6 +7,8 @@
  * AI Hint: Multi-section case study page for one building — a near-full-height edge-to-edge photograph dimmed behind white text with a small uppercase label pinned high and an oversized project title with its location and completion year sitting low, then a readable 800px column carrying a lead paragraph and two labelled prose sections, an arrow-driven carousel of five captioned photographs at the wide measure, a very wide panoramic shot and a four-up grid of square detail images; reach for it when one project needs a full page of images and explanation rather than a card in a portfolio grid.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-architecture-carousel-sections","name":"Project Page Architecture Carousel Sections"},"align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"0"},"blockGap":"0"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:0;padding-bottom:0"><!-- wp:cover {"url":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","alt":"The field station raised on steel piles above the saltmarsh, its timber shutters open to the water on a grey morning","dimRatio":60,"minHeight":680,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|8","right":"var:preset|spacing|7","bottom":"var:preset|spacing|8","left":"var:preset|spacing|7"}}},"layout":{"type":"default"}} -->

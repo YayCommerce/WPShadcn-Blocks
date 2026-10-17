@@ -7,6 +7,8 @@
  * AI Hint: Centred community section — a badge eyebrow above a large heading and a muted lead line, then a three-column row of roomy bordered cards each carrying a labelled chip, a channel name and a two-line description, finished with a quiet reassurance sentence; best for inviting readers into chat, forum and newsletter channels from a docs, product or open-source page.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

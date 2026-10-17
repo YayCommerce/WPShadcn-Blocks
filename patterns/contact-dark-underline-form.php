@@ -7,6 +7,8 @@
  * AI Hint: Editorial dark contact band: a full-bleed inverted section with tall padding holds two columns — the left opens on an enormous heading closed by a raised asterisk, then a muted three-line paragraph and a row of two inline icon items pairing a phone glyph with a number and an envelope glyph with an address; the right carries a light rounded panel wrapping a name, email and message form whose submit label ends in an arrow; reach for it when the contact section should read as a bold typographic statement rather than a utility form.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"className":"is-style-shadcn-on-dark","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10","left":"var:preset|spacing|4","right":"var:preset|spacing|4"}}},"backgroundColor":"primary","textColor":"primary-foreground","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull is-style-shadcn-on-dark has-primary-foreground-color has-primary-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--4)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

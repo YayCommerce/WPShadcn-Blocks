@@ -7,6 +7,8 @@
  * AI Hint: Site footer — a wide brand row pairing a small logo with a large one-line statement above a hairline rule, then a four-part row in which three titled link columns sit left of a wider rail stacking an outlined star-count badge beside social icons, a short newsletter heading with a subscribe button, and a small status badge; reach for it when the footer should lead with a brand statement and still carry the site map, community proof and a signup in a single band.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4","right":"var:preset|spacing|4"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|8"}},"layout":{"type":"default"}} -->

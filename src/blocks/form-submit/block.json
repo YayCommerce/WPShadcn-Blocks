@@ -6,7 +6,7 @@
   "title": "Form Submit Button",
   "category": "shadcn",
   "description": "A real submit button for the Form block, with a pending spinner while sending.",
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "keywords": ["submit", "button", "form", "send"],
   "supports": {
     "html": false,

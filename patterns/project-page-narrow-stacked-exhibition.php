@@ -7,6 +7,8 @@
  * AI Hint: Single-project exhibition page built as one narrow column at a 720px reading measure rather than a wide layout — an oversized title sits above two paragraphs of description, then three captioned photographs stack one above another at the same narrow width with generous space between them, a hairline rule introduces a four-column credit row carrying venue, dates, curator and medium as tiny uppercase labels over bold values, and a short muted statement closes the page; reach for it when one show or one body of work needs a quiet, book-like page instead of a gallery grid.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-narrow-stacked-exhibition","name":"Project Page Narrow Stacked Exhibition"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained","contentSize":"720px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained"}} -->

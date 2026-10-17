@@ -7,6 +7,8 @@
  * AI Hint: Compact grouped FAQ on the page background — a modest heading and one muted line ending in an underlined support link on the left, and on the right three uppercase topic labels each sitting directly above two or three hairline-separated collapsed accordion rows with no rule of their own; reach for it when the questions are short, the topics are obvious, and the section has to sit quietly between two louder ones.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|4","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|7","left":"var:preset|spacing|8"}}}} -->

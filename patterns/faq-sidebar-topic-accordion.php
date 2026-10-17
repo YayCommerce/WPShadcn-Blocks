@@ -7,6 +7,8 @@
  * AI Hint: FAQ with a topic sidebar — the narrow left column carries an oversized two-line heading above four stacked category labels, the current one sitting in a rounded tinted block, and the wide right column repeats that category as a muted label over five hairline-separated collapsed accordion rows; reach for it when a help section has four or more topics and the reader needs to see the whole map before picking one.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","right":"var:preset|spacing|4","bottom":"var:preset|spacing|10","left":"var:preset|spacing|4"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--4)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

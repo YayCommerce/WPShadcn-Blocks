@@ -7,6 +7,8 @@
  * AI Hint: Centred launch hero in a 760px column — an outline badge linking to the announcement, a fluid oversized h1, a two-line muted lead and a filled button beside an outline one — closing on a full-width triptych of three equal photographic covers, each dimmed at half strength with a single white caption pinned to the bottom of the frame; reach for it when the launch is visual and the proof is three images read left to right, rather than a screenshot or a logo wall.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained","contentSize":"760px"}} -->

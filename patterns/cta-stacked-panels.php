@@ -7,6 +7,8 @@
  * AI Hint: Product-marketing call to action that trades a plain band for depth — a full-bleed accent strip with hairlines above and below, a large heading, one supporting sentence and a single primary button in the left cell, and in the right cell a row of three equal-height card panels, each holding an icon badge at the top and a short titled step at the bottom; reach for it when the closing section should also show the shape of the product rather than only asking for the click.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","call-to-action"],"patternName":"shadcn/cta-stacked-panels","name":"CTA Stacked Panels"},"align":"full","style":{"border":{"top":{"color":"var:preset|color|border","width":"1px","style":"solid"},"bottom":{"color":"var:preset|color|border","width":"1px","style":"solid"}},"spacing":{"padding":{"top":"var:preset|spacing|10","right":"var:preset|spacing|5","bottom":"var:preset|spacing|10","left":"var:preset|spacing|5"}}},"backgroundColor":"muted","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-muted-background-color has-background" style="border-top-color:var(--wp--preset--color--border);border-top-style:solid;border-top-width:1px;border-bottom-color:var(--wp--preset--color--border);border-bottom-style:solid;border-bottom-width:1px;padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

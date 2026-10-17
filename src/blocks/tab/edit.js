@@ -18,7 +18,7 @@ import { __ } from "@wordpress/i18n";
  * Default panel content.
  */
 const TEMPLATE = [
-  ["core/paragraph", { placeholder: __("Add content…", "shadcn-blocks") }],
+  ["core/paragraph", { placeholder: __("Add content…", "yaycommerce-blocks-for-shadcn-ui") }],
 ];
 
 /**
@@ -50,21 +50,21 @@ export default function Edit({ attributes, setAttributes }) {
     <>
       <InspectorControls>
         <ToolsPanel
-          label={__("Settings", "shadcn-blocks")}
+          label={__("Settings", "yaycommerce-blocks-for-shadcn-ui")}
           resetAll={() => setAttributes({ disabled: false })}
         >
           <ToolsPanelItem
-            label={__("Disabled", "shadcn-blocks")}
+            label={__("Disabled", "yaycommerce-blocks-for-shadcn-ui")}
             isShownByDefault
             hasValue={() => !!disabled}
             onDeselect={() => setAttributes({ disabled: false })}
           >
             <ToggleControl
               __nextHasNoMarginBottom
-              label={__("Disabled", "shadcn-blocks")}
+              label={__("Disabled", "yaycommerce-blocks-for-shadcn-ui")}
               help={__(
                 "Prevent this tab from being opened.",
-                "shadcn-blocks"
+                "yaycommerce-blocks-for-shadcn-ui"
               )}
               checked={!!disabled}
               onChange={(value) => setAttributes({ disabled: value })}
@@ -79,7 +79,7 @@ export default function Edit({ attributes, setAttributes }) {
           className="wp-block-shadcn-tab__label"
           value={label || ""}
           onChange={(value) => setAttributes({ label: value })}
-          placeholder={__("Tab label", "shadcn-blocks")}
+          placeholder={__("Tab label", "yaycommerce-blocks-for-shadcn-ui")}
           allowedFormats={[]}
         />
         <div {...panelProps} />

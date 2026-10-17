@@ -7,6 +7,8 @@
  * AI Hint: Call to action — a soft grey full-width band centring a small icon badge, a large headline, one supporting line, a single subscribe button and a wrapping row of three tick-marked benefit labels beneath it; reach for it when a page needs a calm mailing-list invitation that states what a subscriber actually gets.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","call-to-action"],"patternName":"shadcn/cta-newsletter-benefit-band","name":"CTA Newsletter Benefit Band"},"align":"full","backgroundColor":"muted","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","right":"var:preset|spacing|4","bottom":"var:preset|spacing|10","left":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-muted-background-color has-background" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"layout":{"type":"flex","justifyContent":"center"}} -->

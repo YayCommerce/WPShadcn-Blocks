@@ -7,6 +7,8 @@
  * AI Hint: Careers section — a large left-aligned page title with a short muted lead, then one hairline-divided group per department whose heading carries the first rule and whose rows each pair a linked role title and a smaller muted location line on the left with a ghost "View role" arrow badge pinned right; reach for it on a jobs page that wants a plain, scannable department-grouped list rather than cards, filters, or a table.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","careers"],"patternName":"shadcn/careers-department-role-list","name":"Careers Department Role List"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Careers listing laid out as a table — a centred heading and muted two-line lead, then a hairline-divided group whose first row carries tiny uppercase column labels for department, role and location and whose following rows each hold an outline department badge, a semibold linked role title, a muted location and a right-aligned arrow link, closing on a centred note and a speculative-application link; best for a jobs page where readers scan by department and location rather than by card.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","careers"],"patternName":"shadcn/careers-openings-table","name":"Careers Openings Table"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"640px"}} -->

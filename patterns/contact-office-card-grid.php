@@ -7,6 +7,8 @@
  * AI Hint: Four bordered office cards laid two to a row, each opening with a short image band that overlays an uppercase region label and a large city name at its bottom-left, then listing address, telephone and inbox as icon-and-text rows and closing with a full-width outline button carrying an external-link icon; reach for it when a contact page has to present several offices with equal weight and full contact details for each.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

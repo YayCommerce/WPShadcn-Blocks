@@ -7,6 +7,8 @@
  * AI Hint: Single-project case study page built as a narrow-wide split — the left column holds a sticky panel with the project title, a row of discipline badges and two paragraphs of description that stay pinned while the right column scrolls a tall stack of three 4:5 portrait images past it, then a full-width three-column grid of bordered related-project cards, each with an image, a title and a one-line category shown at rest; reach for it when one project needs an image-led page and the reader should keep the project name and scope in view the whole way down.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-sticky-badges-portrait-scroll","name":"Project Page Sticky Badges Portrait Scroll"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|10"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|10"}}}} -->

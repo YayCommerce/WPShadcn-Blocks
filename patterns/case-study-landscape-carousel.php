@@ -7,6 +7,8 @@
  * AI Hint: Case-study carousel — a short left-set headline and muted lead sit above a full-width sliding track of five wide landscape cards, each a dimmed photograph carrying a small white client wordmark at the top and a sector label at the bottom, with a caption block beneath the photograph holding the case headline, a two-line summary and a ghost "Read the story" link; arrows and dots step two cards at a time on desktop, two on tablet and one on mobile with no autoplay, so reach for it when case studies need room for a real summary rather than a one-line result, and when quotes, portraits and metrics are handled elsewhere on the page.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","case-studies"],"patternName":"shadcn/case-study-landscape-carousel","name":"Case Study Landscape Carousel"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"metadata":{"name":"Intro"},"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"720px","justifyContent":"left"}} -->

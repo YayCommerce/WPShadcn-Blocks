@@ -7,6 +7,8 @@
  * AI Hint: Split awards layout — left column holds a badge, headline, intro and a divided award/year list; right column is a muted spotlight tile with an image cover, product summary, three divided metric rows and an outline button; best for a studio or product page proving track record.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","awards"],"patternName":"shadcn/awards-split-product-spotlight","name":"Awards Split Product Spotlight"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|9","left":"var:preset|spacing|9"}}}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Low-key call to action — a rounded card drawn with a one-pixel dashed border and no fill centres a headline, a muted supporting sentence and a solid-plus-outline button pair; reach for it when a conversion prompt should read as an invitation placed on the page rather than a filled banner competing with the surrounding content.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","style":{"border":{"color":"var:preset|color|border","width":"1px","style":"dashed","radius":"16px"},"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|7","bottom":"var:preset|spacing|9","left":"var:preset|spacing|7"},"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained","contentSize":"640px"}} -->

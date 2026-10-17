@@ -23,7 +23,7 @@ export default function Edit({ attributes, setAttributes }) {
         tagName="div"
         value={title || ""}
         onChange={(value) => setAttributes({ title: value })}
-        placeholder={__("Alert Title", "shadcn-blocks")}
+        placeholder={__("Alert Title", "yaycommerce-blocks-for-shadcn-ui")}
         allowedFormats={["core/bold", "core/italic", "core/link"]}
       />
     </div>

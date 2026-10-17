@@ -7,6 +7,8 @@
  * AI Hint: Contained image call to action — a rounded, inset photo panel (not edge to edge) whose dark gradient wash keeps a centred stack of uppercase eyebrow, oversized white headline, one reassuring line of body copy and a single high-contrast button legible over the picture; reach for it when a section needs the weight of photography but the page should still read as a series of cards rather than full-bleed bands. The overlay treatment is a one-attribute swap on the cover block — drop customGradient for a flat dim, or replace it with a radial-gradient for a vignette — so the same layout covers every overlay style.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:cover {"url":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","alt":"Folded paper sculpture lit from one side, its curves fanning across the frame","customGradient":"linear-gradient(180deg,rgba(9,9,11,0.3) 0%,rgba(9,9,11,0.78) 100%)","dimRatio":100,"minHeight":480,"minHeightUnit":"px","align":"wide","style":{"border":{"radius":"16px"},"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|6","bottom":"var:preset|spacing|9","left":"var:preset|spacing|6"}}},"layout":{"type":"constrained","contentSize":"680px"}} -->

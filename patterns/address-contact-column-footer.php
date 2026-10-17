@@ -7,6 +7,8 @@
  * AI Hint: Site footer — a double-width first column holding the logo above a stack of labelled contact details (office address, phone number, email address, each introduced by a small icon badge) and a row of social icons, with four titled lists of navigation links alongside and a copyright-plus-policy-links bar under a hairline; reach for it when the business address and contact routes have to live in the footer rather than on a separate contact page.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4","right":"var:preset|spacing|4"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|8"}},"layout":{"type":"default"}} -->

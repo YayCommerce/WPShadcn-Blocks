@@ -7,6 +7,8 @@
  * AI Hint: Single-project case study page built on a centred axis — an uppercase eyebrow above a large project title and a one-line summary, a row of four metadata items across the wide measure, then three short prose sections labelled Challenge, Approach and Result, each a small uppercase heading over two centred paragraphs held to a readable measure, with a full-width image between each pair so the page reads prose, image, prose, image, prose; reach for it when one project deserves a calm symmetrical page of its own rather than a slot in a portfolio grid.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-centered-alternating-sections","name":"Project Page Centered Alternating Sections"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"default"}} -->

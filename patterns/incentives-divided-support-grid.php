@@ -7,6 +7,8 @@
  * AI Hint: Framed four-up support panel — one rounded outline box divided into four equal cells by vertical hairlines, each cell centering a small icon over a large title and a two-line muted description, with no heading above it; reach for it on a help or service landing page where the four routes to assistance should read as one object rather than four separate cards.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","incentives"],"patternName":"shadcn/incentives-divided-support-grid","name":"Incentives Divided Support Grid"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"align":"wide","style":{"border":{"color":"var:preset|color|border","width":"1px","style":"solid","radius":"12px"}},"layout":{"type":"default"}} -->

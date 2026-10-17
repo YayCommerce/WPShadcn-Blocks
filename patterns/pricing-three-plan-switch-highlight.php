@@ -7,6 +7,8 @@
  * AI Hint: Three-card pricing section with a centred H2, supporting line and a single shared billing switch that retimes every price at once, then a three-column grid where each card leads with the plan name, an interval-aware price, a full-width button and a check list underneath, and the recommended middle card is picked out with a muted background and a thicker border; reach for it when one tier should be visibly recommended and all plans share the same billing period.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"fontSize":"fluid-5-xl"} -->

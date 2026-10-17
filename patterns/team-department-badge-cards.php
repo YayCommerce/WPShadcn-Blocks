@@ -7,6 +7,8 @@
  * AI Hint: Compact team roster with department tags — a centred headline, intro and primary hiring button sit above a four-column grid of small bordered cards holding a round portrait, name, role and an outline department badge, closing on a second hiring call to action; reach for it on a careers or about page that needs a scannable roster rather than bios.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained","contentSize":"720px"}} -->

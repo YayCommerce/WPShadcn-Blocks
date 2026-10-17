@@ -7,6 +7,8 @@
  * AI Hint: Compact open FAQ grid with no badge or lead, where a centred two-line heading sits above four entries laid out two across, each opening with a small line icon beside a bold title on one row and a muted three-to-four-line answer directly under it; reach for it when a short set of reassurance questions should read as one calm block rather than a list the reader has to expand.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10","left":"var:preset|spacing|4","right":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained","contentSize":"900px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"layout":{"type":"constrained","contentSize":"640px"}} -->

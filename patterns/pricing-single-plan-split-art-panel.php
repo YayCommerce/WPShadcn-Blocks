@@ -7,6 +7,8 @@
  * AI Hint: Single-plan pricing section split into an art panel and a details column: a full-height rounded cover image holds an eyebrow and the section heading against the photograph, while the opposite column stacks positioning copy, a bordered strip pairing an interval-aware price with the Monthly/Yearly switch, a description, a rule, a check list and one call-to-action button; reach for it when the plan is being sold on brand feel as much as on features.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:shadcn/pricing {"align":"","intervals":[{"key":"monthly","label":"Monthly"},{"key":"yearly","label":"Yearly (-20%)"}],"defaultInterval":"monthly","layout":{"type":"default"}} -->

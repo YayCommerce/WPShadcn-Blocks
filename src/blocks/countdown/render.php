@@ -20,13 +20,13 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$target_raw = isset( $attributes['targetDate'] ) ? trim( (string) $attributes['targetDate'] ) : '';
+$shadcn_target_raw = isset( $attributes['targetDate'] ) ? trim( (string) $attributes['targetDate'] ) : '';
 
 // An unconfigured countdown renders nothing rather than a permanent 00:00:00,
 // which on a live page reads as a broken promotion. The editor shows a visible
 // "set an end date" placeholder so this is caught while writing, not after
 // publishing.
-if ( '' === $target_raw ) {
+if ( '' === $shadcn_target_raw ) {
 	return;
 }
 
@@ -34,40 +34,40 @@ try {
 	// A naive value ("2026-12-31T23:59:59") is read in the site's timezone,
 	// which is what the author picked in the editor. A value carrying its own
 	// offset keeps that offset.
-	$target = new DateTimeImmutable( $target_raw, wp_timezone() );
+	$shadcn_target = new DateTimeImmutable( $shadcn_target_raw, wp_timezone() );
 } catch ( Exception $e ) {
 	return;
 }
 
-$show_days     = ! isset( $attributes['showDays'] ) || (bool) $attributes['showDays'];
-$show_seconds  = ! isset( $attributes['showSeconds'] ) || (bool) $attributes['showSeconds'];
-$show_labels   = ! empty( $attributes['showLabels'] );
-$pulse         = ! empty( $attributes['pulseSeparator'] );
-$on_expire     = isset( $attributes['onExpire'] ) ? (string) $attributes['onExpire'] : 'hide';
-$expired_text  = isset( $attributes['expiredMessage'] ) ? (string) $attributes['expiredMessage'] : '';
-$separator     = isset( $attributes['separator'] ) ? (string) $attributes['separator'] : ':';
-$separator     = '' === $separator ? '' : mb_substr( $separator, 0, 3 );
+$shadcn_show_days     = ! isset( $attributes['showDays'] ) || (bool) $attributes['showDays'];
+$shadcn_show_seconds  = ! isset( $attributes['showSeconds'] ) || (bool) $attributes['showSeconds'];
+$shadcn_show_labels   = ! empty( $attributes['showLabels'] );
+$shadcn_pulse         = ! empty( $attributes['pulseSeparator'] );
+$shadcn_on_expire     = isset( $attributes['onExpire'] ) ? (string) $attributes['onExpire'] : 'hide';
+$shadcn_expired_text  = isset( $attributes['expiredMessage'] ) ? (string) $attributes['expiredMessage'] : '';
+$shadcn_separator     = isset( $attributes['separator'] ) ? (string) $attributes['separator'] : ':';
+$shadcn_separator     = '' === $shadcn_separator ? '' : mb_substr( $shadcn_separator, 0, 3 );
 
-if ( ! in_array( $on_expire, array( 'hide', 'zeros', 'message' ), true ) ) {
-	$on_expire = 'hide';
+if ( ! in_array( $shadcn_on_expire, array( 'hide', 'zeros', 'message' ), true ) ) {
+	$shadcn_on_expire = 'hide';
 }
 
-$remaining = max( 0, $target->getTimestamp() - time() );
-$expired   = 0 === $remaining;
+$shadcn_remaining = max( 0, $shadcn_target->getTimestamp() - time() );
+$shadcn_expired   = 0 === $shadcn_remaining;
 
-if ( $expired && 'hide' === $on_expire ) {
+if ( $shadcn_expired && 'hide' === $shadcn_on_expire ) {
 	return;
 }
 
-if ( $expired && 'message' === $on_expire ) {
-	if ( '' === trim( $expired_text ) ) {
+if ( $shadcn_expired && 'message' === $shadcn_on_expire ) {
+	if ( '' === trim( $shadcn_expired_text ) ) {
 		return;
 	}
 
 	printf(
 		'<div %1$s>%2$s</div>',
 		get_block_wrapper_attributes( array( 'class' => 'wp-block-shadcn-countdown is-expired' ) ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		esc_html( $expired_text )
+		esc_html( $shadcn_expired_text )
 	);
 	return;
 }
@@ -80,57 +80,57 @@ if ( $expired && 'message' === $on_expire ) {
 //
 // With days hidden the hours roll up instead of restarting, so a two-day sale
 // reads 48 hours rather than silently dropping a day.
-$parts = array();
+$shadcn_parts = array();
 
-if ( $show_days ) {
-	$parts['days'] = (int) floor( $remaining / DAY_IN_SECONDS );
-	$parts['hours'] = (int) floor( ( $remaining % DAY_IN_SECONDS ) / HOUR_IN_SECONDS );
+if ( $shadcn_show_days ) {
+	$shadcn_parts['days'] = (int) floor( $shadcn_remaining / DAY_IN_SECONDS );
+	$shadcn_parts['hours'] = (int) floor( ( $shadcn_remaining % DAY_IN_SECONDS ) / HOUR_IN_SECONDS );
 } else {
-	$parts['hours'] = (int) floor( $remaining / HOUR_IN_SECONDS );
+	$shadcn_parts['hours'] = (int) floor( $shadcn_remaining / HOUR_IN_SECONDS );
 }
 
-$parts['minutes'] = (int) floor( ( $remaining % HOUR_IN_SECONDS ) / MINUTE_IN_SECONDS );
+$shadcn_parts['minutes'] = (int) floor( ( $shadcn_remaining % HOUR_IN_SECONDS ) / MINUTE_IN_SECONDS );
 
-if ( $show_seconds ) {
-	$parts['seconds'] = (int) ( $remaining % MINUTE_IN_SECONDS );
+if ( $shadcn_show_seconds ) {
+	$shadcn_parts['seconds'] = (int) ( $shadcn_remaining % MINUTE_IN_SECONDS );
 }
 
-$labels = array(
-	'days'    => __( 'Days', 'shadcn-blocks' ),
-	'hours'   => __( 'Hrs', 'shadcn-blocks' ),
-	'minutes' => __( 'Min', 'shadcn-blocks' ),
-	'seconds' => __( 'Sec', 'shadcn-blocks' ),
+$shadcn_labels = array(
+	'days'    => __( 'Days', 'yaycommerce-blocks-for-shadcn-ui' ),
+	'hours'   => __( 'Hrs', 'yaycommerce-blocks-for-shadcn-ui' ),
+	'minutes' => __( 'Min', 'yaycommerce-blocks-for-shadcn-ui' ),
+	'seconds' => __( 'Sec', 'yaycommerce-blocks-for-shadcn-ui' ),
 );
 
-$units_html = '';
-$first      = true;
+$shadcn_units_html = '';
+$shadcn_first      = true;
 
-foreach ( $parts as $key => $value ) {
-	if ( ! $first && '' !== $separator ) {
-		$units_html .= sprintf(
+foreach ( $shadcn_parts as $shadcn_key => $shadcn_value ) {
+	if ( ! $shadcn_first && '' !== $shadcn_separator ) {
+		$shadcn_units_html .= sprintf(
 			'<span class="countdown-separator%1$s" aria-hidden="true">%2$s</span>',
-			$pulse ? ' is-pulsing' : '',
-			esc_html( $separator )
+			$shadcn_pulse ? ' is-pulsing' : '',
+			esc_html( $shadcn_separator )
 		);
 	}
 
-	$units_html .= sprintf(
+	$shadcn_units_html .= sprintf(
 		'<span class="countdown-unit" data-unit="%1$s"><span class="countdown-value">%2$s</span>%3$s</span>',
-		esc_attr( $key ),
-		esc_html( str_pad( (string) $value, 2, '0', STR_PAD_LEFT ) ),
-		$show_labels ? sprintf( '<span class="countdown-label">%s</span>', esc_html( $labels[ $key ] ) ) : ''
+		esc_attr( $shadcn_key ),
+		esc_html( str_pad( (string) $shadcn_value, 2, '0', STR_PAD_LEFT ) ),
+		$shadcn_show_labels ? sprintf( '<span class="countdown-label">%s</span>', esc_html( $shadcn_labels[ $shadcn_key ] ) ) : ''
 	);
 
-	$first = false;
+	$shadcn_first = false;
 }
 
-$wrapper_attributes = get_block_wrapper_attributes(
+$shadcn_wrapper_attributes = get_block_wrapper_attributes(
 	array(
 		'class'        => 'wp-block-shadcn-countdown',
-		'data-target'  => $target->setTimezone( new DateTimeZone( 'UTC' ) )->format( 'Y-m-d\TH:i:s\Z' ),
-		'data-days'    => $show_days ? '1' : '0',
-		'data-seconds' => $show_seconds ? '1' : '0',
-		'data-expire'  => $on_expire,
+		'data-target'  => $shadcn_target->setTimezone( new DateTimeZone( 'UTC' ) )->format( 'Y-m-d\TH:i:s\Z' ),
+		'data-days'    => $shadcn_show_days ? '1' : '0',
+		'data-seconds' => $shadcn_show_seconds ? '1' : '0',
+		'data-expire'  => $shadcn_on_expire,
 	)
 );
 
@@ -140,16 +140,16 @@ $wrapper_attributes = get_block_wrapper_attributes(
 // screen reader user needs.
 printf(
 	'<div %1$s><span class="screen-reader-text">%2$s</span><span class="countdown-units" aria-hidden="true">%3$s</span>%4$s</div>',
-	$wrapper_attributes, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	$shadcn_wrapper_attributes, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	esc_html(
 		sprintf(
 			/* translators: %s: formatted end date and time. */
-			__( 'Offer ends %s', 'shadcn-blocks' ),
-			wp_date( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), $target->getTimestamp() )
+			__( 'Offer ends %s', 'yaycommerce-blocks-for-shadcn-ui' ),
+			wp_date( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), $shadcn_target->getTimestamp() )
 		)
 	),
-	$units_html, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-	'message' === $on_expire && '' !== trim( $expired_text )
-		? sprintf( '<span class="countdown-expired-message" hidden>%s</span>', esc_html( $expired_text ) )
+	$shadcn_units_html, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	'message' === $shadcn_on_expire && '' !== trim( $shadcn_expired_text )
+		? sprintf( '<span class="countdown-expired-message" hidden>%s</span>', esc_html( $shadcn_expired_text ) )
 		: ''
 );

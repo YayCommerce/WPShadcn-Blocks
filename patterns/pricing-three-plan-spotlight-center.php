@@ -7,6 +7,8 @@
  * AI Hint: Three-column pricing grid where the centre card is the spotlight: it breaks the row by sitting above and below its neighbours on negative vertical margins, carries a two-pixel primary ring, deeper padding and a solid button, while the outer two keep a hairline border and outline buttons; each card holds a small tier label, a price with the period beside it that follows the Monthly/Yearly switch, a two-line pitch, a tick list and a button pinned to the bottom edge; reach for it when one of three tiers is the recommendation and you want that recommendation to read as physically raised rather than merely coloured.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:shadcn/pricing {"align":"wide","defaultInterval":"monthly","style":{"spacing":{"blockGap":"var:preset|spacing|8"}},"layout":{"type":"default"}} -->

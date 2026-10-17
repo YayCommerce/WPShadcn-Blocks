@@ -7,6 +7,8 @@
  * AI Hint: Single-plan pricing card with tabbed billing: a centred H2 and supporting line, then one bordered card holding a two-tab segmented control that swaps the plan name, the price figure and the plan blurb between a monthly and a yearly rate, with a hairline rule under it and one shared check list plus a full-width button that stay put whichever tab is open; best for a product sold on a single plan where the only decision is how often to pay.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","pricing"],"patternName":"shadcn/pricing-single-plan-tabbed-billing","name":"Pricing Single Plan Tabbed Billing"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:heading {"textAlign":"center","fontSize":"fluid-5-xl"} -->

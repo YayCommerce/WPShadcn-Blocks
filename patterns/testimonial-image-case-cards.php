@@ -7,6 +7,8 @@
  * AI Hint: Outcome-first social proof — a heading with a supporting line, then a three-column row of bordered cards where each card starts with an edge-to-edge image and continues with an oversized stat, a small caption and the result in bold, and underneath two equal muted panels whose quote sits behind a vertical accent bar with the author's square avatar, name and role on one side of the footer and the company mark on the other; best for a results or case-study page where the numbers should land before the quotes.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","testimonials"],"patternName":"shadcn/testimonial-image-case-cards","name":"Testimonial Image Case Cards"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"780px","justifyContent":"left"}} -->

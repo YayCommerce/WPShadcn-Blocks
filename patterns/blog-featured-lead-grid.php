@@ -7,6 +7,8 @@
  * AI Hint: Blog lead — a left-aligned header pairing a badge, oversized headline and supporting line, then one full-width featured article rendered as a dimmed cover photo with a category pill pinned top and a white linked title, excerpt, byline and outline read button pinned bottom, and beneath it a responsive three-across grid of six compact posts each carrying a rounded 16:9 thumbnail, a category and reading-time line and a linked title; best as a blog landing or magazine index where one story leads at full width and the rest stay scannable.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","posts"],"patternName":"shadcn/blog-featured-lead-grid","name":"Blog Featured Lead Grid"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"720px","justifyContent":"left"}} -->

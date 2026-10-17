@@ -7,6 +7,8 @@
  * AI Hint: Detail-rail contact section on a muted background: a left-aligned "Contact Us" heading and two-line lead sit above two columns split by a vertical hairline running down the gutter, with the narrow left rail stacking a corporate office address, three icon-and-text rows for phone, email and website, and a row of generic social glyphs, while the wider right column carries an "Inquiries" heading and a form for full name, work email, company, headcount and message closed by a right-aligned submit; reach for it when the company facts deserve equal billing with the form and the page wants a calmer, tinted treatment.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"backgroundColor":"muted","layout":{"type":"constrained","contentSize":"1120px"}} -->
 <div class="wp-block-group alignfull has-muted-background-color has-background" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"680px"}} -->

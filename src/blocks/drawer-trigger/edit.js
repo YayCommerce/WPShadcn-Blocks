@@ -11,7 +11,7 @@ const TEMPLATE = [
   [
     "core/button",
     {
-      text: __("Open Drawer", "shadcn-blocks"),
+      text: __("Open Drawer", "yaycommerce-blocks-for-shadcn-ui"),
       className: "is-style-outline",
       style: {
         typography: {

@@ -7,6 +7,8 @@
  * AI Hint: Trust panel that answers a security questionnaire in one screen: a pill badge and centred heading introduce two bordered cards side by side, the left listing three safeguards as check rows with a bold label over a two-line muted note, the right holding a two-by-two grid of tinted tiles that each show a round seal above a small centred scheme name; reach for it when a buyer needs both the narrative and the badge wall before they will forward your page internally.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10","left":"var:preset|spacing|4","right":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|8"}},"backgroundColor":"muted","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-muted-background-color has-background" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

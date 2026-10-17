@@ -7,6 +7,8 @@
  * AI Hint: Editorial project showcase — a full-width serif title set in oversized uppercase across the top, followed by three widely spaced rows that each pair a narrow left column holding a small uppercase project name and a four-line muted description centred against its row with a large bordered, softly rounded image filling the wider right column; reach for it when a studio wants a handful of projects to read like magazine spreads rather than a grid of thumbnails.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-editorial-split-showcase","name":"Project Editorial Split Showcase"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|9"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:heading {"align":"wide","level":2,"style":{"typography":{"fontFamily":"Georgia, Times New Roman, serif","letterSpacing":"-0.01em","lineHeight":"0.95","textTransform":"uppercase"}},"fontSize":"fluid-7-xl"} -->

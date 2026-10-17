@@ -7,6 +7,8 @@
  * AI Hint: Blog carousel — a left-set badge, large headline and one-line intro sit above a full-width sliding track of six bordered cards that each open with a wide cover image, then a topic badge beside a calendar-marked date, a two-line article title and a short summary, with arrows stepping three cards at a time on desktop, two on tablet and one on mobile, and a centred outline button to the full archive beneath; best for a blog or newsroom index with more stories than a static grid can hold.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","posts"],"patternName":"shadcn/blog-card-carousel","name":"Blog Card Carousel"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"metadata":{"name":"Intro"},"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"flex","orientation":"vertical"}} -->

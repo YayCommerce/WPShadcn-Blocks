@@ -33,12 +33,12 @@ import { useEffect, useState } from "@wordpress/element";
  * Sample entry for the canvas. Never leaves the editor.
  */
 const SAMPLE = {
-  name: __("Sarah M.", "shadcn-blocks"),
-  location: __("Portland, OR", "shadcn-blocks"),
-  product: __("Ceramic Mug", "shadcn-blocks"),
-  time: __("4 min ago", "shadcn-blocks"),
+  name: __("Sarah M.", "yaycommerce-blocks-for-shadcn-ui"),
+  location: __("Portland, OR", "yaycommerce-blocks-for-shadcn-ui"),
+  product: __("Ceramic Mug", "yaycommerce-blocks-for-shadcn-ui"),
+  time: __("4 min ago", "yaycommerce-blocks-for-shadcn-ui"),
   // Simulated mode invents no one; this is the whole subject.
-  subject: __("Someone", "shadcn-blocks"),
+  subject: __("Someone", "yaycommerce-blocks-for-shadcn-ui"),
 };
 
 export default function Edit({ attributes, setAttributes }) {
@@ -119,63 +119,63 @@ export default function Edit({ attributes, setAttributes }) {
   return (
     <>
       <InspectorControls>
-        <PanelBody title={__("Source", "shadcn-blocks")}>
+        <PanelBody title={__("Source", "yaycommerce-blocks-for-shadcn-ui")}>
           <ToggleGroupControl
             __next40pxDefaultSize
             __nextHasNoMarginBottom
             isBlock
-            label={__("Where entries come from", "shadcn-blocks")}
+            label={__("Where entries come from", "yaycommerce-blocks-for-shadcn-ui")}
             value={source ?? "orders"}
             onChange={(value) => setAttributes({ source: value })}
           >
             <ToggleGroupControlOption
-              label={__("Real orders", "shadcn-blocks")}
+              label={__("Real orders", "yaycommerce-blocks-for-shadcn-ui")}
               value="orders"
             />
             <ToggleGroupControlOption
-              label={__("Simulated", "shadcn-blocks")}
+              label={__("Simulated", "yaycommerce-blocks-for-shadcn-ui")}
               value="simulated"
             />
           </ToggleGroupControl>
         </PanelBody>
 
         {isOrders && (
-          <PanelBody title={__("What to show", "shadcn-blocks")}>
+          <PanelBody title={__("What to show", "yaycommerce-blocks-for-shadcn-ui")}>
             <ToggleControl
               __nextHasNoMarginBottom
-              label={__("Buyer name", "shadcn-blocks")}
+              label={__("Buyer name", "yaycommerce-blocks-for-shadcn-ui")}
               help={__(
                 "Shown as a first name and a last initial. Full names never appear.",
-                "shadcn-blocks"
+                "yaycommerce-blocks-for-shadcn-ui"
               )}
               checked={!!showName}
               onChange={(value) => setAttributes({ showName: value })}
             />
             <ToggleControl
               __nextHasNoMarginBottom
-              label={__("Location", "shadcn-blocks")}
+              label={__("Location", "yaycommerce-blocks-for-shadcn-ui")}
               help={__(
                 "City and region only. In a small town a first name plus a city can be enough to identify the buyer — leave this off unless you have a reason.",
-                "shadcn-blocks"
+                "yaycommerce-blocks-for-shadcn-ui"
               )}
               checked={!!showLocation}
               onChange={(value) => setAttributes({ showLocation: value })}
             />
             <ToggleControl
               __nextHasNoMarginBottom
-              label={__("Product", "shadcn-blocks")}
+              label={__("Product", "yaycommerce-blocks-for-shadcn-ui")}
               checked={!!showProduct}
               onChange={(value) => setAttributes({ showProduct: value })}
             />
             <ToggleControl
               __nextHasNoMarginBottom
-              label={__("Product image", "shadcn-blocks")}
+              label={__("Product image", "yaycommerce-blocks-for-shadcn-ui")}
               checked={!!showImage}
               onChange={(value) => setAttributes({ showImage: value })}
             />
             <ToggleControl
               __nextHasNoMarginBottom
-              label={__("Time since the order", "shadcn-blocks")}
+              label={__("Time since the order", "yaycommerce-blocks-for-shadcn-ui")}
               checked={!!showTime}
               onChange={(value) => setAttributes({ showTime: value })}
             />
@@ -184,7 +184,7 @@ export default function Edit({ attributes, setAttributes }) {
 
         {isOrders && (
           <PanelBody
-            title={__("Which orders", "shadcn-blocks")}
+            title={__("Which orders", "yaycommerce-blocks-for-shadcn-ui")}
             initialOpen={false}
           >
             {belowThreshold && (
@@ -193,7 +193,7 @@ export default function Edit({ attributes, setAttributes }) {
                   /* translators: 1: number of qualifying orders, 2: the threshold. */
                   __(
                     "This shop has %1$d qualifying order(s) in the chosen window, and the toast stays hidden below %2$d. Lower the threshold, widen the window, or wait for more orders.",
-                    "shadcn-blocks"
+                    "yaycommerce-blocks-for-shadcn-ui"
                   ),
                   orderCount,
                   minOrders ?? 8
@@ -203,10 +203,10 @@ export default function Edit({ attributes, setAttributes }) {
 
             <RangeControl
               __nextHasNoMarginBottom
-              label={__("Stay quiet below", "shadcn-blocks")}
+              label={__("Stay quiet below", "yaycommerce-blocks-for-shadcn-ui")}
               help={__(
                 "A shop with only a handful of recent orders replays the same few people all day, which reads as less credible than showing nothing. Below this many matching orders the toast does not appear.",
-                "shadcn-blocks"
+                "yaycommerce-blocks-for-shadcn-ui"
               )}
               value={minOrders ?? 8}
               onChange={(value) => setAttributes({ minOrders: value })}
@@ -215,7 +215,7 @@ export default function Edit({ attributes, setAttributes }) {
             />
             <RangeControl
               __nextHasNoMarginBottom
-              label={__("Look back (days)", "shadcn-blocks")}
+              label={__("Look back (days)", "yaycommerce-blocks-for-shadcn-ui")}
               value={lookbackDays ?? 30}
               onChange={(value) => setAttributes({ lookbackDays: value })}
               min={1}
@@ -223,10 +223,10 @@ export default function Edit({ attributes, setAttributes }) {
             />
             <RangeControl
               __nextHasNoMarginBottom
-              label={__("Orders per fetch", "shadcn-blocks")}
+              label={__("Orders per fetch", "yaycommerce-blocks-for-shadcn-ui")}
               help={__(
                 "Entries are fetched in batches and rotated locally, so a larger batch means fewer requests.",
-                "shadcn-blocks"
+                "yaycommerce-blocks-for-shadcn-ui"
               )}
               value={batchSize ?? 10}
               onChange={(value) => setAttributes({ batchSize: value })}
@@ -237,33 +237,33 @@ export default function Edit({ attributes, setAttributes }) {
         )}
 
         {!isOrders && (
-          <PanelBody title={__("Simulated purchases", "shadcn-blocks")}>
+          <PanelBody title={__("Simulated purchases", "yaycommerce-blocks-for-shadcn-ui")}>
             <Notice status="warning" isDismissible={false}>
               {__(
                 "These notifications are generated, not real. Presenting invented purchases as genuine is restricted in the EU and the US — use this for a demo or a staging site, and think carefully before running it on a live shop.",
-                "shadcn-blocks"
+                "yaycommerce-blocks-for-shadcn-ui"
               )}
             </Notice>
 
             <p className="wp-block-shadcn-live-purchase__panel-note">
               {__(
                 "Products are drawn from your best sellers, in stock and visible in the catalogue. No buyer is invented: every notification reads \u201cSomeone just purchased\u2026\u201d, with no name and no location.",
-                "shadcn-blocks"
+                "yaycommerce-blocks-for-shadcn-ui"
               )}
             </p>
 
             <ToggleControl
               __nextHasNoMarginBottom
-              label={__("Product image", "shadcn-blocks")}
+              label={__("Product image", "yaycommerce-blocks-for-shadcn-ui")}
               checked={!!showImage}
               onChange={(value) => setAttributes({ showImage: value })}
             />
             <ToggleControl
               __nextHasNoMarginBottom
-              label={__("Time since the purchase", "shadcn-blocks")}
+              label={__("Time since the purchase", "yaycommerce-blocks-for-shadcn-ui")}
               help={__(
                 "Ages are spread across the last couple of hours and recalculated for each visitor.",
-                "shadcn-blocks"
+                "yaycommerce-blocks-for-shadcn-ui"
               )}
               checked={!!showTime}
               onChange={(value) => setAttributes({ showTime: value })}
@@ -271,10 +271,10 @@ export default function Edit({ attributes, setAttributes }) {
           </PanelBody>
         )}
 
-        <PanelBody title={__("Timing", "shadcn-blocks")} initialOpen={false}>
+        <PanelBody title={__("Timing", "yaycommerce-blocks-for-shadcn-ui")} initialOpen={false}>
           <RangeControl
             __nextHasNoMarginBottom
-            label={__("Seconds between toasts", "shadcn-blocks")}
+            label={__("Seconds between toasts", "yaycommerce-blocks-for-shadcn-ui")}
             value={rotationInterval ?? 12}
             onChange={(value) => setAttributes({ rotationInterval: value })}
             min={4}
@@ -282,10 +282,10 @@ export default function Edit({ attributes, setAttributes }) {
           />
           <RangeControl
             __nextHasNoMarginBottom
-            label={__("Seconds on screen", "shadcn-blocks")}
+            label={__("Seconds on screen", "yaycommerce-blocks-for-shadcn-ui")}
             help={__(
               "Kept below the interval, so one toast finishes leaving before the next arrives.",
-              "shadcn-blocks"
+              "yaycommerce-blocks-for-shadcn-ui"
             )}
             value={displayDuration ?? 6}
             onChange={(value) => setAttributes({ displayDuration: value })}
@@ -295,20 +295,20 @@ export default function Edit({ attributes, setAttributes }) {
           />
           <ToggleControl
             __nextHasNoMarginBottom
-            label={__("Show a dismiss button", "shadcn-blocks")}
+            label={__("Show a dismiss button", "yaycommerce-blocks-for-shadcn-ui")}
             help={__(
               "Dismissing hides the toast for the rest of the visit, not forever.",
-              "shadcn-blocks"
+              "yaycommerce-blocks-for-shadcn-ui"
             )}
             checked={!!dismissible}
             onChange={(value) => setAttributes({ dismissible: value })}
           />
           <ToggleControl
             __nextHasNoMarginBottom
-            label={__("Hide on small screens", "shadcn-blocks")}
+            label={__("Hide on small screens", "yaycommerce-blocks-for-shadcn-ui")}
             help={__(
               "Worth turning on for shops: a corner toast can land on top of the add-to-cart button on a phone.",
-              "shadcn-blocks"
+              "yaycommerce-blocks-for-shadcn-ui"
             )}
             checked={!!hideOnMobile}
             onChange={(value) => setAttributes({ hideOnMobile: value })}
@@ -321,7 +321,7 @@ export default function Edit({ attributes, setAttributes }) {
           <Notice status="warning" isDismissible={false}>
             {__(
               "Name, location and product are all switched off, so there is nothing to say and the block will not appear on the site.",
-              "shadcn-blocks"
+              "yaycommerce-blocks-for-shadcn-ui"
             )}
           </Notice>
         )}
@@ -340,12 +340,12 @@ export default function Edit({ attributes, setAttributes }) {
               )}{" "}
               {isOrders && showLocation && (
                 <span>
-                  {__("from", "shadcn-blocks")} {SAMPLE.location}
+                  {__("from", "yaycommerce-blocks-for-shadcn-ui")} {SAMPLE.location}
                 </span>
               )}{" "}
               {showProduct && (
                 <>
-                  <span>{__("just purchased", "shadcn-blocks")}</span>{" "}
+                  <span>{__("just purchased", "yaycommerce-blocks-for-shadcn-ui")}</span>{" "}
                   <strong>{SAMPLE.product}</strong>
                 </>
               )}
@@ -383,11 +383,11 @@ export default function Edit({ attributes, setAttributes }) {
           {isOrders
             ? __(
                 "Preview with sample data. On the site this floats in the corner of every page carrying this block, showing real recent orders.",
-                "shadcn-blocks"
+                "yaycommerce-blocks-for-shadcn-ui"
               )
             : __(
                 "Preview with sample data. On the site this floats in the corner and rotates through generated purchases of your products.",
-                "shadcn-blocks"
+                "yaycommerce-blocks-for-shadcn-ui"
               )}
         </p>
       </div>

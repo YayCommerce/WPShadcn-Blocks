@@ -7,6 +7,8 @@
  * AI Hint: Recruiting hero whose call to action is a pair of documents rather than buttons — a centred people badge, a centred H1 whose single emphasised word carries the weight of the sentence and a two-line muted lead, followed by two wide bordered cards that each pair a small muted file-type tile with a linked document name and a muted format-and-size line; best for a careers page that wants visitors to read the brief or handbook before they apply.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|9"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained","contentSize":"780px"}} -->

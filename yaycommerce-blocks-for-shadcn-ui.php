@@ -1,17 +1,16 @@
 <?php
 /**
- * Plugin Name: Shadcn Blocks
+ * Plugin Name: YayCommerce Blocks for Shadcn UI
  * Plugin URI: https://wpshadcn.com/
- * Description: Gutenberg blocks and 473 section patterns for the Shadcn theme, with a Lucide icon picker and AI prompt-to-layout page building.
+ * Description: Gutenberg blocks and 473 section patterns for the Shadcn theme, with a Lucide icon picker.
  * Version: 1.0.0
- * Requires at least: 6.5
+ * Requires at least: 6.6
  * Requires PHP: 7.4
- * Tested up to: 7.1
  * Author: YayCommerce
  * Author URI: https://wpshadcn.com/
  * License: GPLv3 or later
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
- * Text Domain: shadcn-blocks
+ * Text Domain: yaycommerce-blocks-for-shadcn-ui
  * Domain Path: /languages
  *
  * @package ShadcnBlocks
@@ -95,8 +94,18 @@ function shadcn_blocks_theme_notice() {
 	?>
 	<div class="notice notice-error">
 		<p>
-			<strong><?php esc_html_e( 'Shadcn Blocks', 'shadcn-blocks' ); ?>:</strong>
-			<?php printf( __( 'This plugin requires the %1$sShadcn%2$s theme to be active.', 'shadcn-blocks' ), '<a href="' . \admin_url( 'theme-install.php?search=shadcn' ) . '">', '</a>' ); ?>
+			<strong><?php esc_html_e( 'YayCommerce Blocks for Shadcn UI', 'yaycommerce-blocks-for-shadcn-ui' ); ?>:</strong>
+			<?php
+			echo wp_kses(
+				sprintf(
+					/* translators: 1: opening link tag, 2: closing link tag. */
+					esc_html__( 'This plugin requires the %1$sShadcn%2$s theme to be active.', 'yaycommerce-blocks-for-shadcn-ui' ),
+					'<a href="' . esc_url( \admin_url( 'theme-install.php?search=shadcn' ) ) . '">',
+					'</a>'
+				),
+				array( 'a' => array( 'href' => array() ) )
+			);
+			?>
 		</p>
 	</div>
 	<?php
@@ -127,7 +136,10 @@ function shadcn_blocks_init() {
 	require_once SHADCN_BLOCKS_DIR . 'inc/LivePurchase/Caller.php';
 	// Shadcn AI: plans pages out of the `shadcn/*` patterns this
 	// plugin registers, so it loads after the pattern loader above.
-	require_once SHADCN_BLOCKS_DIR . 'inc/ShadcnAi/Caller.php';
+	// Release builds leave it out for now (see release.sh).
+	if ( file_exists( SHADCN_BLOCKS_DIR . 'inc/ShadcnAi/Caller.php' ) ) {
+		require_once SHADCN_BLOCKS_DIR . 'inc/ShadcnAi/Caller.php';
+	}
 	\ShadcnBlocks\Icons::init();
 }
 add_action( 'plugins_loaded', 'shadcn_blocks_init' );

@@ -7,6 +7,8 @@
  * AI Hint: Two-plan pricing section that puts the heading on the left and a segmented monthly-yearly control on the right of the same row, then two compact cards holding only the plan name, price, one-line description and a full-width action button, with each plan's check list placed below its card and every feature row parted from the next by a dashed rule for a ledger-like rhythm; reach for it when the top of the section must stay short and the features should read as a receipt rather than as part of the card.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:shadcn/pricing {"align":"wide","intervals":[{"key":"monthly","label":"Monthly"},{"key":"yearly","label":"Yearly"}],"defaultInterval":"monthly","style":{"spacing":{"blockGap":"var:preset|spacing|7"}},"layout":{"type":"default"}} -->

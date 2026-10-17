@@ -7,6 +7,8 @@
  * AI Hint: Testimonial section led by a single featured quote — a square image on the left paired with a bordered card holding an oversized quote and the author's name and company — followed underneath by three equal bordered cards each carrying a short quote, a round avatar, and a name with job title. Best when one customer story deserves more weight than the rest.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|5","left":"var:preset|spacing|5"}}}} -->

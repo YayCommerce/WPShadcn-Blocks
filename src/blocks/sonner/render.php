@@ -38,7 +38,7 @@ if ( ! function_exists( 'block_shadcn_sonner_render' ) ) {
 
 		$label       = isset( $attributes['buttonLabel'] ) && '' !== $attributes['buttonLabel']
 			? (string) $attributes['buttonLabel']
-			: __( 'Show Toast', 'shadcn-blocks' );
+			: __( 'Show Toast', 'yaycommerce-blocks-for-shadcn-ui' );
 		$title       = isset( $attributes['toastTitle'] ) ? (string) $attributes['toastTitle'] : '';
 		$description = isset( $attributes['toastDescription'] ) ? (string) $attributes['toastDescription'] : '';
 

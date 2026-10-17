@@ -7,6 +7,8 @@
  * AI Hint: Testimonial carousel — one bordered card per slide, a square portrait and the author's name and role in a narrow left column, and in the wider right column a company logo beside the company name, a large serif quote, a hairline rule, and two oversized stat figures each with a label and a time-range caption; arrows and dots step between customer stories. Best for case-study style social proof where each quote comes with measurable results.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","testimonials"],"patternName":"shadcn/testimonial-stat-carousel","name":"Testimonial Stat Carousel"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5","right":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:shadcn/carousel {"slidesPerViewTablet":1,"slidesPerViewDesktop":1,"align":"wide"} -->

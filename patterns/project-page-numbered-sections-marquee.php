@@ -7,6 +7,8 @@
  * AI Hint: Single-project case study page for a photo series — an oversized title with a one-line summary, a hairline-topped row of four label and value pairs across the full width, three numbered sections each led by a large muted index beside a heading and two paragraphs, a two-column grid of four captioned images, and a continuously scrolling strip of six frames at the foot; reach for it when one body of work needs a long read with numbered chapters rather than a slot in a portfolio grid.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-numbered-sections-marquee","name":"Project Page Numbered Sections Marquee"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

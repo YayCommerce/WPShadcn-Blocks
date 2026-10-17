@@ -7,6 +7,8 @@
  * AI Hint: Sticky-preview services layout — a left panel holding one large portrait image, an uppercase label and a short paragraph stays pinned while the wider right column scrolls through five divided rows that each carry a numbered superscript, an oversized service title and a line of detail, closing on an outline button; reach for it on an agency or studio services page that wants oversized editorial type and a single steady image rather than a carousel.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|10"}}}} -->

@@ -6,7 +6,7 @@
   "title": "Bubble",
   "category": "shadcn",
   "description": "A conversational message bubble with variants and start/end alignment.",
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "keywords": ["bubble", "chat", "message", "conversation"],
   "supports": {
     "html": false,

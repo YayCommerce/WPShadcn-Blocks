@@ -21,6 +21,8 @@
 
 namespace ShadcnBlocks\ShadcnAi;
 
+defined( 'ABSPATH' ) || exit;
+
 class InProcessProxy {
 
 	/**
@@ -36,13 +38,12 @@ class InProcessProxy {
 	 * Blocking generation, same return shape as LlmClient::request(): the
 	 * normalized plan array.
 	 *
-	 * @param string $prompt       User's design request.
-	 * @param array  $site_context Optional site identity hints.
+	 * @param string $prompt User's design request.
 	 * @return array Normalized plan entries.
 	 * @throws LlmRequestException On provider or shape errors.
 	 */
-	public function request( $prompt, array $site_context = array() ) {
-		list( $system, $user ) = $this->build_messages( $prompt, $site_context );
+	public function request( $prompt ) {
+		list( $system, $user ) = $this->build_messages( $prompt );
 
 		try {
 			$plan = ( new \ShadcnAiProxy\OpenAiProvider() )->generate_plan( $system, $user );
@@ -59,13 +60,12 @@ class InProcessProxy {
 	 * then plan — so the REST route's stream handler cannot tell the
 	 * difference.
 	 *
-	 * @param string   $prompt       User's design request.
-	 * @param array    $site_context Optional site identity hints.
-	 * @param callable $on_event     fn(string $event, array $data): void.
+	 * @param string   $prompt   User's design request.
+	 * @param callable $on_event fn(string $event, array $data): void.
 	 * @throws LlmRequestException On provider or shape errors.
 	 */
-	public function request_stream( $prompt, array $site_context, $on_event ) {
-		list( $system, $user ) = $this->build_messages( $prompt, $site_context );
+	public function request_stream( $prompt, $on_event ) {
+		list( $system, $user ) = $this->build_messages( $prompt );
 
 		call_user_func( $on_event, 'status', array( 'stage' => 'designing' ) );
 
@@ -91,16 +91,15 @@ class InProcessProxy {
 	}
 
 	/**
-	 * @param string $prompt       User's design request.
-	 * @param array  $site_context Site identity hints.
+	 * @param string $prompt User's design request.
 	 * @return array{0: string, 1: string} [system prompt, user message]
 	 */
-	private function build_messages( $prompt, array $site_context ) {
+	private function build_messages( $prompt ) {
 		$prompt_builder = new \ShadcnAiProxy\PromptBuilder();
 
 		return array(
 			$prompt_builder->system_prompt(),
-			$prompt_builder->user_message( $prompt, ( new CatalogBuilder() )->build(), $site_context ),
+			$prompt_builder->user_message( $prompt, ( new CatalogBuilder() )->build(), array() ),
 		);
 	}
 

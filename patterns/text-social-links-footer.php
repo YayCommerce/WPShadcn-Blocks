@@ -7,6 +7,8 @@
  * AI Hint: Site footer — a logo and one-line description occupying a double-width first column beside four titled lists of navigation links, with a hairline rule and a bottom bar that puts the copyright opposite a row of social links shown as small icons with their network names spelled out, and the policy links on the line below; reach for it when the social accounts should be readable labels instead of bare glyphs.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4","right":"var:preset|spacing|4"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|8"}},"layout":{"type":"default"}} -->

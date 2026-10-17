@@ -7,6 +7,8 @@
  * AI Hint: Image-free centred hero in a 720px column: a fluid oversized h1, a two-line muted lead, a single filled primary button, then an overlapping four-avatar stack sitting directly above a bold headline number and a small muted caption naming what the number counts; reach for it when adoption volume is the strongest argument and the section should stay short enough to sit above the fold.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained","contentSize":"720px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:heading {"textAlign":"center","level":1,"fontSize":"fluid-7-xl"} -->

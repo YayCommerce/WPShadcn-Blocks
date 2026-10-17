@@ -7,6 +7,8 @@
  * AI Hint: Four-column row of saturated dark gradient tiles — blue, red, near-black and magenta — every tile pinning a labelled channel badge at the top and an arrow call-to-action at the bottom with a heading and one muted line between; best for the loudest community or contact section on a page, where a light card grid would read as too quiet.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"640px"}} -->

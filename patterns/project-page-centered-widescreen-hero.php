@@ -7,6 +7,8 @@
  * AI Hint: Single-project case study page for one piece of work — a centred oversized title with a centred one-line subtitle beneath it, then a full-bleed widescreen hero photograph running edge to edge with no rounding, and below it a two-column section with three prose paragraphs on the left and a narrower right column holding a short heading, a supporting paragraph and a stack of label-and-value project details; reach for it when a fashion, photography or editorial project deserves its own page led by one wide image rather than a gallery or a credits table.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-centered-widescreen-hero","name":"Project Page Centered Widescreen Hero"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"padding":{"right":"var:preset|spacing|5","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

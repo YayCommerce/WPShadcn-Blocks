@@ -7,6 +7,8 @@
  * AI Hint: Careers section split into a narrow sticky left column holding a "Job openings" badge, a large "Open Positions" heading and a short muted note on how the team hires, beside a wider right column of hairline-divided role rows that each stack a linked job title with its department badge, a one-line summary, and small ghost badges for contract type and location; best for a careers page with a handful of roles where the intro should stay in view while the list scrolls.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|10"}}}} -->

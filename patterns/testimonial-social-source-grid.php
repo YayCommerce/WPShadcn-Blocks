@@ -7,6 +7,8 @@
  * AI Hint: Review-wall section — a centred heading with a supporting line over six bordered cards laid out three across, where every card starts with a round avatar beside the author name and role on the left and a small linked platform logo on the right, then carries the quote underneath in muted text. Reach for it when the quotes were published somewhere public and each one should credit and link back to its source.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

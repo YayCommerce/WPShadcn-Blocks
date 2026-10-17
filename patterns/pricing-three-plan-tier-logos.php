@@ -7,6 +7,8 @@
  * AI Hint: Logo-forward three-tier pricing grid: a centred heading and lead sit above a segmented monthly/yearly control that swaps every price at once, then three equal cards each open with a square tier mark, the plan name and one supporting line, followed by a large figure with its billing caption beneath, a full-width button, and a hairline-divided band holding an uppercase Features label over small check rows that stays pinned to the bottom so the dividers line up across the row; the recommended card wears a solid ribbon across its top edge and a primary border. Reach for it when three tiers each carry their own brand mark and the section should read like a product line-up rather than a table.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"fontSize":"fluid-5-xl"} -->

@@ -7,6 +7,8 @@
  * AI Hint: Four-plan pricing comparison matrix with a pinned header: a left-aligned H2 and supporting line, then a sticky row pairing a Billing label and segmented monthly/yearly control with four small bordered plan cards carrying name, price and a register button, then named feature groups whose hairline-divided rows give a written value or a tick per plan and a caveat line underneath; best for a long feature list where the plan names must stay in view while reading.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","pricing"],"patternName":"shadcn/pricing-comparison-matrix-sticky","name":"Pricing Comparison Matrix Sticky"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"620px","justifyContent":"left"}} -->

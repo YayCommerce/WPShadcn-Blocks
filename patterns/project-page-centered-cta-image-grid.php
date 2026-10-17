@@ -7,6 +7,8 @@
  * AI Hint: Centred single-project exhibition page — an oversized title and a one-sentence description sit on the centre axis above a single centred button, then a one-line metadata strip runs the dates, venue, rooms and admission across a single row separated by middots, and beneath it a wide three-column grid holds six photographs at a consistent 4:3 crop, each with a short caption printed under the frame rather than hidden behind a hover; reach for it when one exhibition, collection or body of work needs its own page and the images themselves are the argument.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-centered-cta-image-grid","name":"Project Page Centered CTA Image Grid"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained"}} -->

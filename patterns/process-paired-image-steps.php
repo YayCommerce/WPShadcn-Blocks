@@ -7,6 +7,8 @@
  * AI Hint: Editorial process sequence — a left-aligned intro with eyebrow, heading, lead paragraph and an outline call to action, followed by four rows that alternate the photograph from side to side, each row carrying an oversized step number, a stage title and a short description; reach for it when every stage of a delivery, onboarding or production process deserves its own image at rest.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","process"],"patternName":"shadcn/process-paired-image-steps","name":"Process Paired Image Steps"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}},"backgroundColor":"background"} -->
 <div class="wp-block-group alignwide has-background-background-color has-background" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained","contentSize":"620px","justifyContent":"left"}} -->

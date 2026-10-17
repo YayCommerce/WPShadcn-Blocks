@@ -7,6 +7,8 @@
  * AI Hint: Alternating image-and-text project rows — a section heading sitting over a hairline, followed by four vertically centred two-column entries whose large rounded image swaps from left to right on every row while the facing column stacks a project title, a three-line summary and a flex row of secondary badges naming the disciplines; reach for it when a studio wants to walk a visitor through a handful of projects in editorial rhythm rather than a uniform grid.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-badge-image-rows","name":"Project Badge Image Rows"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"default"}} -->

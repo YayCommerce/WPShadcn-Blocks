@@ -7,6 +7,8 @@
  * AI Hint: Dense blog archive grid - a left-aligned oversized headline with a supporting line, then nine post cards laid out three to a row, each stacking a rounded cover image, a secondary category badge, a linked title, a two-line excerpt and a round avatar beside the author name and publication date, closing on an outline button to the full archive; best for a blog index or news landing page that needs to show a lot of recent posts at once.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"720px","justifyContent":"left"}} -->

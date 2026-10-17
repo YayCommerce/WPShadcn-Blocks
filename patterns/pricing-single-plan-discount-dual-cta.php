@@ -7,6 +7,8 @@
  * AI Hint: Single-plan pricing section built as one wide landscape card on a muted full-width band: the plan name sits beside a coloured discount badge, an oversized price with a billing note under it runs above a hairline rule, a labelled two-column check grid lists what is included, and a narrow right-hand column stacks a filled primary button over an outline secondary one; reach for it when the offer is a single plan with a promotion running and the visitor needs both a buy path and a talk-to-us path.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","right":"var:preset|spacing|4","bottom":"var:preset|spacing|10","left":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|7"}},"backgroundColor":"muted","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-muted-background-color has-background" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--4)"><!-- wp:heading {"textAlign":"center","style":{"typography":{"fontWeight":"600","lineHeight":"1.15"}},"fontSize":"fluid-4-xl"} -->

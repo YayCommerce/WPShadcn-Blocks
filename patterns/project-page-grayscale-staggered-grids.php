@@ -7,6 +7,8 @@
  * AI Hint: Grayscale case study page — a centred uppercase project title above a two-column image grid whose pictures carry deliberately different pixel heights so the two columns never line up row to row, every photograph pushed to black-and-white by the core duotone filter, followed by a wide metadata row of discipline, client and year, a short body essay held to a readable measure, and a full-width closing photograph; reach for it when one photographic or editorial project needs a quiet monochrome page of its own.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-grayscale-staggered-grids","name":"Project Page Grayscale Staggered Grids"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Agency about layout — labelled two-column intro with portrait, a row of three numbered process cards, three muted milestone figures, a full-width team photograph, a divided awards list, and a large closing quote with attribution; best for a studio or agency about page.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","about"],"patternName":"shadcn/about-agency-process-cards","name":"About Agency Process Cards"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}},"backgroundColor":"background"} -->
 <div class="wp-block-group alignwide has-background-background-color has-background" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|10"}}}} -->

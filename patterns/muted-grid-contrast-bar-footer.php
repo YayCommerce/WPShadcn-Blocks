@@ -7,6 +7,8 @@
  * AI Hint: Site footer — a muted full-width panel holding a logo and one-line tagline beside four titled columns of navigation links, closed by an edge-to-edge legal bar in a darker tone that carries a copyright line opposite policy links; reach for it when a page ending on white needs a quiet grey base and a clearly separated legal strip under a wide sitemap.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"blockGap":"0"}},"backgroundColor":"muted","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-muted-background-color has-background"><!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|4","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4"}}},"layout":{"type":"default"}} -->

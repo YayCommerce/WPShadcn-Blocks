@@ -7,6 +7,8 @@
  * AI Hint: Editorial about layout — a left column with the origin-story headline and lead paragraph above a two-up photo grid, beside a vertically offset right column holding a second photo grid over a workplace heading and two prose paragraphs; best for an image-forward about page where photography carries the story.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

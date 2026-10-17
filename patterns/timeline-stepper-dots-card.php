@@ -7,6 +7,8 @@
  * AI Hint: Numbered stepper with a detail card — a centred eyebrow badge, heading and intro, then a five-column track where each step shows a numbered dot filled for the steps already done and outlined for the ones ahead, with its title and a one-line note always readable beneath it, followed by a wide bordered card carrying a step counter badge, the current step heading, a paragraph, a ticked list of what it covers and a pair of buttons; reach for it on an onboarding, application or setup page where the reader needs to see the whole run of steps and the detail of exactly one of them.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","timeline"],"patternName":"shadcn/timeline-stepper-dots-card","name":"Timeline Stepper Dots Card"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"metadata":{"name":"Header"},"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"680px"}} -->

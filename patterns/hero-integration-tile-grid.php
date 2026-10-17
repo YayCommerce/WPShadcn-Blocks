@@ -7,6 +7,8 @@
  * AI Hint: Twelve small bordered tiles laid out as two six-column rows sit above a narrow centred stack of an oversized h1, a short muted lead and a filled primary button beside an outline button; reach for it when the pitch is that the product plugs into everything a team already runs, and the connection story should land before the words do.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}}} -->

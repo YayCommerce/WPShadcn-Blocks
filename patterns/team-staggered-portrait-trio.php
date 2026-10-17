@@ -7,6 +7,8 @@
  * AI Hint: Editorial three-person team band — a hairline top bar carrying a bracketed monospace label on the left and a hiring link on the right, a short headline underneath, then three tall cropped portraits dropped to staggered heights so the row reads as a composition rather than a table, each captioned with a name and role; reach for it when the team is small enough to name individually and the page wants a magazine feel rather than a directory.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|9"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","style":{"border":{"top":{"color":"var:preset|color|border","width":"1px","style":"solid"}},"spacing":{"padding":{"top":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|5"}},"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap","verticalAlignment":"center"}} -->

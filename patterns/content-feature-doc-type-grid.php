@@ -7,6 +7,8 @@
  * AI Hint: Guide page written as one narrow reading column — pill badge, H1, muted lead and a tall muted media panel, then an H2 over a two-column grid of small bordered cards that each pair a line icon with a bold name and a one-line note, followed by H2 sections holding numbered instructions with emphasised interface labels and a bordered tip callout; reach for it when a reader has to see every available option at a glance before following the steps in order.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained","contentSize":"780px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

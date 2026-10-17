@@ -7,6 +7,8 @@
  * AI Hint: Formless contact layout: a centred heading and a short muted line sit above two roughly equal columns, the left one a tall muted rounded panel holding a single centred image, the right one two stacked bordered cards of matched height whose headings pin to the top while the email lines and the two side-by-side office addresses pin to the bottom. Reach for it when a page should publish contact details and a location photo rather than capture an enquiry.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"560px"}} -->

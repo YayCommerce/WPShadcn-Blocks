@@ -18,9 +18,9 @@ import { __ } from '@wordpress/i18n';
  * Type options shared with render.php's allow-list.
  */
 const TYPE_OPTIONS = [
-	{ label: __( 'Text', 'shadcn-blocks' ), value: 'text' },
-	{ label: __( 'Email', 'shadcn-blocks' ), value: 'email' },
-	{ label: __( 'Phone', 'shadcn-blocks' ), value: 'tel' },
+	{ label: __( 'Text', 'yaycommerce-blocks-for-shadcn-ui' ), value: 'text' },
+	{ label: __( 'Email', 'yaycommerce-blocks-for-shadcn-ui' ), value: 'email' },
+	{ label: __( 'Phone', 'yaycommerce-blocks-for-shadcn-ui' ), value: 'tel' },
 ];
 
 /**
@@ -41,9 +41,9 @@ export default function Edit( { attributes, setAttributes } ) {
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={ __( 'Field Settings', 'shadcn-blocks' ) }>
+				<PanelBody title={ __( 'Field Settings', 'yaycommerce-blocks-for-shadcn-ui' ) }>
 					<SelectControl
-						label={ __( 'Type', 'shadcn-blocks' ) }
+						label={ __( 'Type', 'yaycommerce-blocks-for-shadcn-ui' ) }
 						value={ type }
 						options={ TYPE_OPTIONS }
 						onChange={ ( value ) =>
@@ -51,25 +51,25 @@ export default function Edit( { attributes, setAttributes } ) {
 						}
 					/>
 					<TextControl
-						label={ __( 'Placeholder', 'shadcn-blocks' ) }
+						label={ __( 'Placeholder', 'yaycommerce-blocks-for-shadcn-ui' ) }
 						value={ placeholder }
 						onChange={ ( value ) =>
 							setAttributes( { placeholder: value } )
 						}
 					/>
 					<ToggleControl
-						label={ __( 'Required', 'shadcn-blocks' ) }
+						label={ __( 'Required', 'yaycommerce-blocks-for-shadcn-ui' ) }
 						checked={ required }
 						onChange={ ( value ) =>
 							setAttributes( { required: value } )
 						}
 					/>
 					<TextControl
-						label={ __( 'Field name', 'shadcn-blocks' ) }
+						label={ __( 'Field name', 'yaycommerce-blocks-for-shadcn-ui' ) }
 						value={ fieldName }
 						help={ __(
 							'Optional. The submitted field key; derived from the label when empty.',
-							'shadcn-blocks'
+							'yaycommerce-blocks-for-shadcn-ui'
 						) }
 						onChange={ ( value ) =>
 							setAttributes( { fieldName: value } )
@@ -83,7 +83,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					className="wp-block-shadcn-input__label"
 					value={ label }
 					allowedFormats={ [] }
-					placeholder={ __( 'Label', 'shadcn-blocks' ) }
+					placeholder={ __( 'Label', 'yaycommerce-blocks-for-shadcn-ui' ) }
 					onChange={ ( value ) => setAttributes( { label: value } ) }
 				/>
 				{ /* readOnly: the control is a preview; typing belongs to the frontend. */ }

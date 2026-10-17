@@ -7,6 +7,8 @@
  * AI Hint: Documentary team page in four bands — a headline and lead, a three-across grid of tall portraits with name and role beneath, then rows separated by hairlines where a small label on the left sits beside a flowing run of alumni names, a matching row of outside collaborators, and a closing culture band whose notes fall into a two-column text grid; reach for it when a team page must credit people who have left or helped as well as the people currently on staff.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|9"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"720px","justifyContent":"left"}} -->

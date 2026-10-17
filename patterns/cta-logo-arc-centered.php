@@ -7,6 +7,8 @@
  * AI Hint: Integration call to action — an oversized centred headline sits above a single supporting line and one arrow-marked primary button, with a wrapping centred row of hairline-framed circular partner logos beneath as quiet proof; reach for it when the closing section of a platform or integrations page should sell the product and name the ecosystem it plugs into in one breath.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained","contentSize":"720px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:heading {"textAlign":"center","level":2,"style":{"typography":{"fontWeight":"700","letterSpacing":"-0.03em","lineHeight":"1.05"}},"fontSize":"fluid-5-xl"} -->

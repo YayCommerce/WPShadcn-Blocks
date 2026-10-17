@@ -7,6 +7,8 @@
  * AI Hint: Closing call to action that carries the number as well as the argument — a rounded full-bleed gradient panel with a dotted texture, a large white heading, a short paragraph and a light primary plus outline secondary button in the left cell, and in the right cell a real Pricing Price figure with its period caption stacked underneath and a short ticked list of what the price includes; reach for it at the foot of a product or pricing page where the visitor already understands the offer and only needs the cost and one last push.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","call-to-action"],"patternName":"shadcn/cta-gradient-pricing-split","name":"CTA Gradient Pricing Split"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","className":"is-style-shadcn-on-dark","style":{"border":{"radius":"20px"},"color":{"text":"#ffffff","gradient":"radial-gradient(rgba(255,255,255,0.07) 1px,rgba(0,0,0,0) 1px) 0 0/22px 22px,linear-gradient(115deg,rgb(10,10,11) 0%,rgb(33,33,37) 55%,rgb(63,63,70) 100%)"},"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|9"}}},"layout":{"type":"default"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Careers section — a left-aligned oversized heading, then one block per department introduced by a small solid dark badge instead of a heading, each followed by hairline-divided rows that pair a semibold role title, a single-line description and a pin-icon location badge on the left with a right-aligned arrow link badge; best for a jobs page with a handful of openings per team where each role needs a sentence of context rather than just a title and a city.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","careers"],"patternName":"shadcn/careers-badge-grouped-openings","name":"Careers Badge Grouped Openings"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:heading {"fontSize":"5-xl"} -->

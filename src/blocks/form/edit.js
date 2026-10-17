@@ -16,17 +16,17 @@ import { __ } from '@wordpress/i18n';
 const TEMPLATE = [
 	[
 		'shadcn/input',
-		{ label: __( 'Name', 'shadcn-blocks' ), required: true },
+		{ label: __( 'Name', 'yaycommerce-blocks-for-shadcn-ui' ), required: true },
 	],
 	[
 		'shadcn/input',
 		{
-			label: __( 'Email', 'shadcn-blocks' ),
+			label: __( 'Email', 'yaycommerce-blocks-for-shadcn-ui' ),
 			type: 'email',
 			required: true,
 		},
 	],
-	[ 'shadcn/textarea', { label: __( 'Message', 'shadcn-blocks' ) } ],
+	[ 'shadcn/textarea', { label: __( 'Message', 'yaycommerce-blocks-for-shadcn-ui' ) } ],
 	[ 'shadcn/form-submit', {} ],
 ];
 
@@ -51,31 +51,31 @@ export default function Edit( { attributes, setAttributes } ) {
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={ __( 'Form Settings', 'shadcn-blocks' ) }>
+				<PanelBody title={ __( 'Form Settings', 'yaycommerce-blocks-for-shadcn-ui' ) }>
 					<TextControl
-						label={ __( 'Form name', 'shadcn-blocks' ) }
+						label={ __( 'Form name', 'yaycommerce-blocks-for-shadcn-ui' ) }
 						value={ formName }
 						help={ __(
 							'Used as the email subject.',
-							'shadcn-blocks'
+							'yaycommerce-blocks-for-shadcn-ui'
 						) }
 						onChange={ ( value ) =>
 							setAttributes( { formName: value } )
 						}
 					/>
 					<TextControl
-						label={ __( 'Recipient email', 'shadcn-blocks' ) }
+						label={ __( 'Recipient email', 'yaycommerce-blocks-for-shadcn-ui' ) }
 						type="email"
 						value={ recipient }
 						help={
 							recipientLooksWrong
 								? __(
 										'This does not look like an email address; the site admin email will be used instead.',
-										'shadcn-blocks'
+										'yaycommerce-blocks-for-shadcn-ui'
 								  )
 								: __(
 										'Optional. Defaults to the site admin email.',
-										'shadcn-blocks'
+										'yaycommerce-blocks-for-shadcn-ui'
 								  )
 						}
 						onChange={ ( value ) =>
@@ -83,11 +83,11 @@ export default function Edit( { attributes, setAttributes } ) {
 						}
 					/>
 					<TextControl
-						label={ __( 'Success message', 'shadcn-blocks' ) }
+						label={ __( 'Success message', 'yaycommerce-blocks-for-shadcn-ui' ) }
 						value={ successMessage }
 						help={ __(
 							'Shown in place of the fields after a successful submit.',
-							'shadcn-blocks'
+							'yaycommerce-blocks-for-shadcn-ui'
 						) }
 						onChange={ ( value ) =>
 							setAttributes( { successMessage: value } )

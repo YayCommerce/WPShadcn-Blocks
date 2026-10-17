@@ -7,6 +7,8 @@
  * AI Hint: Single-plan pricing section whose card is defined by a heavy primary-coloured border down its left edge: a centred H2 and supporting line, then a card opening with a muted strip that holds the Monthly/Yearly switch, followed by the plan name beside a recommendation pill, a short description, an interval-aware price, a rule, a plain feature list and one full-width button; reach for it when a single offer needs a strong visual anchor without a second column to compare against.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"fontSize":"fluid-5-xl"} -->

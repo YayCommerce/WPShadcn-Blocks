@@ -7,6 +7,8 @@
  * AI Hint: Single-project case study page written as one column of prose — a small uppercase eyebrow above the project title and a one-line summary, a hairline-divided row carrying client, role, year and duration, then Challenge, Process and Outcome sections each headed by a small uppercase label and held to a readable 800px measure, with two captioned images breaking out to the full wide width between them; reach for it when a project needs to be read as an essay rather than shown as a gallery.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-single-column-case-study","name":"Project Page Single Column Case Study"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

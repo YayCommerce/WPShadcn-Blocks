@@ -7,6 +7,8 @@
  * AI Hint: Static FAQ list with nothing to click — a bold left-aligned H2 followed by seven rows in a narrow column, each pairing a bold question heading with a one or two line muted answer beneath it and a hairline closing the row; reach for it when the answers are short enough to read at a glance and hiding them behind a toggle would only add work, or when the page needs the whole set indexable and printable.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|4","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|6"}},"layout":{"type":"constrained","contentSize":"720px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:heading {"level":2,"style":{"typography":{"fontWeight":"700","letterSpacing":"-0.02em"}},"fontSize":"4-xl"} -->

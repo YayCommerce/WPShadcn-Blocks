@@ -7,6 +7,8 @@
  * AI Hint: Chronological company-history section — an eyebrow, heading and lead, then repeating milestones where a hairline rule carries a two-digit index on the left and the year on the right, followed by a rounded image card beside a milestone title and paragraph; reach for it for an about-page journey, a funding history, or any dated "how we got here" narrative.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","timeline"],"patternName":"shadcn/timeline-year-milestone-cards","name":"Timeline Year Milestone Cards"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"720px"}} -->

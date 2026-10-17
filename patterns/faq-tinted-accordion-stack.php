@@ -7,6 +7,8 @@
  * AI Hint: Detached-row FAQ — a one-word heading over a stack of five separate accordions, each rendered as a rounded muted-tinted bar holding a single bold question with a chevron on the right and a generous gap to the next bar; reach for it when a page needs only a handful of questions and the calm, well-spaced rhythm matters more than fitting many rows in a short column.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|6"}},"layout":{"type":"constrained","contentSize":"960px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:heading {"level":2,"style":{"typography":{"fontWeight":"700","letterSpacing":"-0.02em"}},"fontSize":"fluid-4-xl"} -->

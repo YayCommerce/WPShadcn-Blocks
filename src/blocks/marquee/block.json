@@ -8,7 +8,7 @@
 	"icon": "controls-repeat",
 	"description": "A continuously scrolling, seamless marquee for logos, testimonials, or any content.",
 	"keywords": [ "marquee", "ticker", "scroll", "logos" ],
-	"textdomain": "shadcn-blocks",
+	"textdomain": "yaycommerce-blocks-for-shadcn-ui",
 	"attributes": {
 		"speed": {
 			"type": "number",

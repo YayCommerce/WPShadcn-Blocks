@@ -7,6 +7,8 @@
  * AI Hint: Site footer — a left brand block stacking a logo, a small social icon row, a large statement tagline closed by a hairline and a primary button with a trailing arrow, sitting beside four titled link columns of which one replaces its flat list with two collapsible accordion groups, all closed by a legal row that puts a copyright line opposite contact and policy links; reach for it when a footer carries a marketing statement and a deep, partly collapsible sitemap at the same time.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4","right":"var:preset|spacing|4"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|9"}},"layout":{"type":"default"}} -->

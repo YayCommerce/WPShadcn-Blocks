@@ -7,6 +7,8 @@
  * AI Hint: Asymmetric image-free hero splitting a 1200px row into a wide left column holding a fluid oversized h1 over a small filled button with a chevron beside an outline button, and a narrow right column stacking a muted three-line lead, a small label, a heavy stat number and an overlapping four-avatar group that closes with a "+N" overflow chip; reach for it when the headline itself is the artwork and the numbers belong beside it rather than under it.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","right":"var:preset|spacing|4","bottom":"var:preset|spacing|10","left":"var:preset|spacing|4"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--4)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Editorial recognition ledger — a short label and large left-aligned heading sit above a hairline-ruled table whose header row reads Award, Category, and Year, followed by rows pairing a linked award name and one-line note with a small icon badge and a right-aligned year, closing on an outline link button; best for an about, studio, or portfolio page that needs a scannable list of honours without cards or imagery.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"640px","justifyContent":"left"}} -->

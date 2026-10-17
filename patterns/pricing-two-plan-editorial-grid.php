@@ -7,6 +7,8 @@
  * AI Hint: Editorial two-plan pricing laid out like a printed rate card — a left-aligned oversized H2 with a lead paragraph on a narrow measure, a segmented monthly/yearly control beneath them, then one thin-ruled frame split down the middle by a vertical hairline, each half carrying a muted tier label, a very large price figure, a one-line positioning statement above a rule, a check list of inclusions and a full-width call to action; reach for it when the brand favours restrained typographic hierarchy over cards, shadows and colour.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|5"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"620px","justifyContent":"left"}} -->

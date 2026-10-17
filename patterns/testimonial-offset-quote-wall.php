@@ -7,6 +7,8 @@
  * AI Hint: Social-proof wall — a small outline badge over a centred oversized heading and a supporting line, then eight compact quote cards spread across four columns whose tops are offset from one another so no two stacks share a baseline; each card holds a short quoted paragraph in muted text and closes with a round avatar beside the author name and role. Best for a page with many short quotes to show at once, where a flat uniform grid would look rigid.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","testimonials"],"patternName":"shadcn/testimonial-offset-quote-wall","name":"Testimonial Offset Quote Wall"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

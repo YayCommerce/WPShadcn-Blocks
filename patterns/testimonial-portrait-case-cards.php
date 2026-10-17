@@ -7,6 +7,8 @@
  * AI Hint: Social-proof section that pairs words with pictures — a centred heading and supporting line sit above a two-column pair of muted quote cards that each close with an avatar beside the author name and role and a customer logo opposite, then a three-column row of tall portrait covers carries an oversized figure, a short caption and a one-line case headline over a dimmed photograph; reach for it when the customer stories should hand off to visual case studies within the same section.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","testimonials"],"patternName":"shadcn/testimonial-portrait-case-cards","name":"Testimonial Portrait Case Cards"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

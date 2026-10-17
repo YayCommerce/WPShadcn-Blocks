@@ -7,6 +7,8 @@
  * AI Hint: Star-rated social proof grid &#8212; a centred oversized heading and a supporting line, then nine equal bordered cards laid three to a row; each card stacks a five-star rating, a short quoted paragraph in muted text, and an author row of round avatar beside a name. Reach for it when the rating itself is part of the pitch and you want a calm, uniform wall of endorsements rather than one featured quote.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","testimonials"],"patternName":"shadcn/testimonial-star-rated-columns","name":"Testimonial Star Rated Columns"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)">

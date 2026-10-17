@@ -7,6 +7,8 @@
  * AI Hint: Blog listing — a centred badge, oversized headline and supporting line, then a two-column body with a vertical rail of category filter buttons on the left and a hairline-divided stack of post rows on the right, each row showing a category eyebrow, a linked title, a short excerpt and an author with a publication date; the rail filters the stack to one category client-side, so best for a blog or news index long enough that readers need to narrow it.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","posts"],"patternName":"shadcn/blog-filterable-list","name":"Blog Filterable List"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

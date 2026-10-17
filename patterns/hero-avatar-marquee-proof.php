@@ -7,6 +7,8 @@
  * AI Hint: Centred hero built in three bands — a 720px column carrying a fluid oversized h1, a muted two-line lead and a proof line that pairs a heavy number with muted text, then a full-width faded marquee of fourteen circular avatars scrolling slowly across the section, and finally a centred filled and outline button pair below the strip; reach for it when the argument is the sheer number of teams already on board and a static avatar stack would undersell it.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|7"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained","contentSize":"720px"}} -->

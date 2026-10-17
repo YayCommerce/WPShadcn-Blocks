@@ -52,7 +52,7 @@ export default function Edit(props) {
     <>
       <InspectorControls key="setting">
         <ToolsPanel
-          label={__("Settings", "shadcn-blocks")}
+          label={__("Settings", "yaycommerce-blocks-for-shadcn-ui")}
           resetAll={() => {
             setAttributes({
               dismissible: false,
@@ -61,14 +61,14 @@ export default function Edit(props) {
           }}
         >
           <ToolsPanelItem
-            label={__("Dismissible", "shadcn-blocks")}
+            label={__("Dismissible", "yaycommerce-blocks-for-shadcn-ui")}
             isShownByDefault
             hasValue={() => !!dismissible}
             onDeselect={() => setAttributes({ dismissible: false })}
           >
             <ToggleControl
               isBlock
-              label={__("Dismissible", "shadcn-blocks")}
+              label={__("Dismissible", "yaycommerce-blocks-for-shadcn-ui")}
               onChange={(value) => {
                 setAttributes({
                   dismissible: value,
@@ -77,13 +77,13 @@ export default function Edit(props) {
               checked={dismissible ?? false}
               help={__(
                 "Allow users to dismiss the sheet by clicking outside or using a close button.",
-                "shadcn-blocks"
+                "yaycommerce-blocks-for-shadcn-ui"
               )}
             />
           </ToolsPanelItem>
 
           <ToolsPanelItem
-            label={__("Direction", "shadcn-blocks")}
+            label={__("Direction", "yaycommerce-blocks-for-shadcn-ui")}
             isShownByDefault
             hasValue={() => direction !== "bottom"}
             onDeselect={() => setAttributes({ direction: "bottom" })}
@@ -91,26 +91,26 @@ export default function Edit(props) {
             <ToggleGroupControl
               __next40pxDefaultSize
               isBlock
-              label={__("Direction", "shadcn-blocks")}
+              label={__("Direction", "yaycommerce-blocks-for-shadcn-ui")}
               value={direction ?? "bottom"}
               onChange={(value) => {
                 setAttributes({ direction: value });
               }}
             >
               <ToggleGroupControlOption
-                label={__("Bottom", "shadcn-blocks")}
+                label={__("Bottom", "yaycommerce-blocks-for-shadcn-ui")}
                 value="bottom"
               />
               <ToggleGroupControlOption
-                label={__("Top", "shadcn-blocks")}
+                label={__("Top", "yaycommerce-blocks-for-shadcn-ui")}
                 value="top"
               />
               <ToggleGroupControlOption
-                label={__("Left", "shadcn-blocks")}
+                label={__("Left", "yaycommerce-blocks-for-shadcn-ui")}
                 value="left"
               />
               <ToggleGroupControlOption
-                label={__("Right", "shadcn-blocks")}
+                label={__("Right", "yaycommerce-blocks-for-shadcn-ui")}
                 value="right"
               />
             </ToggleGroupControl>

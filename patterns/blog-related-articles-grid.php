@@ -7,6 +7,8 @@
  * AI Hint: Related reading module — a compact header row putting a small eyebrow and a modest heading on the left against an outline archive button on the right, then a responsive three-column grid of borderless typographic stacks that each give a muted category label, a linked title, a two-line summary and a publication date, with generous gaps instead of card borders; best as a lightweight further-reading footer beneath a single article or documentation page.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","posts"],"patternName":"shadcn/blog-related-articles-grid","name":"Blog Related Articles Grid"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->

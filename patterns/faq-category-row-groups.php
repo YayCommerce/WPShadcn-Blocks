@@ -7,6 +7,8 @@
  * AI Hint: Two-band FAQ index — a big flush-left heading with a rule under it, then one row per topic whose narrow left column carries only the category name and whose wide right column holds a hairline-divided accordion of four or five collapsed questions, with another rule dividing the topics; reach for it on a dedicated support page where questions already sort into named groups and the reader scans headings before opening anything.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|6"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:heading {"level":2,"style":{"typography":{"fontWeight":"700","letterSpacing":"-0.02em"}},"fontSize":"fluid-4-xl"} -->

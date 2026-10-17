@@ -7,6 +7,8 @@
  * AI Hint: Form-first contact split that mirrors the usual arrangement — the left column carries a large "Start a Conversation" heading, a two-line muted lead and a stacked form of name, email, a subject dropdown, a message textarea and a full-width submit, while the right column holds one square rounded photograph on the plain page background with no card, panel or border around either side, both columns vertically centred on an ordinary gutter; reach for it when the contact section should stay quiet and let the form lead.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

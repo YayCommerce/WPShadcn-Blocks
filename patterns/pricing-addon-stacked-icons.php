@@ -7,6 +7,8 @@
  * AI Hint: Add-on pricing section stacked as a vertical list rather than a grid — a small outlined pill and a large centred headline, then one bordered card per add-on holding a circular icon, the add-on name and a one-line explanation on the upper row, with the price and its unit label facing an outline "Get add-on" button on the lower row; reach for it when selling optional extras alongside an existing subscription, where every item carries one flat price and there is no monthly/yearly choice to make.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5","right":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained","contentSize":"960px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"metadata":{"name":"Header"},"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

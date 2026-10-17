@@ -7,6 +7,8 @@
  * AI Hint: Portfolio gallery — a left-aligned section heading and supporting line, then a horizontal row of category filter buttons across the top of a three-column grid of project cards; every card is a cropped image with the project name and its discipline written underneath, and the buttons narrow the grid to one discipline client-side while a hover wash lifts the card behind the caption. Best for a studio or agency work index with enough projects across distinct disciplines that visitors want to narrow by craft rather than scroll everything.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-filterable-overlay-gallery","name":"Project Filterable Overlay Gallery"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5","right":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

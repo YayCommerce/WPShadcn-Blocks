@@ -68,7 +68,7 @@ if ( ! function_exists( 'shadcn_blocks_register_block_styles' ) ) {
 			'core/group',
 			array(
 				'name'         => 'shadcn-sticky',
-				'label'        => __( 'Sticky column', 'shadcn-blocks' ),
+				'label'        => __( 'Sticky column', 'yaycommerce-blocks-for-shadcn-ui' ),
 				'inline_style' => '
 /* Below the columns breakpoint the siblings stack, so there is nothing left to
    scroll past and pinning would only strand the group mid-screen. */
@@ -86,7 +86,7 @@ if ( ! function_exists( 'shadcn_blocks_register_block_styles' ) ) {
 			'core/group',
 			array(
 				'name'         => 'shadcn-divided',
-				'label'        => __( 'Divided rows', 'shadcn-blocks' ),
+				'label'        => __( 'Divided rows', 'yaycommerce-blocks-for-shadcn-ui' ),
 				'inline_style' => '
 .wp-block-group.is-style-shadcn-divided > * {
 	padding-top: 1rem;
@@ -105,7 +105,7 @@ if ( ! function_exists( 'shadcn_blocks_register_block_styles' ) ) {
 			'core/group',
 			array(
 				'name'         => 'shadcn-on-dark',
-				'label'        => __( 'On dark', 'shadcn-blocks' ),
+				'label'        => __( 'On dark', 'yaycommerce-blocks-for-shadcn-ui' ),
 				'inline_style' => '
 /* Links inside a dark panel. The theme paints links with the `primary`
  * colour, which is near-black in light mode and so invisible against a dark
@@ -148,7 +148,7 @@ if ( ! function_exists( 'shadcn_blocks_register_block_styles' ) ) {
 			'core/list',
 			array(
 				'name'         => 'shadcn-check',
-				'label'        => __( 'Check list', 'shadcn-blocks' ),
+				'label'        => __( 'Check list', 'yaycommerce-blocks-for-shadcn-ui' ),
 				'inline_style' => '
 .wp-block-list.is-style-shadcn-check {
 	list-style: none;
@@ -187,7 +187,7 @@ if ( ! function_exists( 'shadcn_blocks_register_block_styles' ) ) {
 			'core/list',
 			array(
 				'name'         => 'shadcn-plain',
-				'label'        => __( 'Plain list', 'shadcn-blocks' ),
+				'label'        => __( 'Plain list', 'yaycommerce-blocks-for-shadcn-ui' ),
 				'inline_style' => '
 /* Navigation columns are lists semantically but never read as bullets. Using
  * core/list keeps a footer column one block instead of one paragraph per link,
@@ -216,7 +216,7 @@ if ( ! function_exists( 'shadcn_blocks_register_block_styles' ) ) {
 			'shadcn/carousel',
 			array(
 				'name'         => 'shadcn-vertical-rail',
-				'label'        => __( 'Vertical rail', 'shadcn-blocks' ),
+				'label'        => __( 'Vertical rail', 'yaycommerce-blocks-for-shadcn-ui' ),
 				'inline_style' => '
 .wp-block-shadcn-carousel.is-style-shadcn-vertical-rail.orientation-vertical .wp-block-shadcn-carousel__viewport {
 	height: min(48rem, 80vh);
@@ -238,7 +238,7 @@ if ( ! function_exists( 'shadcn_blocks_register_block_styles' ) ) {
 			'core/group',
 			array(
 				'name'         => 'shadcn-hover-reveal',
-				'label'        => __( 'Hover reveal panel', 'shadcn-blocks' ),
+				'label'        => __( 'Hover reveal panel', 'yaycommerce-blocks-for-shadcn-ui' ),
 				'inline_style' => '
 .wp-block-group.is-style-shadcn-hover-reveal {
 	position: relative;

@@ -7,6 +7,8 @@
  * AI Hint: Screenshot-led changelog feed — a large left-aligned heading above a muted rounded strip of labelled channel links and a follow-along line, then hairline-divided entries that each stack a muted image panel, a small round author avatar beside the release date, a title, a summary with a couple of bolded phrases, and a bold sub-heading introducing three or four bulleted details; reach for it when releases are visual enough to show rather than describe and each one has a named author to credit.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|7"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:heading {"fontSize":"5-xl"} -->

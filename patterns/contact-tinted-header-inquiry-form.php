@@ -7,6 +7,8 @@
  * AI Hint: Tinted-header contact section: the upper band runs edge to edge on a muted background with a centred "Contact us" heading, one small muted line beneath it and a three-column strip of details — corporate office address, two email addresses and a row of generic social glyphs — while the lower half drops back to the page background for a narrow six-hundred-pixel column holding an "Inquiries" heading and a form asking for full name, work email, company, headcount and a message; reach for it when the contact page should read as a masthead of company facts first and a form second.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull"><!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"backgroundColor":"muted","layout":{"type":"constrained","contentSize":"1120px"}} -->

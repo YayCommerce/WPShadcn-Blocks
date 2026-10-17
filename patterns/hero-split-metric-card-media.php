@@ -7,6 +7,8 @@
  * AI Hint: Split product hero with one number to prove it — the left half stacks a two-line display h1, a three-sentence muted lead and a filled button beside an outline button, both carrying a right arrow, while the right half holds a wide rounded screenshot with a bordered card underneath naming one headline percentage and the span it covers; reach for it when the offer needs both an interface shot and a single believable figure above the fold.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Investor, advisor or partner roster — a short eyebrow and headline on the left, then a four-across grid of large circular portraits on the plain page background with no cards or borders, each photo captioned by a centred name and the company or fund underneath in muted text; reach for it when the people listed are backers or outside partners rather than staff, so the firm name matters more than a job title.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|9"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"720px","justifyContent":"left"}} -->

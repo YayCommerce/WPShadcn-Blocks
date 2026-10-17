@@ -7,6 +7,8 @@
  * AI Hint: Centred closing panel — a soft accent-filled band holding a small uppercase eyebrow, a large centred headline, one line of supporting copy, a primary and outline button stacked on narrow screens and side by side on wide ones, and a quiet reassurance line beneath; reach for it as the last section of a page when the ask is simple and nothing should compete with it.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","call-to-action"],"patternName":"shadcn/cta-centered-accent-stacked","name":"CTA Centered Accent Stacked"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"align":"wide","style":{"border":{"radius":"16px"},"spacing":{"padding":{"top":"var:preset|spacing|10","right":"var:preset|spacing|6","bottom":"var:preset|spacing|10","left":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|5"}},"backgroundColor":"accent","layout":{"type":"constrained","contentSize":"680px"}} -->

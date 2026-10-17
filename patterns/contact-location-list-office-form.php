@@ -7,6 +7,8 @@
  * AI Hint: Two-column locations section — a one-third column lists six cities as bold names over muted street lines with the first rendered as a dark filled selected block, while the wider column carries a bordered office card holding the city name, two address lines, a hairline rule and a phone and email row side by side, then a second bordered card with a working name, email and message form; reach for it when a company runs several offices but wants one of them expanded with contact details and a form on the same screen.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

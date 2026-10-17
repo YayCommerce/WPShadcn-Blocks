@@ -7,6 +7,8 @@
  * AI Hint: Three-tier pricing comparison table on one bordered card: a centred H2 and supporting line, then a table whose first column holds a Billing label with a monthly/yearly switch and whose three plan columns each carry a tier name, a one-line blurb, a price that follows the switch and a full-width call-to-action, followed by named groups of feature rows marked with a tick or a dash per tier; best when visitors need to compare what each tier includes before choosing.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","pricing"],"patternName":"shadcn/pricing-comparison-table-switch","name":"Pricing Comparison Table Switch"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"640px"}} -->

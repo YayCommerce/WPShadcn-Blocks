@@ -7,6 +7,8 @@
  * AI Hint: Full-bleed case study page for one project — a screen-height photograph whose overlay is a transparent-to-dark gradient rather than a flat dim, carrying a small uppercase marker at the top of the frame and an uppercase label above an oversized white title pinned to the bottom; underneath, a wide four-column overview grid pairing muted uppercase labels with client, scope, year and team values, then three full-viewport-width images stacked directly on top of one another as one continuous column with no gutters; use it as the landing layout for a portfolio project where the photography carries the story and the credits stay to a single row.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-gradient-hero-stacked-images","name":"Project Page Gradient Hero Stacked Images"},"align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"0"},"blockGap":"0"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:0;padding-bottom:0"><!-- wp:cover {"url":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","alt":"A harbour ferry pulling away from a timber pier under low grey cloud","customGradient":"linear-gradient(180deg,rgba(9,9,11,0) 30%,rgba(9,9,11,0.8) 100%)","dimRatio":100,"minHeight":760,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|8","right":"var:preset|spacing|6","bottom":"var:preset|spacing|8","left":"var:preset|spacing|6"}}},"layout":{"type":"default"}} -->

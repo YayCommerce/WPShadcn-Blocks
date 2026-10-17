@@ -7,6 +7,8 @@
  * AI Hint: Long-form about section — a narrow left column holding an avatar, company name, tagline and contact link that stays pinned while the right column scrolls through an oversized "About Us" heading, a bio paragraph, a two-column philosophy note, a rounded workspace image, and a divided team list with monospace row numbers; best for an about page with enough copy that the reader loses sight of the header.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|9","left":"var:preset|spacing|10"}}}} -->

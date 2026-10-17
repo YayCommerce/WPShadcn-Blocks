@@ -7,6 +7,8 @@
  * AI Hint: Site footer — a phone number above an email address set as a display-size link on the left, two columns of large-type navigation and social links on the right under small quiet labels, and the brand name closing the page as a giant right-aligned wordmark over a hairline legal bar; reach for it on a studio or portfolio site where the footer doubles as the contact page.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","footer"],"patternName":"shadcn/giant-brand-name-contact-footer","name":"Giant Brand Name Contact Footer"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","right":"var:preset|spacing|4","bottom":"var:preset|spacing|6","left":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--6);padding-left:var(--wp--preset--spacing--4)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

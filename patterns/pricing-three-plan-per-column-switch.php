@@ -7,6 +7,8 @@
  * AI Hint: Three-card pricing grid with a centred H2 and supporting line, where every paid card wraps its own Pricing block so the Monthly/Yearly switch sits inside the card and toggles only that card's figure, the free card shows a fixed price plus a short description instead, and the middle card is ringed with a heavier border; reach for it when each tier is billed on its own terms and a single global toggle would misrepresent the offer.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"fontSize":"fluid-5-xl"} -->

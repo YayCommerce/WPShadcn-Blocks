@@ -7,6 +7,8 @@
  * AI Hint: Multi-day campaign bar — a gift icon and campaign name, then days, hours, minutes and seconds each in a tinted chip with a small caps label beneath. The labels and the days unit make a long run readable, so reach for it when a sale spans a week rather than an afternoon; the flash sale bar is tighter for something ending today. The countdown starts five days out and the author sets the real deadline.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 // The countdown needs a real instant, and a date hard-coded into a pattern file
 // is wrong the day after it is written: too far out and the preview reads
 // "38277 hours", past and the block hides itself entirely. Computing it as the

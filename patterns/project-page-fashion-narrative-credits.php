@@ -7,6 +7,8 @@
  * AI Hint: Single-project case study page for a fashion or photography editorial — a centred oversized project title with one line of context beneath it, a wide rounded hero photograph, then a two-column section with three prose paragraphs on the left and a hairline-divided credits list on the right pairing labels such as Photography, Styling, Hair, Make-up, Model and Location with their names; reach for it when one shoot or one commission needs its own page with the production crew named.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-fashion-narrative-credits","name":"Project Page Fashion Narrative Credits"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

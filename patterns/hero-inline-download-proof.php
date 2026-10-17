@@ -7,6 +7,8 @@
  * AI Hint: Image-free centred hero in a 760px column: a fluid oversized h1, a two-line muted lead, then a single wrapping row that puts one filled primary button next to a muted rounded pill containing an overlapping four-avatar stack, a bold download figure and a small muted label, closing on a one-line muted trust statement; reach for it when the install number belongs beside the button rather than in a separate proof band.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained","contentSize":"760px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:heading {"textAlign":"center","level":1,"fontSize":"fluid-7-xl"} -->

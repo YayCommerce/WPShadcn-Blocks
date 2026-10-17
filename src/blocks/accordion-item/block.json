@@ -6,7 +6,7 @@
   "title": "Accordion Item",
   "category": "shadcn",
   "description": "A single collapsible section with a trigger and panel content.",
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "parent": ["shadcn/accordion"],
   "usesContext": ["shadcn/headingLevel"],
   "supports": {

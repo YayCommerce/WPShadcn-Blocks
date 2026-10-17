@@ -7,6 +7,8 @@
  * AI Hint: Testimonial carousel of equal-width bordered cards — each card holds a short customer quote and, beneath it, a round avatar next to the author's name and role; arrow controls step the row three cards at a time on desktop, two on tablet and one on mobile. Best for showing many short quotes in a compact strip without a grid.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","testimonials"],"patternName":"shadcn/testimonial-arrow-carousel-cards","name":"Testimonial Arrow Carousel Cards"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5","right":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|7"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:heading {"align":"wide","style":{"typography":{"fontWeight":"600"}},"fontSize":"fluid-4-xl"} -->

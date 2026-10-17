@@ -7,6 +7,8 @@
  * AI Hint: Head-to-head comparison table for a competitor page: a short section heading over three columns where feature names run down a plain hairline-ruled left column and the two product columns are continuous tinted bands topped by a logo and product name, with the lower rows prefixing each value with a check or a cross so the verdict reads at a glance; reach for it when one product should win most rows and the contrast has to be obvious without a paragraph of explanation.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","compare"],"patternName":"shadcn/compare-tinted-verdict-table","name":"Compare Tinted Verdict Table"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|6"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:heading {"level":2,"fontSize":"fluid-4-xl"} -->

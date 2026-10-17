@@ -17,42 +17,42 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$speed          = $attributes['speed'] ?? 30;
-$direction      = ( 'right' === ( $attributes['direction'] ?? 'left' ) ) ? 'right' : 'left';
-$pause_on_hover = $attributes['pauseOnHover'] ?? true;
-$show_fade      = $attributes['showFade'] ?? false;
-$gap            = $attributes['gap'] ?? '2rem';
+$shadcn_speed          = $attributes['speed'] ?? 30;
+$shadcn_direction      = ( 'right' === ( $attributes['direction'] ?? 'left' ) ) ? 'right' : 'left';
+$shadcn_pause_on_hover = $attributes['pauseOnHover'] ?? true;
+$shadcn_show_fade      = $attributes['showFade'] ?? false;
+$shadcn_gap            = $attributes['gap'] ?? '2rem';
 
 // Only a bare CSS length (no `;`/`:`) may reach the inline style attribute,
 // so a crafted attribute value can't smuggle extra CSS declarations past
 // esc_attr() — esc_attr() escapes quotes/entities, not `;`/`:` separators.
-if ( ! preg_match( '/^[0-9]+(\.[0-9]+)?(px|rem|em|%|vw)$/', $gap ) ) {
-	$gap = '2rem';
+if ( ! preg_match( '/^[0-9]+(\.[0-9]+)?(px|rem|em|%|vw)$/', $shadcn_gap ) ) {
+	$shadcn_gap = '2rem';
 }
 
-$wrapper_classes = array( 'direction-' . $direction );
+$shadcn_wrapper_classes = array( 'direction-' . $shadcn_direction );
 
-if ( $pause_on_hover ) {
-	$wrapper_classes[] = 'has-pause-on-hover';
+if ( $shadcn_pause_on_hover ) {
+	$shadcn_wrapper_classes[] = 'has-pause-on-hover';
 }
 
-if ( $show_fade ) {
-	$wrapper_classes[] = 'has-fade';
+if ( $shadcn_show_fade ) {
+	$shadcn_wrapper_classes[] = 'has-fade';
 }
 
-$wrapper_attributes = get_block_wrapper_attributes(
+$shadcn_wrapper_attributes = get_block_wrapper_attributes(
 	array(
-		'class' => implode( ' ', $wrapper_classes ),
+		'class' => implode( ' ', $shadcn_wrapper_classes ),
 		'style' => sprintf(
 			'--marquee-duration:%ds;--marquee-gap:%s;',
-			(int) $speed,
-			$gap
+			(int) $shadcn_speed,
+			$shadcn_gap
 		),
 	)
 );
 ?>
 
-<div <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+<div <?php echo $shadcn_wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 	<div class="wp-block-shadcn-marquee__viewport">
 		<div class="wp-block-shadcn-marquee__track">
 			<div class="wp-block-shadcn-marquee__group"><?php echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></div>

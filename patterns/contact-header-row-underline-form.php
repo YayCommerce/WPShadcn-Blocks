@@ -7,6 +7,8 @@
  * AI Hint: Header-row contact layout: a three-column band runs across the top — a large "Contact us" heading with a small uppercase muted note, an uppercase "Address" label over a bold two-line address, and an uppercase "Phone" label over a number with an oversized bold email beneath it — and a full-width form area follows with name, email and phone fields, a service dropdown, a tall message field and an uppercase submit; reach for it when the contact details should read as an editorial masthead above the form rather than beside it.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|7","left":"var:preset|spacing|8"}}}} -->

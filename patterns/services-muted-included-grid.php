@@ -7,6 +7,8 @@
  * AI Hint: Four soft, low-contrast service cards on a wide two-column grid, each holding a small bordered icon tile, an H3, a muted description, an uppercase included label and a dense two-column check list, so reach for it when each service has a long list of concrete inclusions and you want the scope legible without borders or shadows competing for attention.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:heading {"style":{"typography":{"textAlign":"center","letterSpacing":"-0.02em"}},"fontSize":"fluid-5-xl"} -->

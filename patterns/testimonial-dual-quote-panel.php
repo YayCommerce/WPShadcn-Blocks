@@ -7,6 +7,8 @@
  * AI Hint: Two testimonials set side by side inside a single dashed-outlined panel with a dashed rule between them — each half centres a short quote with one phrase in bold, then an avatar beside the author's name and title on one line. Best when two customer voices should carry equal weight in a quiet, understated band.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","style":{"border":{"color":"var:preset|color|border","width":"1px","style":"dashed"},"spacing":{"blockGap":"0"}},"layout":{"type":"default"}} -->

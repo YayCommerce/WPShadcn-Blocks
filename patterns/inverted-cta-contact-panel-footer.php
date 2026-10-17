@@ -7,6 +7,8 @@
  * AI Hint: Site footer — a single dark panel with rounded top corners divided by hairline rules into four bands: a call-to-action row pairing a large question headline with a light button, a row placing the logo beside two short link columns and a newsletter heading with a subscribe button, a row of three labelled contact badges for phone, email and address, and a final bar with the copyright opposite the legal links; reach for it when the footer should read as one self-contained contrasting block that carries a conversion prompt and real contact details.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"className":"is-style-shadcn-on-dark","align":"full","style":{"border":{"radius":{"topLeft":"16px","topRight":"16px"}},"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|8","left":"var:preset|spacing|4","right":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|8"}},"backgroundColor":"primary","textColor":"primary-foreground","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull is-style-shadcn-on-dark has-primary-foreground-color has-primary-background-color has-text-color has-background" style="border-top-left-radius:16px;border-top-right-radius:16px;padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--8);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|8"}},"layout":{"type":"default"}} -->

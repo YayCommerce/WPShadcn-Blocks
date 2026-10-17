@@ -13,12 +13,12 @@ defined( 'ABSPATH' ) || exit;
 
 // The content from save() is just the div with the title: <div>title</div>
 // We need to wrap it with the block wrapper classes
-$wrapper_attributes = get_block_wrapper_attributes(
+$shadcn_wrapper_attributes = get_block_wrapper_attributes(
 	array(
 		'class' => 'wp-block-shadcn-alert-title alert-title',
 	)
 );
 ?>
-<div <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+<div <?php echo $shadcn_wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 	<?php echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 </div>

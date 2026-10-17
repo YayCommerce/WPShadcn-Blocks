@@ -7,6 +7,8 @@
  * AI Hint: Sector index table — a row of small muted column labels reading year, industry and description, above hairline-separated rows that each pair a start year at the left with a slash-prefixed sector name and a paragraph of detail, every row washing muted on hover; reach for it when a studio or fund wants its markets to read as a dated record rather than a marketing grid.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","industries"],"patternName":"shadcn/industries-year-index-table","name":"Industries Year Index Table"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|6"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|4","left":"var:preset|spacing|7"}}}} -->

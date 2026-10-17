@@ -7,6 +7,8 @@
  * AI Hint: Blog grid — a left-aligned badge, large headline and intro paired with an outline archive button, above a six-card responsive grid where each bordered card leads with a round avatar, author name and date, then a linked headline, a muted summary and a rounded cover image at the foot; best for a journal or news index where authorship and recency should be read before the title.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|6"}},"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->

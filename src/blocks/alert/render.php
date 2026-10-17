@@ -11,45 +11,45 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$variant      = isset( $attributes['variant'] ) ? $attributes['variant'] : 'default';
-$dismissible  = isset( $attributes['dismissible'] ) ? $attributes['dismissible'] : false;
+$shadcn_variant      = isset( $attributes['variant'] ) ? $attributes['variant'] : 'default';
+$shadcn_dismissible  = isset( $attributes['dismissible'] ) ? $attributes['dismissible'] : false;
 
-$wrapper_classes = array(
+$shadcn_wrapper_classes = array(
 	'wp-block-shadcn-alert',
 	'alert',
-	'alert-' . esc_attr( $variant ),
+	'alert-' . esc_attr( $shadcn_variant ),
 );
 
-if ( $dismissible ) {
-	$wrapper_classes[] = 'alert-dismissible';
+if ( $shadcn_dismissible ) {
+	$shadcn_wrapper_classes[] = 'alert-dismissible';
 }
 
-$wrapper_attributes = get_block_wrapper_attributes(
+$shadcn_wrapper_attributes = get_block_wrapper_attributes(
 	array(
-		'class' => implode( ' ', $wrapper_classes ),
+		'class' => implode( ' ', $shadcn_wrapper_classes ),
 	)
 );
 
 ?>
 
-<?php if ( $dismissible ) : ?>
+<?php if ( $shadcn_dismissible ) : ?>
 	<?php
 	// Create context for this alert instance
-	$context = array(
+	$shadcn_context = array(
 		'isVisible' => true,
 	);
 	?>
 	<div
-		<?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+		<?php echo $shadcn_wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 		data-wp-interactive="shadcn/alert"
-		<?php echo wp_interactivity_data_wp_context( $context, 'shadcn/alert' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+		<?php echo wp_interactivity_data_wp_context( $shadcn_context, 'shadcn/alert' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 		data-wp-class--alert-dismissing="!context.isVisible"
 	>
 		<?php echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 		<button
 			type="button"
 			class="alert-dismiss"
-			aria-label="<?php esc_attr_e( 'Dismiss alert', 'shadcn-blocks' ); ?>"
+			aria-label="<?php esc_attr_e( 'Dismiss alert', 'yaycommerce-blocks-for-shadcn-ui' ); ?>"
 			data-wp-on--click="actions.dismiss"
 		>
 			<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -58,7 +58,7 @@ $wrapper_attributes = get_block_wrapper_attributes(
 		</button>
 	</div>
 <?php else : ?>
-	<div <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+	<div <?php echo $shadcn_wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
 		<?php echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</div>
 <?php endif; ?>

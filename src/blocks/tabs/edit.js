@@ -22,8 +22,8 @@ import {
  * Default template: start with two tabs.
  */
 const TEMPLATE = [
-  ["shadcn/tab", { label: __("Account", "shadcn-blocks") }],
-  ["shadcn/tab", { label: __("Password", "shadcn-blocks") }],
+  ["shadcn/tab", { label: __("Account", "yaycommerce-blocks-for-shadcn-ui") }],
+  ["shadcn/tab", { label: __("Password", "yaycommerce-blocks-for-shadcn-ui") }],
 ];
 
 const ALLOWED_BLOCKS = ["shadcn/tab"];
@@ -81,17 +81,17 @@ export default function Edit({ attributes, setAttributes, clientId }) {
   const labelFor = (tab, index) =>
     tab.label.trim() ||
     /* translators: %d: position of the tab within the tab list. */
-    sprintf(__("Tab %d", "shadcn-blocks"), index + 1);
+    sprintf(__("Tab %d", "yaycommerce-blocks-for-shadcn-ui"), index + 1);
 
   return (
     <>
       <InspectorControls>
         <ToolsPanel
-          label={__("Settings", "shadcn-blocks")}
+          label={__("Settings", "yaycommerce-blocks-for-shadcn-ui")}
           resetAll={() => setAttributes({ defaultTab: 0, fitted: false })}
         >
           <ToolsPanelItem
-            label={__("Open by default", "shadcn-blocks")}
+            label={__("Open by default", "yaycommerce-blocks-for-shadcn-ui")}
             isShownByDefault
             hasValue={() => 0 !== defaultTab}
             onDeselect={() => setAttributes({ defaultTab: 0 })}
@@ -99,10 +99,10 @@ export default function Edit({ attributes, setAttributes, clientId }) {
             <SelectControl
               __next40pxDefaultSize
               __nextHasNoMarginBottom
-              label={__("Open by default", "shadcn-blocks")}
+              label={__("Open by default", "yaycommerce-blocks-for-shadcn-ui")}
               help={__(
                 "Which tab is open when the page loads.",
-                "shadcn-blocks"
+                "yaycommerce-blocks-for-shadcn-ui"
               )}
               value={String(defaultTab ?? 0)}
               options={tabs.map((tab, index) => ({
@@ -116,17 +116,17 @@ export default function Edit({ attributes, setAttributes, clientId }) {
           </ToolsPanelItem>
 
           <ToolsPanelItem
-            label={__("Fit to width", "shadcn-blocks")}
+            label={__("Fit to width", "yaycommerce-blocks-for-shadcn-ui")}
             isShownByDefault
             hasValue={() => !!fitted}
             onDeselect={() => setAttributes({ fitted: false })}
           >
             <ToggleControl
               __nextHasNoMarginBottom
-              label={__("Fit to width", "shadcn-blocks")}
+              label={__("Fit to width", "yaycommerce-blocks-for-shadcn-ui")}
               help={__(
                 "Stretch the tabs to fill the full width of the block.",
-                "shadcn-blocks"
+                "yaycommerce-blocks-for-shadcn-ui"
               )}
               checked={!!fitted}
               onChange={(value) => setAttributes({ fitted: value })}

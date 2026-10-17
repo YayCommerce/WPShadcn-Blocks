@@ -7,6 +7,8 @@
  * AI Hint: Centred single-project case study page — a small muted uppercase label sits above an oversized serif project title, a wide horizontal rule cuts across beneath it, then a three-column metadata row pairs a tiny uppercase label with a bold value for client, scope and year, followed by a wide captioned photograph and two or three centred prose paragraphs closing on one centred button; reach for it when one project needs its own page and the studio wants the restrained, symmetrical feel of a printed case-study opener rather than a listing grid.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-centered-divider-meta","name":"Project Page Centered Divider Meta"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Split work-history section whose left column holds an oversized H2 with a small muted note beside it, a three-line muted lead and one arrow button, while the right column runs a rail of hairline-separated entries that each stack a muted employer name, a large bold role title with a small pill date badge pushed to the right edge, and a two-line muted summary; reach for it when the page needs an introduction and a contact prompt sitting alongside the history rather than above it.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","careers"],"patternName":"shadcn/experience-split-company-rail","name":"Experience Split Company Rail"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|10"}}}} -->

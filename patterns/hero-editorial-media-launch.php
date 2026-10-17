@@ -7,6 +7,8 @@
  * AI Hint: Reversed editorial hero — the wider left column is one tinted rounded panel that opens with a small outlined pill label, holds the product screenshot in the middle and closes with a bordered stat card whose two-column grid pairs oversized figures with muted captions above a one-line note, while the narrower right column carries a two-line fluid H1, a muted three-sentence lead and a single filled arrow button; best for a release or campaign landing page where the screen itself is the argument and one call to action is enough.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

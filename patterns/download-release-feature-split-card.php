@@ -7,6 +7,8 @@
  * AI Hint: Tinted full-width download band that opens with a centred pill badge, an oversized centred H2 and a two-line muted lead, then a single wide bordered card divided roughly fifty-five to forty-five, the left side listing the product name, a muted platform line and four icon-tile feature rows while the right side holds a tinted inner panel showing the version beside the file size, a muted release note, a full-width filled download button over an outline documentation button and a fine-print line, with a muted social-proof sentence closing the section; reach for it when the download decision needs the feature argument and the release facts side by side.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10","left":"var:preset|spacing|4","right":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|8"}},"backgroundColor":"muted","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-muted-background-color has-background" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"640px"}} -->

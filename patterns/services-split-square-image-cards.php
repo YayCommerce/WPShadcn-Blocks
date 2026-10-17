@@ -7,6 +7,8 @@
  * AI Hint: Services split with copy on the left — eyebrow, heading, supporting paragraph and an outline button spread over the full column height — and a compact two-by-two tile grid on the right where every card is a square dimmed cover carrying a white service name and link arrow at the bottom; reach for it when four services need equal weight and the section should read as one tidy block of imagery.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","services"],"patternName":"shadcn/services-split-square-image-cards","name":"Services Split Square Image Cards"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5","right":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

@@ -47,7 +47,7 @@ const PauseIcon = (
   </svg>
 );
 
-const PLACEHOLDER_IMAGE = "https://ui.shadcn.com/placeholder.svg";
+const PLACEHOLDER_IMAGE = window.shadcnBlocksEditor?.placeholderImage ?? "";
 
 const TEMPLATE = Array.from({ length: 6 }, (_, index) => [
   "shadcn/marquee-item",
@@ -97,8 +97,8 @@ export default function Edit({ attributes, setAttributes }) {
             icon={isPlaying ? PauseIcon : PlayIcon}
             label={
               isPlaying
-                ? __("Pause preview", "shadcn-blocks")
-                : __("Play preview", "shadcn-blocks")
+                ? __("Pause preview", "yaycommerce-blocks-for-shadcn-ui")
+                : __("Play preview", "yaycommerce-blocks-for-shadcn-ui")
             }
             isPressed={isPlaying}
             onClick={() => setIsPlaying(!isPlaying)}
@@ -106,30 +106,30 @@ export default function Edit({ attributes, setAttributes }) {
         </ToolbarGroup>
       </BlockControls>
       <InspectorControls>
-        <PanelBody title={__("Marquee Settings", "shadcn-blocks")}>
+        <PanelBody title={__("Marquee Settings", "yaycommerce-blocks-for-shadcn-ui")}>
           <RangeControl
-            label={__("Speed (seconds per loop)", "shadcn-blocks")}
+            label={__("Speed (seconds per loop)", "yaycommerce-blocks-for-shadcn-ui")}
             value={speed}
             onChange={(value) => setAttributes({ speed: value })}
             min={5}
             max={120}
           />
           <SelectControl
-            label={__("Direction", "shadcn-blocks")}
+            label={__("Direction", "yaycommerce-blocks-for-shadcn-ui")}
             value={direction}
             options={[
-              { label: __("Left", "shadcn-blocks"), value: "left" },
-              { label: __("Right", "shadcn-blocks"), value: "right" },
+              { label: __("Left", "yaycommerce-blocks-for-shadcn-ui"), value: "left" },
+              { label: __("Right", "yaycommerce-blocks-for-shadcn-ui"), value: "right" },
             ]}
             onChange={(value) => setAttributes({ direction: value })}
           />
           <ToggleControl
-            label={__("Pause on Hover", "shadcn-blocks")}
+            label={__("Pause on Hover", "yaycommerce-blocks-for-shadcn-ui")}
             checked={pauseOnHover}
             onChange={(value) => setAttributes({ pauseOnHover: value })}
           />
           <ToggleControl
-            label={__("Fade Edges", "shadcn-blocks")}
+            label={__("Fade Edges", "yaycommerce-blocks-for-shadcn-ui")}
             checked={showFade}
             onChange={(value) => setAttributes({ showFade: value })}
           />

@@ -35,11 +35,11 @@ export default function Edit( { attributes, setAttributes } ) {
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={ __( 'Field Settings', 'shadcn-blocks' ) }>
+				<PanelBody title={ __( 'Field Settings', 'yaycommerce-blocks-for-shadcn-ui' ) }>
 					<TextareaControl
 						label={ __(
 							'Options (one per line)',
-							'shadcn-blocks'
+							'yaycommerce-blocks-for-shadcn-ui'
 						) }
 						value={ options.join( '\n' ) }
 						rows={ 6 }
@@ -59,29 +59,29 @@ export default function Edit( { attributes, setAttributes } ) {
 						}
 					/>
 					<TextControl
-						label={ __( 'Placeholder', 'shadcn-blocks' ) }
+						label={ __( 'Placeholder', 'yaycommerce-blocks-for-shadcn-ui' ) }
 						value={ placeholder }
 						help={ __(
 							'Shown as the disabled first choice.',
-							'shadcn-blocks'
+							'yaycommerce-blocks-for-shadcn-ui'
 						) }
 						onChange={ ( value ) =>
 							setAttributes( { placeholder: value } )
 						}
 					/>
 					<ToggleControl
-						label={ __( 'Required', 'shadcn-blocks' ) }
+						label={ __( 'Required', 'yaycommerce-blocks-for-shadcn-ui' ) }
 						checked={ required }
 						onChange={ ( value ) =>
 							setAttributes( { required: value } )
 						}
 					/>
 					<TextControl
-						label={ __( 'Field name', 'shadcn-blocks' ) }
+						label={ __( 'Field name', 'yaycommerce-blocks-for-shadcn-ui' ) }
 						value={ fieldName }
 						help={ __(
 							'Optional. The submitted field key; derived from the label when empty.',
-							'shadcn-blocks'
+							'yaycommerce-blocks-for-shadcn-ui'
 						) }
 						onChange={ ( value ) =>
 							setAttributes( { fieldName: value } )
@@ -95,7 +95,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					className="wp-block-shadcn-select__label"
 					value={ label }
 					allowedFormats={ [] }
-					placeholder={ __( 'Label', 'shadcn-blocks' ) }
+					placeholder={ __( 'Label', 'yaycommerce-blocks-for-shadcn-ui' ) }
 					onChange={ ( value ) => setAttributes( { label: value } ) }
 				/>
 				<select
@@ -109,7 +109,7 @@ export default function Edit( { attributes, setAttributes } ) {
 								? options.filter( Boolean )[ 0 ]
 								: __(
 										'Add options in the sidebar',
-										'shadcn-blocks'
+										'yaycommerce-blocks-for-shadcn-ui'
 								  ) ) }
 					</option>
 				</select>

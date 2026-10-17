@@ -7,6 +7,8 @@
  * AI Hint: Site footer — a dimmed full-width background photograph carrying a rounded solid panel whose first column pairs an avatar, an invitation heading, a short paragraph and a call button, with three small-caps titled columns of portfolio links, social links and contact details beside it, closed by a hairline copyright bar; reach for it on a studio or personal site whose footer should feel like an invitation rather than a directory.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:cover {"url":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","alt":"Studio interior at dusk","dimRatio":60,"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","right":"var:preset|spacing|4","bottom":"var:preset|spacing|10","left":"var:preset|spacing|4"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-cover alignfull" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--4)"><img class="wp-block-cover__image-background" alt="Studio interior at dusk" src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-60 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"align":"wide","style":{"border":{"radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|7","right":"var:preset|spacing|7","bottom":"var:preset|spacing|7","left":"var:preset|spacing|7"},"blockGap":"var:preset|spacing|7"}},"backgroundColor":"background","layout":{"type":"constrained"}} -->

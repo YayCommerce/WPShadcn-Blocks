@@ -6,7 +6,7 @@
   "title": "Tab",
   "category": "shadcn",
   "description": "A single tab with its label and panel content.",
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "parent": ["shadcn/tabs"],
   "supports": {
     "html": false,

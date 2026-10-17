@@ -7,6 +7,8 @@
  * AI Hint: Minimal centred contact form capped at 600px: one centred heading sits above a stacked form asking for first name, last name, email, phone and a message, every field full width with its label above it and a full-width submit closing the column; reach for it when the page already explained itself and the form should be the only thing left to do.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|6"}},"layout":{"type":"constrained","contentSize":"600px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:heading {"textAlign":"center","level":2,"fontSize":"fluid-4-xl"} -->

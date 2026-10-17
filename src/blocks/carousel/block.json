@@ -8,7 +8,7 @@
 	"icon": "slides",
 	"description": "A flexible carousel that wraps any content including posts and products.",
 	"keywords": [ "carousel", "slider", "gallery", "slideshow" ],
-	"textdomain": "shadcn-blocks",
+	"textdomain": "yaycommerce-blocks-for-shadcn-ui",
 	"attributes": {
 		"autoplay": {
 			"type": "boolean",

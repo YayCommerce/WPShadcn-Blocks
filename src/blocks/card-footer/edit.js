@@ -20,7 +20,7 @@ const TEMPLATE = [
 			[
 				'core/button',
 				{
-					text: __( 'Action', 'shadcn-blocks' ),
+					text: __( 'Action', 'yaycommerce-blocks-for-shadcn-ui' ),
 				},
 			],
 		],

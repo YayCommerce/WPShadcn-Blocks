@@ -13,8 +13,8 @@ import { __ } from "@wordpress/i18n";
  * Default alignment options for the group (the shared sender side).
  */
 const ALIGN_OPTIONS = [
-  { label: __("Start (left)", "shadcn-blocks"), value: "start" },
-  { label: __("End (right)", "shadcn-blocks"), value: "end" },
+  { label: __("Start (left)", "yaycommerce-blocks-for-shadcn-ui"), value: "start" },
+  { label: __("End (right)", "yaycommerce-blocks-for-shadcn-ui"), value: "end" },
 ];
 
 /**
@@ -29,17 +29,17 @@ const TEMPLATE = [
   [
     "shadcn/bubble",
     { variant: "muted", align: "start" },
-    [["core/paragraph", { content: __("Hey! Is the theme ready?", "shadcn-blocks") }]],
+    [["core/paragraph", { content: __("Hey! Is the theme ready?", "yaycommerce-blocks-for-shadcn-ui") }]],
   ],
   [
     "shadcn/bubble",
     { variant: "default", align: "end" },
-    [["core/paragraph", { content: __("Yep — shipping today.", "shadcn-blocks") }]],
+    [["core/paragraph", { content: __("Yep — shipping today.", "yaycommerce-blocks-for-shadcn-ui") }]],
   ],
   [
     "shadcn/bubble",
     { variant: "muted", align: "start" },
-    [["core/paragraph", { content: __("Amazing 🎉", "shadcn-blocks") }]],
+    [["core/paragraph", { content: __("Amazing 🎉", "yaycommerce-blocks-for-shadcn-ui") }]],
   ],
 ];
 
@@ -68,14 +68,14 @@ export default function Edit({ attributes, setAttributes }) {
   return (
     <>
       <InspectorControls>
-        <PanelBody title={__("Bubble Group Settings", "shadcn-blocks")}>
+        <PanelBody title={__("Bubble Group Settings", "yaycommerce-blocks-for-shadcn-ui")}>
           <SelectControl
-            label={__("Default alignment", "shadcn-blocks")}
+            label={__("Default alignment", "yaycommerce-blocks-for-shadcn-ui")}
             value={align}
             options={ALIGN_OPTIONS}
             help={__(
               "Bubbles set to inherit use this side. Individual bubbles can override it.",
-              "shadcn-blocks"
+              "yaycommerce-blocks-for-shadcn-ui"
             )}
             onChange={(value) => setAttributes({ align: value })}
           />

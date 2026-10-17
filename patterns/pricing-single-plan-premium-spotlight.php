@@ -7,6 +7,8 @@
  * AI Hint: Single-plan pricing section given the spotlight treatment: a small outlined uppercase pill, a large centred headline and a muted supporting line introduce one narrow card painted in the inverted dark surface, which stacks the plan name, an oversized price with its billing note beneath, a hairline rule, a five-line check list and a full-width light button; reach for it when a premium or lifetime offer is the only thing on the page and the card itself has to read as the product.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","right":"var:preset|spacing|4","bottom":"var:preset|spacing|10","left":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"layout":{"type":"flex","justifyContent":"center"}} -->

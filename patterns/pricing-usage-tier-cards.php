@@ -7,6 +7,8 @@
  * AI Hint: Usage-based pricing section for metered products: a bordered header panel carries an oversized centred headline, a line naming the metric being priced and a five-across row of volume-tier cards with the quoted tier filled in the primary colour, then a three-column grid of plan cards each holding a name with an optional badge, a short description, the price for that tier, a usage footnote, its own call to action and an "Includes" tick list; reach for it when one volume control drives several plan quotes at once rather than a simple monthly-or-yearly toggle.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5","right":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|6"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"metadata":{"name":"Volume header"},"style":{"border":{"color":"var:preset|color|border","width":"1px","style":"solid","radius":"16px"},"spacing":{"padding":{"top":"var:preset|spacing|8","right":"var:preset|spacing|7","bottom":"var:preset|spacing|8","left":"var:preset|spacing|7"},"blockGap":"var:preset|spacing|5"}},"layout":{"type":"default"}} -->

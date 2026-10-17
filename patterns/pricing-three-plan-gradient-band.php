@@ -7,6 +7,8 @@
  * AI Hint: Three-tier pricing laid out inside a single dark gradient band: centred H2 and supporting line on the page background, then a rounded panel divided into three flush columns by hairline rules, each with an uppercase tier label, a large price, a one-line positioning statement, a check list and a full-width button, the middle column carrying the solid white button; reach for it when the plans should read as one confident block of colour rather than separate cards.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"fontSize":"fluid-5-xl"} -->

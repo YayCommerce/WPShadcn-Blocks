@@ -1,5 +1,5 @@
 /**
- * Curated Lucide icon slugs offered by the Shadcn Blocks icon picker.
+ * Curated Lucide icon slugs offered by the YayCommerce Blocks for Shadcn UI icon picker.
  *
  * This is the ONLY file to edit when changing the available icon set.
  * After editing, run `npm run icons` to regenerate:

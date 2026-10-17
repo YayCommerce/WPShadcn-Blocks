@@ -7,6 +7,8 @@
  * AI Hint: Sticky-heading timeline — a narrow left column holds an oversized heading and a short standfirst that stay pinned via the shadcn sticky group style, while the wider right column stacks four soft-panelled cards that each carry an oversized monospace step number in the top corner, a round outlined icon badge, a title and a paragraph; reach for it when a numbered sequence is long enough to scroll but the framing statement must stay on screen the whole way down.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|10"}}}} -->

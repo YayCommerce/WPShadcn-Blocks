@@ -7,6 +7,8 @@
  * AI Hint: About-page layout — intro heading and subtext over a two-thirds/one-third image grid with a muted highlight card, a scrolling logo strip, a muted stats band with four figures, and a closing two-column text block; best for a company about page.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","about"],"patternName":"shadcn/about-3","name":"About 3"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}},"backgroundColor":"background"} -->
 <div class="wp-block-group alignwide has-background-background-color has-background" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"760px"}} -->

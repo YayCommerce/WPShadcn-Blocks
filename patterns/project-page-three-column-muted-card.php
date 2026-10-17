@@ -7,6 +7,8 @@
  * AI Hint: Single-project case study page built on a three-column header — the project title on the left, a short description in the middle, and a soft muted card on the right holding client, scope and year as label-and-value rows; below it a three-to-one image split where a wide establishing shot sits beside a narrow detail crop at matching height, then a closing section with a short heading left and two prose paragraphs right; reach for it when one project needs its own page and the key facts should read at a glance beside the introduction.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-three-column-muted-card","name":"Project Page Three Column Muted Card"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|7","left":"var:preset|spacing|7"}}}} -->

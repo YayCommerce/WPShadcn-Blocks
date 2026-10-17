@@ -7,6 +7,8 @@
  * AI Hint: Four-tier pricing wall led by social proof — a centred H2, a row of overlapping avatars beside two short reassurance lines, a Monthly/Yearly segmented billing control that swaps every figure in place, then a four-column grid of bordered cards carrying the plan name (with a "Most chosen" badge on the highlighted tier), an oversized interval-aware price, an audience line, a full-width call to action and a check list under a small Features label, closing with a centred secure-payment note; reach for it when the plans need reassurance around them as much as they need numbers.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained","contentSize":"720px"}} -->

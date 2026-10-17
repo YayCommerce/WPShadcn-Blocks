@@ -25,7 +25,7 @@ const TEMPLATE = [
       [
         "core/button",
         {
-          text: __("Cancel", "shadcn-blocks"),
+          text: __("Cancel", "yaycommerce-blocks-for-shadcn-ui"),
           className: "is-style-outline",
           style: {
             typography: {
@@ -37,7 +37,7 @@ const TEMPLATE = [
       [
         "core/button",
         {
-          text: __("Submit", "shadcn-blocks"),
+          text: __("Submit", "yaycommerce-blocks-for-shadcn-ui"),
           style: {
             spacing: {
               padding: {

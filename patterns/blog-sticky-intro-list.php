@@ -7,6 +7,8 @@
  * AI Hint: Blog index — a narrow left column holding a badge, an oversized headline, a short editorial note, a hairline rule and a wrapping row of category links that stays pinned while the right column scrolls through seven divided post rows, each pairing a rounded thumbnail with a category eyebrow, a linked title, a one-line excerpt and an author with a publication date; best for a magazine-style archive long enough that the intro would otherwise scroll away.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|9","left":"var:preset|spacing|10"}}}} -->

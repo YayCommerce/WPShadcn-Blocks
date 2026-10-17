@@ -7,6 +7,8 @@
  * AI Hint: Scope comparison panels — a heading over two side-by-side cards, the first ticking off everything included in the engagement and the second listing in muted dashes what sits outside it, closing on a line about how out-of-scope work is handled; reach for it when setting expectations honestly matters more than selling, on a services, pricing or proposal page.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","process"],"patternName":"shadcn/checklist-included-excluded","name":"Checklist Included Excluded"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|7"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"680px"}} -->

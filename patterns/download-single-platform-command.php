@@ -7,6 +7,8 @@
  * AI Hint: Centred one-platform download column: a rounded app tile tops an oversized h2 and a two-line muted lead, then a small platform glyph, a filled download button, a bordered monospace command row with a copy glyph beside it and a muted arrow link to other install routes, closing on a small muted label above two outline architecture chips; reach for it when the page already knows which operating system the visitor is on and should offer one obvious button rather than a matrix.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|4","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained","contentSize":"640px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:image {"align":"center","width":"88px","height":"88px","scale":"cover","sizeSlug":"thumbnail","style":{"border":{"radius":"20px"}}} -->

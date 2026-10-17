@@ -7,6 +7,8 @@
  * AI Hint: Split app download section whose left half runs a small icon badge, a one-line h2, a two-line muted lead, a three-up row of icon plus bold title plus muted note, a five-star row above a muted adoption count, and an uppercase availability label over two platform buttons, while the right half stacks a tall rounded phone mockup above a pair of bordered callout cards; reach for it when the install needs feature proof and social proof in the same screen.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

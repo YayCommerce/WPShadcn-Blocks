@@ -7,6 +7,8 @@
  * AI Hint: Social-proof contact split on a pale tinted band: the left column stacks an uppercase eyebrow, a large heading, a three-item check list, a trust line and an eight-mark logo wall laid four to a row; the right column is a bordered card-background form asking for first name, last name, email, project budget, message and referral source before a full-width submit and a small legal line; a two-column FAQ and resources row closes the section. Reach for it when the page must reassure a cautious buyer with proof and self-serve answers while still collecting a qualified enquiry.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|4","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4"}}},"backgroundColor":"muted","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-muted-background-color has-background" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

@@ -12,7 +12,7 @@
     "cost",
     "billing"
   ],
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "ancestor": [
     "shadcn/pricing"
   ],

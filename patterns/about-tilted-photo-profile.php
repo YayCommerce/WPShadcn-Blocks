@@ -7,6 +7,8 @@
  * AI Hint: Personal about block — a bordered photo card holding a portrait with the person's name and social handle underneath, set beside a large introduction heading and two short paragraphs of first-person copy; best for a portfolio or personal brand page.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","about"],"patternName":"shadcn/about-tilted-photo-profile","name":"About Tilted Photo Profile"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|9","left":"var:preset|spacing|10"}}}} -->

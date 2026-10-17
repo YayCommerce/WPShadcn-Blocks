@@ -18,9 +18,9 @@ import { __ } from "@wordpress/i18n";
  * Variant options shared with render.php class names.
  */
 const VARIANT_OPTIONS = [
-  { label: __("Default", "shadcn-blocks"), value: "default" },
-  { label: __("Separator", "shadcn-blocks"), value: "separator" },
-  { label: __("Border", "shadcn-blocks"), value: "border" },
+  { label: __("Default", "yaycommerce-blocks-for-shadcn-ui"), value: "default" },
+  { label: __("Separator", "yaycommerce-blocks-for-shadcn-ui"), value: "separator" },
+  { label: __("Border", "yaycommerce-blocks-for-shadcn-ui"), value: "border" },
 ];
 
 /**
@@ -41,34 +41,34 @@ export default function Edit({ attributes, setAttributes }) {
   return (
     <>
       <InspectorControls>
-        <PanelBody title={__("Marker Settings", "shadcn-blocks")}>
+        <PanelBody title={__("Marker Settings", "yaycommerce-blocks-for-shadcn-ui")}>
           <SelectControl
-            label={__("Variant", "shadcn-blocks")}
+            label={__("Variant", "yaycommerce-blocks-for-shadcn-ui")}
             value={variant}
             options={VARIANT_OPTIONS}
             help={__(
               "Default is a muted text row, Separator centers the text between two lines, Border adds a bottom rule.",
-              "shadcn-blocks"
+              "yaycommerce-blocks-for-shadcn-ui"
             )}
             onChange={(value) => setAttributes({ variant: value })}
           />
           <ToggleControl
-            label={__("Shimmer text", "shadcn-blocks")}
+            label={__("Shimmer text", "yaycommerce-blocks-for-shadcn-ui")}
             checked={shimmer}
             help={__(
               "Animated streaming-text effect on the label.",
-              "shadcn-blocks"
+              "yaycommerce-blocks-for-shadcn-ui"
             )}
             onChange={(value) => setAttributes({ shimmer: value })}
           />
           <TextControl
-            label={__("Link URL", "shadcn-blocks")}
+            label={__("Link URL", "yaycommerce-blocks-for-shadcn-ui")}
             type="url"
             value={url}
             placeholder="https://"
             help={__(
               "Optional. When set, the whole marker becomes a link.",
-              "shadcn-blocks"
+              "yaycommerce-blocks-for-shadcn-ui"
             )}
             onChange={(value) =>
               setAttributes(
@@ -77,7 +77,7 @@ export default function Edit({ attributes, setAttributes }) {
             }
           />
           <ToggleControl
-            label={__("Open in new tab", "shadcn-blocks")}
+            label={__("Open in new tab", "yaycommerce-blocks-for-shadcn-ui")}
             checked={linkTarget === "_blank"}
             disabled={!url}
             onChange={(checked) =>
@@ -95,7 +95,7 @@ export default function Edit({ attributes, setAttributes }) {
           className="marker-content"
           value={content}
           allowedFormats={["core/bold", "core/italic", "core/link"]}
-          placeholder={__("Marker text…", "shadcn-blocks")}
+          placeholder={__("Marker text…", "yaycommerce-blocks-for-shadcn-ui")}
           onChange={(value) => setAttributes({ content: value })}
         />
       </div>

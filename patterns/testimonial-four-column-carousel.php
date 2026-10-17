@@ -7,6 +7,8 @@
  * AI Hint: Testimonial carousel with the section heading set left above the track and six slides queued behind it, each a bordered card holding a square portrait, a short medium-weight quote and the author's name above their role and company; four cards sit across the band on desktop, dropping to three on tablet and one on mobile, with arrows and dots to advance. Best for a dense strip of short quotes when there are more voices than fit on screen.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","testimonials"],"patternName":"shadcn/testimonial-four-column-carousel","name":"Testimonial Four Column Carousel"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5","right":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:heading {"level":2,"style":{"typography":{"fontWeight":"600","letterSpacing":"-0.02em"},"spacing":{"margin":{"bottom":"var:preset|spacing|8"}}},"fontSize":"fluid-4-xl"} -->

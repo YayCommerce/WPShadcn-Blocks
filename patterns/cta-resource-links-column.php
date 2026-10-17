@@ -7,6 +7,8 @@
  * AI Hint: Two-column call to action for visitors who are not ready to buy yet — the left cell carries an icon badge, a heading, a short paragraph and a solid plus outline button pair, while the right cell holds a hairline-divided stack of resource rows, each with its own icon badge, linked title and one explanatory line; reach for it when documentation, a sandbox or a recorded walkthrough deserve equal billing with the primary conversion, rather than being buried as text links under the buttons.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","call-to-action"],"patternName":"shadcn/cta-resource-links-column","name":"CTA Resource Links Column"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","style":{"border":{"color":"var:preset|color|border","width":"1px","style":"solid","radius":"16px"},"color":{"gradient":"radial-gradient(var(--wp--preset--color--border) 1px,rgba(0,0,0,0) 1px) 0 0/18px 18px"}},"layout":{"type":"default"}} -->

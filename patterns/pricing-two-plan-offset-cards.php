@@ -7,6 +7,8 @@
  * AI Hint: Two-plan pricing section where the cards are vertically staggered rather than sharing a baseline, the entry plan dropped by a step so the recommended plan sits proud of it; each card carries the plan name, an oversized price with the billing period captioned underneath, a short description, a check list of features and a full-width action button, and a segmented control above swaps every figure between monthly and yearly; reach for it when a flat row of equal cards feels too static and the eye needs steering to one tier.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:shadcn/pricing {"align":"wide","intervals":[{"key":"monthly","label":"Monthly"},{"key":"yearly","label":"Yearly"}],"defaultInterval":"monthly","style":{"spacing":{"blockGap":"var:preset|spacing|7"}},"layout":{"type":"default"}} -->

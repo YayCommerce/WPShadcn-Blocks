@@ -7,6 +7,8 @@
  * AI Hint: Careers section — an oversized page title above a labelled filter dropdown, then one headed section per department, each holding a responsive grid of muted rounded role cards showing a linked job title and a smaller muted location line; the dropdown filters to a single department client-side, so best for a jobs or open-roles page listing more openings than fit comfortably in one ungrouped list.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","careers"],"patternName":"shadcn/careers-filterable-positions","name":"Careers Filterable Positions"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|7"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:heading {"fontSize":"fluid-5-xl"} -->

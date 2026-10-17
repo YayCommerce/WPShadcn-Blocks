@@ -7,6 +7,8 @@
  * AI Hint: Sticky-sidebar process layout — a narrow left column holding an oversized heading, a short intro and a text contact link that stays pinned while the wider right column scrolls through four divided rows, each pairing a monospace step number in a muted chip with a title and a paragraph of detail; best for a services or agency page that explains how an engagement runs from first call to handover.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|10"}}}} -->

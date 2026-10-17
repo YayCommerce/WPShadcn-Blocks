@@ -7,6 +7,8 @@
  * AI Hint: Sector detail list — a small badge label over an oversized statement heading, followed by rows separated by hairlines in which a bold sector name sits at the left, a small framed mark in the middle and two or three lines of explanatory copy at the right; reach for it when each market served needs a real paragraph rather than a caption, and the section should read as a considered index rather than a grid of cards.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","industries"],"patternName":"shadcn/industries-divided-sector-rows","name":"Industries Divided Sector Rows"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"720px","justifyContent":"left"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Panelled FAQ — a centred heading with a single muted lead line, then a vertical stack of rounded muted boxes where each box is titled by a small letter-spaced uppercase label in a monospace stack, ruled off by a hairline, and filled with two to four collapsed questions; reach for it when the questions split into three clear topics and each group deserves a visible container rather than a plain divider.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained","contentSize":"720px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"constrained"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Opened-panel sector rail — one outlined box divided by vertical hairlines into a wide featured cell carrying a sector name at its head with a summary and a text link at its foot, a full-height photograph next to it, and two narrow cells holding only a name; reach for it when a page should show a set of sectors while giving one of them the whole argument, in the resting state of an expanding panel.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","industries"],"patternName":"shadcn/industries-featured-panel-rail","name":"Industries Featured Panel Rail"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|7"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:heading {"level":2,"style":{"typography":{"fontWeight":"500"}},"fontSize":"fluid-4-xl"} -->

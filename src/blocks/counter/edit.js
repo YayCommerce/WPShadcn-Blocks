@@ -53,10 +53,10 @@ export default function Edit({ attributes, setAttributes }) {
   return (
     <>
       <InspectorControls>
-        <PanelBody title={__("Counter Settings", "shadcn-blocks")}>
+        <PanelBody title={__("Counter Settings", "yaycommerce-blocks-for-shadcn-ui")}>
           <NumberControl
             __next40pxDefaultSize
-            label={__("Start value", "shadcn-blocks")}
+            label={__("Start value", "yaycommerce-blocks-for-shadcn-ui")}
             value={startValue}
             onChange={(value) =>
               setAttributes({ startValue: parseFloat(value) || 0 })
@@ -64,7 +64,7 @@ export default function Edit({ attributes, setAttributes }) {
           />
           <NumberControl
             __next40pxDefaultSize
-            label={__("End value", "shadcn-blocks")}
+            label={__("End value", "yaycommerce-blocks-for-shadcn-ui")}
             value={endValue}
             onChange={(value) =>
               setAttributes({ endValue: parseFloat(value) || 0 })
@@ -72,17 +72,17 @@ export default function Edit({ attributes, setAttributes }) {
           />
           <RangeControl
             __next40pxDefaultSize
-            label={__("Duration (ms)", "shadcn-blocks")}
+            label={__("Duration (ms)", "yaycommerce-blocks-for-shadcn-ui")}
             value={duration}
             onChange={(value) => setAttributes({ duration: value ?? 2000 })}
             min={0}
             max={10000}
             step={100}
-            help={__("Set to 0 to show the end value right away.", "shadcn-blocks")}
+            help={__("Set to 0 to show the end value right away.", "yaycommerce-blocks-for-shadcn-ui")}
           />
           <RangeControl
             __next40pxDefaultSize
-            label={__("Decimals", "shadcn-blocks")}
+            label={__("Decimals", "yaycommerce-blocks-for-shadcn-ui")}
             value={decimals}
             onChange={(value) => setAttributes({ decimals: value ?? 0 })}
             min={0}
@@ -90,18 +90,18 @@ export default function Edit({ attributes, setAttributes }) {
             step={1}
           />
           <ToggleControl
-            label={__("Group thousands", "shadcn-blocks")}
+            label={__("Group thousands", "yaycommerce-blocks-for-shadcn-ui")}
             checked={separator}
-            help={__("Show 1,000 instead of 1000.", "shadcn-blocks")}
+            help={__("Show 1,000 instead of 1000.", "yaycommerce-blocks-for-shadcn-ui")}
             onChange={(value) => setAttributes({ separator: value })}
           />
           <TextControl
             __next40pxDefaultSize
-            label={__("Suffix", "shadcn-blocks")}
+            label={__("Suffix", "yaycommerce-blocks-for-shadcn-ui")}
             value={suffix}
             help={__(
               "Text after the number, such as +, %, K or M. It stays put while the number counts.",
-              "shadcn-blocks"
+              "yaycommerce-blocks-for-shadcn-ui"
             )}
             onChange={(value) => setAttributes({ suffix: value })}
           />

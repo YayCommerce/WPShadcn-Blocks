@@ -7,6 +7,8 @@
  * AI Hint: Editorial about layout — a short left-hand label sits beside an offset headline and paragraphs for the mission, a two-photo band runs the full width beneath it, then a second label-and-copy row carries the values text over three hairline-divided principle rows; best for an about page that leads with words rather than cards or portraits.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|5","left":"var:preset|spacing|10"}}}} -->
