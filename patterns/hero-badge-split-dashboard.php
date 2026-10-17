@@ -7,6 +7,8 @@
  * AI Hint: Split product hero whose left half opens with a small outlined pill badge, a two-line fluid h1, a three-line muted lead and a filled arrow button beside an outline arrow button, while the right half stacks a compact bordered scorecard carrying a label, an oversized percentage and a caption above a muted rounded panel holding the dashboard screenshot; reach for it when the opening screen has to answer an objection in the badge and prove a single headline number beside the interface.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

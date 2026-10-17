@@ -45,6 +45,10 @@ if [ -d "inc" ]; then
     cp -r inc "$DEST_DIR/"
 fi
 
+# Shadcn AI stays out of the WordPress.org build for now; the main plugin
+# file only loads it when the directory is present.
+rm -rf "$DEST_DIR/inc/ShadcnAi"
+
 # Build assets
 if [ -d "build" ]; then
     cp -r build "$DEST_DIR/"
@@ -100,6 +104,11 @@ do
         exit 1
     fi
 done
+
+if [ -e "$DEST_DIR/inc/ShadcnAi" ]; then
+    echo "Error: inc/ShadcnAi must not ship in the release"
+    exit 1
+fi
 
 # Create ZIP
 ZIP_NAME="${PLUGIN_SLUG}-${VERSION}.zip"

@@ -7,6 +7,8 @@
  * AI Hint: Dense team roster grid — a left-aligned badge, headline and intro sit above a borderless four-column grid where every member carries a round portrait, a name, a role line, a two-sentence bio shown at rest and a small row of social icons; reach for it when a team page needs reading depth rather than an avatar-only wall.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|9"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"720px","justifyContent":"left"}} -->

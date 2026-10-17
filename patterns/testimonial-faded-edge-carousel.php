@@ -7,6 +7,8 @@
  * AI Hint: Testimonial carousel led by a single centred heading, with each slide a bordered card holding a square portrait, a medium-weight quote of a sentence or two, and the author's name above their role and company in small muted type; three cards sit side by side on desktop and arrows and dots step through four voices. Best for a clean wall of customer quotes when no supporting copy or call to action is needed.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","testimonials"],"patternName":"shadcn/testimonial-faded-edge-carousel","name":"Testimonial Faded Edge Carousel"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5","right":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:heading {"textAlign":"center","level":2,"style":{"typography":{"fontWeight":"600","letterSpacing":"-0.02em"},"spacing":{"margin":{"bottom":"var:preset|spacing|8"}}},"fontSize":"fluid-4-xl"} -->

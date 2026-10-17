@@ -7,6 +7,8 @@
  * AI Hint: Timed sale bar — a short "ends in" lead-in, then the remaining hours, minutes and seconds each sitting in its own tinted chip, then a line naming the discount. Best for a sale measured in hours rather than days; the labelled countdown bar suits a multi-day campaign and the order-within bar suits a dispatch cut-off. The countdown starts eighteen hours out and the author sets the real deadline.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 // The countdown needs a real instant, and a date hard-coded into a pattern file
 // is wrong the day after it is written: too far out and the preview reads
 // "38277 hours", past and the block hides itself entirely. Computing it as the

@@ -7,6 +7,8 @@
  * AI Hint: Ecommerce hero — a full-width rounded cover panel with a darkened background photo, a left column where an uppercase eyebrow and oversized heading sit at the top and the supporting line plus primary button sit at the bottom, and a right column holding an autoplaying carousel of product cards with image, quick view button, product name and price; best for a shop landing page that has to sell a collection and surface individual products at once.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:cover {"url":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","alt":"Living room styled with the collection","dimRatio":60,"minHeight":720,"minHeightUnit":"px","metadata":{"categories":["shadcn","hero"],"patternName":"shadcn/ecommerce-hero-product-carousel","name":"Ecommerce Hero Product Carousel"},"align":"wide","style":{"border":{"radius":"16px"}},"layout":{"type":"default"}} -->
 <div class="wp-block-cover alignwide" style="border-radius:16px;min-height:720px"><img class="wp-block-cover__image-background" alt="Living room styled with the collection" src="<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>" data-object-fit="cover"/><span aria-hidden="true" class="wp-block-cover__background has-background-dim-60 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:columns {"style":{"spacing":{"padding":{"top":"var:preset|spacing|8","right":"var:preset|spacing|8","bottom":"var:preset|spacing|8","left":"var:preset|spacing|8"},"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

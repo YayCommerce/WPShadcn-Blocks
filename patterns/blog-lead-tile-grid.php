@@ -7,6 +7,8 @@
  * AI Hint: Blog mosaic — a centred badge, headline and standfirst above an article grid where the opening tile is expanded to span a wide column, carrying a large cover image, a date and author metadata line, an oversized linked headline and the only excerpt, while two compact tiles stack beside it and three more sit in an even row underneath with image, metadata and title alone; best for a technical or engineering blog index that should lead with one story without pulling it out of the grid.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","posts"],"patternName":"shadcn/blog-lead-tile-grid","name":"Blog Lead Tile Grid"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"720px"}} -->

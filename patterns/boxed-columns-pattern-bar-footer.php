@@ -7,6 +7,8 @@
  * AI Hint: Site footer — hairlines above and below the whole section plus vertical rules down both sides of the content, framing a brand block of logo, one-line tagline and a row of social icons set opposite three titled columns of navigation links, with a legal bar under an internal hairline carrying a copyright line opposite policy links; reach for it when the footer should read as a bordered box continuing the ruled grid of the page above it.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"border":{"top":{"color":"var:preset|color|border","width":"1px","style":"solid"},"bottom":{"color":"var:preset|color|border","width":"1px","style":"solid"}},"spacing":{"padding":{"right":"var:preset|spacing|4","left":"var:preset|spacing|4"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="border-top-color:var(--wp--preset--color--border);border-top-style:solid;border-top-width:1px;border-bottom-color:var(--wp--preset--color--border);border-bottom-style:solid;border-bottom-width:1px;padding-right:var(--wp--preset--spacing--4);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"align":"wide","style":{"border":{"right":{"color":"var:preset|color|border","width":"1px","style":"solid"},"left":{"color":"var:preset|color|border","width":"1px","style":"solid"}},"spacing":{"blockGap":"0"}},"layout":{"type":"default"}} -->

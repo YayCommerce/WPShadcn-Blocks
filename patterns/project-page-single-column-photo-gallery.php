@@ -7,6 +7,8 @@
  * AI Hint: Single-project photography page built as one centred column — an oversized series title sits above a left-aligned row of small category badges, then four portrait photographs at a 4:5 crop stack one above another at the reading measure with generous space between them, followed by an "About the series" heading with two paragraphs of prose and a bordered card holding four short label-over-value project facts in a single row; reach for it when one photographic body of work needs a quiet page of its own rather than a slot in a gallery grid.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-single-column-photo-gallery","name":"Project Page Single Column Photo Gallery"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

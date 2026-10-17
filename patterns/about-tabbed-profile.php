@@ -7,6 +7,8 @@
  * AI Hint: Interactive about section — a two-column intro pairing a role heading and timezone line with a short bio, a full-width hairline, then a row of four tabs (Overview, Practice, Writing, Archive) where each panel swaps a three-item detail row of location, focus and contact plus a wide rounded image; best for a personal or founder about page that has several facets to show without stacking them all down the page.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|10"}}}} -->

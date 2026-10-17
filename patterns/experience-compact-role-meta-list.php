@@ -7,6 +7,8 @@
  * AI Hint: Compact work-history list with an oversized editorial H2 over three hairline-separated entries that each set a small logo mark beside a bold role title, a muted dot-separated meta line of employment type, work mode and city, and a two-line summary, while a bold date range over a muted employer name holds the right edge; reach for it when a short career history has to stay tight and every role carries the same set of facts.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","careers"],"patternName":"shadcn/experience-compact-role-meta-list","name":"Experience Compact Role Meta List"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|7"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:heading {"level":2,"style":{"typography":{"letterSpacing":"-0.02em"}},"fontSize":"fluid-5-xl"} -->

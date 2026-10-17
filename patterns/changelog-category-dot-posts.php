@@ -7,6 +7,8 @@
  * AI Hint: Prose-led changelog — a modest heading and muted lead above a hairline-divided stack of entries, each splitting a narrow two-line date column against a wider column holding a wrapped row of colour-coded category badges, a headline, two muted paragraphs carrying inline links out to the features they mention, and a muted rounded panel with a centred placeholder image; best for a release page written as short essays about what shipped rather than as version numbers and bullet lists.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"680px","justifyContent":"left"}} -->

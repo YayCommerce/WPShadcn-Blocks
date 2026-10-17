@@ -7,6 +7,8 @@
  * AI Hint: Editorial numbered service accordion — a display-size heading beside a short standfirst, then full-width accordion rows each labelled with a zero-padded index and a discipline name, opening onto a landscape image on the left and, on the right, a lead sentence, explanatory copy and a row of filled category badges; reach for it when a studio wants its disciplines to read like a magazine contents page rather than a card grid, and each discipline deserves a picture.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","services"],"patternName":"shadcn/services-accordion-image-badges","name":"Services Accordion Image Badges"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"verticalAlignment":"bottom","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|8"}}}} -->

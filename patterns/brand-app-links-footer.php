@@ -7,6 +7,8 @@
  * AI Hint: Site footer — a logo on the left facing a short "get the app" sentence with two store buttons on the right, a hairline rule beneath, then a four-column grid of headed link lists whose last column stacks legal links above a row of social icons, closed by a second rule and a copyright note; reach for it when a product site wants mobile-app calls to action inside an otherwise conventional link-column footer.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","footer"],"patternName":"shadcn/brand-app-links-footer","name":"Brand App Links Footer"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4","right":"var:preset|spacing|4"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|7"}},"layout":{"type":"default"}} -->

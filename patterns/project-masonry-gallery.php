@@ -7,6 +7,8 @@
  * AI Hint: Masonry portfolio grid — a short left-aligned section heading above three stacked columns of images whose fixed pixel heights deliberately differ, so the columns break row alignment and read as masonry, with a tight two-line caption under each image carrying a bold project name and a muted category label; reach for it when a studio needs to show a body of work at a glance without every thumbnail being the same shape.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-masonry-gallery","name":"Project Masonry Gallery"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"default"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Editorial blog index — a left-aligned badge, headline and standfirst, then a roomy two-column grid of six transparent hairline-bordered cards that each stack a large 16:9 cover image, a row putting an outline category badge beside a muted publish date, a linked headline, a three-sentence excerpt and a bottom-pinned byline with a round avatar, author name and role; best for a long-form or magazine blog where each post needs more imagery and more of the story than a three-across grid allows.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","posts"],"patternName":"shadcn/blog-two-column-cards","name":"Blog Two Column Cards"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"720px","justifyContent":"left"}} -->

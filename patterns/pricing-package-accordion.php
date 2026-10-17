@@ -7,6 +7,8 @@
  * AI Hint: Service-package pricing laid out as an accordion rather than side-by-side cards — a bold section heading, then one row per package whose trigger carries the package name on the left and its price or a contact label on the right, expanding to a three-column breakdown of what the team does, what the client receives and who the package suits, each as a bulleted list; several rows can stand open at once, so reach for it when the packages are long-form retainers whose detail would drown a card grid.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5","right":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|7"}},"layout":{"type":"constrained","contentSize":"960px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:heading {"style":{"typography":{"fontWeight":"700","letterSpacing":"-0.01em"}},"fontSize":"3-xl"} -->

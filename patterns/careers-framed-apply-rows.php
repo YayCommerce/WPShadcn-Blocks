@@ -7,6 +7,8 @@
  * AI Hint: Careers section — one rounded dashed-border frame wrapping a centred eyebrow badge, headline and muted invitation line, then a hairline-divided stack of three-column role rows that place the job title on the left, small ghost badges for contract type, city and work mode in the middle, and a small Apply button with a trailing arrow on the right; reach for it when a short list of live openings should read as one self-contained noticeboard and every row needs its own call to action.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","careers"],"patternName":"shadcn/careers-framed-apply-rows","name":"Careers Framed Apply Rows"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","style":{"border":{"color":"var:preset|color|border","width":"1px","style":"dashed","radius":"16px"},"spacing":{"padding":{"top":"var:preset|spacing|8","right":"var:preset|spacing|8","bottom":"var:preset|spacing|8","left":"var:preset|spacing|8"},"blockGap":"var:preset|spacing|7"}},"layout":{"type":"default"}} -->

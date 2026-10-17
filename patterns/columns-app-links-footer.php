@@ -7,6 +7,8 @@
  * AI Hint: Site footer — four equal columns of headed text links across the top, beneath them a wide "follow us" block of social icons sharing a row with a narrow "mobile app" block of store buttons, then a hairline and a copyright note; reach for it when the footer should be pure navigation with no brand block, and the social and app links belong in their own labelled row.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","footer"],"patternName":"shadcn/columns-app-links-footer","name":"Columns App Links Footer"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4","right":"var:preset|spacing|4"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|8"}},"layout":{"type":"default"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Social-proof section combining proof with numbers — a heading and supporting line, then a two-column row of soft-filled quote cards carrying the author's avatar, name, role and the company logo, then a three-column row of case-study cards where each opens with a counting stat and a short caption, holds a centred image, and ends with the result in bold; best when testimonials alone are too soft and the outcome deserves a figure.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","testimonials"],"patternName":"shadcn/testimonial-case-study-stats","name":"Testimonial Case Study Stats"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"720px","justifyContent":"left"}} -->

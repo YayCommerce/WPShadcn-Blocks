@@ -7,6 +7,8 @@
  * AI Hint: Editorial three-plan pricing table: left-aligned H2 and supporting line, a segmented Monthly/Yearly control, then a single hairline-bordered frame divided into three flush columns by vertical rules, each column carrying a ghost icon badge for the tier name, an oversized interval-aware price, a rule, a short check list and a full-width button pinned to the bottom; reach for it when the plans should read as one comparison table rather than three floating cards.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|4"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:heading {"fontSize":"fluid-5-xl"} -->

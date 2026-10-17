@@ -7,6 +7,8 @@
  * AI Hint: Work-history list led by an oversized left-aligned H2 with a small download button opposite it, then four hairline-separated rows in which a muted date range holds the left edge, a bold role title over a three-line muted summary fills the middle, and a small logo mark beside the employer name closes the right edge; reach for it on a CV, about or personal-site page when every role needs a short description and a recognisable employer mark.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","careers"],"patternName":"shadcn/experience-role-logo-rows","name":"Experience Role Logo Rows"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|9"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|4","left":"var:preset|spacing|6"}}}} -->

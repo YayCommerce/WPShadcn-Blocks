@@ -7,6 +7,8 @@
  * AI Hint: Alternating vertical timeline inside one hairline-bordered panel — a pill label, heading and standfirst sit above a hairline, then four half-and-half rows swap text and image from side to side while a single unbroken vertical rule runs down the centre and every entry carries a monospace step label, a title, a paragraph and a rounded photograph that are all visible at rest; reach for it when a project history or product journey needs images alongside each milestone rather than text alone.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","style":{"border":{"color":"var:preset|color|border","width":"1px","style":"solid","radius":"16px"},"spacing":{"blockGap":"0"}}} -->

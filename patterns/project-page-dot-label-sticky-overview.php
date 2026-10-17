@@ -7,6 +7,8 @@
  * AI Hint: Single-project case study page — two small uppercase labels each opened by a bullet dot sit above an oversized project title, a three-column metadata row underneath carries a hairline rule across the top of each client, scope and year pair, a wide rounded 16:9 image spans the full width, and a closing two-column section pins a short Overview heading in the left column while three long prose paragraphs and an arrow button scroll past on the right; reach for it when one project deserves a whole page and the reader should keep sight of the section label while reading.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-dot-label-sticky-overview","name":"Project Page Dot Label Sticky Overview"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"default"}} -->

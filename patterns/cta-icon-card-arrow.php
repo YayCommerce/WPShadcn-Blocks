@@ -7,6 +7,8 @@
  * AI Hint: Bordered card call to action — one hairline-outlined card holding a two-column split, with an icon badge leading a compact headline, a short paragraph and a single primary button carrying a trailing arrow on the left, set beside a soft muted panel that frames a product shot or wordmark on the right; reach for it mid-page when the call to action should read as one more card in the stack rather than a full-width band, and when a single action is enough.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","style":{"border":{"color":"var:preset|color|border","width":"1px","style":"solid","radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|7","right":"var:preset|spacing|7","bottom":"var:preset|spacing|7","left":"var:preset|spacing|7"}}},"backgroundColor":"card","layout":{"type":"default"}} -->

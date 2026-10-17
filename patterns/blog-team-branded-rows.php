@@ -7,6 +7,8 @@
  * AI Hint: Blog index — a two-column masthead with an eyebrow, oversized heading and a supporting note, then a hairline-divided stack of full-width post rows where the left column carries a team wordmark, an overlapping avatar cluster and the team name, the middle column carries the date, linked headline and outline category pills with chevrons, and the right column an outline read button; best for an engineering or studio blog where posts belong to named teams rather than single authors.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","posts"],"patternName":"shadcn/blog-team-branded-rows","name":"Blog Team Branded Rows"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"bottom","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|4","left":"var:preset|spacing|6"}}}} -->

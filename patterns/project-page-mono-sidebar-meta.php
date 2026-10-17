@@ -7,6 +7,8 @@
  * AI Hint: Single-project case study page laid out on a twelve-column editorial grid — a wide top row pairs a monospaced project title, small uppercase eyebrow and one-line lead on the left against a narrow right sidebar carrying a 1px hairline left border and stacked client, year, services and team label/value pairs, followed by a captioned 3:2 image spanning the wide width and a final split row placing a short section heading opposite two paragraphs of prose; reach for it when one project needs a full page that reads like a printed case study rather than a card in a portfolio grid.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-mono-sidebar-meta","name":"Project Page Mono Sidebar Meta"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|8"}}}} -->

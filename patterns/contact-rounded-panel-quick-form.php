@@ -7,6 +7,8 @@
  * AI Hint: Rounded-panel contact block: the whole section sits in a single secondary-tinted panel with deep corner radius and generous padding, split into two columns — the left stacks a small uppercase wordmark, a bordered white logo tile, a large "Contact Us" heading and four tight label-and-value rows for email, phone, address and opening hours; the right carries a deliberately short form asking only for a name and a phone number, closed by a compact dark submit that hugs its label; reach for it when the page wants a warm, self-contained contact card rather than a full enquiry funnel.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"border":{"radius":"32px"},"spacing":{"padding":{"top":"var:preset|spacing|8","right":"var:preset|spacing|8","bottom":"var:preset|spacing|8","left":"var:preset|spacing|8"}}},"backgroundColor":"secondary","layout":{"type":"default"}} -->

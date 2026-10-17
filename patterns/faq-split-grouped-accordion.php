@@ -7,6 +7,8 @@
  * AI Hint: Grouped FAQ on a tinted rounded panel — the left half carries an oversized heading and one muted line ending in an underlined contact link, while the right half stacks three categories, each a small muted label sitting on a hairline above two or three collapsed accordion rows; reach for it when a product has enough support questions that they need sorting into topics but not enough to earn a page of their own.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"border":{"radius":"24px"},"spacing":{"padding":{"top":"var:preset|spacing|10","right":"var:preset|spacing|8","bottom":"var:preset|spacing|10","left":"var:preset|spacing|8"}}},"backgroundColor":"muted","layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide has-muted-background-color has-background" style="border-radius:24px;padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--8);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--8)"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

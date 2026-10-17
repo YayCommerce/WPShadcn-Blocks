@@ -7,6 +7,8 @@
  * AI Hint: Single-project case study page built around a wide 560px cover photo with a 16px radius and a 50 percent dim, carrying a small uppercase eyebrow pinned top and a large white project title with a one-line summary pinned bottom, followed by a four-column metadata row of hairline-topped client, location, completed and scope pairs, a two-by-two gallery of 4:3 cover-cropped photographs, and a closing row placing a short heading opposite two paragraphs of prose; use it when one project needs a full page that leads with a single hero photograph rather than a text intro.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-parallax-hero-meta-gallery","name":"Project Page Parallax Hero Meta Gallery"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:cover {"url":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","alt":"The rebuilt Halden boathouse seen from the water at first light","dimRatio":50,"minHeight":560,"minHeightUnit":"px","align":"wide","style":{"border":{"radius":"16px"},"spacing":{"padding":{"top":"var:preset|spacing|7","right":"var:preset|spacing|7","bottom":"var:preset|spacing|7","left":"var:preset|spacing|7"}}},"layout":{"type":"default"}} -->

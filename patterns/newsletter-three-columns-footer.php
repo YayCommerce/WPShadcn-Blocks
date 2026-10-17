@@ -7,6 +7,8 @@
  * AI Hint: Site footer — a wide first row where a logo, a one-line description and a newsletter prompt with a full-width subscribe button sit opposite a three-up grid of link columns, then a hairline and a centred closing block of social icons above the copyright; reach for it when the footer has to carry both list navigation and an email capture.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","footer"],"patternName":"shadcn/newsletter-three-columns-footer","name":"Newsletter Three Columns Footer"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|4","bottom":"var:preset|spacing|8","left":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|7"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--8);padding-left:var(--wp--preset--spacing--4)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

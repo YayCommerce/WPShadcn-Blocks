@@ -7,6 +7,8 @@
  * AI Hint: Site footer — a soft grey panel whose first row pairs a short headline, a supporting line and two buttons with a raised card showing a large price, a plan label and a ticked feature list, followed by five columns of navigation links and a closing row of legal links opposite a follow-us label with social icons; reach for it when the footer should still be selling a free tier.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","footer"],"patternName":"shadcn/cta-pricing-card-footer","name":"CTA Pricing Card Footer"},"align":"full","backgroundColor":"muted","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|4","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-muted-background-color has-background" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|7","left":"var:preset|spacing|7"}}}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Two-column release download panel whose narrow left column stacks an app mark tile, a three-row definition list of version, build and release date with the value right-aligned, and five arrow links to deeper release material, while the wider right column carries a small release pill beside a muted channel label, an H2, a two-line muted lead, a bordered three-item platform switcher with the current choice highlighted, a filled download button beside an outline file-type control and a bordered note card pairing a small icon with two lines of copy; reach for it when the download page has to expose build metadata and platform choice at the same time.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10","left":"var:preset|spacing|4","right":"var:preset|spacing|4"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--4)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

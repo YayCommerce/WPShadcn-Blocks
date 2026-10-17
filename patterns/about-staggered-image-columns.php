@@ -7,6 +7,8 @@
  * AI Hint: Zigzag about layout — a wide image over a headline in the left column beside a lower, bottom-aligned column holding a lead paragraph, an outline button and a second image, then a mirrored row with centred text on the left and a captioned image pushed down on the right, and a hairline-divided milestone list of years and one-line notes; best for a maker or studio telling its history without a hero heading.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}},"backgroundColor":"background"} -->
 <div class="wp-block-group alignwide has-background-background-color has-background" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|8"}}}} -->

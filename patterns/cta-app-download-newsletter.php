@@ -7,6 +7,8 @@
  * AI Hint: Call to action — a two-up row whose wide left panel is a dark rounded card holding a white headline, an iOS and an Android download button and a device screenshot, and whose narrow right card is a muted panel with a short newsletter heading, one line of explanation and a full-width subscribe button; reach for it when a mobile product page has to close on both the app stores and the mailing list.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","call-to-action"],"patternName":"shadcn/cta-app-download-newsletter","name":"CTA App Download Newsletter"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|4","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|5","left":"var:preset|spacing|5"}}}} -->

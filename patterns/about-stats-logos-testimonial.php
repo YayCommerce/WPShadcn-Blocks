@@ -7,6 +7,8 @@
  * AI Hint: Content-heavy about layout — centered headline and lead paragraph above a three-column asymmetric photo grid, a headline with six large figures each underlined by a hairline rule, a muted band carrying eight partner logos, and a closing three-column grid pairing photos and muted stat cards with a testimonial card floating over a photo; best for a comprehensive company about page.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","about"],"patternName":"shadcn/about-stats-logos-testimonial","name":"About Stats Logos Testimonial"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"760px"}} -->

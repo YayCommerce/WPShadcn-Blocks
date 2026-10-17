@@ -7,6 +7,8 @@
  * AI Hint: Detail-list contact split in two vertically centred columns: the left opens with a large "Let's talk" heading and a muted lead, then spaces three rows apart where a circular muted swatch carrying an envelope, phone or map-pin icon sits beside the value; the right is a bordered card on card background titled "Send a message" holding name, email, phone and message fields under a full-width submit; reach for it when the contact details deserve as much room as the form itself.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

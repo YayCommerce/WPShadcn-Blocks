@@ -13,6 +13,8 @@
 
 namespace ShadcnBlocks\ShadcnAi;
 
+defined( 'ABSPATH' ) || exit;
+
 class SseFrameParser {
 
 	/** @var string Bytes received but not yet forming a complete frame. */

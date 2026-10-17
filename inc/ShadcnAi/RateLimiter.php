@@ -20,6 +20,8 @@
 
 namespace ShadcnBlocks\ShadcnAi;
 
+defined( 'ABSPATH' ) || exit;
+
 class RateLimiter {
 
 	/**

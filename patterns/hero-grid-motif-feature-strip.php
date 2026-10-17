@@ -7,6 +7,8 @@
  * AI Hint: Split hero with a capability footer — a 55/45 row putting a display headline, muted lead and a filled plus outline button pair beside a rounded muted panel holding a centred product preview, then a hairline rule under the whole row and four equal columns each stacking an icon badge chip, a semibold capability title and a one-line muted description; best for a product or app landing page that must answer "what does it do" immediately under the hero without adding a second section.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"className":"is-style-shadcn-divided","style":{"spacing":{"blockGap":"0"}}} -->

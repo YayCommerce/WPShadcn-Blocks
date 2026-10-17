@@ -7,6 +7,8 @@
  * AI Hint: Fiscal year metric board — a row of outlined year pills with the reported year filled in, four counting figures beneath with bold captions, and a hairline baseline ticked at each year like a ruler, followed by a primary and outline button; reach for it when an annual report needs its headline numbers dated and placed in a run of years.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","stats"],"patternName":"shadcn/stats-year-pill-timeline","name":"Stats Year Pill Timeline"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|7"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"700px"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Careers section — a left-aligned heading with a short muted lead, then one hairline-divided group per department led by a small department heading, each following row a three-column split holding the role title, a muted location in a straight aligned column and a small outline button on the right; best for an open-roles page where every opening should end in a clear button rather than a bare text link.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","careers"],"patternName":"shadcn/careers-listing-row-actions","name":"Careers Listing Row Actions"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

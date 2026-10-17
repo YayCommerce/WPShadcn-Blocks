@@ -7,6 +7,8 @@
  * AI Hint: Ecommerce hero — a wide autoplaying carousel of tall rounded slides over dimmed photographs, each pairing a white product card on the left (tall image, status badges, category line, product name beside its price, and a star rating with review count) against a large white campaign headline, supporting line and solid light button on the right; best for a shop landing page that rotates through several campaigns while keeping one hero product shoppable on each.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:shadcn/carousel {"metadata":{"categories":["shadcn","hero"],"patternName":"shadcn/ecommerce-hero-campaign-carousel","name":"Ecommerce Hero Campaign Carousel"},"autoplay":true,"autoplayDelay":5000,"showDots":true,"slidesPerViewTablet":1,"slidesPerViewDesktop":1,"align":"wide"} -->
 <!-- wp:shadcn/carousel-item -->

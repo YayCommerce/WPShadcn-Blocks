@@ -7,6 +7,8 @@
  * AI Hint: Service accordion with scope and hand-over detail — a centred heading and standfirst above a single outlined accordion whose rows each pair a small mark, a service name and a duration label, and whose open panel holds a paragraph of explanation followed by two side-by-side lists headed "Services include" and "Deliverables"; reach for it when an agency or studio sells four or five defined engagements and the reader needs the full scope on demand without a wall of text.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","services"],"patternName":"shadcn/services-accordion-deliverables","name":"Services Accordion Deliverables"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"metadata":{"name":"Header"},"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

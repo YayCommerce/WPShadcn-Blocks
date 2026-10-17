@@ -7,6 +7,8 @@
  * AI Hint: Quietest of the comparison layouts: a centred H2 and one-line lead above a narrow three-column table whose first column names the feature and whose two product columns carry a few plain words each, with alternating row shading instead of icons or colour; reach for it when the values are facts rather than verdicts and the section should read like documentation.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","compare"],"patternName":"shadcn/compare-plain-feature-table","name":"Compare Plain Feature Table"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"660px"}} -->

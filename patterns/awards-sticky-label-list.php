@@ -7,6 +7,8 @@
  * AI Hint: Two-column recognition section — a pinned left column holding an award badge, an uppercase "Awards" label, a short note and a press-kit button, beside a right column of hairline-divided rows that each pair an award title and category with a monospace year; best for an about, studio, or agency page that needs credibility without card clutter.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|10"}}}} -->

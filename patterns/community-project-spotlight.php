@@ -7,6 +7,8 @@
  * AI Hint: Single-project spotlight — a centred code badge, headline and one supporting line over a bordered card whose left column carries the project mark, name and repository address while the right column holds a one-line summary and a wrapping row of stat chips for stars, forks and contributors, followed by a centred row of outline badge links to the other places the project is discussed; best for an open-source or community page that needs to put one flagship repository and its momentum in front of everything else.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

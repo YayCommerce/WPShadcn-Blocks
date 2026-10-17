@@ -7,6 +7,8 @@
  * AI Hint: Single-project case study page intro — an oversized title broken across three tightly stacked lines on the left of a two-column row, a right-hand stack of small uppercase labels with their values (client, discipline, year, team), and beneath them a full-width hero image with a hairline border, small radius and a caption; reach for it as the top of a project page where the work needs a title, its credits and one large image before any prose begins.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-two-column-intro-bordered-hero","name":"Project Page Two Column Intro Bordered Hero"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|7","left":"var:preset|spacing|8"}}}} -->

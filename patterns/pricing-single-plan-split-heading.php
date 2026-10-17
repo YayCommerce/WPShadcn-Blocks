@@ -7,6 +7,8 @@
  * AI Hint: Single-plan pricing section split left and right: a left column carrying a large left-aligned H2, a paragraph of positioning copy and a segmented Monthly/Yearly control, beside a right column holding one bordered card with the plan name, an interval-aware price, a check list and two stacked full-width buttons; reach for it when the argument for the plan needs more prose than a centred header allows.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:shadcn/pricing {"align":"","intervals":[{"key":"monthly","label":"Monthly"},{"key":"yearly","label":"Yearly · save 20%"}],"defaultInterval":"monthly","layout":{"type":"default"}} -->

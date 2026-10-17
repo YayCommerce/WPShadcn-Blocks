@@ -7,6 +7,8 @@
  * AI Hint: Blog index — a left-aligned badge, headline and standfirst with an outline archive button on the right, then a responsive three-column grid of six post cards, each stacking a rounded 16:9 cover image, an icon category badge, a linked title, a two-line excerpt and an author with a publication date; best for a magazine-style blog or news landing page that shows recent posts at a glance.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","posts"],"patternName":"shadcn/blog-labeled-post-grid","name":"Blog Labeled Post Grid"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|8"}}}} -->

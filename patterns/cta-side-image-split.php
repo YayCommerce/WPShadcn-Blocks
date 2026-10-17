@@ -7,6 +7,8 @@
  * AI Hint: Plain image-and-copy call to action — a single rounded card cut down the middle, a four-by-three photograph filling the left half flush to the rounded edge and a muted panel on the right holding a short headline, a two-sentence lead and one primary button; reach for it when a page needs a calm, image-led invitation with no stacked cards, badges or overlay decoration.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->

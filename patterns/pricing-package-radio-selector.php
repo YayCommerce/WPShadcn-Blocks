@@ -7,6 +7,8 @@
  * AI Hint: Service-package pricing panel inside a tinted double border: the left column stacks short titled sections — an uppercase eyebrow, a heading and a paragraph — divided by hairlines, with a small alert calling out what every package includes; the right column stacks detailed package cards, each carrying a name and subtitle facing a price, a pair of icon-led highlights, a two-column ticked feature list and its own call to action, with the recommended card outlined in the primary colour and flagged by a badge; reach for it when an agency sells a handful of retainer packages and the copy has to argue for them as much as the prices do.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"border":{"color":"var:preset|color|border","width":"1px","style":"solid","radius":"16px"},"spacing":{"padding":{"top":"var:preset|spacing|2","right":"var:preset|spacing|2","bottom":"var:preset|spacing|2","left":"var:preset|spacing|2"}}},"backgroundColor":"muted","layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide has-border-color has-muted-background-color has-background" style="border-color:var(--wp--preset--color--border);border-style:solid;border-width:1px;border-radius:16px;padding-top:var(--wp--preset--spacing--2);padding-right:var(--wp--preset--spacing--2);padding-bottom:var(--wp--preset--spacing--2);padding-left:var(--wp--preset--spacing--2)"><!-- wp:group {"style":{"border":{"color":"var:preset|color|border","width":"1px","style":"solid","radius":"12px"},"spacing":{"padding":{"top":"var:preset|spacing|8","right":"var:preset|spacing|8","bottom":"var:preset|spacing|8","left":"var:preset|spacing|8"}}},"backgroundColor":"card","layout":{"type":"default"}} -->

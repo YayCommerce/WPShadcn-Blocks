@@ -7,6 +7,8 @@
  * AI Hint: Fashion editorial case study page built on one hard edge — an edge-to-edge photographic hero roughly a screen tall, dimmed to half and centring a small uppercase label, an oversized project title and a one-line summary in white, sitting directly on top of a flat light panel with no seam, gradient or overlap between them; the panel carries the story in a wide two-column split, three paragraphs of narrative on the left against a divided credit stack of client, year, discipline and team with a small outline button on the right; use it when one shoot or collection needs a page of its own and the contrast between photograph and paper is the whole idea.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-fullbleed-hero-white-panel","name":"Project Page Fullbleed Hero White Panel"},"align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"0"},"blockGap":"0"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:0;padding-bottom:0"><!-- wp:cover {"url":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","alt":"A model in an indigo overcoat standing on wet black sand with the tide running out behind her","dimRatio":50,"minHeight":700,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|6","bottom":"var:preset|spacing|9","left":"var:preset|spacing|6"}}},"layout":{"type":"default"}} -->

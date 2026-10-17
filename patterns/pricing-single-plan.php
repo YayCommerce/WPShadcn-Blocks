@@ -7,6 +7,8 @@
  * AI Hint: Single-plan pricing section on a muted full-width background: centred H2 and supporting line, one narrow white card holding just the price and a full-width call-to-action button, then an "Includes" heading above a three-column check list of features; best for a product sold on one plan where the choice is whether to buy, not which tier to pick.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"backgroundColor":"muted","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-muted-background-color has-background" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"fontSize":"fluid-5-xl"} -->

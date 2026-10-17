@@ -7,6 +7,8 @@
  * AI Hint: Framed team profile grid with no section heading — three columns of square-cornered hairline cards carrying a heavy top rule, an uppercase role label, the name, a small round portrait, a short bio, a previous-companies line and social icons pinned to the card foot; reach for it when the roster itself is the section and each person needs a credential line.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|6"}},"layout":{"type":"grid","minimumColumnWidth":"22rem"}} -->

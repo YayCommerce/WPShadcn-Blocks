@@ -7,6 +7,8 @@
  * AI Hint: Sector tile grid — a short section heading over four tall outlined tiles of equal height, each floating a mark in its upper half and pinning a bold sector name and a single line of copy to its foot, with a muted background sliding up behind the contents on hover; reach for it when a company serves several distinct markets and each deserves a large, evenly weighted panel rather than a row of small cards.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","industries"],"patternName":"shadcn/industries-hover-wash-tiles","name":"Industries Hover Wash Tiles"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|6"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:heading {"level":2,"style":{"typography":{"fontWeight":"600"}},"fontSize":"4-xl"} -->

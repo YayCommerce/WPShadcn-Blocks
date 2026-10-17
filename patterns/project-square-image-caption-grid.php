@@ -7,6 +7,8 @@
  * AI Hint: Square-image project grid — a compact heading and supporting line, then a tight three-up grid of six cropped square images with no borders or card backgrounds, each followed immediately by a two-line caption whose first line is the bold project name and whose second is a one-or-two-word muted category; reach for it when a studio needs to show a body of work as a scannable contact sheet rather than as separate cards.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-square-image-caption-grid","name":"Project Square Image Caption Grid"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Magazine-style blog split — a narrow left masthead column holding a monospace issue line, an oversized publication wordmark, a tagline and a bordered editor panel with portrait and note that stays pinned while the wide right column scrolls a cover story with a rounded 16:10 image, linked headline, excerpt and byline above four hairline-divided dispatch rows each carrying a monospace section eyebrow, a linked title, a one-line excerpt and an author with a date, closing on a publishing-rhythm note and an outline archive button; best for a journal, newsletter archive or editorial home page with a strong publication identity.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","posts"],"patternName":"shadcn/blog-magazine-wordmark-split","name":"Blog Magazine Wordmark Split"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|9","left":"var:preset|spacing|10"}}}} -->

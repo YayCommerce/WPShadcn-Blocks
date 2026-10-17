@@ -7,6 +7,8 @@
  * AI Hint: Single-plan pricing on an inverted full-width band: the section is painted in the primary colour with primary-foreground text for the left-aligned H2 and its supporting line, then one wide rounded card on the neutral card surface holds the plan name, a large price with its period, a short qualifying line and a right-aligned button, followed by a hairline rule and a two-column check list; best when one offer has to carry a whole section and you want it to interrupt a pale page.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","pricing"],"patternName":"shadcn/pricing-single-plan-inverted-band","name":"Pricing Single Plan Inverted Band"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"backgroundColor":"primary","textColor":"primary-foreground","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-primary-foreground-color has-primary-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|8"}},"layout":{"type":"default"}} -->

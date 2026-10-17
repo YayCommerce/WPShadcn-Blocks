@@ -7,6 +7,8 @@
  * AI Hint: Narrative about layout — eyebrow, large headline and lead paragraph aligned left, a two-column image pair staggered by vertical alignment with the smaller image framed in a bordered card, three narrow story columns that alternate between left and right of the page, a two-up grid of captioned team photos, and a closing hiring block with an outline button; best for a product company telling its origin story.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}},"backgroundColor":"background"} -->
 <div class="wp-block-group alignwide has-background-background-color has-background" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"720px","justifyContent":"left"}} -->

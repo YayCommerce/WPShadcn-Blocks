@@ -7,6 +7,8 @@
  * AI Hint: Site footer — one wrapping row that carries the logo at the left, an inline run of navigation links through the middle, a short set of social icons after them, and the copyright plus policy links closing the right end; reach for it when the page only needs a thin sign-off bar instead of full link columns.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","footer"],"patternName":"shadcn/compact-wrap-row-meta-footer","name":"Compact Wrap Row Meta Footer"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|7","right":"var:preset|spacing|4","bottom":"var:preset|spacing|7","left":"var:preset|spacing|4"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--7);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--7);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap","verticalAlignment":"center"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Single-project exhibition page — an oversized show title with a short summary beneath it, then a rounded 1px-bordered box holding hairline-divided fact rows that set a muted label on the left against a bold value on the right (artist, venue, dates, medium, curator), followed by a wide rounded hero photograph, a two-column grid of four bordered installation images, and a closing two-column section with a short heading on the left and two prose paragraphs of artistic vision on the right; reach for it when one exhibition, residency or commission needs a page of its own with its credits readable at a glance.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-exhibition-meta-rows","name":"Project Page Exhibition Meta Rows"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

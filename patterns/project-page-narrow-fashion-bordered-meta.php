@@ -7,6 +7,8 @@
  * AI Hint: Narrow single-project fashion case study page held to a 760px measure — a centred project title with a one-line standfirst under it, a captioned 3:2 lookbook photograph, a bordered metadata header holding four short label and value pairs in one wrapping row, and a two-column close with the written narrative on the left and a stacked list of shoot credits on the right; reach for it when one collection or editorial commission needs a restrained page of its own rather than a wide gallery treatment.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-narrow-fashion-bordered-meta","name":"Project Page Narrow Fashion Bordered Meta"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained","contentSize":"760px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

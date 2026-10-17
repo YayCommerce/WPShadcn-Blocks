@@ -7,6 +7,8 @@
  * AI Hint: Two-plan pricing section with a centred H2, supporting line and a segmented monthly/yearly control, then a pair of equal-height cards whose top half carries the plan name, short description, large price and a full-width call-to-action while the bottom half is a muted rounded panel listing that plan's included features as a check list; the second card is outlined in the primary colour to mark the recommended tier, so reach for it when the feature list is long enough to deserve its own visual compartment.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:shadcn/pricing {"align":"wide","intervals":[{"key":"monthly","label":"Monthly"},{"key":"yearly","label":"Yearly"}],"defaultInterval":"monthly","style":{"spacing":{"blockGap":"var:preset|spacing|7"}},"layout":{"type":"default"}} -->

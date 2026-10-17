@@ -7,6 +7,8 @@
  * AI Hint: Two-column FAQ with a human on the left — a small round avatar next to a name and role, a bold "Still have questions?" line, a paragraph of reassurance and an underlined arrow contact link pushed to the foot of the column, set against a short heading and five hairline-divided accordion rows whose first item opens on load to show an answer immediately; reach for it when the questions are about starting a service and the reader needs to see who will be looking after them.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"}}},"layout":{"type":"constrained","contentSize":"1120px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

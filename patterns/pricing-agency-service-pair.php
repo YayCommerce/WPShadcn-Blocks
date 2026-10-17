@@ -7,6 +7,8 @@
  * AI Hint: Services-style pricing pair rather than software tiers — two wide cards, the second on a muted panel, each carrying a service title, two or three sentences of real explanation, a "Starting at" label above an oversized per-project figure, a button, three ticked benefits and a plain text link for the detail; best for agencies, studios and marketplaces selling scoped engagements where the price is a starting point rather than a subscription.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","pricing"],"patternName":"shadcn/pricing-agency-service-pair","name":"Pricing Agency Service Pair"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:shadcn/pricing {"align":"","intervals":[{"key":"project","label":"Per project"}],"style":{"spacing":{"blockGap":"var:preset|spacing|6"}},"layout":{"type":"grid","minimumColumnWidth":"28rem"}} -->

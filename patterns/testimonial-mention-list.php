@@ -7,6 +7,8 @@
  * AI Hint: Testimonial section shaped like a social feed — a large heading fills the left column while the right column holds a muted label above a list of one-line quotes separated by hairlines, each row pairing a small round avatar with a sentence containing a linked @mention. Best for showing many short mentions at a glance rather than a few long quotes.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|10"}}}} -->

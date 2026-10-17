@@ -7,6 +7,8 @@
  * AI Hint: Two-column FAQ split — the left column carries a heading whose second line drops to muted, a two-line paragraph with an underlined inline link to the support team, and one outline button to the full FAQ archive, while the right column holds five collapsed accordion rows separated by hairlines; reach for it when only a handful of questions belong on this page and the real goal is to move the reader towards a conversation.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"}}},"layout":{"type":"constrained","contentSize":"1120px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

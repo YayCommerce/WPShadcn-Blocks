@@ -7,6 +7,8 @@
  * AI Hint: Split hero for a metrics product — the left column carries a two-line fluid h1, a muted three-line lead and a filled arrow button beside an outline arrow button, while the right column stacks a muted rounded panel holding the app screenshot above a bordered chart card that names the period, states an oversized growth figure and plots four quarters as rising progress bars under a short caption; reach for it when the opening screen has to make a single trend line the reason to keep reading.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

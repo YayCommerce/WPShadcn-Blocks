@@ -7,6 +7,8 @@
  * AI Hint: Single-project case study page built as a narrow-wide split — the left third holds a sticky panel with the project name, a one-line descriptor, hairline-divided label and value metadata rows and a plain list of anchor links that jump to the sections below, while the right two thirds scroll past four labelled sections, each opening on a small uppercase heading with an id, two paragraphs of prose and a captioned 16:9 image; reach for it when a long case study needs its contents and credits kept in view while the reader moves down the page.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-sticky-anchor-sidebar","name":"Project Page Sticky Anchor Sidebar"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|10"}}}} -->

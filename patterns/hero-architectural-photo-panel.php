@@ -7,6 +7,8 @@
  * AI Hint: Single-image hero — one rounded wide cover roughly 560px tall holds a dimmed photograph, an uppercase white eyebrow line pinned to the top edge and a bottom-left stack of an oversized white headline, one short supporting line and a single outline button; reach for it when one strong photograph should carry the opening of a studio, property or portfolio page instead of a split text-and-image layout.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","hero"],"patternName":"shadcn/hero-architectural-photo-panel","name":"Hero Architectural Photo Panel"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:cover {"url":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","alt":"Concrete stair hall lit from a tall slot window","dimRatio":60,"minHeight":560,"minHeightUnit":"px","align":"wide","style":{"border":{"radius":"16px"},"spacing":{"padding":{"top":"var:preset|spacing|8","right":"var:preset|spacing|8","bottom":"var:preset|spacing|8","left":"var:preset|spacing|8"}}},"layout":{"type":"default"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Filterable team directory — a centred intro sits above a row of category filter buttons that reveal one labelled group at a time, each group laying out four columns of equal-height bordered cards with a square portrait, name, role and a small clock badge counting years of experience; reach for it when a roster is long enough that visitors arrive looking for one discipline rather than browsing the whole company, and when every person can be sorted into exactly one team.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","team"],"patternName":"shadcn/team-filterable-directory","name":"Team Filterable Directory"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"metadata":{"name":"Intro"},"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"720px"}} -->

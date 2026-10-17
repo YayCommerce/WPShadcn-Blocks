@@ -7,6 +7,8 @@
  * AI Hint: Careers section — a centered headline and muted lead paragraph over a single narrow column of hairline-divided role rows with no department headings, where each row stacks a linked bold job title beside a secondary department badge, a one-line summary in muted text, and two ghost badge chips for contract type and location; best for a compact jobs page listing a handful of openings that read better as one continuous list than as grouped sections.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|7"}},"layout":{"type":"constrained","contentSize":"880px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

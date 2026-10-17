@@ -7,6 +7,8 @@
  * AI Hint: Two-plan pricing with a segmented billing control — a centred H2 and supporting line, a pill-shaped Monthly/Annual radio group with a small outline badge advertising the annual saving next to it, then two panels each holding a plan name, a large price that follows the control, a one-line audience note, a ticked feature list and a call to action along the foot, the paid panel ringed in the primary colour; best when the annual discount is the argument you want the visitor to notice first.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","pricing"],"patternName":"shadcn/pricing-two-plan-radio-discount","name":"Pricing Two Plan Radio Discount"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

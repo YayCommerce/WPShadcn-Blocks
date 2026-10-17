@@ -7,6 +7,8 @@
  * AI Hint: Single-project case study page built on a five-column header — the project title fills the wide left cell with its second half dropped to muted grey inside the same line, and a tall portrait photograph fills the narrow right cell; below it a 2:1 image pair sits beside a credit stack separated by a hairline left rule, and the page closes with a short vision heading and two prose paragraphs set opposite it; reach for it when one commission needs a page of its own with the facts kept visible next to the imagery.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-five-column-two-tone-header","name":"Project Page Five Column Two Tone Header"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|9"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

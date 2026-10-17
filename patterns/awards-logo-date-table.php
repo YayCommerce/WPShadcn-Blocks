@@ -7,6 +7,8 @@
  * AI Hint: Awards listing — a large left-aligned heading with an icon badge and a right-aligned date-range line, then a labelled table whose hairline-divided rows each carry an index number, an issuer logo beside the award name, a category note and a right-aligned year; best for a studio or agency recognition page.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","awards"],"patternName":"shadcn/awards-logo-date-table","name":"Awards Logo Date Table"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"bottom","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|4","left":"var:preset|spacing|6"}}}} -->

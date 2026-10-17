@@ -7,6 +7,8 @@
  * AI Hint: Low-mass call to action built as a hairline-bordered rectangle with an internal two-cell grid — a wide narrative cell carrying an oversized heading and one supporting sentence, and a narrow action cell where a solid primary button and an outline secondary button each fill the cell width and sit one above the other; reach for it when the actions deserve to read as a small form pane rather than an inline button pair, and when a filled or dark band would weigh the page down.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","call-to-action"],"patternName":"shadcn/cta-bordered-grid-split","name":"CTA Bordered Grid Split"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","style":{"border":{"color":"var:preset|color|border","width":"1px","style":"solid","radius":"16px"},"spacing":{"padding":{"top":"var:preset|spacing|8","right":"var:preset|spacing|8","bottom":"var:preset|spacing|8","left":"var:preset|spacing|8"}}},"layout":{"type":"default"}} -->

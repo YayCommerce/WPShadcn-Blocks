@@ -13,6 +13,8 @@
 
 namespace ShadcnBlocks\ShadcnAi;
 
+defined( 'ABSPATH' ) || exit;
+
 use ShadcnBlocks\Traits\SingletonTrait;
 
 class SettingsPage {

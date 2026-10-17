@@ -7,6 +7,8 @@
  * AI Hint: Four-across case study row — an uppercase eyebrow and heading sit on the left with a ghost archive badge pinned right, then four equal columns each stack a 4:3 dimmed photograph with a small category tag in its top corner and a large figure with a one-line caption burned into its bottom corner, followed by the client name, a bold result line and a two-line description; reach for it when a case-study or results page needs the numbers to read at a glance with no quotes, portraits or logos.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","case-studies"],"patternName":"shadcn/case-study-metric-cards","name":"Case Study Metric Cards"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"bottom","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|4","left":"var:preset|spacing|6"}}}} -->

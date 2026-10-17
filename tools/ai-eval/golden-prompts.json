@@ -48,7 +48,7 @@
       "lang": "en",
       "prompt": "Add a features section highlighting what makes us different.",
       "expectedSections": [ "features" ],
-      "notes": "Topic-less: correct copy should reflect the site's own business from siteContext, not generic placeholders."
+      "notes": "Topic-less: no site context is sent, so copy stays generic; check it is coherent rather than lorem-style filler."
     },
     {
       "id": "yoga-testimonials-gap-en",

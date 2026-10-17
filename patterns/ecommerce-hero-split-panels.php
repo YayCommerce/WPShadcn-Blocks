@@ -7,6 +7,8 @@
  * AI Hint: Ecommerce split hero — two equal cover panels over dimmed photographs with content pinned bottom-left: the left panel holds an oversized white headline and an outline button, the right panel a compact white product card with a flush thumbnail, product name, red sale price beside a struck-through regular price, and a bag button; best for a shop landing page promoting one collection and one hero product at the same time.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:columns {"metadata":{"categories":["shadcn","hero"],"patternName":"shadcn/ecommerce-hero-split-panels","name":"Ecommerce Hero Split Panels"},"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|4","left":"var:preset|spacing|4"}}}} -->
 <div class="wp-block-columns alignwide"><!-- wp:column {"width":"50%"} -->

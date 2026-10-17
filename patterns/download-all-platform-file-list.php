@@ -7,6 +7,8 @@
  * AI Hint: Complete release page for an app that ships a different artefact to every operating system: a large rounded app tile sits above the product name, a single filled auto-detect button and a small muted build line, and beneath them one bordered card divides into hairline-separated rows that pair a platform name on the left with one, two or three full-width outline buttons on the right; reach for it when visitors already know the product and only need to find the exact installer for the machine in front of them.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10","left":"var:preset|spacing|4","right":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|6"}},"layout":{"type":"constrained","contentSize":"560px"}} -->

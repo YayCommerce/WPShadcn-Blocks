@@ -7,6 +7,8 @@
  * AI Hint: Trust-centre compliance layout that opens with a row of three bordered stat cards showing a large figure over a muted label, then splits into a left column holding a pill badge, a two-line heading, a muted lead and a filled plus outline button pair, and a right column stacking four bordered cards that each combine a round scheme seal, a bold name, a small status badge, a short description and an arrow detail link; reach for it when every scheme needs its own status and follow-up link rather than a single blanket claim.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|9"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"grid","columnCount":3}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Two-column compliance section whose left half stacks a pill badge, an oversized two-line headline, a muted three-line lead, a two-by-two grid of bold capability titles over short explanations and a filled button beside an arrow text link, while the right half holds a two-by-two grid of bordered cards each showing a large round scheme seal above a name and a one-line category; reach for it when the security story and the schemes behind it should carry equal weight above the fold.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|10"}}}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Documentation-style pricing comparison — a centred H2 and two-line intro, one bordered panel divided down the middle into two centred plan summaries (name, tagline, oversized price or a "talk to us" line, price note and a full-width call to action), then a comparison table whose header names the two plans and whose rows list one capability each with the value for both; best when two tiers differ across many granular features and the buyer needs to read the differences rather than skim badges.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","pricing"],"patternName":"shadcn/pricing-two-plan-comparison-table","name":"Pricing Two Plan Comparison Table"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

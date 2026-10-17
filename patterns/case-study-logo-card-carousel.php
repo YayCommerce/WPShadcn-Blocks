@@ -7,6 +7,8 @@
  * AI Hint: Case-study carousel — a short left-set headline and muted lead sit above a full-width sliding track of six portrait cards, each a dimmed photograph with a small white customer wordmark at the top and a single-sentence outcome at the bottom, with arrows and dots stepping three cards at a time on desktop, two on tablet and one on mobile and no autoplay so the reader sets the pace; reach for it when a case-study or customer page has more stories than a static grid can hold and needs no quotes, portraits or metrics.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","case-studies"],"patternName":"shadcn/case-study-logo-card-carousel","name":"Case Study Logo Card Carousel"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"metadata":{"name":"Intro"},"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"680px","justifyContent":"left"}} -->

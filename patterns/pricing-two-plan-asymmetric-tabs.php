@@ -7,6 +7,8 @@
  * AI Hint: Asymmetric two-plan pricing where proportion carries the recommendation instead of a badge — a centred H2 and lead over a segmented monthly/yearly control, then a narrow card and a noticeably wider card sharing the same rhythm of plan name, price with period suffix, one-line description, check list and full-width button, the wider card taking a double-weight primary border and the solid button while the narrow one keeps a hairline and an outline button; reach for it when two tiers should not look equal and you would rather not label one "most popular".
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"fontSize":"fluid-5-xl"} -->

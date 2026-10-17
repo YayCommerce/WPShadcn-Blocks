@@ -7,6 +7,8 @@
  * AI Hint: Minimal social-proof carousel — each slide is a single customer story centred on the page, the quote set in oversized text across a narrow measure, then a round avatar, the author name and their role and company underneath, and a row of dots below the slide steps between stories while autoplay advances them on its own. Best when one quote at a time should carry the whole section, with no heading, cards or borders competing for attention.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","testimonials"],"patternName":"shadcn/testimonial-quote-spotlight","name":"Testimonial Quote Spotlight"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5","right":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:shadcn/carousel {"autoplay":true,"autoplayDelay":6000,"showArrows":false,"slidesPerView":1,"slidesPerViewTablet":1,"slidesPerViewDesktop":1,"align":"wide"} -->

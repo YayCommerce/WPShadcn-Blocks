@@ -7,6 +7,8 @@
  * AI Hint: Portrait-and-overlay contact split — the left column stacks a tall three-by-four photograph with rounded corners under a card-background, hairline-bordered panel pulled up by a negative margin so it overlaps the bottom of the image and sits inset from its edges, that panel holding three small columns of uppercase muted label above value for email, phone and address, while the right column is vertically centred with a small uppercase eyebrow, a large heading and a stacked form of name, email, message and an arrow-tipped full-width submit; reach for it when the contact section should feel composed and editorial rather than like a plain form beside a picture.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

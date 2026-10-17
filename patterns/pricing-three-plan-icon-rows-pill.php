@@ -7,6 +7,8 @@
  * AI Hint: Three-column pricing section with a rounded pill eyebrow over the centred H2 and supporting line, then equal-height bordered cards holding a plan name, a monthly figure with the period stacked beneath it, an audience note, a bold promise line, a full-width button and five icon-and-text feature rows; the middle card carries a solid "Most picked" pill and a thicker primary border, so reach for it when the feature lists are short and distinct enough that a varied icon per line reads better than a repeated tick.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:group {"layout":{"type":"flex","justifyContent":"center"}} -->

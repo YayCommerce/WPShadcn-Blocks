@@ -7,6 +7,8 @@
  * AI Hint: Pricing section that presents the tiers as carousel slides rather than a static grid — three on desktop, two on tablet, one on a phone — with arrows and dots for navigation; a Monthly/Yearly segmented control above swaps every figure at once, and each slide is an equal-height bordered card holding the plan name, a large price with the period stacked beneath, a short pitch, a full-width button and a hairline "Features" divider above the ticked list; reach for it when the plans carry long feature lists that would crowd a three-column grid, or when the section has to stay one row tall on small screens.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:shadcn/pricing {"align":"wide","defaultInterval":"monthly","style":{"spacing":{"blockGap":"var:preset|spacing|8"}},"layout":{"type":"default"}} -->

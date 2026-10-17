@@ -7,6 +7,8 @@
  * AI Hint: Demo-booking contact split in two columns: the left carries an oversized headline, a muted lead, an overlapping avatar row with a small reassurance line, a three-item check list of benefits and a four-logo strip; the right is a bordered card-background form asking for name, work email, company, phone, then country and company-size dropdowns, closed by a full-width submit button that emails the site owner; reach for it when a product sells through sales calls and the page must argue for the meeting right beside the form that books it.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

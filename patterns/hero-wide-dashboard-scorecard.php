@@ -7,6 +7,8 @@
  * AI Hint: Asymmetric split hero — a slim left column carries a two-line fluid H1, a three-sentence muted lead and a filled arrow button beside an outline arrow button, while a much wider right column stacks one muted rounded panel holding a dashboard screenshot above a small right-aligned bordered scorecard that pairs a label, an oversized percentage and a one-line muted caption; best for an analytics or CRM landing page whose single proof point is a number the product computes.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

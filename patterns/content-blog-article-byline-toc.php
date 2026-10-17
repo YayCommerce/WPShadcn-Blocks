@@ -7,6 +7,8 @@
  * AI Hint: Long-form article opener — a two-crumb breadcrumb, an oversized two-line h1 and a byline row of round avatar, bold writer name and muted publication date sit above a two-column body whose wide left column stacks a tall rounded muted media panel, a three-line muted intro, an anchored h2 with two paragraphs and a second media panel, while the narrow right column lists the section headings under an uppercase on-this-page label; reach for it on an editorial post, essay or research write-up where the reader needs a table of contents beside the story rather than above it.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"default"}} -->

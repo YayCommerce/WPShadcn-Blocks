@@ -7,6 +7,8 @@
  * AI Hint: Single-project case study page — a hairline rule opens a two-column header with the project title left and a short summary right, closed by a second rule, then a wide rounded hero image, a concept section of one heading and two paragraphs held to a readable measure, two captioned square 1:1 images side by side, and a five-item materials list using the check-mark list style; reach for it when one art or design project needs a page of its own with a materials or specification list at the foot.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-paired-square-concept","name":"Project Page Paired Square Concept"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"default"}} -->

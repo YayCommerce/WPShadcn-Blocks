@@ -7,6 +7,8 @@
  * AI Hint: Full-width dark panel washed with a custom night-sky gradient, splitting into a 55/45 column pair — eyebrow badge, large headline, lead paragraph and a two-button row on the left, a translucent hairline-bordered preview tile on the right — and closing with four icon badges naming the reasons to sign up; reach for it when a launch page needs a bold gradient opener that answers the objections in the same breath, without leaning on a photograph.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"className":"is-style-shadcn-on-dark","align":"wide","style":{"border":{"radius":"16px"},"color":{"text":"#ffffff","gradient":"linear-gradient(135deg,#070b1f 0%,#12224d 55%,#0b2f3a 100%)"},"dimensions":{"minHeight":"520px"},"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"default"}} -->

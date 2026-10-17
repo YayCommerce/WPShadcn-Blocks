@@ -7,6 +7,8 @@
  * AI Hint: Testimonial section — a small pill badge over a large heading and a supporting line, separated by a horizontal rule from a responsive grid of six bordered cards, each holding a partner logo, an italic customer quote, and a round avatar beside the author's name and job title; best for social proof where the quotes come from named people at recognisable companies.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","style":{"border":{"bottom":{"color":"var:preset|color|border","width":"1px","style":"solid"}},"spacing":{"padding":{"bottom":"var:preset|spacing|8"},"blockGap":"var:preset|spacing|4"}},"layout":{"type":"default"}} -->

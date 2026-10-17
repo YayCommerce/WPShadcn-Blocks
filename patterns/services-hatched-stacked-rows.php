@@ -7,6 +7,8 @@
  * AI Hint: Blueprint-flavoured services layout — a short uppercase label sits left of a large statement heading and a text link, then four stacked full-width bands, each filled with a 45-degree hatch drawn as a repeating gradient, put an oversized discipline title on the left and a wrapping list of arrow-marked deliverables on the right; reach for it on an agency or studio services page that wants an architectural, drafting-table feel and room to name what each discipline actually ships.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|9"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|8"}}}} -->

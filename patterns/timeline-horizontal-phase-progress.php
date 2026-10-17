@@ -7,6 +7,8 @@
  * AI Hint: Horizontal phase timeline — an outline eyebrow badge, a wide heading, a muted intro and a small "phase two of four" progress line, then an equal four-column row where every phase carries a Lucide icon badge, an uppercase date range, its own segment of a two-pixel track darkened to the foreground colour once the phase is complete, a short phase title and two lines of detail; reach for it when a project, onboarding or product roadmap should be scanned across the page as a run of dated stages rather than scrolled down as a list.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","timeline"],"patternName":"shadcn/timeline-horizontal-phase-progress","name":"Timeline Horizontal Phase Progress"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"metadata":{"name":"Header"},"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"720px","justifyContent":"left"}} -->

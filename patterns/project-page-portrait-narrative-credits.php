@@ -7,6 +7,8 @@
  * AI Hint: Single-project case study page for a photographic or fashion editorial — a centred oversized title with a centred one-line summary beneath it, then a two-column section pairing a tall 4:5 portrait photograph on the left with, on the right, two paragraphs of narrative above a hairline-divided credits list naming photography, styling, hair, make-up and set design; the right column is vertically centred against the portrait, so reach for it when a shoot needs its own page and the story reads beside the picture rather than under a wide hero.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-portrait-narrative-credits","name":"Project Page Portrait Narrative Credits"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|9"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Contrast call to action — a single rounded panel filled with the inverted surface colour holds a centred headline, one supporting sentence and two stacked-then-inline buttons, a solid light-on-dark primary beside an outline secondary; reach for it when a page needs one loud, self-contained conversion moment between two ordinary light sections without going full-bleed.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","style":{"border":{"radius":"16px"},"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|7","bottom":"var:preset|spacing|9","left":"var:preset|spacing|7"},"blockGap":"var:preset|spacing|5"}},"backgroundColor":"foreground","textColor":"background","layout":{"type":"constrained","contentSize":"640px"}} -->

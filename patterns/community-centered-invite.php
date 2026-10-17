@@ -7,6 +7,8 @@
  * AI Hint: Minimal centred community block — a 40px logo mark above a mid-sized heading and a single muted sentence naming who the group is for, closing with a horizontal row of three small outline badge links to chat, source and newsletter channels; reach for it when a page only needs a short invitation to join rather than a grid of channel cards.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"560px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:image {"align":"center","width":"40px","sizeSlug":"thumbnail"} -->

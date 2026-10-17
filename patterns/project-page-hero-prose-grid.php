@@ -7,6 +7,8 @@
  * AI Hint: Single-project case study page — a small uppercase eyebrow above an oversized project title and a one-line summary, then a wide rounded hero image, three prose paragraphs held to a readable measure, a hairline-divided block of credit rows with the label left and the value right, and a two-column grid of four bordered project images; reach for it when one piece of work needs its own page rather than a slot in a portfolio listing.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-hero-prose-grid","name":"Project Page Hero Prose Grid"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

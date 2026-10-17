@@ -7,6 +7,8 @@
  * AI Hint: Site footer — a logo lockup pinned left beside a four-up grid of small-caps column titles over plain link lists, the last of which holds social icons instead of links, closed by the brand name repeated as a giant edge-to-edge wordmark; reach for it when the footer should stay compact but still end on a strong piece of brand typography.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","footer"],"patternName":"shadcn/columns-giant-wordmark-footer","name":"Columns Giant Wordmark Footer"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|4","bottom":"var:preset|spacing|6","left":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--6);padding-left:var(--wp--preset--spacing--4)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|7","left":"var:preset|spacing|7"}}}} -->

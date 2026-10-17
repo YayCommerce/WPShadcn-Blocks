@@ -7,6 +7,8 @@
  * AI Hint: Centred mobile download section that opens with a small outlined pill badge, sets one very wide single-line h2 across the full wide container, follows it with a filled download button beside an outline download button, and closes with three tall rounded phone mockups sitting side by side; reach for it when the app itself is the proof and the page needs one confident line plus the screens above the fold.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|6"}},"layout":{"type":"constrained","contentSize":"1120px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:group {"layout":{"type":"flex","justifyContent":"center"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Three-plan feature comparison with no cards or panels: a header row pairing a Billing label and segmented switch with three plan columns of name, price and an outline button, then category headings ruled off from hairline-divided feature rows whose cells pair a tick with a written value; best for a plain, scan-friendly comparison that stacks to a single column on phones.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","pricing"],"patternName":"shadcn/pricing-comparison-mobile-selector","name":"Pricing Comparison Mobile Selector"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"620px","justifyContent":"left"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Single-project case study page — a twelve-column top row splits an oversized serif project title and a one-line lede against a muted rounded card listing client, year, scope and role as label-and-value rows, then a tall softly rounded photo runs the full wide column with a small uppercase eyebrow at its top and a white two-line caption floating over its lower area, closing on a split prose section that sets the brief beside the outcome; reach for it when one commission needs a whole page and the hero image has to carry a caption rather than a headline.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-floating-caption-card","name":"Project Page Floating Caption Card"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|8"}}}} -->

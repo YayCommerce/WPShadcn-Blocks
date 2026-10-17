@@ -7,6 +7,8 @@
  * AI Hint: Classic launch hero — a centred icon badge, a large centred H1, a two-sentence muted lead, a filled plus outline button pair and a small muted fine-print line inside a narrow centred column, followed by one wide muted rounded panel that insets a single product screenshot; best for a product or SaaS landing page announcing a release when one screen tells the whole story.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|9"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained","contentSize":"720px"}} -->

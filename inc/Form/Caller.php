@@ -10,6 +10,8 @@
 
 namespace ShadcnBlocks\Form;
 
+defined( 'ABSPATH' ) || exit;
+
 use ShadcnBlocks\Traits\SingletonTrait;
 
 class Caller {

@@ -9,4 +9,6 @@
 
 namespace ShadcnBlocks\ShadcnAi;
 
+defined( 'ABSPATH' ) || exit;
+
 class LlmRequestException extends \RuntimeException {}

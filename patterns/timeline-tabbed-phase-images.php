@@ -7,6 +7,8 @@
  * AI Hint: Horizontal tabbed timeline — a centred heading and standfirst sit above a row of four evenly spread tab triggers, and selecting one swaps a two-column panel holding a monospace date, a phase title, a paragraph, an outline link and a rounded image on a soft panel; each phase lives entirely inside its own tab, so editing one panel never touches the others, and it suits a delivery plan or programme timeline that would run too long if all four phases were stacked down the page.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"720px"}} -->

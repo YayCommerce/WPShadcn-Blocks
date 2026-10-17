@@ -7,6 +7,8 @@
  * AI Hint: Site footer — four equal columns in which the first three each stack a small square icon, a bold column label and a list of text links, while the last column carries a logo, a one-line statement of intent, a row of social icons and a copyright note; reach for it when the footer should read as a set of clearly signposted sections rather than an undifferentiated block of links.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","footer"],"patternName":"shadcn/icon-labeled-columns-footer","name":"Icon Labeled Columns Footer"},"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|4","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|7","left":"var:preset|spacing|7"}}}} -->

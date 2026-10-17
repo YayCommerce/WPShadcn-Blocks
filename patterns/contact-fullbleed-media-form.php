@@ -7,6 +7,8 @@
  * AI Hint: Full-bleed contact split with no gutter and no page padding: the left half is a cover-cropped photograph run to the viewport edge with a small uppercase eyebrow and a one-line statement set in white over its lower corner, while the right half sits on plain background, vertically centred, with a large "Contact Us" heading, a two-line muted lead, an inline row pairing an envelope glyph with an email address and a phone glyph with a number, then a stacked form of first name, last name, email, message and an arrow-tipped submit; reach for it when the contact section should break the page rhythm and read as a landing panel rather than a boxed card.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->

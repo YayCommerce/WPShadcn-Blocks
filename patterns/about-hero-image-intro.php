@@ -7,6 +7,8 @@
  * AI Hint: About-page layout — oversized headline above a full-width wide-crop hero photo, then a three-column row holding a muted label, an introduction with an inline avatar credit, and a large closing statement; best when strong photography leads the story.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","about"],"patternName":"shadcn/about-hero-image-intro","name":"About with Hero Image"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}},"backgroundColor":"background"} -->
 <div class="wp-block-group alignwide has-background-background-color has-background" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:heading {"fontSize":"fluid-5-xl"} -->

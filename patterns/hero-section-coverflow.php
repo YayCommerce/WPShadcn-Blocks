@@ -7,6 +7,8 @@
  * AI Hint: Two-column hero with a pill badge, large H1, supporting paragraph and dual arrow buttons on the left; on the right a faded, continuously scrolling logo strip sits above an autoplaying coverflow carousel whose centre portrait card scales up while its neighbours recede; stacks to one column on narrow screens; best for a product or SaaS landing page that wants social proof and imagery in the first screen.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"backgroundColor":"background"} -->
 <div class="wp-block-group alignwide has-background-background-color has-background" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|8"}},"layout":{"type":"grid","minimumColumnWidth":"30rem"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Image-free centred hero in a 720px column — a fluid oversized h1, a muted two-line lead, a filled primary button beside an outline one, then a centred row of two stat pairs each setting a heavy number over a small muted label, an overlapping five-avatar group and a closing muted micro-line; reach for it on a launch or developer landing page where two hard numbers carry more weight than a screenshot.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","right":"var:preset|spacing|4","bottom":"var:preset|spacing|10","left":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained","contentSize":"720px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--4)"><!-- wp:heading {"textAlign":"center","level":1,"style":{"typography":{"letterSpacing":"-0.03em"}},"fontSize":"fluid-7-xl"} -->

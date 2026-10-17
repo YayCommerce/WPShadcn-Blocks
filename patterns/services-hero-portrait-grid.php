@@ -7,6 +7,8 @@
  * AI Hint: Editorial services layout pairing a left intro column of eyebrow, heading, paragraph and outline button with a right-hand grid whose first card is a full-width widescreen cover and whose remaining four are portrait covers in two columns, each carrying a white service name and link arrow over a dimmed image; reach for it when one flagship service should lead and four supporting ones follow.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","services"],"patternName":"shadcn/services-hero-portrait-grid","name":"Services Hero Portrait Grid"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5","right":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

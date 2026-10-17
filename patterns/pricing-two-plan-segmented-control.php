@@ -7,6 +7,8 @@
  * AI Hint: Two-plan pricing section led by a centred H2, a muted supporting line and a segmented billing control that swaps every price between monthly and yearly, followed by two equal-height cards each stacking the plan name, one-line description, large price and a check list of features, with the full-width action button pushed to the bottom of the card so both buttons line up however uneven the feature lists are; reach for it as the plain, dependable two-tier pricing block.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:shadcn/pricing {"align":"wide","intervals":[{"key":"monthly","label":"Monthly"},{"key":"yearly","label":"Yearly"}],"defaultInterval":"monthly","style":{"spacing":{"blockGap":"var:preset|spacing|7"}},"layout":{"type":"default"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Gallery-style services section — a short heading and subtitle sit flush left, then three columns each stack two dimmed cover cards cut to different aspect ratios so the grid reads as a staggered wall rather than a tidy matrix, each card carrying a white service name and link arrow, with a centred outline button underneath; reach for it when six services should feel like a portfolio wall.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","services"],"patternName":"shadcn/services-masonry-image-cards","name":"Services Masonry Image Cards"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5","right":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"640px","justifyContent":"left"}} -->

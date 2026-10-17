@@ -7,6 +7,8 @@
  * AI Hint: Narrative about layout — centered headline and lead paragraph above a three-by-two photo grid with no gaps, followed by two side-by-side prose columns covering vision and the people behind the work, closing on a muted rounded banner with a headline and one large button; best for a story-led about page carrying a lot of copy.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"720px"}} -->

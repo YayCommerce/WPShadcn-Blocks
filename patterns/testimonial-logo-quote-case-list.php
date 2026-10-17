@@ -7,6 +7,8 @@
  * AI Hint: Stacked social-proof section — a heading and supporting line sit left-aligned at the top, a two-column row of bordered quote cards follows with the partner logo above the quote and a round avatar beside the author name and role, and underneath sits a single rounded panel whose hairline-divided rows each line up a square thumbnail, an oversized stat with a small caption beneath it, and the case-study title in its own column; best for a results or customers page where a couple of quotes should be read first and the measurable outcomes then scan as a list.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","testimonials"],"patternName":"shadcn/testimonial-logo-quote-case-list","name":"Testimonial Logo Quote Case List"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","style":{"spacing":{"margin":{"bottom":"var:preset|spacing|8"},"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"640px","justifyContent":"left"}} -->

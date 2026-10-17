@@ -7,6 +7,8 @@
  * AI Hint: Bordered comparison card with a shaded header row: each row leads with a small line icon, then a bold feature name over a muted one-line explanation, then two narrow columns showing a check, a cross or a dash per product; reach for it when every feature needs a sentence of context and the two verdicts should still be scannable in a single vertical glance.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","compare"],"patternName":"shadcn/compare-icon-row-checklist","name":"Compare Icon Row Checklist"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"660px"}} -->

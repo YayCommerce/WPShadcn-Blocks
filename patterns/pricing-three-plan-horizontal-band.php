@@ -7,6 +7,8 @@
  * AI Hint: Pricing section where the three tiers live inside a single rounded bordered band rather than separate cards, divided by vertical hairlines and stacking into stacked segments on phones; a segmented Monthly/Yearly control sits under the centred heading and swaps every figure at once, each segment carries a small tier label, a large price with the period beneath it, one supporting sentence, two ticked lines and a full-width button, and the middle segment picks up a muted tint to mark the recommended tier; reach for it when the plans are close enough that one continuous strip reads better than three floating cards.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"fontSize":"fluid-5-xl"} -->

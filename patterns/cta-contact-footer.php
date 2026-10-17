@@ -7,6 +7,8 @@
  * AI Hint: Site footer — a dark full-width panel of four hairline-separated rows: a large white closing headline beside a light button with a trailing arrow, then a logo with columns of text links and a newsletter prompt, then contact details whose labels carry phone, mail and location icons, and finally a copyright line opposite policy links; best as the closing footer of a marketing site that needs a last call to action and contact details in one place.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","footer"],"patternName":"shadcn/cta-contact-footer","name":"CTA Contact Footer"},"align":"full","style":{"color":{"text":"#ffffff","background":"#171717"},"spacing":{"padding":{"top":"var:preset|spacing|8","right":"var:preset|spacing|6","bottom":"var:preset|spacing|8","left":"var:preset|spacing|6"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-text-color has-background" style="color:#ffffff;background-color:#171717;padding-top:var(--wp--preset--spacing--8);padding-right:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--8);padding-left:var(--wp--preset--spacing--6)"><!-- wp:group {"className":"is-style-shadcn-divided is-style-shadcn-on-dark","align":"wide","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"constrained"}} -->

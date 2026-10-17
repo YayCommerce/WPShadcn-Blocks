@@ -7,6 +7,8 @@
  * AI Hint: Two-column changelog page — a narrow sticky left rail carrying a "Changelog" heading, a muted lead, an uppercase "On this page" label and a short table of contents whose current release sits in a bordered box, beside a wide right column of hairline-divided entries that each stack an outline version badge with its release date, a large release title, a muted summary, a bordered "What's included" box holding a tick list, and a muted panel framing a release screenshot; best for a release notes page long enough that readers need a contents list to navigate.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|10"}}}} -->

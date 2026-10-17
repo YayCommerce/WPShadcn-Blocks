@@ -7,6 +7,8 @@
  * AI Hint: Site footer — a dark panel in three tiers: a large statement line with a support email opposite two compact text columns of navigation and social links; a newsletter sign-up prompt with one button opposite a postal address and policy links; and an oversized brand wordmark set across the full width as the closing mark; reach for it when a product or studio site wants a magazine-like dark footer that ends on the logotype rather than a legal bar.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"className":"is-style-shadcn-on-dark","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|4","bottom":"var:preset|spacing|8","left":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|9"}},"backgroundColor":"foreground","textColor":"background","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull is-style-shadcn-on-dark has-background-color has-foreground-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--8);padding-left:var(--wp--preset--spacing--4)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|7","left":"var:preset|spacing|8"}}}} -->

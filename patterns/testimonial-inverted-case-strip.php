@@ -7,6 +7,8 @@
  * AI Hint: Social-proof section painted as a single dark rounded panel holding three tiers — a left-aligned heading with a supporting line, a two-column pair of outlined quote cards that each close with an avatar beside the author name and role and a customer logo opposite, and a three-column strip of compact case blocks pairing an oversized figure with a caption and a one-line outcome; reach for it when the testimonials need to read as one contrasting band against a light page and the proof numbers should sit in the same panel as the quotes.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["testimonials"],"patternName":"shadcn/testimonial-inverted-case-strip","name":"Testimonial Inverted Case Strip"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","className":"is-style-shadcn-on-dark","style":{"border":{"radius":"16px"},"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|8","bottom":"var:preset|spacing|9","left":"var:preset|spacing|8"},"blockGap":"var:preset|spacing|8"}},"backgroundColor":"foreground","textColor":"background","layout":{"type":"default"}} -->

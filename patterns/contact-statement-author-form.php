@@ -7,6 +7,8 @@
  * AI Hint: Editorial contact split with no card and no border: the left column carries one large muted-grey statement paragraph whose closing clause is set in bold, then a long gap and an author row of a round avatar beside a bold name over a muted role line; the right column is a large heading followed by a stripped-back form of name, email and message closed by a full-width dark submit labelled with an arrow glyph. Reach for it when the brand voice should carry the page and a bordered form card would feel too transactional.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|9","left":"var:preset|spacing|10"}}}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Formless full-width contact split with no gutter and square corners: the left half is vertically centred inside generous padding and stacks a very large two-line heading, a muted three-line paragraph, an arrow-glyph text link and then, after a wide gap, a phone number and an email address set large and bold; the right half is one photograph running edge to edge at full height. Reach for it when a contact page should feel like a magazine spread and the details themselves, not a form, are the call to action.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Reversed split hero that leads with the product — the left column holds a soft tinted rounded panel around an app screenshot with a bordered metric card sitting beneath it, pairing a large figure with a label and a qualifying line, while the right column carries a two-line fluid h1, a muted three-line lead and a filled arrow button beside an outline arrow button; reach for it when the interface is the strongest argument and one operational number should be read before the pitch.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Site footer — everything centred on one axis: a headline and supporting line above a single primary button, then one wrapping row of navigation links beside social icons, then a smaller row of policy links, and finally an oversized brand wordmark set across the full width as the closing mark; reach for it when the last screen of a marketing site should end on one clear action and a large logotype rather than a sitemap.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|5","left":"var:preset|spacing|4","right":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|7"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--5);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Split hero for a developer tool — the left half carries an icon badge, a fluid h1, a muted two-sentence lead, a filled primary button beside an outline button and a small footnote naming the runtime and licence, while the right half holds a bordered rounded panel wrapping a real install-and-configure code snippet; reach for it on an SDK, CLI or API landing page where showing the first ten lines of code convinces faster than a screenshot.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Tidy three-across index of customer stories — a centred heading with a muted lead sits over three tall portrait cards of identical height, each card dimming a photograph and pinning a small white wordmark at the top with the headline result at the bottom; reach for it when a case-study or customer page wants three stories read side by side at a glance, with no quotes, portraits or metrics to slow the row down.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","case-studies"],"patternName":"shadcn/case-study-portrait-card-grid","name":"Case Study Portrait Card Grid"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"720px"}} -->

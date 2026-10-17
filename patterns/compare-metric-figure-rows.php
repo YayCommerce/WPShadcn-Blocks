@@ -7,6 +7,8 @@
  * AI Hint: Two-option figure comparison: an oversized left-aligned two-line H2, a pair of small uppercase column labels, then a bordered card whose hairline-separated rows put the criterion on the left and two large numbers on the right, each with a small unit beside it and a one-line muted caption beneath, closing with three footnote lines and a right-aligned button; reach for it when the argument is carried by the size of the numbers rather than by ticks and crosses.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","compare"],"patternName":"shadcn/compare-metric-figure-rows","name":"Compare Metric Figure Rows"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"layout":{"type":"constrained","contentSize":"680px","justifyContent":"left"}} -->

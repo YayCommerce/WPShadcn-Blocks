@@ -7,6 +7,8 @@
  * AI Hint: Case-study testimonial carousel showing one customer at a time — every slide splits into a narrow left mosaic of six small square tiles, some photographs and some empty muted blocks arranged differently on each story, and a wider right side carrying the customer wordmark, a longer quote and the speaker's name and role, with arrows stepping through four stories and no autoplay; reach for it when a case-study or customer page wants a single story to hold the reader's full attention instead of competing quote cards, and when you have working photography rather than portraits.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","case-studies"],"patternName":"shadcn/case-study-testimonial-carousel","name":"Case Study Testimonial Carousel"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"metadata":{"name":"Intro"},"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"680px","justifyContent":"left"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Testimonial section built as a self-advancing accordion — a large heading on the left with an outline call-to-action on the right, then one row per customer carrying a company logo, the company name and a result sentence with the number emphasised; the open row reveals a square portrait beside the company wordmark, the quote and the author's name and role, and a small progress bar in the corner counts down before the next row opens itself. Best for social proof that should keep moving without the reader clicking.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","testimonials"],"patternName":"shadcn/testimonial-auto-rotating-accordion","name":"Testimonial Auto Rotating Accordion"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5","right":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"metadata":{"name":"Header"},"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->

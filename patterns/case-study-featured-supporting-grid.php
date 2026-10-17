@@ -7,6 +7,8 @@
  * AI Hint: Case study hierarchy layout — a section heading with a muted lead, then a wide bordered card splitting a logo, uppercase category eyebrow, headline, supporting line and ghost read link against a muted panel holding the customer mark, followed by two equal bordered cards repeating the same text stack without imagery; best for a work or clients page that needs one hero story to outrank two secondary ones.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"640px","justifyContent":"left"}} -->

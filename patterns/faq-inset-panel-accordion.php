@@ -7,6 +7,8 @@
  * AI Hint: Panelled FAQ built as a single bordered rounded card holding eight tinted accordion rows rather than a bare list — a very short heavy centred H2 sits above the card, and every row inside is a shaded band with a small bold question, a chevron pinned right and a muted answer that opens beneath it; reach for it when the FAQ needs to read as one contained object on a plain page, such as a support page or the tail of a pricing page.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|4","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|7"}},"layout":{"type":"constrained","contentSize":"640px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:heading {"textAlign":"center","level":2,"style":{"typography":{"fontWeight":"800","letterSpacing":"-0.03em"}},"fontSize":"fluid-5-xl"} -->

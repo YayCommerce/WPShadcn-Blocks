@@ -7,6 +7,8 @@
  * AI Hint: Photographic index of customer stories — a short left-aligned heading and muted lead sit above two equal columns of tall and short image cards that interlock, each card pinning a small customer wordmark to the top of a dimmed photograph and a one-line result to the bottom; reach for it when a case-study page needs a visual wall of stories with no quotes, portraits or metrics, and each card will link on to its own write-up.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","case-studies"],"patternName":"shadcn/case-study-hover-image-grid","name":"Case Study Hover Image Grid"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"680px","justifyContent":"left"}} -->

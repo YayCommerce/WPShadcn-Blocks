@@ -11,6 +11,8 @@
 
 namespace ShadcnBlocks\ShadcnAi;
 
+defined( 'ABSPATH' ) || exit;
+
 use ShadcnBlocks\Traits\SingletonTrait;
 
 class RestController {
@@ -142,17 +144,16 @@ class RestController {
 		$prompt          = $request->get_param( 'prompt' );
 		$catalog_builder = new CatalogBuilder();
 		$catalog         = $catalog_builder->build();
-		$site_context    = ( new SiteContextBuilder() )->build();
 
 		if ( $request->get_param( 'stream' ) ) {
-			$this->handle_generate_stream( $prompt, $catalog, $site_context ); // Never returns.
+			$this->handle_generate_stream( $prompt, $catalog ); // Never returns.
 		}
 
 		try {
 			// The proxy running on this very install answers in-process — no
 			// HTTP loop back to ourselves, no token; remote otherwise.
 			$llm_client = InProcessProxy::available() ? new InProcessProxy() : new LlmClient();
-			$raw_plan   = $llm_client->request( $prompt, $site_context );
+			$raw_plan   = $llm_client->request( $prompt );
 		} catch ( LlmRequestException $e ) {
 			return new \WP_Error(
 				'shadcn_ai_llm_error',
@@ -223,9 +224,8 @@ class RestController {
 	 *
 	 * @param string $prompt       The user's design request.
 	 * @param array  $catalog      Pattern catalog (slug whitelist source).
-	 * @param array  $site_context Site identity hints for the proxy.
 	 */
-	private function handle_generate_stream( $prompt, array $catalog, array $site_context ) {
+	private function handle_generate_stream( $prompt, array $catalog ) {
 		// The relay outlives PHP's default limit on a slow generation; the
 		// proxy hop is uncapped and throughput-guarded, so match it.
 		if ( function_exists( 'set_time_limit' ) ) {
@@ -244,7 +244,6 @@ class RestController {
 			$llm_client = InProcessProxy::available() ? new InProcessProxy() : new LlmClient();
 			$llm_client->request_stream(
 				$prompt,
-				$site_context,
 				function ( $event, array $data ) use ( &$plan, &$upstream_error ) {
 					if ( 'plan' === $event ) {
 						// Intercepted, not relayed: raw slugs mean nothing to

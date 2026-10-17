@@ -7,6 +7,8 @@
  * AI Hint: Split team section that pairs storytelling with photography — a left panel holding an eyebrow, a part-bold headline, a mission paragraph, a button and a short list of collaboration notes, set against a right-hand grid of tall full-bleed portraits whose role label and name sit over the bottom of each image; reach for it when the team section has to carry a mission or hiring message and not just a roster of faces.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|9","left":"var:preset|spacing|9"}}}} -->

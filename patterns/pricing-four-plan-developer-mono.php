@@ -7,6 +7,8 @@
  * AI Hint: Developer-facing four-tier pricing set in monospace on a muted full-width band: a centred heading and Monthly/Yearly switch sit above four dashed-outline cards, each opening with an uppercase plan code pill, then the plan name, a tabular price with the cadence stacked below it, a one-line pitch, a rule, a dense tick list and a full-width button; the recommended tier swaps the dashed stroke for a solid primary border and carries a Default badge, and a monospace footnote under the grid ties the plan codes to the API; reach for it on infrastructure, API or platform products where the audience reads docs before marketing.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","right":"var:preset|spacing|5","bottom":"var:preset|spacing|10","left":"var:preset|spacing|5"}}},"backgroundColor":"muted","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-muted-background-color has-background" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--5)"><!-- wp:shadcn/pricing {"align":"wide","intervals":[{"key":"monthly","label":"Monthly"},{"key":"yearly","label":"Yearly"}],"defaultInterval":"monthly","style":{"spacing":{"blockGap":"var:preset|spacing|7"}},"layout":{"type":"default"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Single-project case study page built as a narrow-wide split — the left third holds a sticky panel opening on a slash-separated breadcrumb trail, then the project title as an h1, five hairline-divided label and value metadata rows and a short two-paragraph overview under an uppercase label, while the right two thirds scroll past five captioned images at deliberately mixed aspect ratios so the sidebar stays pinned for most of the scroll; reach for it when a project needs its credits and summary held in view beside a long visual sequence rather than beside prose.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-breadcrumb-sticky-gallery","name":"Project Page Breadcrumb Sticky Gallery"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|10"}}}} -->

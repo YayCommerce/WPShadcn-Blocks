@@ -7,6 +7,8 @@
  * AI Hint: Blog feature — a header row pairing an oversized headline and supporting line with an outline archive button, then a two-column featured article where a rounded cover image sits beside a category pill, large linked title, excerpt and author byline, and beneath it a full-width horizontal strip of four bordered topic cards each carrying an outline pill, a linked topic title and a post-count line; best as a magazine index or blog landing where one story leads and the section topics stay browsable.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","posts"],"patternName":"shadcn/blog-featured-topic-strip","name":"Blog Featured Topic Strip"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"bottom","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|5","left":"var:preset|spacing|8"}}}} -->

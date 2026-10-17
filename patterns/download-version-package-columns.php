@@ -7,6 +7,8 @@
  * AI Hint: Release-archive download layout that opens with a header row pairing an app mark tile with a bold product title, a one-line muted note and a filled download button, then an expanded version row showing the number beside a small latest pill with a chevron on the right, three tinted platform columns each listing hairline-separated package rows with a download icon at the far right, an arrow link to the release notes, and three collapsed rows for earlier versions; reach for it when visitors need to pick an exact package or reach back to an older build rather than take the default installer.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10","left":"var:preset|spacing|4","right":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|7"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"align":"wide","style":{"border":{"bottom":{"color":"var:preset|color|border","style":"solid","width":"1px"}},"spacing":{"padding":{"bottom":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|5"}},"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->

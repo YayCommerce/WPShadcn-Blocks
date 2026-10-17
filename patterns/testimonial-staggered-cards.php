@@ -7,6 +7,8 @@
  * AI Hint: Testimonial section built as three columns — a short heading on its own at the left, a single centred quote card in the middle, and two stacked quote cards on the right, so the cards sit at staggered heights; each card holds a partner logo, a bold quote set larger than body text, and a round avatar beside the author's name and title. Best for a page that needs social proof without a full grid of identical cards.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Two-plan pricing built on a free-versus-paid split, where the recommended card swaps the foreground and background tokens to become an inverted panel — dark against a light page, light against a dark one — while the other keeps the ordinary bordered card surface; both hold a plan name, short positioning line, a price that follows the billing toggle above them, a check list and a full-width button, and the inverted card's button inverts with it; reach for it when one tier should dominate through contrast rather than size or a badge.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:heading {"style":{"typography":{"textAlign":"center"}},"fontSize":"fluid-5-xl"} -->

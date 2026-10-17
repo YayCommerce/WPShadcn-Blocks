@@ -10,4 +10,6 @@
 
 namespace ShadcnBlocks\ShadcnAi;
 
+defined( 'ABSPATH' ) || exit;
+
 class UnknownPatternSlugException extends \RuntimeException {}

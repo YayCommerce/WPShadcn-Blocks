@@ -7,6 +7,8 @@
  * AI Hint: FAQ-and-form contact split: a centred "How can we help?" heading and one muted line sit above two columns, the left opening with a speech-bubble icon beside a bold "Frequently Asked Questions" label and then five hairline-divided accordion rows that all start closed, the right opening with an envelope icon beside "Still have questions?" and then a rounded secondary-background card holding a three-field form — name, email, message — closed by a full-width submit; reach for it when most visitors only need an answer already written down and the form should catch the ones who do not.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|9"}},"layout":{"type":"constrained","contentSize":"1120px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"640px"}} -->

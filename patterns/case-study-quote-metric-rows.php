@@ -7,6 +7,8 @@
  * AI Hint: Case-study evidence laid out as a table rather than a card grid — a small muted eyebrow counts the customers, a centred heading sits under it, and a hairline-divided group then holds one full-width row per customer, each row splitting into a square muted logo tile, a quote with the author name, role and company wordmark beneath it, and a right-hand column stacking two figures with their label and a short qualifier; best for a results or customers page where readers should scan quote against numbers line by line.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","case-studies"],"patternName":"shadcn/case-study-quote-metric-rows","name":"Case Study Quote Metric Rows"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"680px"}} -->

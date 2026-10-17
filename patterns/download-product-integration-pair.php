@@ -7,6 +7,8 @@
  * AI Hint: Install-and-extend panel built from two bordered cards under a centred heading: the left card carries a bold product name, a two-line muted description, a filled plus outline button pair, a small underlined more-options link, a hairline, an uppercase feature label, four check-icon feature lines and a bold arrow link, while the right card lists five hairline-separated integration rows of logo mark, bold name and one-line note with an external-link icon, introduced by a static bordered search row; reach for it when the download decision and the connector catalogue belong on the same screen.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10","left":"var:preset|spacing|4","right":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--4)"><!-- wp:heading {"level":2,"style":{"typography":{"textAlign":"center","fontWeight":"700","letterSpacing":"-0.03em"}},"fontSize":"fluid-5-xl"} -->

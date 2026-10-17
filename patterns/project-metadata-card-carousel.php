@@ -7,6 +7,8 @@
  * AI Hint: Browsable project rail — a heading row above an arrow carousel showing three bordered cards at desktop width and fewer as the viewport narrows, each card stacking a square cover image, a project title, a category badge, a muted location-and-year line, a two-sentence summary and a linked button pinned to the card foot; reach for it on a studio or agency portfolio index where every project carries real metadata and there are more of them than a static row can hold.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-metadata-card-carousel","name":"Project Metadata Card Carousel"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|7"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->

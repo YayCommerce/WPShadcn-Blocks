@@ -7,6 +7,8 @@
  * AI Hint: Split about section — a tall bordered image fills the wider left column while the narrower right column stacks a large headline, a supporting paragraph, a quieter secondary note and an attribution row with a small round avatar beside a name and role; best for a founder statement or a short company statement that needs a face attached to it.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|10"}}}} -->

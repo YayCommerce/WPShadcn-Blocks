@@ -7,6 +7,8 @@
  * AI Hint: Before-and-after comparison panel — a muted first headline line above a bold second line with a two-line centred lead, then a single wide bordered card divided by a vertical hairline into two halves, each holding a short title over eight hairline-separated rows that pair a small icon with a one-line claim, crosses on the legacy side and a different icon per row on the modern side; reach for it when arguing that a familiar way of working should be retired and each objection deserves its own answer directly opposite.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained"}} -->

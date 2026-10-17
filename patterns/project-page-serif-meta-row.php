@@ -7,6 +7,8 @@
  * AI Hint: Single-project case study page — an oversized serif project title spans the wide column, a hairline-topped metadata row beneath it lists client, year and discipline as small uppercase labels above bold values, a wide full-bleed image follows, and a narrow 800px prose block of three paragraphs closes on a single arrow button; reach for it when one project needs a whole page rather than a card in a grid.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-serif-meta-row","name":"Project Page Serif Meta Row"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:heading {"align":"wide","level":2,"style":{"typography":{"fontFamily":"Georgia, Times New Roman, serif","letterSpacing":"-0.02em","lineHeight":"0.95"}},"fontSize":"fluid-7-xl"} -->

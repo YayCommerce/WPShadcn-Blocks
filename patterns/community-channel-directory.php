@@ -7,6 +7,8 @@
  * AI Hint: Plain three-by-two directory of community channels — no cards or borders, just centred stacks pairing an icon badge, the channel name, a placeholder address link, and a ghost status chip beside a muted member count; best for listing every place a project can be reached when a card grid would feel too heavy.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|9"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"640px"}} -->

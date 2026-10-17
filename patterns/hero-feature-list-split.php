@@ -7,6 +7,8 @@
  * AI Hint: Split hero with no imagery — the left half carries a secondary badge, a fluid h1, a muted two-sentence lead and a filled primary button beside an outline button, while the right half holds a bordered rounded card whose four hairline-divided rows each pair a semibold capability title with a one-line muted description; best for a product or SaaS landing page that has to answer "what do I actually get" in the first screen instead of showing a screenshot.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

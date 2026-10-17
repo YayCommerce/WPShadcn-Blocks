@@ -7,6 +7,8 @@
  * AI Hint: Four borderless tiles on a muted background with generous padding and rounded corners, laid two per row under a left-aligned heading and a one-line muted lead; every tile stacks a small line icon, a bold channel label, a one-line muted description and the raw value — an address, a number or an inbox — as its last line; reach for it when a contact page needs the details plain and legible without cards, forms or a map.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained"}} -->

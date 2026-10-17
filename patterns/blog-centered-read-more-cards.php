@@ -7,6 +7,8 @@
  * AI Hint: Blog card grid — a centred badge, oversized headline and supporting line above a responsive three-column grid of bordered cards, each holding a rounded cover image, a linked title, an author and date line, a short excerpt and a read-more link aligned along the bottom edge of every card regardless of excerpt length; best as a magazine-style article index or a latest-writing block on a home page.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","posts"],"patternName":"shadcn/blog-centered-read-more-cards","name":"Blog Centered Read More Cards"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

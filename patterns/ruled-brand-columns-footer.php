@@ -7,6 +7,8 @@
  * AI Hint: Site footer — a full-width rule across the top, then a two-part row: a narrow brand block stacking a small logo beside its wordmark with a short paragraph of positioning copy underneath, and a wider three-column grid of headed link lists for product, company and resources; reach for it when a marketing site needs a calm, low-chrome sitemap footer with no call to action and no legal bar.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|8","right":"var:preset|spacing|4","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--8);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:separator {"className":"is-style-wide","style":{"color":{"background":"var:preset|color|border"}}} -->

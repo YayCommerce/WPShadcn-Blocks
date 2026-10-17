@@ -7,6 +7,8 @@
  * AI Hint: Single-choice download panel that guesses the visitor platform: an app mark sits above a two-line centred heading, one filled download button and a small muted compatibility line, then an uppercase "also available on" label introduces two side-by-side blocks that each pair an icon with a bold platform name over an underlined build link, closed by a centred arrow link to the full device list; reach for it when one build serves almost everyone and the alternates should stay quietly secondary.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10","left":"var:preset|spacing|4","right":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|9"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained","contentSize":"620px"}} -->

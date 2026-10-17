@@ -7,6 +7,8 @@
  * AI Hint: Four-plan pricing grid on a centred header and a Monthly/Yearly switch, where one spotlight column breaks the row by sitting proud of its neighbours on a two-pixel primary ring, deeper padding, a soft drop shadow and a solid call-to-action button while the other three keep a hairline border and outline buttons; every card carries a plan name, a price that follows the switch, a one-line pitch, a tick list and a full-width button aligned across the row; reach for it when one of four tiers is the recommendation and the rest are context.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:shadcn/pricing {"align":"","intervals":[{"key":"monthly","label":"Monthly"},{"key":"yearly","label":"Yearly"}],"defaultInterval":"monthly","style":{"spacing":{"blockGap":"var:preset|spacing|7"}},"layout":{"type":"default"}} -->

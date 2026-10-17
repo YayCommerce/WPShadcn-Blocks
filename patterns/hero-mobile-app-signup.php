@@ -7,6 +7,8 @@
  * AI Hint: Consumer app launch hero — a large centred H1 over a two-line muted lead, one filled sign-up button and a small muted note about what arrives after signing up, followed by a wide two-column row of tall deeply rounded muted panels that each frame a single centred app screen like a handset; reach for it on a mobile app landing page where the download story is the whole pitch and the phone pair carries the proof.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|9"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained","contentSize":"640px"}} -->

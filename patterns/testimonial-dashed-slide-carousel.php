@@ -7,6 +7,8 @@
  * AI Hint: Testimonial carousel — a large centered section heading sits above a single full-width slide at a time, each slide a dashed-outline panel that centers a round avatar next to the author's name in bold and places the quote as centered body copy beneath it; arrows below step through the customer stories. Best for giving one quote at a time the full width of the page with a light, sketch-like frame around it.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","testimonials"],"patternName":"shadcn/testimonial-dashed-slide-carousel","name":"Testimonial Dashed Slide Carousel"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5","right":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:heading {"textAlign":"center","level":2,"style":{"typography":{"fontWeight":"700","letterSpacing":"-0.03em"}},"fontSize":"fluid-5-xl"} -->

@@ -7,6 +7,8 @@
  * AI Hint: Portfolio index built as a continuous band of full-bleed rows — every row is a dimmed background photograph holding a big white project title opposite a small-caps discipline label and a year, with no gap between rows so the set reads as one unbroken filmstrip; reach for it when a studio or agency wants its whole project list to feel like a single scrolling wall of imagery rather than a grid of separate cards.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-full-bleed-hover-rows","name":"Project Full Bleed Hover Rows"},"align":"full","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignfull"><!-- wp:cover {"url":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","alt":"Bottles of small-batch vermouth arranged on a stone counter","dimRatio":60,"minHeight":260,"minHeightUnit":"px","style":{"spacing":{"padding":{"top":"var:preset|spacing|7","right":"var:preset|spacing|6","bottom":"var:preset|spacing|7","left":"var:preset|spacing|6"}}},"layout":{"type":"default"}} -->

@@ -19,6 +19,8 @@
 
 namespace ShadcnBlocks\ShadcnAi;
 
+defined( 'ABSPATH' ) || exit;
+
 class EvalCommand {
 
 	/**
@@ -73,9 +75,6 @@ class EvalCommand {
 			$catalog_by_slug[ $entry['slug'] ] = $entry;
 		}
 
-		$site_context = ( new SiteContextBuilder() )->build();
-		\WP_CLI::log( 'siteContext sent: ' . ( empty( $site_context ) ? '(none)' : wp_json_encode( $site_context, JSON_UNESCAPED_UNICODE ) ) );
-
 		// Same transport selection as the live REST route, so the eval scores
 		// what users actually get on this install.
 		$client  = InProcessProxy::available() ? new InProcessProxy() : new LlmClient();
@@ -103,7 +102,7 @@ class EvalCommand {
 				// The proxy returns a BARE array of {slug, textSlots} entries —
 				// no envelope object (see the theme's RestController, which
 				// consumes LlmClient::request()'s return directly as the plan).
-				$response = $client->request( $golden['prompt'], $site_context );
+				$response = $client->request( $golden['prompt'] );
 				$plan     = is_array( $response ) ? $response : array();
 
 				if ( empty( $plan ) ) {
@@ -144,7 +143,7 @@ class EvalCommand {
 			);
 		}
 
-		$file = $this->write_results( $label, $results, $site_context );
+		$file = $this->write_results( $label, $results );
 
 		\WP_CLI\Utils\format_items( 'table', $rows, array( 'id', 'expected', 'returned', 'violations', 'error' ) );
 		\WP_CLI::success( sprintf( 'Results written to %s — fill in judgedCorrect per prompt manually.', $file ) );
@@ -264,12 +263,11 @@ class EvalCommand {
 	}
 
 	/**
-	 * @param string $label        Results label.
-	 * @param array  $results      Per-prompt results.
-	 * @param array  $site_context siteContext sent with every request.
+	 * @param string $label   Results label.
+	 * @param array  $results Per-prompt results.
 	 * @return string Written file path.
 	 */
-	private function write_results( $label, array $results, array $site_context = array() ) {
+	private function write_results( $label, array $results ) {
 		$dir = SHADCN_BLOCKS_DIR . 'tools/ai-eval/results';
 
 		if ( ! wp_mkdir_p( $dir ) ) {
@@ -282,7 +280,6 @@ class EvalCommand {
 			'ranAt'     => gmdate( 'c' ),
 			'model'     => 'proxy-configured (default gpt-4o-mini)',
 			'singleRun' => 'Results are single-shot and nondeterministic; treat as directional.',
-			'siteContext' => $site_context,
 			'results'   => $results,
 		);
 

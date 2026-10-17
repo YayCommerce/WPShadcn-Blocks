@@ -17,6 +17,8 @@
 
 namespace ShadcnBlocks\ShadcnAi;
 
+defined( 'ABSPATH' ) || exit;
+
 class PatternHintReader {
 
 	/**

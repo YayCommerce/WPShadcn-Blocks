@@ -7,6 +7,8 @@
  * AI Hint: Site footer — a soft grey panel whose left side stacks a logo, a one-line description and a row of small social icons while three titled lists of navigation links sit to its right, with a slightly darker full-bleed strip underneath carrying the copyright opposite the policy links; reach for it when a marketing site wants a calm tinted footer that still separates the legal line from the navigation.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"blockGap":"0"}},"backgroundColor":"muted","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-muted-background-color has-background"><!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4","right":"var:preset|spacing|4"}}},"layout":{"type":"default"}} -->

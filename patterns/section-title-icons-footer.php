@@ -7,6 +7,8 @@
  * AI Hint: Site footer — a six-track row in which the first two tracks hold the logo and a one-line description while four narrow columns each pair a small icon with a bold section title above a list of text links, with a hairline rule and a copyright-versus-policy-links row beneath; reach for it when a dense link footer needs visual signposts so each section can be found at a glance.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4","right":"var:preset|spacing|4"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|8"}},"layout":{"type":"default"}} -->

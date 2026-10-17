@@ -7,6 +7,8 @@
  * AI Hint: Two-zone add-on pricing inside a single bordered container: a heading with a supporting paragraph and a mark on the right, then three accent-filled cards each naming an add-on with a short description and its monthly price, and below a rule a hairline-divided stack of plainer rows pairing an icon, a name and a description on the left with a larger price and an optional footnote on the right; best for extras sold alongside a subscription rather than for comparing plans.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","pricing"],"patternName":"shadcn/pricing-addon-featured-cards","name":"Pricing Addon Featured Cards"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:shadcn/pricing {"align":"","intervals":[{"key":"monthly","label":"Monthly"}],"layout":{"type":"default"}} -->

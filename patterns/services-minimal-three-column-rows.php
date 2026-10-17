@@ -7,6 +7,8 @@
  * AI Hint: Typographic services index with no cards, backgrounds or shadows: four rows on a three-column grid where the first column pairs a small outline icon with the stage name, the middle column stays empty as breathing room and the last column stacks unbulleted sub-service labels, so reach for it when the section should read as a reference list rather than a sales grid.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|7"}},"layout":{"type":"default"}} -->

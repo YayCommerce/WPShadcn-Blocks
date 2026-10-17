@@ -7,6 +7,8 @@
  * AI Hint: Five-tier pricing wall for a developer tool: a very large centred H2, a two-state billing toggle with a green savings callout under it, then a three-up grid of bordered cards and a two-up grid of wider cards below, each card carrying the plan name, an interval-aware price, a per-seat cadence line, an audience note, a bold best-for line, a full-width arrow button and a check list, with a full-width "Compare every plan" button closing the section; reach for it when the catalogue runs to five tiers and the last two need more room than the first three.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"layout":{"type":"constrained","contentSize":"800px"}} -->

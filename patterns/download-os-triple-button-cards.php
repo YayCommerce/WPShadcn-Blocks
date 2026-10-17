@@ -7,6 +7,8 @@
  * AI Hint: Three-up platform download row: a centred h2 sits above three bordered cards that each stack a platform glyph, a bold platform name, a full-width filled primary button, a full-width outline secondary button for the alternate architecture and a small bold requirements label over one muted line, with a centred muted archive link below the cards and a left-aligned bold question heading closing on a muted sentence carrying an inline preview-channel link; reach for it when three operating systems each need two builds and a short compatibility note.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|4","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|6"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:heading {"level":2,"textAlign":"center","fontSize":"fluid-4-xl"} -->

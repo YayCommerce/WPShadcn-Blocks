@@ -119,6 +119,16 @@ class Plugin {
 
 			register_block_type( $block_dir );
 		}
+
+		// The marquee templates insert placeholder logos; point them at the
+		// bundled image rather than a remote host. Printed before each
+		// editor script because the templates are built at module load.
+		$editor_config = 'window.shadcnBlocksEditor = ' . wp_json_encode(
+			array( 'placeholderImage' => SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' )
+		) . ';';
+		foreach ( array( 'shadcn/marquee', 'shadcn/marquee-item' ) as $block_name ) {
+			wp_add_inline_script( generate_block_asset_handle( $block_name, 'editorScript' ), $editor_config, 'before' );
+		}
 	}
 
 	/**

@@ -7,6 +7,8 @@
  * AI Hint: Rating-led social proof — a soft muted panel with a left-aligned heading and intro, a row of outlined rating pills that each pair a marketplace logo with a score and a star line, then a wall of nine small bordered cards spread over three columns, every card carrying a short muted quote above a small round avatar with the reviewer name and company. Reach for it when the score itself is the argument and the quotes are there to back it up.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"border":{"radius":"16px"},"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|8","bottom":"var:preset|spacing|9","left":"var:preset|spacing|8"},"blockGap":"var:preset|spacing|8"}},"backgroundColor":"muted","layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide has-muted-background-color has-background" style="border-radius:16px;padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--8);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--8)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"720px","justifyContent":"left"}} -->

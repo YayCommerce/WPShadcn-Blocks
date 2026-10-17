@@ -13,6 +13,8 @@
 
 namespace ShadcnBlocks\ShadcnAi;
 
+defined( 'ABSPATH' ) || exit;
+
 class LlmClient {
 
 	/**
@@ -22,7 +24,7 @@ class LlmClient {
 	const MAX_RESPONSE_BYTES = 524288; // 512KB.
 
 	/**
-	 * Send { prompt, catalogVersion, siteContext } to the AI proxy and return
+	 * Send { prompt, catalogVersion } to the AI proxy and return
 	 * the decoded JSON response as-is (shape validation is RestController's
 	 * job, not this class's).
 	 *
@@ -32,14 +34,12 @@ class LlmClient {
 	 * server log version skew — the plan is whitelisted against this site's
 	 * real patterns either way.
 	 *
-	 * @param string $prompt       User's design request.
-	 * @param array  $site_context Optional site identity hints; omitted from
-	 *                             the request body when empty.
+	 * @param string $prompt User's design request.
 	 * @return mixed Whatever the endpoint's JSON body decodes to.
 	 * @throws LlmRequestException On transport error, refused registration,
 	 *                              non-200 response, or malformed JSON.
 	 */
-	public function request( $prompt, array $site_context = array() ) {
+	public function request( $prompt ) {
 		$endpoint = Client::server_url() . '/?rest_route=/shadcn-ai-proxy/v1/generate';
 		$token    = Client::token_or_register();
 		if ( is_wp_error( $token ) ) {
@@ -61,15 +61,9 @@ class LlmClient {
 					'Authorization' => 'Bearer ' . $token,
 				),
 				'body'                => wp_json_encode(
-					array_merge(
-						array(
-							'prompt'         => $prompt,
-							'catalogVersion' => SHADCN_BLOCKS_VERSION,
-						),
-						// Force object encoding — a PHP array with string keys
-						// already encodes as an object, but never send an
-						// empty [] where the proxy expects an object.
-						empty( $site_context ) ? array() : array( 'siteContext' => (object) $site_context )
+					array(
+						'prompt'         => $prompt,
+						'catalogVersion' => SHADCN_BLOCKS_VERSION,
 					)
 				),
 			)
@@ -118,12 +112,11 @@ class LlmClient {
 	 * a stall is caught by throughput instead (under 1 B/s for 30s aborts).
 	 *
 	 * @param string   $prompt       User's design request.
-	 * @param array    $site_context Optional site identity hints.
 	 * @param callable $on_event     fn(string $event, array $data): void.
 	 * @throws LlmRequestException On registration refusal, transport error,
 	 *                              or an HTTP error response.
 	 */
-	public function request_stream( $prompt, array $site_context, $on_event ) {
+	public function request_stream( $prompt, $on_event ) {
 		$endpoint = Client::server_url() . '/?rest_route=/shadcn-ai-proxy/v1/generate';
 		$token    = Client::token_or_register();
 		if ( is_wp_error( $token ) ) {
@@ -140,13 +133,10 @@ class LlmClient {
 			array(
 				CURLOPT_POST            => true,
 				CURLOPT_POSTFIELDS      => wp_json_encode(
-					array_merge(
-						array(
-							'prompt'         => $prompt,
-							'catalogVersion' => SHADCN_BLOCKS_VERSION,
-							'stream'         => true,
-						),
-						empty( $site_context ) ? array() : array( 'siteContext' => (object) $site_context )
+					array(
+						'prompt'         => $prompt,
+						'catalogVersion' => SHADCN_BLOCKS_VERSION,
+						'stream'         => true,
 					)
 				),
 				CURLOPT_HTTPHEADER      => array(

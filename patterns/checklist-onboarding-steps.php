@@ -7,6 +7,8 @@
  * AI Hint: Onboarding checklist section — a heading and lead beside a hairline-divided list of setup steps, each row pairing a state label (done, in progress, to do) with a task name and a line of detail, the finished ones ticked; reach for it when a page needs to show what getting started actually involves. This is editorial content describing a process, not an interactive task list — the states are written, not clickable.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","process"],"patternName":"shadcn/checklist-onboarding-steps","name":"Checklist Onboarding Steps"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|9"}}}} -->

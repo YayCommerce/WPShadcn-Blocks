@@ -7,6 +7,8 @@
  * AI Hint: Centred FAQ opener over a wide hairline accordion — a bold centred H2 with a two-line muted standfirst that points readers at support, then seven closed rows spanning a wider column than a bare list would use, each question set at body size with a chevron pinned right and a short muted answer inside; reach for it when the FAQ is a section of its own rather than a footnote and the reader needs a sentence of orientation first.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|4","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained","contentSize":"880px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"640px"}} -->

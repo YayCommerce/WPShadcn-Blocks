@@ -7,6 +7,8 @@
  * AI Hint: Delivery cut-off bar for a shop — a clock icon opens a sentence that runs "order within" a ticking hours-minutes-seconds countdown "for delivery by" a named date. The countdown is inline in the copy rather than set apart, so it suits a same-day dispatch promise; use the flash sale bar when the timer itself is the headline. The countdown starts eight hours out and the author sets the real cut-off.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 // The countdown needs a real instant, and a date hard-coded into a pattern file
 // is wrong the day after it is written: too far out and the preview reads
 // "38277 hours", past and the block hides itself entirely. Computing it as the

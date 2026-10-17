@@ -7,6 +7,8 @@
  * AI Hint: Ecommerce hero — a two-thirds width rounded cover panel over a dimmed photograph with a bottom-left white headline and a solid white button, beside a one-third width near-black rail holding a vertical autoplaying carousel of edge-to-edge white product cards (fixed-height thumbnail, name, price with an optional struck-through regular price, outline quick-view button); best for a shop landing page that pairs one lifestyle photo with a rotating list of featured products.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:columns {"metadata":{"categories":["shadcn","hero"],"patternName":"shadcn/ecommerce-hero-product-rail","name":"Ecommerce Hero Product Rail"},"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|4","left":"var:preset|spacing|4"}}}} -->
 <div class="wp-block-columns alignwide"><!-- wp:column {"width":"66%"} -->

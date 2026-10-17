@@ -7,6 +7,8 @@
  * AI Hint: Editorial awards list — a narrow sticky column holds an uppercase label, a short heading and a note, while the wide column stacks six full-width rows separated by hairlines, each pairing a small monospace roman-numeral marker with an oversized award title, a muted issuer and year line, and a "Verify award" link on the right; best for an about or studio page listing recognition without a card grid.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|10"}}}} -->

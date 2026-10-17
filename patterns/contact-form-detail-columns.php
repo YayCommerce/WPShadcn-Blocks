@@ -7,6 +7,8 @@
  * AI Hint: Badge-led contact layout: a small pill reading "Reach out" opens a left-aligned header with a large heading and a muted two-line lead, then an asymmetric row gives half the width to a name, email and message form with a full-width submit and splits the other half into two detail columns whose icon-and-label headings for email, phone and office each carry a muted explanation and the value in bold; reach for it when the form should stay short and the reader still needs to see the address and the phone number.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

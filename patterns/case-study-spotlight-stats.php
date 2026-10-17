@@ -7,6 +7,8 @@
  * AI Hint: Single-story case study spotlight — a short left-aligned heading and lead above one bordered frame split into a muted panel carrying the customer wordmark, three stat figures with two-line captions and a small avatar attributing the numbers to a named contact, beside a column holding the case headline, a two-sentence summary of the work and outcome, and a small arrow button through to the full story; reach for it when one customer deserves the entire section instead of a row of quote cards.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"680px","justifyContent":"left"}} -->

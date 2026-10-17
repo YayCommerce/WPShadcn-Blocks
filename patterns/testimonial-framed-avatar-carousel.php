@@ -7,6 +7,8 @@
  * AI Hint: Testimonial carousel — a centered section heading above one slide at a time, each slide opening with a round portrait nested inside a dark double rounded frame, followed by the author's name and their role and handle, and only then the quote itself set large and centered in its own soft card; dot indicators sit underneath. Best when the person giving the endorsement matters more than the sentence, so the face and title are read before the words.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","testimonials"],"patternName":"shadcn/testimonial-framed-avatar-carousel","name":"Testimonial Framed Avatar Carousel"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5","right":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|9"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:heading {"textAlign":"center","level":2,"style":{"typography":{"fontWeight":"700","letterSpacing":"-0.03em"}},"fontSize":"fluid-5-xl"} -->

@@ -7,6 +7,8 @@
  * AI Hint: Wide open FAQ grid where a pill badge, centred heading and one-line lead introduce six entries laid out two across and numbered left to right, each pairing a small tinted number chip with a bold question and a muted two-to-three-line answer beneath it; reach for it when there are more answers than a single column can carry without pushing the page long and every one of them should stay readable at a glance.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10","left":"var:preset|spacing|4","right":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|9"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--4)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"680px"}} -->

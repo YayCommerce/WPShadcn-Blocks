@@ -7,6 +7,8 @@
  * AI Hint: Minimal ruled call to action — a hairline border above and below an otherwise unfilled section holding a centred headline, one muted supporting sentence and a primary plus outline button pair, with no card, panel, photograph or background colour anywhere; reach for it between two dense sections where a filled CTA would fight for attention, or as the last thing on a long editorial page. The rules are per-side border supports on the wrapper group, so dropping the bottom side leaves a top-rule variant and moving them to the left side gives the vertical stripe treatment.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"border":{"top":{"color":"var:preset|color|border","width":"1px","style":"solid"},"bottom":{"color":"var:preset|color|border","width":"1px","style":"solid"}},"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained","contentSize":"640px"}} -->
 <div class="wp-block-group alignwide" style="border-top-color:var(--wp--preset--color--border);border-top-style:solid;border-top-width:1px;border-bottom-color:var(--wp--preset--color--border);border-bottom-style:solid;border-bottom-width:1px;padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:heading {"textAlign":"center","level":2,"style":{"typography":{"fontWeight":"600","letterSpacing":"-0.02em"}},"fontSize":"fluid-4-xl"} -->

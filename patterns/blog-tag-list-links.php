@@ -7,6 +7,8 @@
  * AI Hint: Text-first blog index — a left-aligned heading and short lead above a hairline-divided stack of imageless post rows, each opening with a publication date, then a medium-weight linked title, a two-line excerpt and a row of tag pills, with a small outlined arrow link parked on the right and a muted panel sliding up behind the row on hover; best for an archive, changelog or writing page that should stay scannable without thumbnails or cards.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"640px","justifyContent":"left"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Bordered status matrix comparing three options across one feature column: each cell holds a circular chip that reads positive, neutral or negative above a few words of caption, and hairlines rule every row and column so the three verdicts line up down the page; reach for it when the answer per cell is a judgement rather than a number and the reader should scan the shape of the grid before reading any words.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","compare"],"patternName":"shadcn/compare-status-matrix-grid","name":"Compare Status Matrix Grid"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|6"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"border":{"color":"var:preset|color|border","style":"solid","width":"1px","radius":"12px"},"spacing":{"blockGap":"0"}}} -->

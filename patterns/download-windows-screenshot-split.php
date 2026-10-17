@@ -7,6 +7,8 @@
  * AI Hint: Split desktop download section whose narrow left half sets an oversized two-line h2 over a two-line muted lead, a filled installer button beside an outline installer button, a small secondary download link and a closing pair of muted fine-print lines naming supported systems and the current version with a release-notes link, while the wide right half holds a single bordered screenshot of the desktop interface; reach for it when a downloadable app has to show its full window and answer compatibility questions in one screen.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->

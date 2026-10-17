@@ -7,6 +7,8 @@
  * AI Hint: Two-column product comparison for a competitive page: a small pill badge, a centred two-line H2 and a muted lead sit above a matrix where feature rows carry an icon and a bold label on the left, each cell stacks a status icon over a one-line value, one label wears a "Soon" badge, and the first product column keeps a tinted band from its logo, name and positioning line all the way to the button that closes it; reach for it when one product should read as the recommended answer without hiding what the alternative does well.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","compare"],"patternName":"shadcn/compare-highlighted-column-cta","name":"Compare Highlighted Column CTA"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"720px"}} -->

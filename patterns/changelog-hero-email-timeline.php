@@ -7,6 +7,8 @@
  * AI Hint: Release notes timeline — a centred hero putting a "Changelog" heading beside a New badge over a muted lead, a primary subscribe button and a fine-print cadence note, followed by hairline-divided rows that each pin a Released badge and date in a narrow left column beside a muted image panel, release title and two linked paragraphs of prose; reach for it when a product changelog should read as an announcement page that also captures subscribers.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|9"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"640px"}} -->

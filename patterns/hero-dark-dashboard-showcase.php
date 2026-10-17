@@ -7,6 +7,8 @@
  * AI Hint: Inverted launch hero — a full-width band filled with the foreground colour holds a left-pinned column carrying a three-line display h1, a two-sentence muted lead and a light filled button beside a dark outlined one, with a single wide rounded product screenshot running beneath it across the full wide measure; reach for it when the product is a console or dashboard and the screen itself, seen large and on a dark ground, is the strongest argument on the page.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"className":"is-style-shadcn-on-dark","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|9"}},"backgroundColor":"foreground","textColor":"background","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull is-style-shadcn-on-dark has-background-color has-foreground-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained","contentSize":"760px","justifyContent":"left"}} -->

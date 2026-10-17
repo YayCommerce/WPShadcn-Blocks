@@ -7,6 +7,8 @@
  * AI Hint: Indexed FAQ — a centred heading with a short two-line lead, then a narrow left column listing five topic labels with the current one in bold and a wide right column stacking four rounded muted cards of three questions each, the first card opening on an answer so the reader sees what an expanded row looks like; reach for it on a long support page where a visible topic index helps the reader place themselves before scrolling.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained","contentSize":"960px"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"constrained","contentSize":"620px"}} -->

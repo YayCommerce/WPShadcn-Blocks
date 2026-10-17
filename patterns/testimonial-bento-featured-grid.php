@@ -7,6 +7,8 @@
  * AI Hint: Social-proof section built as a bento arrangement — a large centred headline sits above a two-thirds panel carrying a single oversized quote with the avatar, name and role pinned to the bottom of the panel, while the remaining third stacks two shorter quote cards in the same tinted surface; reach for it when one flagship customer story should dominate the section and a couple of supporting voices sit beside it without competing.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","testimonials"],"patternName":"shadcn/testimonial-bento-featured-grid","name":"Testimonial Bento Featured Grid"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:heading {"textAlign":"center","style":{"typography":{"fontWeight":"500"}},"fontSize":"fluid-5-xl"} -->

@@ -7,6 +7,8 @@
  * AI Hint: Testimonial carousel — a left-aligned heading, a short supporting paragraph and a link button sit above a horizontal rail of narrow bordered cards, four across on desktop, each card stacking a portrait photograph, a short punchy quote and the author's name with their role and company; arrows below step the rail along. Best for showing many short customer quotes at once with a face attached to every one.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","testimonials"],"patternName":"shadcn/testimonial-photo-card-carousel","name":"Testimonial Photo Card Carousel"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5","right":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"metadata":{"name":"Section Intro"},"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained"}} -->

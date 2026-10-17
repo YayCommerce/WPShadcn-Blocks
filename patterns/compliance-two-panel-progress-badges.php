@@ -7,6 +7,8 @@
  * AI Hint: A wide bordered panel divided into two halves: the left opens with a tinted header block carrying a bold title and a two-line muted description, then a two-by-two grid of bold-title and muted-description control pairs, while the right stacks two round seals each topped by a small uppercase status pill above a large centred title and a two-line muted caption; reach for it when assessments are still in progress and the page has to explain the controls behind them.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","compliance"],"patternName":"shadcn/compliance-two-panel-progress-badges","name":"Compliance Two Panel Progress Badges"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"border":{"color":"var:preset|color|border","width":"1px","style":"solid","radius":"12px"},"spacing":{"blockGap":"0"}},"layout":{"type":"default"}} -->

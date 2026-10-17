@@ -7,6 +7,8 @@
  * AI Hint: Blog row list — a left-aligned oversized headline and standfirst above five full-width rows separated only by hairlines, each row setting a rounded square 1:1 cover image beside a wide-tracked uppercase date, a linked headline, a two-line excerpt and a plain read link, with no card borders, no background fill and no sticky sidebar so the square crops set the rhythm; best for an editorial index where the artwork should read as a consistent column of squares rather than landscape cards or grid tiles.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","posts"],"patternName":"shadcn/blog-square-art-rows","name":"Blog Square Art Rows"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"760px","justifyContent":"left"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Multi-section about layout — oversized heading with a narrow lead paragraph, a half-and-half row where a muted panel holding the brand mark sits beside a photo card carrying an eyebrow label and a white mission statement, then a secondary heading over three bordered value cards each with an icon, title and description; best for a corporate about page that has to carry mission and values in one screen.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained","contentSize":"560px","justifyContent":"left"}} -->

@@ -7,6 +7,8 @@
  * AI Hint: A fuller centred assurance block: a small uppercase eyebrow, a wide centred H2, a three-line muted lead that explains who assesses what, then a four-column grid of round seal images each captioned with the scheme it stands for, closing on a quiet arrow text link rather than a button; reach for it when the schemes need naming and the section carries the explanation itself.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","compliance"],"patternName":"shadcn/compliance-centered-badge-row-link","name":"Compliance Centered Badge Row Link"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"},"blockGap":"var:preset|spacing|9"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"760px"}} -->

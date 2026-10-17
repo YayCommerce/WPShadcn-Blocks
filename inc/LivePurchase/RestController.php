@@ -148,7 +148,7 @@ class RestController {
 	public function handle_feed( \WP_REST_Request $request ) {
 		// REMOTE_ADDR only — forwarding headers are client-controlled, and a
 		// spoofable key would turn the limiter into a bypass.
-		$ip = isset( $_SERVER['REMOTE_ADDR'] ) ? (string) $_SERVER['REMOTE_ADDR'] : '';
+		$ip = isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '';
 
 		if ( ! $this->rate_limiter->is_allowed( $ip ) ) {
 			return new \WP_Error(

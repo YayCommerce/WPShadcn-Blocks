@@ -7,6 +7,8 @@
  * AI Hint: Social-proof wall styled as a feed of public posts &#8212; a small outline badge above a centred heading and supporting line, then nine bordered cards distributed across three columns; every card leads with a round avatar beside the author name and their handle, separates that header from the body with a dashed hairline, then carries a short quoted paragraph in muted text and a posting date underneath. Reach for it when you have a large pile of short quotes gathered from social channels and want them to read as a wall of chatter rather than a formal testimonial grid.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","testimonials"],"patternName":"shadcn/testimonial-badge-masonry-cards","name":"Testimonial Badge Masonry Cards"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)">

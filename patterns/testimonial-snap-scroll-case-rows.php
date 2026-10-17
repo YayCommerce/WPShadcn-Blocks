@@ -7,6 +7,8 @@
  * AI Hint: Proof section that pairs words with numbers &#8212; a left-aligned heading and supporting line, then two side-by-side quote cards each closing with an avatar, name and role on one edge and a customer wordmark on the other, followed by a row of three compact case cards where a square thumbnail sits beside a large metric, a small muted caption and the story title. Reach for it when testimonials alone are too soft and you want measurable outcomes and named case studies in the same section.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","testimonials"],"patternName":"shadcn/testimonial-snap-scroll-case-rows","name":"Testimonial Snap Scroll Case Rows"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)">

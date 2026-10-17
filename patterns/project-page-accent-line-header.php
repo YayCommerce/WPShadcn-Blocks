@@ -7,6 +7,8 @@
  * AI Hint: Single-project exhibition or case study page — a wide three-column header where the first column carries a short horizontal accent rule above an oversized project title, the second a description paragraph and the third a compact stack of three label and value pairs, followed by a wide rounded hero image, a short process heading with two paragraphs held to a readable measure, and a pair of square 1:1 images side by side; reach for it when one project needs a page of its own with the facts visible at the top rather than buried below the fold.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-accent-line-header","name":"Project Page Accent Line Header"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|7","left":"var:preset|spacing|8"}}}} -->

@@ -47,7 +47,7 @@ const PauseIcon = (
   </svg>
 );
 
-const PLACEHOLDER_IMAGE = "https://ui.shadcn.com/placeholder.svg";
+const PLACEHOLDER_IMAGE = window.shadcnBlocksEditor?.placeholderImage ?? "";
 
 const TEMPLATE = Array.from({ length: 6 }, (_, index) => [
   "shadcn/marquee-item",

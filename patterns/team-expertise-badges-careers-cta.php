@@ -7,6 +7,8 @@
  * AI Hint: Hiring-aware team roster — a centred heading, lead and "see open roles" button sit above three columns of equal-height bordered cards, each holding a round avatar beside a name and role, a department badge, a two-line bio and a wrapped row of small expertise tags, and the section ends on a bordered careers panel with its own heading and two buttons; reach for it on an about or company page that has to double as a recruiting pitch, where departments, specialisms and a visible way in matter more than a bare wall of portraits.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","team"],"patternName":"shadcn/team-expertise-badges-careers-cta","name":"Team Expertise Badges Careers CTA"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|9"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"metadata":{"name":"Intro"},"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"constrained","contentSize":"720px"}} -->

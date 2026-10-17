@@ -7,6 +7,8 @@
  * AI Hint: Gradient team band — a full-bleed dark gradient section carrying a centred white headline and muted intro above a three-column grid of hairline cards, each lit by its own diagonal gradient wash and holding a round portrait, name, an outline pill role and centred social icons; reach for it when the team section is meant to be the visual break between two light sections.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"full","className":"is-style-shadcn-on-dark","style":{"color":{"text":"#ffffff","gradient":"linear-gradient(135deg,rgb(9,9,11) 0%,rgb(34,34,40) 50%,rgb(17,17,20) 100%)"},"spacing":{"padding":{"top":"var:preset|spacing|10","right":"var:preset|spacing|5","bottom":"var:preset|spacing|10","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|9"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull is-style-shadcn-on-dark has-text-color has-background" style="color:#ffffff;background:linear-gradient(135deg,rgb(9,9,11) 0%,rgb(34,34,40) 50%,rgb(17,17,20) 100%);padding-top:var(--wp--preset--spacing--10);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--10);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"760px"}} -->

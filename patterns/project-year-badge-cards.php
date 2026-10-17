@@ -7,6 +7,8 @@
  * AI Hint: Dated portfolio grid — a single section heading followed by two columns of outlined cards, each carrying a wide sixteen-by-nine image flush to the card's top corners and a padded footer row that keeps the project title and its discipline label on the left while a secondary pill badge holding the delivery year sits on the right; reach for it on a studio or agency work page where the reader should scan what was made and when without opening a case study.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-year-badge-cards","name":"Project Year Badge Cards"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|5","bottom":"var:preset|spacing|9","left":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--5)"><!-- wp:group {"align":"wide","layout":{"type":"constrained","contentSize":"780px","justifyContent":"left"}} -->

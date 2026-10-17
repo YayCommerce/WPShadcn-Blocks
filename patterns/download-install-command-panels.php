@@ -7,6 +7,8 @@
  * AI Hint: Release download block for a desktop tool: a square app tile sits left of a bold version headline with a muted release date, and the right side splits into two platform columns, the first stacking a platform label, a two-chip channel strip, a bordered monospace install command, a muted archive link and then a second platform label above a full-width outline waitlist button, the second stacking a platform label, an architecture chip strip, a bordered row weighing a bold download label against a file size and a download glyph, and a muted requirement line, the whole closing on a hairline and a muted licence sentence; reach for it when one release has to serve a scripted install, a waitlist and a direct binary at once.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|4","bottom":"var:preset|spacing|9","left":"var:preset|spacing|4"},"blockGap":"var:preset|spacing|6"}},"layout":{"type":"default"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-right:var(--wp--preset--spacing--4);padding-bottom:var(--wp--preset--spacing--9);padding-left:var(--wp--preset--spacing--4)"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|7","left":"var:preset|spacing|7"}}}} -->

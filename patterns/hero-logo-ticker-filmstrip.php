@@ -7,6 +7,8 @@
  * AI Hint: Full-width centred hero banded top and bottom by motion — a slow, faded marquee of eight small customer wordmarks runs across the top, a narrow centred column holds a large H1, a two-line muted lead and a centred pair of primary and outline buttons, and a wide carousel filmstrip of six dimmed rounded images slides underneath with four in view on desktop and no captions; reach for it on a landing or launch page that wants social proof and imagery wrapped around the pitch rather than beside it.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","hero"],"patternName":"shadcn/hero-logo-ticker-filmstrip","name":"Hero Logo Ticker Filmstrip"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:shadcn/marquee {"speed":20,"direction":"left","showFade":true,"gap":"3.5rem","align":"wide"} -->

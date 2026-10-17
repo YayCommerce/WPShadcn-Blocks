@@ -12,6 +12,8 @@
 
 namespace ShadcnBlocks\ShadcnAi;
 
+defined( 'ABSPATH' ) || exit;
+
 use ShadcnBlocks\Traits\SingletonTrait;
 
 class Caller {
@@ -37,7 +39,6 @@ class Caller {
 	protected function __construct() {
 		require_once __DIR__ . '/TextSlotHtml.php';
 		require_once __DIR__ . '/PatternHintReader.php';
-		require_once __DIR__ . '/SiteContextBuilder.php';
 		require_once __DIR__ . '/CatalogBuilder.php';
 		require_once __DIR__ . '/UnknownPatternSlugException.php';
 		require_once __DIR__ . '/PlanResolver.php';

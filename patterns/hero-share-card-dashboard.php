@@ -7,6 +7,8 @@
  * AI Hint: Two-column hero for products whose whole pitch is distribution — the left column holds a two-line fluid H1, a muted three-sentence lead and a filled arrow button beside an outline arrow button, while the right column stacks a right-aligned outlined reassurance pill, a bordered share card containing a label, a wrapping row of icon badge chips and a bordered copy-link row with a small outline button, and finally a bordered panel holding the dashboard screenshot; best for a reporting, document or collaboration landing page that has to show sharing in the first screen.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Personal profile about layout — a short left-aligned headline over a full-width rounded portrait, then a narrow left column holding the role title and a location line with a small round flag next to a wider bio in muted text, closing on a second rounded workspace photo; best for a freelancer or solo studio about page built around one person rather than a company.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"constrained","contentSize":"720px","justifyContent":"left"}} -->

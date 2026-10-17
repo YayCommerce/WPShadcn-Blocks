@@ -7,6 +7,8 @@
  * AI Hint: Graphic process cascade — a wide header row with monospace range markers either side of the section heading, followed by five stacked full-width colour bands that darken from top to bottom, each band pairing a down arrow and a large stage title on the left with an oversized ghosted step numeral on the right; best for a bold, imageless "how it works" section where the colour progression itself carries the sequence.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"var:preset|spacing|6"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"top"}} -->

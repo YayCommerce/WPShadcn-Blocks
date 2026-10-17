@@ -7,6 +7,8 @@
  * AI Hint: Media-and-form contact card: one wide rounded panel split into two equal halves with no gutter between them, the left half a cover-cropped photograph bleeding into the panel's rounded left corners and the right half a muted-background pane with generous inner padding carrying a bold "Get in Touch" heading, a two-line muted lead and a stacked form of name, email, company, message and a full-width submit that emails the site owner; reach for it when the contact section should read as a single self-contained card rather than as two loose columns on the page.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->

@@ -7,6 +7,8 @@
  * AI Hint: Two-column hero for trial-led products — the left column stacks a two-line fluid H1, a muted three-sentence lead, a filled arrow button beside an outline arrow button and a small muted fine-print line spelling out the trial terms, while the right column splits again into a tall muted rounded panel holding the dashboard screenshot and a narrower bottom-aligned bordered scorecard pairing a label, an oversized percentage and a muted caption; best for a SaaS landing page that must answer "what does it cost me to try" right under the buttons.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|8"}}}} -->

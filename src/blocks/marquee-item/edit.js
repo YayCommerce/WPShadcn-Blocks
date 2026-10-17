@@ -7,7 +7,7 @@ const TEMPLATE = [
   [
     "core/image",
     {
-      url: "https://ui.shadcn.com/placeholder.svg",
+      url: window.shadcnBlocksEditor?.placeholderImage ?? "",
       alt: "Partner logo placeholder",
       sizeSlug: "thumbnail",
     },

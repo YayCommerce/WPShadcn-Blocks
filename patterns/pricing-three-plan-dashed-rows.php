@@ -7,6 +7,8 @@
  * AI Hint: Three-tier pricing grid led by a centred H2, a muted lead line and a real monthly/yearly toggle, then three equal cards holding plan name, a price that follows the toggle, one supporting sentence and a full-width button, with the recommended tier marked only by its solid button; under every card a column of small check rows separated by dashed hairlines carries the feature list; reach for it when three plans need a long feature comparison that should stay airy rather than sit inside a heavy table.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:shadcn/pricing {"align":"wide","intervals":[{"key":"monthly","label":"Monthly"},{"key":"yearly","label":"Yearly"}],"style":{"spacing":{"blockGap":"var:preset|spacing|8"}},"layout":{"type":"default"}} -->

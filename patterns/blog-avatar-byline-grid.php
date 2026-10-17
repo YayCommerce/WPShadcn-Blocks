@@ -7,6 +7,8 @@
  * AI Hint: Blog index grid — a left-aligned title and one-line intro sit above an auto-fitting three-column run of post cards that each stack a rounded cover image, a secondary topic badge, a linked headline, a two-sentence summary and a round avatar beside the writer's name and publication date, closing with a centred outline link to the full archive; reach for it on a magazine-style blog landing page where the imagery matters as much as the headlines.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","posts"],"patternName":"shadcn/blog-avatar-byline-grid","name":"Blog Avatar Byline Grid"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}}} -->

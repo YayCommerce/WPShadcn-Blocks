@@ -7,6 +7,8 @@
  * AI Hint: Single-project case study page led by a near-full-height edge-to-edge photograph dimmed behind white text — a small uppercase label, an oversized project title and a one-line summary sitting toward the lower left — then an article body held to a readable 800px measure with a lead paragraph, two labelled prose sections separated by a rule-flanked blockquote with attribution, and a captioned photograph near the close; reach for it when one project deserves a magazine-style page of its own rather than a card in a listing grid.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","portfolio"],"patternName":"shadcn/project-page-fullscreen-hero-article","name":"Project Page Fullscreen Hero Article"},"align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull" style="padding-top:0;padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:cover {"url":"<?php echo esc_url( SHADCN_BLOCKS_URL . 'assets/images/placeholder.svg' ); ?>","alt":"The rebuilt ferry shed seen from the water at dusk, its long glazed front lit from inside","dimRatio":60,"minHeight":640,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","right":"var:preset|spacing|7","bottom":"var:preset|spacing|9","left":"var:preset|spacing|7"}}},"layout":{"type":"default"}} -->

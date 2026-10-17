@@ -7,6 +7,8 @@
  * AI Hint: Blog split — a two-column header pairing a badge and oversized headline with a supporting line, above an asymmetric body where a wide left column carries one featured article as a rounded cover image, category pill, large linked title, excerpt, author byline and an outline read button, and a narrow right column carries a labelled, hairline-divided list of five ranked posts with monospace numbers, linked titles and a category and reading-time line; best as an editorial home page or magazine index where one story should outrank the rest.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","posts"],"patternName":"shadcn/blog-featured-popular-split","name":"Blog Featured Popular Split"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|10"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|8"}}}} -->

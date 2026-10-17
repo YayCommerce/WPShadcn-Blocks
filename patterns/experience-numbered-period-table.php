@@ -7,6 +7,8 @@
  * AI Hint: Table-style work history that opens with an uppercase eyebrow, an oversized H2, a two-line muted lead and a download button with a small last-updated note beneath it, then runs a header row of uppercase description and period labels above four hairline-separated rows pairing a bracketed number and bold role title over a two-line muted summary with an uppercase date range at the right edge; reach for it when the history should read as a document or resume index rather than a card list.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"metadata":{"categories":["shadcn","careers"],"patternName":"shadcn/experience-numbered-period-table","name":"Experience Numbered Period Table"},"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|9"}}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"verticalAlignment":"bottom","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|5","left":"var:preset|spacing|6"}}}} -->

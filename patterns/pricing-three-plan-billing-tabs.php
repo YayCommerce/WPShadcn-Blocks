@@ -7,6 +7,8 @@
  * AI Hint: Three-tier pricing section whose period is picked with real tabs instead of a toggle — a left-aligned H2 and muted lead sit above a Monthly and a Yearly tab, and each tab panel owns its own grid of three equal cards stacking a tier badge, a large price, a period caption, a hairline, a small check list and a full-width button, with exactly one card taking a muted fill, a filled badge and the solid button; the two panels are edited independently, so a price or feature line changed under Monthly leaves the Yearly cards exactly as they were, which is the point — reach for it when the two tabs should hold different plan sets rather than the same plans at two figures, whether that is an annual-only tier, different tier names and features per period, or tabs that split audiences such as individuals and teams.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"},"blockGap":"var:preset|spacing|8"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"constrained","contentSize":"680px"}} -->

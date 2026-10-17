@@ -7,6 +7,8 @@
  * AI Hint: Benefit-list contact split: the left column carries a large "Get in Touch" heading, four benefit rows that each place a small tinted rounded square holding a chevron glyph beside a plain reassurance line, and an oversized bold email address sized like a sub-heading; the right column stacks a name, an optional phone, an email and a tall message field under a full-width uppercase submit; reach for it when the section must answer "why write to us" right next to the form that collects the message.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|10"}}}} -->

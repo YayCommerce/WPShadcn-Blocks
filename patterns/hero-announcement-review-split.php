@@ -7,6 +7,8 @@
  * AI Hint: Split hero whose broad left column stacks a secondary badge beside an arrow text link, a fluid oversized h1 and a filled-plus-outline button pair, while the narrow right column carries a muted lead, a five-star row, a large rating figure, a verified-review count and a small overlapping avatar pair; reach for it when the headline needs the full left half to itself and the proof should read as a sidebar rather than a footer.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|9","bottom":"var:preset|spacing|9"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--9);padding-bottom:var(--wp--preset--spacing--9)"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|10"}}}} -->

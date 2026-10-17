@@ -7,6 +7,8 @@
  * AI Hint: Split app download section whose left half stacks a small icon badge, a two-line h2, a two-line muted lead, one filled download button and a compact bordered card holding a scan label above a square QR image, while the right half carries a single tall rounded phone mockup of the app screen; reach for it when desktop readers need a way to move the install to their phone without typing a URL.
  */
 
+defined( 'ABSPATH' ) || exit;
+
 ?>
 <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|10","bottom":"var:preset|spacing|10"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--10);padding-bottom:var(--wp--preset--spacing--10)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|8","left":"var:preset|spacing|9"}}}} -->
