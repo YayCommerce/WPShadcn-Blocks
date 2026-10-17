@@ -12,7 +12,7 @@ const TEMPLATE = [
 		'core/heading',
 		{
 			level: 3,
-			placeholder: __( 'Card Title', 'shadcn-blocks' ),
+			placeholder: __( 'Card Title', 'yaycommerce-blocks-for-shadcn-ui' ),
 			style: {
 				typography: {
 					fontWeight: '600',
@@ -29,7 +29,7 @@ const TEMPLATE = [
 	[
 		'core/paragraph',
 		{
-			placeholder: __( 'Card description', 'shadcn-blocks' ),
+			placeholder: __( 'Card description', 'yaycommerce-blocks-for-shadcn-ui' ),
 			style: {
 				typography: {
 					fontSize: 'var(--wp--preset--font-size--sm)',

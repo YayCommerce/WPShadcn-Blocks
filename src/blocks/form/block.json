@@ -6,7 +6,7 @@
   "title": "Form",
   "category": "shadcn",
   "description": "A form that emails its fields to the site admin or a chosen recipient on submit.",
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "keywords": ["form", "contact", "newsletter", "submit", "email"],
   "supports": {
     "html": false,

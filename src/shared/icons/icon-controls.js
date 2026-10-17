@@ -34,22 +34,22 @@ export function IconControls( {
 				__nextHasNoMarginBottom
 				__next40pxDefaultSize
 				isBlock
-				label={ __( 'Icon position', 'shadcn-blocks' ) }
+				label={ __( 'Icon position', 'yaycommerce-blocks-for-shadcn-ui' ) }
 				value={ position || 'left' }
 				onChange={ ( next ) => onChangePosition( next ) }
 			>
 				<ToggleGroupControlOption
 					value="left"
-					label={ __( 'Left', 'shadcn-blocks' ) }
+					label={ __( 'Left', 'yaycommerce-blocks-for-shadcn-ui' ) }
 				/>
 				<ToggleGroupControlOption
 					value="right"
-					label={ __( 'Right', 'shadcn-blocks' ) }
+					label={ __( 'Right', 'yaycommerce-blocks-for-shadcn-ui' ) }
 				/>
 			</ToggleGroupControl>
 			<UnitControl
 				__next40pxDefaultSize
-				label={ __( 'Icon size', 'shadcn-blocks' ) }
+				label={ __( 'Icon size', 'yaycommerce-blocks-for-shadcn-ui' ) }
 				value={ size }
 				onChange={ ( next ) => onChangeSize( next || '' ) }
 				units={ [
@@ -57,7 +57,7 @@ export function IconControls( {
 					{ value: 'em', label: 'em' },
 					{ value: 'rem', label: 'rem' },
 				] }
-				placeholder={ __( 'Inherit', 'shadcn-blocks' ) }
+				placeholder={ __( 'Inherit', 'yaycommerce-blocks-for-shadcn-ui' ) }
 			/>
 		</>
 	);

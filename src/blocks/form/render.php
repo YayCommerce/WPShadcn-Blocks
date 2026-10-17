@@ -26,10 +26,10 @@ $recipient       = isset( $attributes['recipient'] ) ? trim( (string) $attribute
 $success_message = isset( $attributes['successMessage'] ) ? trim( (string) $attributes['successMessage'] ) : '';
 
 if ( '' === $form_name ) {
-	$form_name = __( 'Contact', 'shadcn-blocks' );
+	$form_name = __( 'Contact', 'yaycommerce-blocks-for-shadcn-ui' );
 }
 if ( '' === $success_message ) {
-	$success_message = __( 'Thanks — we’ll get back to you soon.', 'shadcn-blocks' );
+	$success_message = __( 'Thanks — we’ll get back to you soon.', 'yaycommerce-blocks-for-shadcn-ui' );
 }
 // An invalid recipient silently falls back server-side; drop it here too so
 // the payload never advertises a broken address.
@@ -67,7 +67,7 @@ $wrapper_attributes = get_block_wrapper_attributes( $form_attributes );
 		<?php echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</div>
 	<p class="wp-block-shadcn-form__error" role="alert" hidden>
-		<?php esc_html_e( 'Something went wrong. Please try again.', 'shadcn-blocks' ); ?>
+		<?php esc_html_e( 'Something went wrong. Please try again.', 'yaycommerce-blocks-for-shadcn-ui' ); ?>
 	</p>
 	<p class="wp-block-shadcn-form__success" role="status" hidden>
 		<?php echo esc_html( $success_message ); ?>

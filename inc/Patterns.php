@@ -73,22 +73,22 @@ class Patterns {
 		}
 
 		$categories = array(
-			'hero'    => __( 'Hero', 'shadcn-blocks' ),
-			'pricing' => __( 'Pricing', 'shadcn-blocks' ),
-			'careers' => __( 'Careers', 'shadcn-blocks' ),
-			'awards'  => __( 'Awards', 'shadcn-blocks' ),
-			'case-studies' => __( 'Case Studies', 'shadcn-blocks' ),
-			'community'    => __( 'Community', 'shadcn-blocks' ),
-			'changelog'    => __( 'Changelog', 'shadcn-blocks' ),
-			'compare'      => __( 'Compare', 'shadcn-blocks' ),
-			'compliance'   => __( 'Compliance', 'shadcn-blocks' ),
-			'download'     => __( 'Download', 'shadcn-blocks' ),
-			'faq'          => __( 'FAQ', 'shadcn-blocks' ),
-			'incentives'   => __( 'Incentives', 'shadcn-blocks' ),
-			'industries'   => __( 'Industries', 'shadcn-blocks' ),
-			'process'      => __( 'Process', 'shadcn-blocks' ),
-			'stats'        => __( 'Stats', 'shadcn-blocks' ),
-			'timeline'     => __( 'Timeline', 'shadcn-blocks' ),
+			'hero'    => __( 'Hero', 'yaycommerce-blocks-for-shadcn-ui' ),
+			'pricing' => __( 'Pricing', 'yaycommerce-blocks-for-shadcn-ui' ),
+			'careers' => __( 'Careers', 'yaycommerce-blocks-for-shadcn-ui' ),
+			'awards'  => __( 'Awards', 'yaycommerce-blocks-for-shadcn-ui' ),
+			'case-studies' => __( 'Case Studies', 'yaycommerce-blocks-for-shadcn-ui' ),
+			'community'    => __( 'Community', 'yaycommerce-blocks-for-shadcn-ui' ),
+			'changelog'    => __( 'Changelog', 'yaycommerce-blocks-for-shadcn-ui' ),
+			'compare'      => __( 'Compare', 'yaycommerce-blocks-for-shadcn-ui' ),
+			'compliance'   => __( 'Compliance', 'yaycommerce-blocks-for-shadcn-ui' ),
+			'download'     => __( 'Download', 'yaycommerce-blocks-for-shadcn-ui' ),
+			'faq'          => __( 'FAQ', 'yaycommerce-blocks-for-shadcn-ui' ),
+			'incentives'   => __( 'Incentives', 'yaycommerce-blocks-for-shadcn-ui' ),
+			'industries'   => __( 'Industries', 'yaycommerce-blocks-for-shadcn-ui' ),
+			'process'      => __( 'Process', 'yaycommerce-blocks-for-shadcn-ui' ),
+			'stats'        => __( 'Stats', 'yaycommerce-blocks-for-shadcn-ui' ),
+			'timeline'     => __( 'Timeline', 'yaycommerce-blocks-for-shadcn-ui' ),
 		);
 
 		$registry = \WP_Block_Pattern_Categories_Registry::get_instance();

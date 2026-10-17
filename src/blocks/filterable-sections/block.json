@@ -8,7 +8,7 @@
 	"icon": "filter",
 	"description": "Labelled sections with a dropdown that narrows the page down to one of them.",
 	"keywords": [ "filter", "sections", "categories", "listings", "careers", "jobs" ],
-	"textdomain": "shadcn-blocks",
+	"textdomain": "yaycommerce-blocks-for-shadcn-ui",
 	"attributes": {
 		"filterLabel": {
 			"type": "string",

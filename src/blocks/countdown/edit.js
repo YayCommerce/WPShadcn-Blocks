@@ -24,10 +24,10 @@ import { __ } from "@wordpress/i18n";
 const PREVIEW_LEAD_MS = 3 * 24 * 60 * 60 * 1000;
 
 const LABELS = {
-  days: __("Days", "shadcn-blocks"),
-  hours: __("Hrs", "shadcn-blocks"),
-  minutes: __("Min", "shadcn-blocks"),
-  seconds: __("Sec", "shadcn-blocks"),
+  days: __("Days", "yaycommerce-blocks-for-shadcn-ui"),
+  hours: __("Hrs", "yaycommerce-blocks-for-shadcn-ui"),
+  minutes: __("Min", "yaycommerce-blocks-for-shadcn-ui"),
+  seconds: __("Sec", "yaycommerce-blocks-for-shadcn-ui"),
 };
 
 /**
@@ -105,71 +105,71 @@ export default function Edit({ attributes, setAttributes }) {
 
   const controls = (
     <InspectorControls>
-      <PanelBody title={__("Countdown Settings", "shadcn-blocks")}>
+      <PanelBody title={__("Countdown Settings", "yaycommerce-blocks-for-shadcn-ui")}>
         <DateTimePicker
           currentDate={targetDate || undefined}
           onChange={(value) => setAttributes({ targetDate: value || "" })}
           is12Hour={false}
           help={__(
             "Read in the site's timezone, so this is the local time visitors are counting down to.",
-            "shadcn-blocks"
+            "yaycommerce-blocks-for-shadcn-ui"
           )}
         />
         <ToggleControl
-          label={__("Show days", "shadcn-blocks")}
+          label={__("Show days", "yaycommerce-blocks-for-shadcn-ui")}
           checked={showDays}
           help={__(
             "Off rolls the days into the hours, so two days reads as 48.",
-            "shadcn-blocks"
+            "yaycommerce-blocks-for-shadcn-ui"
           )}
           onChange={(value) => setAttributes({ showDays: value })}
         />
         <ToggleControl
-          label={__("Show seconds", "shadcn-blocks")}
+          label={__("Show seconds", "yaycommerce-blocks-for-shadcn-ui")}
           checked={showSeconds}
           onChange={(value) => setAttributes({ showSeconds: value })}
         />
         <ToggleControl
-          label={__("Show unit labels", "shadcn-blocks")}
+          label={__("Show unit labels", "yaycommerce-blocks-for-shadcn-ui")}
           checked={showLabels}
-          help={__("Print Days / Hrs / Min / Sec under each number.", "shadcn-blocks")}
+          help={__("Print Days / Hrs / Min / Sec under each number.", "yaycommerce-blocks-for-shadcn-ui")}
           onChange={(value) => setAttributes({ showLabels: value })}
         />
         <TextControl
           __next40pxDefaultSize
-          label={__("Separator", "shadcn-blocks")}
+          label={__("Separator", "yaycommerce-blocks-for-shadcn-ui")}
           value={separator}
-          help={__("Leave empty for no separator.", "shadcn-blocks")}
+          help={__("Leave empty for no separator.", "yaycommerce-blocks-for-shadcn-ui")}
           onChange={(value) => setAttributes({ separator: value.slice(0, 3) })}
         />
         <ToggleControl
-          label={__("Blink the separator", "shadcn-blocks")}
+          label={__("Blink the separator", "yaycommerce-blocks-for-shadcn-ui")}
           checked={pulseSeparator}
           help={__(
             "Ignored for visitors who have asked for reduced motion.",
-            "shadcn-blocks"
+            "yaycommerce-blocks-for-shadcn-ui"
           )}
           onChange={(value) => setAttributes({ pulseSeparator: value })}
         />
         <SelectControl
           __next40pxDefaultSize
-          label={__("When the time runs out", "shadcn-blocks")}
+          label={__("When the time runs out", "yaycommerce-blocks-for-shadcn-ui")}
           value={onExpire}
           options={[
-            { label: __("Hide the countdown", "shadcn-blocks"), value: "hide" },
-            { label: __("Show a message", "shadcn-blocks"), value: "message" },
-            { label: __("Keep showing zeros", "shadcn-blocks"), value: "zeros" },
+            { label: __("Hide the countdown", "yaycommerce-blocks-for-shadcn-ui"), value: "hide" },
+            { label: __("Show a message", "yaycommerce-blocks-for-shadcn-ui"), value: "message" },
+            { label: __("Keep showing zeros", "yaycommerce-blocks-for-shadcn-ui"), value: "zeros" },
           ]}
           onChange={(value) => setAttributes({ onExpire: value })}
         />
         {onExpire === "message" && (
           <TextControl
             __next40pxDefaultSize
-            label={__("Expired message", "shadcn-blocks")}
+            label={__("Expired message", "yaycommerce-blocks-for-shadcn-ui")}
             value={expiredMessage}
             help={__(
               "Shown in place of the timer. With no message set, the countdown hides instead.",
-              "shadcn-blocks"
+              "yaycommerce-blocks-for-shadcn-ui"
             )}
             onChange={(value) => setAttributes({ expiredMessage: value })}
           />
@@ -185,10 +185,10 @@ export default function Edit({ attributes, setAttributes }) {
         {controls}
         <div {...blockProps}>
           <Placeholder
-            label={__("Countdown", "shadcn-blocks")}
+            label={__("Countdown", "yaycommerce-blocks-for-shadcn-ui")}
             instructions={__(
               "Pick an end date and time in the block settings. Until then this block renders nothing on the site.",
-              "shadcn-blocks"
+              "yaycommerce-blocks-for-shadcn-ui"
             )}
           />
         </div>

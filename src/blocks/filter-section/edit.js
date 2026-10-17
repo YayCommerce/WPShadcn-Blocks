@@ -22,17 +22,17 @@ const TEMPLATE = [
 	[
 		'core/paragraph',
 		{
-			placeholder: __( 'Add the content for this section…', 'shadcn-blocks' ),
+			placeholder: __( 'Add the content for this section…', 'yaycommerce-blocks-for-shadcn-ui' ),
 		},
 	],
 ];
 
 const HEADING_LEVELS = [
-	{ label: __( 'H2', 'shadcn-blocks' ), value: 2 },
-	{ label: __( 'H3', 'shadcn-blocks' ), value: 3 },
-	{ label: __( 'H4', 'shadcn-blocks' ), value: 4 },
-	{ label: __( 'H5', 'shadcn-blocks' ), value: 5 },
-	{ label: __( 'H6', 'shadcn-blocks' ), value: 6 },
+	{ label: __( 'H2', 'yaycommerce-blocks-for-shadcn-ui' ), value: 2 },
+	{ label: __( 'H3', 'yaycommerce-blocks-for-shadcn-ui' ), value: 3 },
+	{ label: __( 'H4', 'yaycommerce-blocks-for-shadcn-ui' ), value: 4 },
+	{ label: __( 'H5', 'yaycommerce-blocks-for-shadcn-ui' ), value: 5 },
+	{ label: __( 'H6', 'yaycommerce-blocks-for-shadcn-ui' ), value: 6 },
 ];
 
 /**
@@ -53,28 +53,28 @@ export default function Edit( { attributes, setAttributes } ) {
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={ __( 'Section Settings', 'shadcn-blocks' ) }>
+				<PanelBody title={ __( 'Section Settings', 'yaycommerce-blocks-for-shadcn-ui' ) }>
 					<TextControl
-						label={ __( 'Label', 'shadcn-blocks' ) }
+						label={ __( 'Label', 'yaycommerce-blocks-for-shadcn-ui' ) }
 						help={ __(
 							'Shown as this section’s heading and as its option in the filter. Leave empty to keep the section visible under every filter.',
-							'shadcn-blocks'
+							'yaycommerce-blocks-for-shadcn-ui'
 						) }
 						value={ label }
 						onChange={ ( value ) => setAttributes( { label: value } ) }
 					/>
 					<ToggleControl
-						label={ __( 'Show label as heading', 'shadcn-blocks' ) }
+						label={ __( 'Show label as heading', 'yaycommerce-blocks-for-shadcn-ui' ) }
 						help={ __(
 							'Turn off to keep this section filterable without printing a heading above it.',
-							'shadcn-blocks'
+							'yaycommerce-blocks-for-shadcn-ui'
 						) }
 						checked={ showLabel }
 						onChange={ ( value ) => setAttributes( { showLabel: value } ) }
 					/>
 					{ showLabel && (
 						<SelectControl
-							label={ __( 'Heading level', 'shadcn-blocks' ) }
+							label={ __( 'Heading level', 'yaycommerce-blocks-for-shadcn-ui' ) }
 							value={ headingLevel }
 							options={ HEADING_LEVELS }
 							onChange={ ( value ) =>
@@ -101,7 +101,7 @@ export default function Edit( { attributes, setAttributes } ) {
 				) }
 				{ ! label && (
 					<p className="wp-block-shadcn-filter-section__title-placeholder">
-						{ __( 'Unlabelled section — always visible', 'shadcn-blocks' ) }
+						{ __( 'Unlabelled section — always visible', 'yaycommerce-blocks-for-shadcn-ui' ) }
 					</p>
 				) }
 

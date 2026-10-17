@@ -119,7 +119,7 @@ class RestController {
 		if ( ! Caller::is_supported() ) {
 			return new \WP_Error(
 				'shadcn_ai_unsupported_theme',
-				__( 'Shadcn AI requires the Shadcn theme, or a child theme of it, to be active.', 'shadcn-blocks' ),
+				__( 'Shadcn AI requires the Shadcn theme, or a child theme of it, to be active.', 'yaycommerce-blocks-for-shadcn-ui' ),
 				array( 'status' => 403 )
 			);
 		}
@@ -134,7 +134,7 @@ class RestController {
 		if ( ! $this->rate_limiter->is_allowed() ) {
 			return new \WP_Error(
 				'shadcn_ai_rate_limited',
-				__( 'This site has reached the Shadcn AI request limit for today. Please try again tomorrow.', 'shadcn-blocks' ),
+				__( 'This site has reached the Shadcn AI request limit for today. Please try again tomorrow.', 'yaycommerce-blocks-for-shadcn-ui' ),
 				array( 'status' => 429 )
 			);
 		}
@@ -177,7 +177,7 @@ class RestController {
 			// to send in the first place — two very different root causes.
 			return new \WP_Error(
 				'shadcn_ai_empty_plan',
-				__( 'No valid layout could be generated from that prompt.', 'shadcn-blocks' ),
+				__( 'No valid layout could be generated from that prompt.', 'yaycommerce-blocks-for-shadcn-ui' ),
 				array(
 					'status'         => 422,
 					'warnings'       => $warnings,
@@ -198,7 +198,7 @@ class RestController {
 			// closed rather than surface a fatal.
 			return new \WP_Error(
 				'shadcn_ai_resolve_error',
-				__( 'Layout could not be generated.', 'shadcn-blocks' ),
+				__( 'Layout could not be generated.', 'yaycommerce-blocks-for-shadcn-ui' ),
 				array( 'status' => 500 )
 			);
 		}
@@ -270,7 +270,7 @@ class RestController {
 		if ( null === $plan ) {
 			self::emit(
 				'error',
-				array( 'message' => __( 'The AI service stopped responding partway through.', 'shadcn-blocks' ) )
+				array( 'message' => __( 'The AI service stopped responding partway through.', 'yaycommerce-blocks-for-shadcn-ui' ) )
 			);
 			exit;
 		}
@@ -285,7 +285,7 @@ class RestController {
 			self::emit(
 				'error',
 				array(
-					'message'  => __( 'No valid layout could be generated from that prompt.', 'shadcn-blocks' ),
+					'message'  => __( 'No valid layout could be generated from that prompt.', 'yaycommerce-blocks-for-shadcn-ui' ),
 					'warnings' => $warnings,
 				)
 			);
@@ -297,7 +297,7 @@ class RestController {
 		} catch ( UnknownPatternSlugException $e ) {
 			self::emit(
 				'error',
-				array( 'message' => __( 'Layout could not be generated.', 'shadcn-blocks' ) )
+				array( 'message' => __( 'Layout could not be generated.', 'yaycommerce-blocks-for-shadcn-ui' ) )
 			);
 			exit;
 		}
@@ -370,7 +370,7 @@ class RestController {
 		$warnings = array();
 
 		if ( ! is_array( $raw_plan ) ) {
-			return array( array(), array( __( 'AI response was not in the expected format.', 'shadcn-blocks' ) ) );
+			return array( array(), array( __( 'AI response was not in the expected format.', 'yaycommerce-blocks-for-shadcn-ui' ) ) );
 		}
 
 		$total_entries = count( $raw_plan );
@@ -379,7 +379,7 @@ class RestController {
 		if ( $total_entries > self::MAX_PLAN_ENTRIES ) {
 			$warnings[] = sprintf(
 				/* translators: %d: max number of layout sections used. */
-				__( 'Only the first %d layout sections were used; the rest were dropped.', 'shadcn-blocks' ),
+				__( 'Only the first %d layout sections were used; the rest were dropped.', 'yaycommerce-blocks-for-shadcn-ui' ),
 				self::MAX_PLAN_ENTRIES
 			);
 		}
@@ -389,7 +389,7 @@ class RestController {
 
 		foreach ( $entries as $entry ) {
 			if ( ! is_array( $entry ) || empty( $entry['slug'] ) || ! is_string( $entry['slug'] ) ) {
-				$warnings[] = __( 'A layout section had an invalid format and was skipped.', 'shadcn-blocks' );
+				$warnings[] = __( 'A layout section had an invalid format and was skipped.', 'yaycommerce-blocks-for-shadcn-ui' );
 				continue;
 			}
 
@@ -402,7 +402,7 @@ class RestController {
 			if ( ! is_array( $text_slots ) ) {
 				$warnings[] = sprintf(
 					/* translators: %s: pattern slug. */
-					__( 'Section "%s" had invalid text and was skipped.', 'shadcn-blocks' ),
+					__( 'Section "%s" had invalid text and was skipped.', 'yaycommerce-blocks-for-shadcn-ui' ),
 					$entry['slug']
 				);
 				continue;
@@ -411,7 +411,7 @@ class RestController {
 			if ( ! in_array( $entry['slug'], $valid_slugs, true ) ) {
 				$warnings[] = sprintf(
 					/* translators: %s: pattern slug. */
-					__( 'Section "%s" is not a known layout pattern and was skipped.', 'shadcn-blocks' ),
+					__( 'Section "%s" is not a known layout pattern and was skipped.', 'yaycommerce-blocks-for-shadcn-ui' ),
 					$entry['slug']
 				);
 				continue;

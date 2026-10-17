@@ -6,7 +6,7 @@
   "title": "Badge",
   "category": "shadcn",
   "description": "A small inline label or status pill with variants and an optional link.",
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "keywords": ["badge", "label", "tag", "pill", "status"],
   "supports": {
     "html": false,

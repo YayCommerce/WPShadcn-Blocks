@@ -8,7 +8,7 @@
   "parent": ["shadcn/sheet"],
   "icon": "heading",
   "description": "Sheet header section for title and description.",
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "attributes": {},
   "example": {
     "innerBlocks": [

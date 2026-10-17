@@ -6,7 +6,7 @@
   "title": "Bubble Group",
   "category": "shadcn",
   "description": "A vertical stack of message bubbles for chat and conversation mockups.",
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "keywords": ["bubble", "chat", "conversation", "messages"],
   "supports": {
     "html": false,

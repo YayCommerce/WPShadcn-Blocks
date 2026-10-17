@@ -8,7 +8,7 @@
   "icon": "editor-help",
   "description": "A tooltip for displaying additional information.",
   "keywords": ["tooltip", "information", "help", "popup"],
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "attributes": {
     "action": {
       "type": "string",

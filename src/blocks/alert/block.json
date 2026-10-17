@@ -6,7 +6,7 @@
   "title": "Alert",
   "category": "shadcn",
   "description": "Alert block to displays a callout for user attention.",
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "keywords": ["alert", "callout", "message", "notification"],
   "supports": {
     "html": false,

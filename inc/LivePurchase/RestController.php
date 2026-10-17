@@ -153,7 +153,7 @@ class RestController {
 		if ( ! $this->rate_limiter->is_allowed( $ip ) ) {
 			return new \WP_Error(
 				'rate_limited',
-				__( 'Too many requests.', 'shadcn-blocks' ),
+				__( 'Too many requests.', 'yaycommerce-blocks-for-shadcn-ui' ),
 				array( 'status' => 429 )
 			);
 		}
@@ -282,7 +282,7 @@ class RestController {
 	private function invalid() {
 		return new \WP_Error(
 			'invalid',
-			__( 'Invalid request.', 'shadcn-blocks' ),
+			__( 'Invalid request.', 'yaycommerce-blocks-for-shadcn-ui' ),
 			array( 'status' => 400 )
 		);
 	}

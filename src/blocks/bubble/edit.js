@@ -13,29 +13,29 @@ import { __ } from "@wordpress/i18n";
  * Variant options shared with render.php class names.
  */
 const VARIANT_OPTIONS = [
-  { label: __("Default", "shadcn-blocks"), value: "default" },
-  { label: __("Secondary", "shadcn-blocks"), value: "secondary" },
-  { label: __("Muted", "shadcn-blocks"), value: "muted" },
-  { label: __("Tinted", "shadcn-blocks"), value: "tinted" },
-  { label: __("Outline", "shadcn-blocks"), value: "outline" },
-  { label: __("Ghost", "shadcn-blocks"), value: "ghost" },
-  { label: __("Destructive", "shadcn-blocks"), value: "destructive" },
+  { label: __("Default", "yaycommerce-blocks-for-shadcn-ui"), value: "default" },
+  { label: __("Secondary", "yaycommerce-blocks-for-shadcn-ui"), value: "secondary" },
+  { label: __("Muted", "yaycommerce-blocks-for-shadcn-ui"), value: "muted" },
+  { label: __("Tinted", "yaycommerce-blocks-for-shadcn-ui"), value: "tinted" },
+  { label: __("Outline", "yaycommerce-blocks-for-shadcn-ui"), value: "outline" },
+  { label: __("Ghost", "yaycommerce-blocks-for-shadcn-ui"), value: "ghost" },
+  { label: __("Destructive", "yaycommerce-blocks-for-shadcn-ui"), value: "destructive" },
 ];
 
 /**
  * Alignment options. Empty value inherits the parent Bubble Group default.
  */
 const ALIGN_OPTIONS = [
-  { label: __("Inherit from group", "shadcn-blocks"), value: "" },
-  { label: __("Start (left)", "shadcn-blocks"), value: "start" },
-  { label: __("End (right)", "shadcn-blocks"), value: "end" },
+  { label: __("Inherit from group", "yaycommerce-blocks-for-shadcn-ui"), value: "" },
+  { label: __("Start (left)", "yaycommerce-blocks-for-shadcn-ui"), value: "start" },
+  { label: __("End (right)", "yaycommerce-blocks-for-shadcn-ui"), value: "end" },
 ];
 
 /**
  * Bubble inner content template.
  */
 const TEMPLATE = [
-  ["core/paragraph", { placeholder: __("Type a message…", "shadcn-blocks") }],
+  ["core/paragraph", { placeholder: __("Type a message…", "yaycommerce-blocks-for-shadcn-ui") }],
 ];
 
 /**
@@ -64,20 +64,20 @@ export default function Edit({ attributes, setAttributes, context }) {
   return (
     <>
       <InspectorControls>
-        <PanelBody title={__("Bubble Settings", "shadcn-blocks")}>
+        <PanelBody title={__("Bubble Settings", "yaycommerce-blocks-for-shadcn-ui")}>
           <SelectControl
-            label={__("Variant", "shadcn-blocks")}
+            label={__("Variant", "yaycommerce-blocks-for-shadcn-ui")}
             value={variant}
             options={VARIANT_OPTIONS}
             onChange={(value) => setAttributes({ variant: value })}
           />
           <SelectControl
-            label={__("Alignment", "shadcn-blocks")}
+            label={__("Alignment", "yaycommerce-blocks-for-shadcn-ui")}
             value={align}
             options={ALIGN_OPTIONS}
             help={__(
               "Start is the receiver side, End is the sender side. Inherit uses the Bubble Group default.",
-              "shadcn-blocks"
+              "yaycommerce-blocks-for-shadcn-ui"
             )}
             onChange={(value) => setAttributes({ align: value })}
           />

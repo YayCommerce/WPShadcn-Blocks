@@ -12,8 +12,8 @@ const TEMPLATE = [
     "core/heading",
     {
       level: 3,
-      content: __("Edit profile", "shadcn-blocks"),
-      placeholder: __("Sheet Title", "shadcn-blocks"),
+      content: __("Edit profile", "yaycommerce-blocks-for-shadcn-ui"),
+      placeholder: __("Sheet Title", "yaycommerce-blocks-for-shadcn-ui"),
       style: {
         typography: {
           fontWeight: "600",
@@ -32,9 +32,9 @@ const TEMPLATE = [
     {
       content: __(
         "Make changes to your profile here. Click save when you're done.",
-        "shadcn-blocks"
+        "yaycommerce-blocks-for-shadcn-ui"
       ),
-      placeholder: __("Sheet description", "shadcn-blocks"),
+      placeholder: __("Sheet description", "yaycommerce-blocks-for-shadcn-ui"),
       style: {
         typography: {
           fontSize: "var(--wp--preset--font-size--sm)",

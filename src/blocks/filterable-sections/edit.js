@@ -39,8 +39,8 @@ function resolveSectionsGap( blockGap ) {
  * the block is inserted.
  */
 const TEMPLATE = [
-	[ 'shadcn/filter-section', { label: __( 'Engineering', 'shadcn-blocks' ) } ],
-	[ 'shadcn/filter-section', { label: __( 'Design', 'shadcn-blocks' ) } ],
+	[ 'shadcn/filter-section', { label: __( 'Engineering', 'yaycommerce-blocks-for-shadcn-ui' ) } ],
+	[ 'shadcn/filter-section', { label: __( 'Design', 'yaycommerce-blocks-for-shadcn-ui' ) } ],
 ];
 
 /**
@@ -83,43 +83,43 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={ __( 'Filter Settings', 'shadcn-blocks' ) }>
+				<PanelBody title={ __( 'Filter Settings', 'yaycommerce-blocks-for-shadcn-ui' ) }>
 					<SelectControl
-						label={ __( 'Control', 'shadcn-blocks' ) }
+						label={ __( 'Control', 'yaycommerce-blocks-for-shadcn-ui' ) }
 						value={ control }
 						options={ [
-							{ label: __( 'Dropdown', 'shadcn-blocks' ), value: 'dropdown' },
-							{ label: __( 'Buttons', 'shadcn-blocks' ), value: 'buttons' },
+							{ label: __( 'Dropdown', 'yaycommerce-blocks-for-shadcn-ui' ), value: 'dropdown' },
+							{ label: __( 'Buttons', 'yaycommerce-blocks-for-shadcn-ui' ), value: 'buttons' },
 						] }
 						onChange={ ( value ) => setAttributes( { control: value } ) }
 					/>
 					<SelectControl
-						label={ __( 'Control position', 'shadcn-blocks' ) }
+						label={ __( 'Control position', 'yaycommerce-blocks-for-shadcn-ui' ) }
 						help={ __(
 							'Beside the sections becomes a rail on wide screens and moves above them on narrow ones.',
-							'shadcn-blocks'
+							'yaycommerce-blocks-for-shadcn-ui'
 						) }
 						value={ controlPosition }
 						options={ [
-							{ label: __( 'Above the sections', 'shadcn-blocks' ), value: 'top' },
-							{ label: __( 'Beside the sections', 'shadcn-blocks' ), value: 'side' },
+							{ label: __( 'Above the sections', 'yaycommerce-blocks-for-shadcn-ui' ), value: 'top' },
+							{ label: __( 'Beside the sections', 'yaycommerce-blocks-for-shadcn-ui' ), value: 'side' },
 						] }
 						onChange={ ( value ) => setAttributes( { controlPosition: value } ) }
 					/>
 					<TextControl
-						label={ __( 'Filter label', 'shadcn-blocks' ) }
+						label={ __( 'Filter label', 'yaycommerce-blocks-for-shadcn-ui' ) }
 						help={ __(
 							'Leave empty to hide the label and show the dropdown on its own.',
-							'shadcn-blocks'
+							'yaycommerce-blocks-for-shadcn-ui'
 						) }
 						value={ filterLabel }
 						onChange={ ( value ) => setAttributes( { filterLabel: value } ) }
 					/>
 					<TextControl
-						label={ __( '"Show all" option', 'shadcn-blocks' ) }
+						label={ __( '"Show all" option', 'yaycommerce-blocks-for-shadcn-ui' ) }
 						help={ __(
 							'The option that clears the filter and shows every section.',
-							'shadcn-blocks'
+							'yaycommerce-blocks-for-shadcn-ui'
 						) }
 						value={ allOptionLabel }
 						onChange={ ( value ) => setAttributes( { allOptionLabel: value } ) }

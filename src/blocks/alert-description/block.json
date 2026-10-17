@@ -6,7 +6,7 @@
   "title": "Alert Description",
   "category": "shadcn",
   "description": "Alert description for alert block.",
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "parent": ["shadcn/alert"],
   "supports": {
     "anchor": true,

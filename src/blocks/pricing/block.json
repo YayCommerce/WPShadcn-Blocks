@@ -7,7 +7,7 @@
   "category": "shadcn",
   "description": "Holds the billing interval for everything inside it. Lay the plans out with any blocks; add a Pricing Switch to change interval and Pricing Price wherever a figure should follow it.",
   "keywords": ["pricing", "plans", "billing", "subscription", "tiers"],
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "supports": {
     "html": false,
     "anchor": true,

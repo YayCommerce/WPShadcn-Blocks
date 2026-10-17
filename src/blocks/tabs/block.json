@@ -7,7 +7,7 @@
   "category": "shadcn",
   "description": "A set of layered sections of content that displays one panel at a time.",
   "keywords": ["tabs", "tab", "panel", "switcher", "section"],
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "supports": {
     "html": false,
     "anchor": true,

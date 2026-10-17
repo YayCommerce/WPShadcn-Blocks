@@ -34,7 +34,7 @@ if ( ! in_array( $alignment, array( 'left', 'center', 'right' ), true ) ) {
 }
 
 if ( '' === wp_strip_all_tags( $label ) ) {
-	$label = __( 'Submit', 'shadcn-blocks' );
+	$label = __( 'Submit', 'yaycommerce-blocks-for-shadcn-ui' );
 }
 
 $button_attributes = array(

@@ -6,7 +6,7 @@
   "title": "Textarea",
   "category": "shadcn",
   "description": "A labeled multi-line text field for form messages.",
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "keywords": ["textarea", "message", "field", "form"],
   "supports": {
     "html": false,

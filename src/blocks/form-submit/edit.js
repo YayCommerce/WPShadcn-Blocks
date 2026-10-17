@@ -42,16 +42,16 @@ export default function Edit( { attributes, setAttributes } ) {
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={ __( 'Button Settings', 'shadcn-blocks' ) }>
+				<PanelBody title={ __( 'Button Settings', 'yaycommerce-blocks-for-shadcn-ui' ) }>
 					<ToggleGroupControl
-						label={ __( 'Width', 'shadcn-blocks' ) }
+						label={ __( 'Width', 'yaycommerce-blocks-for-shadcn-ui' ) }
 						value={ width }
 						isDeselectable
 						isBlock
 						__nextHasNoMarginBottom
 						help={ __(
 							'Percentage of the form width; unset stretches to the full form.',
-							'shadcn-blocks'
+							'yaycommerce-blocks-for-shadcn-ui'
 						) }
 						onChange={ ( value ) =>
 							setAttributes( { width: value } )
@@ -66,14 +66,14 @@ export default function Edit( { attributes, setAttributes } ) {
 						) ) }
 					</ToggleGroupControl>
 					<ToggleGroupControl
-						label={ __( 'Alignment', 'shadcn-blocks' ) }
+						label={ __( 'Alignment', 'yaycommerce-blocks-for-shadcn-ui' ) }
 						value={ alignment || undefined }
 						isDeselectable
 						isBlock
 						__nextHasNoMarginBottom
 						help={ __(
 							'Choosing an alignment stops the full-width stretch.',
-							'shadcn-blocks'
+							'yaycommerce-blocks-for-shadcn-ui'
 						) }
 						onChange={ ( value ) =>
 							setAttributes( { alignment: value || '' } )
@@ -81,15 +81,15 @@ export default function Edit( { attributes, setAttributes } ) {
 					>
 						<ToggleGroupControlOption
 							value="left"
-							label={ __( 'Left', 'shadcn-blocks' ) }
+							label={ __( 'Left', 'yaycommerce-blocks-for-shadcn-ui' ) }
 						/>
 						<ToggleGroupControlOption
 							value="center"
-							label={ __( 'Center', 'shadcn-blocks' ) }
+							label={ __( 'Center', 'yaycommerce-blocks-for-shadcn-ui' ) }
 						/>
 						<ToggleGroupControlOption
 							value="right"
-							label={ __( 'Right', 'shadcn-blocks' ) }
+							label={ __( 'Right', 'yaycommerce-blocks-for-shadcn-ui' ) }
 						/>
 					</ToggleGroupControl>
 				</PanelBody>
@@ -101,7 +101,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					className="wp-block-shadcn-form-submit__label"
 					value={ label }
 					allowedFormats={ [] }
-					placeholder={ __( 'Submit', 'shadcn-blocks' ) }
+					placeholder={ __( 'Submit', 'yaycommerce-blocks-for-shadcn-ui' ) }
 					onChange={ ( value ) => setAttributes( { label: value } ) }
 				/>
 			</div>

@@ -6,7 +6,7 @@
   "title": "Marker",
   "category": "shadcn",
   "description": "A small labeled meta-row: a muted text line, a centered separator, or a bordered label.",
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "keywords": ["marker", "label", "meta", "separator", "divider"],
   "supports": {
     "html": false,

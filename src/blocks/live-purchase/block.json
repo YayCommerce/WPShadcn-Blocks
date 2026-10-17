@@ -14,7 +14,7 @@
     "social proof",
     "woocommerce"
   ],
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "supports": {
     "html": false,
     "anchor": false,

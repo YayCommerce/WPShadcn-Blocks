@@ -188,7 +188,7 @@ class LlmClient {
 				? $json['message']
 				: ( $status >= 300
 					? sprintf( 'AI endpoint returned HTTP %d.', $status )
-					: __( 'The AI service could not be reached. Please try again.', 'shadcn-blocks' ) );
+					: __( 'The AI service could not be reached. Please try again.', 'yaycommerce-blocks-for-shadcn-ui' ) );
 			throw new LlmRequestException( $message );
 		}
 	}

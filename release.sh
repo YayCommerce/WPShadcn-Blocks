@@ -1,12 +1,12 @@
 #!/bin/bash
 #
-# Release script for shadcn-blocks plugin
+# Release script for yaycommerce-blocks-for-shadcn-ui plugin
 # Creates a distribution ZIP with only production files
 #
 set -e
 
-PLUGIN_SLUG="shadcn-blocks"
-PLUGIN_FILE="shadcn-blocks.php"
+PLUGIN_SLUG="yaycommerce-blocks-for-shadcn-ui"
+PLUGIN_FILE="yaycommerce-blocks-for-shadcn-ui.php"
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 cd "$SCRIPT_DIR"
@@ -87,7 +87,7 @@ find "$DEST_DIR" -name ".DS_Store" -delete
 # Fail loudly when a file the plugin loads at runtime did not make it in,
 # rather than shipping a ZIP that 404s once the plugin is installed somewhere else.
 for required in \
-    "shadcn-blocks.php" \
+    "yaycommerce-blocks-for-shadcn-ui.php" \
     "inc/icon-map.php" \
     "assets/images/placeholder.svg" \
     "src/editor-styles.css" \

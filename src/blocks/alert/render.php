@@ -49,7 +49,7 @@ $wrapper_attributes = get_block_wrapper_attributes(
 		<button
 			type="button"
 			class="alert-dismiss"
-			aria-label="<?php esc_attr_e( 'Dismiss alert', 'shadcn-blocks' ); ?>"
+			aria-label="<?php esc_attr_e( 'Dismiss alert', 'yaycommerce-blocks-for-shadcn-ui' ); ?>"
 			data-wp-on--click="actions.dismiss"
 		>
 			<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">

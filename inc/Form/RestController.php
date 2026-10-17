@@ -58,7 +58,7 @@ class RestController {
 		if ( ! $this->rate_limiter->is_allowed( $ip ) ) {
 			return new \WP_Error(
 				'rate_limited',
-				__( 'Too many submissions. Please try again later.', 'shadcn-blocks' ),
+				__( 'Too many submissions. Please try again later.', 'yaycommerce-blocks-for-shadcn-ui' ),
 				array( 'status' => 429 )
 			);
 		}
@@ -111,7 +111,7 @@ class RestController {
 		$form_name = $request->get_param( 'formName' );
 		$form_name = is_string( $form_name ) ? sanitize_text_field( $form_name ) : '';
 		if ( '' === $form_name ) {
-			$form_name = __( 'Contact', 'shadcn-blocks' );
+			$form_name = __( 'Contact', 'yaycommerce-blocks-for-shadcn-ui' );
 		}
 
 		// The recipient must be one an editor saved into the form, not one the
@@ -134,7 +134,7 @@ class RestController {
 		$lines[] = '';
 		$lines[] = sprintf(
 			/* translators: 1: page URL the form was submitted from. */
-			__( 'Sent from: %s', 'shadcn-blocks' ),
+			__( 'Sent from: %s', 'yaycommerce-blocks-for-shadcn-ui' ),
 			esc_url_raw( (string) $request->get_header( 'referer' ) )
 		);
 
@@ -149,7 +149,7 @@ class RestController {
 		if ( ! $sent ) {
 			return new \WP_Error(
 				'mail_failed',
-				__( 'The message could not be sent.', 'shadcn-blocks' ),
+				__( 'The message could not be sent.', 'yaycommerce-blocks-for-shadcn-ui' ),
 				array( 'status' => 500 )
 			);
 		}
@@ -178,7 +178,7 @@ class RestController {
 	private function invalid() {
 		return new \WP_Error(
 			'invalid',
-			__( 'Invalid submission.', 'shadcn-blocks' ),
+			__( 'Invalid submission.', 'yaycommerce-blocks-for-shadcn-ui' ),
 			array( 'status' => 400 )
 		);
 	}

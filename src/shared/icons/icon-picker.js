@@ -51,17 +51,17 @@ function IconGrid( { value, onSelect } ) {
 				__nextHasNoMarginBottom
 				value={ query }
 				onChange={ setQuery }
-				placeholder={ __( 'Search icons…', 'shadcn-blocks' ) }
+				placeholder={ __( 'Search icons…', 'yaycommerce-blocks-for-shadcn-ui' ) }
 			/>
 			{ results.length === 0 ? (
 				<p className="shadcn-icon-picker__empty">
-					{ __( 'No icons found.', 'shadcn-blocks' ) }
+					{ __( 'No icons found.', 'yaycommerce-blocks-for-shadcn-ui' ) }
 				</p>
 			) : (
 				<div
 					className="shadcn-icon-picker__grid"
 					role="listbox"
-					aria-label={ __( 'Icons', 'shadcn-blocks' ) }
+					aria-label={ __( 'Icons', 'yaycommerce-blocks-for-shadcn-ui' ) }
 				>
 					{ results.map( ( slug ) => (
 						<Button
@@ -115,7 +115,7 @@ export function IconPicker( { value, onChange } ) {
 								</span>
 							</>
 						) : (
-							__( 'Select icon', 'shadcn-blocks' )
+							__( 'Select icon', 'yaycommerce-blocks-for-shadcn-ui' )
 						) }
 					</Button>
 				) }
@@ -136,7 +136,7 @@ export function IconPicker( { value, onChange } ) {
 					className="shadcn-icon-picker__remove"
 					onClick={ () => onChange( '' ) }
 				>
-					{ __( 'Remove', 'shadcn-blocks' ) }
+					{ __( 'Remove', 'yaycommerce-blocks-for-shadcn-ui' ) }
 				</Button>
 			) }
 		</div>

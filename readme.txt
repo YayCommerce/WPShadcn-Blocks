@@ -1,4 +1,4 @@
-=== Shadcn Blocks ===
+=== YayCommerce Blocks for Shadcn UI ===
 Contributors: yaycommerce
 Tags: gutenberg, blocks, shadcn
 Requires at least: 6.5
@@ -12,7 +12,7 @@ Gutenberg blocks and 473 section patterns for the Shadcn theme, with a Lucide ic
 
 == Description ==
 
-Shadcn Blocks is a companion plugin for the [Shadcn theme](https://wpshadcn.com/). It adds interactive Gutenberg blocks built on Shadcn UI design principles, a library of ready-made section patterns, and an AI page builder that assembles those patterns from a prompt.
+YayCommerce Blocks for Shadcn UI is a companion plugin for the [Shadcn theme](https://wpshadcn.com/). It adds interactive Gutenberg blocks built on Shadcn UI design principles, a library of ready-made section patterns, and an AI page builder that assembles those patterns from a prompt.
 
 **Note:** This plugin requires the Shadcn theme, or a child of it, to be active.
 
@@ -100,13 +100,13 @@ The site registers itself with the AI service on first use, so there is no endpo
 * Supports the editor's color, spacing, typography and border controls
 * Block editor integration with live preview
 * Custom block category for easy discovery
-* Translation-ready (text domain: shadcn-blocks)
+* Translation-ready (text domain: yaycommerce-blocks-for-shadcn-ui)
 * Lightweight and performance optimized
 
 == Installation ==
 
 1. Ensure the Shadcn theme is installed and activated
-2. Upload the `shadcn-blocks` folder to `/wp-content/plugins/`
+2. Upload the `yaycommerce-blocks-for-shadcn-ui` folder to `/wp-content/plugins/`
 3. Activate the plugin through the 'Plugins' menu in WordPress
 4. Start using Shadcn blocks in the Block Editor
 
@@ -216,12 +216,12 @@ First public release. Requires the Shadcn theme (or a child of it) to be active.
 * Interactive blocks are built on the WordPress Interactivity API.
 * Blocks inherit the Shadcn theme's design tokens and support the editor's colour, spacing, typography and border controls.
 * All blocks are grouped under a Shadcn category in the inserter.
-* Translation-ready (text domain: shadcn-blocks).
+* Translation-ready (text domain: yaycommerce-blocks-for-shadcn-ui).
 
 == Upgrade Notice ==
 
 = 1.0.0 =
-Initial release of Shadcn Blocks plugin.
+Initial release of YayCommerce Blocks for Shadcn UI plugin.
 
 == Support ==
 

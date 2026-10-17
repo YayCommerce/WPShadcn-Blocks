@@ -47,7 +47,7 @@ $filter_label     = isset( $attributes['filterLabel'] ) ? (string) $attributes['
 $all_option_label = isset( $attributes['allOptionLabel'] ) ? (string) $attributes['allOptionLabel'] : '';
 
 if ( '' === trim( $all_option_label ) ) {
-	$all_option_label = __( 'All', 'shadcn-blocks' );
+	$all_option_label = __( 'All', 'yaycommerce-blocks-for-shadcn-ui' );
 }
 
 // Only a known control/position may reach the class list, so a crafted

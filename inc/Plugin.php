@@ -82,7 +82,7 @@ class Plugin {
 			array(
 				array(
 					'slug'  => 'shadcn',
-					'title' => __( 'Shadcn', 'shadcn-blocks' ),
+					'title' => __( 'Shadcn', 'yaycommerce-blocks-for-shadcn-ui' ),
 					'icon'  => null,
 				),
 			),
@@ -322,7 +322,7 @@ class Plugin {
 		}
 
 		// Single shared toaster; data-wp-each renders state.toasts client-side.
-		$toaster = '<div class="wp-block-shadcn-sonner__toaster" data-wp-interactive="shadcn/sonner" data-wp-watch="callbacks.onToastsChange" data-wp-bind--data-expanded="state.expanded" role="region" aria-label="' . esc_attr__( 'Notifications', 'shadcn-blocks' ) . '" aria-live="polite">'
+		$toaster = '<div class="wp-block-shadcn-sonner__toaster" data-wp-interactive="shadcn/sonner" data-wp-watch="callbacks.onToastsChange" data-wp-bind--data-expanded="state.expanded" role="region" aria-label="' . esc_attr__( 'Notifications', 'yaycommerce-blocks-for-shadcn-ui' ) . '" aria-live="polite">'
 			. '<template data-wp-each--toast="state.toasts" data-wp-each-key="context.toast.id">'
 			. '<div class="wp-block-shadcn-sonner__toast" data-wp-bind--data-type="context.toast.type" data-wp-on--mouseenter="actions.expand" data-wp-on--mouseleave="actions.collapse">'
 			. '<span class="wp-block-shadcn-sonner__toast__icon" aria-hidden="true">'
@@ -470,17 +470,17 @@ class Plugin {
 		// deliberately: they read naturally at any count, so the client never
 		// has to reimplement plural rules for every locale.
 		$config['i18n'] = array(
-			'from'      => __( 'from', 'shadcn-blocks' ),
-			'purchased' => __( 'just purchased', 'shadcn-blocks' ),
+			'from'      => __( 'from', 'yaycommerce-blocks-for-shadcn-ui' ),
+			'purchased' => __( 'just purchased', 'yaycommerce-blocks-for-shadcn-ui' ),
 			// Simulated mode has no buyer to name, so it uses this as the
 			// subject of the sentence rather than inventing a person.
-			'someone'   => __( 'Someone', 'shadcn-blocks' ),
-			'justNow'   => __( 'just now', 'shadcn-blocks' ),
+			'someone'   => __( 'Someone', 'yaycommerce-blocks-for-shadcn-ui' ),
+			'justNow'   => __( 'just now', 'yaycommerce-blocks-for-shadcn-ui' ),
 			/* translators: %d: number of minutes. */
-			'minutes'   => __( '%d min ago', 'shadcn-blocks' ),
+			'minutes'   => __( '%d min ago', 'yaycommerce-blocks-for-shadcn-ui' ),
 			/* translators: %d: number of hours. */
-			'hours'     => __( '%d hr ago', 'shadcn-blocks' ),
-			'recently'  => __( 'recently', 'shadcn-blocks' ),
+			'hours'     => __( '%d hr ago', 'yaycommerce-blocks-for-shadcn-ui' ),
+			'recently'  => __( 'recently', 'yaycommerce-blocks-for-shadcn-ui' ),
 		);
 
 		$region = '<div class="' . esc_attr( $classes ) . '"'
@@ -488,7 +488,7 @@ class Plugin {
 			. ' ' . wp_interactivity_data_wp_context( $config, 'shadcn/live-purchase' )
 			. ' data-wp-init="callbacks.start"'
 			. ' role="region"'
-			. ' aria-label="' . esc_attr__( 'Recent purchases', 'shadcn-blocks' ) . '"'
+			. ' aria-label="' . esc_attr__( 'Recent purchases', 'yaycommerce-blocks-for-shadcn-ui' ) . '"'
 			. ' aria-live="polite"'
 			. '>'
 			// Visibility is a class, not the `hidden` attribute: `[hidden]`
@@ -512,7 +512,7 @@ class Plugin {
 			// hydration order and it came back null in the DOM; there is
 			// nothing reactive about it to justify the risk.
 			. ' data-wp-on--click="actions.dismiss" data-wp-class--is-shown="state.dismissible"'
-			. ' aria-label="' . esc_attr__( 'Dismiss', 'shadcn-blocks' ) . '">'
+			. ' aria-label="' . esc_attr__( 'Dismiss', 'yaycommerce-blocks-for-shadcn-ui' ) . '">'
 			. '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"'
 			. ' stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
 			. '<path d="M18 6 6 18" fill="none"></path><path d="m6 6 12 12" fill="none"></path></svg>'

@@ -96,10 +96,10 @@ if ( $show_seconds ) {
 }
 
 $labels = array(
-	'days'    => __( 'Days', 'shadcn-blocks' ),
-	'hours'   => __( 'Hrs', 'shadcn-blocks' ),
-	'minutes' => __( 'Min', 'shadcn-blocks' ),
-	'seconds' => __( 'Sec', 'shadcn-blocks' ),
+	'days'    => __( 'Days', 'yaycommerce-blocks-for-shadcn-ui' ),
+	'hours'   => __( 'Hrs', 'yaycommerce-blocks-for-shadcn-ui' ),
+	'minutes' => __( 'Min', 'yaycommerce-blocks-for-shadcn-ui' ),
+	'seconds' => __( 'Sec', 'yaycommerce-blocks-for-shadcn-ui' ),
 );
 
 $units_html = '';
@@ -144,7 +144,7 @@ printf(
 	esc_html(
 		sprintf(
 			/* translators: %s: formatted end date and time. */
-			__( 'Offer ends %s', 'shadcn-blocks' ),
+			__( 'Offer ends %s', 'yaycommerce-blocks-for-shadcn-ui' ),
 			wp_date( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), $target->getTimestamp() )
 		)
 	),

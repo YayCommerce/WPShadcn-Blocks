@@ -91,7 +91,7 @@ class Caller {
 		// plugin's .po files are.
 		wp_set_script_translations(
 			'shadcn-ai',
-			'shadcn-blocks',
+			'yaycommerce-blocks-for-shadcn-ui',
 			SHADCN_BLOCKS_DIR . 'languages'
 		);
 

@@ -65,11 +65,11 @@ export default function Edit({ attributes, setAttributes }) {
     <>
       <InspectorControls>
         <ToolsPanel
-          label={__("Settings", "shadcn-blocks")}
+          label={__("Settings", "yaycommerce-blocks-for-shadcn-ui")}
           resetAll={() => setAttributes({ headingLevel: 3 })}
         >
           <ToolsPanelItem
-            label={__("Heading level", "shadcn-blocks")}
+            label={__("Heading level", "yaycommerce-blocks-for-shadcn-ui")}
             isShownByDefault
             hasValue={() => headingLevel !== 3}
             onDeselect={() => setAttributes({ headingLevel: 3 })}
@@ -78,10 +78,10 @@ export default function Edit({ attributes, setAttributes }) {
               __next40pxDefaultSize
               __nextHasNoMarginBottom
               isBlock
-              label={__("Heading level", "shadcn-blocks")}
+              label={__("Heading level", "yaycommerce-blocks-for-shadcn-ui")}
               help={__(
                 "HTML heading level used for each item trigger.",
-                "shadcn-blocks"
+                "yaycommerce-blocks-for-shadcn-ui"
               )}
               value={headingLevel ?? 3}
               onChange={(value) =>
@@ -99,17 +99,17 @@ export default function Edit({ attributes, setAttributes }) {
           </ToolsPanelItem>
 
           <ToolsPanelItem
-            label={__("Allow multiple open", "shadcn-blocks")}
+            label={__("Allow multiple open", "yaycommerce-blocks-for-shadcn-ui")}
             isShownByDefault
             hasValue={() => !!allowMultiple}
             onDeselect={() => setAttributes({ allowMultiple: false })}
           >
             <ToggleControl
               __nextHasNoMarginBottom
-              label={__("Allow multiple open", "shadcn-blocks")}
+              label={__("Allow multiple open", "yaycommerce-blocks-for-shadcn-ui")}
               help={__(
                 "When enabled, more than one item can be open at a time.",
-                "shadcn-blocks"
+                "yaycommerce-blocks-for-shadcn-ui"
               )}
               checked={!!allowMultiple}
               onChange={(value) => setAttributes({ allowMultiple: value })}
@@ -117,17 +117,17 @@ export default function Edit({ attributes, setAttributes }) {
           </ToolsPanelItem>
 
           <ToolsPanelItem
-            label={__("Outlined", "shadcn-blocks")}
+            label={__("Outlined", "yaycommerce-blocks-for-shadcn-ui")}
             isShownByDefault
             hasValue={() => !!outlined}
             onDeselect={() => setAttributes({ outlined: false })}
           >
             <ToggleControl
               __nextHasNoMarginBottom
-              label={__("Outlined", "shadcn-blocks")}
+              label={__("Outlined", "yaycommerce-blocks-for-shadcn-ui")}
               help={__(
                 "Wrap the accordion in a bordered, rounded container.",
-                "shadcn-blocks"
+                "yaycommerce-blocks-for-shadcn-ui"
               )}
               checked={!!outlined}
               onChange={(value) => setAttributes({ outlined: value })}
@@ -136,17 +136,17 @@ export default function Edit({ attributes, setAttributes }) {
 
           {singleOpen && (
             <ToolsPanelItem
-              label={__("Open first item", "shadcn-blocks")}
+              label={__("Open first item", "yaycommerce-blocks-for-shadcn-ui")}
               isShownByDefault
               hasValue={() => !!openFirst}
               onDeselect={() => setAttributes({ openFirst: false })}
             >
               <ToggleControl
                 __nextHasNoMarginBottom
-                label={__("Open first item", "shadcn-blocks")}
+                label={__("Open first item", "yaycommerce-blocks-for-shadcn-ui")}
                 help={__(
                   "Show the first item already open when the page loads.",
-                  "shadcn-blocks"
+                  "yaycommerce-blocks-for-shadcn-ui"
                 )}
                 checked={!!openFirst || !!autoplay}
                 disabled={!!autoplay}
@@ -157,7 +157,7 @@ export default function Edit({ attributes, setAttributes }) {
 
           {singleOpen && (
             <ToolsPanelItem
-              label={__("Auto rotate", "shadcn-blocks")}
+              label={__("Auto rotate", "yaycommerce-blocks-for-shadcn-ui")}
               isShownByDefault
               hasValue={() => !!autoplay}
               onDeselect={() =>
@@ -166,10 +166,10 @@ export default function Edit({ attributes, setAttributes }) {
             >
               <ToggleControl
                 __nextHasNoMarginBottom
-                label={__("Auto rotate", "shadcn-blocks")}
+                label={__("Auto rotate", "yaycommerce-blocks-for-shadcn-ui")}
                 help={__(
                   "Open each item in turn, with a progress bar counting down to the next one. Always starts on the first item.",
-                  "shadcn-blocks"
+                  "yaycommerce-blocks-for-shadcn-ui"
                 )}
                 checked={!!autoplay}
                 onChange={(value) => setAttributes({ autoplay: value })}
@@ -179,7 +179,7 @@ export default function Edit({ attributes, setAttributes }) {
 
           {singleOpen && autoplay && (
             <ToolsPanelItem
-              label={__("Time per item", "shadcn-blocks")}
+              label={__("Time per item", "yaycommerce-blocks-for-shadcn-ui")}
               isShownByDefault
               hasValue={() => autoplayDelay !== 5000}
               onDeselect={() => setAttributes({ autoplayDelay: 5000 })}
@@ -187,7 +187,7 @@ export default function Edit({ attributes, setAttributes }) {
               <RangeControl
                 __next40pxDefaultSize
                 __nextHasNoMarginBottom
-                label={__("Time per item (seconds)", "shadcn-blocks")}
+                label={__("Time per item (seconds)", "yaycommerce-blocks-for-shadcn-ui")}
                 value={(autoplayDelay ?? 5000) / 1000}
                 min={1}
                 max={30}

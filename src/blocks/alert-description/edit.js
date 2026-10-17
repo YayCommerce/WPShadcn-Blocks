@@ -13,7 +13,7 @@ const TEMPLATE = [
     {
       placeholder: __(
         "Add alert description here...",
-        "shadcn-blocks"
+        "yaycommerce-blocks-for-shadcn-ui"
       ),
     },
   ],

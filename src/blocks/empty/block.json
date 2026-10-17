@@ -8,7 +8,7 @@
   "icon": "marker",
   "description": "An empty state placeholder with centered content.",
   "keywords": ["empty", "placeholder", "no results", "blank"],
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "attributes": {},
   "example": {
     "attributes": {},

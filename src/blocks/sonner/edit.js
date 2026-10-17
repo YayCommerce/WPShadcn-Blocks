@@ -31,7 +31,7 @@ export default function Edit({ attributes, setAttributes }) {
     <>
       <InspectorControls>
         <ToolsPanel
-          label={__("Toast", "shadcn-blocks")}
+          label={__("Toast", "yaycommerce-blocks-for-shadcn-ui")}
           resetAll={() =>
             setAttributes({
               toastType: "default",
@@ -41,7 +41,7 @@ export default function Edit({ attributes, setAttributes }) {
           }
         >
           <ToolsPanelItem
-            label={__("Type", "shadcn-blocks")}
+            label={__("Type", "yaycommerce-blocks-for-shadcn-ui")}
             isShownByDefault
             hasValue={() => toastType !== "default"}
             onDeselect={() => setAttributes({ toastType: "default" })}
@@ -50,7 +50,7 @@ export default function Edit({ attributes, setAttributes }) {
               __next40pxDefaultSize
               __nextHasNoMarginBottom
               isBlock
-              label={__("Type", "shadcn-blocks")}
+              label={__("Type", "yaycommerce-blocks-for-shadcn-ui")}
               value={toastType ?? "default"}
               onChange={(value) => setAttributes({ toastType: value })}
             >
@@ -65,7 +65,7 @@ export default function Edit({ attributes, setAttributes }) {
           </ToolsPanelItem>
 
           <ToolsPanelItem
-            label={__("Title", "shadcn-blocks")}
+            label={__("Title", "yaycommerce-blocks-for-shadcn-ui")}
             isShownByDefault
             hasValue={() => !!toastTitle}
             onDeselect={() => setAttributes({ toastTitle: "" })}
@@ -73,25 +73,25 @@ export default function Edit({ attributes, setAttributes }) {
             <TextControl
               __next40pxDefaultSize
               __nextHasNoMarginBottom
-              label={__("Title", "shadcn-blocks")}
+              label={__("Title", "yaycommerce-blocks-for-shadcn-ui")}
               value={toastTitle ?? ""}
               onChange={(value) => setAttributes({ toastTitle: value })}
-              placeholder={__("Event has been created", "shadcn-blocks")}
+              placeholder={__("Event has been created", "yaycommerce-blocks-for-shadcn-ui")}
             />
           </ToolsPanelItem>
 
           <ToolsPanelItem
-            label={__("Description", "shadcn-blocks")}
+            label={__("Description", "yaycommerce-blocks-for-shadcn-ui")}
             isShownByDefault
             hasValue={() => !!toastDescription}
             onDeselect={() => setAttributes({ toastDescription: "" })}
           >
             <TextareaControl
               __nextHasNoMarginBottom
-              label={__("Description", "shadcn-blocks")}
+              label={__("Description", "yaycommerce-blocks-for-shadcn-ui")}
               value={toastDescription ?? ""}
               onChange={(value) => setAttributes({ toastDescription: value })}
-              placeholder={__("Optional supporting text", "shadcn-blocks")}
+              placeholder={__("Optional supporting text", "yaycommerce-blocks-for-shadcn-ui")}
             />
           </ToolsPanelItem>
         </ToolsPanel>
@@ -102,7 +102,7 @@ export default function Edit({ attributes, setAttributes }) {
             tagName="span"
             value={buttonLabel || ""}
             onChange={(value) => setAttributes({ buttonLabel: value })}
-            placeholder={__("Show Toast", "shadcn-blocks")}
+            placeholder={__("Show Toast", "yaycommerce-blocks-for-shadcn-ui")}
             allowedFormats={[]}
           />
         </button>

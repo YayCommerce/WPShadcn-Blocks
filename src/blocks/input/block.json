@@ -6,7 +6,7 @@
   "title": "Input",
   "category": "shadcn",
   "description": "A labeled text, email, or phone field for forms.",
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "keywords": ["input", "field", "text", "email", "phone", "form"],
   "supports": {
     "html": false,

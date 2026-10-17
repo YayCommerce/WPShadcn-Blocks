@@ -13,9 +13,9 @@ const TEMPLATE = [
     {
       content: __(
         "You can control this sheet from outside components or trigger it programmatically based on user actions or application state.",
-        "shadcn-blocks"
+        "yaycommerce-blocks-for-shadcn-ui"
       ),
-      placeholder: __("Add sheet content here...", "shadcn-blocks"),
+      placeholder: __("Add sheet content here...", "yaycommerce-blocks-for-shadcn-ui"),
     },
   ],
 ];

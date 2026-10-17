@@ -67,7 +67,7 @@ if ( ! function_exists( 'block_shadcn_tabs_render' ) ) {
 			$label = isset( $tab_attributes['label'] ) ? (string) $tab_attributes['label'] : '';
 			if ( '' === trim( $label ) ) {
 				/* translators: %d: position of the tab within the tab list. */
-				$label = sprintf( __( 'Tab %d', 'shadcn-blocks' ), $index + 1 );
+				$label = sprintf( __( 'Tab %d', 'yaycommerce-blocks-for-shadcn-ui' ), $index + 1 );
 			}
 
 			$disabled = ! empty( $tab_attributes['disabled'] );

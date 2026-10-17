@@ -214,7 +214,7 @@ class OrderFeed {
 		$last  = trim( (string) $order->get_billing_last_name() );
 
 		if ( '' === $first ) {
-			return __( 'Someone', 'shadcn-blocks' );
+			return __( 'Someone', 'yaycommerce-blocks-for-shadcn-ui' );
 		}
 
 		if ( '' === $last ) {
@@ -225,7 +225,7 @@ class OrderFeed {
 		$initial = function_exists( 'mb_substr' ) ? mb_substr( $last, 0, 1 ) : substr( $last, 0, 1 );
 
 		/* translators: 1: first name, 2: last-name initial. */
-		return sprintf( __( '%1$s %2$s.', 'shadcn-blocks' ), $first, $initial );
+		return sprintf( __( '%1$s %2$s.', 'yaycommerce-blocks-for-shadcn-ui' ), $first, $initial );
 	}
 
 	/**
@@ -248,7 +248,7 @@ class OrderFeed {
 		}
 
 		/* translators: 1: city, 2: state or region code. */
-		return sprintf( __( '%1$s, %2$s', 'shadcn-blocks' ), $city, $state );
+		return sprintf( __( '%1$s, %2$s', 'yaycommerce-blocks-for-shadcn-ui' ), $city, $state );
 	}
 
 	/**
@@ -287,7 +287,7 @@ class OrderFeed {
 
 		return sprintf(
 			/* translators: 1: product name, 2: number of additional items. */
-			_n( '%1$s and %2$d more item', '%1$s and %2$d more items', $extra, 'shadcn-blocks' ),
+			_n( '%1$s and %2$d more item', '%1$s and %2$d more items', $extra, 'yaycommerce-blocks-for-shadcn-ui' ),
 			$name,
 			$extra
 		);

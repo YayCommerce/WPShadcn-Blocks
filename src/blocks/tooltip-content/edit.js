@@ -17,7 +17,7 @@ const TEMPLATE = [
     "core/paragraph",
     {
       "content": "This is a tooltip content",
-      placeholder: __("Add tooltip content here...", "shadcn-blocks"),
+      placeholder: __("Add tooltip content here...", "yaycommerce-blocks-for-shadcn-ui"),
     },
   ],
 ];

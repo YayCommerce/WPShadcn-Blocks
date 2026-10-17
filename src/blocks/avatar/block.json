@@ -7,7 +7,7 @@
   "category": "shadcn",
   "description": "A circular avatar image with fallback initials shown when no image is set or it fails to load.",
   "keywords": ["avatar", "profile", "image", "user"],
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "attributes": {
     "mediaId": {
       "type": "number",

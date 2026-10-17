@@ -12,8 +12,8 @@ const TEMPLATE = [
     "core/heading",
     {
       level: 3,
-      content: __("Controlled Drawer", "shadcn-blocks"),
-      placeholder: __("Drawer Title", "shadcn-blocks"),
+      content: __("Controlled Drawer", "yaycommerce-blocks-for-shadcn-ui"),
+      placeholder: __("Drawer Title", "yaycommerce-blocks-for-shadcn-ui"),
       style: {
         typography: {
           fontWeight: "600",
@@ -32,9 +32,9 @@ const TEMPLATE = [
     {
       content: __(
         "This drawer's open state is controlled externally.",
-        "shadcn-blocks"
+        "yaycommerce-blocks-for-shadcn-ui"
       ),
-      placeholder: __("Drawer description", "shadcn-blocks"),
+      placeholder: __("Drawer description", "yaycommerce-blocks-for-shadcn-ui"),
       style: {
         typography: {
           fontSize: "var(--wp--preset--font-size--sm)",

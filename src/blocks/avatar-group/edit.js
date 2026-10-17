@@ -53,14 +53,14 @@ export default function Edit(props) {
     <>
       <InspectorControls>
         <PanelBody
-          title={__("Avatar Group Settings", "shadcn-blocks")}
+          title={__("Avatar Group Settings", "yaycommerce-blocks-for-shadcn-ui")}
           initialOpen
         >
           <RangeControl
-            label={__("Max visible", "shadcn-blocks")}
+            label={__("Max visible", "yaycommerce-blocks-for-shadcn-ui")}
             help={__(
               'Avatars beyond this count collapse into a "+N" indicator on the frontend. The editor still shows all avatars for editing.',
-              "shadcn-blocks"
+              "yaycommerce-blocks-for-shadcn-ui"
             )}
             value={maxVisible}
             min={1}

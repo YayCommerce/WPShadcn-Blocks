@@ -86,7 +86,7 @@ export default function Edit({ attributes, setAttributes, context }) {
         </span>
       ) : null}
       <span className="wp-block-shadcn-pricing-price__amount">
-        {entry.amount || __("0", "shadcn-blocks")}
+        {entry.amount || __("0", "yaycommerce-blocks-for-shadcn-ui")}
       </span>
       {entry.period ? (
         <span className="wp-block-shadcn-pricing-price__period">
@@ -99,11 +99,11 @@ export default function Edit({ attributes, setAttributes, context }) {
   return (
     <>
       <InspectorControls>
-        <PanelBody title={__("Price", "shadcn-blocks")}>
+        <PanelBody title={__("Price", "yaycommerce-blocks-for-shadcn-ui")}>
           <TextControl
             __next40pxDefaultSize
             __nextHasNoMarginBottom
-            label={__("Currency", "shadcn-blocks")}
+            label={__("Currency", "yaycommerce-blocks-for-shadcn-ui")}
             value={currency || ""}
             onChange={(value) => setAttributes({ currency: value })}
           />
@@ -112,7 +112,7 @@ export default function Edit({ attributes, setAttributes, context }) {
             <p>
               {__(
                 "The Pricing block around this one has no billing intervals yet.",
-                "shadcn-blocks"
+                "yaycommerce-blocks-for-shadcn-ui"
               )}
             </p>
           )}
@@ -126,12 +126,12 @@ export default function Edit({ attributes, setAttributes, context }) {
                   __nextHasNoMarginBottom
                   label={sprintf(
                     /* translators: %s: billing interval label, such as Monthly. */
-                    __("%s amount", "shadcn-blocks"),
+                    __("%s amount", "yaycommerce-blocks-for-shadcn-ui"),
                     interval.label || interval.key
                   )}
                   help={__(
                     "Leave empty when this plan is not sold on this interval.",
-                    "shadcn-blocks"
+                    "yaycommerce-blocks-for-shadcn-ui"
                   )}
                   value={entry.amount || ""}
                   onChange={(value) =>
@@ -143,7 +143,7 @@ export default function Edit({ attributes, setAttributes, context }) {
                   __nextHasNoMarginBottom
                   label={sprintf(
                     /* translators: %s: billing interval label, such as Monthly. */
-                    __("%s caption", "shadcn-blocks"),
+                    __("%s caption", "yaycommerce-blocks-for-shadcn-ui"),
                     interval.label || interval.key
                   )}
                   value={entry.period || ""}
@@ -156,21 +156,21 @@ export default function Edit({ attributes, setAttributes, context }) {
           })}
         </PanelBody>
 
-        <PanelBody title={__("Layout", "shadcn-blocks")} initialOpen={false}>
+        <PanelBody title={__("Layout", "yaycommerce-blocks-for-shadcn-ui")} initialOpen={false}>
           <ToggleGroupControl
             __next40pxDefaultSize
             __nextHasNoMarginBottom
             isBlock
-            label={__("Currency", "shadcn-blocks")}
+            label={__("Currency", "yaycommerce-blocks-for-shadcn-ui")}
             value={currencyPlacement || "inline"}
             onChange={(value) => setAttributes({ currencyPlacement: value })}
           >
             <ToggleGroupControlOption
-              label={__("Inline", "shadcn-blocks")}
+              label={__("Inline", "yaycommerce-blocks-for-shadcn-ui")}
               value="inline"
             />
             <ToggleGroupControlOption
-              label={__("Raised", "shadcn-blocks")}
+              label={__("Raised", "yaycommerce-blocks-for-shadcn-ui")}
               value="superscript"
             />
           </ToggleGroupControl>
@@ -179,16 +179,16 @@ export default function Edit({ attributes, setAttributes, context }) {
             __next40pxDefaultSize
             __nextHasNoMarginBottom
             isBlock
-            label={__("Caption", "shadcn-blocks")}
+            label={__("Caption", "yaycommerce-blocks-for-shadcn-ui")}
             value={periodPlacement || "inline"}
             onChange={(value) => setAttributes({ periodPlacement: value })}
           >
             <ToggleGroupControlOption
-              label={__("Beside", "shadcn-blocks")}
+              label={__("Beside", "yaycommerce-blocks-for-shadcn-ui")}
               value="inline"
             />
             <ToggleGroupControlOption
-              label={__("Below", "shadcn-blocks")}
+              label={__("Below", "yaycommerce-blocks-for-shadcn-ui")}
               value="below"
             />
           </ToggleGroupControl>

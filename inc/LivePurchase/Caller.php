@@ -5,7 +5,7 @@
  * The block itself registers through the standard build/blocks glob (gated on
  * WooCommerce in Plugin::register_blocks), so this file wires only the backend
  * that has no other home. Phase 2 adds the order feed, its REST route and the
- * rate limiter here; Phase 1 exists so the require in shadcn-blocks.php has a
+ * rate limiter here; Phase 1 exists so the require in yaycommerce-blocks-for-shadcn-ui.php has a
  * target and the module boundary is set from the start.
  *
  * Loaded unconditionally. Nothing in here runs a WooCommerce call at include

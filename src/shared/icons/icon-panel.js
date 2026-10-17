@@ -28,7 +28,7 @@ export function IconPanelBody( {
 
 	return (
 		<PanelBody
-			title={ __( 'Icon', 'shadcn-blocks' ) }
+			title={ __( 'Icon', 'yaycommerce-blocks-for-shadcn-ui' ) }
 			initialOpen={ initialOpen }
 		>
 			<IconPicker

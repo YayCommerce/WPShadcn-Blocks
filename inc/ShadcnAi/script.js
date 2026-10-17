@@ -118,12 +118,12 @@
     if (err && err.code === "fetch_error") {
       return __(
         "The connection dropped while generating. Check your network and try again.",
-        "shadcn-blocks"
+        "yaycommerce-blocks-for-shadcn-ui"
       );
     }
     return __(
       "The AI service did not respond. Please try again.",
-      "shadcn-blocks"
+      "yaycommerce-blocks-for-shadcn-ui"
     );
   }
 
@@ -196,7 +196,7 @@
           setStalled(quiet > STALL_WARN);
           if (quiet > limit) {
             streamError = new Error(
-              __("The AI service stopped responding partway through.", "shadcn-blocks")
+              __("The AI service stopped responding partway through.", "yaycommerce-blocks-for-shadcn-ui")
             );
             controller.abort();
           }
@@ -223,7 +223,7 @@
                 stopWatchdog();
                 if (!json || !json.markup) {
                   throw new Error(
-                    __("No valid layout could be generated from that prompt.", "shadcn-blocks")
+                    __("No valid layout could be generated from that prompt.", "yaycommerce-blocks-for-shadcn-ui")
                   );
                 }
                 finalResult = { markup: json.markup, warnings: json.warnings || [] };
@@ -286,7 +286,7 @@
               }
               if (!finalResult || !finalResult.markup) {
                 throw new Error(
-                  __("The AI service stopped responding partway through.", "shadcn-blocks")
+                  __("The AI service stopped responding partway through.", "yaycommerce-blocks-for-shadcn-ui")
                 );
               }
               setResult(finalResult);
@@ -378,17 +378,17 @@
 
     var liveLabel;
     if (stalled) {
-      liveLabel = __("Taking longer than usual — still working…", "shadcn-blocks");
+      liveLabel = __("Taking longer than usual — still working…", "yaycommerce-blocks-for-shadcn-ui");
     } else if (stage === "building") {
-      liveLabel = __("Building the sections…", "shadcn-blocks");
+      liveLabel = __("Building the sections…", "yaycommerce-blocks-for-shadcn-ui");
     } else if (entries.length > 0) {
       liveLabel = sprintf(
         /* translators: %d: position of the section being planned. */
-        __("Planning section %d…", "shadcn-blocks"),
+        __("Planning section %d…", "yaycommerce-blocks-for-shadcn-ui"),
         entries.length + 1
       );
     } else {
-      liveLabel = __("Reading your prompt and choosing sections…", "shadcn-blocks");
+      liveLabel = __("Reading your prompt and choosing sections…", "yaycommerce-blocks-for-shadcn-ui");
     }
 
     return el(
@@ -444,11 +444,11 @@
         stalled
           ? __(
               "A long pause usually means the AI service is busy. Cancelling keeps your prompt so you can try again.",
-              "shadcn-blocks"
+              "yaycommerce-blocks-for-shadcn-ui"
             )
           : __(
               "Each section is named as it is planned — you can leave this open.",
-              "shadcn-blocks"
+              "yaycommerce-blocks-for-shadcn-ui"
             )
       )
     );
@@ -481,7 +481,7 @@
         wp.data
           .dispatch("core/notices")
           .createSuccessNotice(
-            __("Blocks copied — paste them into any page or post.", "shadcn-blocks"),
+            __("Blocks copied — paste them into any page or post.", "yaycommerce-blocks-for-shadcn-ui"),
             { type: "snackbar" }
           );
       }
@@ -518,7 +518,7 @@
       wp.data
         .dispatch("core/notices")
         .createSuccessNotice(
-          __("AI layout added to the page — one undo removes it all.", "shadcn-blocks"),
+          __("AI layout added to the page — one undo removes it all.", "yaycommerce-blocks-for-shadcn-ui"),
           { type: "snackbar" }
         );
       onClose();
@@ -527,7 +527,7 @@
     return el(
       Modal,
       {
-        title: __("Shadcn AI", "shadcn-blocks"),
+        title: __("Shadcn AI", "yaycommerce-blocks-for-shadcn-ui"),
         onRequestClose: close,
         className: "shadcn-ai-modal is-" + status,
         // A prompt mid-typing and a finished preview are both too expensive
@@ -539,10 +539,10 @@
             Fragment,
             null,
             el(TextareaControl, {
-              label: __("Describe the page you want", "shadcn-blocks"),
+              label: __("Describe the page you want", "yaycommerce-blocks-for-shadcn-ui"),
               help: __(
                 "e.g. “landing page for a coffee roastery: hero, three features, testimonials, and a call to action”",
-                "shadcn-blocks"
+                "yaycommerce-blocks-for-shadcn-ui"
               ),
               value: prompt,
               onChange: setPrompt,
@@ -565,13 +565,13 @@
                 Button,
                 { variant: "primary", disabled: !canSubmit, onClick: submit },
                 status === "error"
-                  ? __("Try again", "shadcn-blocks")
-                  : __("Generate layout", "shadcn-blocks")
+                  ? __("Try again", "yaycommerce-blocks-for-shadcn-ui")
+                  : __("Generate layout", "yaycommerce-blocks-for-shadcn-ui")
               ),
               el(
                 Button,
                 { variant: "tertiary", onClick: close },
-                __("Cancel", "shadcn-blocks")
+                __("Cancel", "yaycommerce-blocks-for-shadcn-ui")
               )
             )
           )
@@ -591,7 +591,7 @@
               el(
                 Button,
                 { variant: "secondary", onClick: hook.cancel },
-                __("Cancel generation", "shadcn-blocks")
+                __("Cancel generation", "yaycommerce-blocks-for-shadcn-ui")
               )
             )
           )
@@ -617,7 +617,7 @@
                     null,
                     __(
                       "Preview isn't available in this WordPress version, but you can still insert the layout below.",
-                      "shadcn-blocks"
+                      "yaycommerce-blocks-for-shadcn-ui"
                     )
                   )
             ),
@@ -627,17 +627,17 @@
               el(
                 Button,
                 { variant: "primary", disabled: !blocks.length, onClick: insert },
-                __("Insert into page", "shadcn-blocks")
+                __("Insert into page", "yaycommerce-blocks-for-shadcn-ui")
               ),
               el(
                 Button,
                 { variant: "tertiary", disabled: !result.markup, ref: copyRef },
-                __("Copy blocks", "shadcn-blocks")
+                __("Copy blocks", "yaycommerce-blocks-for-shadcn-ui")
               ),
               el(
                 Button,
                 { variant: "tertiary", onClick: hook.reset },
-                __("Start over", "shadcn-blocks")
+                __("Start over", "yaycommerce-blocks-for-shadcn-ui")
               )
             )
           )
@@ -656,14 +656,14 @@
       el(
         PluginSidebarMoreMenuItem,
         { target: PLUGIN_NAME, icon: SPARKLE_ICON },
-        __("Shadcn AI", "shadcn-blocks")
+        __("Shadcn AI", "yaycommerce-blocks-for-shadcn-ui")
       ),
       el(
         PluginSidebar,
         {
           name: PLUGIN_NAME,
           icon: SPARKLE_ICON,
-          title: __("Shadcn AI", "shadcn-blocks"),
+          title: __("Shadcn AI", "yaycommerce-blocks-for-shadcn-ui"),
         },
         el(
           "div",
@@ -673,7 +673,7 @@
             { className: "shadcn-ai-launcher__description" },
             __(
               "Describe a page and let AI compose it from Shadcn patterns — preview first, then insert.",
-              "shadcn-blocks"
+              "yaycommerce-blocks-for-shadcn-ui"
             )
           ),
           el(
@@ -685,7 +685,7 @@
                 setOpen(true);
               },
             },
-            __("Open Shadcn AI", "shadcn-blocks")
+            __("Open Shadcn AI", "yaycommerce-blocks-for-shadcn-ui")
           )
         ),
         open

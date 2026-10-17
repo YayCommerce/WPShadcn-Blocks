@@ -52,35 +52,35 @@ export default function Edit({ attributes, setAttributes }) {
   return (
     <>
       <InspectorControls>
-        <PanelBody title={__("Alert Settings", "shadcn-blocks")}>
+        <PanelBody title={__("Alert Settings", "yaycommerce-blocks-for-shadcn-ui")}>
           <SelectControl
-            label={__("Variant", "shadcn-blocks")}
+            label={__("Variant", "yaycommerce-blocks-for-shadcn-ui")}
             value={variant}
             options={[
               {
-                label: __("Default", "shadcn-blocks"),
+                label: __("Default", "yaycommerce-blocks-for-shadcn-ui"),
                 value: "default",
               },
               {
-                label: __("Destructive", "shadcn-blocks"),
+                label: __("Destructive", "yaycommerce-blocks-for-shadcn-ui"),
                 value: "destructive",
               },
               {
-                label: __("Warning", "shadcn-blocks"),
+                label: __("Warning", "yaycommerce-blocks-for-shadcn-ui"),
                 value: "warning",
               },
               {
-                label: __("Success", "shadcn-blocks"),
+                label: __("Success", "yaycommerce-blocks-for-shadcn-ui"),
                 value: "success",
               },
             ]}
             onChange={(value) => setAttributes({ variant: value })}
           />
           <ToggleControl
-            label={__("Dismissible", "shadcn-blocks")}
+            label={__("Dismissible", "yaycommerce-blocks-for-shadcn-ui")}
             checked={dismissible}
             onChange={(value) => setAttributes({ dismissible: value })}
-            help={__("Allow users to dismiss the alert", "shadcn-blocks")}
+            help={__("Allow users to dismiss the alert", "yaycommerce-blocks-for-shadcn-ui")}
           />
         </PanelBody>
       </InspectorControls>
@@ -94,7 +94,7 @@ export default function Edit({ attributes, setAttributes }) {
           <button
             type="button"
             className="alert-dismiss"
-            aria-label={__("Dismiss alert", "shadcn-blocks")}
+            aria-label={__("Dismiss alert", "yaycommerce-blocks-for-shadcn-ui")}
             disabled
             style={{ pointerEvents: "none" }}
           >

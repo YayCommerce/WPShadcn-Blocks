@@ -8,7 +8,7 @@
   "parent": ["shadcn/tooltip"],
   "icon": "text",
   "description": "Tooltip content section for additional information.",
-  "textdomain": "shadcn-blocks",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
   "attributes": {},
   "example": {
     "attributes": {},
