@@ -1,7 +1,7 @@
 === YayCommerce Blocks for Shadcn UI ===
 Contributors: yaycommerce
 Tags: gutenberg, blocks, shadcn
-Requires at least: 6.5
+Requires at least: 6.6
 Tested up to: 7.1
 Requires PHP: 7.4
 Stable tag: 1.0.0

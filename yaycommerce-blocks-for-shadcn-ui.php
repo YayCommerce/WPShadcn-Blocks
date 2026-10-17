@@ -4,7 +4,7 @@
  * Plugin URI: https://wpshadcn.com/
  * Description: Gutenberg blocks and 473 section patterns for the Shadcn theme, with a Lucide icon picker.
  * Version: 1.0.0
- * Requires at least: 6.5
+ * Requires at least: 6.6
  * Requires PHP: 7.4
  * Author: YayCommerce
  * Author URI: https://wpshadcn.com/

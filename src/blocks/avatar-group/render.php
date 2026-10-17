@@ -14,53 +14,53 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$max_visible = isset( $attributes['maxVisible'] ) ? (int) $attributes['maxVisible'] : 5;
-$max_visible = max( 1, $max_visible );
+$shadcn_max_visible = isset( $attributes['maxVisible'] ) ? (int) $attributes['maxVisible'] : 5;
+$shadcn_max_visible = max( 1, $shadcn_max_visible );
 
-$parsed_inner_blocks = ! empty( $block->parsed_block['innerBlocks'] )
+$shadcn_parsed_inner_blocks = ! empty( $block->parsed_block['innerBlocks'] )
 	? $block->parsed_block['innerBlocks']
 	: array();
 
-$avatar_blocks = array_values(
+$shadcn_avatar_blocks = array_values(
 	array_filter(
-		$parsed_inner_blocks,
+		$shadcn_parsed_inner_blocks,
 		function ( $inner_block ) {
 			return isset( $inner_block['blockName'] ) && 'shadcn/avatar' === $inner_block['blockName'];
 		}
 	)
 );
 
-if ( empty( $avatar_blocks ) ) {
+if ( empty( $shadcn_avatar_blocks ) ) {
 	return;
 }
 
-$visible_blocks = array_slice( $avatar_blocks, 0, $max_visible );
-$remainder      = count( $avatar_blocks ) - count( $visible_blocks );
+$shadcn_visible_blocks = array_slice( $shadcn_avatar_blocks, 0, $shadcn_max_visible );
+$shadcn_remainder      = count( $shadcn_avatar_blocks ) - count( $shadcn_visible_blocks );
 
-$inner_content = '';
+$shadcn_inner_content = '';
 
-foreach ( $visible_blocks as $parsed_avatar_block ) {
-	$inner_content .= render_block( $parsed_avatar_block );
+foreach ( $shadcn_visible_blocks as $shadcn_parsed_avatar_block ) {
+	$shadcn_inner_content .= render_block( $shadcn_parsed_avatar_block );
 }
 
-if ( $remainder > 0 ) {
-	$last_visible  = end( $visible_blocks );
-	$overflow_size = isset( $last_visible['attrs']['size'] ) ? $last_visible['attrs']['size'] : 'md';
+if ( $shadcn_remainder > 0 ) {
+	$shadcn_last_visible  = end( $shadcn_visible_blocks );
+	$shadcn_overflow_size = isset( $shadcn_last_visible['attrs']['size'] ) ? $shadcn_last_visible['attrs']['size'] : 'md';
 	// Wrapped in the same .wp-block-shadcn-avatar div real avatar children
 	// get from get_block_wrapper_attributes(), so the overflow indicator is
 	// a flex item CSS can target identically (see avatar-group/style.scss).
-	$inner_content .= sprintf(
+	$shadcn_inner_content .= sprintf(
 		'<div class="wp-block-shadcn-avatar">%s</div>',
-		\ShadcnBlocks\Avatar::get_instance()->render_fallback_circle( '+' . $remainder, $overflow_size )
+		\ShadcnBlocks\Avatar::get_instance()->render_fallback_circle( '+' . $shadcn_remainder, $shadcn_overflow_size )
 	);
 }
 
-$wrapper_attributes = get_block_wrapper_attributes(
+$shadcn_wrapper_attributes = get_block_wrapper_attributes(
 	array(
 		'class' => 'wp-block-shadcn-avatar-group shadcn-avatar-group',
 	)
 );
 ?>
-<div <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-	<?php echo $inner_content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+<div <?php echo $shadcn_wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+	<?php echo $shadcn_inner_content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 </div>

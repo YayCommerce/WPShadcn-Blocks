@@ -15,11 +15,11 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$label       = isset( $attributes['label'] ) ? trim( (string) $attributes['label'] ) : '';
+$shadcn_label       = isset( $attributes['label'] ) ? trim( (string) $attributes['label'] ) : '';
 $type        = isset( $attributes['type'] ) ? (string) $attributes['type'] : 'text';
-$placeholder = isset( $attributes['placeholder'] ) ? (string) $attributes['placeholder'] : '';
-$required    = ! empty( $attributes['required'] );
-$field_name  = isset( $attributes['fieldName'] ) ? trim( (string) $attributes['fieldName'] ) : '';
+$shadcn_placeholder = isset( $attributes['placeholder'] ) ? (string) $attributes['placeholder'] : '';
+$shadcn_required    = ! empty( $attributes['required'] );
+$shadcn_field_name  = isset( $attributes['fieldName'] ) ? trim( (string) $attributes['fieldName'] ) : '';
 
 if ( ! in_array( $type, array( 'text', 'email', 'tel' ), true ) ) {
 	$type = 'text';
@@ -28,61 +28,61 @@ if ( ! in_array( $type, array( 'text', 'email', 'tel' ), true ) ) {
 // The POST key: explicit fieldName wins; otherwise derived from the label so
 // authors never have to think about it. A field with neither renders unnamed
 // and is skipped by the form serializer rather than posting an empty key.
-$plain_label = wp_strip_all_tags( $label );
-if ( '' === $field_name ) {
-	$field_name = sanitize_title( $plain_label );
+$shadcn_plain_label = wp_strip_all_tags( $shadcn_label );
+if ( '' === $shadcn_field_name ) {
+	$shadcn_field_name = sanitize_title( $shadcn_plain_label );
 }
 
-$field_id = wp_unique_id( 'shadcn-field-' );
+$shadcn_field_id = wp_unique_id( 'shadcn-field-' );
 
-$wrapper_attributes = get_block_wrapper_attributes(
-	array( 'class' => 'wp-block-shadcn-input' . ( $required ? ' is-required' : '' ) )
+$shadcn_wrapper_attributes = get_block_wrapper_attributes(
+	array( 'class' => 'wp-block-shadcn-input' . ( $shadcn_required ? ' is-required' : '' ) )
 );
 
-$control_attributes = array(
+$shadcn_control_attributes = array(
 	'type'  => $type,
-	'id'    => $field_id,
+	'id'    => $shadcn_field_id,
 	'class' => 'wp-block-shadcn-input__control',
 );
-if ( '' !== $field_name ) {
-	$control_attributes['name'] = $field_name;
+if ( '' !== $shadcn_field_name ) {
+	$shadcn_control_attributes['name'] = $shadcn_field_name;
 }
-if ( '' !== $placeholder ) {
-	$control_attributes['placeholder'] = $placeholder;
+if ( '' !== $shadcn_placeholder ) {
+	$shadcn_control_attributes['placeholder'] = $shadcn_placeholder;
 }
 // A label-less field (e.g. a lone newsletter email box) still needs an
 // accessible name; the placeholder is the only text available for it.
-if ( '' === $plain_label && '' !== $placeholder ) {
-	$control_attributes['aria-label'] = $placeholder;
+if ( '' === $shadcn_plain_label && '' !== $shadcn_placeholder ) {
+	$shadcn_control_attributes['aria-label'] = $shadcn_placeholder;
 }
-if ( $required ) {
-	$control_attributes['required']      = 'required';
-	$control_attributes['aria-required'] = 'true';
+if ( $shadcn_required ) {
+	$shadcn_control_attributes['required']      = 'required';
+	$shadcn_control_attributes['aria-required'] = 'true';
 }
 // The label text is what the mail body prints for this field (see the form
 // submit serializer); carried as data so nested markup never confuses it.
-if ( '' !== $plain_label ) {
-	$control_attributes['data-field-label'] = $plain_label;
+if ( '' !== $shadcn_plain_label ) {
+	$shadcn_control_attributes['data-field-label'] = $shadcn_plain_label;
 }
 
-$control_html = '<input';
-foreach ( $control_attributes as $attr_name => $attr_value ) {
-	$control_html .= sprintf( ' %s="%s"', $attr_name, esc_attr( $attr_value ) );
+$shadcn_control_html = '<input';
+foreach ( $shadcn_control_attributes as $shadcn_attr_name => $shadcn_attr_value ) {
+	$shadcn_control_html .= sprintf( ' %s="%s"', $shadcn_attr_name, esc_attr( $shadcn_attr_value ) );
 }
-$control_html .= '/>';
+$shadcn_control_html .= '/>';
 
-$label_html = '';
-if ( '' !== $plain_label ) {
-	$label_html = sprintf(
+$shadcn_label_html = '';
+if ( '' !== $shadcn_plain_label ) {
+	$shadcn_label_html = sprintf(
 		'<label class="wp-block-shadcn-input__label" for="%s">%s</label>',
-		esc_attr( $field_id ),
-		wp_kses_post( $label )
+		esc_attr( $shadcn_field_id ),
+		wp_kses_post( $shadcn_label )
 	);
 }
 
 printf(
 	'<div %1$s>%2$s%3$s</div>',
-	$wrapper_attributes, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-	$label_html, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-	$control_html // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	$shadcn_wrapper_attributes, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	$shadcn_label_html, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	$shadcn_control_html // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 );

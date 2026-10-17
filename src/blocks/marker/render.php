@@ -11,53 +11,53 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$text = isset( $attributes['content'] ) ? $attributes['content'] : '';
+$shadcn_text = isset( $attributes['content'] ) ? $attributes['content'] : '';
 
 // Nothing to show without a label.
-if ( '' === trim( wp_strip_all_tags( $text ) ) ) {
+if ( '' === trim( wp_strip_all_tags( $shadcn_text ) ) ) {
 	return;
 }
 
-$variant     = isset( $attributes['variant'] ) && '' !== $attributes['variant'] ? $attributes['variant'] : 'default';
-$shimmer     = ! empty( $attributes['shimmer'] );
-$url         = isset( $attributes['url'] ) ? $attributes['url'] : '';
-$link_target = isset( $attributes['linkTarget'] ) ? $attributes['linkTarget'] : '';
-$rel         = isset( $attributes['rel'] ) ? $attributes['rel'] : '';
+$shadcn_variant     = isset( $attributes['variant'] ) && '' !== $attributes['variant'] ? $attributes['variant'] : 'default';
+$shadcn_shimmer     = ! empty( $attributes['shimmer'] );
+$shadcn_url         = isset( $attributes['url'] ) ? $attributes['url'] : '';
+$shadcn_link_target = isset( $attributes['linkTarget'] ) ? $attributes['linkTarget'] : '';
+$shadcn_rel         = isset( $attributes['rel'] ) ? $attributes['rel'] : '';
 
-$is_link = '' !== $url;
-$tag     = $is_link ? 'a' : 'div';
+$shadcn_is_link = '' !== $shadcn_url;
+$tag     = $shadcn_is_link ? 'a' : 'div';
 
-$wrapper_classes = array(
+$shadcn_wrapper_classes = array(
 	'wp-block-shadcn-marker',
 	'marker',
-	'marker-' . $variant,
+	'marker-' . $shadcn_variant,
 );
 
-if ( $shimmer ) {
-	$wrapper_classes[] = 'marker-shimmer';
+if ( $shadcn_shimmer ) {
+	$shadcn_wrapper_classes[] = 'marker-shimmer';
 }
 
-$extra_attributes = array(
-	'class' => implode( ' ', array_map( 'esc_attr', $wrapper_classes ) ),
+$shadcn_extra_attributes = array(
+	'class' => implode( ' ', array_map( 'esc_attr', $shadcn_wrapper_classes ) ),
 );
 
-if ( $is_link ) {
+if ( $shadcn_is_link ) {
 	// get_block_wrapper_attributes() runs esc_attr() on each value; href still
 	// needs esc_url() to strip unsafe protocols.
-	$extra_attributes['href'] = esc_url( $url );
-	if ( '' !== $link_target ) {
-		$extra_attributes['target'] = $link_target;
+	$shadcn_extra_attributes['href'] = esc_url( $shadcn_url );
+	if ( '' !== $shadcn_link_target ) {
+		$shadcn_extra_attributes['target'] = $shadcn_link_target;
 	}
-	if ( '' !== $rel ) {
-		$extra_attributes['rel'] = $rel;
+	if ( '' !== $shadcn_rel ) {
+		$shadcn_extra_attributes['rel'] = $shadcn_rel;
 	}
 }
 
-$wrapper_attributes = get_block_wrapper_attributes( $extra_attributes );
+$shadcn_wrapper_attributes = get_block_wrapper_attributes( $shadcn_extra_attributes );
 
 printf(
 	'<%1$s %2$s><span class="marker-content">%3$s</span></%1$s>',
 	tag_escape( $tag ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-	$wrapper_attributes, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-	wp_kses_post( $text )
+	$shadcn_wrapper_attributes, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	wp_kses_post( $shadcn_text )
 );

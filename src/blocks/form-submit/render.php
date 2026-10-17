@@ -16,39 +16,39 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$label = isset( $attributes['label'] ) ? trim( (string) $attributes['label'] ) : '';
+$shadcn_label = isset( $attributes['label'] ) ? trim( (string) $attributes['label'] ) : '';
 
 // Width mirrors core/button: a percentage of the form's width from a fixed
 // menu (25/50/75/100). Unset, the form's grid stretches the button full
 // width — unless an alignment is chosen, which switches it to hug the label.
-$width = isset( $attributes['width'] ) ? (int) $attributes['width'] : 0;
-if ( ! in_array( $width, array( 25, 50, 75, 100 ), true ) ) {
-	$width = 0;
+$shadcn_width = isset( $attributes['width'] ) ? (int) $attributes['width'] : 0;
+if ( ! in_array( $shadcn_width, array( 25, 50, 75, 100 ), true ) ) {
+	$shadcn_width = 0;
 }
 
 // Alignment positions the button inside the form's grid track
 // (justify-self via the is-align-* classes in style.scss).
-$alignment = isset( $attributes['alignment'] ) ? (string) $attributes['alignment'] : '';
-if ( ! in_array( $alignment, array( 'left', 'center', 'right' ), true ) ) {
-	$alignment = '';
+$shadcn_alignment = isset( $attributes['alignment'] ) ? (string) $attributes['alignment'] : '';
+if ( ! in_array( $shadcn_alignment, array( 'left', 'center', 'right' ), true ) ) {
+	$shadcn_alignment = '';
 }
 
-if ( '' === wp_strip_all_tags( $label ) ) {
-	$label = __( 'Submit', 'yaycommerce-blocks-for-shadcn-ui' );
+if ( '' === wp_strip_all_tags( $shadcn_label ) ) {
+	$shadcn_label = __( 'Submit', 'yaycommerce-blocks-for-shadcn-ui' );
 }
 
-$button_attributes = array(
-	'class' => 'wp-block-shadcn-form-submit wp-element-button' . ( '' !== $alignment ? ' is-align-' . $alignment : '' ),
+$shadcn_button_attributes = array(
+	'class' => 'wp-block-shadcn-form-submit wp-element-button' . ( '' !== $shadcn_alignment ? ' is-align-' . $shadcn_alignment : '' ),
 	'type'  => 'submit',
 );
-if ( $width > 0 ) {
-	$button_attributes['style'] = 'width:' . $width . '%';
+if ( $shadcn_width > 0 ) {
+	$shadcn_button_attributes['style'] = 'width:' . $shadcn_width . '%';
 }
 
-$wrapper_attributes = get_block_wrapper_attributes( $button_attributes );
+$shadcn_wrapper_attributes = get_block_wrapper_attributes( $shadcn_button_attributes );
 
 printf(
 	'<button %1$s><span class="wp-block-shadcn-form-submit__label">%2$s</span><span class="wp-block-shadcn-form-submit__spinner" aria-hidden="true"></span></button>',
-	$wrapper_attributes, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-	wp_kses_post( $label )
+	$shadcn_wrapper_attributes, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	wp_kses_post( $shadcn_label )
 );

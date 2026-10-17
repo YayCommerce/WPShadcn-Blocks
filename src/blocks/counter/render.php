@@ -14,35 +14,35 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$start_value = isset( $attributes['startValue'] ) ? (float) $attributes['startValue'] : 0;
-$end_value   = isset( $attributes['endValue'] ) ? (float) $attributes['endValue'] : 100;
-$duration    = isset( $attributes['duration'] ) ? max( 0, (int) $attributes['duration'] ) : 2000;
-$decimals    = isset( $attributes['decimals'] ) ? min( 4, max( 0, (int) $attributes['decimals'] ) ) : 0;
-$separator   = ! empty( $attributes['separator'] );
-$suffix      = isset( $attributes['suffix'] ) ? $attributes['suffix'] : '';
+$shadcn_start_value = isset( $attributes['startValue'] ) ? (float) $attributes['startValue'] : 0;
+$shadcn_end_value   = isset( $attributes['endValue'] ) ? (float) $attributes['endValue'] : 100;
+$shadcn_duration    = isset( $attributes['duration'] ) ? max( 0, (int) $attributes['duration'] ) : 2000;
+$shadcn_decimals    = isset( $attributes['decimals'] ) ? min( 4, max( 0, (int) $attributes['decimals'] ) ) : 0;
+$shadcn_separator   = ! empty( $attributes['separator'] );
+$shadcn_suffix      = isset( $attributes['suffix'] ) ? $attributes['suffix'] : '';
 
-$formatted = number_format( $end_value, $decimals, '.', $separator ? ',' : '' );
+$shadcn_formatted = number_format( $shadcn_end_value, $shadcn_decimals, '.', $shadcn_separator ? ',' : '' );
 
-$wrapper_attributes = get_block_wrapper_attributes(
+$shadcn_wrapper_attributes = get_block_wrapper_attributes(
 	array(
 		'class'          => 'wp-block-shadcn-counter',
-		'data-start'     => (string) $start_value,
-		'data-end'       => (string) $end_value,
-		'data-duration'  => (string) $duration,
-		'data-decimals'  => (string) $decimals,
-		'data-separator' => $separator ? '1' : '0',
+		'data-start'     => (string) $shadcn_start_value,
+		'data-end'       => (string) $shadcn_end_value,
+		'data-duration'  => (string) $shadcn_duration,
+		'data-decimals'  => (string) $shadcn_decimals,
+		'data-separator' => $shadcn_separator ? '1' : '0',
 	)
 );
 
 // The number lives in its own span so view.js can rewrite it without touching
 // the suffix.
-$suffix_html = '' !== $suffix
-	? sprintf( '<span class="counter-suffix">%s</span>', esc_html( $suffix ) )
+$shadcn_suffix_html = '' !== $shadcn_suffix
+	? sprintf( '<span class="counter-suffix">%s</span>', esc_html( $shadcn_suffix ) )
 	: '';
 
 printf(
 	'<div %1$s><span class="counter-value">%2$s</span>%3$s</div>',
-	$wrapper_attributes, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-	esc_html( $formatted ),
-	$suffix_html // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	$shadcn_wrapper_attributes, // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+	esc_html( $shadcn_formatted ),
+	$shadcn_suffix_html // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 );

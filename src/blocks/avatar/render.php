@@ -11,31 +11,31 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$media_url = isset( $attributes['mediaUrl'] ) ? $attributes['mediaUrl'] : '';
-$media_alt = isset( $attributes['mediaAlt'] ) ? $attributes['mediaAlt'] : '';
-$size      = isset( $attributes['size'] ) ? $attributes['size'] : 'md';
-$fallback  = isset( $attributes['fallback'] ) ? $attributes['fallback'] : '';
+$shadcn_media_url = isset( $attributes['mediaUrl'] ) ? $attributes['mediaUrl'] : '';
+$shadcn_media_alt = isset( $attributes['mediaAlt'] ) ? $attributes['mediaAlt'] : '';
+$shadcn_size      = isset( $attributes['size'] ) ? $attributes['size'] : 'md';
+$shadcn_fallback  = isset( $attributes['fallback'] ) ? $attributes['fallback'] : '';
 
-$size = in_array( $size, array( 'sm', 'md', 'lg' ), true ) ? $size : 'md';
+$shadcn_size = in_array( $shadcn_size, array( 'sm', 'md', 'lg' ), true ) ? $shadcn_size : 'md';
 
-$wrapper_attributes = get_block_wrapper_attributes(
+$shadcn_wrapper_attributes = get_block_wrapper_attributes(
 	array(
 		'class' => 'wp-block-shadcn-avatar',
 	)
 );
 ?>
-<div <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-	<?php if ( empty( $media_url ) ) : ?>
-		<?php echo \ShadcnBlocks\Avatar::get_instance()->render_fallback_circle( $fallback, $size ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+<div <?php echo $shadcn_wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+	<?php if ( empty( $shadcn_media_url ) ) : ?>
+		<?php echo \ShadcnBlocks\Avatar::get_instance()->render_fallback_circle( $shadcn_fallback, $shadcn_size ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	<?php else : ?>
-		<span class="shadcn-avatar shadcn-avatar--<?php echo esc_attr( $size ); ?>">
+		<span class="shadcn-avatar shadcn-avatar--<?php echo esc_attr( $shadcn_size ); ?>">
 			<img
-				src="<?php echo esc_url( $media_url ); ?>"
-				alt="<?php echo esc_attr( $media_alt ); ?>"
+				src="<?php echo esc_url( $shadcn_media_url ); ?>"
+				alt="<?php echo esc_attr( $shadcn_media_alt ); ?>"
 				class="shadcn-avatar__image"
 				onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
 			/>
-			<span class="shadcn-avatar__fallback" style="display:none"><?php echo esc_html( $fallback ); ?></span>
+			<span class="shadcn-avatar__fallback" style="display:none"><?php echo esc_html( $shadcn_fallback ); ?></span>
 		</span>
 	<?php endif; ?>
 </div>

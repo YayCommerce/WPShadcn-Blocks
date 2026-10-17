@@ -25,26 +25,26 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$label = isset( $attributes['label'] ) ? trim( (string) $attributes['label'] ) : '';
+$shadcn_label = isset( $attributes['label'] ) ? trim( (string) $attributes['label'] ) : '';
 
-$heading_level = isset( $attributes['headingLevel'] ) ? (int) $attributes['headingLevel'] : 2;
-if ( $heading_level < 1 || $heading_level > 6 ) {
-	$heading_level = 2;
+$shadcn_heading_level = isset( $attributes['headingLevel'] ) ? (int) $attributes['headingLevel'] : 2;
+if ( $shadcn_heading_level < 1 || $shadcn_heading_level > 6 ) {
+	$shadcn_heading_level = 2;
 }
-$heading_tag = 'h' . $heading_level;
+$shadcn_heading_tag = 'h' . $shadcn_heading_level;
 
-$show_label = ! isset( $attributes['showLabel'] ) || (bool) $attributes['showLabel'];
+$shadcn_show_label = ! isset( $attributes['showLabel'] ) || (bool) $attributes['showLabel'];
 
-$wrapper_attributes = get_block_wrapper_attributes(
-	'' !== $label ? array( 'data-filter-label' => $label ) : array()
+$shadcn_wrapper_attributes = get_block_wrapper_attributes(
+	'' !== $shadcn_label ? array( 'data-filter-label' => $shadcn_label ) : array()
 );
 ?>
 
-<div <?php echo $wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-	<?php if ( '' !== $label && $show_label ) : ?>
-		<<?php echo esc_attr( $heading_tag ); ?> class="wp-block-shadcn-filter-section__title">
-			<?php echo esc_html( $label ); ?>
-		</<?php echo esc_attr( $heading_tag ); ?>>
+<div <?php echo $shadcn_wrapper_attributes; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
+	<?php if ( '' !== $shadcn_label && $shadcn_show_label ) : ?>
+		<<?php echo esc_attr( $shadcn_heading_tag ); ?> class="wp-block-shadcn-filter-section__title">
+			<?php echo esc_html( $shadcn_label ); ?>
+		</<?php echo esc_attr( $shadcn_heading_tag ); ?>>
 	<?php endif; ?>
 
 	<?php echo $content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
