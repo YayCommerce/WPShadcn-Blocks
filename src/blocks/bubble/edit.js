@@ -7,20 +7,13 @@ import {
   useBlockProps,
 } from "@wordpress/block-editor";
 import { PanelBody, SelectControl } from "@wordpress/components";
+import { useSelect } from "@wordpress/data";
 import { __ } from "@wordpress/i18n";
 
 /**
- * Variant options shared with render.php class names.
+ * Internal dependencies
  */
-const VARIANT_OPTIONS = [
-  { label: __("Default", "yaycommerce-blocks-for-shadcn-ui"), value: "default" },
-  { label: __("Secondary", "yaycommerce-blocks-for-shadcn-ui"), value: "secondary" },
-  { label: __("Muted", "yaycommerce-blocks-for-shadcn-ui"), value: "muted" },
-  { label: __("Tinted", "yaycommerce-blocks-for-shadcn-ui"), value: "tinted" },
-  { label: __("Outline", "yaycommerce-blocks-for-shadcn-ui"), value: "outline" },
-  { label: __("Ghost", "yaycommerce-blocks-for-shadcn-ui"), value: "ghost" },
-  { label: __("Destructive", "yaycommerce-blocks-for-shadcn-ui"), value: "destructive" },
-];
+import { VARIANT_OPTIONS } from "../../shared/bubble-variants";
 
 /**
  * Alignment options. Empty value inherits the parent Bubble Group default.
@@ -49,13 +42,18 @@ const ALLOWED_BLOCKS = ["core/paragraph"];
  * @param {Object} props Block props.
  * @return {Element} Block edit element.
  */
-export default function Edit({ attributes, setAttributes, context }) {
+export default function Edit({ attributes, setAttributes, context, clientId }) {
   const { variant, align } = attributes;
 
   // Resolve the same way render.php does so editor and frontend classes match.
   const resolvedVariant = variant || "default";
   // Own align wins; otherwise inherit the group's default; otherwise "start".
   const resolvedAlign = align || context["shadcn/bubble-align"] || "start";
+
+  const hasInnerBlocks = useSelect(
+    (select) => select("core/block-editor").getBlockCount(clientId) > 0,
+    [clientId]
+  );
 
   const blockProps = useBlockProps({
     className: `wp-block-shadcn-bubble bubble bubble-${resolvedVariant} bubble-align-${resolvedAlign}`,
@@ -84,10 +82,14 @@ export default function Edit({ attributes, setAttributes, context }) {
         </PanelBody>
       </InspectorControls>
       <div {...blockProps}>
+        {/* Appender only when empty: core pins it absolutely over the last
+            line, which covers the text in a fit-content bubble. Enter adds a
+            paragraph; an emptied bubble still needs a way back in. */}
         <InnerBlocks
           template={TEMPLATE}
           allowedBlocks={ALLOWED_BLOCKS}
           templateLock={false}
+          renderAppender={hasInnerBlocks ? false : InnerBlocks.ButtonBlockAppender}
         />
       </div>
     </>

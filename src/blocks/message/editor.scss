@@ -1,0 +1,84 @@
+/**
+ * While a message with actions is selected, its empty footer text shows as a
+ * placeholder in front of the icons. Keep the frontend's flush padding, and on
+ * start rows put the placeholder after the icons so they don't shift on
+ * selection (end rows pack to the right, where text-first already holds them).
+ */
+.wp-block-shadcn-message.message
+  .message-footer:has(> .message-actions):has(> .message-footer-text [data-rich-text-placeholder]) {
+  padding-inline: calc(var(--spacing, 0.25rem) * 1);
+}
+
+.wp-block-shadcn-message.message.message-align-start
+  .message-footer:has(> .message-actions)
+  > .message-footer-text:has([data-rich-text-placeholder]) {
+  order: 1;
+}
+
+/**
+ * Message editor styles: the Actions list in the inspector.
+ * A bordered list of rows (glyph + name, click to change the icon) with a
+ * trailing remove button, like core's own list panels.
+ */
+
+.wp-block-shadcn-message__action-list {
+  margin-bottom: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+}
+
+.wp-block-shadcn-message__action-row {
+  display: flex;
+  align-items: center;
+  padding-inline-end: 4px;
+
+  & + & {
+    border-top: 1px solid #e0e0e0;
+  }
+}
+
+.wp-block-shadcn-message__action-dropdown {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.wp-block-shadcn-message__action-toggle.components-button {
+  gap: 8px;
+  width: 100%;
+  height: 40px;
+  padding-inline: 12px;
+  justify-content: flex-start;
+  color: #1e1e1e;
+
+  &:hover {
+    background: #f0f0f0;
+  }
+}
+
+.wp-block-shadcn-message__action-glyph {
+  display: inline-flex;
+
+  svg {
+    display: block;
+    width: 18px;
+    height: 18px;
+    fill: none;
+  }
+}
+
+.wp-block-shadcn-message__action-remove.components-button {
+  color: #757575;
+
+  &:hover {
+    color: #cc1818;
+  }
+}
+
+.wp-block-shadcn-message__action-add.components-button {
+  justify-content: center;
+  width: 100%;
+}
+
+.wp-block-shadcn-message__action-help {
+  margin: 8px 0 0;
+}

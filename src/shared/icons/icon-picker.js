@@ -1,7 +1,8 @@
 /**
  * Shared icon picker: a searchable grid over the curated Lucide registry.
  *
- * Block-agnostic — consumed by the Badge block and the core/button extension.
+ * Block-agnostic — consumed by the Badge block, the core/button extension and
+ * the Message block's action list (which reuses IconGrid directly).
  * Selecting sets the `iconName` slug; the registry SVG (build-generated and
  * already normalized) is injected via RawHTML for the editor preview.
  */
@@ -34,7 +35,7 @@ export function IconGlyph( { name } ) {
  * @param {Function} props.onSelect Called with the picked slug, then closes.
  * @return {JSX.Element} Grid UI.
  */
-function IconGrid( { value, onSelect } ) {
+export function IconGrid( { value, onSelect } ) {
 	const [ query, setQuery ] = useState( '' );
 
 	const results = useMemo( () => {

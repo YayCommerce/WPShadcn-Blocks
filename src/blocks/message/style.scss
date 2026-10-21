@@ -1,0 +1,206 @@
+/**
+ * Message Block Styles
+ * Ported from shadcn/ui base Message. MessageAvatar, MessageContent,
+ * MessageHeader, MessageFooter and the Bubble surface are collapsed into this
+ * one block; the surface reuses the Bubble block's classes and stylesheet.
+ * shadcn Message: `relative flex w-full min-w-0 gap-2 text-sm data-[align=end]:flex-row-reverse`.
+ */
+
+.wp-block-shadcn-message.message {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  gap: calc(var(--spacing, 0.25rem) * 2); // gap-2
+  width: 100%;
+  min-width: 0;
+  font-size: 0.875rem; // text-sm
+  line-height: 1.25rem;
+
+  &.message-align-end {
+    flex-direction: row-reverse;
+  }
+
+  // MessageAvatar: `flex w-fit min-w-8 shrink-0 items-center justify-center
+  // self-end overflow-hidden rounded-full bg-muted`. An empty slot keeps the
+  // avatar's footprint so messages in a group line up with the one that has it.
+  .message-avatar {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    min-width: calc(var(--spacing, 0.25rem) * 8); // min-w-8
+    border-radius: 9999px;
+
+    &.message-avatar--sm {
+      width: 24px;
+      min-width: 24px;
+    }
+
+    &.message-avatar--md {
+      width: 40px;
+    }
+
+    &.message-avatar--lg {
+      width: 56px;
+    }
+  }
+
+  // group-has-data-[slot=message-footer]/message:-translate-y-8 — keep the
+  // avatar beside the bubble instead of the footer below it. shadcn's fixed
+  // 2rem suits a button row; our text-only footer is one text-xs line plus
+  // the content gap, so lift by exactly that.
+  &.message-has-footer {
+    --message-avatar-lift: calc(1rem + var(--spacing, 0.25rem) * 2.5);
+  }
+
+  // An actions row is one icon button tall (size-8) instead of a text line.
+  &.message-has-footer.message-has-actions {
+    --message-avatar-lift: calc(var(--spacing, 0.25rem) * 8 + var(--spacing, 0.25rem) * 2.5);
+  }
+
+  .message-avatar {
+    transform: translateY(calc(-1 * (var(--message-avatar-lift, 0px) + var(--message-avatar-extra, 0px))));
+  }
+
+  // MessageContent: `flex w-full min-w-0 flex-col gap-2.5 wrap-break-word`.
+  // Bottom-aligned like the avatar, so an avatar taller than a one-line bubble
+  // doesn't stretch the column and leave the bubble sitting above its edge.
+  .message-content {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    gap: calc(var(--spacing, 0.25rem) * 2.5); // gap-2.5
+    width: 100%;
+    min-width: 0;
+    overflow-wrap: break-word;
+  }
+
+  // MessageHeader / MessageFooter: `flex max-w-full min-w-0 items-center px-3
+  // text-xs font-medium text-muted-foreground`.
+  .message-header,
+  .message-footer {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding-inline: calc(var(--spacing, 0.25rem) * 3); // px-3
+    font-size: 0.75rem; // text-xs
+    line-height: 1rem;
+    font-weight: 500;
+    color: var(--wp--preset--color--muted-foreground, #737373);
+  }
+
+  .message-footer {
+    gap: calc(var(--spacing, 0.25rem) * 2);
+  }
+
+  // Actions: decorative icons styled like shadcn Button variant="ghost"
+  // size="icon" — `size-8` round, a size-4 icon and the ghost hover
+  // (`hover:bg-muted hover:text-foreground`), with the name as a native
+  // tooltip. Visual only: they stay aria-hidden spans with no focus.
+  .message-actions {
+    display: flex;
+    align-items: center;
+  }
+
+  .message-action {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: calc(var(--spacing, 0.25rem) * 8);
+    height: calc(var(--spacing, 0.25rem) * 8);
+    border-radius: 9999px;
+    transition: background-color 0.15s, color 0.15s;
+
+    &:hover {
+      background-color: var(--wp--preset--color--muted, #f5f5f5);
+      color: var(--wp--preset--color--foreground, #0a0a0a);
+    }
+
+    .shadcn-icon {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+
+  // Leading actions sit flush with the bubble edge: the button's own inset
+  // already lines the icon up with the text above.
+  .message-footer:has(> .message-actions:first-child) {
+    padding-inline: calc(var(--spacing, 0.25rem) * 1);
+  }
+
+  // group-has-data-[variant=ghost]/message:px-0 — a ghost bubble has no
+  // padding, so the header/footer text lines up with it flush.
+  &:has(.bubble-ghost) {
+    .message-header,
+    .message-footer {
+      padding-inline: 0;
+    }
+  }
+
+  // Header, bubble and footer follow the message side
+  // (group-data-[align=end]/message:*:data-slot:self-end).
+  &.message-align-end {
+    .message-content > * {
+      align-self: flex-end;
+    }
+
+    // group-data-[align=end]/message:justify-end
+    .message-footer {
+      justify-content: flex-end;
+    }
+  }
+
+  // Reaction, ported from shadcn BubbleReactions (side="bottom" align="end"):
+  // `absolute bottom-0 translate-y-3/4 right-3 z-10 flex w-fit items-center
+  // justify-center gap-1 rounded-full bg-muted px-1.5 py-0.5 text-sm ring-3 ring-card`.
+  .bubble {
+    position: relative;
+  }
+
+  .message-reaction {
+    position: absolute;
+    z-index: 10;
+    inset-block-end: 0;
+    inset-inline-end: calc(var(--spacing, 0.25rem) * 3); // right-3
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing, 0.25rem); // gap-1
+    width: fit-content;
+    padding: calc(var(--spacing, 0.25rem) * 0.5) calc(var(--spacing, 0.25rem) * 1.5); // py-0.5 px-1.5
+    border-radius: 9999px;
+    background-color: var(--wp--preset--color--muted, #f5f5f5);
+    box-shadow: 0 0 0 3px var(--wp--preset--color--card, #ffffff); // ring-3 ring-card
+    color: var(--wp--preset--color--foreground, #0a0a0a);
+    font-size: 0.875rem; // text-sm
+    line-height: 1.25rem;
+    // WordPress' emoji script swaps the glyph for a 1em <img>, which drops the
+    // line box; keep the chip one text-sm line tall either way.
+    min-height: 1.25rem;
+    transform: translateY(75%); // translate-y-3/4
+  }
+
+  // Room below the row for the 3/4 of the chip that hangs past the bubble.
+  // Padding on the row, not margin on the bubble, keeps the avatar level with
+  // the bubble's bottom edge.
+  &.message-has-reaction {
+    padding-block-end: calc(var(--spacing, 0.25rem) * 3);
+  }
+
+  // With a footer the chip would sit on the footer text, so push the footer
+  // down instead and lift the avatar by the same extra amount.
+  &.message-has-reaction.message-has-footer {
+    padding-block-end: 0;
+
+    .bubble {
+      margin-block-end: calc(var(--spacing, 0.25rem) * 3);
+    }
+
+    --message-avatar-extra: calc(var(--spacing, 0.25rem) * 3);
+  }
+}

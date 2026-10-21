@@ -1,0 +1,105 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "shadcn/message",
+  "version": "1.0.0",
+  "title": "Message",
+  "category": "shadcn",
+  "description": "A single message bubble in a conversation, with variants, an optional avatar, header, footer actions, reaction and start/end alignment.",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
+  "keywords": ["message", "chat", "conversation", "bubble", "avatar"],
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": false,
+    "spacing": {
+      "margin": true
+    },
+    "color": {
+      "background": true,
+      "text": true,
+      "__experimentalSkipSerialization": true
+    },
+    "__experimentalBorder": {
+      "radius": true,
+      "__experimentalSkipSerialization": true
+    }
+  },
+  "attributes": {
+    "variant": {
+      "type": "string",
+      "default": "default"
+    },
+    "align": {
+      "type": "string",
+      "default": ""
+    },
+    "header": {
+      "type": "string",
+      "default": ""
+    },
+    "footer": {
+      "type": "string",
+      "default": ""
+    },
+    "reaction": {
+      "type": "string",
+      "default": ""
+    },
+    "actions": {
+      "type": "array",
+      "default": [],
+      "items": {
+        "type": "string"
+      }
+    },
+    "showAvatar": {
+      "type": "boolean",
+      "default": true
+    },
+    "mediaId": {
+      "type": "number",
+      "default": 0
+    },
+    "mediaUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "mediaAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "size": {
+      "type": "string",
+      "default": "sm"
+    },
+    "fallback": {
+      "type": "string",
+      "default": "A"
+    }
+  },
+  "example": {
+    "attributes": {
+      "variant": "muted",
+      "align": "start",
+      "fallback": "OL",
+      "header": "Olivia",
+      "footer": "Read yesterday"
+    },
+    "innerBlocks": [
+      {
+        "name": "core/paragraph",
+        "attributes": {
+          "content": "How can I help you today?"
+        }
+      }
+    ],
+    "viewportWidth": 600
+  },
+  "usesContext": ["shadcn/message-align"],
+  "allowedBlocks": ["core/paragraph"],
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": ["file:./style-index.css", "shadcn-bubble-style", "shadcn-avatar-style"],
+  "render": "file:./render.php"
+}
