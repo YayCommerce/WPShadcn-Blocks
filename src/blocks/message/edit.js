@@ -110,7 +110,9 @@ export default function Edit({ attributes, setAttributes, clientId, isSelected }
   const resolvedAlign = (align || groupAlign) === "end" ? "end" : "start";
 
   // The footer slot also renders (empty) while editing, so the avatar lifts with it.
-  const hasActions = actions.length > 0;
+  // Actions are hidden for now (panel commented out below); was:
+  // const hasActions = actions.length > 0;
+  const hasActions = false;
   const showFooter = !!footer || hasActions || isEditing;
 
   const blockProps = useBlockProps({
@@ -178,6 +180,8 @@ export default function Edit({ attributes, setAttributes, clientId, isSelected }
             onChange={(value) => setAttributes({ reaction: value })}
           />
         </PanelBody>
+        {/* Actions are hidden for now. To bring them back, remove this
+            comment and restore hasActions above (and the loop in render.php).
         <PanelBody
           title={__("Actions", "yaycommerce-blocks-for-shadcn-ui")}
           initialOpen={hasActions}
@@ -251,6 +255,7 @@ export default function Edit({ attributes, setAttributes, clientId, isSelected }
             )}
           </p>
         </PanelBody>
+        */}
         <PanelBody title={__("Avatar", "yaycommerce-blocks-for-shadcn-ui")}>
           <ToggleControl
             label={__("Show avatar", "yaycommerce-blocks-for-shadcn-ui")}

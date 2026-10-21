@@ -42,7 +42,11 @@ $shadcn_wrapper_classes = array(
 // focusable buttons that do nothing. The name shows as a hover tooltip
 // ("thumbs-up" reads as "Thumbs up", "refresh-cw" as "Refresh"). Unknown
 // slugs render nothing.
+//
+// Actions are hidden for now: with the loop commented out the HTML stays
+// empty, so no footer row or modifier class is output. Uncomment to restore.
 $shadcn_actions_html = '';
+/*
 foreach ( $shadcn_actions as $shadcn_action ) {
 	$shadcn_action_icon = \ShadcnBlocks\Icons::render_icon( (string) $shadcn_action );
 	if ( '' !== $shadcn_action_icon ) {
@@ -50,6 +54,7 @@ foreach ( $shadcn_actions as $shadcn_action ) {
 		$shadcn_actions_html .= '<span class="message-action" title="' . esc_attr( $shadcn_action_label ) . '">' . $shadcn_action_icon . '</span>';
 	}
 }
+*/
 
 if ( '' !== $shadcn_footer || '' !== $shadcn_actions_html ) {
 	$shadcn_wrapper_classes[] = 'message-has-footer';
