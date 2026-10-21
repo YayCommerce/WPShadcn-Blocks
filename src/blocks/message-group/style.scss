@@ -1,0 +1,13 @@
+/**
+ * Message Group Block Styles
+ * Ported from shadcn/ui base MessageGroup: `flex min-w-0 flex-col gap-2`.
+ * The block-gap control feeds --shadcn-message-group-gap (see render.php).
+ */
+
+.wp-block-shadcn-message-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--shadcn-message-group-gap); // gap-2 unless the block-gap control says otherwise
+  width: 100%;
+  min-width: 0;
+}

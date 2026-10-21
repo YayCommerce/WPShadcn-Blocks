@@ -1,0 +1,75 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "shadcn/message-group",
+  "version": "1.0.0",
+  "title": "Message Group",
+  "category": "shadcn",
+  "description": "A vertical stack of messages for chat and conversation layouts.",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
+  "keywords": ["message", "chat", "conversation", "messages"],
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": false,
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "blockGap": true
+    }
+  },
+  "attributes": {
+    "align": {
+      "type": "string"
+    }
+  },
+  "example": {
+    "attributes": {
+      "align": "start"
+    },
+    "innerBlocks": [
+      {
+        "name": "shadcn/message",
+        "attributes": {
+          "variant": "muted",
+          "align": "start",
+          "fallback": "OL",
+          "header": "Olivia"
+        },
+        "innerBlocks": [
+          {
+                "name": "core/paragraph",
+                "attributes": {
+                  "content": "Hey! Is the new landing page ready to review?"
+                }
+              }
+        ]
+      },
+      {
+        "name": "shadcn/message",
+        "attributes": {
+          "variant": "default",
+          "align": "end",
+          "fallback": "ME",
+          "footer": "Delivered"
+        },
+        "innerBlocks": [
+          {
+                "name": "core/paragraph",
+                "attributes": {
+                  "content": "Just pushed it — take a look whenever."
+                }
+              }
+        ]
+      }
+    ],
+    "viewportWidth": 700
+  },
+  "providesContext": {
+    "shadcn/message-align": "align"
+  },
+  "allowedBlocks": ["shadcn/message", "shadcn/message-group"],
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
