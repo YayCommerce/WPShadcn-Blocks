@@ -44,6 +44,8 @@ const ALLOWED_BLOCKS = [
 export default function Edit(props) {
   const { attributes, setAttributes } = props;
   const { dismissible, direction } = attributes;
+  // Dialog variation: always centered, so it has no Direction setting (as in shadcn).
+  const isDialog = direction === "center";
   const blockProps = useBlockProps({
     className: "wp-block-shadcn-sheet",
   });
@@ -54,10 +56,12 @@ export default function Edit(props) {
         <ToolsPanel
           label={__("Settings", "yaycommerce-blocks-for-shadcn-ui")}
           resetAll={() => {
-            setAttributes({
-              dismissible: false,
-              direction: "bottom",
-            });
+            // Keep a Dialog a Dialog: "center" is set by the variation, not the panel.
+            setAttributes(
+              isDialog
+                ? { dismissible: false }
+                : { dismissible: false, direction: "right" }
+            );
           }}
         >
           <ToolsPanelItem
@@ -82,39 +86,41 @@ export default function Edit(props) {
             />
           </ToolsPanelItem>
 
-          <ToolsPanelItem
-            label={__("Direction", "yaycommerce-blocks-for-shadcn-ui")}
-            isShownByDefault
-            hasValue={() => direction !== "bottom"}
-            onDeselect={() => setAttributes({ direction: "bottom" })}
-          >
-            <ToggleGroupControl
-              __next40pxDefaultSize
-              isBlock
+          {!isDialog && (
+            <ToolsPanelItem
               label={__("Direction", "yaycommerce-blocks-for-shadcn-ui")}
-              value={direction ?? "bottom"}
-              onChange={(value) => {
-                setAttributes({ direction: value });
-              }}
+              isShownByDefault
+              hasValue={() => direction !== "right"}
+              onDeselect={() => setAttributes({ direction: "right" })}
             >
-              <ToggleGroupControlOption
-                label={__("Bottom", "yaycommerce-blocks-for-shadcn-ui")}
-                value="bottom"
-              />
-              <ToggleGroupControlOption
-                label={__("Top", "yaycommerce-blocks-for-shadcn-ui")}
-                value="top"
-              />
-              <ToggleGroupControlOption
-                label={__("Left", "yaycommerce-blocks-for-shadcn-ui")}
-                value="left"
-              />
-              <ToggleGroupControlOption
-                label={__("Right", "yaycommerce-blocks-for-shadcn-ui")}
-                value="right"
-              />
-            </ToggleGroupControl>
-          </ToolsPanelItem>
+              <ToggleGroupControl
+                __next40pxDefaultSize
+                isBlock
+                label={__("Direction", "yaycommerce-blocks-for-shadcn-ui")}
+                value={direction ?? "right"}
+                onChange={(value) => {
+                  setAttributes({ direction: value });
+                }}
+              >
+                <ToggleGroupControlOption
+                  label={__("Bottom", "yaycommerce-blocks-for-shadcn-ui")}
+                  value="bottom"
+                />
+                <ToggleGroupControlOption
+                  label={__("Top", "yaycommerce-blocks-for-shadcn-ui")}
+                  value="top"
+                />
+                <ToggleGroupControlOption
+                  label={__("Left", "yaycommerce-blocks-for-shadcn-ui")}
+                  value="left"
+                />
+                <ToggleGroupControlOption
+                  label={__("Right", "yaycommerce-blocks-for-shadcn-ui")}
+                  value="right"
+                />
+              </ToggleGroupControl>
+            </ToolsPanelItem>
+          )}
         </ToolsPanel>
       </InspectorControls>
       <div {...blockProps}>

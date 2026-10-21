@@ -36,6 +36,7 @@ shadcn/ui is an open-source project by shadcn. This plugin is not affiliated wit
 * **Sonner (Toast)** - A button that fires a toast on click: default, success, error, warning and info types with rich colors and icons, stacking on a single shared toaster.
 * **Drawer** - A slide-out panel, with Drawer Trigger, Header, Content and Footer child blocks.
 * **Sheet** - A modal side panel, with Sheet Trigger, Header, Content and Footer child blocks.
+* **Dialog (Sheet variation)** - A centered modal window for forms, video or details, built on the Sheet blocks.
 * **Tooltip** - A hover hint, with Tooltip Trigger and Tooltip Content child blocks.
 
 = Motion and data blocks =
@@ -163,6 +164,7 @@ First public release. Requires the Shadcn theme (or a child of it) to be active.
 * Sonner (Toast) — a button that fires a toast on click: default, success, error, warning and info types with rich colors and icons, stacking on a single shared toaster.
 * Drawer — slide-out panel with Drawer Trigger, Header, Content and Footer.
 * Sheet — modal side panel with Sheet Trigger, Header, Content and Footer.
+* Dialog (Sheet variation) — centered modal window built on the Sheet blocks.
 * Tooltip — hover hint with Tooltip Trigger and Tooltip Content.
 * Carousel — wraps any content, including posts and products; horizontal or vertical, with a configurable number of slides per view.
 * Marquee — continuously scrolling, seamless strip for logos, testimonials or any content, built from Marquee Item children.
