@@ -60,6 +60,7 @@ const DIALOG_INNER_BLOCKS = [
             "core/button",
             {
               text: __("Open Dialog", "yaycommerce-blocks-for-shadcn-ui"),
+              tagName: "button",
               className: "is-style-outline",
             },
           ],
@@ -119,7 +120,7 @@ const DIALOG_INNER_BLOCKS = [
         "core/buttons",
         {},
         [
-          // tagName "button": render.php wires close only onto <button>Cancel</button>.
+          // tagName "button": render.php wires the trigger and Cancel onto <button> only.
           [
             "core/button",
             {

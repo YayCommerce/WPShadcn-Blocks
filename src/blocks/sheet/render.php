@@ -56,7 +56,7 @@ if ( ! function_exists( 'block_shadcn_sheet_render' ) ) {
 			$trigger_html = sprintf(
 				'<button class="wp-block-shadcn-sheet__fallback-button" type="button" data-wp-on--click="actions.toggle" data-wp-bind--aria-expanded="state.isOpen" aria-controls="%s-content">%s</button>',
 				esc_attr( $unique_id ),
-				esc_html__( 'Open Sheet', 'yaycommerce-blocks-for-shadcn-ui' )
+				'center' === $direction ? esc_html__( 'Open Dialog', 'yaycommerce-blocks-for-shadcn-ui' ) : esc_html__( 'Open Sheet', 'yaycommerce-blocks-for-shadcn-ui' )
 			);
 			$button_found = true;
 		} else {
@@ -147,19 +147,26 @@ if ( ! function_exists( 'block_shadcn_sheet_render' ) ) {
 
 		// Label the panel by the first heading in the header, giving it an id if needed.
 		$title_id = '';
-		if ( $panel_html && class_exists( 'WP_HTML_Tag_Processor' ) ) {
-			$tags = new WP_HTML_Tag_Processor( $panel_html );
-			if ( $tags->next_tag( array( 'class_name' => 'wp-block-shadcn-sheet-header' ) ) ) {
-				while ( $tags->next_tag() ) {
-					if ( in_array( $tags->get_tag(), array( 'H1', 'H2', 'H3', 'H4', 'H5', 'H6' ), true ) ) {
-						$title_id = $tags->get_attribute( 'id' );
-						if ( ! is_string( $title_id ) || '' === $title_id ) {
-							$title_id = $unique_id . '-title';
-							$tags->set_attribute( 'id', $title_id );
-							$panel_html = $tags->get_updated_html();
-						}
+		$tags     = new WP_HTML_Tag_Processor( $panel_html );
+		if ( $tags->next_tag( array( 'class_name' => 'wp-block-shadcn-sheet-header' ) ) ) {
+			// Stop at the header's closing </div>; count nested divs to find it.
+			$depth = 0;
+			while ( $tags->next_tag( array( 'tag_closers' => 'visit' ) ) ) {
+				if ( 'DIV' === $tags->get_tag() ) {
+					$depth += $tags->is_tag_closer() ? -1 : 1;
+					if ( $depth < 0 ) {
 						break;
 					}
+					continue;
+				}
+				if ( ! $tags->is_tag_closer() && in_array( $tags->get_tag(), array( 'H1', 'H2', 'H3', 'H4', 'H5', 'H6' ), true ) ) {
+					$title_id = $tags->get_attribute( 'id' );
+					if ( ! is_string( $title_id ) || '' === $title_id ) {
+						$title_id = $unique_id . '-title';
+						$tags->set_attribute( 'id', $title_id );
+						$panel_html = $tags->get_updated_html();
+					}
+					break;
 				}
 			}
 		}

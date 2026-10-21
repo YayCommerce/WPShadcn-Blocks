@@ -57,10 +57,7 @@
   z-index: 1;
   pointer-events: auto;
   cursor: pointer;
-
-  @supports (backdrop-filter: blur(4px)) {
-    backdrop-filter: blur(4px);
-  }
+  backdrop-filter: blur(4px);
 }
 
 .wp-block-shadcn-sheet__panel {
@@ -147,7 +144,7 @@
   gap: 1rem;
   width: 100%;
   max-width: calc(100% - 2rem);
-  max-height: calc(100vh - 2rem);
+  max-height: calc(100dvh - 2rem);
   padding: 1rem;
   border-radius: 0.75rem;
   box-shadow: 0 0 0 1px

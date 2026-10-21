@@ -78,7 +78,7 @@ const drawerStore = store(
           return;
         }
         const panel = getPanel(getContext().drawerId);
-        const focusable = panel ? getFocusable(panel) : [];
+        const focusable = getFocusable(panel);
         if (!focusable.length) {
           event.preventDefault();
           return;
@@ -112,12 +112,17 @@ const drawerStore = store(
       syncFocus: () => {
         const { open, drawerId } = getContext();
         const panel = getPanel(drawerId);
-        if (!panel) {
-          return;
-        }
         if (open) {
           returnFocus.set(drawerId, document.activeElement);
-          (getFocusable(panel)[0] || panel).focus();
+          // Prefer the first field over the injected close X, as shadcn does.
+          const focusable = getFocusable(panel);
+          (
+            focusable.find(
+              (el) => !el.matches(".wp-block-shadcn-sheet__close")
+            ) ||
+            focusable[0] ||
+            panel
+          ).focus();
           return;
         }
         // Only restore after a real open, not on the initial closed render.
