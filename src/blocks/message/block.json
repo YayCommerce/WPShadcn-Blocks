@@ -71,7 +71,7 @@
     },
     "size": {
       "type": "string",
-      "default": "md"
+      "default": "sm"
     },
     "fallback": {
       "type": "string",

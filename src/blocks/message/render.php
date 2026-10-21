@@ -27,10 +27,10 @@ $shadcn_actions     = isset( $attributes['actions'] ) && is_array( $attributes['
 $shadcn_show_avatar = ! isset( $attributes['showAvatar'] ) || $attributes['showAvatar'];
 $shadcn_media_url   = isset( $attributes['mediaUrl'] ) ? $attributes['mediaUrl'] : '';
 $shadcn_media_alt   = isset( $attributes['mediaAlt'] ) ? $attributes['mediaAlt'] : '';
-$shadcn_size        = isset( $attributes['size'] ) ? $attributes['size'] : 'md';
+$shadcn_size        = isset( $attributes['size'] ) ? $attributes['size'] : 'sm';
 $shadcn_fallback    = isset( $attributes['fallback'] ) ? $attributes['fallback'] : '';
 
-$shadcn_size = in_array( $shadcn_size, array( 'sm', 'md', 'lg' ), true ) ? $shadcn_size : 'md';
+$shadcn_size = in_array( $shadcn_size, array( 'sm', 'md', 'lg' ), true ) ? $shadcn_size : 'sm';
 
 $shadcn_wrapper_classes = array(
 	'wp-block-shadcn-message',
@@ -39,12 +39,15 @@ $shadcn_wrapper_classes = array(
 );
 // Footer actions: icons styled as shadcn ghost icon buttons. They have no
 // behavior in a static layout, so they render as decorative spans rather than
-// focusable buttons that do nothing. Unknown slugs render nothing.
+// focusable buttons that do nothing. The name shows as a hover tooltip
+// ("thumbs-up" reads as "Thumbs up", "refresh-cw" as "Refresh"). Unknown
+// slugs render nothing.
 $shadcn_actions_html = '';
 foreach ( $shadcn_actions as $shadcn_action ) {
 	$shadcn_action_icon = \ShadcnBlocks\Icons::render_icon( (string) $shadcn_action );
 	if ( '' !== $shadcn_action_icon ) {
-		$shadcn_actions_html .= '<span class="message-action">' . $shadcn_action_icon . '</span>';
+		$shadcn_action_label  = ucfirst( str_replace( '-', ' ', preg_replace( '/-c?cw$/', '', (string) $shadcn_action ) ) );
+		$shadcn_actions_html .= '<span class="message-action" title="' . esc_attr( $shadcn_action_label ) . '">' . $shadcn_action_icon . '</span>';
 	}
 }
 

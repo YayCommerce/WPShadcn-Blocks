@@ -11,17 +11,9 @@ import { useSelect } from "@wordpress/data";
 import { __ } from "@wordpress/i18n";
 
 /**
- * Variant options shared with render.php class names.
+ * Internal dependencies
  */
-export const VARIANT_OPTIONS = [
-  { label: __("Default", "yaycommerce-blocks-for-shadcn-ui"), value: "default" },
-  { label: __("Secondary", "yaycommerce-blocks-for-shadcn-ui"), value: "secondary" },
-  { label: __("Muted", "yaycommerce-blocks-for-shadcn-ui"), value: "muted" },
-  { label: __("Tinted", "yaycommerce-blocks-for-shadcn-ui"), value: "tinted" },
-  { label: __("Outline", "yaycommerce-blocks-for-shadcn-ui"), value: "outline" },
-  { label: __("Ghost", "yaycommerce-blocks-for-shadcn-ui"), value: "ghost" },
-  { label: __("Destructive", "yaycommerce-blocks-for-shadcn-ui"), value: "destructive" },
-];
+import { VARIANT_OPTIONS } from "../../shared/bubble-variants";
 
 /**
  * Alignment options. Empty value inherits the parent Bubble Group default.

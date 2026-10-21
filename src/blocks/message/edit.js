@@ -27,7 +27,7 @@ import { __ } from "@wordpress/i18n";
 /**
  * Internal dependencies
  */
-import { VARIANT_OPTIONS } from "../bubble/edit";
+import { VARIANT_OPTIONS } from "../../shared/bubble-variants";
 import { IconGlyph, IconGrid } from "../../shared/icons/icon-picker.js";
 
 /**
@@ -36,7 +36,8 @@ import { IconGlyph, IconGrid } from "../../shared/icons/icon-picker.js";
 const DEFAULT_ACTIONS = ["copy", "thumbs-up", "thumbs-down"];
 
 /**
- * Readable name for an action in the inspector list.
+ * Readable name for an action: the inspector list and the hover tooltip,
+ * mirroring render.php.
  *
  * @param {string} slug Icon slug, e.g. "thumbs-up" or "refresh-cw".
  * @return {string} e.g. "Thumbs up" or "Refresh".
@@ -358,7 +359,7 @@ export default function Edit({ attributes, setAttributes, clientId, isSelected }
               {hasActions && (
                 <span className="message-actions" aria-hidden="true">
                   {actions.map((slug, index) => (
-                    <span key={index} className="message-action">
+                    <span key={index} className="message-action" title={actionLabel(slug)}>
                       <span className="shadcn-icon">
                         <IconGlyph name={slug} />
                       </span>
