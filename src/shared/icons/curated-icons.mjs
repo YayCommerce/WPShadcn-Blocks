@@ -27,6 +27,8 @@ export const CURATED_ICONS = [
 	'chevrons-right',
 	'chevrons-left',
 	'move-right',
+	'slash',
+	'dot',
 	'corner-down-right',
 	'external-link',
 

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "shadcn/breadcrumb",
+  "version": "1.0.0",
+  "title": "Breadcrumb",
+  "category": "shadcn",
+  "description": "A navigation trail showing where the visitor is. Build it by hand or generate it from the current page.",
+  "keywords": ["breadcrumb", "breadcrumbs", "navigation", "path", "trail"],
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
+  "attributes": {
+    "separator": {
+      "type": "string",
+      "default": "chevron-right"
+    },
+    "source": {
+      "type": "string",
+      "default": "manual"
+    },
+    "homeLabel": {
+      "type": "string",
+      "default": ""
+    },
+    "color": {
+      "type": "string",
+      "default": ""
+    },
+    "hoverColor": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "example": {
+    "attributes": {
+      "separator": "chevron-right"
+    },
+    "innerBlocks": [
+      {
+        "name": "shadcn/breadcrumb-item",
+        "attributes": { "label": "Home", "url": "#" }
+      },
+      {
+        "name": "shadcn/breadcrumb-item",
+        "attributes": { "label": "Components", "url": "#" }
+      },
+      {
+        "name": "shadcn/breadcrumb-item",
+        "attributes": { "label": "Breadcrumb" }
+      }
+    ],
+    "viewportWidth": 400
+  },
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": false,
+    "spacing": {
+      "margin": true
+    }
+  },
+  "providesContext": {
+    "shadcn/breadcrumb-separator": "separator"
+  },
+  "allowedBlocks": ["shadcn/breadcrumb-item"],
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
