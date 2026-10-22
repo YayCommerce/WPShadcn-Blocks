@@ -1,0 +1,89 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "shadcn/attachment",
+  "version": "1.0.0",
+  "title": "Attachment",
+  "category": "shadcn",
+  "description": "A file or link card with an icon or image, a title, a description, upload states and an optional download button.",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
+  "keywords": ["attachment", "file", "download", "upload", "document", "link"],
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": false,
+    "spacing": {
+      "margin": true
+    }
+  },
+  "attributes": {
+    "fileId": {
+      "type": "number",
+      "default": 0
+    },
+    "url": {
+      "type": "string",
+      "default": ""
+    },
+    "linkTarget": {
+      "type": "string",
+      "default": ""
+    },
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "description": {
+      "type": "string",
+      "default": ""
+    },
+    "mediaType": {
+      "type": "string",
+      "default": "icon"
+    },
+    "iconName": {
+      "type": "string",
+      "default": "file-text"
+    },
+    "imageId": {
+      "type": "number",
+      "default": 0
+    },
+    "imageUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "imageAlt": {
+      "type": "string",
+      "default": ""
+    },
+    "state": {
+      "type": "string",
+      "default": "done"
+    },
+    "size": {
+      "type": "string",
+      "default": "default"
+    },
+    "orientation": {
+      "type": "string",
+      "default": "horizontal"
+    },
+    "showDownload": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "example": {
+    "attributes": {
+      "title": "sales-dashboard.pdf",
+      "description": "PDF · 2.4 MB",
+      "iconName": "file-text",
+      "url": "#"
+    },
+    "viewportWidth": 400
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
