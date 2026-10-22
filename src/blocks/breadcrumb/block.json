@@ -19,7 +19,7 @@
     },
     "homeLabel": {
       "type": "string",
-      "default": "Home"
+      "default": ""
     },
     "color": {
       "type": "string",

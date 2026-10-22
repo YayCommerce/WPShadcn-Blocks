@@ -35,7 +35,7 @@ if ( 'ellipsis' === $shadcn_type ) {
 } elseif ( '' !== $shadcn_url ) {
 	$shadcn_body = '<a class="breadcrumb-link"' . $shadcn_link_attributes . '>' . wp_kses_post( $shadcn_label ) . '</a>';
 } else {
-	$shadcn_body = '<span class="breadcrumb-page" role="link" aria-disabled="true" aria-current="page">' . wp_kses_post( $shadcn_label ) . '</span>';
+	$shadcn_body = '<span class="breadcrumb-page">' . wp_kses_post( $shadcn_label ) . '</span>';
 }
 
 $shadcn_separator = isset( $block->context['shadcn/breadcrumb-separator'] ) && '' !== $block->context['shadcn/breadcrumb-separator']

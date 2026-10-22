@@ -51,7 +51,8 @@ class Breadcrumb {
 				}
 			}
 
-			$trail[] = array( get_the_title( $post ), '' );
+			$title   = get_the_title( $post );
+			$trail[] = array( '' !== $title ? $title : __( '(no title)', 'yaycommerce-blocks-for-shadcn-ui' ), '' );
 		} elseif ( is_category() || is_tag() || is_tax() ) {
 			// term_trail() ends with the term itself: it is the current page here.
 			$trail                           = array_merge( $trail, self::term_trail( get_queried_object() ) );

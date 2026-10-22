@@ -44,10 +44,24 @@ foreach ( array(
 	'color'      => '--shadcn-breadcrumb-color',
 	'hoverColor' => '--shadcn-breadcrumb-hover-color',
 ) as $shadcn_attribute => $shadcn_property ) {
-	$shadcn_color = isset( $attributes[ $shadcn_attribute ] ) ? sanitize_hex_color( $attributes[ $shadcn_attribute ] ) : '';
-	if ( $shadcn_color ) {
+	// Hex or var() only: WP's safecss strips rgb()/hsl()/oklch() from style attributes anyway.
+	$shadcn_color = isset( $attributes[ $shadcn_attribute ] ) ? trim( $attributes[ $shadcn_attribute ] ) : '';
+	if ( preg_match( '/^(#[0-9a-f]{3,8}|var\(--[A-Za-z0-9-]+\))$/i', $shadcn_color ) ) {
 		$shadcn_colors .= $shadcn_property . ':' . $shadcn_color . ';';
 	}
+}
+
+// Only the last step is the current page; an unlinked step earlier in the
+// trail is just text. The item can't know its position, so mark it here.
+$shadcn_tags = new WP_HTML_Tag_Processor( $content );
+while ( $shadcn_tags->next_tag( array( 'class_name' => 'breadcrumb-item' ) ) ) {
+	$shadcn_tags->set_bookmark( 'last' );
+}
+if ( $shadcn_tags->seek( 'last' ) && $shadcn_tags->next_tag( array( 'class_name' => 'breadcrumb-page' ) ) ) {
+	$shadcn_tags->set_attribute( 'role', 'link' );
+	$shadcn_tags->set_attribute( 'aria-disabled', 'true' );
+	$shadcn_tags->set_attribute( 'aria-current', 'page' );
+	$content = $shadcn_tags->get_updated_html();
 }
 
 $shadcn_wrapper_attributes = get_block_wrapper_attributes(

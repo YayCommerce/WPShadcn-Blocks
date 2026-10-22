@@ -95,6 +95,7 @@ export default function Edit({ attributes, setAttributes }) {
             <TextControl
               label={__("Home label", "yaycommerce-blocks-for-shadcn-ui")}
               value={homeLabel}
+              placeholder={__("Home", "yaycommerce-blocks-for-shadcn-ui")}
               onChange={(value) => setAttributes({ homeLabel: value })}
             />
           )}

@@ -64,11 +64,6 @@
       width: 0.875rem; // size-3.5
       height: 0.875rem;
     }
-
-    svg {
-      width: 100%;
-      height: 100%;
-    }
   }
 
   // cn-rtl-flip
@@ -88,11 +83,12 @@
       width: 1rem; // size-4
       height: 1rem;
     }
+  }
 
-    svg {
-      width: 100%;
-      height: 100%;
-    }
+  .breadcrumb-separator svg,
+  .breadcrumb-ellipsis svg {
+    width: 100%;
+    height: 100%;
   }
 
   .breadcrumb-sr {
