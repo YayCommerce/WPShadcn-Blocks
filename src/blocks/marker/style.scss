@@ -5,6 +5,8 @@
  * text-muted-foreground; links underline (hover -> foreground).
  */
 
+@use "../../shared/styles/shimmer" as *;
+
 .wp-block-shadcn-marker.marker {
   display: flex;
   width: 100%;
@@ -78,64 +80,5 @@ a.wp-block-shadcn-marker.marker {
   }
 }
 
-// Shimmer: animated streaming-text effect. Faithful port of shadcn's `shimmer`
-// utility — built on currentColor (adapts to the marker's muted text), a
-// highlight band of width `calc(3ch + 40px)` swept across via background-clip:text.
-@property --shimmer-angle {
-  syntax: "<angle>";
-  inherits: true;
-  initial-value: 20deg;
-}
-
-@keyframes shadcn-marker-shimmer {
-  from {
-    background-position: 100% 0;
-  }
-  to {
-    background-position: 0 0;
-  }
-}
-
-.wp-block-shadcn-marker.marker-shimmer .marker-content {
-  --_spread: var(--shimmer-spread, calc(3ch + 40px));
-  --_base: currentColor;
-  --_highlight: var(
-    --shimmer-color,
-    oklch(from currentColor l c h / calc(alpha * 0.2))
-  );
-
-  background-image: linear-gradient(
-    calc(90deg + var(--shimmer-angle, 20deg)),
-    var(--_base) calc(50% - var(--_spread)),
-    color-mix(in oklch, var(--_highlight), var(--_base) 50%)
-      calc(50% - var(--_spread) * 0.5),
-    var(--_highlight) 50%,
-    color-mix(in oklch, var(--_highlight), var(--_base) 50%)
-      calc(50% + var(--_spread) * 0.5),
-    var(--_base) calc(50% + var(--_spread))
-  );
-  background-repeat: no-repeat;
-  background-size: calc(200% + var(--_spread) * 2) 100%;
-  background-position: 0 0;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shadcn-marker-shimmer var(--shimmer-duration, 2s) linear infinite;
-}
-
-// Dark mode: brighter/less-transparent highlight (per shadcn).
-.dark .wp-block-shadcn-marker.marker-shimmer .marker-content {
-  --_highlight: var(
-    --shimmer-color,
-    oklch(from currentColor max(0.8, calc(l + 0.4)) c h / calc(alpha + 0.4))
-  );
-}
-
-// Respect reduced-motion: render the label normally, no animation.
-@media (prefers-reduced-motion: reduce) {
-  .wp-block-shadcn-marker.marker-shimmer .marker-content {
-    animation: none;
-    background-image: none;
-    -webkit-text-fill-color: currentColor;
-  }
-}
+// Shimmer: see shared/styles/_shimmer.scss.
+@include shimmer(".wp-block-shadcn-marker.marker-shimmer .marker-content");

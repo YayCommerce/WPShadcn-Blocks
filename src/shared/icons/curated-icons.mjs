@@ -126,6 +126,13 @@ export const CURATED_ICONS = [
 	// Files & data
 	'file',
 	'file-text',
+	'file-spreadsheet',
+	'file-archive',
+	'file-code',
+	'file-image',
+	'file-video',
+	'file-music',
+	'file-warning',
 	'files',
 	'folder',
 	'folder-open',

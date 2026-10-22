@@ -1,0 +1,59 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "shadcn/attachment-group",
+  "version": "1.0.0",
+  "title": "Attachment Group",
+  "category": "shadcn",
+  "description": "A horizontally scrollable row of attachment cards with snapping and an edge fade.",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
+  "keywords": ["attachment", "attachments", "files", "group", "downloads"],
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": false,
+    "spacing": {
+      "margin": true,
+      "blockGap": true
+    }
+  },
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "example": {
+    "innerBlocks": [
+      {
+        "name": "shadcn/attachment",
+        "attributes": {
+          "title": "briefing-notes.pdf",
+          "description": "PDF · 1.4 MB",
+          "iconName": "file-text"
+        }
+      },
+      {
+        "name": "shadcn/attachment",
+        "attributes": {
+          "title": "customers.csv",
+          "description": "CSV · 18 KB",
+          "iconName": "file-spreadsheet"
+        }
+      },
+      {
+        "name": "shadcn/attachment",
+        "attributes": {
+          "title": "renderer.tsx",
+          "description": "TSX · 12 KB",
+          "iconName": "file-code"
+        }
+      }
+    ],
+    "viewportWidth": 700
+  },
+  "allowedBlocks": ["shadcn/attachment"],
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
