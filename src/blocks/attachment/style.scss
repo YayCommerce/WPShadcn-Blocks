@@ -180,7 +180,9 @@
     max-width: 100%;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    // !important: the editor's RichText sets `white-space: pre-wrap` inline,
+    // which would wrap long names there while the frontend truncates them.
+    white-space: nowrap !important;
   }
 
   .wp-block-shadcn-attachment__title {
@@ -211,6 +213,16 @@
     top: 0.75rem;
     right: 0.75rem;
     gap: 0.25rem;
+  }
+
+  // A vertical card with no media has no picture to float the actions over, so
+  // they take their own row above the text instead of covering the title.
+  &[data-orientation="vertical"]:not(:has(> .wp-block-shadcn-attachment__media)) .wp-block-shadcn-attachment__actions {
+    position: relative; // keeps the z-index above the trigger overlay
+    top: auto;
+    right: auto;
+    order: -1;
+    align-self: flex-end;
   }
 
   // Ghost icon-xs button.
@@ -253,6 +265,13 @@
       outline-offset: -2px;
     }
   }
+}
+
+// Block themes cap constrained-layout children at the content width with a rule
+// that outranks the root above, so a long name would stretch the card past a
+// narrow container.
+.wp-block-shadcn-attachment.wp-block-shadcn-attachment {
+  max-width: 100%;
 }
 
 // Title shimmers while the file is in flight.

@@ -9,6 +9,7 @@ import {
   useBlockProps,
 } from "@wordpress/block-editor";
 import {
+  BaseControl,
   Button,
   PanelBody,
   SelectControl,
@@ -132,13 +133,18 @@ export default function Edit({ attributes, setAttributes }) {
               onSelect={onSelectFile}
               value={fileId}
               render={({ open }) => (
-                <div style={{ display: "flex", gap: 8, marginBottom: 16 }}>
+                <BaseControl
+                  __nextHasNoMarginBottom
+                  label={__("File", "yaycommerce-blocks-for-shadcn-ui")}
+                  help={__("Sets the link, name, size and icon.", "yaycommerce-blocks-for-shadcn-ui")}
+                  style={{ marginBottom: 16 }}
+                >
                   <Button variant="secondary" onClick={open}>
                     {fileId
-                      ? __("Replace file", "yaycommerce-blocks-for-shadcn-ui")
+                      ? __("Change file", "yaycommerce-blocks-for-shadcn-ui")
                       : __("Select file", "yaycommerce-blocks-for-shadcn-ui")}
                   </Button>
-                </div>
+                </BaseControl>
               )}
             />
           </MediaUploadCheck>
@@ -217,22 +223,20 @@ export default function Edit({ attributes, setAttributes }) {
                 allowedTypes={["image"]}
                 value={imageId}
                 render={({ open }) => (
-                  <div style={{ display: "flex", gap: 8, marginBottom: 16 }}>
+                  <BaseControl
+                    __nextHasNoMarginBottom
+                    label={__("Thumbnail image", "yaycommerce-blocks-for-shadcn-ui")}
+                    help={__(
+                      "Defaults to the selected file when it's an image. Pick another to show a different picture.",
+                      "yaycommerce-blocks-for-shadcn-ui"
+                    )}
+                  >
                     <Button variant="secondary" onClick={open}>
                       {imageUrl
-                        ? __("Replace image", "yaycommerce-blocks-for-shadcn-ui")
-                        : __("Select image", "yaycommerce-blocks-for-shadcn-ui")}
+                        ? __("Change thumbnail", "yaycommerce-blocks-for-shadcn-ui")
+                        : __("Select thumbnail", "yaycommerce-blocks-for-shadcn-ui")}
                     </Button>
-                    {imageUrl && (
-                      <Button
-                        variant="tertiary"
-                        isDestructive
-                        onClick={() => setAttributes({ imageId: 0, imageUrl: "", imageAlt: "" })}
-                      >
-                        {__("Remove", "yaycommerce-blocks-for-shadcn-ui")}
-                      </Button>
-                    )}
-                  </div>
+                  </BaseControl>
                 )}
               />
             </MediaUploadCheck>

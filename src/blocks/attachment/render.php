@@ -32,11 +32,12 @@ $shadcn_orientation = 'vertical' === $shadcn_orientation ? 'vertical' : 'horizon
 $shadcn_media_type  = in_array( $shadcn_media_type, array( 'icon', 'image', 'none' ), true ) ? $shadcn_media_type : 'icon';
 
 $shadcn_label   = trim( wp_strip_all_tags( $shadcn_title ) );
-$shadcn_has_url = '' !== $shadcn_url;
+// esc_url() drops unsafe protocols (javascript:), which would leave an empty href that reloads the page.
+$shadcn_has_url = '' !== esc_url( $shadcn_url );
 
 // Media: the spinner replaces the icon while uploading; an image without a URL falls back to the icon.
 $shadcn_media_html = '';
-if ( 'image' === $shadcn_media_type && '' !== $shadcn_image_url ) {
+if ( 'image' === $shadcn_media_type && '' !== esc_url( $shadcn_image_url ) ) {
 	$shadcn_media_html = '<img src="' . esc_url( $shadcn_image_url ) . '" alt="' . esc_attr( $shadcn_image_alt ) . '" loading="lazy" />';
 } elseif ( 'none' !== $shadcn_media_type ) {
 	$shadcn_media_type = 'icon';
