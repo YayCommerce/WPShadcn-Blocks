@@ -1,0 +1,106 @@
+/**
+ * Breadcrumb Block Styles
+ * Ported from shadcn/ui base-nova Breadcrumb, BreadcrumbList, BreadcrumbItem,
+ * BreadcrumbLink, BreadcrumbPage, BreadcrumbSeparator and BreadcrumbEllipsis.
+ * The item block shares this file's classes (editor and frontend).
+ */
+
+.wp-block-shadcn-breadcrumb {
+  color: var(--shadcn-breadcrumb-color, var(--wp--preset--color--muted-foreground, #737373));
+
+  .breadcrumb-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: calc(var(--spacing, 0.25rem) * 1.5); // gap-1.5
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 0.875rem; // text-sm
+    line-height: 1.25rem;
+    overflow-wrap: break-word;
+  }
+
+  .breadcrumb-item {
+    display: inline-flex;
+    align-items: center;
+    gap: calc(var(--spacing, 0.25rem) * 1.5); // gap-1 + the separator's share of gap-1.5
+    margin: 0;
+
+    // The separator sits before its item, so the first one has none.
+    &:first-child > .breadcrumb-separator {
+      display: none;
+    }
+  }
+
+  .breadcrumb-link {
+    color: inherit;
+    text-decoration: none; // beats the theme's underlined links
+    transition: color 150ms;
+
+    &:hover {
+      color: var(--shadcn-breadcrumb-hover-color, var(--wp--preset--color--foreground, #0a0a0a));
+    }
+  }
+
+  .breadcrumb-page {
+    font-weight: 400;
+    color: var(--shadcn-breadcrumb-color, var(--wp--preset--color--foreground, #0a0a0a));
+  }
+
+  // Only the last step is the current page; an unlinked step earlier in the
+  // trail stays muted. :last-of-type, not :last-child, so the editor's
+  // appender (a div after the items) doesn't change it.
+  .breadcrumb-item:not(:last-of-type) > .breadcrumb-page {
+    color: inherit;
+  }
+
+  .breadcrumb-separator {
+    display: inline-flex;
+    align-items: center;
+
+    .shadcn-icon {
+      display: inline-flex;
+      width: 0.875rem; // size-3.5
+      height: 0.875rem;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // cn-rtl-flip
+  [dir="rtl"] & .breadcrumb-separator svg {
+    transform: scaleX(-1);
+  }
+
+  .breadcrumb-ellipsis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.25rem; // size-5
+    height: 1.25rem;
+
+    .shadcn-icon {
+      display: inline-flex;
+      width: 1rem; // size-4
+      height: 1rem;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .breadcrumb-sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}

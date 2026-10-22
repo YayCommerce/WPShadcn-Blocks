@@ -1,0 +1,40 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "shadcn/breadcrumb-item",
+  "version": "1.0.0",
+  "title": "Breadcrumb Item",
+  "category": "shadcn",
+  "description": "One step of a breadcrumb: a link, the current page (no link) or a collapsed ellipsis.",
+  "keywords": ["breadcrumb", "item", "link", "ellipsis"],
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
+  "parent": ["shadcn/breadcrumb"],
+  "attributes": {
+    "type": {
+      "type": "string",
+      "default": "link"
+    },
+    "label": {
+      "type": "string",
+      "default": ""
+    },
+    "url": {
+      "type": "string",
+      "default": ""
+    },
+    "linkTarget": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "anchor": false,
+    "align": false,
+    "className": false,
+    "reusable": false
+  },
+  "usesContext": ["shadcn/breadcrumb-separator"],
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

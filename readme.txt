@@ -25,6 +25,7 @@ shadcn/ui is an open-source project by shadcn. This plugin is not affiliated wit
 * **Tabs** - Layered sections of content that show one panel at a time, built from Tab child blocks.
 * **Badge** - A small inline label or status pill with variants, an optional link and an optional icon.
 * **Avatar** and **Avatar Group** - A circular avatar with fallback initials, and an overlapping stack with an automatic "+N" overflow indicator.
+* **Breadcrumb** and **Breadcrumb Item** - A navigation trail with a choice of separator icon and collapsed ellipsis items. Build it by hand or let Auto mode generate it from the current page (parent pages, categories, archives, search).
 * **Bubble** and **Bubble Group** - Conversational message bubbles for chat mockups: 7 variants, with start/end alignment inherited from the group.
 * **Message** and **Message Group** - A chat message with the Bubble variants, an optional avatar, a sender header, a status footer with icon actions (copy, feedback, retry), an emoji reaction, custom bubble color and radius, and start/end alignment inherited from the group.
 * **Marker** - A small labeled meta-row: a muted text line, a centered separator, or a bordered label.
@@ -168,6 +169,7 @@ First public release. Requires the Shadcn theme (or a child of it) to be active.
 * Marquee — continuously scrolling, seamless strip for logos, testimonials or any content, built from Marquee Item children.
 * Badge — small inline label or status pill with variants, an optional link and an optional icon.
 * Avatar and Avatar Group — circular avatar with fallback initials, and an overlapping stack with an automatic "+N" overflow indicator.
+* Breadcrumb and Breadcrumb Item — navigation trail with a choice of separator icon, collapsed ellipsis items, and an Auto mode that builds the trail from the current page.
 * Bubble and Bubble Group — conversational message bubbles for chat mockups: 7 variants, start/end alignment inherited from the group.
 * Message and Message Group — chat messages with the Bubble variants, optional avatar, sender header, status footer with icon actions, emoji reaction, custom bubble color and radius, start/end alignment inherited from the group.
 * Marker — small labeled meta-row: a muted text line, a centered separator, or a bordered label.
