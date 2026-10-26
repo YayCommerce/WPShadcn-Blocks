@@ -24,6 +24,7 @@ shadcn/ui is an open-source project by shadcn. This plugin is not affiliated wit
 * **Accordion** - Vertically stacked collapsible sections, one open at a time or several at once. Collapsible (all closed), selectable trigger heading level (H2-H6), outlined variant, optional auto-rotation with per-item progress, and a per-item disabled state.
 * **Tabs** - Layered sections of content that show one panel at a time, built from Tab child blocks.
 * **Badge** - A small inline label or status pill with variants, an optional link and an optional icon.
+* **Kbd** - A keyboard key or shortcut with an optional icon, and the same look for WordPress's "Keyboard input" text format, for keys inside a sentence.
 * **Avatar** and **Avatar Group** - A circular avatar with fallback initials, and an overlapping stack with an automatic "+N" overflow indicator.
 * **Bubble** and **Bubble Group** - Conversational message bubbles for chat mockups: 7 variants, with start/end alignment inherited from the group.
 * **Message** and **Message Group** - A chat message with the Bubble variants, an optional avatar, a sender header, a status footer with icon actions (copy, feedback, retry), an emoji reaction, custom bubble color and radius, and start/end alignment inherited from the group.
@@ -167,6 +168,7 @@ First public release. Requires the Shadcn theme (or a child of it) to be active.
 * Carousel — wraps any content, including posts and products; horizontal or vertical, with a configurable number of slides per view.
 * Marquee — continuously scrolling, seamless strip for logos, testimonials or any content, built from Marquee Item children.
 * Badge — small inline label or status pill with variants, an optional link and an optional icon.
+* Kbd — keyboard key or shortcut with an optional icon, and the same look for WordPress's "Keyboard input" text format, for keys inside a sentence.
 * Avatar and Avatar Group — circular avatar with fallback initials, and an overlapping stack with an automatic "+N" overflow indicator.
 * Bubble and Bubble Group — conversational message bubbles for chat mockups: 7 variants, start/end alignment inherited from the group.
 * Message and Message Group — chat messages with the Bubble variants, optional avatar, sender header, status footer with icon actions, emoji reaction, custom bubble color and radius, start/end alignment inherited from the group.

@@ -59,6 +59,7 @@ class Plugin {
 		add_action( 'init', array( $this, 'register_blocks' ) );
 		add_filter( 'block_categories_all', array( $this, 'register_block_category' ), 10, 2 );
 		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_editor_styles' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_kbd_style' ) );
 		// Detect interactive blocks during content render, then enqueue modules in footer.
 		add_filter( 'the_content', array( $this, 'detect_interactive_blocks_in_content' ), 5 );
 		add_action( 'wp_footer', array( $this, 'enqueue_interactive_scripts' ), 5 );
@@ -68,6 +69,19 @@ class Plugin {
 		// Same idea for the Live Purchase toast: the block itself renders
 		// nothing in place, and the fixed-position region is printed here.
 		add_action( 'wp_footer', array( $this, 'render_live_purchase_region' ), 5 );
+	}
+
+	/**
+	 * Load the Kbd stylesheet on every page.
+	 *
+	 * The stylesheet also styles core's "Keyboard input" format (a bare <kbd>
+	 * inside other blocks' HTML), which doesn't make WordPress load it.
+	 */
+	public function enqueue_kbd_style() {
+		$handle = generate_block_asset_handle( 'shadcn/kbd', 'style' );
+		if ( wp_style_is( $handle, 'registered' ) ) {
+			wp_enqueue_style( $handle );
+		}
 	}
 
 	/**
