@@ -4,45 +4,58 @@
  * pointer-events-none inline-flex h-5 w-fit min-w-5 items-center justify-center
  * gap-1 rounded-sm bg-muted px-1 font-sans text-xs font-medium
  * text-muted-foreground select-none [&_svg]:size-3.
- *
- * Also styles core's "Keyboard input" format, a bare <kbd> inside paragraphs.
- * `:where(kbd)` keeps that at zero specificity so a theme's own kbd styles win;
- * the block keeps a real selector so it looks the same on any theme.
  */
 
-:where(kbd),
-kbd.wp-block-shadcn-kbd {
+@mixin kbd-surface {
   box-sizing: border-box;
   display: inline-flex;
-  min-width: 1.25rem; // min-w-5
-  min-height: 1.25rem; // h-5, grows with a larger iconSize
   align-items: center;
   justify-content: center;
-  gap: calc(var(--spacing, 0.25rem) * 1);
-  padding-inline: calc(var(--spacing, 0.25rem) * 1); // px-1
-  padding-block: 0;
   border-radius: calc(var(--radius, 0.625rem) - 4px); // rounded-sm
   background-color: var(--wp--preset--color--muted, #f5f5f5);
   color: var(--wp--preset--color--muted-foreground, #737373);
   font-family: inherit; // font-sans (browsers default kbd to monospace)
-  font-size: 0.75rem; // text-xs
-  line-height: 1rem;
   font-weight: 500; // font-medium
   white-space: nowrap;
   vertical-align: middle;
+}
+
+kbd.wp-block-shadcn-kbd {
+  @include kbd-surface;
+  min-width: 1.25rem; // min-w-5
+  min-height: 1.25rem; // h-5, grows with a larger iconSize
+  gap: calc(var(--spacing, 0.25rem) * 1);
+  padding-inline: calc(var(--spacing, 0.25rem) * 1); // px-1
+  padding-block: 0;
+  font-size: 0.75rem; // text-xs
+  line-height: 1rem;
   pointer-events: none;
   user-select: none;
+
+  .shadcn-icon {
+    width: 0.75rem; // size-3; an inline iconSize overrides
+    height: 0.75rem;
+  }
+
+  // The editor still has to select and type into it.
+  .editor-styles-wrapper & {
+    pointer-events: auto;
+    user-select: auto;
+  }
 }
 
-kbd.wp-block-shadcn-kbd .shadcn-icon {
-  width: 0.75rem; // size-3; an inline iconSize overrides
-  height: 0.75rem;
-}
-
-// The editor still has to select and type into it.
-.editor-styles-wrapper kbd {
-  pointer-events: auto;
-  user-select: auto;
+// Core's "Keyboard input" format: a bare <kbd> in running text. Same look, but
+// sized in em so it follows the text it sits in (a heading, a large paragraph),
+// and left selectable so copying the sentence keeps the keys. Zero specificity
+// lets a theme's own kbd styles win; wp-admin is excluded so a non-iframed
+// editor doesn't restyle the admin's own <kbd> (keyboard shortcuts modal).
+:where(body:not(.wp-admin) kbd, .editor-styles-wrapper kbd) {
+  @include kbd-surface;
+  min-width: 1.6667em; // 20px at a 12px key
+  min-height: 1.6667em;
+  padding: 0 0.3333em; // 4px
+  font-size: 0.75em; // 12px in 16px text
+  line-height: 1.3333;
 }
 
 // Inside a tooltip (dark surface): bg-background/20 text-background.
