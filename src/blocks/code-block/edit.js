@@ -1,20 +1,40 @@
 /**
  * WordPress dependencies
  */
-import {
-  InspectorControls,
-  PlainText,
-  useBlockProps,
-} from "@wordpress/block-editor";
+import { InspectorControls, useBlockProps } from "@wordpress/block-editor";
 import {
   PanelBody,
   SelectControl,
   TextControl,
   ToggleControl,
 } from "@wordpress/components";
+import { useLayoutEffect, useRef } from "@wordpress/element";
 import { __ } from "@wordpress/i18n";
 
+/**
+ * Internal dependencies
+ */
+import { tokenize } from "./highlight";
+
 const TD = "yaycommerce-blocks-for-shadcn-ui";
+
+// Same list as highlight.js (shadcn's languages).
+const LANGUAGES = [
+  { label: __("Plain text", TD), value: "" },
+  { label: "Bash", value: "bash" },
+  { label: "CSS", value: "css" },
+  { label: "Diff", value: "diff" },
+  { label: "HTML", value: "html" },
+  { label: "JavaScript", value: "javascript" },
+  { label: "JSON", value: "json" },
+  { label: "JSX", value: "jsx" },
+  { label: "Markdown", value: "markdown" },
+  { label: "Python", value: "python" },
+  { label: "SQL", value: "sql" },
+  { label: "TSX", value: "tsx" },
+  { label: "TypeScript", value: "typescript" },
+  { label: "YAML", value: "yaml" },
+];
 
 /**
  * Parse "2,4-6" into a Set of line numbers (same rules as render.php).
@@ -59,7 +79,7 @@ const Svg = ({ children }) => (
  * @param {Object} props Block props.
  * @return {Element} Block edit element.
  */
-export default function Edit({ attributes, setAttributes, isSelected }) {
+export default function Edit({ attributes, setAttributes }) {
   const {
     code,
     language,
@@ -79,11 +99,7 @@ export default function Edit({ attributes, setAttributes, isSelected }) {
     removedLines,
   } = attributes;
 
-  // Outer element = editor wrapper (alignment, margin). The card itself is
-  // the inner preview, so the code input can sit outside of it.
-  const blockProps = useBlockProps({ className: "wp-block-shadcn-code-block-editor" });
-
-  const previewProps = {
+  const blockProps = useBlockProps({
     className: [
       "wp-block-shadcn-code-block",
       variant === "destructive" && "is-destructive",
@@ -94,9 +110,34 @@ export default function Edit({ attributes, setAttributes, isSelected }) {
     ]
       .filter(Boolean)
       .join(" "),
-  };
+  });
 
-  const lines = code.replace(/\r\n/g, "\n").replace(/\n+$/, "").split("\n");
+  // One token array per line, same output as view.js on the page. The
+  // trailing newline is kept here so a new last line shows while typing.
+  const lines = tokenize(code.replace(/\r\n/g, "\n"), language);
+
+  // The code is typed in a transparent textarea laid exactly over the colored
+  // lines (only its caret and selection show). It is placed over the text
+  // column, so it skips the line-number gutter, and sized to the code so the
+  // pre scrolls both together.
+  const codeRef = useRef();
+  const inputRef = useRef();
+  useLayoutEffect(() => {
+    const first = codeRef.current?.querySelector(".line-content");
+    if (!first || !inputRef.current) {
+      return;
+    }
+    const code = codeRef.current;
+    const pre = code.parentElement;
+    const box = pre.getBoundingClientRect();
+    const text = first.getBoundingClientRect();
+    Object.assign(inputRef.current.style, {
+      left: `${text.left - box.left + pre.scrollLeft}px`,
+      top: `${code.getBoundingClientRect().top - box.top + pre.scrollTop}px`,
+      width: `${text.width}px`,
+      height: `${code.offsetHeight}px`,
+    });
+  });
   const highlighted = lineSet(highlightLines);
   const added = lineSet(addedLines);
   const removed = lineSet(removedLines);
@@ -148,12 +189,13 @@ export default function Edit({ attributes, setAttributes, isSelected }) {
             value={title}
             onChange={(value) => setAttributes({ title: value })}
           />
-          <TextControl
+          <SelectControl
             __next40pxDefaultSize
             __nextHasNoMarginBottom
             label={__("Language", TD)}
-            help={__("A label only, no syntax colors.", TD)}
+            help={__("Adds syntax colors.", TD)}
             value={language}
+            options={LANGUAGES}
             onChange={(value) => setAttributes({ language: value })}
           />
           <SelectControl
@@ -282,53 +324,62 @@ export default function Edit({ attributes, setAttributes, isSelected }) {
       </InspectorControls>
 
       <div {...blockProps}>
-        <div {...previewProps}>
-          {title ? (
-            <div className="code-block-header">
-              <div className="code-block-title">{title}</div>
-              {actions}
-            </div>
-          ) : (
-            actions
-          )}
-          {code.trim() !== "" && (
-            <pre
-              className="code-block-content"
-              dir="ltr"
-              style={{ counterReset: `line ${startLine - 1}` }}
-            >
-              <code>
-                {lines.map((line, i) => {
-                  const n = i + 1;
-                  const v = added.has(n)
-                    ? "added"
-                    : removed.has(n)
-                    ? "removed"
-                    : highlighted.has(n)
-                    ? "highlighted"
-                    : undefined;
-                  return (
-                    <span className="line" data-variant={v} key={i}>
-                      <span className="line-content">{line === "" ? "\n" : line}</span>
-                    </span>
-                  );
-                })}
-              </code>
-            </pre>
-          )}
-        </div>
-        {(isSelected || code.trim() === "") && (
-          <div className="code-block-editor">
-            <span className="code-block-editor-label">{__("Code", TD)}</span>
-            <PlainText
-              className="code-block-input"
-              value={code}
-              onChange={(value) => setAttributes({ code: value })}
-              placeholder={__("Write code…", TD)}
-              aria-label={__("Code", TD)}
-            />
+        {title ? (
+          <div className="code-block-header">
+            <div className="code-block-title">{title}</div>
+            {actions}
           </div>
+        ) : (
+          actions
         )}
+        <pre
+          className="code-block-content"
+          dir="ltr"
+          style={{ counterReset: `line ${startLine - 1}` }}
+        >
+          <code ref={codeRef}>
+            {lines.map((line, i) => {
+              const n = i + 1;
+              const v = added.has(n)
+                ? "added"
+                : removed.has(n)
+                ? "removed"
+                : highlighted.has(n)
+                ? "highlighted"
+                : undefined;
+              return (
+                <span className="line" data-variant={v} key={i}>
+                  <span className="line-content">
+                    {line.length === 0
+                      ? "\n"
+                      : line.map(({ type, text }, j) =>
+                          type ? (
+                            <span className={`tok-${type}`} key={j}>
+                              {text}
+                            </span>
+                          ) : (
+                            text
+                          )
+                        )}
+                  </span>
+                </span>
+              );
+            })}
+          </code>
+          <textarea
+            ref={inputRef}
+            className="code-block-input"
+            value={code}
+            onChange={(event) => setAttributes({ code: event.target.value })}
+            placeholder={__("Write code…", TD)}
+            aria-label={__("Code", TD)}
+            spellCheck={false}
+            autoCapitalize="off"
+            autoComplete="off"
+            autoCorrect="off"
+            wrap={wrap ? "soft" : "off"}
+          />
+        </pre>
       </div>
     </>
   );

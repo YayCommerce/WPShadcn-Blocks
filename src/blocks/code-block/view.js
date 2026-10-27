@@ -2,6 +2,8 @@
  * Code Block: copy, wrap, download and "Show more" buttons. Plain script, no
  * store needed. Mirrors the shadcn examples' handlers.
  */
+import { tokenize } from "./highlight";
+
 const root = (el) => el.closest(".wp-block-shadcn-code-block");
 
 // Line numbers and +/- markers are CSS; an empty line holds "\n" for selection.
@@ -70,4 +72,29 @@ document
       block.classList.add("is-fit");
       block.querySelector(".code-block-footer").hidden = true;
     }
+  });
+
+// Syntax colors: swap each line's text for token spans (textContent, so safe).
+document
+  .querySelectorAll(".wp-block-shadcn-code-block code[data-language]")
+  .forEach((code) => {
+    const contents = code.querySelectorAll(".line-content");
+    tokenize(plainCode(root(code)), code.dataset.language).forEach(
+      (tokens, index) => {
+        if (!contents[index] || tokens.length === 0) {
+          return;
+        }
+        contents[index].replaceChildren(
+          ...tokens.map(({ type, text }) => {
+            if (!type) {
+              return text;
+            }
+            const span = document.createElement("span");
+            span.className = `tok-${type}`;
+            span.textContent = text;
+            return span;
+          })
+        );
+      }
+    );
   });

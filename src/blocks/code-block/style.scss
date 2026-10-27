@@ -319,8 +319,49 @@ $btn-radius: min(calc(var(--radius, 0.625rem) - 2px), 10px);
   }
 
   .line-content {
+    display: block; // full column width, so edit.js can size the textarea to it
     min-width: 0;
   }
+
+  // Syntax tokens (highlight.js). Colors from the github-light / github-dark
+  // themes shadcn uses; override the --code-tok-* variables to restyle.
+  --code-tok-keyword: #d73a49;
+  --code-tok-string: #032f62;
+  --code-tok-function: #6f42c1;
+  --code-tok-comment: #6a737d;
+  --code-tok-constant: #005cc5;
+  --code-tok-tag: #22863a;
+  --code-tok-attr: #6f42c1;
+  --code-tok-variable: #e36209;
+  --code-tok-inserted: #22863a;
+  --code-tok-deleted: #b31d28;
+
+  .dark & {
+    --code-tok-keyword: #f97583;
+    --code-tok-string: #9ecbff;
+    --code-tok-function: #b392f0;
+    --code-tok-comment: #959da5;
+    --code-tok-constant: #79b8ff;
+    --code-tok-tag: #85e89d;
+    --code-tok-attr: #b392f0;
+    --code-tok-variable: #ffab70;
+    --code-tok-inserted: #85e89d;
+    --code-tok-deleted: #fdaeb7;
+  }
+
+  .tok-keyword { color: var(--code-tok-keyword); }
+  .tok-string { color: var(--code-tok-string); }
+  .tok-function { color: var(--code-tok-function); }
+  .tok-comment { color: var(--code-tok-comment); }
+  .tok-constant,
+  .tok-number,
+  .tok-property,
+  .tok-meta { color: var(--code-tok-constant); }
+  .tok-tag { color: var(--code-tok-tag); }
+  .tok-attr { color: var(--code-tok-attr); }
+  .tok-variable { color: var(--code-tok-variable); }
+  .tok-inserted { color: var(--code-tok-inserted); }
+  .tok-deleted { color: var(--code-tok-deleted); }
 
   // in-data-numbered: col-span-2 grid grid-cols-subgrid gap-x-3 [counter-increment:line]
   // before:content-[counter(line)] min-w-6 text-end text-muted-foreground select-none
@@ -403,49 +444,58 @@ $btn-radius: min(calc(var(--radius, 0.625rem) - 2px), 10px);
   }
 }
 
-// Editor: the code input sits below the live preview, outside the card.
-.code-block-editor {
-  margin-top: 0.5rem;
+// Editor: the transparent textarea laid over the colored lines (edit.js sets
+// its position and size). Same font and line height as the lines, so the
+// caret lands on the text; only the caret and the selection are visible.
+.wp-block-shadcn-code-block .code-block-content {
+  position: relative;
 }
 
-.code-block-editor-label {
-  display: block;
-  margin-bottom: 0.25rem;
-  font-size: 11px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: #757575;
-}
-
-.code-block-editor textarea.code-block-input {
-  display: block;
-  width: 100%;
-  min-height: 6rem;
-  padding: 0.75rem 1rem;
-  border: 1px solid #949494;
-  border-radius: 2px;
-  background: #fff;
+.wp-block-shadcn-code-block textarea.code-block-input {
+  position: absolute;
+  z-index: 1;
+  box-sizing: border-box;
+  min-height: 1lh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
   box-shadow: none;
-  color: #1e1e1e;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 0.8125rem;
-  line-height: 1.5;
-  resize: vertical;
+  color: transparent;
+  // Not currentColor: that is the transparent text color, so the caret would vanish.
+  caret-color: var(--wp--preset--color--foreground, #0a0a0a);
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  outline: 0;
+  resize: none;
+  tab-size: 2;
   white-space: pre;
+  -webkit-text-fill-color: transparent;
 
-  &:focus {
-    border-color: var(--wp-admin-theme-color, #3858e9);
-    box-shadow: 0 0 0 1px var(--wp-admin-theme-color, #3858e9);
-    outline: 0;
+  &::placeholder {
+    color: var(--wp--preset--color--muted-foreground, #737373);
+    -webkit-text-fill-color: var(--wp--preset--color--muted-foreground, #737373);
   }
 }
 
-// Editor: the preview's buttons are decoration only.
-.wp-block-shadcn-code-block-editor .wp-block-shadcn-code-block button {
+.wp-block-shadcn-code-block.is-destructive textarea.code-block-input {
+  caret-color: var(--wp--preset--color--destructive, #dc2626);
+}
+
+.wp-block-shadcn-code-block.is-wrap textarea.code-block-input {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+// Editor: the buttons are decoration only.
+.wp-block-shadcn-code-block.block-editor-block-list__block button {
   pointer-events: none;
 }
 
 // Editor: floating actions (no title) are always visible, there is no hover to reveal them.
-.wp-block-shadcn-code-block-editor .code-block-actions.is-floating {
+.wp-block-shadcn-code-block.block-editor-block-list__block .code-block-actions.is-floating {
   opacity: 1;
 }
