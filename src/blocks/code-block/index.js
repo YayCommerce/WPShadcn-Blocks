@@ -13,6 +13,7 @@ import Edit from "./edit";
  * Styles
  */
 import "./style.scss";
+import "./editor.scss";
 
 /**
  * Register the Code Block block.

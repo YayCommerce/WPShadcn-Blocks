@@ -48,8 +48,12 @@ document.addEventListener("click", (event) => {
     const link = document.createElement("a");
     link.href = url;
     link.download = download.dataset.filename;
+    // Attached, and revoked later: Firefox ignores clicks on a detached link
+    // and Safari can cancel a download whose URL is revoked right away.
+    document.body.append(link);
     link.click();
-    URL.revokeObjectURL(url);
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(url));
     return;
   }
 
@@ -62,17 +66,6 @@ document.addEventListener("click", (event) => {
       : more.dataset.more;
   }
 });
-
-// No "Show more" when the code already fits under the cap.
-document
-  .querySelectorAll(".wp-block-shadcn-code-block.has-show-more")
-  .forEach((block) => {
-    const pre = block.querySelector(".code-block-content");
-    if (pre.scrollHeight <= pre.clientHeight + 1) {
-      block.classList.add("is-fit");
-      block.querySelector(".code-block-footer").hidden = true;
-    }
-  });
 
 // Syntax colors: swap each line's text for token spans (textContent, so safe).
 document

@@ -9,7 +9,7 @@
 const JS_KEYWORDS =
   "as async await break case catch class const continue debugger default delete do else enum export extends finally for from function get if implements import in instanceof interface let new of package private protected public readonly return satisfies set static super switch this throw try type typeof var void while with yield";
 
-const LANGUAGES = {
+export const LANGUAGES = {
   javascript: { comments: ["//", "/*"], strings: "\"'`", keywords: JS_KEYWORDS },
   typescript: { comments: ["//", "/*"], strings: "\"'`", keywords: JS_KEYWORDS },
   jsx: { comments: ["//", "/*"], strings: "\"'`", keywords: JS_KEYWORDS, tags: true },
@@ -102,7 +102,9 @@ const compile = (name) => {
     add("keyword", "^#{1,6} [^\\n]*");
   }
   if (lang.tags) {
-    add("tag", "(?<=</?)[A-Za-z][\\w.:-]*");
+    // Matches "<div" / "</div"; tokenize() gives the "<" back as plain text.
+    // No lookbehind: Safari < 16.4 throws on it.
+    add("tag", "</?[A-Za-z][\\w.:-]*");
     add("attr", "\\b[A-Za-z_:][\\w:.-]*(?==)");
   }
   if (lang.css) {
@@ -135,7 +137,7 @@ const compile = (name) => {
  * @param {string} language Language name or alias.
  * @return {string|null} Supported language key.
  */
-export const resolveLanguage = (language) => {
+const resolveLanguage = (language) => {
   const name = String(language || "").toLowerCase();
   return LANGUAGES[name] ? name : ALIASES[name] || null;
 };
@@ -164,7 +166,11 @@ export const tokenize = (code, language) => {
         tokens.push({ type: "", text: code.slice(last, match.index) });
       }
       const type = Object.keys(match.groups).find((key) => match.groups[key]);
-      tokens.push({ type, text: match[0] });
+      const bracket = type === "tag" && match[0].match(/^<\/?/);
+      if (bracket) {
+        tokens.push({ type: "", text: bracket[0] });
+      }
+      tokens.push({ type, text: match[0].slice(bracket ? bracket[0].length : 0) });
       last = match.index + match[0].length;
     }
     if (last < code.length) {

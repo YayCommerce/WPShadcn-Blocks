@@ -45,7 +45,13 @@ $shadcn_title       = isset( $attributes['title'] ) ? trim( $attributes['title']
 $shadcn_language    = isset( $attributes['language'] ) ? trim( $attributes['language'] ) : '';
 $shadcn_start       = isset( $attributes['startLine'] ) ? (int) $attributes['startLine'] : 1;
 $shadcn_max_lines   = isset( $attributes['maxLines'] ) ? max( 0, (int) $attributes['maxLines'] ) : 0;
-$shadcn_show_more   = $shadcn_max_lines > 0 && ( ! isset( $attributes['showMore'] ) || $attributes['showMore'] );
+$shadcn_lines       = explode( "\n", rtrim( str_replace( "\r\n", "\n", $shadcn_code ), "\n" ) );
+// Cap only when there are more lines than "Visible lines". Decided here, not
+// by measuring in view.js, so it also works inside closed tabs or accordions.
+$shadcn_capped      = $shadcn_max_lines > 0 && count( $shadcn_lines ) > $shadcn_max_lines;
+$shadcn_show_more   = $shadcn_capped && ( ! isset( $attributes['showMore'] ) || $attributes['showMore'] );
+// Line markers use the numbers shown in the gutter.
+$shadcn_first       = ! empty( $attributes['lineNumbers'] ) ? $shadcn_start : 1;
 $shadcn_has_copy    = ! isset( $attributes['copy'] ) || $attributes['copy'];
 $shadcn_has_header  = '' !== $shadcn_title;
 $shadcn_highlighted = shadcn_code_block_line_set( $attributes['highlightLines'] ?? '' );
@@ -66,7 +72,7 @@ if ( ! empty( $attributes['wrap'] ) ) {
 if ( ! empty( $attributes['lineNumbers'] ) ) {
 	$shadcn_classes[] = 'has-line-numbers';
 }
-if ( $shadcn_max_lines > 0 ) {
+if ( $shadcn_capped ) {
 	$shadcn_classes[] = 'has-max-height';
 }
 if ( $shadcn_show_more ) {
@@ -79,14 +85,13 @@ if ( $shadcn_has_header ) {
 $shadcn_wrapper_attributes = get_block_wrapper_attributes(
 	array(
 		'class' => implode( ' ', $shadcn_classes ),
-		'style' => $shadcn_max_lines > 0 ? '--code-max-lines:' . $shadcn_max_lines . ';' : '',
+		'style' => $shadcn_capped ? '--code-max-lines:' . $shadcn_max_lines . ';' : '',
 	)
 );
 
-$shadcn_lines      = explode( "\n", rtrim( str_replace( "\r\n", "\n", $shadcn_code ), "\n" ) );
 $shadcn_lines_html = '';
 foreach ( $shadcn_lines as $shadcn_index => $shadcn_line ) {
-	$shadcn_number  = $shadcn_index + 1;
+	$shadcn_number  = $shadcn_first + $shadcn_index;
 	$shadcn_variant = '';
 	if ( isset( $shadcn_added[ $shadcn_number ] ) ) {
 		$shadcn_variant = 'added';
@@ -133,8 +138,7 @@ if ( $shadcn_has_copy ) {
 
 $shadcn_pre_id = wp_unique_id( 'shadcn-code-' );
 
-// Show more example: footer with a ghost xs button + chevron. view.js hides
-// the footer when the code already fits under the cap.
+// Show more example: footer with a ghost xs button + chevron.
 $shadcn_footer = '';
 if ( $shadcn_show_more ) {
 	$shadcn_footer = '<div class="code-block-footer"><button type="button" class="code-block-more" aria-expanded="false" aria-controls="' . esc_attr( $shadcn_pre_id ) . '" data-more="' . esc_attr__( 'Show more', $shadcn_td ) . '" data-less="' . esc_attr__( 'Show less', $shadcn_td ) . '">'

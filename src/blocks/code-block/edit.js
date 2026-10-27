@@ -8,32 +8,20 @@ import {
   TextControl,
   ToggleControl,
 } from "@wordpress/components";
-import { useLayoutEffect, useRef } from "@wordpress/element";
+import { useLayoutEffect, useMemo, useRef } from "@wordpress/element";
 import { __ } from "@wordpress/i18n";
 
 /**
  * Internal dependencies
  */
-import { tokenize } from "./highlight";
+import { LANGUAGES, tokenize } from "./highlight";
 
 const TD = "yaycommerce-blocks-for-shadcn-ui";
 
-// Same list as highlight.js (shadcn's languages).
-const LANGUAGES = [
+// Options from highlight.js, so the list has one source.
+const LANGUAGE_OPTIONS = [
   { label: __("Plain text", TD), value: "" },
-  { label: "Bash", value: "bash" },
-  { label: "CSS", value: "css" },
-  { label: "Diff", value: "diff" },
-  { label: "HTML", value: "html" },
-  { label: "JavaScript", value: "javascript" },
-  { label: "JSON", value: "json" },
-  { label: "JSX", value: "jsx" },
-  { label: "Markdown", value: "markdown" },
-  { label: "Python", value: "python" },
-  { label: "SQL", value: "sql" },
-  { label: "TSX", value: "tsx" },
-  { label: "TypeScript", value: "typescript" },
-  { label: "YAML", value: "yaml" },
+  ...Object.keys(LANGUAGES).map((value) => ({ label: value, value })),
 ];
 
 /**
@@ -114,7 +102,10 @@ export default function Edit({ attributes, setAttributes }) {
 
   // One token array per line, same output as view.js on the page. The
   // trailing newline is kept here so a new last line shows while typing.
-  const lines = tokenize(code.replace(/\r\n/g, "\n"), language);
+  const lines = useMemo(
+    () => tokenize(code.replace(/\r\n/g, "\n"), language),
+    [code, language]
+  );
 
   // The code is typed in a transparent textarea laid exactly over the colored
   // lines (only its caret and selection show). It is placed over the text
@@ -123,21 +114,26 @@ export default function Edit({ attributes, setAttributes }) {
   const codeRef = useRef();
   const inputRef = useRef();
   useLayoutEffect(() => {
-    const first = codeRef.current?.querySelector(".line-content");
-    if (!first || !inputRef.current) {
-      return;
-    }
     const code = codeRef.current;
     const pre = code.parentElement;
-    const box = pre.getBoundingClientRect();
-    const text = first.getBoundingClientRect();
-    Object.assign(inputRef.current.style, {
-      left: `${text.left - box.left + pre.scrollLeft}px`,
-      top: `${code.getBoundingClientRect().top - box.top + pre.scrollTop}px`,
-      width: `${text.width}px`,
-      height: `${code.offsetHeight}px`,
-    });
-  });
+    const place = () => {
+      const first = code.querySelector(".line-content");
+      const box = pre.getBoundingClientRect();
+      const text = first.getBoundingClientRect();
+      Object.assign(inputRef.current.style, {
+        left: `${text.left - box.left + pre.scrollLeft}px`,
+        top: `${code.getBoundingClientRect().top - box.top + pre.scrollTop}px`,
+        width: `${text.width}px`,
+        height: `${code.offsetHeight}px`,
+      });
+    };
+    place();
+    // Re-place when the canvas or sidebar changes the width (lines re-wrap).
+    const observer = new ResizeObserver(place);
+    observer.observe(pre);
+    observer.observe(code);
+    return () => observer.disconnect();
+  }, [lines, wrap, lineNumbers, startLine, size]);
   const highlighted = lineSet(highlightLines);
   const added = lineSet(addedLines);
   const removed = lineSet(removedLines);
@@ -195,7 +191,7 @@ export default function Edit({ attributes, setAttributes }) {
             label={__("Language", TD)}
             help={__("Adds syntax colors.", TD)}
             value={language}
-            options={LANGUAGES}
+            options={LANGUAGE_OPTIONS}
             onChange={(value) => setAttributes({ language: value })}
           />
           <SelectControl
@@ -302,7 +298,7 @@ export default function Edit({ attributes, setAttributes }) {
             __next40pxDefaultSize
             __nextHasNoMarginBottom
             label={__("Highlighted lines", TD)}
-            help={__("e.g. 2,4-6", TD)}
+            help={__("Line numbers as shown in the gutter, e.g. 2,4-6", TD)}
             value={highlightLines}
             onChange={(value) => setAttributes({ highlightLines: value })}
           />
@@ -339,7 +335,8 @@ export default function Edit({ attributes, setAttributes }) {
         >
           <code ref={codeRef}>
             {lines.map((line, i) => {
-              const n = i + 1;
+              // Line markers use the numbers shown in the gutter.
+              const n = (lineNumbers ? startLine : 1) + i;
               const v = added.has(n)
                 ? "added"
                 : removed.has(n)
