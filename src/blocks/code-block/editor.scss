@@ -1,0 +1,59 @@
+/**
+ * Code Block, editor only.
+ */
+
+// The transparent textarea laid over the colored lines (edit.js sets its
+// position and size, relative to the pre). Same font and line height as the
+// lines, so the caret lands on the text; only the caret and selection show.
+.wp-block-shadcn-code-block .code-block-content {
+  position: relative;
+}
+
+.wp-block-shadcn-code-block textarea.code-block-input {
+  position: absolute;
+  z-index: 1;
+  box-sizing: border-box;
+  min-height: 1lh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: transparent;
+  // Not currentColor: that is the transparent text color, so the caret would vanish.
+  caret-color: var(--wp--preset--color--foreground, #0a0a0a);
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  outline: 0;
+  resize: none;
+  tab-size: 2;
+  white-space: pre;
+  -webkit-text-fill-color: transparent;
+
+  &::placeholder {
+    color: var(--wp--preset--color--muted-foreground, #737373);
+    -webkit-text-fill-color: var(--wp--preset--color--muted-foreground, #737373);
+  }
+}
+
+.wp-block-shadcn-code-block.is-destructive textarea.code-block-input {
+  caret-color: var(--wp--preset--color--destructive, #dc2626);
+}
+
+.wp-block-shadcn-code-block.is-wrap textarea.code-block-input {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+// Editor: the buttons are decoration only.
+.wp-block-shadcn-code-block.block-editor-block-list__block button {
+  pointer-events: none;
+}
+
+// Editor: floating actions (no title) are always visible, there is no hover to reveal them.
+.wp-block-shadcn-code-block.block-editor-block-list__block .code-block-actions.is-floating {
+  opacity: 1;
+}

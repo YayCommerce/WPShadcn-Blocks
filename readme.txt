@@ -37,6 +37,7 @@ shadcn/ui is an open-source project by shadcn. This plugin is not affiliated wit
 * **Drawer** - A slide-out panel, with Drawer Trigger, Header, Content and Footer child blocks.
 * **Sheet** - A modal side panel, with Sheet Trigger, Header, Content and Footer child blocks.
 * **Tooltip** - A hover hint, with Tooltip Trigger and Tooltip Content child blocks.
+* **Code Block** - Code, terminal output, logs or a diff, with a title, copy button, line numbers, wrapping, highlighted/added/removed lines and a max height.
 
 = Motion and data blocks =
 
@@ -164,6 +165,7 @@ First public release. Requires the Shadcn theme (or a child of it) to be active.
 * Drawer — slide-out panel with Drawer Trigger, Header, Content and Footer.
 * Sheet — modal side panel with Sheet Trigger, Header, Content and Footer.
 * Tooltip — hover hint with Tooltip Trigger and Tooltip Content.
+* Code Block — code, terminal output, logs or a diff with title, copy button, line numbers, wrapping, line markers and max height.
 * Carousel — wraps any content, including posts and products; horizontal or vertical, with a configurable number of slides per view.
 * Marquee — continuously scrolling, seamless strip for logos, testimonials or any content, built from Marquee Item children.
 * Badge — small inline label or status pill with variants, an optional link and an optional icon.

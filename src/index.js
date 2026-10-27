@@ -42,3 +42,5 @@ import "./blocks/sheet-footer";
 
 import "./blocks/avatar";
 import "./blocks/avatar-group";
+
+import "./blocks/code-block";

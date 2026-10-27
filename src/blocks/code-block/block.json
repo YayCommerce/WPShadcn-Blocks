@@ -1,0 +1,52 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "shadcn/code-block",
+  "version": "1.0.0",
+  "title": "Code Block",
+  "category": "shadcn",
+  "description": "Code, terminal output, logs or a diff, with an optional title, copy button and line numbers.",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
+  "keywords": ["code", "snippet", "terminal", "pre", "diff", "syntax"],
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": ["wide", "full"],
+    "spacing": {
+      "margin": true
+    }
+  },
+  "attributes": {
+    "code": { "type": "string", "default": "" },
+    "language": { "type": "string", "default": "" },
+    "title": { "type": "string", "default": "" },
+    "variant": { "type": "string", "default": "default", "enum": ["default", "destructive"] },
+    "size": { "type": "string", "default": "default", "enum": ["default", "sm"] },
+    "wrap": { "type": "boolean", "default": false },
+    "lineNumbers": { "type": "boolean", "default": false },
+    "startLine": { "type": "number", "default": 1 },
+    "copy": { "type": "boolean", "default": true },
+    "wrapToggle": { "type": "boolean", "default": false },
+    "download": { "type": "boolean", "default": false },
+    "maxLines": { "type": "number", "default": 0 },
+    "showMore": { "type": "boolean", "default": true },
+    "highlightLines": { "type": "string", "default": "" },
+    "addedLines": { "type": "string", "default": "" },
+    "removedLines": { "type": "string", "default": "" }
+  },
+  "example": {
+    "attributes": {
+      "title": "app.js",
+      "language": "javascript",
+      "lineNumbers": true,
+      "highlightLines": "2",
+      "code": "const greet = (name) => {\n  return `Hello, ${name}!`;\n};\n\ngreet('world');"
+    },
+    "viewportWidth": 400
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}
