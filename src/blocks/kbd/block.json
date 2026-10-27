@@ -1,0 +1,50 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "shadcn/kbd",
+  "version": "1.0.0",
+  "title": "Kbd",
+  "category": "shadcn",
+  "description": "A keyboard key or shortcut, with an optional icon.",
+  "textdomain": "yaycommerce-blocks-for-shadcn-ui",
+  "keywords": ["kbd", "keyboard", "key", "shortcut", "hotkey"],
+  "supports": {
+    "html": false,
+    "anchor": true,
+    "align": false,
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "spacing": {
+      "margin": true
+    }
+  },
+  "attributes": {
+    "text": {
+      "type": "string",
+      "default": ""
+    },
+    "iconName": {
+      "type": "string",
+      "default": ""
+    },
+    "iconPosition": {
+      "type": "string",
+      "default": "left"
+    },
+    "iconSize": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "example": {
+    "attributes": {
+      "text": "⌘K"
+    },
+    "viewportWidth": 400
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
