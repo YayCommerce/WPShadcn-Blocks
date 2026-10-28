@@ -28,8 +28,8 @@ defined( 'ABSPATH' ) || exit;
 <h3 class="wp-block-heading has-lg-font-size" style="font-weight:600">Corporate office</h3>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"textColor":"muted-foreground"} -->
-<p class="has-muted-foreground-color has-text-color">1200 Framework Boulevard<br>San Francisco, CA 94102, United States</p>
+<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.5"}},"textColor":"muted-foreground"} -->
+<p class="has-muted-foreground-color has-text-color" style="line-height:1.5">1200 Framework Boulevard<br>San Francisco, CA 94102, United States</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -44,8 +44,8 @@ defined( 'ABSPATH' ) || exit;
 <figure class="wp-block-image"><img alt=""/></figure>
 <!-- /wp:image -->
 
-<!-- wp:paragraph -->
-<p>+1 (555) 010-2400</p>
+<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.5"}}} -->
+<p style="line-height:1.5">+1 (555) 010-2400</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -54,8 +54,8 @@ defined( 'ABSPATH' ) || exit;
 <figure class="wp-block-image"><img alt=""/></figure>
 <!-- /wp:image -->
 
-<!-- wp:paragraph -->
-<p>hello@example.com</p>
+<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.5"}}} -->
+<p style="line-height:1.5">hello@example.com</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group -->
 
@@ -64,8 +64,8 @@ defined( 'ABSPATH' ) || exit;
 <figure class="wp-block-image"><img alt=""/></figure>
 <!-- /wp:image -->
 
-<!-- wp:paragraph -->
-<p>example.com</p>
+<!-- wp:paragraph {"style":{"typography":{"lineHeight":"1.5"}}} -->
+<p style="line-height:1.5">example.com</p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:group --></div>
 <!-- /wp:group --></div>
