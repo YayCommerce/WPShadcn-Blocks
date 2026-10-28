@@ -26,5 +26,14 @@
 	&__control {
 		box-sizing: border-box;
 		width: 100%;
+		// Form controls take the UA font (Arial, monospace for textarea)
+		// unless told otherwise; the theme rule sets size but not family.
+		font-family: inherit;
+	}
+
+	// White surface like shadcn's bg-background. Two classes beat the
+	// theme's `input[type=…]` fill but still lose to its `.dark input[…]`.
+	& &__control {
+		background-color: var(--wp--preset--color--background, #fff);
 	}
 }

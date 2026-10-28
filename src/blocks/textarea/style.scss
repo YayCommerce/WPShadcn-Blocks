@@ -25,6 +25,12 @@
 	&__control {
 		box-sizing: border-box;
 		width: 100%;
+		// Form controls take the UA font (Arial, monospace for textarea)
+		// unless told otherwise; the theme rule sets size but not family.
+		font-family: inherit;
 		resize: vertical;
+		// White surface like shadcn's bg-background. One class beats the
+		// theme's bare element rule but still loses to its `.dark …` fill.
+		background-color: var(--wp--preset--color--background, #fff);
 	}
 }

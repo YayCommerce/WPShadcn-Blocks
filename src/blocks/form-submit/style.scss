@@ -29,6 +29,12 @@
 	cursor: pointer;
 	transition: opacity 0.15s ease;
 
+	// theme.json's `:root :where(.wp-element-button)` ties on specificity and
+	// prints later, so it would win back the base font size.
+	&.wp-element-button {
+		font-size: 0.875rem;
+	}
+
 	&:hover {
 		opacity: 0.9;
 	}
