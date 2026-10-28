@@ -26,6 +26,7 @@ shadcn/ui is an open-source project by shadcn. This plugin is not affiliated wit
 * **Badge** - A small inline label or status pill with variants, an optional link and an optional icon.
 * **Kbd** - A keyboard key or shortcut with an optional icon, and the same look for WordPress's "Keyboard input" text format, for keys inside a sentence.
 * **Avatar** and **Avatar Group** - A circular avatar with fallback initials, and an overlapping stack with an automatic "+N" overflow indicator.
+* **Breadcrumb** and **Breadcrumb Item** - A navigation trail with a choice of separator icon and collapsed ellipsis items. Build it by hand or let Auto mode generate it from the current page (parent pages, categories, archives, search).
 * **Bubble** and **Bubble Group** - Conversational message bubbles for chat mockups: 7 variants, with start/end alignment inherited from the group.
 * **Message** and **Message Group** - A chat message with the Bubble variants, an optional avatar, a sender header, a status footer with icon actions (copy, feedback, retry), an emoji reaction, custom bubble color and radius, and start/end alignment inherited from the group.
 * **Marker** - A small labeled meta-row: a muted text line, a centered separator, or a bordered label.
@@ -172,6 +173,7 @@ First public release. Requires the Shadcn theme (or a child of it) to be active.
 * Badge — small inline label or status pill with variants, an optional link and an optional icon.
 * Kbd — keyboard key or shortcut with an optional icon, and the same look for WordPress's "Keyboard input" text format, for keys inside a sentence.
 * Avatar and Avatar Group — circular avatar with fallback initials, and an overlapping stack with an automatic "+N" overflow indicator.
+* Breadcrumb and Breadcrumb Item — navigation trail with a choice of separator icon, collapsed ellipsis items, and an Auto mode that builds the trail from the current page.
 * Bubble and Bubble Group — conversational message bubbles for chat mockups: 7 variants, start/end alignment inherited from the group.
 * Message and Message Group — chat messages with the Bubble variants, optional avatar, sender header, status footer with icon actions, emoji reaction, custom bubble color and radius, start/end alignment inherited from the group.
 * Marker — small labeled meta-row: a muted text line, a centered separator, or a bordered label.

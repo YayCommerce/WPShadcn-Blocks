@@ -127,6 +127,7 @@ function shadcn_blocks_init() {
 	require_once SHADCN_BLOCKS_DIR . 'inc/Patterns.php';
 	require_once SHADCN_BLOCKS_DIR . 'inc/FreeShipping.php';
 	require_once SHADCN_BLOCKS_DIR . 'inc/Avatar.php';
+	require_once SHADCN_BLOCKS_DIR . 'inc/Breadcrumb.php';
 	require_once SHADCN_BLOCKS_DIR . 'inc/Icons.php';
 	require_once SHADCN_BLOCKS_DIR . 'inc/Pricing.php';
 	require_once SHADCN_BLOCKS_DIR . 'inc/BlockStyles.php';
