@@ -42,6 +42,7 @@
 		color: var(--wp--preset--color--foreground, #0a0a0a);
 	}
 
+	&__fields[hidden],
 	&__error[hidden],
 	&__success[hidden] {
 		display: none;
