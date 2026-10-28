@@ -29,6 +29,7 @@ shadcn/ui is an open-source project by shadcn. This plugin is not affiliated wit
 * **Breadcrumb** and **Breadcrumb Item** - A navigation trail with a choice of separator icon and collapsed ellipsis items. Build it by hand or let Auto mode generate it from the current page (parent pages, categories, archives, search).
 * **Bubble** and **Bubble Group** - Conversational message bubbles for chat mockups: 7 variants, with start/end alignment inherited from the group.
 * **Message** and **Message Group** - A chat message with the Bubble variants, an optional avatar, a sender header, a status footer with icon actions (copy, feedback, retry), an emoji reaction, custom bubble color and radius, and start/end alignment inherited from the group.
+* **Attachment** and **Attachment Group** - A file or link card with a file-type icon or image, title, description, five states (idle, uploading, processing, error, done), three sizes, horizontal or vertical layout and an optional download button, plus a scrollable snapping row of them.
 * **Marker** - A small labeled meta-row: a muted text line, a centered separator, or a bordered label.
 * **Empty** - An empty state placeholder with centered content.
 
@@ -176,6 +177,7 @@ First public release. Requires the Shadcn theme (or a child of it) to be active.
 * Breadcrumb and Breadcrumb Item — navigation trail with a choice of separator icon, collapsed ellipsis items, and an Auto mode that builds the trail from the current page.
 * Bubble and Bubble Group — conversational message bubbles for chat mockups: 7 variants, start/end alignment inherited from the group.
 * Message and Message Group — chat messages with the Bubble variants, optional avatar, sender header, status footer with icon actions, emoji reaction, custom bubble color and radius, start/end alignment inherited from the group.
+* Attachment and Attachment Group — file or link cards with icon or image, upload states, sizes, vertical layout and optional download button, in a scrollable snapping row.
 * Marker — small labeled meta-row: a muted text line, a centered separator, or a bordered label.
 * Progress — progress bar for loading and completion indicators.
 * Counter — a number that counts up to its target value when it scrolls into view.

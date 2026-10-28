@@ -1,0 +1,71 @@
+/**
+ * Shimmer: animated streaming-text effect, shared by Marker and Attachment.
+ * Faithful port of shadcn's `shimmer` utility — built on currentColor (adapts
+ * to the element's text color), a highlight band of width `calc(3ch + 40px)`
+ * swept across via background-clip:text.
+ *
+ * Each block's stylesheet is separate, so every consumer that includes this
+ * emits its own copy of the (identical) @property and @keyframes.
+ */
+
+@property --shimmer-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 20deg;
+}
+
+@keyframes shadcn-shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+// Apply the shimmer to the text of every element matching $selector.
+@mixin shimmer($selector) {
+  #{$selector} {
+    --_spread: var(--shimmer-spread, calc(3ch + 40px));
+    --_base: currentColor;
+    --_highlight: var(
+      --shimmer-color,
+      oklch(from currentColor l c h / calc(alpha * 0.2))
+    );
+
+    background-image: linear-gradient(
+      calc(90deg + var(--shimmer-angle, 20deg)),
+      var(--_base) calc(50% - var(--_spread)),
+      color-mix(in oklch, var(--_highlight), var(--_base) 50%)
+        calc(50% - var(--_spread) * 0.5),
+      var(--_highlight) 50%,
+      color-mix(in oklch, var(--_highlight), var(--_base) 50%)
+        calc(50% + var(--_spread) * 0.5),
+      var(--_base) calc(50% + var(--_spread))
+    );
+    background-repeat: no-repeat;
+    background-size: calc(200% + var(--_spread) * 2) 100%;
+    background-position: 0 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shadcn-shimmer var(--shimmer-duration, 2s) linear infinite;
+  }
+
+  // Dark mode: brighter/less-transparent highlight (per shadcn).
+  .dark #{$selector} {
+    --_highlight: var(
+      --shimmer-color,
+      oklch(from currentColor max(0.8, calc(l + 0.4)) c h / calc(alpha + 0.4))
+    );
+  }
+
+  // Respect reduced-motion: render the text normally, no animation.
+  @media (prefers-reduced-motion: reduce) {
+    #{$selector} {
+      animation: none;
+      background-image: none;
+      -webkit-text-fill-color: currentColor;
+    }
+  }
+}
